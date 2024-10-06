@@ -7,22 +7,28 @@
 
 
 include("keijzer6.jl")
+include("koza3.jl")
+include("nguyen7.jl")
+include("pagie1.jl")
 
 function keijzer6()
     print("Testszenario: symbolische Regression - Keijzer-6")
-    keijzer6.load_keijzer6_dataset()
+    keijzer6.load_dataset()
 end
 
 function koza3()
     print("Testszenario: symbolische Regression - Koza-3")
+    koza3.load_dataset()
 end
 
 function nguyen7()
     print("Testszenario: symbolische Regression - Nguyen-7")
+    nguyen7.load_dataset()
 end
 
 function pagie1()
     print("Testszenario: symbolische Regression - Pagie-1")
+    pagie1.load_dataset()
 end
 
 
