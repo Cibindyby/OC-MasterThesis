@@ -1,11 +1,44 @@
 # Funktion zum Laden des Keijzer-6-Datensatzes
 
-#todo fix
-#todo Braucht man Aufteilung von Daten?
-function load_dataset()
-    x = collect(range(-1.0,1.0,20))  # Beispielwerte für Keijzer-6 
-    y = [sum(1/i for i in 1:x_val for x_val in x)]  # Keijzer-6 Formel
-    return x, y
+# E[1, 50, 1]
+# Intervall: [1;50]; Schrittgröße: 1
+# eval dataset: 120 Punkte
+using Plots
+
+function get_y!(y, x)
+    summe = 0.0
+    for i in x
+        summe += 1.0 / i
+        append!(y, summe)
+    end
 end
 
-print(load_keijzer6_dataset())
+function get_training_dataset()
+    x = Float32[]
+
+    for elem in 1.0:1.0:50.0
+        i = Float32(elem)
+        append!(x, i)
+    end
+    y=Float32[]
+    get_y!(y, x)
+
+    return (x, y)
+end
+
+function get_eval_dataset()
+    x = Float32[]
+
+    for elem in -1.0:(2.0/120.0):1.0
+        i = Float32(elem)
+        append!(x, elem)
+    end
+    y = Float32[]
+    get_y!(y, x)
+
+    return (x, y)
+end
+
+
+print(get_training_dataset())
+plot(get_training_dataset())
