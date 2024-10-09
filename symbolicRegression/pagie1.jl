@@ -1,5 +1,5 @@
 # Funktion zum Laden des Pagie-1-Datensatzes
-
+# aus DOI 10.1007/s10710-012-9177-2
 #todo Berechnung fixen: jeder Wert von x1 und x2
 
 # E[-5, 5, 0.4]
@@ -8,8 +8,12 @@ using Plots
 
 function get_y!(y, x1, x2)
     for i in 1:1:length(x1)
-        yElem = (1/(1+x1[i]^-4)) + (1/(1+x2[i]^-4))
-        append!(y, yElem)
+        vector=Float32[]
+        for j in 1:1:length(x2)
+            yElem = (1/(1+x1[i]^-4)) + (1/(1+x2[j]^-4))
+            append!(vector, yElem)
+        end
+        y[i, :] = vector
     end
 end
 
@@ -22,7 +26,7 @@ function get_training_dataset()
         append!(x1, i)
         append!(x2, i)
     end
-    y=Float32[]
+    y=zeros(Float32, length(x1), length(x2))
     get_y!(y, x1, x2)
 
     return (x1, x2, y)
@@ -33,5 +37,6 @@ function get_eval_dataset()
 end
 
 
-print(get_training_dataset())
-plot(get_training_dataset())
+#print(get_training_dataset())
+x1, x2, y = get_training_dataset()
+plot3d(x1, x2, y)
