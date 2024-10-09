@@ -1,5 +1,5 @@
 # Funktion zum Laden des Pagie-1-Datensatzes
-# aus DOI 10.1007/s10710-012-9177-2
+# aus DOI 10.1007/s10710-012-9177-2 / DOI: 10.5220/0010110700590070
 #todo Berechnung fixen: jeder Wert von x1 und x2
 
 # E[-5, 5, 0.4]
@@ -38,5 +38,7 @@ end
 
 
 #print(get_training_dataset())
-x1, x2, y = get_training_dataset()
-plot3d(x1, x2, y)
+#x1, x2, y = get_training_dataset()
+#plt = plot3d(x1, x2, y)
+
+#savefig(plt, "symbolicRegression/Plots/PagieTrainingData")

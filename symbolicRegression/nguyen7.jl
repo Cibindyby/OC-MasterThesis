@@ -1,5 +1,5 @@
 # Funktion zum Laden des Nguyen-7-Datensatzes
-# aus DOI 10.1007/s10710-012-9177-2
+# aus DOI 10.1007/s10710-012-9177-2 / DOI: 10.5220/0010110700590070
 # U[0, 2, 20]
 # dataset: 20 gleichverteilte Punkte zwischen 0 und 2
 
@@ -31,4 +31,6 @@ end
 
 
 #print(get_training_dataset())
-plot(get_training_dataset())
+#plt = plot(get_training_dataset())
+
+#savefig(plt, "symbolicRegression/Plots/NgyuenTrainingData")
