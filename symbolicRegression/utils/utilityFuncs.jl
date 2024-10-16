@@ -29,7 +29,7 @@ function gen_random_number_for_node(excluded::Int, upper_range::Int)
     end
 end
 
-function transpose(v::Vector{Vector{T}}) where T
+function transpose_vec(v::Vector{Vector{T}}) where T
     isempty(v) && return Vector{Vector{T}}()
     return [[v[j][i] for j in 1:length(v)] for i in 1:length(v[1])]
 end
