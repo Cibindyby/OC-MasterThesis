@@ -81,7 +81,6 @@ end
 
 function learn_step(runner::RunnerMultipleParentsMuLambda, i::Int)
     get_child_ids(runner)
-    reorder(runner)
     crossover(runner)
     mutate_chromosomes(runner)
     eval_chromosomes(runner)
@@ -89,19 +88,8 @@ function learn_step(runner::RunnerMultipleParentsMuLambda, i::Int)
 end
 
 function get_child_ids(runner::RunnerMultipleParentsMuLambda)
-    # elitists should not be reordered as they did not change
     child_ids = collect(0:(runner.params.population_size + runner.params.elitism_number - 1))
     runner.child_ids = vect_difference(child_ids, runner.elitist_ids)
-end
-
-function reorder(runner::RunnerMultipleParentsMuLambda)
-    # elitists should not be reordered as they did not change
-    reorder_set = collect(0:(runner.params.population_size + runner.params.elitism_number - 1))
-    reorder_set = vect_difference(reorder_set, runner.elitist_ids)
-
-    for id in reorder_set
-        runner.population[id].reorder()
-    end
 end
 
 function mutate_chromosomes(runner::RunnerMultipleParentsMuLambda)

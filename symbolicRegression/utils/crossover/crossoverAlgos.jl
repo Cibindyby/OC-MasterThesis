@@ -8,7 +8,6 @@ include("../runner_multiple_parents_with_elitist_mulambda.jl")
 include("../runner.jl")
 
 include("../../standardCGP/chromosome.jl")
-#include("reorder/chromosome_reorder_equidistant.jl")
 
 function single_point_crossover!(runner::Runner,
                                  new_population::Vector{Chromosome},

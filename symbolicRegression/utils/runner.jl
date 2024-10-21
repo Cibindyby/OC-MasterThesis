@@ -51,20 +51,11 @@ function Runner(params::CgpParameters,
 end
 
 function learn_step!(runner::Runner, i::Int)
-    reorder!(runner)
     mutate_chromosomes!(runner)
     eval_chromosomes!(runner)
     new_parent_by_neutral_search!(runner)
 end
 
-function reorder!(runner::Runner)
-    for i in 1:(runner.params.mu + runner.params.lambda)
-        if i == runner.parent_id
-            continue
-        end
-        reorder!(runner.population[i])
-    end
-end
 
 function new_parent_by_neutral_search!(runner::Runner)
     min_keys = Int[]

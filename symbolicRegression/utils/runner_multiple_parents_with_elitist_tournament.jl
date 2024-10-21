@@ -85,8 +85,6 @@ function learn_step(runner::RunnerMultipleParentsTournament, i::Int)
 
     tournament_selection(runner)
 
-    reorder(runner)
-
     crossover(runner)
 
     mutate_chromosomes(runner)
@@ -97,22 +95,12 @@ function learn_step(runner::RunnerMultipleParentsTournament, i::Int)
 end
 
 function get_child_ids(runner::RunnerMultipleParentsTournament)
-    # elitists should not be reordered as they did not change
     child_ids = collect(0:(runner.params.population_size + runner.params.elitism_number - 1))
     child_ids = vect_difference(child_ids, runner.elitist_ids)
 
     runner.child_ids = child_ids
 end
 
-function reorder(runner::RunnerMultipleParentsTournament)
-    # elitists should not be reordered as they did not change
-    reorder_set = collect(0:(runner.params.population_size + runner.params.elitism_number - 1))
-    reorder_set = vect_difference(reorder_set, runner.elitist_ids)
-
-    for id in reorder_set
-        runner.population[id].reorder()
-    end
-end
 
 function tournament_selection(runner::RunnerMultipleParentsTournament)
     selection = Int[]
