@@ -77,7 +77,9 @@ function RunnerMultipleParentsTournament(params::CgpParameters, data::Vector{Vec
     child_ids = collect(0:(params.population_size + params.elitism_number - 1))
     child_ids = vect_difference(child_ids, elitist_ids)
 
-    return RunnerMultipleParentsTournament(params, data, label, eval_data, eval_label, population, fitness_vals, fitness_vals_sorted, rng, elitist_ids, child_ids)
+    tournament_selected = Vector{Int}
+
+    return RunnerMultipleParentsTournament(params, data, label, eval_data, eval_label, population, fitness_vals_sorted, fitness_vals, tournament_selected, rng, elitist_ids, child_ids)
 end
 
 function learn_step(runner::RunnerMultipleParentsTournament, i::Int)
@@ -146,7 +148,7 @@ function get_elitists(runner::RunnerMultipleParentsTournament)
     while length(elitist_ids) < runner.params.elitism_number
         current_best_fitness_val = pop!(temp_fitness_vals_sorted)
 
-        get_argmins_of_value(runner.fitness_vals, elitist_ids, current_best_fitness_val)
+        get_argmins_of_value!(runner.fitness_vals, elitist_ids, current_best_fitness_val)
     end
 
     truncate!(elitist_ids, runner.params.elitism_number)
@@ -195,7 +197,7 @@ function crossover(runner::RunnerMultipleParentsTournament)
             if runner.params.crossover_type == 0
                 crossover_algos.single_point_crossover(runner, new_population, child_ids[1], child_ids[2], runner.tournament_selected[2 * i], runner.tournament_selected[2 * i + 1])
             elseif runner.params.crossover_type == 1
-                crossover_algos.multi_point_crossover(runner, new_population, child_ids[1], child_ids[2], runner.tournament_selected[2 * i], runner.tournament_selected[2 * i + 1])
+                crossover_algos.two_point_crossover(runner, new_population, child_ids[1], child_ids[2], runner.tournament_selected[2 * i], runner.tournament_selected[2 * i + 1])
             elseif runner.params.crossover_type == 2
                 crossover_algos.uniform_crossover(runner, new_population, child_ids[1], child_ids[2], runner.tournament_selected[2 * i], runner.tournament_selected[2 * i + 1])
             elseif runner.params.crossover_type == 3
@@ -211,35 +213,3 @@ function crossover(runner::RunnerMultipleParentsTournament)
     end
     runner.population = new_population
 end
-
-function _deprecated_and_buggy_crossover(runner::RunnerMultipleParentsTournament)
-    children_set = collect(0:(runner.params.population_size + runner.params.elitism_number - 1))
-    children_set = vect_difference(children_set, runner.elitist_ids)
-
-    new_population = copy(runner.population)
-
-    for child_ids in Iterators.partition(children_set, 2)
-        parent_ids = rand(1:length(runner.tournament_selected), 2)
-
-        crossover_prob = rand(Float32)
-        if crossover_prob <= runner.params.crossover_rate
-            if runner.params.crossover_type == 0
-                crossover_algos.single_point_crossover(runner, new_population, child_ids[1], child_ids[2], parent_ids[1], parent_ids[2])
-            elseif runner.params.crossover_type == 1
-                crossover_algos.multi_point_crossover(runner, new_population, child_ids[1], child_ids[2], parent_ids[1], parent_ids[2])
-            elseif runner.params.crossover_type == 2
-                crossover_algos.uniform_crossover(runner, new_population, child_ids[1], child_ids[2], parent_ids[1], parent_ids[2])
-            elseif runner.params.crossover_type == 3
-                crossover_algos.no_crossover(runner, new_population, child_ids[1], child_ids[2], parent_ids[1], parent_ids[2])
-            else
-                error("not implemented crossover type")
-            end
-        else
-            # no crossover, just copy parents
-            new_population[child_ids[1]] = copy(runner.population[parent_ids[1]])
-            new_population[child_ids[2]] = copy(runner.population[parent_ids[2]])
-        end
-    end
-    runner.population = new_population
-end
-

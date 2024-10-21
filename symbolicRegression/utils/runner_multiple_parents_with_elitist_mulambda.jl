@@ -12,7 +12,7 @@ include("../standardCGP/chromosome.jl")
 # größere Population: Population <- population + elitisten
 # speichere elitist id
 
-struct RunnerMultipleParentsMuLambda
+struct RunnerElitistMuLambda
     params::CgpParameters
     data::Vector{Vector{Float32}}
     label::Vector{Float32}
@@ -29,11 +29,11 @@ struct RunnerMultipleParentsMuLambda
     selected_parents_ids::Vector{Int}
 end
 
-function Base.show(io::IO, runner::RunnerMultipleParentsMuLambda)
+function Base.show(io::IO, runner::RunnerElitistMuLambda)
     println(io, "Fitnesses: ", runner.fitness_vals)
 end
 
-function RunnerMultipleParentsMuLambda(params::CgpParameters, data::Vector{Vector{Float32}}, label::Vector{Float32}, eval_data::Vector{Vector{Float32}}, eval_label::Vector{Float32})
+function RunnerElitistMuLambda(params::CgpParameters, data::Vector{Vector{Float32}}, label::Vector{Float32}, eval_data::Vector{Vector{Float32}}, eval_label::Vector{Float32})
     rng = MersenneTwister()
 
     data = utility_funcs.transpose(data)
@@ -68,7 +68,7 @@ function RunnerMultipleParentsMuLambda(params::CgpParameters, data::Vector{Vecto
     while length(elitist_ids) < params.elitism_number
         current_best_fitness_val = pop!(temp_fitness_vals_sorted)
 
-        get_argmins_of_value(fitness_vals, elitist_ids, current_best_fitness_val)
+        get_argmins_of_value!(fitness_vals, elitist_ids, current_best_fitness_val)
     end
 
     truncate!(elitist_ids, params.elitism_number)
@@ -76,10 +76,10 @@ function RunnerMultipleParentsMuLambda(params::CgpParameters, data::Vector{Vecto
     child_ids = collect(0:(params.population_size + params.elitism_number - 1))
     child_ids = vect_difference(child_ids, elitist_ids)
 
-    return Runner(params, data, label, eval_data, eval_label, population, fitness_vals, fitness_vals_sorted, rng, elitist_ids, child_ids, Int[])
+    return RunnerElitistMuLambda(params, data, label, eval_data, eval_label, population, fitness_vals, fitness_vals_sorted, rng, elitist_ids, child_ids, Int[])
 end
 
-function learn_step(runner::RunnerMultipleParentsMuLambda, i::Int)
+function learn_step(runner::RunnerElitistMuLambda, i::Int)
     get_child_ids(runner)
     crossover(runner)
     mutate_chromosomes(runner)
@@ -87,19 +87,19 @@ function learn_step(runner::RunnerMultipleParentsMuLambda, i::Int)
     get_elitists(runner)
 end
 
-function get_child_ids(runner::RunnerMultipleParentsMuLambda)
+function get_child_ids(runner::RunnerElitistMuLambda)
     child_ids = collect(0:(runner.params.population_size + runner.params.elitism_number - 1))
     runner.child_ids = vect_difference(child_ids, runner.elitist_ids)
 end
 
-function mutate_chromosomes(runner::RunnerMultipleParentsMuLambda)
+function mutate_chromosomes(runner::RunnerElitistMuLambda)
     # mutate new chromosomes; do not mutate elitists
     for id in runner.child_ids
         runner.population[id].mutate_single()
     end
 end
 
-function eval_chromosomes(runner::RunnerMultipleParentsMuLambda)
+function eval_chromosomes(runner::RunnerElitistMuLambda)
     for id in runner.child_ids
         fitness = runner.population[id].evaluate(runner.data, runner.label)
 
@@ -116,7 +116,7 @@ function eval_chromosomes(runner::RunnerMultipleParentsMuLambda)
     runner.fitness_vals_sorted = best_fitnesses_sorted
 end
 
-function get_elitists(runner::RunnerMultipleParentsMuLambda)
+function get_elitists(runner::RunnerElitistMuLambda)
     # Get mu - many best fitness vals
     sorted_fitness_vals = unique(copy(runner.fitness_vals_sorted))
 
@@ -124,7 +124,7 @@ function get_elitists(runner::RunnerMultipleParentsMuLambda)
     for current_best_fitness_val in sorted_fitness_vals
         parent_candidate_ids = Int[]
 
-        get_argmins_of_value(runner.fitness_vals, parent_candidate_ids, current_best_fitness_val)
+        get_argmins_of_value!(runner.fitness_vals, parent_candidate_ids, current_best_fitness_val)
 
         remaining_new_parent_spaces = runner.params.elitism_number - length(new_parent_ids)
         if length(parent_candidate_ids) <= remaining_new_parent_spaces
@@ -154,11 +154,11 @@ function get_elitists(runner::RunnerMultipleParentsMuLambda)
     runner.elitist_ids = new_parent_ids
 end
 
-function get_best_fitness(runner::RunnerMultipleParentsMuLambda)
+function get_best_fitness(runner::RunnerElitistMuLambda)
     return runner.fitness_vals_sorted[1]
 end
 
-function get_test_fitness(runner::RunnerMultipleParentsMuLambda)
+function get_test_fitness(runner::RunnerElitistMuLambda)
     best_fitness = typemax(Float32)
 
     for individual in runner.population
@@ -171,7 +171,7 @@ function get_test_fitness(runner::RunnerMultipleParentsMuLambda)
     return best_fitness
 end
 
-function get_elitism_fitness(runner::RunnerMultipleParentsMuLambda)
+function get_elitism_fitness(runner::RunnerElitistMuLambda)
     results = Vector{Float32}(undef, runner.params.elitism_number)
     for id in runner.elitist_ids
         push!(results, runner.fitness_vals[id])
@@ -179,12 +179,12 @@ function get_elitism_fitness(runner::RunnerMultipleParentsMuLambda)
     return results
 end
 
-function get_parent(runner::RunnerMultipleParentsMuLambda)
+function get_parent(runner::RunnerElitistMuLambda)
     idx = get_argmin(runner.fitness_vals)
     return copy(runner.population[idx])
 end
 
-function crossover(runner::RunnerMultipleParentsMuLambda)
+function crossover(runner::RunnerElitistMuLambda)
     # get all new children ids; i.e. the ID's of chromosomes in the population that
     # can be replaced.
     # It must exclude the elitists, otherwise they may be replaced too
@@ -203,7 +203,7 @@ function crossover(runner::RunnerMultipleParentsMuLambda)
             if runner.params.crossover_type == 0
                 crossover_algos.single_point_crossover(runner, new_population, child_ids[1], child_ids[2], parent_ids[1], parent_ids[2])
             elseif runner.params.crossover_type == 1
-                crossover_algos.multi_point_crossover(runner, new_population, child_ids[1], child_ids[2], parent_ids[1], parent_ids[2])
+                crossover_algos.two_point_crossover(runner, new_population, child_ids[1], child_ids[2], parent_ids[1], parent_ids[2])
             elseif runner.params.crossover_type == 2
                 crossover_algos.uniform_crossover(runner, new_population, child_ids[1], child_ids[2], parent_ids[1], parent_ids[2])
             elseif runner.params.crossover_type == 3

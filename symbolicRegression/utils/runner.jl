@@ -5,7 +5,7 @@ include("../globalParams.jl")
 include("../utils/utilityFuncs.jl")
 include("../standardCGP/chromosome.jl")
 
-mutable struct Runner
+mutable struct RunnerNoCrossover
     params::CgpParameters
     data::Vector{Vector{Float32}}
     label::Vector{Float32}
@@ -17,12 +17,12 @@ mutable struct Runner
     parent_id::Int
 end
 
-function Base.show(io::IO, runner::Runner)
+function Base.show(io::IO, runner::RunnerNoCrossover)
     print(io, "Parent: ", runner.population[runner.parent_id])
     println(io, "Fitness: ", runner.best_fitness)
 end
 
-function Runner(params::CgpParameters,
+function RunnerNoCrossover(params::CgpParameters,
                 data::Vector{Vector{Float32}},
                 label::Vector{Float32},
                 eval_data::Vector{Vector{Float32}},
@@ -47,19 +47,19 @@ function Runner(params::CgpParameters,
     best_fitness = get_min(fitness_vals)
     parent_id = get_argmin(fitness_vals)
 
-    Runner(params, data, label, eval_data, eval_label, chromosomes, best_fitness, fitness_vals, parent_id)
+    RunnerNoCrossover(params, data, label, eval_data, eval_label, chromosomes, best_fitness, fitness_vals, parent_id)
 end
 
-function learn_step!(runner::Runner, i::Int)
+function learn_step!(runner::RunnerNoCrossover, i::Int)
     mutate_chromosomes!(runner)
     eval_chromosomes!(runner)
     new_parent_by_neutral_search!(runner)
 end
 
 
-function new_parent_by_neutral_search!(runner::Runner)
+function new_parent_by_neutral_search!(runner::RunnerNoCrossover)
     min_keys = Int[]
-    get_argmins_of_value(runner.fitness_vals, min_keys, runner.best_fitness)
+    get_argmins_of_value!(runner.fitness_vals, min_keys, runner.best_fitness)
 
     if length(min_keys) == 1
         runner.parent_id = min_keys[1]
@@ -71,7 +71,7 @@ function new_parent_by_neutral_search!(runner::Runner)
     end
 end
 
-function mutate_chromosomes!(runner::Runner)
+function mutate_chromosomes!(runner::RunnerNoCrossover)
     for i in 1:(runner.params.mu + runner.params.lambda)
         if i == runner.parent_id
             continue
@@ -81,7 +81,7 @@ function mutate_chromosomes!(runner::Runner)
     end
 end
 
-function eval_chromosomes!(runner::Runner)
+function eval_chromosomes!(runner::RunnerNoCrossover)
     for i in 1:(runner.params.mu + runner.params.lambda)
         if i != runner.parent_id
             fitness = evaluate(runner.population[i], runner.data, runner.label)
@@ -95,7 +95,7 @@ function eval_chromosomes!(runner::Runner)
     runner.best_fitness = get_min(runner.fitness_vals)
 end
 
-function get_test_fitness(runner::Runner)
+function get_test_fitness(runner::RunnerNoCrossover)
     best_fitness = typemax(Float32)
 
     for individual in runner.population
@@ -107,7 +107,7 @@ function get_test_fitness(runner::Runner)
     return best_fitness
 end
 
-get_best_fitness(runner::Runner) = runner.best_fitness
+get_best_fitness(runner::RunnerNoCrossover) = runner.best_fitness
 
-get_parent(runner::Runner) = deepcopy(runner.population[runner.parent_id])
+get_parent(runner::RunnerNoCrossover) = deepcopy(runner.population[runner.parent_id])
 

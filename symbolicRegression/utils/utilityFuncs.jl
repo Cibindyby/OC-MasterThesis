@@ -1,8 +1,14 @@
 using Random
 
-function get_argmins_of_value(vecs::Vector{Float32}, comp_value::Float32)
-    return findall(x -> x == comp_value, vecs)
+function get_argmins_of_value!(vecs::Vector{Float32}, res::Vector{Int}, comp_value::Float32)
+    for (i, v) in enumerate(vecs)
+        if v == comp_value
+        # if isapprox(v, comp_value, atol=1e-5)
+            push!(res, i)
+        end
+    end
 end
+
 
 function get_argmin(nets::Vector{Float32})
     return argmin(nets)

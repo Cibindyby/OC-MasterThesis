@@ -1,6 +1,6 @@
 using Printf
 
-mutable struct CgpParameters
+struct CgpParameters
     nbr_computational_nodes::Int
     population_size::Int
     mu::Int
@@ -12,8 +12,6 @@ mutable struct CgpParameters
     crossover_rate::Float32
     tournament_size::Int
     elitism_number::Int
-    multi_point_n::Int
-    cgp_type::Int
 end
 
 function Base.show(io::IO, params::CgpParameters)
@@ -26,7 +24,6 @@ function Base.show(io::IO, params::CgpParameters)
     @printf(io, "nbr_outputs: %d\n", params.nbr_outputs)
     @printf(io, "crossover_type: %d\n", params.crossover_type)
     @printf(io, "crossover_rate: %.2f\n", params.crossover_rate)
-    @printf(io, "multi_point_n: %d\n", params.multi_point_n)
     println(io, "#########################")
 end
 
@@ -43,8 +40,6 @@ function CgpParameters()
         -1.0, # crossover_rate
         0,    # tournament_size
         0,    # elitism_number
-        0,    # multi_point_n
-        0     # cgp_type
     )
 end
 
