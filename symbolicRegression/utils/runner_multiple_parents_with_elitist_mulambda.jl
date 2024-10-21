@@ -33,7 +33,7 @@ function Base.show(io::IO, runner::RunnerMultipleParentsMuLambda)
     println(io, "Fitnesses: ", runner.fitness_vals)
 end
 
-function Runner(params::CgpParameters, data::Vector{Vector{Float32}}, label::Vector{Float32}, eval_data::Vector{Vector{Float32}}, eval_label::Vector{Float32})
+function RunnerMultipleParentsMuLambda(params::CgpParameters, data::Vector{Vector{Float32}}, label::Vector{Float32}, eval_data::Vector{Vector{Float32}}, eval_label::Vector{Float32})
     rng = MersenneTwister()
 
     data = utility_funcs.transpose(data)
