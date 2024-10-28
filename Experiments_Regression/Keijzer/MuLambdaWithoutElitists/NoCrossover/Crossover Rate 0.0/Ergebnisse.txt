@@ -1,0 +1,8 @@
+Iteration: 0, Fitness: 0.08405898
+Iteration: 1, Fitness: 0.08405898
+Iteration: 2, Fitness: 0.08405898
+Iteration: 3, Fitness: 0.08405898
+Iteration: 4, Fitness: 0.06971293
+End at iteration: 5
+Fitness Eval: 0.0038373286
+Fitness Train: 0.0038373286

@@ -5,7 +5,7 @@ include("../globalParams.jl")
 include("../utils/utilityFuncs.jl")
 include("../standardCGP/chromosome.jl")
 
-mutable struct RunnerNoCrossover
+mutable struct RunnerMuLambda
     params::CgpParameters
     data::Vector{Vector{Float32}}
     label::Vector{Float32}
@@ -17,12 +17,12 @@ mutable struct RunnerNoCrossover
     parent_id::Int
 end
 
-function Base.show(io::IO, runner::RunnerNoCrossover)
+function Base.show(io::IO, runner::RunnerMuLambda)
     print(io, "Parent: ", runner.population[runner.parent_id])
     println(io, "Fitness: ", runner.best_fitness)
 end
 
-function RunnerNoCrossover(params::CgpParameters,
+function RunnerMuLambda(params::CgpParameters,
                 data::Vector{Vector{Float32}},
                 label::Vector{Float32},
                 eval_data::Vector{Vector{Float32}},
@@ -31,12 +31,12 @@ function RunnerNoCrossover(params::CgpParameters,
     fitness_vals = Vector{Float32}(undef, params.mu + params.lambda)
 
     # transpose so a whole row of the dataset can be used as an array for calculation
-    data = transpose(data)
-    eval_data = transpose(eval_data)
+    #data = transpose(data)
+    #eval_data = transpose(eval_data)
 
     for i in 1:(params.mu + params.lambda)
         chromosome = Chromosome(params)
-        fitness = evaluate(chromosome, data, label)
+        fitness = evaluate!(chromosome, data, label)
         if isnan(fitness)
             fitness = typemax(Float32)
         end
@@ -47,17 +47,17 @@ function RunnerNoCrossover(params::CgpParameters,
     best_fitness = get_min(fitness_vals)
     parent_id = get_argmin(fitness_vals)
 
-    RunnerNoCrossover(params, data, label, eval_data, eval_label, chromosomes, best_fitness, fitness_vals, parent_id)
+    RunnerMuLambda(params, data, label, eval_data, eval_label, chromosomes, best_fitness, fitness_vals, parent_id)
 end
 
-function learn_step!(runner::RunnerNoCrossover, i::Int)
+function learn_step!(runner::RunnerMuLambda)
     mutate_chromosomes!(runner)
     eval_chromosomes!(runner)
     new_parent_by_neutral_search!(runner)
 end
 
 
-function new_parent_by_neutral_search!(runner::RunnerNoCrossover)
+function new_parent_by_neutral_search!(runner::RunnerMuLambda)
     min_keys = Int[]
     get_argmins_of_value!(runner.fitness_vals, min_keys, runner.best_fitness)
 
@@ -71,7 +71,7 @@ function new_parent_by_neutral_search!(runner::RunnerNoCrossover)
     end
 end
 
-function mutate_chromosomes!(runner::RunnerNoCrossover)
+function mutate_chromosomes!(runner::RunnerMuLambda)
     for i in 1:(runner.params.mu + runner.params.lambda)
         if i == runner.parent_id
             continue
@@ -81,10 +81,10 @@ function mutate_chromosomes!(runner::RunnerNoCrossover)
     end
 end
 
-function eval_chromosomes!(runner::RunnerNoCrossover)
+function eval_chromosomes!(runner::RunnerMuLambda)
     for i in 1:(runner.params.mu + runner.params.lambda)
         if i != runner.parent_id
-            fitness = evaluate(runner.population[i], runner.data, runner.label)
+            fitness = evaluate!(runner.population[i], runner.data, runner.label)
             if isnan(fitness) || isinf(fitness)
                 fitness = typemax(Float32)
             end
@@ -95,11 +95,11 @@ function eval_chromosomes!(runner::RunnerNoCrossover)
     runner.best_fitness = get_min(runner.fitness_vals)
 end
 
-function get_test_fitness(runner::RunnerNoCrossover)
+function get_test_fitness(runner::RunnerMuLambda)
     best_fitness = typemax(Float32)
 
     for individual in runner.population
-        fitness = evaluate(individual, runner.eval_data, runner.eval_label)
+        fitness = evaluate!(individual, runner.eval_data, runner.eval_label)
         if !isnan(fitness) && fitness < best_fitness
             best_fitness = fitness
         end
@@ -107,7 +107,11 @@ function get_test_fitness(runner::RunnerNoCrossover)
     return best_fitness
 end
 
-get_best_fitness(runner::RunnerNoCrossover) = runner.best_fitness
+function get_best_fitness(runner::RunnerMuLambda)::Float32
+    return runner.best_fitness
+end
 
-get_parent(runner::RunnerNoCrossover) = deepcopy(runner.population[runner.parent_id])
+function get_parent(runner::RunnerMuLambda)
+    deepcopy(runner.population[runner.parent_id])
+end
 

@@ -22,18 +22,9 @@ folgende Strategien werden verwendet:
 =#
 
 include("globalParams.jl")
-include("datasets/keijzer.jl")
-include("datasets/koza_3.jl")
-include("datasets/nguyen_7.jl")
-include("globalParams.jl")
+
 include("utils/runner.jl")
 
-
-#define dataset:
-# keijzer = 0
-# koza = 1
-# nguyen = 2
-datasetToLoad = 0
 
 nbr_computational_nodes = 50
 population_size = 50
@@ -49,6 +40,15 @@ nbr_outputs = 1
 # uniform = 2
 # no crossover = 3
 crossover_type = 3
+
+
+# Keijzer = 0
+# Koza = 1
+# Nguyen = 2
+datasetToLoad = 0
+include("datasets/keijzer.jl") 
+#include("datasets/koza_3.jl")
+#include("datasets/nguyen_7.jl")
 
 crossover_rate = 0.0
 tournament_size = 0
@@ -74,7 +74,7 @@ params = CgpParameters(
 function main()
 
     # Dataset selection (placeholder, implement actual dataset loading)
-    data, label, eval_data, eval_label = load_dataset(datasetToLoad)
+    data, label, eval_data, eval_label = load_dataset()
 
     # Logger setup
     selection = "MuLambdaWithoutElitists"
@@ -85,31 +85,30 @@ function main()
                             dataset_string, 
                             selection, 
                             crossover_type, 
-                            string(params.crossover_rate),
-                            ".txt"])
+                            "Crossover Rate " * string(params.crossover_rate),
+                            "Ergebnisse.txt"])
     
     mkpath(dirname(save_path))
 
     # Öffne die Datei
     open(save_path, "w") do file
-        "test"
         runner = RunnerMuLambda(params, data, label, eval_data, eval_label)
         runtime = 0
         fitness_eval = Inf
         fitness_train = Inf
 
-        while runtime < 500_000
-            write(file, "Iteration: $runtime, Fitness: $(RunnerMuLambda.get_best_fitness(runner))\n")
-            learn_step!(runner, runtime)
+        while runtime < eval_after_iterations
+            write(file, "Iteration: $runtime, Fitness: $(get_best_fitness(runner))\n")
+            learn_step!(runner)
             runtime += 1
 
-            if isapprox(RunnerMuLambda.get_best_fitness(runner), 0.0, atol=0.01)
+            if isapprox(get_best_fitness(runner), 0.0, atol=0.01)
                 break
             end
         end
 
-        fitness_eval = RunnerMuLambda.get_test_fitness(runner)
-        fitness_train = RunnerMuLambda.get_best_fitness(runner)
+        fitness_eval = get_best_fitness(runner)
+        fitness_train = get_best_fitness(runner)
 
         # Saving results
         println(runtime)
@@ -118,30 +117,17 @@ function main()
         write(file, "Fitness Train: $fitness_train\n")
         close(file)
 
-        parent = RunnerMuLambda.get_parent(runner)
+        parent = get_parent(runner)
         get_active_nodes_id!(parent)
-        write(output_file, "$(parent.active_nodes)")
+        write(file, "$(parent.active_nodes)")
     end
 end
 
 
-function load_dataset(dataset_id)
-    if (dataset_id == 0)
-        data, label = keijzer.get_dataset()
-        eval_data, eval_label = keijzer.get_eval_dataset()
-        return data, label, eval_data, eval_label
-    elseif (dataset_id == 1)
-        data, label = koza_3.get_dataset()
-        eval_data, eval_label = koza_3.get_eval_dataset()
-        return data, label, eval_data, eval_label
-    elseif (dataset_id == 2)
-        data, label = nguyen_7.get_dataset()
-        eval_data, eval_label = nguyen_7.get_eval_dataset()
-        return data, label, eval_data, eval_label
-    else 
-        println("Error occured: false dataset ID!!")
-        return
-    end
+function load_dataset()
+    data, label = get_dataset()
+    eval_data, eval_label = get_eval_dataset()
+    return data, label, eval_data, eval_label
 end
 
 function get_dataset_string(dataset_id)
@@ -174,5 +160,5 @@ end
 
 
 # Run the main function
-#main()
+main()
 

@@ -16,19 +16,27 @@ function div(con1::Vector{Float32}, con2::Vector{Float32})::Vector{Float32}
     return [isapprox(b, 0.0, atol=1e-5) ? 1.0f0 : a / b for (a, b) in zip(con1, con2)]
 end
 
-function sin(con1::Vector{Float32})::Vector{Float32}
-    return sin.(con1)
+function sinReg(con1::Vector{Float32})::Vector{Float32}
+    try
+        return sin.(con1)
+    catch
+        return con1
+    end
 end
 
-function cos(con1::Vector{Float32})::Vector{Float32}
-    return cos.(con1)
+function cosReg(con1::Vector{Float32})::Vector{Float32}
+    try
+        return cos.(con1)
+    catch
+        return con1
+    end
 end
 
-function ln(con1::Vector{Float32})::Vector{Float32}
+function lnReg(con1::Vector{Float32})::Vector{Float32}
     return [isapprox(x, 0.0, atol=1e-5) ? 1.0f0 : log(abs(x)) for x in con1]
 end
 
-function exp(con1::Vector{Float32})::Vector{Float32}
+function expReg(con1::Vector{Float32})::Vector{Float32}
     return exp.(con1)
 end
 

@@ -7,7 +7,7 @@ include("../utils/symbolicRegressionFunctions.jl")
 include("../utils/nodeType.jl")
 include("../utils/utilityFuncs.jl")
 
-struct Node
+mutable struct Node
     position::Int
     node_type::NodeType
     nbr_inputs::Int
@@ -26,16 +26,16 @@ end
 
 function Node(position::Int, nbr_inputs::Int, graph_width::Int, node_type::NodeType)
     function_id = rand(0:7)
-    connection0::Int
-    connection1::Int
+    connection0::Int = -1
+    connection1::Int = -1
 
-    if node_type == NodeType.InputNode
+    if node_type == InputNode
         connection0 = typemax(Int)
         connection1 = typemax(Int)
-    elseif node_type == NodeType.ComputationalNode
+    elseif node_type == ComputationalNode
         connection0 = rand(0:position-1)
         connection1 = rand(0:position-1)
-    elseif node_type == NodeType.OutputNode
+    elseif node_type == OutputNode
         connection0 = rand(0:nbr_inputs + graph_width - 1)
         connection1 = typemax(Int)
     end
@@ -43,36 +43,36 @@ function Node(position::Int, nbr_inputs::Int, graph_width::Int, node_type::NodeT
     return Node(position, node_type, nbr_inputs, graph_width, function_id, connection0, connection1)
 end
 
-function execute(node::Node, conn1_value::Vector{Float32}, conn2_value::Union{Vector{Float32}, Nothing})
-    @assert node.node_type != NodeType.InputNode
+function nodeExecute(node::Node, conn1_value::Vector{Float32}, conn2_value::Union{Vector{Float32}, Nothing})::Vector{Float32}
+    @assert node.node_type != InputNode
 
     if node.function_id == 0
-        return symbolicRegressionFunctions.add(conn1_value, conn2_value)
+        return add(conn1_value, conn2_value)
     elseif node.function_id == 1
-        return symbolicRegressionFunctions.subtract(conn1_value, conn2_value)
+        return subtract(conn1_value, conn2_value)
     elseif node.function_id == 2
-        return symbolicRegressionFunctions.mul(conn1_value, conn2_value)
+        return mul(conn1_value, conn2_value)
     elseif node.function_id == 3
-        return symbolicRegressionFunctions.div(conn1_value, conn2_value)
+        return div(conn1_value, conn2_value)
     elseif node.function_id == 4
-        return symbolicRegressionFunctions.sin(conn1_value)
+        return sinReg(conn1_value)
     elseif node.function_id == 5
-        return symbolicRegressionFunctions.cos(conn1_value)
+        return cosReg(conn1_value)
     elseif node.function_id == 6
-        return symbolicRegressionFunctions.ln(conn1_value)
+        return lnReg(conn1_value)
     elseif node.function_id == 7
-        return symbolicRegressionFunctions.exp(conn1_value)
+        return expReg(conn1_value)
     else
         throw(ArgumentError("wrong function id: $(node.function_id)"))
     end
 end
 
-function mutate!(self)
-    @assert self.node_type != NodeType.InputNode
+function mutate!(self::Node)
+    @assert self.node_type != InputNode
 
-    if self.node_type == NodeType.OutputNode
+    if self.node_type == OutputNode
         mutate_output_node!(self)
-    elseif self.node_type == NodeType.ComputationalNode
+    elseif self.node_type == ComputationalNode
         mutate_computational_node!(self)
     else
         throw(ArgumentError("Trying to mutate input node"))
@@ -80,11 +80,11 @@ function mutate!(self)
 end
 
 function mutate_connection!(connection::Ref{Int}, upper_range::Int)
-    connection[] = utilityFuncs.gen_random_number_for_node(connection[], upper_range)
+    connection[] = gen_random_number_for_node(connection[], upper_range)
 end
 
 function mutate_function!(self)
-    self.function_id = utilityFuncs.gen_random_number_for_node(self.function_id, 8)
+    self.function_id = gen_random_number_for_node(self.function_id, 8)
 end
 
 function mutate_output_node!(self)
