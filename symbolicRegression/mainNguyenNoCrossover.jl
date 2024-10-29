@@ -25,12 +25,11 @@ include("globalParams.jl")
 
 include("utils/runner.jl")
 
-
-nbr_computational_nodes = 50
+nbr_computational_nodes = 1500
 population_size = 50
 mu = 1
 lambda = 4
-eval_after_iterations = 500
+eval_after_iterations = 1000
 nbr_inputs = 1
 nbr_outputs = 1
 
@@ -45,10 +44,10 @@ crossover_type = 3
 # Keijzer = 0
 # Koza = 1
 # Nguyen = 2
-datasetToLoad = 0
-include("datasets/keijzer.jl") 
+datasetToLoad = 2
+#include("datasets/keijzer.jl") 
 #include("datasets/koza_3.jl")
-#include("datasets/nguyen_7.jl")
+include("datasets/nguyen_7.jl")
 
 crossover_rate = 0.0
 tournament_size = 0
@@ -107,7 +106,7 @@ function main()
             end
         end
 
-        fitness_eval = get_best_fitness(runner)
+        fitness_eval = get_test_fitness(runner)
         fitness_train = get_best_fitness(runner)
 
         # Saving results
