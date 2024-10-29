@@ -8,12 +8,6 @@ function fitness_regression(prediction::Vector{Float32}, label::Vector{Float32})
     end
     
     fitness = fitness / Float32(length(prediction))
-
-    println("fitness is calculated: $fitness")
-    if fitness <= 2
-        println("prediction: $prediction")
-        println("labels: $label")
-    end
     
     return fitness
 end
