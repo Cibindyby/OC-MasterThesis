@@ -51,6 +51,9 @@ include("datasets/koza_3.jl")
 
 crossover_rate = 0.0
 crossover_offset = 0
+crossover_start = 0.0
+crossover_delta = 0.0
+crossover_rate_type = 1
 tournament_size = 0
 elitism_number = 0
 
@@ -66,6 +69,9 @@ params = CgpParameters(
     crossover_type,
     crossover_rate, 
     crossover_offset,
+    crossover_start,
+    crossover_delta,
+    crossover_rate_type,
     tournament_size,
     elitism_number
 )

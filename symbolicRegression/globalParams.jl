@@ -9,7 +9,10 @@ struct CgpParameters
     nbr_inputs::Int
     nbr_outputs::Int
     crossover_type::Int
-    crossover_rate::Float32
+    crossover_rate::Float32 #für konstante Werte
+    crossover_start::Float32 #für Clegg
+    crossover_delta::Float32 #für Clegg und oneFifth
+    crossover_rate_type::Int #1=konstant; 2=Clegg; 3=oneFifth
     crossover_offset::Int
     tournament_size::Int
     elitism_number::Int
@@ -40,6 +43,9 @@ function CgpParameters()
         0,    # nbr_outputs
         0,    # crossover_type
         -1.0, # crossover_rate
+        0.0,  # crossover_start
+        0.0,  # crossover_delta
+        1,    # crossover_rate_type::Int #1=konstant; 2=Clegg; 3=oneFifth
         0,    # crossover_offset
         0,    # tournament_size
         0,    # elitism_number
