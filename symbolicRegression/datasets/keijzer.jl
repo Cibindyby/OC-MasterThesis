@@ -6,8 +6,10 @@ include("../utils/utilityFuncs.jl")
 
 function make_label(inputs::Vector{Vector{Float32}})::Vector{Float32}
     labels = Float32[]
+    summe = Float32(0.0)
     for d in inputs
-        push!(labels, sum(1 ./ d))
+        summe = summe + (1.0f0 / d[1])
+        push!(labels, summe)
     end
     return labels
 end
