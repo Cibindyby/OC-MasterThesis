@@ -50,6 +50,7 @@ include("datasets/keijzer.jl")
 #include("datasets/nguyen_7.jl")
 
 crossover_rate = 0.0
+crossover_offset = 0
 tournament_size = 0
 elitism_number = 0
 
@@ -64,6 +65,7 @@ params = CgpParameters(
     nbr_outputs,
     crossover_type,
     crossover_rate, 
+    crossover_offset,
     tournament_size,
     elitism_number
 )
