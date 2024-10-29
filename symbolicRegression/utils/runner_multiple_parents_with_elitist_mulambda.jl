@@ -12,7 +12,7 @@ include("../standardCGP/chromosome.jl")
 # größere Population: Population <- population + elitisten
 # speichere elitist id
 
-struct RunnerElitistMuLambda
+mutable struct RunnerElitistMuLambda
     params::CgpParameters
     data::Vector{Vector{Float32}}
     label::Vector{Float32}
@@ -27,6 +27,8 @@ struct RunnerElitistMuLambda
     child_ids::Vector{Int}
     # check for correctness, must include elitists too
     selected_parents_ids::Vector{Int}
+    iteration::Int
+    last_crossover_rate::Float32
 end
 
 function Base.show(io::IO, runner::RunnerElitistMuLambda)
@@ -35,6 +37,13 @@ end
 
 function RunnerElitistMuLambda(params::CgpParameters, data::Vector{Vector{Float32}}, label::Vector{Float32}, eval_data::Vector{Vector{Float32}}, eval_label::Vector{Float32})
     rng = MersenneTwister()
+    iteration = 0
+    
+    if params.crossover_rate_type == 1
+        last_crossover_rate = params.crossover_rate
+    else
+        last_crossover_rate = params.crossover_start
+    end
 
     data = utility_funcs.transpose(data)
     eval_data = utility_funcs.transpose(eval_data)
@@ -76,7 +85,7 @@ function RunnerElitistMuLambda(params::CgpParameters, data::Vector{Vector{Float3
     child_ids = collect(0:(params.population_size + params.elitism_number - 1))
     child_ids = vect_difference(child_ids, elitist_ids)
 
-    return RunnerElitistMuLambda(params, data, label, eval_data, eval_label, population, fitness_vals, fitness_vals_sorted, rng, elitist_ids, child_ids, Int[])
+    return RunnerElitistMuLambda(params, data, label, eval_data, eval_label, population, fitness_vals, fitness_vals_sorted, rng, elitist_ids, child_ids, Int[], iteration, last_crossover_rate)
 end
 
 function learn_step(runner::RunnerElitistMuLambda, i::Int)
@@ -168,6 +177,9 @@ function get_test_fitness(runner::RunnerElitistMuLambda)
             best_fitness = fitness
         end
     end
+
+    iteration += 1
+
     return best_fitness
 end
 
@@ -188,18 +200,21 @@ function crossover(runner::RunnerElitistMuLambda)
     # get all new children ids; i.e. the ID's of chromosomes in the population that
     # can be replaced.
     # It must exclude the elitists, otherwise they may be replaced too
+
     children_set = collect(0:(runner.params.population_size + runner.params.elitism_number - 1))
     children_set = vect_difference(children_set, runner.elitist_ids)
 
     # create new population
     new_population = copy(runner.population)
 
+    crossover_for_this_iteration = get_crossover_rate()
+
     for (i, child_ids) in Iterators.partition(children_set, 2)
         crossover_prob = rand(Float32)
 
         parent_ids = rand(runner.elitist_ids, 2)
 
-        if crossover_prob <= runner.params.crossover_rate
+        if crossover_prob <= crossover_for_this_iteration
             if runner.params.crossover_type == 0
                 crossover_algos.single_point_crossover(runner, new_population, child_ids[1], child_ids[2], parent_ids[1], parent_ids[2])
             elseif runner.params.crossover_type == 1
@@ -220,3 +235,36 @@ function crossover(runner::RunnerElitistMuLambda)
     runner.population = new_population
 end
 
+function get_crossover_rate()
+    crossover_rate_now = last_crossover_rate
+    offset_is_active = params.crossover_offset > iteration
+
+    if params.crossover_rate_type == 1 #konstant
+        
+        if offset_is_active
+            crossover_rate_now = 0.0f0
+        end
+
+    elseif params.crossover_rate_type == 2 #Clegg
+
+        if offset_is_active
+            crossover_rate_now = 0.0f0
+        else
+            crossover_rate_now = last_crossover_rate - params.crossover_delta
+            last_crossover_rate = crossover_rate_now
+        end
+
+    elseif params.crossover_rate_type == 3 #oneFifth
+
+        if offset_is_active
+            crossover_rate_now = 0.0f0
+        else
+            #TODO: crossover rate berechnen für one fifth
+            crossover_rate_now = last_crossover_rate + params.crossover_delta
+            last_crossover_rate = crossover_rate_now
+        end
+
+    end
+
+    return crossover_rate_now
+end
