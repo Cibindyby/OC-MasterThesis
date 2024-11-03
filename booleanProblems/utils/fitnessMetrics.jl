@@ -1,6 +1,6 @@
 using LinearAlgebra
 
-function fitness_boolean(output::BitMatrix, labels::BitMatrix)
+function fitness_boolean(output::Vector{Bool}, labels::Vector{Bool})
     fitness = 0
     nbr_correct = .!(output .⊻ labels)
     fitness = sum(nbr_correct)

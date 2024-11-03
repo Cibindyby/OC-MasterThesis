@@ -28,18 +28,18 @@ function Node(position::Int, nbr_inputs::Int, graph_width::Int, node_type::NodeT
     connection0 = typemax(Int)
     connection1 = typemax(Int)
 
-    if node_type == NodeType.ComputationalNode
+    if node_type == ComputationalNode
         connection0 = rand(0:position-1)
         connection1 = rand(0:position-1)
-    elseif node_type == NodeType.OutputNode
+    elseif node_type == OutputNode
         connection0 = rand(0:nbr_inputs+graph_width-1)
     end
 
     Node(position, node_type, nbr_inputs, graph_width, function_id, connection0, connection1)
 end
 
-function execute(node::Node, conn1_value::AbstractVector{Bool}, conn2_value::AbstractVector{Bool})
-    @assert node.node_type != NodeType.InputNode
+function nodeExecute(node::Node, conn1_value::Vector{Bool}, conn2_value::Vector{Bool})
+    @assert node.node_type != InputNode
 
     if node.function_id == 0
         return and(conn1_value, conn2_value)
@@ -55,11 +55,11 @@ function execute(node::Node, conn1_value::AbstractVector{Bool}, conn2_value::Abs
 end
 
 function mutate!(node::Node)
-    @assert node.node_type != NodeType.InputNode
+    @assert node.node_type != InputNode
 
-    if node.node_type == NodeType.OutputNode
+    if node.node_type == OutputNode
         mutate_output_node!(node)
-    elseif node.node_type == NodeType.ComputationalNode
+    elseif node.node_type == ComputationalNode
         mutate_computational_node!(node)
     else
         error("Trying to mutate input node")

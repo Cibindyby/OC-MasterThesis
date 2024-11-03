@@ -14,10 +14,10 @@ include("../standardCGP/chromosome.jl")
 
 mutable struct RunnerElitistMuLambda
     params::CgpParameters
-    data::Vector{Vector{Float32}}
-    label::Vector{Float32}
-    eval_data::Vector{Vector{Float32}}
-    eval_label::Vector{Float32}
+    data::Vector{Vector{Bool}}
+    label::Vector{Bool}
+    eval_data::Vector{Vector{Bool}}
+    eval_label::Vector{Bool}
     population::Vector{Chromosome}
     fitness_vals_sorted::Vector{Float32}
     # check for correctness, must include elitists too
@@ -35,7 +35,7 @@ function Base.show(io::IO, runner::RunnerElitistMuLambda)
     println(io, "Fitnesses: ", runner.fitness_vals)
 end
 
-function RunnerElitistMuLambda(params::CgpParameters, data::Vector{Vector{Float32}}, label::Vector{Float32}, eval_data::Vector{Vector{Float32}}, eval_label::Vector{Float32})
+function RunnerElitistMuLambda(params::CgpParameters, data::Vector{Vector{Bool}}, label::Vector{Bool}, eval_data::Vector{Vector{Bool}}, eval_label::Vector{Bool})
     rng = MersenneTwister()
     iteration = 0
     

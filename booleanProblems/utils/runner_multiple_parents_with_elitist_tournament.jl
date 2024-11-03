@@ -14,10 +14,10 @@ include("crossover/crossoverAlgos.jl")
 
 struct RunnerMultipleParentsTournament
     params::CgpParameters
-    data::Vector{Vector{Float32}}
-    label::Vector{Float32}
-    eval_data::Vector{Vector{Float32}}
-    eval_label::Vector{Float32}
+    data::Vector{Vector{Bool}}
+    label::Vector{Bool}
+    eval_data::Vector{Vector{Bool}}
+    eval_label::Vector{Bool}
     population::Vector{Chromosome}
     fitness_vals_sorted::Vector{Float32}
     # check for correctness, must include elitists too
@@ -34,7 +34,7 @@ function Base.show(io::IO, runner::RunnerMultipleParentsTournament)
     println(io, "Fitnesses: ", runner.fitness_vals)
 end
 
-function RunnerMultipleParentsTournament(params::CgpParameters, data::Vector{Vector{Float32}}, label::Vector{Float32}, eval_data::Vector{Vector{Float32}}, eval_label::Vector{Float32})
+function RunnerMultipleParentsTournament(params::CgpParameters, data::Vector{Vector{Bool}}, label::Vector{Bool}, eval_data::Vector{Vector{Bool}}, eval_label::Vector{Bool})
     rng = MersenneTwister()
 
     data = utility_funcs.transpose(data)

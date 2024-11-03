@@ -48,13 +48,13 @@ function Chromosome(params::CgpParameters)
     return Chromosome(params, nodes_grid, output_node_ids, nothing)
 end
 
-function evaluate!(self::Chromosome, inputs::Vector{Vector{Float32}}, labels::Vector{Float32})
+function evaluate!(self::Chromosome, inputs::Vector{Vector{Bool}}, labels::Vector{Bool})
     # let active_nodes = self.get_active_nodes_id();
     # self.active_nodes = Some(self.get_active_nodes_id());
     get_active_nodes_id!(self)
 
-    outputsNode = Dict{Int, Vector{Float32}}()
-    prediction = Vector{Float32}()
+    outputsNode = Dict{Int, Vector{Bool}}()
+    prediction = Vector{Bool}()
 
     # iterate through each input and calculate for each new vector its output
     for inp in inputs

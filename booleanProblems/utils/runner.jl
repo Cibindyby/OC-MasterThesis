@@ -7,10 +7,10 @@ include("../standardCGP/chromosome.jl")
 
 mutable struct RunnerMuLambda
     params::CgpParameters
-    data::Vector{Vector{Float32}}
-    label::Vector{Float32}
-    eval_data::Vector{Vector{Float32}}
-    eval_label::Vector{Float32}
+    data::Vector{Vector{Bool}}
+    label::Vector{Bool}
+    eval_data::Vector{Vector{Bool}}
+    eval_label::Vector{Bool}
     population::Vector{Chromosome}
     best_fitness::Float32
     fitness_vals::Vector{Float32}
@@ -23,10 +23,10 @@ function Base.show(io::IO, runner::RunnerMuLambda)
 end
 
 function RunnerMuLambda(params::CgpParameters,
-                data::Vector{Vector{Float32}},
-                label::Vector{Float32},
-                eval_data::Vector{Vector{Float32}},
-                eval_label::Vector{Float32})
+                data::Vector{Vector{Bool}},
+                label::Vector{Bool},
+                eval_data::Vector{Vector{Bool}},
+                eval_label::Vector{Bool})
     chromosomes = Vector{Chromosome}(undef, params.mu + params.lambda)
     fitness_vals = Vector{Float32}(undef, params.mu + params.lambda)
 
