@@ -25,7 +25,7 @@ include("globalParams.jl")
 
 include("utils/runner.jl")
 
-nbr_computational_nodes = 1500
+nbr_computational_nodes = 500
 population_size = 50
 mu = 1
 lambda = 4
