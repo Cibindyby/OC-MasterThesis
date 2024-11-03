@@ -41,13 +41,15 @@ nbr_outputs = 1
 crossover_type = 3
 
 
-# Keijzer = 0
-# Koza = 1
-# Nguyen = 2
+# Parity = 0
+# Encode = 1
+# Decode = 2
+# Multiply = 3
 datasetToLoad = 0
-include("datasets/keijzer.jl") 
-#include("datasets/koza_3.jl")
-#include("datasets/nguyen_7.jl")
+include("datasets/3parity.jl")
+#include("datasets/4-16encode")
+#include("datasets/16-4decode")
+#include("datasets/3multiply.jl")
 
 crossover_rate = 0.0
 crossover_offset = 0
@@ -88,7 +90,7 @@ function main()
     dataset_string = get_dataset_string(datasetToLoad)
     crossover_type = get_crossover_type(params.crossover_type)
 
-    save_path = joinpath(["Experiments_Regression", 
+    save_path = joinpath(["Experiments_Boolean", 
                             dataset_string, 
                             selection, 
                             crossover_type, 
@@ -139,11 +141,13 @@ end
 
 function get_dataset_string(dataset_id)
     if (dataset_id == 0)
-        return "Keijzer"
+        return "Parity"
     elseif (dataset_id == 1)
-        return "Koza"
+        return "Encode"
     elseif (dataset_id == 2)
-        return "Nguyen"
+        return "Decode"
+    elseif (dataset_id == 3)
+        return "Multiply"
     else 
         println("Error occured: false dataset ID!!")
         return
