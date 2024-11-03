@@ -111,7 +111,7 @@ function main()
             learn_step!(runner)
             runtime += 1
 
-            if isapprox(get_best_fitness(runner), 0.0, atol=0.01)
+            if isapprox(get_best_fitness(runner), 0.0, atol=0.0001)
                 break
             end
         end
