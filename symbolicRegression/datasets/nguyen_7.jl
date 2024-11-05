@@ -1,7 +1,7 @@
 using Distributions
 using Random
 
-function make_label(inputs::Vector{Vector{Float32}})::Vector{Float32}
+function make_label(inputs::Vector{Vector{Float32}})
     labels = Float32[]
     for d in inputs
         push!(labels, log1p(d[1]) + log1p(d[1]^2))
@@ -9,7 +9,7 @@ function make_label(inputs::Vector{Vector{Float32}})::Vector{Float32}
     return labels
 end
 
-function get_dataset()::Tuple{Vector{Vector{Float32}}, Vector{Float32}}
+function get_dataset()
     data = Vector{Float32}[]
     
     between = Uniform(0.0f0, 2.0f0)
@@ -24,7 +24,7 @@ function get_dataset()::Tuple{Vector{Vector{Float32}}, Vector{Float32}}
     return (data, labels)
 end
 
-function get_eval_dataset()::Tuple{Vector{Vector{Float32}}, Vector{Float32}}
+function get_eval_dataset()
     return get_dataset()
 end
 

@@ -43,7 +43,7 @@ function Node(position::Int, nbr_inputs::Int, graph_width::Int, node_type::NodeT
     return Node(position, node_type, nbr_inputs, graph_width, function_id, connection0, connection1)
 end
 
-function nodeExecute(node::Node, conn1_value::Vector{Float32}, conn2_value::Union{Vector{Float32}, Nothing})::Vector{Float32}
+function nodeExecute(node::Node, conn1_value::Vector{Float32}, conn2_value::Vector{Float32})::Vector{Float32}
     @assert node.node_type != InputNode
 
     if node.function_id == 0

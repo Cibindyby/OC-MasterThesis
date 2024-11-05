@@ -58,3 +58,5 @@ function get_eval_dataset()
 
     return (data, labels)
 end
+
+get_dataset()

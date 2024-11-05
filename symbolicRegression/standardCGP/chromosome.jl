@@ -48,47 +48,47 @@ function Chromosome(params::CgpParameters)
     return Chromosome(params, nodes_grid, output_node_ids, nothing)
 end
 
-function evaluate!(self::Chromosome, inputs::Vector{Vector{Float32}}, labels::Vector{Float32})
-    # let active_nodes = self.get_active_nodes_id();
-    # self.active_nodes = Some(self.get_active_nodes_id());
+using DataStructures
+
+function evaluate!(self, inputs::Vector{Float32}, labels::Vector{Float32})::Float32
     get_active_nodes_id!(self)
 
-    outputsNode = Dict{Int, Vector{Float32}}()
+    outputs = Dict{Int, Vector{Float32}}()
     prediction = Vector{Float32}()
+    
+    for node_id in self.active_nodes
+        current_node = self.nodes_grid[node_id + 1]
+        outputs[node_id] = Vector{Float32}()
 
-    # iterate through each input and calculate for each new vector its output
-    for inp in inputs
+        if current_node.node_type == InputNode
+            outputs[node_id] = inputs[:,node_id + 1]
+        elseif current_node.node_type == OutputNode
+            con1 = current_node.connection0
+            prev_output1 = outputs[con1]
+            outputs[node_id] = copy(prev_output1)
+            prediction = copy(prev_output1)
+        elseif current_node.node_type == ComputationalNode
+            con1 = current_node.connection0
+            prev_output1 = outputs[con1]
 
-        for node_id in self.active_nodes
-            current_node = self.nodes_grid[node_id + 1]  # Adjust for 1-based indexing
-
-            if current_node.node_type == InputNode
-                outputsNode[node_id] = inp
-            elseif current_node.node_type == OutputNode
-                con1 = current_node.connection0
-                prev_output1 = outputsNode[con1]
-                outputsNode[node_id] = copy(prev_output1)
-                push!(prediction, copy(prev_output1[1]))
-            elseif current_node.node_type == ComputationalNode
-                con1 = current_node.connection0
-                prev_output1 = outputsNode[con1]
-
-                if current_node.function_id <= 3  # case: two inputs needed
-                    con2 = current_node.connection1
-                    prev_output2 = outputsNode[con2]
-                    calculated_result = nodeExecute(current_node,prev_output1, prev_output2)
-                else  # case: only one input needed
-                    calculated_result = nodeExecute(current_node,prev_output1, nothing)
-                end
-                outputsNode[node_id] = calculated_result
+            if current_node.function_id <= 3  # case: two inputs needed
+                con2 = current_node.connection1
+                prev_output2 = outputs[con2]
+                calculated_result = nodeExecute(current_node, prev_output1, prev_output2)
+            else  # case: only one input needed
+                calculated_result = nodeExecute(current_node, prev_output1, Vector{Float32}())
             end
-            
+            outputs[node_id] = calculated_result
         end
     end
+
+    
     fitness = fitness_regression(prediction, labels)
 
     return fitness
 end
+
+
 
 using Random
 using DataStructures: Set
