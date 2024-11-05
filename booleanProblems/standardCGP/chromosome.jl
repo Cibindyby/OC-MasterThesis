@@ -48,7 +48,7 @@ function Chromosome(params::CgpParameters)
     return Chromosome(params, nodes_grid, output_node_ids, nothing)
 end
 
-function evaluate!(self::Chromosome, inputs::Vector{Vector{Bool}}, labels::Vector{Bool})
+function evaluate!(self::Chromosome, inputs::Adjoint{Bool, Matrix{Bool}}, labels::Adjoint{Bool, Matrix{Bool}})
     # let active_nodes = self.get_active_nodes_id();
     # self.active_nodes = Some(self.get_active_nodes_id());
     get_active_nodes_id!(self)
@@ -56,36 +56,28 @@ function evaluate!(self::Chromosome, inputs::Vector{Vector{Bool}}, labels::Vecto
     outputsNode = Dict{Int, Vector{Bool}}()
     prediction = Vector{Bool}()
 
-    # iterate through each input and calculate for each new vector its output
-    for inp in inputs
+    for node_id in self.active_nodes
+        current_node = self.nodes_grid[node_id + 1]  # Adjust for 1-based indexing
+        outputsNode[node_id] = Vector{Bool}()
 
-        for node_id in self.active_nodes
-            current_node = self.nodes_grid[node_id + 1]  # Adjust for 1-based indexing
+        if current_node.node_type == InputNode
+            outputsNode[node_id] = inputs[:, node_id + 1]
+        elseif current_node.node_type == OutputNode
+            con1 = current_node.connection0
+            prev_output1 = outputsNode[con1]
+            outputsNode[node_id] = copy(prev_output1)
+            prediction = copy(prev_output1)
+        elseif current_node.node_type == ComputationalNode
+            con1 = current_node.connection0
+            prev_output1 = outputsNode[con1]
 
-            if current_node.node_type == InputNode
-                outputsNode[node_id] = inp
-            elseif current_node.node_type == OutputNode
-                con1 = current_node.connection0
-                prev_output1 = outputsNode[con1]
-                outputsNode[node_id] = copy(prev_output1)
-                push!(prediction, copy(prev_output1[1]))
-            elseif current_node.node_type == ComputationalNode
-                con1 = current_node.connection0
-                prev_output1 = outputsNode[con1]
-
-                if current_node.function_id <= 3  # case: two inputs needed
-                    con2 = current_node.connection1
-                    prev_output2 = outputsNode[con2]
-                    calculated_result = nodeExecute(current_node,prev_output1, prev_output2)
-                else  # case: only one input needed
-                    calculated_result = nodeExecute(current_node,prev_output1, nothing)
-                end
-                outputsNode[node_id] = calculated_result
-            end
-            
+            con2 = current_node.connection1
+            prev_output2 = outputsNode[con2]
+            calculated_result = nodeExecute(current_node,prev_output1, prev_output2)
+            outputsNode[node_id] = calculated_result
         end
     end
-    fitness = fitness_boolean(prediction, labels)
+    fitness = fitness_boolean(prediction, labels[:,1])
 
     return fitness
 end
@@ -135,11 +127,11 @@ function get_active_nodes_id!(self)
 end
 
 function mutate_single!(self)
-    start_id = self.params.nbr_inputs
+    start_id = self.params.nbr_inputs + 1
     if start_id == 1
         start_id = 2
     end
-    end_id = self.params.nbr_inputs + self.params.nbr_computational_nodes + self.params.nbr_outputs
+    end_id = self.params.nbr_inputs + 1 + self.params.nbr_computational_nodes + self.params.nbr_outputs
 
     between = start_id:end_id - 1
     rng = MersenneTwister()

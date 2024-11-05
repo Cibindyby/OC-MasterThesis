@@ -23,10 +23,10 @@ function get_dataset()
         [false]
     ]
 
-    #data = hcat(data...)'
-    labels = hcat(labels...)
+    data = hcat(data...)'
+    labels = hcat(labels...)'
 
-    return (data, labels[:])
+    return (data, labels)
 end
 
 #same data as train dataset
@@ -53,8 +53,8 @@ function get_eval_dataset()
         [false]
     ]
 
-    #data = hcat(data...)'
-    labels = hcat(labels...)
+    data = hcat(data...)'
+    labels = hcat(labels...)'
 
-    return (data, labels[:])
+    return (data, labels)
 end

@@ -29,8 +29,8 @@ nbr_computational_nodes = 500
 population_size = 50
 mu = 1
 lambda = 4
-eval_after_iterations = 50000
-nbr_inputs = 1
+eval_after_iterations = 5000
+nbr_inputs = 3
 nbr_outputs = 1
 
 #crossover type:
