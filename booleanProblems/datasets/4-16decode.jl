@@ -39,8 +39,10 @@ function get_dataset()
         [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true]
     ]
 
-    data = BitMatrix(data)
-    labels = BitMatrix(labels)
+    #data = BitMatrix(data)
+    #labels = BitMatrix(labels)
+    data = hcat(data...)'
+    labels = hcat(labels...)'
 
     return (data, labels)
 end
@@ -85,8 +87,10 @@ function get_eval_dataset()
         [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true]
     ]
 
-    data = BitMatrix(data)
-    labels = BitMatrix(labels)
+    #data = BitMatrix(data)
+    #labels = BitMatrix(labels)
+    data = hcat(data...)'
+    labels = hcat(labels...)'
 
     return (data, labels)
 end

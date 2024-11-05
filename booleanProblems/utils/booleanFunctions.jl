@@ -10,9 +10,11 @@ end
 
 function nand(con1::AbstractVector{Bool}, con2::AbstractVector{Bool})::Vector{Bool}
     return .!and(con1, con2)
+    #return (.!con1 .& con2) .| (con1 .& .!con2)
 end
 
 function nor(con1::AbstractVector{Bool}, con2::AbstractVector{Bool})::Vector{Bool}
     return .!or(con1, con2)
+    #return (con1 .& con2) .| (.!con1 .& .!con2)
 end
 
