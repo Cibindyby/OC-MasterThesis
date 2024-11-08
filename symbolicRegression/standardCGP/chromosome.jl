@@ -135,11 +135,11 @@ function get_active_nodes_id!(self)
 end
 
 function mutate_single!(self)
-    start_id = self.params.nbr_inputs
+    start_id = self.params.nbr_inputs + 1
     if start_id == 1
         start_id = 2
     end
-    end_id = self.params.nbr_inputs + self.params.nbr_computational_nodes + self.params.nbr_outputs
+    end_id = self.params.nbr_inputs + 1 + self.params.nbr_computational_nodes + self.params.nbr_outputs
 
     between = start_id:end_id - 1
     rng = MersenneTwister()
@@ -148,7 +148,7 @@ function mutate_single!(self)
         random_node_id = rand(rng, between)
         mutate!(self.nodes_grid[random_node_id])
 
-        if in(random_node_id, self.active_nodes)
+        if in(random_node_id-1, self.active_nodes)
             break
         end
     end

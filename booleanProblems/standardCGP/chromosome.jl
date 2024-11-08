@@ -140,7 +140,7 @@ function mutate_single!(self)
         random_node_id = rand(rng, between)
         mutate!(self.nodes_grid[random_node_id])
 
-        if in(random_node_id, self.active_nodes)
+        if in(random_node_id-1, self.active_nodes)
             break
         end
     end

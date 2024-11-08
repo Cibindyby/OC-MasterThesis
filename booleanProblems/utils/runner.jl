@@ -96,15 +96,15 @@ function eval_chromosomes!(runner::RunnerMuLambda)
 end
 
 function get_test_fitness(runner::RunnerMuLambda)
-    best_fitness = typemax(Float32)
+    best_fitn = typemax(Float32)
 
     for individual in runner.population
         fitness = evaluate!(individual, runner.eval_data, runner.eval_label)
-        if !isnan(fitness) && fitness < best_fitness
-            best_fitness = fitness
+        if !isnan(fitness) && fitness < best_fitn
+            best_fitn = fitness
         end
     end
-    return best_fitness
+    return best_fitn
 end
 
 function get_best_fitness(runner::RunnerMuLambda)::Float32

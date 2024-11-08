@@ -66,8 +66,12 @@ function mutate!(node::Node)
     end
 end
 
-function mutate_connection!(connection::Ref{Int}, upper_range::Int)
-    connection[] = gen_random_number_for_node(connection[], upper_range)
+function mutate_connection0!(self::Node, connection0::Int, upper_range::Int)
+    self.connection0 = gen_random_number_for_node(connection0, upper_range)
+end
+
+function mutate_connection1!(self::Node, connection1::Int, upper_range::Int)
+    self.connection1 = gen_random_number_for_node(connection1, upper_range)
 end
 
 function mutate_function!(node::Node)
@@ -75,16 +79,16 @@ function mutate_function!(node::Node)
 end
 
 function mutate_output_node!(node::Node)
-    mutate_connection!(Ref(node.connection0), node.graph_width + node.nbr_inputs)
+    mutate_connection0!(node, node.connection0, node.graph_width + node.nbr_inputs)
     @assert node.connection0 < node.position
 end
 
 function mutate_computational_node!(node::Node)
     rand_nbr = rand(0:2)
     if rand_nbr == 0
-        mutate_connection!(Ref(node.connection0), node.position)
+        mutate_connection0!(node, node.connection0, node.position)
     elseif rand_nbr == 1
-        mutate_connection!(Ref(node.connection1), node.position)
+        mutate_connection1!(node, node.connection1, node.position)
     elseif rand_nbr == 2
         mutate_function!(node)
     else
