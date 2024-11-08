@@ -29,7 +29,7 @@ nbr_computational_nodes = 2000
 population_size = 50
 mu = 1
 lambda = 4
-eval_after_iterations = 5000
+eval_after_iterations = 1000
 nbr_inputs = 3
 nbr_outputs = 1
 

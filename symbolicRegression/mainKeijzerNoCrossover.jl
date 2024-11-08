@@ -29,7 +29,7 @@ nbr_computational_nodes = 1500
 population_size = 50
 mu = 1
 lambda = 4
-eval_after_iterations = 5000
+eval_after_iterations = 3000
 nbr_inputs = 1
 nbr_outputs = 1
 
@@ -168,4 +168,5 @@ end
 
 # Run the main function
 main()
+
 

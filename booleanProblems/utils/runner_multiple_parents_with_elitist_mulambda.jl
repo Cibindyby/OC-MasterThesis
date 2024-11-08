@@ -38,6 +38,8 @@ end
 function RunnerElitistMuLambda(params::CgpParameters, data::Vector{Vector{Bool}}, label::Vector{Bool}, eval_data::Vector{Vector{Bool}}, eval_label::Vector{Bool})
     rng = MersenneTwister()
     iteration = 0
+
+    oneFifthPositive = false
     
     if params.crossover_rate_type == 1
         last_crossover_rate = params.crossover_rate
@@ -168,19 +170,19 @@ function get_best_fitness(runner::RunnerElitistMuLambda)
 end
 
 function get_test_fitness(runner::RunnerElitistMuLambda)
-    best_fitness = typemax(Float32)
+    best_fitn = typemax(Float32)
 
     for individual in runner.population
         fitness = individual.evaluate(runner.eval_data, runner.eval_label)
 
-        if !isnan(fitness) && fitness < best_fitness
-            best_fitness = fitness
+        if !isnan(fitness) && fitness < best_fitn
+            best_fitn = fitness
         end
     end
 
     iteration += 1
 
-    return best_fitness
+    return best_fitn
 end
 
 function get_elitism_fitness(runner::RunnerElitistMuLambda)
@@ -233,6 +235,11 @@ function crossover(runner::RunnerElitistMuLambda)
         end
     end
     runner.population = new_population
+
+    if params.crossover_rate_type == 3
+        #TODO: alle Chromosome evaluieren und schauen, ob 20% der Kinder besser als Eltern sind; dann oneFofthAKtive anpassen
+    end
+        
 end
 
 function get_crossover_rate()
@@ -251,6 +258,9 @@ function get_crossover_rate()
             crossover_rate_now = 0.0f0
         else
             crossover_rate_now = last_crossover_rate - params.crossover_delta
+            if crossover_rate_now < 0.0f0
+                crossover_rate_now = 0.0f0
+            end
             last_crossover_rate = crossover_rate_now
         end
 
@@ -259,7 +269,8 @@ function get_crossover_rate()
         if offset_is_active
             crossover_rate_now = 0.0f0
         else
-            #TODO: crossover rate berechnen für one fifth
+            #idee one fifth rule => soll bewerten, ob 20% der Rekombinationen zu Verbesserungen führen
+            #TODO oneFofthAktive einbauen
             crossover_rate_now = last_crossover_rate + params.crossover_delta
             last_crossover_rate = crossover_rate_now
         end
