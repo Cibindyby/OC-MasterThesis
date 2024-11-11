@@ -126,7 +126,7 @@ function get_active_nodes_id!(self)
     self.active_nodes = active_nodes
 end
 
-function mutate_single!(self)
+function mutate_single!(self::Chromosome)
     start_id = self.params.nbr_inputs + 1
     if start_id == 1
         start_id = 2
@@ -140,7 +140,7 @@ function mutate_single!(self)
         random_node_id = rand(rng, between)
         mutate!(self.nodes_grid[random_node_id])
 
-        if in(random_node_id-1, self.active_nodes)
+        if in(random_node_id - 1, self.active_nodes)
             break
         end
     end
