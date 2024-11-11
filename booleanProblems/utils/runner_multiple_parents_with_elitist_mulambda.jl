@@ -5,7 +5,7 @@ using IterTools
 include("../globalParams.jl")
 include("../utils/utilityFuncs.jl")
 include("../standardCGP/chromosome.jl")
-include("crossover/crossoverAlgos.jl")
+include("../utils/crossover/crossoverAlgos.jl")
 
 # ID's: Begin with population, afterwards elitists.
 # Total number of population: population.len + elitists.len
@@ -220,13 +220,13 @@ function crossover(runner::RunnerElitistMuLambda)
 
         if crossover_prob <= crossover_for_this_iteration
             if runner.params.crossover_type == 0
-                single_point_crossover!(runner, new_population, child_ids[1], child_ids[2], parent_ids[1], parent_ids[2])
+                new_population = single_point_crossover!(runner.rng, runner.params.nbr_inputs, runner.params.nbr_computational_nodes, runner.population, new_population, child_ids[1], child_ids[2], parent_ids[1], parent_ids[2])
             elseif runner.params.crossover_type == 1
-                two_point_crossover!(runner, new_population, child_ids[1], child_ids[2], parent_ids[1], parent_ids[2])
+                new_population = two_point_crossover!(runner.params.nbr_inputs, runner.params.nbr_computational_nodes, runner.population, new_population, child_ids[1], child_ids[2], parent_ids[1], parent_ids[2])
             elseif runner.params.crossover_type == 2
-                uniform_crossover!(runner, new_population, child_ids[1], child_ids[2], parent_ids[1], parent_ids[2])
+                new_population = uniform_crossover!(runner.params.nbr_inputs, runner.params.nbr_computational_nodes, runner.population, new_population, child_ids[1], child_ids[2], parent_ids[1], parent_ids[2])
             elseif runner.params.crossover_type == 3
-                no_crossover!(runner, new_population, child_ids[1], child_ids[2], parent_ids[1], parent_ids[2])
+                new_population = no_crossover!(runner.population, new_population, child_ids[1], child_ids[2], parent_ids[1], parent_ids[2])
             else
                 error("not implemented crossover type")
             end
