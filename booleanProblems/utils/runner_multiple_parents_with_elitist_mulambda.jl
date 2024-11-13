@@ -90,6 +90,7 @@ function RunnerElitistMuLambda(params::CgpParameters,
         get_argmins_of_value!(fitness_vals, elitist_ids, current_best_fitness_val)
     end
 
+    elitist_ids = elitist_ids .-1
     resize!(elitist_ids, params.elitism_number)
 
     child_ids = collect(0:(params.population_size + params.elitism_number - 1))
@@ -209,7 +210,7 @@ function crossover(runner::RunnerElitistMuLambda)
     children_set = vect_difference(children_set, runner.elitist_ids)
 
     # create new population
-    new_population = copy(runner.population)
+    new_population = deepcopy(runner.population)
 
     crossover_for_this_iteration = get_crossover_rate!(runner)
 
@@ -233,13 +234,14 @@ function crossover(runner::RunnerElitistMuLambda)
         else
             # no crossover, just copy parents
             
-            chrom1 = runner.population[parent_ids[1]+1]
-            chrom2 = runner.population[parent_ids[2]+1]
-            new_population[child_ids[1]+1] = Chromosome(chrom1.params, chrom1.nodes_grid, chrom1.output_node_ids, chrom1.active_nodes)
-            new_population[child_ids[2]+1] = Chromosome(chrom2.params, chrom2.nodes_grid, chrom2.output_node_ids, chrom2.active_nodes)
+            chrom1 = deepcopy(runner.population[parent_ids[1]+1])
+            chrom2 = deepcopy(runner.population[parent_ids[2]+1])
+            new_population[child_ids[1]+1] = chrom1
+            new_population[child_ids[2]+1] = chrom2
         end
+        runner.population = new_population
     end
-    runner.population = new_population
+    
 
     if params.crossover_rate_type == 3
         twentyPercentChildren = ceil(Int64, length(runner.child_ids)) #20% der Kinder (aufgerundet)
@@ -248,13 +250,13 @@ function crossover(runner::RunnerElitistMuLambda)
         for id in runner.child_ids
             fitn = evaluate!(runner.population[id+1], runner.data, runner.label)
     
-            if isnan(fitness) || isinf(fitness)
-                fitness = typemax(Float32)
+            if isnan(fitn) || isinf(fitn)
+                fitn = typemax(Float32)
             end
     
             betterThanParents = true;
             for elit in runner.elitist_ids
-                if fitn >= evaluate!(runner.population[elit], runner.data, runner.label)
+                if fitn >= evaluate!(runner.population[elit + 1], runner.data, runner.label)
                     betterThanParents = false;
                     break
                 end

@@ -13,7 +13,7 @@ function single_point_crossover!(rng, nbr_inputs, nbr_computational_nodes, popul
                                  parent1_id::Int,
                                  parent2_id::Int)
     # Generate range between computational nodes
-    crossover_point = rand(rng, nbr_inputs:(nbr_inputs + nbr_computational_nodes - 1))
+    crossover_point = rand(rng, (nbr_inputs + 1):nbr_inputs + nbr_computational_nodes)
 
     cross_chromo_1 = deepcopy(population[parent1_id + 1])
     cross_chromo_2 = deepcopy(population[parent2_id + 1])
@@ -40,7 +40,7 @@ function two_point_crossover!(nbr_inputs, nbr_computational_nodes, population,
     cross_chromo_1 = deepcopy(population[parent1_id + 1])
     cross_chromo_2 = deepcopy(population[parent2_id + 1])
 
-    crossover_points = rand(nbr_inputs:(nbr_inputs + nbr_computational_nodes - 1), 2)
+    crossover_points = rand((nbr_inputs + 1):nbr_inputs + nbr_computational_nodes, 2)
 
     for point in crossover_points
         cross_chromo_1.nodes_grid[point:end], cross_chromo_2.nodes_grid[point:end] = 
@@ -67,7 +67,7 @@ function uniform_crossover!(nbr_inputs, nbr_computational_nodes, population,
     cross_chromo_1 = deepcopy(population[parent1_id + 1])
     cross_chromo_2 = deepcopy(population[parent2_id + 1])
 
-    for node_id in nbr_inputs:(nbr_inputs + nbr_computational_nodes - 1)
+    for node_id in (nbr_inputs + 1):(nbr_inputs + nbr_computational_nodes)
         if rand(Bool)
             cross_chromo_1.nodes_grid[node_id], cross_chromo_2.nodes_grid[node_id] = 
                 cross_chromo_2.nodes_grid[node_id], cross_chromo_1.nodes_grid[node_id]

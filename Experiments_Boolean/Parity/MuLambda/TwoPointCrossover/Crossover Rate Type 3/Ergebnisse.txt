@@ -1,0 +1,23 @@
+Iteration: 0, Fitness: 0.625
+Iteration: 1, Fitness: 0.25
+Iteration: 2, Fitness: 0.25
+Iteration: 3, Fitness: 0.25
+Iteration: 4, Fitness: 0.25
+Iteration: 5, Fitness: 0.25
+Iteration: 6, Fitness: 0.25
+Iteration: 7, Fitness: 0.25
+Iteration: 8, Fitness: 0.25
+Iteration: 9, Fitness: 0.125
+Iteration: 10, Fitness: 0.125
+Iteration: 11, Fitness: 0.125
+Iteration: 12, Fitness: 0.125
+Iteration: 13, Fitness: 0.125
+Iteration: 14, Fitness: 0.125
+Iteration: 15, Fitness: 0.125
+Iteration: 16, Fitness: 0.125
+Iteration: 17, Fitness: 0.125
+Iteration: 18, Fitness: 0.125
+Iteration: 19, Fitness: 0.125
+End at iteration: 20
+Fitness Eval: 0.0
+Fitness Train: 0.0

@@ -25,12 +25,12 @@ include("globalParams.jl")
 
 include("utils/runner_multiple_parents_with_elitist_mulambda.jl")
 
-nbr_computational_nodes = 4
-population_size = 4
-elitism_number = 2
+nbr_computational_nodes = 1500
+population_size = 50
+elitism_number = 4
 mu = 1
 lambda = 4
-eval_after_iterations = 1000
+eval_after_iterations = 200
 nbr_inputs = 3
 nbr_outputs = 1
 
