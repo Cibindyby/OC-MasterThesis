@@ -21,6 +21,9 @@ folgende Strategien werden verwendet:
 - mu-lambda, uniform-crossover (one-fifth Rekombinationsrate + mit Offset), Single-Active-Mutation
 =#
 
+using Hyperopt
+using Statistics
+
 include("globalParams.jl")
 
 include("utils/runner_multiple_parents_with_elitist_mulambda.jl")
@@ -133,6 +136,72 @@ function main()
     end
 end
 
+function hpo()
+    ho = @hyperopt for i = 250,
+        nbr_computational_nodes = 1000:500:2000, 
+        population_size = 24:10:54, 
+        crossover_rate = 0.2:0.4:1.0, 
+        elitism_number = 2:2:10
+        
+        meanAusMehrerenIterationen(nbr_computational_nodes, population_size, crossover_rate, elitism_number)
+    end
+
+    beste_parameter = ho.minimizer
+    bestes_ergebnis = ho.minimum
+    println("Beste Parameter: ", beste_parameter)
+    println("Bestes Ergebnis: ", bestes_ergebnis)
+end
+
+function meanAusMehrerenIterationen(nbr_computational_nodes, population_size, crossover_rate, elitism_number)
+
+    if(population_size < elitism_number)
+        return Inf
+    end
+    # cgp parameter
+    parameterSet = CgpParameters(
+        nbr_computational_nodes,
+        population_size,
+        mu,
+        lambda,
+        eval_after_iterations,
+        nbr_inputs,
+        nbr_outputs,
+        crossover_type,
+        crossover_rate, 
+        crossover_offset,
+        crossover_start,
+        crossover_delta,
+        crossover_rate_type,
+        tournament_size,
+        elitism_number
+    )
+
+    data, label, eval_data, eval_label = load_dataset()
+
+
+    fitnessAll = Vector{Float32}()
+    for i in 1:10
+        runner = RunnerElitistMuLambda(parameterSet, data, label, eval_data, eval_label)
+
+        iterations = 0
+
+        while iterations < eval_after_iterations
+            learn_step!(runner)
+            iterations = iterations + 1
+
+            if isapprox(get_best_fitness(runner), 0.0, atol=0.0001)
+                break
+            end
+        end
+
+        push!(fitnessAll, get_test_fitness(runner))
+
+    end
+
+    return mean(fitnessAll)
+
+end
+
 
 function load_dataset()
     data, label = get_dataset()
@@ -172,5 +241,6 @@ end
 
 
 # Run the main function
-main()
+#main()
+hpo()
 
