@@ -42,7 +42,7 @@ nbr_outputs = 1
 # two point = 1
 # uniform = 2
 # no crossover = 3
-crossover_type = 0
+crossover_type = 2
 
 
 # Parity = 0
@@ -57,14 +57,14 @@ include("datasets/3parity.jl")
 
 crossover_rate = 0.7
 crossover_offset = 0
-crossover_start = 0.0
-crossover_delta = 0.0
+crossover_start = 0.9
+crossover_delta = 0.05
 
 # rate type:
 # 1 -> konstant
 # 2 -> Clegg
 # 3 -> one Fifth Rule
-crossover_rate_type = 1
+crossover_rate_type = 2
 tournament_size = 0
 
 # cgp parameter
@@ -141,8 +141,8 @@ function writeHpoResults(results::String)
     save_path = joinpath(["Experiments_Boolean", 
                             "Parity", 
                             "MuLambda", 
-                            "SinglePointCrossover", 
-                            "Crossover Rate Type 1",
+                            "UniformCrossover", 
+                            "Crossover Rate Type 2",
                             "HPOResults.txt"])
 
     # Öffne die Datei
@@ -156,10 +156,10 @@ function hpo(iteration::Int)
     ho = @hyperopt for i = 4000, #aus 40000 Kombinationen
         nbr_computational_nodes = 50:50:2000, 
         population_size = 10:10:100, 
-        crossover_rate = 0.2:0.1:1.0, 
+        crossover_delta = 0.001:0.005:0.051, #angepasst an ca 20 Generationen, in guten Fällen bis 1000 Generationen in schlechten
         elitism_number = 2:2:20
         
-        meanAusMehrerenIterationen(nbr_computational_nodes, population_size, crossover_rate, elitism_number)
+        meanAusMehrerenIterationen(nbr_computational_nodes, population_size, crossover_delta, elitism_number)
     end
 
     beste_parameter = ho.minimizer
@@ -167,10 +167,10 @@ function hpo(iteration::Int)
     println("Beste Parameter: ", beste_parameter)
     println("Bestes Ergebnis: ", bestes_ergebnis)
 
-    writeHpoResults("Iteration $iteration: Parameter -> $beste_parameter; Ergebnis -> $bestes_ergebnis (nbr_computational_nodes, population_size, crossover_rate, elitism_number)")
+    writeHpoResults("Iteration $iteration: Parameter -> $beste_parameter; Ergebnis -> $bestes_ergebnis (nbr_computational_nodes, population_size, crossover_delta, elitism_number)")
 end
 
-function meanAusMehrerenIterationen(nbr_computational_nodes, population_size, crossover_rate, elitism_number)
+function meanAusMehrerenIterationen(nbr_computational_nodes, population_size, crossover_delta, elitism_number)
 
     if(population_size < elitism_number)
         return Inf
@@ -264,8 +264,8 @@ end
 save_path = joinpath(["Experiments_Boolean", 
                             "Parity", 
                             "MuLambda", 
-                            "SinglePointCrossover", 
-                            "Crossover Rate Type 1",
+                            "UniformCrossover", 
+                            "Crossover Rate Type 2",
                             "HPOResults.txt"])
 
 mkpath(dirname(save_path))

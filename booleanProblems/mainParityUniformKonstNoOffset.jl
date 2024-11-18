@@ -42,7 +42,7 @@ nbr_outputs = 1
 # two point = 1
 # uniform = 2
 # no crossover = 3
-crossover_type = 0
+crossover_type = 2
 
 
 # Parity = 0
@@ -141,7 +141,7 @@ function writeHpoResults(results::String)
     save_path = joinpath(["Experiments_Boolean", 
                             "Parity", 
                             "MuLambda", 
-                            "SinglePointCrossover", 
+                            "UniformCrossover", 
                             "Crossover Rate Type 1",
                             "HPOResults.txt"])
 
@@ -264,7 +264,7 @@ end
 save_path = joinpath(["Experiments_Boolean", 
                             "Parity", 
                             "MuLambda", 
-                            "SinglePointCrossover", 
+                            "UniformCrossover", 
                             "Crossover Rate Type 1",
                             "HPOResults.txt"])
 
