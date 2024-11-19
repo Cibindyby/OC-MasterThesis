@@ -28,122 +28,32 @@ include("globalParams.jl")
 
 include("utils/runner_multiple_parents_with_elitist_mulambda.jl")
 
-nbr_computational_nodes = 1500
-population_size = 50
-elitism_number = 4
-mu = 1
-lambda = 4
-eval_after_iterations = 200
-nbr_inputs = 3
-nbr_outputs = 1
-
-#crossover type:
-# single point = 0
-# two point = 1
-# uniform = 2
-# no crossover = 3
-crossover_type = 2
 
 
-# Parity = 0
-# Encode = 1
-# Decode = 2
-# Multiply = 3
-datasetToLoad = 0
-include("datasets/3parity.jl")
-#include("datasets/4-16encode")
-#include("datasets/16-4decode")
-#include("datasets/3multiply.jl")
-
-crossover_rate = 0.7
-crossover_offset = 0
-crossover_start = 0.5
-crossover_delta = 0.05
-
-# rate type:
-# 1 -> konstant
-# 2 -> Clegg
-# 3 -> one Fifth Rule
-crossover_rate_type = 3
-tournament_size = 0
-
-# cgp parameter
-params = CgpParameters(
-    nbr_computational_nodes,
-    population_size,
-    mu,
-    lambda,
-    eval_after_iterations,
-    nbr_inputs,
-    nbr_outputs,
-    crossover_type,
-    crossover_rate, 
-    crossover_offset,
-    crossover_start,
-    crossover_delta,
-    crossover_rate_type,
-    tournament_size,
-    elitism_number
-)
-
-
-# Main function
-function main()
-
-    # Dataset selection (placeholder, implement actual dataset loading)
-    data, label, eval_data, eval_label = load_dataset()
-
-    # Logger setup
-    selection = "MuLambda"
-    dataset_string = get_dataset_string(datasetToLoad)
-    crossover_type = get_crossover_type(params.crossover_type)
-
-    save_path = joinpath(["Experiments_Boolean", 
-                            dataset_string, 
-                            selection, 
-                            crossover_type, 
-                            "Crossover Rate Type " * string(params.crossover_rate_type),
-                            "Ergebnisse.txt"])
-    
-    mkpath(dirname(save_path))
-
-    # Öffne die Datei
-    open(save_path, "a") do file
-        runner = RunnerElitistMuLambda(params, data, label, eval_data, eval_label)
-        runtime = 0
-        fitness_eval = Inf
-        fitness_train = Inf
-
-        while runtime < eval_after_iterations
-            write(file, "Iteration: $runtime, Fitness: $(get_best_fitness(runner))\n")
-            learn_step!(runner)
-            runtime += 1
-
-            if isapprox(get_best_fitness(runner), 0.0, atol=0.0001)
-                break
-            end
-        end
-
-        fitness_eval = get_test_fitness(runner)
-        fitness_train = get_best_fitness(runner)
-
-        # Saving results
-        println(runtime)
-        write(file, "End at iteration: $runtime\n")
-        write(file, "Fitness Eval: $fitness_eval\n")
-        write(file, "Fitness Train: $fitness_train\n")
-        close(file)
-    end
+datasetToLoad = parse(Int, ARGS[1])
+if datasetToLoad == 0
+    include("datasets/3parity.jl")
+elseif datasetToLoad == 1
+    include("datasets/16-4encode.jl")
+elseif datasetToLoad == 2
+    include("datasets/4-16decode.jl")
+elseif datasetToLoad == 3
+    include("datasets/3multiply.jl")
 end
 
-function writeHpoResults(results::String)
+crossover_type = parse(Int, ARGS[2])
+crossover_rate_type = parse(Int, ARGS[3])
 
-    save_path = joinpath(["Experiments_Boolean", 
-                            "Parity", 
-                            "MuLambda", 
-                            "UniformCrossover", 
-                            "Crossover Rate Type 3",
-                            "HPOResults.txt"])
+useOffset = false
+if ARGS[4] == "0"
+    useOffset = false
+elseif ARGS[4] == "1"
+    useOffset = true
+end
+
+
+
+function writeHpoResults(results::String)
 
     # Öffne die Datei
     open(save_path, "a") do file
@@ -152,14 +62,38 @@ function writeHpoResults(results::String)
     end
 end
 
-function hpo(iteration::Int)
-    ho = @hyperopt for i = 4000, #aus 40000 Kombinationen
-        nbr_computational_nodes = 50:50:2000, 
-        population_size = 10:10:100, 
-        crossover_start = 0.1:0.1:1.0, 
-        elitism_number = 2:2:20
-        
-        meanAusMehrerenIterationen(nbr_computational_nodes, population_size, crossover_start, elitism_number)
+function hpo()
+    iter = 3
+
+    if crossover_rate_type == 1 #range for constant rate
+        rangeForCrossoverRate = [0.8]#0.2:0.1:1.0
+    elseif crossover_rate_type == 2 # range for delta
+        rangeForCrossoverRate = [0.05]#0.001:0.005:0.051
+    elseif crossover_rate_type == 3 # range for start
+        rangeForCrossoverRate = [0.5]#0.2:0.05:0.8
+    end
+
+    if useOffset
+
+        ho = @hyperopt for i = iter, 
+            nbr_cmp_nodes = [1500],#50:50:2000, 
+            pop_size = [50],#10:10:100, 
+            rate_start_or_delta = rangeForCrossoverRate,
+            elit = [2],#2:2:20,
+            offset = [2]#20:50:520
+            
+            meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta, elit, offset)
+        end
+
+    else
+        ho = @hyperopt for i = iter, 
+            nbr_cmp_nodes = [1500],#50:50:2000, 
+            pop_size = [50],#10:10:100, 
+            rate_start_or_delta = rangeForCrossoverRate,
+            elit = [2]#2:2:20
+            
+            meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta, elit, 0)
+        end
     end
 
     beste_parameter = ho.minimizer
@@ -167,18 +101,40 @@ function hpo(iteration::Int)
     println("Beste Parameter: ", beste_parameter)
     println("Bestes Ergebnis: ", bestes_ergebnis)
 
-    writeHpoResults("Iteration $iteration: Parameter -> $beste_parameter; Ergebnis -> $bestes_ergebnis (nbr_computational_nodes, population_size, crossover_start, elitism_number)")
+    writeHpoResults("Endergenis HPO: Parameter -> $beste_parameter; Ergebnis -> $bestes_ergebnis (nbr_computational_nodes, population_size, crossover_delta, elitism_number, ggf. offset)")
 end
 
-function meanAusMehrerenIterationen(nbr_computational_nodes, population_size, crossover_start, elitism_number)
+function meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta, elit, offset)
+   
+    #default values
+    mu = 1
+    lambda = 4
+    eval_after_iterations = 50
+    nbr_inputs = 3
+    nbr_outputs = 1
+    crossover_rate = 0.7
+    crossover_start = 0.9
+    crossover_delta = 0.05
+    tournament_size = 0
 
-    if(population_size < elitism_number)
+    if(pop_size < elit)
         return Inf
     end
+
+    if crossover_rate_type == 1 #range for constant rate
+        crossover_rate = rate_start_or_delta
+    elseif crossover_rate_type == 2 # range for delta
+        crossover_delta = rate_start_or_delta
+    elseif crossover_rate_type == 3 # range for start
+        crossover_start = rate_start_or_delta
+    end
+
+    crossover_offset = offset
+
     # cgp parameter
     parameterSet = CgpParameters(
-        nbr_computational_nodes,
-        population_size,
+        nbr_cmp_nodes,
+        pop_size,
         mu,
         lambda,
         eval_after_iterations,
@@ -191,13 +147,13 @@ function meanAusMehrerenIterationen(nbr_computational_nodes, population_size, cr
         crossover_delta,
         crossover_rate_type,
         tournament_size,
-        elitism_number
+        elit
     )
 
     data, label, eval_data, eval_label = load_dataset()
 
 
-    fitnessAll = Vector{Float32}()
+    iterationsAll = Vector{Float32}()
     for i in 1:10
         runner = RunnerElitistMuLambda(parameterSet, data, label, eval_data, eval_label)
 
@@ -212,11 +168,22 @@ function meanAusMehrerenIterationen(nbr_computational_nodes, population_size, cr
             end
         end
 
-        push!(fitnessAll, get_test_fitness(runner))
+        push!(iterationsAll, iterations)
 
     end
 
-    return mean(fitnessAll)
+    meanAll = mean(iterationsAll)
+    open(save_path, "a") do file
+        write(file, "Parameter set: \n
+                    number_comp_nodes = $nbr_cmp_nodes, \n
+                    population_size = $pop_size, \n
+                    crossover_rate_depending_on_type (rate, delta or start) = $rate_start_or_delta, \n
+                    eilit_number = $elit, \n
+                    crossover_offset = $offset\n")
+        write(file, "Ergebnis (mean) = $meanAll Iterations\n\n")
+    end
+
+    return meanAll
 
 end
 
@@ -225,6 +192,20 @@ function load_dataset()
     data, label = get_dataset()
     eval_data, eval_label = get_eval_dataset()
     return data, label, eval_data, eval_label
+end
+
+
+function get_rate_type(rate_type_id)
+    if (rate_type_id == 1)
+        return "Konstant"
+    elseif (rate_type_id == 2)
+        return "Clegg"
+    elseif (rate_type_id == 3)
+        return "OneFifthRule"
+    else 
+        println("Error occured: false rate type ID -> $rate_type_id !!")
+        return
+    end
 end
 
 function get_dataset_string(dataset_id)
@@ -237,7 +218,7 @@ function get_dataset_string(dataset_id)
     elseif (dataset_id == 3)
         return "Multiply"
     else 
-        println("Error occured: false dataset ID!!")
+        println("Error occured: false dataset ID -> $dataset_id !!")
         return
     end
 end
@@ -252,20 +233,16 @@ function get_crossover_type(crossover_id)
     elseif (crossover_id == 3)
         return "NoCrossover"
     else 
-        println("Error occured: false dataset ID!!")
+        println("Error occured: false crossover ID -> $crossover_id !!")
         return
     end
 end
 
-
-# Run the main function
-#main()
-
 save_path = joinpath(["Experiments_Boolean", 
-                            "Parity", 
+                            get_dataset_string(datasetToLoad), 
                             "MuLambda", 
-                            "UniformCrossover", 
-                            "Crossover Rate Type 3",
+                            get_crossover_type(crossover_type), 
+                            get_rate_type(crossover_rate_type),
                             "HPOResults.txt"])
 
 mkpath(dirname(save_path))
@@ -276,7 +253,5 @@ open(save_path, "w") do file
     close(file)
 end
 
-for i in 1:10
-    hpo(i)
-end
+hpo()
 

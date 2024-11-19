@@ -243,7 +243,7 @@ function crossover(runner::RunnerElitistMuLambda)
     end
     
 
-    if params.crossover_rate_type == 3
+    if runner.params.crossover_rate_type == 3
         twentyPercentChildren = ceil(Int64, length(runner.child_ids)) #20% der Kinder (aufgerundet)
         betterThenAllParents = 0;
 
@@ -279,27 +279,27 @@ end
 
 function get_crossover_rate!(runner::RunnerElitistMuLambda)
     crossover_rate_now = runner.last_crossover_rate
-    offset_is_active = params.crossover_offset > runner.iteration
+    offset_is_active = runner.params.crossover_offset > runner.iteration
 
-    if params.crossover_rate_type == 1 #konstant
+    if runner.params.crossover_rate_type == 1 #konstant
         
         if offset_is_active
             crossover_rate_now = 0.0f0
         end
 
-    elseif params.crossover_rate_type == 2 #Clegg
+    elseif runner.params.crossover_rate_type == 2 #Clegg
 
         if offset_is_active
             crossover_rate_now = 0.0f0
         else
-            crossover_rate_now = runner.last_crossover_rate - params.crossover_delta
+            crossover_rate_now = runner.last_crossover_rate - runner.params.crossover_delta
             if crossover_rate_now < 0.0f0
                 crossover_rate_now = 0.0f0
             end
             runner.last_crossover_rate = crossover_rate_now
         end
 
-    elseif params.crossover_rate_type == 3 #oneFifth
+    elseif runner.params.crossover_rate_type == 3 #oneFifth
 
         if offset_is_active
             crossover_rate_now = 0.0f0
