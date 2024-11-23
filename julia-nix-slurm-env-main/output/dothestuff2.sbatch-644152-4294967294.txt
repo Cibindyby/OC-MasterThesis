@@ -1,25 +1,0 @@
-SLURM_JOB_ID=644152
-hostname=oc-compute03
-warning: Git tree '/data/oc-compute03/cuihenni/testing2' is dirty
-warning: ignoring untrusted flake configuration setting 'extra-substituters'.
-Pass '--accept-flake-config' to trust it
-warning: ignoring untrusted flake configuration setting 'extra-trusted-public-keys'.
-Pass '--accept-flake-config' to trust it
-Running tasks     devenv:enterShell
-
-[1A[0JRunning           devenv:enterShell 0ms
-1 Running                           384.08µs
-[2A[0JSucceeded         devenv:enterShell 11ms
-1 Succeeded                         12.46ms
-
-Waiting for lock /home/cuihenni/JULIALOCK …
-Acquired lock /home/cuihenni/JULIALOCK.
-Relinquishing lock /home/cuihenni/JULIALOCK …
-Relinquished lock /home/cuihenni/JULIALOCK.
-Hello World 2
-["exampleArgument1", "exampleArgument2", "exampleArgument3"]
-
-Args 1: exampleArgument1
-Args 2: exampleArgument2
-Args 3: exampleArgument3
-End2
