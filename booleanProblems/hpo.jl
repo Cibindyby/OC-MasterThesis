@@ -76,7 +76,7 @@ function hpo()
     if useOffset
 
         ho = @hyperopt for i = iter, 
-            nbr_cmp_nodes = [1500],#50:50:2000, 
+            nbr_cmp_nodes = [150],#50:50:2000, 
             pop_size = [50],#10:10:100, 
             rate_start_or_delta = rangeForCrossoverRate,
             elit = [2],#2:2:20,
@@ -87,7 +87,7 @@ function hpo()
 
     else
         ho = @hyperopt for i = iter, 
-            nbr_cmp_nodes = [1500],#50:50:2000, 
+            nbr_cmp_nodes = [150],#50:50:2000, 
             pop_size = [50],#10:10:100, 
             rate_start_or_delta = rangeForCrossoverRate,
             elit = [2]#2:2:20
