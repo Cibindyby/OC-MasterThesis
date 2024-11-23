@@ -15,5 +15,5 @@ echo hostname=$(hostname)
 # this is made available to `nix develop`.
 export XDG_RUNTIME_DIR=~/XDG_RUNTIME_DIR
 srun nix develop --impure --command bash -c "
-    just justfilefunc /data/oc-compute03/cuihenni/testing2/scripts/exampleScript.jl exampleArgument1 exampleArgument2
+    just justfilefunc /data/oc-compute03/cuihenni/testing2/scripts/exampleScript2.jl exampleArgument1 exampleArgument2 exampleArgument3
 "

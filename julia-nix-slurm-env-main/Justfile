@@ -26,11 +26,11 @@ setup:
 
 
 # Do your stuff, but first setup.
-dostuff someparam: setup
+justfilefunc scriptPath +cmdinputs: setup
     #!/usr/bin/env bash
     # Set to default value of 3 if not set (need at least 2 processes for
     # sampling and writing files).
     : ${SLURM_CPUS_PER_TASK:=2}
     procs=$((SLURM_CPUS_PER_TASK - 1))
     julia --procs=$procs --project=. \
-        scripts/dothestuff.jl {{someparam}}
+        {{scriptPath}} {{cmdinputs}}
