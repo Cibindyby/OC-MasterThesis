@@ -1,21 +1,0 @@
-SLURM_JOB_ID=644153
-hostname=oc-compute03
-path '/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/scripts' does not contain a 'flake.nix', searching up
-[K[Kwarning: ignoring untrusted flake configuration setting 'extra-substituters'.
-Pass '--accept-flake-config' to trust it
-warning: ignoring untrusted flake configuration setting 'extra-trusted-public-keys'.
-Pass '--accept-flake-config' to trust it
-building '/nix/store/0n5z6nhyl5g9s7pyvx0bck9sf05bpgzc-python3-3.11.9-env.drv'...
-building '/nix/store/s7nhfn32dcfiws09spha6hpmvnx3qzsn-devenv-profile.drv'...
-building '/nix/store/p42s1rdfqslkqlvimslsa6c3rhg5mghd-devenv-shell-env.drv'...
-Running tasks     devenv:enterShell
-
-[1A[0JRunning           devenv:enterShell 0ms
-1 Running                           265.17µs
-[2A[0JSucceeded         devenv:enterShell 11ms
-1 Succeeded                         11.85ms
-
-error: Recipe `justfilefunc` got 1 argument but takes at least 2
-usage:
-    just justfilefunc scriptPath +cmdinputs
-srun: error: oc-compute03: task 0: Exited with exit code 1
