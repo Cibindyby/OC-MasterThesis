@@ -26,7 +26,7 @@ setup:
 
 
 # Do your stuff, but first setup.
-justfilefunc scriptPath +cmdinputs: setup
+justfilefunc scriptPath *cmdinputs: setup
     #!/usr/bin/env bash
     # Set to default value of 3 if not set (need at least 2 processes for
     # sampling and writing files).
