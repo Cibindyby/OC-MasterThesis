@@ -66,31 +66,31 @@ function hpo()
     iter = 3
 
     if crossover_rate_type == 1 #range for constant rate
-        rangeForCrossoverRate = [0.8]#0.2:0.1:1.0
-    elseif crossover_rate_type == 2 # range for delta
-        rangeForCrossoverRate = [0.05]#0.001:0.005:0.051
-    elseif crossover_rate_type == 3 # range for start
-        rangeForCrossoverRate = [0.5]#0.2:0.05:0.8
+        rangeForCrossoverRate = 0.2:0.1:1.0
+    elseif crossover_rate_type == 2 # range for delta (Clegg)
+        rangeForCrossoverRate = 0.001:0.005:0.051
+    elseif crossover_rate_type == 3 # range for start (one fifth)
+        rangeForCrossoverRate = 0.2:0.05:0.8
     end
 
     if useOffset
 
         ho = @hyperopt for i = iter, 
-            nbr_cmp_nodes = [150],#50:50:2000, 
-            pop_size = [50],#10:10:100, 
+            nbr_cmp_nodes = 50:50:2000, 
+            pop_size = 10:2:60, 
             rate_start_or_delta = rangeForCrossoverRate,
-            elit = [2],#2:2:20,
-            offset = [2]#20:50:520
+            elit = 2:2:20,
+            offset = 20:50:520
             
             meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta, elit, offset)
         end
 
     else
         ho = @hyperopt for i = iter, 
-            nbr_cmp_nodes = [150],#50:50:2000, 
-            pop_size = [50],#10:10:100, 
+            nbr_cmp_nodes = 50:50:2000, 
+            pop_size = 10:2:60, 
             rate_start_or_delta = rangeForCrossoverRate,
-            elit = [2]#2:2:20
+            elit = 2:2:20
             
             meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta, elit, 0)
         end
@@ -109,7 +109,7 @@ function meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta
     #default values
     mu = 1
     lambda = 4
-    eval_after_iterations = 50
+    eval_after_iterations = 500000
     nbr_inputs = 3
     nbr_outputs = 1
     crossover_rate = 0.7
@@ -118,6 +118,15 @@ function meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta
     tournament_size = 0
 
     if(pop_size < elit)
+        open(save_path, "a") do file
+            write(file, "Parameter set: \n
+                        number_comp_nodes = $nbr_cmp_nodes, \n
+                        population_size = $pop_size, \n
+                        crossover_rate_depending_on_type (rate, delta or start) = $rate_start_or_delta, \n
+                        eilit_number = $elit, \n
+                        crossover_offset = $offset\n")
+            write(file, "Ergebnis (mean) = Inf (weil mu > lambda)\n\n")
+        end
         return Inf
     end
 
