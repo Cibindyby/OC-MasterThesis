@@ -1,0 +1,76 @@
+SLURM_JOB_ID=645364
+hostname=oc-compute02
+path '/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/scripts' does not contain a 'flake.nix', searching up
+warning: Git tree '/data/oc-compute03/ebertzci/OC-MasterThesis' is dirty
+warning: ignoring untrusted flake configuration setting 'extra-substituters'.
+Pass '--accept-flake-config' to trust it
+warning: ignoring untrusted flake configuration setting 'extra-trusted-public-keys'.
+Pass '--accept-flake-config' to trust it
+Running tasks     devenv:enterShell
+
+[1A[0JRunning           devenv:enterShell 0ms
+1 Running                           126.68µs
+[2A[0JSucceeded         devenv:enterShell 699ms
+1 Succeeded                         699.34ms
+
+Waiting for lock /home/ebertzci/JULIALOCK …
+Acquired lock /home/ebertzci/JULIALOCK.
+Relinquishing lock /home/ebertzci/JULIALOCK …
+Relinquished lock /home/ebertzci/JULIALOCK.
+    Updating registry at `~/.julia/registries/General.toml`
+   Resolving package versions...
+  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Project.toml`
+  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Manifest.toml`
+   Resolving package versions...
+  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Project.toml`
+  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Manifest.toml`
+   Resolving package versions...
+    Updating `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Project.toml`
+  [2913bbd2] + StatsBase v0.34.3
+  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Manifest.toml`
+   Resolving package versions...
+   Installed IterTools ─ v1.10.0
+    Updating `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Project.toml`
+  [c8e1da08] + IterTools v1.10.0
+    Updating `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Manifest.toml`
+  [c8e1da08] + IterTools v1.10.0
+Precompiling project...
+  ✓ IterTools
+  1 dependency successfully precompiled in 1 seconds. 173 already precompiled.
+   Resolving package versions...
+  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Project.toml`
+  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Manifest.toml`
+   Resolving package versions...
+   Installed ProgressMeter ────────── v1.10.2
+   Installed ConstructionBase ─────── v1.5.8
+   Installed Setfield ─────────────── v1.1.1
+   Installed MultiKDE ─────────────── v0.1.1
+   Installed ThreadPools ──────────── v2.1.1
+   Installed Hyperopt ─────────────── v0.5.6
+   Installed StaticArraysCore ─────── v1.4.3
+   Installed LatinHypercubeSampling ─ v1.9.0
+    Updating `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Project.toml`
+  [93e5fe13] + Hyperopt v0.5.6
+    Updating `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Manifest.toml`
+  [187b0558] + ConstructionBase v1.5.8
+  [93e5fe13] + Hyperopt v0.5.6
+  [a5e1c1ea] + LatinHypercubeSampling v1.9.0
+  [77543b7f] + MultiKDE v0.1.1
+  [92933f4c] + ProgressMeter v1.10.2
+  [efcf1570] + Setfield v1.1.1
+  [1e83bf80] + StaticArraysCore v1.4.3
+  [b189fb0b] + ThreadPools v2.1.1
+  [8ba89e20] + Distributed
+  [9fa8497b] + Future
+Precompiling project...
+  ✓ StaticArraysCore
+  ✓ ConstructionBase
+  ✓ ProgressMeter
+  ✓ LatinHypercubeSampling
+  ✓ ThreadPools
+  ✓ ConstructionBase → ConstructionBaseLinearAlgebraExt
+  ✓ Unitful → ConstructionBaseUnitfulExt
+  ✓ MultiKDE
+  ✓ Setfield
+  ✓ Hyperopt
+  10 dependencies successfully precompiled in 7 seconds. 175 already precompiled.

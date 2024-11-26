@@ -2,7 +2,7 @@
 #SBATCH --partition=cpu
 #SBATCH --time=4-0
 #SBATCH --output=/data/oc-compute03/ebertzci/OC-MasterThesis/output/%x-%A-%a.txt
-#SBATCH --mem=2000
+#SBATCH --mem=20000
 #SBATCH -c 2
 
 
