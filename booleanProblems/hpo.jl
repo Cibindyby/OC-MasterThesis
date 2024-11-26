@@ -63,7 +63,7 @@ function writeHpoResults(results::String)
 end
 
 function hpo()
-    iter = 3
+    iter = 150
 
     if crossover_rate_type == 1 #range for constant rate
         rangeForCrossoverRate = 0.2:0.1:1.0
@@ -109,7 +109,7 @@ function meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta
     #default values
     mu = 1
     lambda = 4
-    eval_after_iterations = 500000
+    eval_after_iterations = 50000
     nbr_inputs = 3
     nbr_outputs = 1
     crossover_rate = 0.7
