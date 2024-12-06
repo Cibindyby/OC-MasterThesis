@@ -2,8 +2,8 @@
 #SBATCH --partition=cpu
 #SBATCH --time=4-0
 #SBATCH --output=/data/oc-compute03/ebertzci/OC-MasterThesis/output/%x-%A-%a.txt
-#SBATCH --mem=4000
-#SBATCH -c 3
+#SBATCH --mem=12000
+#SBATCH -c 4
 
 
 echo "SLURM_JOB_ID=${SLURM_JOB_ID}"
