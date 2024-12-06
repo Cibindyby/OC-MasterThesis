@@ -108,7 +108,7 @@ function hpo()
         
 
         # BOHB-Optimierung durchführen
-        ho = @hyperopt for resources in 50, sampler = BOHB(dims=
+        ho = @hyperopt for resources in 100, sampler = BOHB(dims=
             [Categorical(length(nbr_cmp_nodes_rng)),
             Categorical(length(pop_size_rng)),
             Categorical(length(rate_start_or_delta_rng)),
