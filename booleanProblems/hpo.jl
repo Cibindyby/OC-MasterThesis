@@ -23,6 +23,7 @@ folgende Strategien werden verwendet:
 
 using Hyperopt
 using Statistics
+using Optim
 
 include("globalParams.jl")
 
@@ -63,7 +64,6 @@ function writeHpoResults(results::String)
 end
 
 function hpo()
-    iter = 150
 
     if crossover_rate_type == 1 #range for constant rate
         rangeForCrossoverRate = 0.2:0.1:1.0
@@ -74,25 +74,53 @@ function hpo()
     end
 
     if useOffset
+        # Definieren des Parameterraums
+        nbr_cmp_nodes_rng = 50:50:2000
+        pop_size_rng = 10:2:60
+        rate_start_or_delta_rng = rangeForCrossoverRate
+        elit_rng = 2:2:20
+        offset_rng = 20:50:520
+        
 
-        ho = @hyperopt for i = iter, 
-            nbr_cmp_nodes = 50:50:2000, 
-            pop_size = 10:2:60, 
-            rate_start_or_delta = rangeForCrossoverRate,
-            elit = 2:2:20,
-            offset = 20:50:520
+        # BOHB-Optimierung durchführen
+        ho = @hyperopt for resources in 50, sampler = BOHB(dims=
+            [Categorical(length(nbr_cmp_nodes_rng)),
+            Categorical(length(pop_size_rng)),
+            Categorical(length(rate_start_or_delta_rng)),
+            Categorical(length(elit_rng)),
+            Categorical(length(offset_rng))
+            ]),
+            nbr_cmp_nodes = nbr_cmp_nodes_rng, 
+            pop_size = pop_size_rng, 
+            rate_start_or_delta = rate_start_or_delta_rng,
+            elit = elit_rng,
+            offset = offset_rng
             
-            meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta, elit, offset)
+            # Berechnung des Kostenwerts
+            cost = meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta, elit, offset)
         end
 
     else
-        ho = @hyperopt for i = iter, 
-            nbr_cmp_nodes = 50:50:2000, 
-            pop_size = 10:2:60, 
-            rate_start_or_delta = rangeForCrossoverRate,
-            elit = 2:2:20
+        nbr_cmp_nodes_rng = 50:50:2000
+        pop_size_rng = 10:2:60
+        rate_start_or_delta_rng = rangeForCrossoverRate
+        elit_rng = 2:2:20
+        
+
+        # BOHB-Optimierung durchführen
+        ho = @hyperopt for resources in 50, sampler = BOHB(dims=
+            [Categorical(length(nbr_cmp_nodes_rng)),
+            Categorical(length(pop_size_rng)),
+            Categorical(length(rate_start_or_delta_rng)),
+            Categorical(length(elit_rng))
+            ]),
+            nbr_cmp_nodes = nbr_cmp_nodes_rng, 
+            pop_size = pop_size_rng, 
+            rate_start_or_delta = rate_start_or_delta_rng,
+            elit = elit_rng
             
-            meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta, elit, 0)
+            # Berechnung des Kostenwerts
+            cost = meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta, elit, 0)
         end
     end
 
@@ -109,7 +137,7 @@ function meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta
     #default values
     mu = 1
     lambda = 4
-    eval_after_iterations = 1000
+    eval_after_iterations = 50000
     nbr_inputs = 3
     nbr_outputs = 1
     crossover_rate = 0.7
