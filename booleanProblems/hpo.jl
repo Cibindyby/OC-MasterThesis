@@ -83,13 +83,7 @@ function hpo()
         
 
         # BOHB-Optimierung durchführen
-        ho = @hyperopt for resources in 50, sampler = BOHB(dims=
-            [Categorical(length(nbr_cmp_nodes_rng)),
-            Categorical(length(pop_size_rng)),
-            Categorical(length(rate_start_or_delta_rng)),
-            Categorical(length(elit_rng)),
-            Categorical(length(offset_rng))
-            ]),
+        ho = @hyperopt for resources in 100, sampler=Hyperband(R=50, η=3, inner=BOHB(dims=[Hyperopt.Continuous(), Hyperopt.Continuous(),Hyperopt.Continuous(), Hyperopt.Continuous(), Hyperopt.Continuous()])),
             nbr_cmp_nodes = nbr_cmp_nodes_rng, 
             pop_size = pop_size_rng, 
             rate_start_or_delta = rate_start_or_delta_rng,
@@ -108,12 +102,7 @@ function hpo()
         
 
         # BOHB-Optimierung durchführen
-        ho = @hyperopt for resources in 100, sampler = BOHB(dims=
-            [Categorical(length(nbr_cmp_nodes_rng)),
-            Categorical(length(pop_size_rng)),
-            Categorical(length(rate_start_or_delta_rng)),
-            Categorical(length(elit_rng))
-            ]),
+        ho = @hyperopt for resources in 100, sampler=Hyperband(R=50, η=3, inner=BOHB(dims=[Hyperopt.Continuous(), Hyperopt.Continuous(),Hyperopt.Continuous(), Hyperopt.Continuous()])),
             nbr_cmp_nodes = nbr_cmp_nodes_rng, 
             pop_size = pop_size_rng, 
             rate_start_or_delta = rate_start_or_delta_rng,
@@ -280,7 +269,7 @@ save_path = joinpath(["Experiments_Boolean",
                             "MuLambda", 
                             get_crossover_type(crossover_type), 
                             get_rate_type(crossover_rate_type),
-                            "HPOResults.txt"])
+                            "HPOResultsHyperbandWithBOHBContinuous.txt"])
 
 mkpath(dirname(save_path))
 
