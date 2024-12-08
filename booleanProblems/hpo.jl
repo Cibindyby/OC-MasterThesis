@@ -83,7 +83,7 @@ function hpo()
         
 
         # BOHB-Optimierung durchführen
-        ho = @hyperopt for resources in 100, sampler=Hyperband(R=50, η=3, inner=BOHB(dims=[Hyperopt.Continuous(), Hyperopt.Continuous(),Hyperopt.Continuous(), Hyperopt.Continuous(), Hyperopt.Continuous()])),
+        ho = @hyperopt for resources in 100, sampler=BOHB(dims=[Hyperopt.Continuous(), Hyperopt.Continuous(),Hyperopt.Continuous(), Hyperopt.Continuous(), Hyperopt.Continuous()]),
             nbr_cmp_nodes = nbr_cmp_nodes_rng, 
             pop_size = pop_size_rng, 
             rate_start_or_delta = rate_start_or_delta_rng,
@@ -102,7 +102,7 @@ function hpo()
         
 
         # BOHB-Optimierung durchführen
-        ho = @hyperopt for resources in 100, sampler=Hyperband(R=50, η=3, inner=BOHB(dims=[Hyperopt.Continuous(), Hyperopt.Continuous(),Hyperopt.Continuous(), Hyperopt.Continuous()])),
+        ho = @hyperopt for resources in 100, sampler=BOHB(dims=[Hyperopt.Continuous(), Hyperopt.Continuous(),Hyperopt.Continuous(), Hyperopt.Continuous()]),
             nbr_cmp_nodes = nbr_cmp_nodes_rng, 
             pop_size = pop_size_rng, 
             rate_start_or_delta = rate_start_or_delta_rng,
@@ -269,7 +269,7 @@ save_path = joinpath(["Experiments_Boolean",
                             "MuLambda", 
                             get_crossover_type(crossover_type), 
                             get_rate_type(crossover_rate_type),
-                            "HPOResultsHyperbandWithBOHBContinuous.txt"])
+                            "HPOResultsBOHBContinuous.txt"])
 
 mkpath(dirname(save_path))
 
