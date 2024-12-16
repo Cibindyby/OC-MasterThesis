@@ -66,50 +66,37 @@ end
 function hpo()
 
     if crossover_rate_type == 1 #range for constant rate
-        rangeForCrossoverRate = 0.2:0.1:1.0
+        rangeForCrossoverRate = 0.1:0.1:1.0
     elseif crossover_rate_type == 2 # range for delta (Clegg)
-        rangeForCrossoverRate = 0.001:0.005:0.051
+        rangeForCrossoverRate = 0.005:0.005:0.050
     elseif crossover_rate_type == 3 # range for start (one fifth)
-        rangeForCrossoverRate = 0.2:0.05:0.8
+        rangeForCrossoverRate = 0.3:0.05:0.75
     end
 
     if useOffset
-        # Definieren des Parameterraums
-        nbr_cmp_nodes_rng = 50:50:2000
-        pop_size_rng = 10:2:60
         rate_start_or_delta_rng = rangeForCrossoverRate
-        elit_rng = 2:2:20
-        offset_rng = 20:50:520
+        offset_rng = 70:50:520
         
 
         # BOHB-Optimierung durchführen
-        ho = @hyperopt for resources in 100, sampler=BOHB(dims=[Hyperopt.Continuous(), Hyperopt.Continuous(),Hyperopt.Continuous(), Hyperopt.Continuous(), Hyperopt.Continuous()]),
-            nbr_cmp_nodes = nbr_cmp_nodes_rng, 
-            pop_size = pop_size_rng, 
+        ho = @hyperopt for i in 100,
             rate_start_or_delta = rate_start_or_delta_rng,
-            elit = elit_rng,
             offset = offset_rng
             
             # Berechnung des Kostenwerts
-            cost = meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta, elit, offset)
+            cost = meanAusMehrerenIterationen(rate_start_or_delta, offset)
         end
 
     else
-        nbr_cmp_nodes_rng = 50:50:2000
-        pop_size_rng = 10:2:60
         rate_start_or_delta_rng = rangeForCrossoverRate
-        elit_rng = 2:2:20
         
 
         # BOHB-Optimierung durchführen
-        ho = @hyperopt for resources in 100, sampler=BOHB(dims=[Hyperopt.Continuous(), Hyperopt.Continuous(),Hyperopt.Continuous(), Hyperopt.Continuous()]),
-            nbr_cmp_nodes = nbr_cmp_nodes_rng, 
-            pop_size = pop_size_rng, 
-            rate_start_or_delta = rate_start_or_delta_rng,
-            elit = elit_rng
+        ho = @hyperopt for i in 10, 
+            rate_start_or_delta = rate_start_or_delta_rng
             
             # Berechnung des Kostenwerts
-            cost = meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta, elit, 0)
+            cost = meanAusMehrerenIterationen(rate_start_or_delta, 0)
         end
     end
 
@@ -118,10 +105,10 @@ function hpo()
     println("Beste Parameter: ", beste_parameter)
     println("Bestes Ergebnis: ", bestes_ergebnis)
 
-    writeHpoResults("Endergenis HPO: Parameter -> $beste_parameter; Ergebnis -> $bestes_ergebnis (nbr_computational_nodes, population_size, crossover_delta, elitism_number, ggf. offset)")
+    writeHpoResults("Endergenis HPO: Parameter -> $beste_parameter; Ergebnis -> $bestes_ergebnis (crossover_delta, ggf. offset)")
 end
 
-function meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta, elit, offset)
+function meanAusMehrerenIterationen(rate_start_or_delta, offset)
    
     #default values
     mu = 1
@@ -134,18 +121,8 @@ function meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta
     crossover_delta = 0.05
     tournament_size = 0
 
-    if(pop_size < elit)
-        open(save_path, "a") do file
-            write(file, "Parameter set: \n
-                        number_comp_nodes = $nbr_cmp_nodes, \n
-                        population_size = $pop_size, \n
-                        crossover_rate_depending_on_type (rate, delta or start) = $rate_start_or_delta, \n
-                        eilit_number = $elit, \n
-                        crossover_offset = $offset\n")
-            write(file, "Ergebnis (mean) = Inf (weil mu > lambda)\n\n")
-        end
-        return Inf
-    end
+    nbr_cmp_nodes, pop_size, elit = get_fixed_hyperparameter()
+
 
     if crossover_rate_type == 1 #range for constant rate
         crossover_rate = rate_start_or_delta
@@ -201,10 +178,7 @@ function meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta
     meanAll = mean(iterationsAll)
     open(save_path, "a") do file
         write(file, "Parameter set: \n
-                    number_comp_nodes = $nbr_cmp_nodes, \n
-                    population_size = $pop_size, \n
                     crossover_rate_depending_on_type (rate, delta or start) = $rate_start_or_delta, \n
-                    eilit_number = $elit, \n
                     crossover_offset = $offset\n")
         write(file, "Ergebnis (mean) = $meanAll Iterations\n\n")
     end
@@ -264,12 +238,133 @@ function get_crossover_type(crossover_id)
     end
 end
 
+function get_fixed_hyperparameter()
+    
+    if datasetToLoad == 0 #parity
+
+        if crossover_type == 0 #SinglePointCrossover
+            
+            nbr_cmp_nodes = 6500
+            pop_size = 50
+            elit = 4
+
+        elseif crossover_type == 1 #TwoPointCrossover
+
+            nbr_cmp_nodes = 9000
+            pop_size = 30
+            elit = 8
+
+        elseif crossover_type == 2 #UniformCrossover
+
+            nbr_cmp_nodes = 4500
+            pop_size = 48
+            elit = 2
+
+        elseif crossover_type == 3 #NoCrossover
+
+            nbr_cmp_nodes = 4500
+            pop_size = 50
+            elit = 8
+
+        end
+
+    elseif datasetToLoad == 1 #Encode
+
+        if crossover_type == 0 #SinglePointCrossover
+
+            nbr_cmp_nodes = 4000
+            pop_size = 50
+            elit = 2
+
+        elseif crossover_type == 1 #TwoPointCrossover
+
+            nbr_cmp_nodes = 1500
+            pop_size = 44
+            elit = 2
+
+        elseif crossover_type == 2 #UniformCrossover
+
+            nbr_cmp_nodes = 6500
+            pop_size = 40
+            elit = 2
+
+        elseif crossover_type == 3 #NoCrossover
+            
+            nbr_cmp_nodes = 3000
+            pop_size = 50
+            elit = 2
+
+        end
+
+    elseif datasetToLoad == 2 #Decode
+
+        if crossover_type == 0 #SinglePointCrossover
+
+            nbr_cmp_nodes = 6000
+            pop_size = 48
+            elit = 8
+
+        elseif crossover_type == 1 #TwoPointCrossover
+
+            nbr_cmp_nodes = 2500
+            pop_size = 50
+            elit = 8
+
+        elseif crossover_type == 2 #UniformCrossover
+
+            nbr_cmp_nodes = 3500
+            pop_size = 48
+            elit = 2
+
+        elseif crossover_type == 3 #NoCrossover
+            
+            nbr_cmp_nodes = 5500
+            pop_size = 50
+            elit = 6
+
+        end
+
+    elseif datasetToLoad == 3 #Multiply
+
+        if crossover_type == 0 #SinglePointCrossover
+
+            nbr_cmp_nodes = 3500
+            pop_size = 44
+            elit = 2
+
+        elseif crossover_type == 1 #TwoPointCrossover
+
+            nbr_cmp_nodes = 4500
+            pop_size = 46
+            elit = 2
+
+        elseif crossover_type == 2 #UniformCrossover
+
+            nbr_cmp_nodes = 3500
+            pop_size = 48
+            elit = 2
+
+        elseif crossover_type == 3 #NoCrossover
+            
+            nbr_cmp_nodes = 2500
+            pop_size = 26
+            elit = 2
+
+        end
+
+    end
+
+    return nbr_cmp_nodes, pop_size, elit
+
+end
+
 save_path = joinpath(["Experiments_Boolean", 
                             get_dataset_string(datasetToLoad), 
                             "MuLambda", 
                             get_crossover_type(crossover_type), 
                             get_rate_type(crossover_rate_type),
-                            "HPOResultsBOHBContinuous.txt"])
+                            "useOffset_$useOffset",
+                            "HPOResults.txt"])
 
 mkpath(dirname(save_path))
 
