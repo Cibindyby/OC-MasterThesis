@@ -10,10 +10,10 @@ struct CgpParameters
     nbr_outputs::Int
     crossover_type::Int
     crossover_rate::Float32 #für konstante Werte
+    crossover_offset::Int
     crossover_start::Float32 #für Clegg
     crossover_delta::Float32 #für Clegg und oneFifth
     crossover_rate_type::Int #1=konstant; 2=Clegg; 3=oneFifth
-    crossover_offset::Int
     tournament_size::Int
     elitism_number::Int
 end
