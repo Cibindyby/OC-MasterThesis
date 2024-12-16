@@ -89,14 +89,14 @@ function hpo()
 
     else
         rate_start_or_delta_rng = rangeForCrossoverRate
-        
 
         # BOHB-Optimierung durchführen
         ho = @hyperopt for i in 10, 
-            rate_start_or_delta = rate_start_or_delta_rng
+            rate_start_or_delta = rate_start_or_delta_rng,
+            offset = 0:0
             
             # Berechnung des Kostenwerts
-            cost = meanAusMehrerenIterationen(rate_start_or_delta, 0)
+            cost = meanAusMehrerenIterationen(rate_start_or_delta, offset)
         end
     end
 
