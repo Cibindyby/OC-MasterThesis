@@ -155,6 +155,7 @@ function meanAusMehrerenIterationen(rate_start_or_delta, offset)
 
 
     fitnessAll = Vector{Float32}()
+    iterationAll = Vector{Float32}()
     for i in 1:10
         runner = RunnerElitistMuLambda(parameterSet, data, label, eval_data, eval_label)
 
@@ -171,15 +172,19 @@ function meanAusMehrerenIterationen(rate_start_or_delta, offset)
         end
 
         push!(fitnessAll, fitness)
+        push!(iterationAll, iterations)
 
     end
 
-    meanAll = mean(fitnessAll)
+    meanAllFitness = mean(fitnessAll)
+    meanAllIteration = mean(iterationAll)
     open(save_path, "a") do file
         write(file, "Parameter set: \n
                     crossover_rate_depending_on_type (rate, delta or start) = $rate_start_or_delta, \n
                     crossover_offset = $offset\n")
-        write(file, "Ergebnis (mean) = $meanAll Fitness\n\n")
+        write(file, "Ergebnis (mean) = \n 
+                        $meanAllFitness Fitness\n 
+                        $meanAllIteration Iterations\n\n")
     end
 
     return meanAll
