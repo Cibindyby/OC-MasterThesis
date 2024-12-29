@@ -1,0 +1,71 @@
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.1, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 5.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.2, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 5.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 5.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 5.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 5.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 5.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 5.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.8, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 5.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.9, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 5.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 1.0, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 5.0 Iterations
+
+Endergenis HPO: Parameter -> Rate: Float32[0.1, 0.0]; Ergebnis -> 5.0

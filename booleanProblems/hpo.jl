@@ -74,38 +74,36 @@ function hpo()
     end
 
     if useOffset
-        rate_start_or_delta_rng = rangeForCrossoverRate
         offset_rng = 70:50:520
-        
-
-        # BOHB-Optimierung durchführen
-        ho = @hyperopt for i in 100,
-            rate_start_or_delta = rate_start_or_delta_rng,
-            offset = offset_rng
-            
-            # Berechnung des Kostenwerts
-            cost = meanAusMehrerenIterationen(rate_start_or_delta, offset)
-        end
-
     else
-        rate_start_or_delta_rng = rangeForCrossoverRate
+        offset_rng = 0:0
+    end
 
-        # BOHB-Optimierung durchführen
-        ho = @hyperopt for i in 10, 
-            rate_start_or_delta = rate_start_or_delta_rng,
-            offset = 0:0
-            
-            # Berechnung des Kostenwerts
+    parameterVector = Vector{Vector{Float32}}()
+    costVector = Vector{Float32}()
+    for rate_start_or_delta in rangeForCrossoverRate
+
+        for offset in offset_rng
+
+            paramsNow = Vector{Float32}()
+            push!(paramsNow, rate_start_or_delta)
+            push!(paramsNow, offset)
+            push!(parameterVector, paramsNow)
+
             cost = meanAusMehrerenIterationen(rate_start_or_delta, offset)
+            push!(costVector, cost)
+
         end
     end
 
-    beste_parameter = ho.minimizer
-    bestes_ergebnis = ho.minimum
-    println("Beste Parameter: ", beste_parameter)
-    println("Bestes Ergebnis: ", bestes_ergebnis)
+    min_cost = argmin(costVector)
+    costVal = costVector[min_cost]
+    params_min = parameterVector[min_cost]
 
-    writeHpoResults("Endergenis HPO: Parameter -> $beste_parameter; Ergebnis -> $bestes_ergebnis (crossover_delta, ggf. offset)")
+    println("Beste Parameter: $params_min")
+    println("Bestes Ergebnis: $costVal")
+
+    writeHpoResults("Endergenis HPO: Parameter -> Rate: $params_min; Ergebnis -> $costVal")
 end
 
 function meanAusMehrerenIterationen(rate_start_or_delta, offset)
