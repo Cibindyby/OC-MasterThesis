@@ -1,0 +1,25 @@
+\chapter{Notizen}
+
+
+Notizen aus Zettel:
+\begin{itemize}
+    \item mehrere Keijzer-6 Formeln vorhanden erwähnen -> aber aus "Better GP Benchmarks..." verwenden
+    \item Tournament-Selektion: Größere Turniere erhöhen den Selektionsdruck, da fittere Individuen häufiger gewinnen.
+    Kleinere Turniere erhalten mehr Diversität, da auch weniger fitte Individuen eine Chance haben
+    => aus Perplexity: "Genetic Algorithm, Tournament Selection, ..." von Miller
+    \item Probleme zwischen Rust und Julia: Problem mit Array-Zählung ab 1 bei Julia
+    \item Probleme wenn x=zu groß in sin(x) oder cos(x) => kopieren der Eingabe
+    \item one-fifth rule: Es gibt mehrere Möglichkeiten das anzupassen; Dabei gibt es viele Gedanken zu beachten
+    -> 1. Möglichkeit: Fitness über zb 50 Generationen beobachten und dann Rate anpassen (haben mindestens 20 Prozent der Rekombinationen eine bessere Fitness gebracht?)
+    => Problem: Mutation wird damit auch mitbewertet
+    => Idee: nach jedem Rekombinationsschritt (vor dem Mutationsschritt) Eltern und Kinder vergleichen (sind mind. 20 Prozent der Kinder besser als beide Eltern?)
+    \item HPO Problem: 
+    -> Random-Sampler = HPO wird in 4 Tagen nicht fertig, weil einzelne Runden zu lange brauchen
+    -> EvalAfterIteration runter drehen (Aber nicht zu weit runter, damit Ergebis "wird nicht fertig" krass bewertet wird) => an Hennings Ergebnissen abgleichen => kann für schwerere Szenarien nicht genug runter gedreht werden
+    -> eventuell muss neuer Sampler her: BHOB mit und ohne Hyperband ausprobiert => keine sinnvollen HPO-Ergebnisse und HPO wird nicht fertig
+    -> Lösung: Nur Crossoverrate und Offset neu bewerten in HPO mit RandomSampler; Rest Ergebnisse von Henning nehmen
+    \item no crossover braucht keine HPO mehr, weil keine Crossoverrate und kein Offset benutzt wird
+    \item no crossover hpo von Henning hat immer zwei mu-lambda Werte -> besseren nehmen
+    \item innerhalb von HPO bewerten, wie sich die fitness ändert in Crossover-Verlauf
+\end{itemize}
+

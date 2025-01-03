@@ -1,0 +1,62 @@
+\documentclass%
+% Obligatory: Adjust BCOR depending on your type of binding for proper
+% binding correction! See https://ftp.fau.de/ctan/macros/latex/contrib/koma-script/doc/scrguien.pdf#section.2.6 .
+[ BCOR=1cm
+% We strongly advise you to use a two-sided layout.
+, twoside
+]{dpmthsis}
+
+
+\usepackage[german]{babel}
+\usepackage{float}
+
+
+\usepackage[backend=biber,style=alphabetic]{biblatex}
+\addbibresource{References.bib}
+
+
+\begin{document}
+
+
+\frontmatter
+\pagestyle{empty}
+
+\includepdf{out/CoverDE.pdf}
+
+\cleardoublepage
+
+\input{Zusammenfassung}
+
+\cleardoublepage
+
+
+\tableofcontents
+\listoffigures
+
+
+\mainmatter
+\pagestyle{headings}
+
+
+\input{Motivation}
+\input{Grundlagen}
+\input{PraktischerTeil}
+\input{Fazit}
+
+
+
+
+\printbibliography
+
+
+\cleardoublepage
+
+
+\appendix
+\pagenumbering{Roman}
+
+
+\chapter{Anhang}
+
+
+\end{document}

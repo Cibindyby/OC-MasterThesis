@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+
+args="-output-directory=out -xelatex"
+
+
+latexmk $args CoverDE.tex
+latexmk $args Main.tex
