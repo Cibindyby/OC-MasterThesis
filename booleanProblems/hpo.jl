@@ -65,36 +65,49 @@ end
 
 function hpo()
 
-    iter = 100
-
-    if crossover_rate_type == 1 #range for constant rate
-        rangeForCrossoverRate = 0.1:0.1:1.0
-    elseif crossover_rate_type == 2 # range for delta (Clegg)
-        rangeForCrossoverRate = 0.005:0.005:0.050
-    elseif crossover_rate_type == 3 # range for start (one fifth)
-        rangeForCrossoverRate = 0.3:0.05:0.75
-    end
-
-    if useOffset
-
+    if crossover_type == 3 # no crossover
+        
+        iter = 100
         ho = @hyperopt for i = iter, 
             nbr_cmp_nodes = 50:50:2000, 
             pop_size = 10:2:60, 
-            rate_start_or_delta = rangeForCrossoverRate,
-            elit = 2:2:20,
-            offset = 20:50:520
+            elit = 2:2:20
 
-            meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta, elit, offset)
+            meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, 0.0, elit, 0.0)
         end
 
     else
-        ho = @hyperopt for i = iter, 
-            nbr_cmp_nodes = 50:50:2000, 
-            pop_size = 10:2:60, 
-            rate_start_or_delta = rangeForCrossoverRate,
-            elit = 2:2:20
+        iter = 100
 
-            meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta, elit, 0)
+        if crossover_rate_type == 1 #range for constant rate
+            rangeForCrossoverRate = 0.1:0.1:1.0
+        elseif crossover_rate_type == 2 # range for delta (Clegg)
+            rangeForCrossoverRate = 0.005:0.005:0.050
+        elseif crossover_rate_type == 3 # range for start (one fifth)
+            rangeForCrossoverRate = 0.3:0.05:0.75
+        end
+
+        if useOffset
+
+            ho = @hyperopt for i = iter, 
+                nbr_cmp_nodes = 50:50:2000, 
+                pop_size = 10:2:60, 
+                rate_start_or_delta = rangeForCrossoverRate,
+                elit = 2:2:20,
+                offset = 20:50:520
+
+                meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta, elit, offset)
+            end
+
+        else
+            ho = @hyperopt for i = iter, 
+                nbr_cmp_nodes = 50:50:2000, 
+                pop_size = 10:2:60, 
+                rate_start_or_delta = rangeForCrossoverRate,
+                elit = 2:2:20
+
+                meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta, elit, 0)
+            end
         end
     end
 
@@ -103,7 +116,7 @@ function hpo()
     println("Beste Parameter: ", beste_parameter)
     println("Bestes Ergebnis: ", bestes_ergebnis)
 
-    writeHpoResults("Endergenis HPO: Parameter -> $beste_parameter; Ergebnis -> $bestes_ergebnis (nbr_computational_nodes, population_size, crossover_delta, elitism_number, ggf. offset)")
+    writeHpoResults("Endergenis HPO: Parameter -> $beste_parameter; Ergebnis -> $bestes_ergebnis (nbr_computational_nodes, population_size, (crossover_delta), elitism_number, (offset))")
 end
 
 
