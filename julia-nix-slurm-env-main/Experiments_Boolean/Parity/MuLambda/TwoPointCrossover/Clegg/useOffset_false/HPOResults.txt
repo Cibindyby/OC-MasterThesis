@@ -3,26 +3,5 @@ Parameter set:
                     crossover_rate_depending_on_type (rate, delta or start) = 0.005, 
 
                     crossover_offset = 0
-Ergebnis (mean) = 105.9 Iterations
-
-Parameter set: 
-
-                    crossover_rate_depending_on_type (rate, delta or start) = 0.03, 
-
-                    crossover_offset = 0
-Ergebnis (mean) = 5151.0 Iterations
-
-Parameter set: 
-
-                    crossover_rate_depending_on_type (rate, delta or start) = 0.045, 
-
-                    crossover_offset = 0
-Ergebnis (mean) = 140.2 Iterations
-
-Parameter set: 
-
-                    crossover_rate_depending_on_type (rate, delta or start) = 0.025, 
-
-                    crossover_offset = 0
-Ergebnis (mean) = 5721.0 Iterations
+Ergebnis (mean) = 10184.5 Iterations
 

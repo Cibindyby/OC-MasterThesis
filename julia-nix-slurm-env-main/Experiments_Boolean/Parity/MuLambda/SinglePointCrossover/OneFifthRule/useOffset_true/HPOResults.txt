@@ -1,0 +1,7 @@
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    crossover_offset = 70
+Ergebnis (mean) = 1099.7 Iterations
+
