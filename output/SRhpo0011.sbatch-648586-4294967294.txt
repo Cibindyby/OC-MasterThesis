@@ -1,0 +1,48 @@
+SLURM_JOB_ID=648586
+hostname=oc222
+path '/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/scripts' does not contain a 'flake.nix', searching up
+[K[Kwarning: ignoring untrusted flake configuration setting 'extra-substituters'.
+Pass '--accept-flake-config' to trust it
+warning: ignoring untrusted flake configuration setting 'extra-trusted-public-keys'.
+Pass '--accept-flake-config' to trust it
+Running tasks     devenv:enterShell
+
+[1A[0JRunning           devenv:enterShell 0ms
+1 Running                           36.60µs
+[2A[0JSucceeded         devenv:enterShell 11ms
+1 Succeeded                         11.36ms
+
+Waiting for lock /home/ebertzci/JULIALOCK …
+Acquired lock /home/ebertzci/JULIALOCK.
+Relinquishing lock /home/ebertzci/JULIALOCK …
+Relinquished lock /home/ebertzci/JULIALOCK.
+ERROR: LoadError: MethodError: no method matching RunnerElitistMuLambda(::CgpParameters, ::Vector{Float32}, ::Vector{Float32}, ::Vector{Float32}, ::Vector{Float32})
+
+Closest candidates are:
+  RunnerElitistMuLambda(::Any, ::Any, ::Any, ::Any, ::Any, !Matched::Any, !Matched::Any, !Matched::Any, !Matched::Any, !Matched::Any, !Matched::Any, !Matched::Any, !Matched::Any, !Matched::Any, !Matched::Any)
+   @ Main /data/oc-compute03/ebertzci/OC-MasterThesis/symbolicRegression/utils/runner_multiple_parents_with_elitist_mulambda.jl:17
+  RunnerElitistMuLambda(::CgpParameters, !Matched::Vector{Vector{Float32}}, ::Vector{Float32}, !Matched::Vector{Vector{Float32}}, ::Vector{Float32})
+   @ Main /data/oc-compute03/ebertzci/OC-MasterThesis/symbolicRegression/utils/runner_multiple_parents_with_elitist_mulambda.jl:40
+  RunnerElitistMuLambda(::CgpParameters, !Matched::Vector{Vector{Float32}}, ::Vector{Float32}, !Matched::Vector{Vector{Float32}}, ::Vector{Float32}, !Matched::Vector{Chromosome}, !Matched::Vector{Float32}, !Matched::Vector{Float32}, !Matched::MersenneTwister, !Matched::Vector{Int64}, !Matched::Vector{Int64}, !Matched::Vector{Int64}, !Matched::Int64, !Matched::Float32, !Matched::Bool)
+   @ Main /data/oc-compute03/ebertzci/OC-MasterThesis/symbolicRegression/utils/runner_multiple_parents_with_elitist_mulambda.jl:17
+
+Stacktrace:
+ [1] meanAusMehrerenIterationen(nbr_cmp_nodes::Int64, pop_size::Int64, rate_start_or_delta::Float64, elit::Int64, offset::Int64)
+   @ Main /data/oc-compute03/ebertzci/OC-MasterThesis/symbolicRegression/hpo.jl:181
+ [2] macro expansion
+   @ /data/oc-compute03/ebertzci/OC-MasterThesis/symbolicRegression/hpo.jl:96 [inlined]
+ [3] (::var"#76###hyperopt_objective#227#36")(::Int64, ::Int64, ::Int64, ::Vararg{Any})
+   @ Main ~/.julia/packages/Hyperopt/1AdYO/src/Hyperopt.jl:148
+ [4] macro expansion
+   @ ~/.julia/packages/Hyperopt/1AdYO/src/Hyperopt.jl:162 [inlined]
+ [5] macro expansion
+   @ ~/.julia/packages/ProgressMeter/kVZZH/src/ProgressMeter.jl:1008 [inlined]
+ [6] optimize(ho::Hyperoptimizer{RandomSampler{MersenneTwister}, var"#76###hyperopt_objective#227#36"})
+   @ Hyperopt ~/.julia/packages/Hyperopt/1AdYO/src/Hyperopt.jl:161
+ [7] hpo()
+   @ Main /data/oc-compute03/ebertzci/OC-MasterThesis/symbolicRegression/hpo.jl:89
+ [8] top-level scope
+   @ /data/oc-compute03/ebertzci/OC-MasterThesis/symbolicRegression/hpo.jl:374
+in expression starting at /data/oc-compute03/ebertzci/OC-MasterThesis/symbolicRegression/hpo.jl:374
+error: Recipe `justfilefunc` failed with exit code 1
+srun: error: oc222: task 0: Exited with exit code 1
