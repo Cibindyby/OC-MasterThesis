@@ -126,7 +126,7 @@ function meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta
     mu = 1
     lambda = 4
     eval_after_iterations = 500
-    nbr_inputs = 3
+    nbr_inputs = 3 #Achtung, das gilt nur für Parity!!!
     nbr_outputs = 1
     crossover_rate = 0.7
     crossover_start = 0.9
