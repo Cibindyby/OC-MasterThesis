@@ -38,9 +38,9 @@ function Base.show(io::IO, runner::RunnerElitistMuLambda)
 end
 
 function RunnerElitistMuLambda(params::CgpParameters, 
-    data::Vector{Vector{Float32}},
+    data::Vector{Float32},
     label::Vector{Float32},
-    eval_data::Vector{Vector{Float32}},
+    eval_data::Vector{Float32},
     eval_label::Vector{Float32})
     rng = MersenneTwister()
     iteration = 0
