@@ -348,11 +348,39 @@ Ein Ziel dieser Arbeit ist es herauszufinden, ob sich ein Offset in der Rekombin
 \label{subsec:Mutation}
 
 Der zweite evolutionäre Operator ist die Mutation.
-Sie findet nach der Rekombination statt.
+Sie wird nach der Rekombination ausgeführt.
+Anders als bei der Rekombination werden bei der Mutation nicht zwei, sondern nur ein Chromosom einbezogen und daraus ein neues Chromosom erstellt.
+In diesem Prozess werden Teile des Genotyps des Chromosoms zufällig verändert, um daraus einen neuen Genotyp zu erzeugen. \cite{milad_taleby_ahvanooey_survey_2019}\\
+Für probabilistische Mutation wird, vergleichbar zur Rekombinationsrate, eine Mutationsrate verwendet, um die Wahrscheinlichkeit anzugeben, mit der ein Gen mutiert wird.
+Dadurch kann es allerdings dazu kommen, dass das Chromosom vor und nach der Mutation zwar unterschiedliche Genotypen aufweisen, sich die aktiven Knoten allerdings nicht voneinander unterscheiden.
+Um dieses Problem in den Griff zu bekommen, wird in dieser Arbeit die Single (Active) Mutation herangezogen.
+In diesem Algorithmus werden zufällig die Gene eines Chromosoms verändert, bis ein aktiver Knoten mutiert wurde.
+Anschließend bricht der Mutationsalgorithmus ab. \cite{miller_cartesian_2020}
+Dies hat zusätzlich den Vorteil, dass keine Mutationsrate angepasst werden muss, was die Hyperparameteranalyse weniger rechenintensiv macht.\\
 
-TODO: Mutation grundlegend erklären mit Shift-Operator
+TODO: für welche verschiedene Knotentypen können welche Dinge geändert werden
 
-TODO: wegen single active mutation keine Mutationsrate -> Exploration und Exploitation Verhalten liegt rein an Rekombinationsrate
+Um die Single Active Mutation anhand eines Beispiels näher zu erläutern wird folgender Gentyp eines Chromosoms aus Abbildung \ref{fig:genotyp} erneut eingeführt.
+Die Einträge wurden teilweise angepasst, sodass mehr inaktive Knoten zur Verfügung stehen.
+Zur Veranschaulichung des Prozesses wurden die beiden Inputs mit den Indices 0 und 1 ebenfalls in die Abbildung eingefügt.
+Da die Einträge der Input-Gene keine relevanten Informationen enthalten, werden diese durch ein \glqq -\grqq\space angegeben.
+Es wird angenommen, dass dieses Chromosom durch vorherige Rekombination entstanden ist und somit im nächsten Schritt mutiert werden soll.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.6]{Bilder/Genotyp.png}
+	\caption{Beispiel Genotyp vor Mutation, angelehnt an \cite{torabi_using_2022}}
+	\label{fig:genotypVorMutation}
+\end{figure}
+
+TODO: Abbildung anpassen, sodass weniger aktive Knoten da sind (am besten ein Input ohne aktiv)
+
+Wie anhand des Genotyps erkannt werden kann, sind die Gene mit den folgenden Indices aktive Knoten:
+TODO aktive Knoten
+Der Algorithmus beginnt und ein zufälliger Index wird für die Mutation ausgewählt.
+Angenommen dieser Index hat den Wert TODO
+
+TODO: Weitere Durchgänge mit den unterschiedlichen Knotentypen
 
 
 \begin{itemize}
