@@ -62,19 +62,6 @@ function writeHpoResults(results::String)
 end
 
 function hpo()
-    if crossover_type == 3 # no crossover
-        
-        iter = 100
-        ho = @hyperopt for i = iter, 
-            nbr_cmp_nodes = 50:50:2000, 
-            pop_size = 10:2:60, 
-            elit = 2:2:20
-
-            meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, 0.0, elit, 0.0)
-        end
-
-    else
-        iter = 100
 
     if crossover_rate_type == 1 #range for constant rate
         rangeForCrossoverRate = 0.1:0.1:1.0
@@ -85,26 +72,29 @@ function hpo()
     end
 
     if useOffset
+        rate_start_or_delta_rng = rangeForCrossoverRate
+        offset_rng = 70:50:520
+        
 
-            ho = @hyperopt for i = iter, 
-                nbr_cmp_nodes = 50:50:2000, 
-                pop_size = 10:2:60, 
-                rate_start_or_delta = rangeForCrossoverRate,
-                elit = 2:2:20,
-                offset = 20:50:520
+        # BOHB-Optimierung durchführen
+        ho = @hyperopt for i in 100,
+            rate_start_or_delta = rate_start_or_delta_rng,
+            offset = offset_rng
+            
+            # Berechnung des Kostenwerts
+            cost = meanAusMehrerenIterationen(rate_start_or_delta, offset)
+        end
 
-                meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta, elit, offset)
-            end
+    else
+        rate_start_or_delta_rng = rangeForCrossoverRate
 
-        else
-            ho = @hyperopt for i = iter, 
-                nbr_cmp_nodes = 50:50:2000, 
-                pop_size = 10:2:60, 
-                rate_start_or_delta = rangeForCrossoverRate,
-                elit = 2:2:20
-
-                meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta, elit, 0)
-            end
+        # BOHB-Optimierung durchführen
+        ho = @hyperopt for i in 10, 
+            rate_start_or_delta = rate_start_or_delta_rng,
+            offset = 0:0
+            
+            # Berechnung des Kostenwerts
+            cost = meanAusMehrerenIterationen(rate_start_or_delta, offset)
         end
     end
 
@@ -113,16 +103,15 @@ function hpo()
     println("Beste Parameter: ", beste_parameter)
     println("Bestes Ergebnis: ", bestes_ergebnis)
 
-    writeHpoResults("Endergenis HPO: Parameter -> $beste_parameter; Ergebnis -> $bestes_ergebnis (nbr_computational_nodes, population_size, (crossover_delta), elitism_number, (offset))")
+    writeHpoResults("Endergenis HPO: Parameter -> $beste_parameter; Ergebnis -> $bestes_ergebnis (crossover_delta, ggf. offset)")
 end
 
-
-function meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta, elit, offset)
+function meanAusMehrerenIterationen(rate_start_or_delta, offset)
    
     #default values
     mu = 1
     lambda = 4
-    eval_after_iterations = 500
+    eval_after_iterations = 50000
     nbr_inputs = 3
     nbr_outputs = 1
     crossover_rate = 0.7
@@ -130,18 +119,8 @@ function meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta
     crossover_delta = 0.05
     tournament_size = 0
 
-    if(pop_size < elit)
-        open(save_path, "a") do file
-            write(file, "Parameter set: \n
-                        number_comp_nodes = $nbr_cmp_nodes, \n
-                        population_size = $pop_size, \n
-                        crossover_rate_depending_on_type (rate, delta or start) = $rate_start_or_delta, \n
-                        eilit_number = $elit, \n
-                        crossover_offset = $offset\n")
-            write(file, "Ergebnis (mean) = Inf (weil mu > lambda)\n\n")
-        end
-        return Inf
-    end
+    nbr_cmp_nodes, pop_size, elit = get_fixed_hyperparameter()
+
 
     if crossover_rate_type == 1 #range for constant rate
         crossover_rate = rate_start_or_delta
@@ -176,7 +155,7 @@ function meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta
 
 
     fitnessAll = Vector{Float32}()
-    iterationsAll = Vector{Float32}()
+    iterationAll = Vector{Float32}()
     for i in 1:10
         runner = RunnerElitistMuLambda(parameterSet, data, label, eval_data, eval_label)
 
@@ -190,17 +169,15 @@ function meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta
             if isapprox(fitness, 0.0, atol=0.0001)
                 break
             end
-
-            # braucht keine höhere Gewichtung für Iterationen, weil Iterationen nur wichtig sind für Durchläufe, die sowieso schon fertig werden
         end
 
         push!(fitnessAll, fitness)
-        push!(iterationsAll, iterations)
+        push!(iterationAll, iterations)
 
     end
 
     meanAllFitness = mean(fitnessAll)
-    meanAllIteration = mean(iterationsAll)
+    meanAllIteration = mean(iterationAll)
     open(save_path, "a") do file
         write(file, "Parameter set: \n
                     crossover_rate_depending_on_type (rate, delta or start) = $rate_start_or_delta, \n
@@ -210,7 +187,7 @@ function meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta
                         $meanAllIteration Iterations\n\n")
     end
 
-    return meanAllFitness
+    return meanAll
 
 end
 

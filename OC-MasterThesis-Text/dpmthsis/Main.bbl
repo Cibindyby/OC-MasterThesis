@@ -380,6 +380,70 @@
       \verb https://dl.acm.org/doi/10.1145/1276958.1277276
       \endverb
     \endentry
+    \entry{doerr_self-adjusting_2019}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=31e296f14b85dca631fe682b68c6c371}{%
+           family={Doerr},
+           familyi={D\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=db35addf55018cf7172f493c01c3933b}{%
+           family={Doerr},
+           familyi={D\bibinitperiod},
+           given={Carola},
+           giveni={C\bibinitperiod}}}%
+        {{hash=bc63a8f0e84ff608408ba81914de2423}{%
+           family={Lengler},
+           familyi={L\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Prague Czech Republic}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{69b5fbcbd42e329cfee0c99ff8bd1502}
+      \strng{fullhash}{69b5fbcbd42e329cfee0c99ff8bd1502}
+      \strng{fullhashraw}{69b5fbcbd42e329cfee0c99ff8bd1502}
+      \strng{bibnamehash}{69b5fbcbd42e329cfee0c99ff8bd1502}
+      \strng{authorbibnamehash}{69b5fbcbd42e329cfee0c99ff8bd1502}
+      \strng{authornamehash}{69b5fbcbd42e329cfee0c99ff8bd1502}
+      \strng{authorfullhash}{69b5fbcbd42e329cfee0c99ff8bd1502}
+      \strng{authorfullhashraw}{69b5fbcbd42e329cfee0c99ff8bd1502}
+      \field{labelalpha}{DDL19}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the {Genetic} and {Evolutionary} {Computation} {Conference}}
+      \field{isbn}{978-1-4503-6111-8}
+      \field{month}{7}
+      \field{title}{Self-adjusting mutation rates with provably optimal success rules}
+      \field{urlday}{3}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \field{pages}{1479\bibrangedash 1487}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1145/3321707.3321733
+      \endverb
+      \verb{file}
+      \verb Volltext:files/360/Doerr et al. - 2019 - Self-adjusting mutation rates with provably optima.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3321707.3321733
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3321707.3321733
+      \endverb
+    \endentry
     \entry{demirbas_stress_2022}{article}{}{}
       \name{author}{4}{}{%
         {{hash=09d44c6017205e3e4a54fd5dab8b2f05}{%
