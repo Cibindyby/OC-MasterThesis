@@ -2423,6 +2423,9 @@
     <bcf:citekey order="56" intorder="1">hassanat_choosing_2019</bcf:citekey>
     <bcf:citekey order="57" intorder="1">clegg_new_2007</bcf:citekey>
     <bcf:citekey order="58" intorder="1">milano_scaling_2018</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">doerr_self-adjusting_2019</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">torabi_using_2022</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">clegg_new_2007</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">

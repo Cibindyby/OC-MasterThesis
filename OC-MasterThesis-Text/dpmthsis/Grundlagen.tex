@@ -169,7 +169,7 @@ Um eine bessere Vergleichbarkeit zu gewährleisten, werden im praktischen Teil a
 Wie Mutation und Rekombination ausgeführt werden, wird im folgenden Abschnitt \ref{sec:evolutionäreOperatoren} erläutert.
 
 
-\section{Evolutionäre Operatoren: Rekombination}
+\section{Evolutionärer Operator: Rekombination}
 \label{sec:evolutionäreOperatoren}
 Nachdem die Selektion der Eltern-Chromosome erfolgt ist, wie in Abschnitt \ref{sec:evalUndSelektion} beschrieben, können im nächsten Schritt die evolutionären Operationen ausgeführt werden, die die Nachkommen aus den Eltern erzeugen. \\
 Der erste evolutionäre Operator, der verwendet wird, ist die Rekombination.
@@ -314,20 +314,40 @@ Der einzige variable Parameter für die linear fallende Rekombinationsrate ist i
 \subsubsection{One-Fifth-Regel angewandt auf die Rekombinationsrate}
 \label{subsubsec:oneFifthCrossover}
 
-Die One-Fifth-Regel gibt es bereits für die Mutationsrate.
-Diese wird beispielsweise im Paper von Milano und Nolfi verwendet.
-Dabei handelt es sich um einen Weg, die Mutationsrate automatisch und dynamisch an die Problemcharakteristiken und die evolutionäre Phase anzupassen. \cite{milano_scaling_2018}
+Die One-Fifth-Regel gibt es bereits andere Parameter von GP, wie beispielsweise für die Mutationsrate.
+Diese wird ebenfalls im Paper von Milano und Nolfi verwendet.
+Dabei handelt es sich um einen Weg, die Mutationsrate automatisch und dynamisch an die Problemcharakteristiken und die evolutionäre Phase anzupassen. \cite{milano_scaling_2018}\\
+Betrachtet wird bei dieser Regel das Fitness-Verhältnis der Elitisten und der neuen Chromosomen.
+In anderen Worten werden die Kinder also mit ihren Eltern verglichen.
+Erzielt werden soll ein Verhältnis von 20\%.
+Das heißt, dass 20\% der Nachwuchs-Chromosomen eine bessere Fitness aufweisen sollen als ihre Eltern.
+Wird dieses Verhältnis unter- oder übertroffen, wird der jeweilige Parameter verkleinert oder vergrößert. \cite{doerr_self-adjusting_2019}\\
 
+In dieser Arbeit soll die One-Fifth-Regel für die dynamische Anpassung der Rekombinationsrate herangezogen werden.
+Um nur den Rekombinationsschritt zu bewerten und nicht den Mutationsschritt, muss die Bewertung der Fitness vor der Mutation geschehen.
+Dementsprechend wird für die One-Fifth-Regel in dieser Arbeit direkt nach dem Rekombinationsschritt die Fitness der Eltern- mit der Fitness der Nachwuchs-Chromosomen verglichen.
+Anschließend wird betrachtet, ob 20\% der Kinder eine bessere Fitness aufweisen als ihre Eltern.
+Wird dieser Wert übertroffen, wird die Rekombinationsrate mit 1,1 multipliziert, um den Erfolg des Rekombinationsschritts auszuschöpfen.
+Andernfalls wird die Rekombinationsrate mit 0,9 multipliziert und somit verringert.
 
-TODO: Paper finden, das one fifth leichter beschreibt und dann erklären
-TODO: Gedankengang aus Notizen hier einpflegen
 
 \subsubsection{Rekombinationsrate mit Offset}
 \label{subsubsec:offsetCrossover}
+Torabi et el. beschreiben in ihrem Paper eine neue Rekombinationsstrategie \cite{torabi_using_2022}.
+Dabei verwenden sie einen Hyperparameter, der den Offset der Rekombination definieren soll.
+Das heißt, dass die Rekombination in ihrer Strategie in den ersten Generationen nicht angewendet wird, sondern erst zu einer bestimmten Generation beginnt.
+Wie dieser Hyperparameter bestimmt wurde und welche Größenordnung dieser einhalten sollte, wird in dem Paper allerdings nicht erwähnt.\\
+
+Torabi et al. behaupten außerdem, dass ihre Strategie \glqq den richtigen Kompromiss aus Exploration und Exploitation\grqq\space erreicht.
+Vergleicht man diese Aussage mit der Aussage von Clegg et al., stellt man fest, dass sich diese Aussagen widersprechen \cite{clegg_new_2007}:
+Während Clegg et al. vor allem in den ersten Generationen auf Rekombination setzen, da der Rekombinationsschritt hier zu einer höheren Fitness-Konvergenz führen soll, meiden Torabi et al. in ihrer Strategie Rekombinationen in den ersten Generationen völlig.\\
+Ein Ziel dieser Arbeit ist es herauszufinden, ob sich ein Offset in der Rekombination als sinnvoll erweist oder ob sich dieser nur für die Rekombinationsstrategie eignet, die Torabi et al. in ihrem Paper eingeführt haben.
 
 
-\subsection{Mutation}
+\section{Evolutionärer Operator: Mutation}
 \label{subsec:Mutation}
+
+TODO: Mutation grundlegend erklären mit Shift-Operator
 
 TODO: wegen single active mutation keine Mutationsrate -> Exploration und Exploitation Verhalten liegt rein an Rekombinationsrate
 

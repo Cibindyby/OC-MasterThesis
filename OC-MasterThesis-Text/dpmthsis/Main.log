@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  2 JAN 2025 22:40
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  3 JAN 2025 18:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2212,19 +2212,29 @@ Overfull \hbox (10.851pt too wide) in paragraph at lines 303--313
 
 
 [13]
+Underfull \hbox (badness 10000) in paragraph at lines 317--325
 
-[14]) (./PraktischerTeil.tex
-
-[15]
-
-[16
+ []
 
 
-]
+Underfull \hbox (badness 10000) in paragraph at lines 336--340
+
+ []
+
+
+
+[14]
+
+[15]) (./PraktischerTeil.tex
+
+[16]
 chapter 3.
 ) (./Fazit.tex
 
-[17]
+[17
+
+
+]
 
 [18
 
@@ -2288,10 +2298,10 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47558 strings out of 473889
- 1001462 string characters out of 5734826
- 1927796 words of memory out of 5000000
- 69951 multiletter control sequences out of 15000+600000
+ 47561 strings out of 473889
+ 1001642 string characters out of 5734826
+ 1926899 words of memory out of 5000000
+ 69954 multiletter control sequences out of 15000+600000
  562633 words of font info for 98 fonts, out of 8000000 for 9000
  1350 hyphenation exceptions out of 8191
  122i,17n,136p,10900b,6837s stack positions out of 10000i,1000n,20000p,200000b,200000s
