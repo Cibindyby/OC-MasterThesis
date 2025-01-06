@@ -181,6 +181,7 @@ function meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta
         runner = RunnerElitistMuLambda(parameterSet, data, label, eval_data, eval_label)
 
         iterations = 0
+        fitness = Inf32
 
         while iterations < eval_after_iterations
             learn_step!(runner)
