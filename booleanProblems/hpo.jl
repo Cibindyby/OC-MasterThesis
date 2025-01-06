@@ -67,7 +67,7 @@ function hpo()
 
     if crossover_type == 3 # no crossover
         
-        iter = 100
+        iter = 150
         ho = @hyperopt for i = iter, 
             nbr_cmp_nodes = 50:50:2000, 
             pop_size = 10:2:60, 
@@ -77,7 +77,7 @@ function hpo()
         end
 
     else
-        iter = 100
+        iter = 150
 
         if crossover_rate_type == 1 #range for constant rate
             rangeForCrossoverRate = 0.1:0.1:1.0
