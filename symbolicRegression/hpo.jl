@@ -91,7 +91,7 @@ function hpo()
                 pop_size = 10:2:60, 
                 rate_start_or_delta = rangeForCrossoverRate,
                 elit = 2:2:20,
-                offset = 20:50:520
+                offset = 0:50:500
 
                 meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta, elit, offset)
             end

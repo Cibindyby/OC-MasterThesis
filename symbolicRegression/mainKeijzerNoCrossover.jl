@@ -108,6 +108,7 @@ function main()
 
         while runtime < eval_after_iterations
             #write(file, "Iteration: $runtime, Fitness: $(get_best_fitness(runner))\n")
+            println("time for learning step no. $runtime")
             learn_step!(runner)
             runtime += 1
 

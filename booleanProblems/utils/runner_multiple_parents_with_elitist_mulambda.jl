@@ -74,11 +74,11 @@ function RunnerElitistMuLambda(params::CgpParameters,
     end
 
     # Get sorted fitness vals
-    fitness_vals_sorted = copy(fitness_vals)
+    fitness_vals_sorted = deepcopy(fitness_vals)
     sort!(fitness_vals_sorted)
 
     # Reverse fitness_vals_sorted to pop the best fitness first
-    temp_fitness_vals_sorted = copy(fitness_vals_sorted)
+    temp_fitness_vals_sorted = deepcopy(fitness_vals_sorted)
     reverse!(temp_fitness_vals_sorted)
     unique!(temp_fitness_vals_sorted)
 
@@ -120,7 +120,7 @@ function mutate_chromosomes!(runner::RunnerElitistMuLambda)
 end
 
 function eval_chromosomes!(runner::RunnerElitistMuLambda)
-    for id in runner.child_ids
+    for id in 0:length(runner.population)-1
         fitness = evaluate!(runner.population[id+1], runner.data, runner.label)
 
         if isnan(fitness) || isinf(fitness)
@@ -130,7 +130,7 @@ function eval_chromosomes!(runner::RunnerElitistMuLambda)
         runner.fitness_vals[id+1] = fitness
     end
 
-    best_fitnesses_sorted = copy(runner.fitness_vals)
+    best_fitnesses_sorted = deepcopy(runner.fitness_vals)
     sort!(best_fitnesses_sorted)
 
     runner.fitness_vals_sorted = best_fitnesses_sorted
@@ -138,7 +138,7 @@ end
 
 function get_elitists(runner::RunnerElitistMuLambda)
     # Get mu - many best fitness vals
-    sorted_fitness_vals = unique(copy(runner.fitness_vals_sorted))
+    sorted_fitness_vals = unique(deepcopy(runner.fitness_vals_sorted))
 
     new_parent_ids = Int[]
     for current_best_fitness_val in sorted_fitness_vals
