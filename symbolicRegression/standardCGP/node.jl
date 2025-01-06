@@ -18,7 +18,7 @@ end
 function Base.show(io::IO, node::Node)
     print(io, "Node Pos: $(node.position), ")
     print(io, "Node Type: $(node.node_type), ")
-    print(io, "Function ID: $node.function_id, ")
+    print(io, "Function ID: $(node.function_id), ")
     println(io, "Connections: ($(node.connection0), $(node.connection1)), ")
 end
 

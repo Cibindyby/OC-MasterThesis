@@ -23,10 +23,10 @@ folgende Strategien werden verwendet:
 
 include("globalParams.jl")
 
-include("utils/runner.jl")
+include("utils/runner_multiple_parents_with_elitist_mulambda.jl")
 
-nbr_computational_nodes = 1500
-population_size = 50
+nbr_computational_nodes = 5
+population_size = 4
 mu = 1
 lambda = 4
 eval_after_iterations = 3000
@@ -38,7 +38,7 @@ nbr_outputs = 1
 # two point = 1
 # uniform = 2
 # no crossover = 3
-crossover_type = 3
+crossover_type = 0
 
 
 # Keijzer = 0
@@ -49,13 +49,13 @@ include("datasets/keijzer.jl")
 #include("datasets/koza_3.jl")
 #include("datasets/nguyen_7.jl")
 
-crossover_rate = 0.0
+crossover_rate = 0.9
 crossover_offset = 0
 crossover_start = 0.0
 crossover_delta = 0.0
 crossover_rate_type = 1
 tournament_size = 0
-elitism_number = 0
+elitism_number = 2
 
 # cgp parameter
 params = CgpParameters(
@@ -74,7 +74,7 @@ params = CgpParameters(
     crossover_rate_type,
     tournament_size,
     elitism_number
-)
+) 
 
 
 # Main function
@@ -84,6 +84,7 @@ function main()
     data, label, eval_data, eval_label = load_dataset()
 
     # Logger setup
+    #=
     selection = "MuLambdaWithoutElitists"
     dataset_string = get_dataset_string(datasetToLoad)
     crossover_type = get_crossover_type(params.crossover_type)
@@ -96,16 +97,17 @@ function main()
                             "Ergebnisse.txt"])
     
     mkpath(dirname(save_path))
+    =#
 
     # Öffne die Datei
-    open(save_path, "w") do file
-        runner = RunnerMuLambda(params, data, label, eval_data, eval_label)
+    #open(save_path, "w") do file
+        runner = RunnerElitistMuLambda(params, data, label, eval_data, eval_label)
         runtime = 0
         fitness_eval = Inf
         fitness_train = Inf
 
         while runtime < eval_after_iterations
-            write(file, "Iteration: $runtime, Fitness: $(get_best_fitness(runner))\n")
+            #write(file, "Iteration: $runtime, Fitness: $(get_best_fitness(runner))\n")
             learn_step!(runner)
             runtime += 1
 
@@ -118,17 +120,17 @@ function main()
         fitness_train = get_best_fitness(runner)
 
         # Saving results
-        println(runtime)
-        write(file, "End at iteration: $runtime\n")
-        write(file, "Fitness Eval: $fitness_eval\n")
-        write(file, "Fitness Train: $fitness_train\n")
-        close(file)
+        #println(runtime)
+        #write(file, "End at iteration: $runtime\n")
+        #write(file, "Fitness Eval: $fitness_eval\n")
+        #write(file, "Fitness Train: $fitness_train\n")
+        #close(file)
 
-        parent = get_parent(runner)
-        get_active_nodes_id!(parent)
-        write(file, "$(parent.active_nodes)")
+        #parent = get_parent(runner)
+        #get_active_nodes_id!(parent)
+        #write(file, "$(parent.active_nodes)")
     end
-end
+#end
 
 
 function load_dataset()

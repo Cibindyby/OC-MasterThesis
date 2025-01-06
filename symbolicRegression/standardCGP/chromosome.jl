@@ -29,7 +29,8 @@ function Chromosome(params::CgpParameters)
 
     # input nodes
     for position in 0:params.nbr_inputs-1
-        push!(nodes_grid, Node(position, params.nbr_inputs, params.nbr_computational_nodes, InputNode))
+        inputNode = Node(position, params.nbr_inputs, params.nbr_computational_nodes, InputNode)
+        push!(nodes_grid, inputNode)
     end
     # computational nodes
     for position in params.nbr_inputs:(params.nbr_inputs + params.nbr_computational_nodes - 1)
