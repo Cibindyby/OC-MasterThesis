@@ -96,7 +96,7 @@ function RunnerElitistMuLambda(params::CgpParameters,
     child_ids = collect(0:(params.population_size + params.elitism_number - 1))
     child_ids = vect_difference(child_ids, elitist_ids)
 
-    return RunnerElitistMuLambda(params, data, label, eval_data, eval_label, population, fitness_vals, fitness_vals_sorted, rng, elitist_ids, child_ids, Int[], iteration, last_crossover_rate, oneFifthPositive)
+    return RunnerElitistMuLambda(params, data, label, eval_data, eval_label, population, fitness_vals_sorted, fitness_vals, rng, elitist_ids, child_ids, Int[], iteration, last_crossover_rate, oneFifthPositive)
 end
 
 function learn_step!(runner::RunnerElitistMuLambda)
