@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  5 JAN 2025 21:31
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  8 JAN 2025 21:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2103,82 +2103,88 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--28
 
  []
 
-File: Bilder/TorabiBeispielGenotyp.png Graphic file (type bmp)
-<Bilder/TorabiBeispielGenotyp.png>
+File: Bilder/TorabiBeispielGenotypNeu.png Graphic file (type bmp)
+<Bilder/TorabiBeispielGenotypNeu.png>
 File: Bilder/BeispielChromosom.png Graphic file (type bmp)
 <Bilder/BeispielChromosom.png>
+LaTeX Font Info:    Font shape `TU/LinLibertine(0)/b/n' will be
+(Font)              scaled to size 10.95pt on input line 45.
+
+LaTeX Warning: Reference `fig:genotyp' on page 4 undefined on input line 45.
+
 
 
 [4]
-LaTeX Font Info:    Font shape `TU/LinLibertine(0)/b/n' will be
-(Font)              scaled to size 10.95pt on input line 57.
-
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 117--118
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
 
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 128--132
+Underfull \hbox (badness 10000) in paragraph at lines 134--138
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--146
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--151
+Underfull \hbox (badness 10000) in paragraph at lines 147--152
 
  []
 
 
 
 [7]
+Underfull \hbox (badness 10000) in paragraph at lines 153--157
+
+ []
+
+
+Underfull \vbox (badness 2698) has occurred while \output is active []
+
+
 
 [8]
 LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 180.
+(Font)              scaled to size 12.0pt on input line 186.
 File: Bilder/BeispielOnePointCrossover.png Graphic file (type bmp)
 <Bilder/BeispielOnePointCrossover.png>
 
-Overfull \hbox (8.96486pt too wide) in paragraph at lines 193--201
+
+LaTeX Warning: Reference `fig:genotyp' on page 9 undefined on input line 199.
+
+
+Overfull \hbox (8.96486pt too wide) in paragraph at lines 199--207
 \TU/LinLibertine(0)/m/n/10.95 Chromosomen bestimmt. Diese ist in Abbildung []2.
 4[] grün markiert. Die Eltern-Chromosomen
- []
-
-File: Bilder/BeispielOnePointCrossover2.png Graphic file (type bmp)
-<Bilder/BeispielOnePointCrossover2.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 205--205
-[][][]\TU/LinLibertine(0)/m/n/10.95 Nachwuchs-Chromosomen One-Point Rekombinati
-on, angelehnt an
  []
 
 
 
 [9]
+File: Bilder/BeispielOnePointCrossover2.png Graphic file (type bmp)
+<Bilder/BeispielOnePointCrossover2.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+[][][]\TU/LinLibertine(0)/m/n/10.95 Nachwuchs-Chromosomen One-Point Rekombinati
+on, angelehnt an
+ []
+
 File: Bilder/BeispielTwoPointCrossover.png Graphic file (type bmp)
 <Bilder/BeispielTwoPointCrossover.png>
 File: Bilder/BeispielTwoPointCrossover2.png Graphic file (type bmp)
 <Bilder/BeispielTwoPointCrossover2.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--225
+Underfull \hbox (badness 10000) in paragraph at lines 231--231
 [][][]\TU/LinLibertine(0)/m/n/10.95 Nachwuchs-Chromosomen Two-Point Rekombinati
 on, angelehnt an
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [10]
-Overfull \hbox (20.47975pt too wide) in paragraph at lines 236--242
+Overfull \hbox (20.47975pt too wide) in paragraph at lines 242--248
 \TU/LinLibertine(0)/m/n/10.95 hebt, ist die Verwendung einer Maske. Die Maske i
 st genauso lang wie die Eltern-Chromosomen
  []
@@ -2191,20 +2197,20 @@ File: Bilder/BeispielUniformCrossover.png Graphic file (type bmp)
 File: Bilder/BeispielUniformCrossover2.png Graphic file (type bmp)
 <Bilder/BeispielUniformCrossover2.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--267
+Underfull \hbox (badness 10000) in paragraph at lines 273--273
 [][][]\TU/LinLibertine(0)/m/n/10.95 Nachwuchs-Chromosomen Uniform Rekombination
 , angelehnt an
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--286
+Underfull \hbox (badness 10000) in paragraph at lines 280--292
 
  []
 
 
 
 [12]
-Overfull \hbox (10.851pt too wide) in paragraph at lines 303--313
+Overfull \hbox (10.851pt too wide) in paragraph at lines 309--319
 \TU/LinLibertine(0)/m/n/10.95 duzieren. Ebenfalls ist es ein Vorteil, nur einen
  variablen Parameter pro Rekombinationsraten-
  []
@@ -2212,41 +2218,44 @@ Overfull \hbox (10.851pt too wide) in paragraph at lines 303--313
 
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 317--325
+Underfull \hbox (badness 10000) in paragraph at lines 323--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--340
+Underfull \hbox (badness 10000) in paragraph at lines 342--346
 
  []
 
 
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 350--360
+Underfull \hbox (badness 10000) in paragraph at lines 356--366
 
  []
 
 
 
 [15]
-File: Bilder/Genotyp.png Graphic file (type bmp)
-<Bilder/Genotyp.png>
+File: Bilder/TorabiBeispielGenotypNeu.png Graphic file (type bmp)
+<Bilder/TorabiBeispielGenotypNeu.png>
 
 
-[16]) (./PraktischerTeil.tex
-
-[17]
-
-[18
+[16]
+File: Bilder/GenotypNachMutation.png Graphic file (type bmp)
+<Bilder/GenotypNachMutation.png>
 
 
-]
+[17]) (./PraktischerTeil.tex
+
+[18]
 chapter 3.
 ) (./Fazit.tex
 
-[19]
+[19
+
+
+]
 
 [20
 
@@ -2303,6 +2312,10 @@ chapter A.
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-09>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `Main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'Main.run.xml'.
@@ -2310,10 +2323,10 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47571 strings out of 473889
- 1001869 string characters out of 5734826
- 1926992 words of memory out of 5000000
- 69963 multiletter control sequences out of 15000+600000
+ 47583 strings out of 473889
+ 1002225 string characters out of 5734826
+ 1926401 words of memory out of 5000000
+ 69975 multiletter control sequences out of 15000+600000
  562633 words of font info for 98 fonts, out of 8000000 for 9000
  1350 hyphenation exceptions out of 8191
  122i,17n,136p,10900b,6837s stack positions out of 10000i,1000n,20000p,200000b,200000s
