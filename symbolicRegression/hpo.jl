@@ -188,7 +188,7 @@ function meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta
             iterations = iterations + 1
             fitness = get_best_fitness(runner)
 
-            if isapprox(fitness, 0.0, atol=0.0001)
+            if fitness < 0.01
                 break
             end
 
@@ -204,7 +204,10 @@ function meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta
     meanAllIteration = mean(iterationsAll)
     open(save_path, "a") do file
         write(file, "Parameter set: \n
+                    number_comp_nodes = $nbr_cmp_nodes, \n
+                    population_size = $pop_size, \n
                     crossover_rate_depending_on_type (rate, delta or start) = $rate_start_or_delta, \n
+                    eilit_number = $elit, \n
                     crossover_offset = $offset\n")
         write(file, "Ergebnis (mean) = \n 
                         $meanAllFitness Fitness\n 
