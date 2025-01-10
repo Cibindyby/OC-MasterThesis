@@ -1,0 +1,1677 @@
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.16948552 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.020989763 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.034762196 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.013754074 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                        number_comp_nodes = 1050, 
+
+                        population_size = 18, 
+
+                        crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                        eilit_number = 20, 
+
+                        crossover_offset = 0
+Ergebnis (mean) = Inf (weil mu > lambda)
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.021415982 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.046374045 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                        number_comp_nodes = 600, 
+
+                        population_size = 14, 
+
+                        crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                        eilit_number = 16, 
+
+                        crossover_offset = 0
+Ergebnis (mean) = Inf (weil mu > lambda)
+
+Parameter set: 
+
+                        number_comp_nodes = 950, 
+
+                        population_size = 16, 
+
+                        crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                        eilit_number = 20, 
+
+                        crossover_offset = 0
+Ergebnis (mean) = Inf (weil mu > lambda)
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.016737707 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.052858908 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.05273552 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.026124198 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.03966596 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.15778455 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                        number_comp_nodes = 350, 
+
+                        population_size = 16, 
+
+                        crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                        eilit_number = 18, 
+
+                        crossover_offset = 0
+Ergebnis (mean) = Inf (weil mu > lambda)
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.028210927 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.07017992 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.02351752 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.017413134 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.023532405 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.034176536 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.09432769 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.018294677 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.043058194 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.0172072 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.026541134 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.04292915 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.022467272 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.0278826 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.015817363 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.026303792 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.01961973 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.029066121 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.021669298 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.040383816 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.02243709 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.07734752 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.038075134 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.04663556 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.08127901 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.025228208 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.16158542 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.042101562 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.013529244 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.05195243 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.038658347 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.058292747 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.04798397 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.031059455 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.049415335 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.06137669 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.027579179 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.020424202 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.035915576 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.034482203 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.027249072 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.02065464 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.028933996 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.033125293 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                        number_comp_nodes = 1500, 
+
+                        population_size = 10, 
+
+                        crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                        eilit_number = 16, 
+
+                        crossover_offset = 0
+Ergebnis (mean) = Inf (weil mu > lambda)
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.019636607 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.015214917 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.038949482 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.02393062 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.047013436 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.042323224 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                        number_comp_nodes = 400, 
+
+                        population_size = 12, 
+
+                        crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                        eilit_number = 18, 
+
+                        crossover_offset = 0
+Ergebnis (mean) = Inf (weil mu > lambda)
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.0348055 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.057252396 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                        number_comp_nodes = 250, 
+
+                        population_size = 12, 
+
+                        crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                        eilit_number = 16, 
+
+                        crossover_offset = 0
+Ergebnis (mean) = Inf (weil mu > lambda)
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.024188386 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                        number_comp_nodes = 1450, 
+
+                        population_size = 10, 
+
+                        crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                        eilit_number = 16, 
+
+                        crossover_offset = 0
+Ergebnis (mean) = Inf (weil mu > lambda)
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.03119039 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.024821278 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.013071418 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.023389686 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.014861731 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.07201542 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.050923802 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.027130583 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.04312413 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                        number_comp_nodes = 1250, 
+
+                        population_size = 12, 
+
+                        crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                        eilit_number = 14, 
+
+                        crossover_offset = 0
+Ergebnis (mean) = Inf (weil mu > lambda)
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.04398522 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.028509896 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.053925276 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.051677935 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.09820779 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.018413676 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.08460895 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.027473489 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.019130625 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.030736 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                        number_comp_nodes = 400, 
+
+                        population_size = 12, 
+
+                        crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                        eilit_number = 18, 
+
+                        crossover_offset = 0
+Ergebnis (mean) = Inf (weil mu > lambda)
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.07713795 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.019963484 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.009655193 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.01884923 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.07116909 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.022744115 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.02018009 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.041030116 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.034761425 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.024208616 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.016121496 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.020725107 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.06096266 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.043678693 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.013373127 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                        number_comp_nodes = 300, 
+
+                        population_size = 14, 
+
+                        crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                        eilit_number = 16, 
+
+                        crossover_offset = 0
+Ergebnis (mean) = Inf (weil mu > lambda)
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.038447376 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.027343104 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.038195834 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.052524287 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.03277754 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.02644973 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.013058184 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.034793314 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.023955822 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.054033376 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.042198412 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.020902831 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.02323336 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.029058957 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.022518573 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.027989078 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.028858095 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.028315444 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.025385696 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.04493288 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.047593586 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.03064924 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.033658475 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                        number_comp_nodes = 1600, 
+
+                        population_size = 12, 
+
+                        crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                        eilit_number = 18, 
+
+                        crossover_offset = 0
+Ergebnis (mean) = Inf (weil mu > lambda)
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.02130248 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.026854422 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.030006891 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.017763734 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.019739402 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.022555826 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.028291196 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.022631016 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.03250322 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.021406136 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.028543089 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.026316617 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.044418387 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.028139193 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.040824503 Fitness
+ 
+                        500.0 Iterations
+
+Parameter set: 
+
+                        number_comp_nodes = 1400, 
+
+                        population_size = 16, 
+
+                        crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                        eilit_number = 18, 
+
+                        crossover_offset = 0
+Ergebnis (mean) = Inf (weil mu > lambda)
+
+Endergenis HPO: Parameter -> Real[1900, 44, 0.6, 18]; Ergebnis -> 0.00965519342571497 (nbr_computational_nodes, population_size, (crossover_delta), elitism_number, (offset))
