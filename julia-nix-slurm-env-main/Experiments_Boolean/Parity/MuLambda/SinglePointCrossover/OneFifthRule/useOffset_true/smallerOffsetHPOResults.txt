@@ -1,0 +1,1951 @@
+Parameter set: 
+
+                    number_comp_nodes = 200, 
+
+                    population_size = 22, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    eilit_number = 12, 
+
+                    crossover_offset = 40
+Ergebnis (mean) = 460.3 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1950, 
+
+                    population_size = 60, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    eilit_number = 6, 
+
+                    crossover_offset = 25
+Ergebnis (mean) = 176.0 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 50, 
+
+                    population_size = 14, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    eilit_number = 6, 
+
+                    crossover_offset = 45
+Ergebnis (mean) = 1000.0 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 600, 
+
+                    population_size = 46, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    eilit_number = 18, 
+
+                    crossover_offset = 25
+Ergebnis (mean) = 167.4 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 500, 
+
+                    population_size = 20, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    eilit_number = 20, 
+
+                    crossover_offset = 45
+Ergebnis (mean) = 408.0 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1950, 
+
+                    population_size = 26, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    eilit_number = 6, 
+
+                    crossover_offset = 35
+Ergebnis (mean) = 392.4 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1600, 
+
+                    population_size = 22, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                    eilit_number = 18, 
+
+                    crossover_offset = 45
+Ergebnis (mean) = 119.6 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1150, 
+
+                    population_size = 18, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                    eilit_number = 18, 
+
+                    crossover_offset = 20
+Ergebnis (mean) = 192.5 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1150, 
+
+                    population_size = 30, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    eilit_number = 10, 
+
+                    crossover_offset = 10
+Ergebnis (mean) = 445.8 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 300, 
+
+                    population_size = 54, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    eilit_number = 8, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 354.0 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1500, 
+
+                    population_size = 22, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    eilit_number = 8, 
+
+                    crossover_offset = 20
+Ergebnis (mean) = 536.7 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 200, 
+
+                    population_size = 52, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    eilit_number = 16, 
+
+                    crossover_offset = 10
+Ergebnis (mean) = 272.9 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 200, 
+
+                    population_size = 38, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    eilit_number = 6, 
+
+                    crossover_offset = 25
+Ergebnis (mean) = 722.2 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1400, 
+
+                    population_size = 40, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    eilit_number = 12, 
+
+                    crossover_offset = 30
+Ergebnis (mean) = 242.5 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 50, 
+
+                    population_size = 52, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    eilit_number = 12, 
+
+                    crossover_offset = 30
+Ergebnis (mean) = 464.1 Iterations
+
+Parameter set: 
+
+                        number_comp_nodes = 150, 
+
+                        population_size = 12, 
+
+                        crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                        eilit_number = 14, 
+
+                        crossover_offset = 30
+Ergebnis (mean) = Inf (weil mu > lambda)
+
+Parameter set: 
+
+                    number_comp_nodes = 1750, 
+
+                    population_size = 52, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    eilit_number = 10, 
+
+                    crossover_offset = 40
+Ergebnis (mean) = 429.1 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 400, 
+
+                    population_size = 50, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    eilit_number = 20, 
+
+                    crossover_offset = 5
+Ergebnis (mean) = 308.6 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1500, 
+
+                    population_size = 58, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    eilit_number = 4, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 628.1 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 600, 
+
+                    population_size = 32, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    eilit_number = 16, 
+
+                    crossover_offset = 55
+Ergebnis (mean) = 277.4 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1100, 
+
+                    population_size = 36, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    eilit_number = 2, 
+
+                    crossover_offset = 40
+Ergebnis (mean) = 743.6 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1100, 
+
+                    population_size = 30, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    eilit_number = 18, 
+
+                    crossover_offset = 15
+Ergebnis (mean) = 265.8 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 2000, 
+
+                    population_size = 50, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    eilit_number = 18, 
+
+                    crossover_offset = 30
+Ergebnis (mean) = 185.1 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 750, 
+
+                    population_size = 32, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    eilit_number = 20, 
+
+                    crossover_offset = 25
+Ergebnis (mean) = 207.0 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 450, 
+
+                    population_size = 58, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    eilit_number = 10, 
+
+                    crossover_offset = 5
+Ergebnis (mean) = 343.4 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 450, 
+
+                    population_size = 28, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    eilit_number = 2, 
+
+                    crossover_offset = 50
+Ergebnis (mean) = 764.2 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 900, 
+
+                    population_size = 20, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    eilit_number = 8, 
+
+                    crossover_offset = 15
+Ergebnis (mean) = 463.8 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 200, 
+
+                    population_size = 26, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    eilit_number = 4, 
+
+                    crossover_offset = 20
+Ergebnis (mean) = 815.1 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1750, 
+
+                    population_size = 10, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    eilit_number = 4, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 657.1 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1800, 
+
+                    population_size = 22, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    eilit_number = 18, 
+
+                    crossover_offset = 30
+Ergebnis (mean) = 297.6 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 950, 
+
+                    population_size = 30, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                    eilit_number = 16, 
+
+                    crossover_offset = 5
+Ergebnis (mean) = 182.1 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 450, 
+
+                    population_size = 54, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                    eilit_number = 20, 
+
+                    crossover_offset = 55
+Ergebnis (mean) = 248.3 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 500, 
+
+                    population_size = 42, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    eilit_number = 10, 
+
+                    crossover_offset = 30
+Ergebnis (mean) = 357.5 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 800, 
+
+                    population_size = 52, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    eilit_number = 2, 
+
+                    crossover_offset = 20
+Ergebnis (mean) = 729.9 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 100, 
+
+                    population_size = 56, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    eilit_number = 14, 
+
+                    crossover_offset = 25
+Ergebnis (mean) = 381.7 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 50, 
+
+                    population_size = 12, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    eilit_number = 12, 
+
+                    crossover_offset = 30
+Ergebnis (mean) = 517.6 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 550, 
+
+                    population_size = 46, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    eilit_number = 4, 
+
+                    crossover_offset = 20
+Ergebnis (mean) = 712.7 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 850, 
+
+                    population_size = 10, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    eilit_number = 10, 
+
+                    crossover_offset = 20
+Ergebnis (mean) = 430.9 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 200, 
+
+                    population_size = 54, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    eilit_number = 18, 
+
+                    crossover_offset = 30
+Ergebnis (mean) = 260.8 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 750, 
+
+                    population_size = 46, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    eilit_number = 12, 
+
+                    crossover_offset = 35
+Ergebnis (mean) = 454.9 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1800, 
+
+                    population_size = 58, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                    eilit_number = 20, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 54.4 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1550, 
+
+                    population_size = 12, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                    eilit_number = 6, 
+
+                    crossover_offset = 20
+Ergebnis (mean) = 570.7 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1850, 
+
+                    population_size = 52, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                    eilit_number = 10, 
+
+                    crossover_offset = 5
+Ergebnis (mean) = 177.4 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 750, 
+
+                    population_size = 50, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                    eilit_number = 4, 
+
+                    crossover_offset = 55
+Ergebnis (mean) = 407.5 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 100, 
+
+                    population_size = 18, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    eilit_number = 10, 
+
+                    crossover_offset = 45
+Ergebnis (mean) = 675.1 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 700, 
+
+                    population_size = 56, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                    eilit_number = 16, 
+
+                    crossover_offset = 10
+Ergebnis (mean) = 240.5 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1650, 
+
+                    population_size = 26, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    eilit_number = 6, 
+
+                    crossover_offset = 35
+Ergebnis (mean) = 668.9 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 250, 
+
+                    population_size = 46, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    eilit_number = 6, 
+
+                    crossover_offset = 50
+Ergebnis (mean) = 287.6 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1350, 
+
+                    population_size = 38, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    eilit_number = 10, 
+
+                    crossover_offset = 5
+Ergebnis (mean) = 143.4 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1950, 
+
+                    population_size = 26, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    eilit_number = 10, 
+
+                    crossover_offset = 5
+Ergebnis (mean) = 304.4 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 100, 
+
+                    population_size = 60, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    eilit_number = 14, 
+
+                    crossover_offset = 25
+Ergebnis (mean) = 360.5 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1900, 
+
+                    population_size = 16, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                    eilit_number = 8, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 390.5 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1500, 
+
+                    population_size = 40, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                    eilit_number = 10, 
+
+                    crossover_offset = 30
+Ergebnis (mean) = 286.9 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1900, 
+
+                    population_size = 20, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                    eilit_number = 12, 
+
+                    crossover_offset = 10
+Ergebnis (mean) = 204.4 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 100, 
+
+                    population_size = 30, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    eilit_number = 10, 
+
+                    crossover_offset = 50
+Ergebnis (mean) = 548.8 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1000, 
+
+                    population_size = 28, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    eilit_number = 10, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 623.7 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1100, 
+
+                    population_size = 26, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    eilit_number = 4, 
+
+                    crossover_offset = 30
+Ergebnis (mean) = 920.1 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 800, 
+
+                    population_size = 20, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    eilit_number = 6, 
+
+                    crossover_offset = 10
+Ergebnis (mean) = 654.5 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 250, 
+
+                    population_size = 24, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    eilit_number = 10, 
+
+                    crossover_offset = 55
+Ergebnis (mean) = 446.4 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 400, 
+
+                    population_size = 50, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    eilit_number = 12, 
+
+                    crossover_offset = 5
+Ergebnis (mean) = 366.8 Iterations
+
+Parameter set: 
+
+                        number_comp_nodes = 1750, 
+
+                        population_size = 18, 
+
+                        crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                        eilit_number = 20, 
+
+                        crossover_offset = 0
+Ergebnis (mean) = Inf (weil mu > lambda)
+
+Parameter set: 
+
+                    number_comp_nodes = 1100, 
+
+                    population_size = 54, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    eilit_number = 20, 
+
+                    crossover_offset = 30
+Ergebnis (mean) = 57.6 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1900, 
+
+                    population_size = 44, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                    eilit_number = 14, 
+
+                    crossover_offset = 5
+Ergebnis (mean) = 260.5 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 800, 
+
+                    population_size = 34, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    eilit_number = 14, 
+
+                    crossover_offset = 45
+Ergebnis (mean) = 184.8 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 650, 
+
+                    population_size = 26, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    eilit_number = 20, 
+
+                    crossover_offset = 40
+Ergebnis (mean) = 283.8 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1200, 
+
+                    population_size = 32, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    eilit_number = 18, 
+
+                    crossover_offset = 15
+Ergebnis (mean) = 249.6 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 500, 
+
+                    population_size = 38, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    eilit_number = 14, 
+
+                    crossover_offset = 20
+Ergebnis (mean) = 294.5 Iterations
+
+Parameter set: 
+
+                        number_comp_nodes = 200, 
+
+                        population_size = 14, 
+
+                        crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                        eilit_number = 16, 
+
+                        crossover_offset = 40
+Ergebnis (mean) = Inf (weil mu > lambda)
+
+Parameter set: 
+
+                    number_comp_nodes = 1950, 
+
+                    population_size = 14, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    eilit_number = 10, 
+
+                    crossover_offset = 55
+Ergebnis (mean) = 501.7 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 150, 
+
+                    population_size = 28, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    eilit_number = 16, 
+
+                    crossover_offset = 5
+Ergebnis (mean) = 405.7 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 250, 
+
+                    population_size = 38, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    eilit_number = 18, 
+
+                    crossover_offset = 40
+Ergebnis (mean) = 215.1 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 100, 
+
+                    population_size = 36, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    eilit_number = 4, 
+
+                    crossover_offset = 20
+Ergebnis (mean) = 808.2 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1250, 
+
+                    population_size = 50, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    eilit_number = 6, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 224.4 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1900, 
+
+                    population_size = 22, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    eilit_number = 18, 
+
+                    crossover_offset = 30
+Ergebnis (mean) = 301.2 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 100, 
+
+                    population_size = 56, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    eilit_number = 4, 
+
+                    crossover_offset = 30
+Ergebnis (mean) = 524.5 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1200, 
+
+                    population_size = 28, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    eilit_number = 20, 
+
+                    crossover_offset = 45
+Ergebnis (mean) = 77.8 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1850, 
+
+                    population_size = 56, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    eilit_number = 4, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 334.2 Iterations
+
+Parameter set: 
+
+                        number_comp_nodes = 350, 
+
+                        population_size = 12, 
+
+                        crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                        eilit_number = 16, 
+
+                        crossover_offset = 45
+Ergebnis (mean) = Inf (weil mu > lambda)
+
+Parameter set: 
+
+                    number_comp_nodes = 1700, 
+
+                    population_size = 16, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    eilit_number = 4, 
+
+                    crossover_offset = 15
+Ergebnis (mean) = 743.6 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1500, 
+
+                    population_size = 36, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    eilit_number = 8, 
+
+                    crossover_offset = 25
+Ergebnis (mean) = 430.1 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1200, 
+
+                    population_size = 56, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    eilit_number = 6, 
+
+                    crossover_offset = 20
+Ergebnis (mean) = 513.2 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 950, 
+
+                    population_size = 56, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    eilit_number = 18, 
+
+                    crossover_offset = 20
+Ergebnis (mean) = 177.6 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 2000, 
+
+                    population_size = 16, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    eilit_number = 16, 
+
+                    crossover_offset = 50
+Ergebnis (mean) = 366.7 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 2000, 
+
+                    population_size = 38, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    eilit_number = 2, 
+
+                    crossover_offset = 25
+Ergebnis (mean) = 773.1 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 300, 
+
+                    population_size = 20, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    eilit_number = 14, 
+
+                    crossover_offset = 20
+Ergebnis (mean) = 536.4 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1750, 
+
+                    population_size = 32, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    eilit_number = 18, 
+
+                    crossover_offset = 55
+Ergebnis (mean) = 308.8 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1550, 
+
+                    population_size = 34, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    eilit_number = 14, 
+
+                    crossover_offset = 45
+Ergebnis (mean) = 248.0 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 600, 
+
+                    population_size = 60, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    eilit_number = 18, 
+
+                    crossover_offset = 35
+Ergebnis (mean) = 185.7 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1850, 
+
+                    population_size = 14, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                    eilit_number = 6, 
+
+                    crossover_offset = 40
+Ergebnis (mean) = 499.0 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1750, 
+
+                    population_size = 30, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    eilit_number = 6, 
+
+                    crossover_offset = 35
+Ergebnis (mean) = 643.5 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 100, 
+
+                    population_size = 44, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    eilit_number = 8, 
+
+                    crossover_offset = 30
+Ergebnis (mean) = 612.3 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1800, 
+
+                    population_size = 22, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    eilit_number = 16, 
+
+                    crossover_offset = 5
+Ergebnis (mean) = 262.7 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 300, 
+
+                    population_size = 14, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    eilit_number = 8, 
+
+                    crossover_offset = 10
+Ergebnis (mean) = 655.0 Iterations
+
+Parameter set: 
+
+                        number_comp_nodes = 1650, 
+
+                        population_size = 14, 
+
+                        crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                        eilit_number = 20, 
+
+                        crossover_offset = 55
+Ergebnis (mean) = Inf (weil mu > lambda)
+
+Parameter set: 
+
+                    number_comp_nodes = 1100, 
+
+                    population_size = 50, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    eilit_number = 12, 
+
+                    crossover_offset = 30
+Ergebnis (mean) = 279.2 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1800, 
+
+                    population_size = 44, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                    eilit_number = 18, 
+
+                    crossover_offset = 35
+Ergebnis (mean) = 165.2 Iterations
+
+Parameter set: 
+
+                        number_comp_nodes = 1150, 
+
+                        population_size = 10, 
+
+                        crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                        eilit_number = 18, 
+
+                        crossover_offset = 15
+Ergebnis (mean) = Inf (weil mu > lambda)
+
+Parameter set: 
+
+                    number_comp_nodes = 250, 
+
+                    population_size = 40, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    eilit_number = 10, 
+
+                    crossover_offset = 20
+Ergebnis (mean) = 505.4 Iterations
+
+Parameter set: 
+
+                        number_comp_nodes = 650, 
+
+                        population_size = 12, 
+
+                        crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                        eilit_number = 20, 
+
+                        crossover_offset = 5
+Ergebnis (mean) = Inf (weil mu > lambda)
+
+Parameter set: 
+
+                    number_comp_nodes = 350, 
+
+                    population_size = 24, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    eilit_number = 16, 
+
+                    crossover_offset = 15
+Ergebnis (mean) = 450.0 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 850, 
+
+                    population_size = 34, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                    eilit_number = 14, 
+
+                    crossover_offset = 40
+Ergebnis (mean) = 258.2 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1550, 
+
+                    population_size = 58, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    eilit_number = 16, 
+
+                    crossover_offset = 40
+Ergebnis (mean) = 232.7 Iterations
+
+Parameter set: 
+
+                        number_comp_nodes = 1450, 
+
+                        population_size = 14, 
+
+                        crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                        eilit_number = 16, 
+
+                        crossover_offset = 20
+Ergebnis (mean) = Inf (weil mu > lambda)
+
+Parameter set: 
+
+                    number_comp_nodes = 1300, 
+
+                    population_size = 24, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                    eilit_number = 12, 
+
+                    crossover_offset = 10
+Ergebnis (mean) = 538.8 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1600, 
+
+                    population_size = 12, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    eilit_number = 8, 
+
+                    crossover_offset = 50
+Ergebnis (mean) = 253.8 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1200, 
+
+                    population_size = 40, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    eilit_number = 12, 
+
+                    crossover_offset = 10
+Ergebnis (mean) = 171.7 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 900, 
+
+                    population_size = 52, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    eilit_number = 18, 
+
+                    crossover_offset = 15
+Ergebnis (mean) = 356.2 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1700, 
+
+                    population_size = 40, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    eilit_number = 20, 
+
+                    crossover_offset = 50
+Ergebnis (mean) = 368.1 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 950, 
+
+                    population_size = 22, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    eilit_number = 2, 
+
+                    crossover_offset = 20
+Ergebnis (mean) = 903.2 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1900, 
+
+                    population_size = 10, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    eilit_number = 4, 
+
+                    crossover_offset = 40
+Ergebnis (mean) = 1000.0 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1150, 
+
+                    population_size = 46, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    eilit_number = 16, 
+
+                    crossover_offset = 5
+Ergebnis (mean) = 174.6 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 550, 
+
+                    population_size = 36, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    eilit_number = 8, 
+
+                    crossover_offset = 20
+Ergebnis (mean) = 334.8 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 900, 
+
+                    population_size = 40, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    eilit_number = 6, 
+
+                    crossover_offset = 35
+Ergebnis (mean) = 187.9 Iterations
+
+Parameter set: 
+
+                        number_comp_nodes = 1750, 
+
+                        population_size = 10, 
+
+                        crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                        eilit_number = 12, 
+
+                        crossover_offset = 40
+Ergebnis (mean) = Inf (weil mu > lambda)
+
+Parameter set: 
+
+                    number_comp_nodes = 350, 
+
+                    population_size = 10, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                    eilit_number = 4, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 648.0 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 100, 
+
+                    population_size = 48, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    eilit_number = 18, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 198.7 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 400, 
+
+                    population_size = 28, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    eilit_number = 2, 
+
+                    crossover_offset = 25
+Ergebnis (mean) = 717.6 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1550, 
+
+                    population_size = 58, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    eilit_number = 12, 
+
+                    crossover_offset = 50
+Ergebnis (mean) = 289.9 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 700, 
+
+                    population_size = 16, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    eilit_number = 10, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 360.7 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1150, 
+
+                    population_size = 46, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    eilit_number = 18, 
+
+                    crossover_offset = 10
+Ergebnis (mean) = 206.4 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1700, 
+
+                    population_size = 56, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.45, 
+
+                    eilit_number = 12, 
+
+                    crossover_offset = 50
+Ergebnis (mean) = 185.2 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 700, 
+
+                    population_size = 18, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    eilit_number = 16, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 341.8 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 650, 
+
+                    population_size = 24, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    eilit_number = 2, 
+
+                    crossover_offset = 50
+Ergebnis (mean) = 430.7 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 400, 
+
+                    population_size = 10, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    eilit_number = 2, 
+
+                    crossover_offset = 5
+Ergebnis (mean) = 834.0 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1300, 
+
+                    population_size = 34, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    eilit_number = 14, 
+
+                    crossover_offset = 5
+Ergebnis (mean) = 232.3 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 100, 
+
+                    population_size = 48, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                    eilit_number = 10, 
+
+                    crossover_offset = 5
+Ergebnis (mean) = 672.4 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1900, 
+
+                    population_size = 24, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                    eilit_number = 18, 
+
+                    crossover_offset = 30
+Ergebnis (mean) = 274.7 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 2000, 
+
+                    population_size = 26, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    eilit_number = 18, 
+
+                    crossover_offset = 45
+Ergebnis (mean) = 261.8 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1500, 
+
+                    population_size = 40, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    eilit_number = 14, 
+
+                    crossover_offset = 55
+Ergebnis (mean) = 202.1 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 250, 
+
+                    population_size = 56, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    eilit_number = 6, 
+
+                    crossover_offset = 35
+Ergebnis (mean) = 705.1 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 950, 
+
+                    population_size = 54, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    eilit_number = 6, 
+
+                    crossover_offset = 25
+Ergebnis (mean) = 253.4 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 250, 
+
+                    population_size = 44, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                    eilit_number = 10, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 464.8 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1550, 
+
+                    population_size = 26, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    eilit_number = 18, 
+
+                    crossover_offset = 25
+Ergebnis (mean) = 366.3 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1200, 
+
+                    population_size = 56, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                    eilit_number = 16, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 264.3 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 700, 
+
+                    population_size = 56, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    eilit_number = 8, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 438.5 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 250, 
+
+                    population_size = 50, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.3, 
+
+                    eilit_number = 10, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 542.2 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 500, 
+
+                    population_size = 34, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    eilit_number = 18, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 173.8 Iterations
+
+Parameter set: 
+
+                        number_comp_nodes = 450, 
+
+                        population_size = 10, 
+
+                        crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                        eilit_number = 14, 
+
+                        crossover_offset = 30
+Ergebnis (mean) = Inf (weil mu > lambda)
+
+Parameter set: 
+
+                    number_comp_nodes = 1200, 
+
+                    population_size = 50, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    eilit_number = 8, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 475.3 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 400, 
+
+                    population_size = 18, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                    eilit_number = 14, 
+
+                    crossover_offset = 25
+Ergebnis (mean) = 583.0 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 200, 
+
+                    population_size = 24, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.75, 
+
+                    eilit_number = 8, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 581.0 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1000, 
+
+                    population_size = 38, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    eilit_number = 12, 
+
+                    crossover_offset = 10
+Ergebnis (mean) = 453.6 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1900, 
+
+                    population_size = 20, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    eilit_number = 10, 
+
+                    crossover_offset = 50
+Ergebnis (mean) = 371.2 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1100, 
+
+                    population_size = 26, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.65, 
+
+                    eilit_number = 4, 
+
+                    crossover_offset = 10
+Ergebnis (mean) = 574.9 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1750, 
+
+                    population_size = 44, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    eilit_number = 10, 
+
+                    crossover_offset = 55
+Ergebnis (mean) = 176.0 Iterations
+
+Parameter set: 
+
+                        number_comp_nodes = 2000, 
+
+                        population_size = 10, 
+
+                        crossover_rate_depending_on_type (rate, delta or start) = 0.55, 
+
+                        eilit_number = 12, 
+
+                        crossover_offset = 40
+Ergebnis (mean) = Inf (weil mu > lambda)
+
+Parameter set: 
+
+                    number_comp_nodes = 1450, 
+
+                    population_size = 44, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    eilit_number = 8, 
+
+                    crossover_offset = 25
+Ergebnis (mean) = 520.3 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 250, 
+
+                    population_size = 22, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    eilit_number = 2, 
+
+                    crossover_offset = 40
+Ergebnis (mean) = 861.0 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1900, 
+
+                    population_size = 28, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.7, 
+
+                    eilit_number = 20, 
+
+                    crossover_offset = 30
+Ergebnis (mean) = 240.7 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1050, 
+
+                    population_size = 52, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.35, 
+
+                    eilit_number = 8, 
+
+                    crossover_offset = 50
+Ergebnis (mean) = 622.3 Iterations
+
+Endergenis HPO: Parameter -> Real[1800, 58, 0.5, 20, 0]; Ergebnis -> 54.400001525878906 (nbr_computational_nodes, population_size, (crossover_delta), elitism_number, (offset))
