@@ -46,6 +46,8 @@ crossover_rate_type = parse(Int, ARGS[3])
 
 useOffset = parse(Int, ARGS[4])
 
+jobCounter = parse(Int, ARGS[5])
+
 function main()
     # cgp parameter
     parameterSet = CgpParameters(
@@ -175,7 +177,7 @@ save_path = joinpath(["Experiments_Boolean",
                             get_rate_type(crossover_rate_type),
                             "useOffset_$useOffset",
                             "mainResults",
-                            "TODO.csv"])
+                            "$(jobCounter)Result.csv"])
 mkpath(dirname(save_path))
 
 # Öffne die Datei

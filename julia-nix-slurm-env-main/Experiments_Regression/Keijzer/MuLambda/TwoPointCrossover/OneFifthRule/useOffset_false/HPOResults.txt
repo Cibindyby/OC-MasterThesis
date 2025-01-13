@@ -2460,3 +2460,68 @@ Ergebnis (mean) =
  
                         500.0 Iterations
 
+Parameter set: 
+
+                    number_comp_nodes = 1450, 
+
+                    population_size = 34, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.6, 
+
+                    eilit_number = 4, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.04195231 Fitness
+ 
+                        428.5 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1950, 
+
+                    population_size = 22, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    eilit_number = 4, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.05184853 Fitness
+ 
+                        405.1 Iterations
+
+Parameter set: 
+
+                        number_comp_nodes = 550, 
+
+                        population_size = 12, 
+
+                        crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                        eilit_number = 20, 
+
+                        crossover_offset = 0
+Ergebnis (mean) = Inf (weil mu > lambda)
+
+Parameter set: 
+
+                    number_comp_nodes = 150, 
+
+                    population_size = 32, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.4, 
+
+                    eilit_number = 20, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.024743265 Fitness
+ 
+                        499.1 Iterations
+
+Endergenis HPO: Parameter -> Real[900, 56, 0.65, 20]; Ergebnis -> 0.011999145150184631 (nbr_computational_nodes, population_size, (crossover_delta), elitism_number, (offset))
