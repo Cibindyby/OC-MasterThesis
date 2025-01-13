@@ -1,136 +1,0 @@
-SLURM_JOB_ID=645619
-hostname=oc-compute03
-path '/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/scripts' does not contain a 'flake.nix', searching up
-warning: Git tree '/data/oc-compute03/ebertzci/OC-MasterThesis' is dirty
-warning: ignoring untrusted flake configuration setting 'extra-substituters'.
-Pass '--accept-flake-config' to trust it
-warning: ignoring untrusted flake configuration setting 'extra-trusted-public-keys'.
-Pass '--accept-flake-config' to trust it
-Running tasks     devenv:enterShell
-
-[1A[0JRunning           devenv:enterShell 0ms
-1 Running                           66.39µs
-[2A[0JSucceeded         devenv:enterShell 13ms
-1 Succeeded                         13.46ms
-
-Waiting for lock /home/ebertzci/JULIALOCK …
-Acquired lock /home/ebertzci/JULIALOCK.
-Relinquishing lock /home/ebertzci/JULIALOCK …
-Relinquished lock /home/ebertzci/JULIALOCK.
-Hyperoptimizing   1%|▌                                   |  ETA: 46.65 days[KHyperoptimizing   2%|▊                                   |  ETA: 31.66 days[KHyperoptimizing   3%|█                                   |  ETA: 24.13 days[KHyperoptimizing   3%|█▎                                  |  ETA: 25.92 days[KHyperoptimizing   4%|█▌                                  |  ETA: 36.54 days[KHyperoptimizing   5%|█▋                                  |  ETA: 31.33 days[KHyperoptimizing   5%|█▉                                  |  ETA: 27.39 days[KHyperoptimizing   6%|██▏                                 |  ETA: 24.19 days[KHyperoptimizing   7%|██▍                                 |  ETA: 25.91 days[KHyperoptimizing   7%|██▋                                 |  ETA: 24.30 days[KHyperoptimizing   8%|██▉                                 |  ETA: 26.36 days[KHyperoptimizing   9%|███▏                                |  ETA: 24.57 days[KHyperoptimizing   9%|slurmstepd: error: *** JOB 645619 ON oc-compute03 CANCELLED AT 2024-11-30T17:00:13 DUE TO TIME LIMIT ***
-███▍                                |  ETA: 26.24 days[KHyperoptimizing  10%|███▋                                |  ETA: 24.47 days[KHyperoptimizing  11%|███▉                                |  ETA: 25.58 days[KHyperoptimizing  11%|████▏                               |  ETA: 24.81 days[KHyperoptimizing  12%|████▍                               |  ETA: 23.32 days[KHyperoptimizing  13%|████▌                               |  ETA: 22.25 days[KHyperoptimizing  13%|████▊                               |  ETA: 21.00 days[KHyperoptimizing  14%|█████                               |  ETA: 22.12 days[Kslurmstepd: error: *** STEP 645619.0 ON oc-compute03 CANCELLED AT 2024-11-30T17:00:13 DUE TO TIME LIMIT ***
-
-[1687772] signal (15): Terminated
-in expression starting at /data/oc-compute03/ebertzci/OC-MasterThesis/booleanProblems/hpo.jl:265
-ijl_isa at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/subtype.c:2331
-jl_tuple1_isa at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/subtype.c:2267
-jl_typemap_entry_assoc_exact at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/typemap.c:1182
-srun: got SIGCONT
-jl_typemap_assoc_exact at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/julia_internal.h:1438 [inlined]
-jl_lookup_generic_ at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:3017 [inlined]
-ijl_apply_generic at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:3073
-srun: forcing job termination
-srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
-deepcopy_internal at ./deepcopy.jl:65
-jfptr_deepcopy_internal_78214.1 at /nix/store/06qnp46ihg0vzsbg1hiqcs58pjyph135-julia-bin-1.10.4/lib/julia/sys.so (unknown line)
-_jl_invoke at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:2895 [inlined]
-ijl_apply_generic at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:3077
-_deepcopy_array_t at ./deepcopy.jl:105
-deepcopy_internal at ./deepcopy.jl:92
-unknown function (ip: 0x7ffff6779c89)
-_jl_invoke at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:2895 [inlined]
-ijl_apply_generic at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:3077
-deepcopy_internal at ./deepcopy.jl:65
-deepcopy at ./deepcopy.jl:26 [inlined]
-single_point_crossover! at /data/oc-compute03/ebertzci/OC-MasterThesis/booleanProblems/utils/crossover/crossoverAlgos.jl:18
-crossover at /data/oc-compute03/ebertzci/OC-MasterThesis/booleanProblems/utils/runner_multiple_parents_with_elitist_mulambda.jl:224
-learn_step! at /data/oc-compute03/ebertzci/OC-MasterThesis/booleanProblems/utils/runner_multiple_parents_with_elitist_mulambda.jl:104
-meanAusMehrerenIterationen at /data/oc-compute03/ebertzci/OC-MasterThesis/booleanProblems/hpo.jl:172
-unknown function (ip: 0x7ffff677964d)
-_jl_invoke at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:2895 [inlined]
-ijl_apply_generic at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:3077
-macro expansion at /data/oc-compute03/ebertzci/OC-MasterThesis/booleanProblems/hpo.jl:95 [inlined]
-#69###hyperopt_objective#226 at /home/ebertzci/.julia/packages/Hyperopt/1AdYO/src/Hyperopt.jl:148
-_jl_invoke at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:2895 [inlined]
-ijl_apply_generic at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:3077
-jl_apply at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/julia.h:1982 [inlined]
-do_apply at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/builtins.c:768
-macro expansion at /home/ebertzci/.julia/packages/Hyperopt/1AdYO/src/Hyperopt.jl:162 [inlined]
-macro expansion at /home/ebertzci/.julia/packages/ProgressMeter/kVZZH/src/ProgressMeter.jl:1008 [inlined]
-optimize at /home/ebertzci/.julia/packages/Hyperopt/1AdYO/src/Hyperopt.jl:161
-unknown function (ip: 0x7ffff6761345)
-_jl_invoke at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:2895 [inlined]
-ijl_apply_generic at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:3077
-hpo at /data/oc-compute03/ebertzci/OC-MasterThesis/booleanProblems/hpo.jl:89
-unknown function (ip: 0x7ffff674dcb2)
-_jl_invoke at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:2895 [inlined]
-ijl_apply_generic at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:3077
-jl_apply at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/julia.h:1982 [inlined]
-do_call at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/interpreter.c:126
-eval_value at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/interpreter.c:223
-eval_stmt_value at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/interpreter.c:174 [inlined]
-eval_body at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/interpreter.c:617
-jl_interpret_toplevel_thunk at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/interpreter.c:775
-jl_toplevel_eval_flex at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/toplevel.c:934
-jl_toplevel_eval_flex at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/toplevel.c:877
-ijl_toplevel_eval_in at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/toplevel.c:985
-eval at ./boot.jl:385 [inlined]
-include_string at ./loading.jl:2076
-_jl_invoke at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:2895 [inlined]
-ijl_apply_generic at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:3077
-_include at ./loading.jl:2136
-include at ./Base.jl:495
-jfptr_include_46393.1 at /nix/store/06qnp46ihg0vzsbg1hiqcs58pjyph135-julia-bin-1.10.4/lib/julia/sys.so (unknown line)
-_jl_invoke at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:2895 [inlined]
-ijl_apply_generic at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:3077
-exec_options at ./client.jl:318
-_start at ./client.jl:552
-jfptr__start_82729.1 at /nix/store/06qnp46ihg0vzsbg1hiqcs58pjyph135-julia-bin-1.10.4/lib/julia/sys.so (unknown line)
-_jl_invoke at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:2895 [inlined]
-ijl_apply_generic at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:3077
-jl_apply at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/julia.h:1982 [inlined]
-true_main at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/jlapi.c:582
-jl_repl_entrypoint at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/jlapi.c:731
-main at julia (unknown line)
-__libc_start_call_main at /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/libc.so.6 (unknown line)
-__libc_start_main at /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/libc.so.6 (unknown line)
-unknown function (ip: 0x4010b8)
-unknown function (ip: (nil))
-Allocations: 317410548383 (Pool: 316901324446; Big: 509223937); GC: 393760
-      From worker 3:	
-      From worker 3:	[1687841] signal (15): Terminated
-      From worker 3:	in expression starting at none:0
-      From worker 3:	epoll_wait at /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/libc.so.6 (unknown line)
-      From worker 3:	uv__io_poll at /workspace/srcdir/libuv/src/unix/epoll.c:236
-      From worker 3:	uv_run at /workspace/srcdir/libuv/src/unix/core.c:400
-      From worker 3:	ijl_task_get_next at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/partr.c:478
-      From worker 3:	poptask at ./task.jl:985
-      From worker 3:	wait at ./task.jl:994
-      From worker 3:	task_done_hook at ./task.jl:675
-      From worker 3:	jfptr_task_done_hook_75286.1 at /nix/store/06qnp46ihg0vzsbg1hiqcs58pjyph135-julia-bin-1.10.4/lib/julia/sys.so (unknown line)
-      From worker 3:	_jl_invoke at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:2895 [inlined]
-      From worker 3:	ijl_apply_generic at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:3077
-      From worker 3:	jl_apply at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/julia.h:1982 [inlined]
-      From worker 3:	jl_finish_task at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/task.c:320
-      From worker 3:	start_task at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/task.c:1249
-      From worker 3:	unknown function (ip: (nil))
-      From worker 3:	Allocations: 3093580 (Pool: 3091143; Big: 2437); GC: 5
-      From worker 2:	
-      From worker 2:	[1687838] signal (15): Terminated
-      From worker 2:	in expression starting at none:0
-      From worker 2:	epoll_wait at /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/libc.so.6 (unknown line)
-      From worker 2:	uv__io_poll at /workspace/srcdir/libuv/src/unix/epoll.c:236
-      From worker 2:	uv_run at /workspace/srcdir/libuv/src/unix/core.c:400
-      From worker 2:	ijl_task_get_next at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/partr.c:478
-      From worker 2:	poptask at ./task.jl:985
-      From worker 2:	wait at ./task.jl:994
-      From worker 2:	task_done_hook at ./task.jl:675
-      From worker 2:	jfptr_task_done_hook_75286.1 at /nix/store/06qnp46ihg0vzsbg1hiqcs58pjyph135-julia-bin-1.10.4/lib/julia/sys.so (unknown line)
-      From worker 2:	_jl_invoke at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:2895 [inlined]
-      From worker 2:	ijl_apply_generic at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:3077
-      From worker 2:	jl_apply at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/julia.h:1982 [inlined]
-      From worker 2:	jl_finish_task at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/task.c:320
-      From worker 2:	start_task at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/task.c:1249
-      From worker 2:	unknown function (ip: (nil))
-      From worker 2:	Allocations: 3093690 (Pool: 3091252; Big: 2438); GC: 5
-srun: error: oc-compute03: task 0: Exited with exit code 130

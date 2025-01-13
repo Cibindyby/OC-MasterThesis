@@ -1,44 +1,0 @@
-SLURM_JOB_ID=646893
-hostname=oc-compute03
-path '/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/scripts' does not contain a 'flake.nix', searching up
-[K[Kwarning: ignoring untrusted flake configuration setting 'extra-substituters'.
-Pass '--accept-flake-config' to trust it
-warning: ignoring untrusted flake configuration setting 'extra-trusted-public-keys'.
-Pass '--accept-flake-config' to trust it
-Running tasks     devenv:enterShell
-
-[1A[0JRunning           devenv:enterShell 0ms
-1 Running                           101.18µs
-[2A[0JSucceeded         devenv:enterShell 11ms
-1 Succeeded                         11.71ms
-
-Waiting for lock /home/ebertzci/JULIALOCK …
-Acquired lock /home/ebertzci/JULIALOCK.
-Relinquishing lock /home/ebertzci/JULIALOCK …
-Relinquished lock /home/ebertzci/JULIALOCK.
-    Updating registry at `~/.julia/registries/General.toml`
-   Resolving package versions...
-  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Project.toml`
-  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Manifest.toml`
-   Resolving package versions...
-  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Project.toml`
-  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Manifest.toml`
-   Resolving package versions...
-  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Project.toml`
-  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Manifest.toml`
-   Resolving package versions...
-  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Project.toml`
-  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Manifest.toml`
-   Resolving package versions...
-  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Project.toml`
-  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Manifest.toml`
-   Resolving package versions...
-  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Project.toml`
-  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Manifest.toml`
-ERROR: LoadError: UndefVarError: `Pkf` not defined
-Stacktrace:
- [1] top-level scope
-   @ /data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/scripts/addLibs.jl:8
-in expression starting at /data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/scripts/addLibs.jl:8
-error: Recipe `justfilefunc` failed with exit code 1
-srun: error: oc-compute03: task 0: Exited with exit code 1

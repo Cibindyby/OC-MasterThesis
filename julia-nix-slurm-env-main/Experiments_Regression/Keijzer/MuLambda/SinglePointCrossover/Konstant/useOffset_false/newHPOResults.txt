@@ -1147,3 +1147,37 @@ Ergebnis (mean) =
  
                         453.7 Iterations
 
+Parameter set: 
+
+                    number_comp_nodes = 1200, 
+
+                    population_size = 60, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.8, 
+
+                    eilit_number = 10, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.019235888 Fitness
+ 
+                        406.7 Iterations
+
+Parameter set: 
+
+                    number_comp_nodes = 1900, 
+
+                    population_size = 28, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 1.0, 
+
+                    eilit_number = 10, 
+
+                    crossover_offset = 0
+Ergebnis (mean) = 
+ 
+                        0.039329894 Fitness
+ 
+                        421.6 Iterations
+

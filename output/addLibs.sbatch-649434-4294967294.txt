@@ -1,0 +1,92 @@
+SLURM_JOB_ID=649434
+hostname=oc222
+path '/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/scripts' does not contain a 'flake.nix', searching up
+warning: Git tree '/data/oc-compute03/ebertzci/OC-MasterThesis' is dirty
+warning: ignoring untrusted flake configuration setting 'extra-substituters'.
+Pass '--accept-flake-config' to trust it
+warning: ignoring untrusted flake configuration setting 'extra-trusted-public-keys'.
+Pass '--accept-flake-config' to trust it
+Running tasks     devenv:enterShell
+
+[1A[0JRunning           devenv:enterShell 0ms
+1 Running                           361.15µs
+[2A[0JSucceeded         devenv:enterShell 11ms
+1 Succeeded                         11.88ms
+
+Waiting for lock /home/ebertzci/JULIALOCK …
+Acquired lock /home/ebertzci/JULIALOCK.
+Relinquishing lock /home/ebertzci/JULIALOCK …
+Relinquished lock /home/ebertzci/JULIALOCK.
+    Updating registry at `~/.julia/registries/General.toml`
+   Resolving package versions...
+  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Project.toml`
+  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Manifest.toml`
+   Resolving package versions...
+  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Project.toml`
+  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Manifest.toml`
+   Resolving package versions...
+  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Project.toml`
+  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Manifest.toml`
+   Resolving package versions...
+  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Project.toml`
+  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Manifest.toml`
+   Resolving package versions...
+  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Project.toml`
+  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Manifest.toml`
+   Resolving package versions...
+  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Project.toml`
+  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Manifest.toml`
+   Resolving package versions...
+  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Project.toml`
+  No Changes to `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Manifest.toml`
+   Resolving package versions...
+   Installed Suppressor ── v0.2.8
+   Installed UpdateJulia ─ v0.4.4
+    Updating `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Project.toml`
+  [770da0de] + UpdateJulia v0.4.4
+    Updating `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Manifest.toml`
+  [fd094767] + Suppressor v0.2.8
+  [770da0de] + UpdateJulia v0.4.4
+Precompiling project...
+  ✓ Suppressor
+  ✓ UpdateJulia
+  2 dependencies successfully precompiled in 1 seconds. 201 already precompiled.
+   Resolving package versions...
+   Installed ZipFile ───────────────────── v0.10.1
+   Installed TableTraits ───────────────── v1.0.1
+   Installed DataValueInterfaces ───────── v1.0.0
+   Installed InputBuffers ──────────────── v1.0.0
+   Installed ArgCheck ──────────────────── v2.4.0
+   Installed CodecInflate64 ────────────── v0.1.3
+   Installed ZipArchives ───────────────── v2.4.0
+   Installed EzXML ─────────────────────── v1.2.0
+   Installed Tables ────────────────────── v1.12.0
+   Installed IteratorInterfaceExtensions ─ v1.0.0
+   Installed XLSX ──────────────────────── v0.10.4
+    Updating `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Project.toml`
+  [fdbf4ff8] + XLSX v0.10.4
+    Updating `/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/Manifest.toml`
+  [dce04be8] + ArgCheck v2.4.0
+  [6309b1aa] + CodecInflate64 v0.1.3
+  [e2d170a0] + DataValueInterfaces v1.0.0
+  [8f5d6c58] + EzXML v1.2.0
+  [0c81fc1b] + InputBuffers v1.0.0
+  [82899510] + IteratorInterfaceExtensions v1.0.0
+  [3783bdb8] + TableTraits v1.0.1
+  [bd369af6] + Tables v1.12.0
+  [fdbf4ff8] + XLSX v0.10.4
+  [49080126] + ZipArchives v2.4.0
+  [a5390f91] + ZipFile v0.10.1
+Precompiling project...
+  ✓ DataValueInterfaces
+  ✓ IteratorInterfaceExtensions
+  ✓ InputBuffers
+  ✓ ArgCheck
+  ✓ ZipFile
+  ✓ CodecInflate64
+  ✓ TableTraits
+  ✓ EzXML
+  ✓ Tables
+  ✓ ZipArchives
+  ✓ XLSX
+  11 dependencies successfully precompiled in 10 seconds. 203 already precompiled.
