@@ -1,4 +1,4 @@
-task_id = parse(Int, ENV["SLURM_ARRAY_TASK_ID"])
+task_id = parse(Int, ARGS[1])
 
 save_path = joinpath(["test$task_id.txt"])
 
