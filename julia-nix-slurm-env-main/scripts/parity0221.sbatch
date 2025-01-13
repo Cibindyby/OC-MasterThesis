@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #SBATCH --partition=cpu
 #SBATCH --time=4-0
-#SBATCH --array=1-3
+#SBATCH --array=1-50
 #SBATCH --output=/data/oc-compute03/ebertzci/OC-MasterThesis/output/%x-%A-%a.txt
 #SBATCH --mem=12000
 #SBATCH -c 4
@@ -16,5 +16,5 @@ echo hostname=$(hostname)
 # this is made available to `nix develop`.
 export XDG_RUNTIME_DIR=~/XDG_RUNTIME_DIR
 srun nix develop --impure --command bash -c "
-    just justfilefunc /data/oc-compute03/ebertzci/OC-MasterThesis/test.jl $SLURM_ARRAY_TASK_ID
+    just justfilefunc /data/oc-compute03/ebertzci/OC-MasterThesis/booleanProblems/parityMain.jl 0 2 2 1 $SLURM_ARRAY_TASK_ID
 "
