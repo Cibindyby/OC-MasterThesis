@@ -18,3 +18,4 @@ export XDG_RUNTIME_DIR=~/XDG_RUNTIME_DIR
 srun nix develop --impure --command bash -c "
     just justfilefunc /data/oc-compute03/ebertzci/OC-MasterThesis/booleanProblems/parityMain.jl 0 0 1 0 $SLURM_ARRAY_TASK_ID
 "
+
