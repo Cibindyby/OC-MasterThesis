@@ -91,7 +91,7 @@ function hpo()
                 pop_size = 10:2:60, 
                 rate_start_or_delta = rangeForCrossoverRate,
                 elit = 2:2:20,
-                offset = 0:50:500
+                offset = 0:30:300
 
                 meanAusMehrerenIterationen(nbr_cmp_nodes, pop_size, rate_start_or_delta, elit, offset)
             end
@@ -365,7 +365,7 @@ save_path = joinpath(["Experiments_Regression",
                             get_crossover_type(crossover_type), 
                             get_rate_type(crossover_rate_type),
                             "useOffset_$useOffset",
-                            "newHPOResults.txt"])
+                            "smallerOffsetHPOResults.txt"])
 
 mkpath(dirname(save_path))
 
