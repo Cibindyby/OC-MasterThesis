@@ -1,0 +1,4 @@
+Iteration, Fitness nach Rekombination, Fitness nach Mutation, Anzahl aktiver Knoten, Anteil aktiver Knoten
+1, 0.125, 0.125, 47.3235294117647, 0.049605377
+2, 0.125, 0.125, 40.588235294117645, 0.04254532
+3, 0.125, 0.0, 37.75, 0.039570235

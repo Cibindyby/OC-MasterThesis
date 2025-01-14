@@ -1,0 +1,17 @@
+Parameter set: 
+
+                    number_comp_nodes = 800, 
+
+                    population_size = 20, 
+
+                    crossover_rate_depending_on_type (rate, delta or start) = 0.5, 
+
+                    eilit_number = 16, 
+
+                    crossover_offset = 270
+Ergebnis (mean) = 
+ 
+                        0.026330704 Fitness
+ 
+                        452.9 Iterations
+
