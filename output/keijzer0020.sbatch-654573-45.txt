@@ -1,0 +1,18 @@
+SLURM_JOB_ID=654650
+hostname=oc222
+path '/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/scripts' does not contain a 'flake.nix', searching up
+[K[Kwarning: ignoring untrusted flake configuration setting 'extra-substituters'.
+Pass '--accept-flake-config' to trust it
+warning: ignoring untrusted flake configuration setting 'extra-trusted-public-keys'.
+Pass '--accept-flake-config' to trust it
+Running tasks     devenv:enterShell
+
+[1A[0JRunning           devenv:enterShell 0ms
+1 Running                           41.09µs
+[2A[0JSucceeded         devenv:enterShell 10ms
+1 Succeeded                         10.53ms
+
+Waiting for lock /home/ebertzci/JULIALOCK …
+Acquired lock /home/ebertzci/JULIALOCK.
+Relinquishing lock /home/ebertzci/JULIALOCK …
+Relinquished lock /home/ebertzci/JULIALOCK.
