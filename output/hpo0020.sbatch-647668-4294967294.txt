@@ -1,37 +1,0 @@
-SLURM_JOB_ID=647668
-hostname=oc-compute03
-path '/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/scripts' does not contain a 'flake.nix', searching up
-[K[Kwarning: ignoring untrusted flake configuration setting 'extra-substituters'.
-Pass '--accept-flake-config' to trust it
-warning: ignoring untrusted flake configuration setting 'extra-trusted-public-keys'.
-Pass '--accept-flake-config' to trust it
-Running tasks     devenv:enterShell
-
-[1A[0JRunning           devenv:enterShell 0ms
-1 Running                           55.63µs
-[2A[0JSucceeded         devenv:enterShell 11ms
-1 Succeeded                         12.32ms
-
-Waiting for lock /home/ebertzci/JULIALOCK …
-Acquired lock /home/ebertzci/JULIALOCK.
-Relinquishing lock /home/ebertzci/JULIALOCK …
-Relinquished lock /home/ebertzci/JULIALOCK.
-ERROR: LoadError: UndefVarError: `rate_start_or_delta` not defined
-Stacktrace:
- [1] macro expansion
-   @ /data/oc-compute03/ebertzci/OC-MasterThesis/booleanProblems/hpo.jl:99 [inlined]
- [2] (::var"#75###hyperopt_objective#227#22")(i::Int64, state::Float64)
-   @ Main ~/.julia/packages/Hyperopt/1AdYO/src/Hyperopt.jl:151
- [3] macro expansion
-   @ ~/.julia/packages/Hyperopt/1AdYO/src/Hyperopt.jl:162 [inlined]
- [4] macro expansion
-   @ ~/.julia/packages/ProgressMeter/kVZZH/src/ProgressMeter.jl:1008 [inlined]
- [5] optimize(ho::Hyperoptimizer{RandomSampler{MersenneTwister}, var"#75###hyperopt_objective#227#22"})
-   @ Hyperopt ~/.julia/packages/Hyperopt/1AdYO/src/Hyperopt.jl:161
- [6] hpo()
-   @ Main /data/oc-compute03/ebertzci/OC-MasterThesis/booleanProblems/hpo.jl:95
- [7] top-level scope
-   @ /data/oc-compute03/ebertzci/OC-MasterThesis/booleanProblems/hpo.jl:377
-in expression starting at /data/oc-compute03/ebertzci/OC-MasterThesis/booleanProblems/hpo.jl:377
-error: Recipe `justfilefunc` failed with exit code 1
-srun: error: oc-compute03: task 0: Exited with exit code 1
