@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  8 JAN 2025 21:58
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  20 JAN 2025 22:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2093,38 +2093,40 @@ File: Bilder/AufbauCGPVorgehenNachbildung.png Graphic file (type bmp)
 
 
 ]
-Overfull \hbox (1.30626pt too wide) in paragraph at lines 26--28
+Overfull \hbox (1.30626pt too wide) in paragraph at lines 26--33
 \TU/LinLibertine(0)/m/n/10.95 Die Initialisierung der Population bezieht sich a
 uf die Paper [[]Mil20[]], [[]TST22[]] und [[]Ahv+19[]].
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--28
-
  []
 
 File: Bilder/TorabiBeispielGenotypNeu.png Graphic file (type bmp)
 <Bilder/TorabiBeispielGenotypNeu.png>
 File: Bilder/BeispielChromosom.png Graphic file (type bmp)
 <Bilder/BeispielChromosom.png>
-LaTeX Font Info:    Font shape `TU/LinLibertine(0)/b/n' will be
-(Font)              scaled to size 10.95pt on input line 45.
-
-LaTeX Warning: Reference `fig:genotyp' on page 4 undefined on input line 45.
-
 
 
 [4]
+LaTeX Font Info:    Font shape `TU/LinLibertine(0)/b/n' will be
+(Font)              scaled to size 10.95pt on input line 58.
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--87
+
+ []
+
+
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
 
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 134--138
+Underfull \hbox (badness 10000) in paragraph at lines 136--139
 
  []
 
@@ -2134,14 +2136,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 147--152
  []
 
 
-
-[7]
 Underfull \hbox (badness 10000) in paragraph at lines 153--157
 
  []
 
 
-Underfull \vbox (badness 2698) has occurred while \output is active []
+
+[7]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -2245,28 +2247,35 @@ File: Bilder/TorabiBeispielGenotypNeu.png Graphic file (type bmp)
 File: Bilder/GenotypNachMutation.png Graphic file (type bmp)
 <Bilder/GenotypNachMutation.png>
 
-
-[17]) (./PraktischerTeil.tex
-
-[18]
-chapter 3.
-) (./Fazit.tex
-
-[19
+Underfull \vbox (badness 2452) has occurred while \output is active []
 
 
-]
+
+[17]
+
+[18]) (./PraktischerTeil.tex
+
+[19]
 
 [20
 
 
 ]
+chapter 3.
+
+
+[21]) (./Fazit.tex
+
+[22]
 chapter 4.
 )
 
-[21]
+[23
 
-[22
+
+]
+
+[24
 
 
 ]
@@ -2285,9 +2294,9 @@ GP_with_Crossover_Strategies\TU/LinLibertine(0)/m/n/10.95 . original-date: 2024
 
 
 
-[23]
+[25]
 
-[24]
+[26]
 Overfull \hbox (11.8301pt too wide) in paragraph at lines 50--50
 []\TU/LinLibertine(0)/m/n/10.95 José Eduardo da Silva und Heder S. Bernardino. 
 „  Cartesian Genetic Programming
@@ -2295,16 +2304,15 @@ Overfull \hbox (11.8301pt too wide) in paragraph at lines 50--50
 
 
 
-[25]
+[27]
 
-[26
-
-
-]
+[28]
 chapter A.
 
 
 [1
+
+
 
 
 ] (./Main.aux)
@@ -2323,12 +2331,12 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47583 strings out of 473889
- 1002225 string characters out of 5734826
- 1926401 words of memory out of 5000000
- 69975 multiletter control sequences out of 15000+600000
+ 47590 strings out of 473889
+ 1002458 string characters out of 5734826
+ 1927580 words of memory out of 5000000
+ 69982 multiletter control sequences out of 15000+600000
  562633 words of font info for 98 fonts, out of 8000000 for 9000
  1350 hyphenation exceptions out of 8191
  122i,17n,136p,10900b,6837s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Main.pdf (35 pages).
+Output written on Main.pdf (37 pages).

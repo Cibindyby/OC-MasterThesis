@@ -25,24 +25,25 @@ Die folgenden Unterkapitel beziehen sich jeweils auf einen Knoten des Graphen un
 \label{sec:initialePopulation}
 Die Initialisierung der Population bezieht sich auf die Paper \cite{miller_cartesian_2020}, \cite{torabi_using_2022} und \cite{milad_taleby_ahvanooey_survey_2019}.
 Außerdem werden Erkenntnisse aus dem Quellcode von Cui verwendet \cite{cuihen_cuihencgp_with_crossover_strategies_2024}.\\
-
-Die Population von CGP ist eine Menge von Chromosomen oder auch Individuen genannt.
+Die Population von CGP ist eine Menge von Chromosomen, auch Individuen genannt.
 Chromosome sind individuelle Möglichkeiten ein komplexes Ausgangsproblem zu lösen.
-Jedes Chromosom ist in CGP ein gerichteter, azyklischer Graph, bestehend aus Eingang-Knoten, Rechen-Knoten und Ausgang-Knoten.
+Jedes Chromosom ist in CGP ein gerichteter, azyklischer Graph, bestehend aus Eingangsknoten, Rechenknoten und Ausgangsknoten.
 Dabei gibt es zwei Darstellungsmöglichkeiten für ein Chromosom: den Genotyp und den daraus resultierenden Phänotyp.
-Anhand der folgenden Abbildungen kann beispielhaft näher erläutert werden, wie die Chromosome in CGP aussehen und funktionieren. Dieses Beispiel wird in \cite{torabi_using_2022} eingeführt.
+Anhand der folgenden Abbildungen kann beispielhaft näher erläutert werden, wie die Chromosome in CGP aufgebaut sind und funktionieren. Dieses Beispiel wird in \cite{torabi_using_2022} eingeführt.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.47]{Bilder/TorabiBeispielGenotypNeu.png}
+    \includegraphics[scale = 0.45]{Bilder/TorabiBeispielGenotypNeu.png}
     \caption{Beispiel Genotyp, angelehnt an \cite{torabi_using_2022}}
     \label{fig:genotypNeu}
-    \includegraphics[scale = 0.47]{Bilder/BeispielChromosom.png}
+\end{figure}
+\begin{figure}[H]
+    \includegraphics[scale = 0.45]{Bilder/BeispielChromosom.png}
     \caption{Beispiel Phänotyp, angelehnt an \cite{torabi_using_2022}}
     \label{fig:phänotyp}
 \end{figure}
 
-Abbildung \ref{fig:genotyp} zeigt einen Genotyp und Abbildung \ref{fig:phänotyp} den daraus resultierenden Phänotyp.
+Abbildung \ref{fig:genotypNeu} zeigt einen Genotyp und Abbildung \ref{fig:phänotyp} den daraus resultierenden Phänotyp.
 Anhand des Phänotyps lässt sich die klassische Struktur von CGP erkennen:
 Es handelt sich um einen gerichteten, azyklischen Graphen mit Ein- und Ausgängen.
 Bei den Eingängen (hier: $x_0$ und $x_1$) handelt es sich um die Systemeingänge, aus denen Ausgänge (hier: $O_A$ – $O_D$) abgeleitet werden sollen.
@@ -76,15 +77,16 @@ Diese spiegeln sich ebenfalls im Genotyp wider: hier werden die Knoteneingänge 
 Damit ergibt sich eine vollständige Beschreibung eines Knotens: einem Index werden Eingänge und gegebenenfalls eine Rechenoperation zugeschrieben.\newline
 Durch dieses Beispiel wird ebenfalls ersichtlich, was die Eingangsknoten eines Chromosoms ausmacht:
 Sie geben die Systemeingänge wieder, ohne diese auf irgendeine Weise zu verarbeiten.
-Aus diesem Grund müssen die Eingangsknoten nicht im Genotyp aufgezeigt werden, sie vollständig zu beschreiben: sie weisen weder Eingänge noch Rechenoperationen auf, die beschrieben werden müssten.\newline
+Aus diesem Grund müssen die Eingangsknoten nicht im Genotyp aufgezeigt werden, um sie vollständig zu beschreiben, denn sie weisen weder Eingänge noch Rechenoperationen auf, die beschrieben werden müssten.\newline
 Als letzter Punkt fällt innerhalb des Beispiels auf, dass ein Knoten und dessen Kanten mit gestrichelten Linien dargestellt sind.
 Dies ist ein sogenannter inaktiver Knoten und wird für die Berechnung des Endergebnisses nicht gebraucht.
-Ob ein Knoten verwendet wird oder nicht, hängt davon ab, ob ein nachfolgender Knoten auf dessen Ausgang zugreift.
+Ob ein Knoten für diese Berechnung verwendet wird oder nicht, hängt davon ab, ob ein nachfolgender Knoten auf dessen Ausgang zugreift.
 Um aktive Knoten von inaktiven Knoten zu unterscheiden, werden demnach zuerst die Ausgangsknoten betrachtet, die offensichtlich für die Auswertung der Ausgabe verwendet werden.
 Anschließend werden iterativ die Eingangskanten der Rechenknoten zurückverfolgt, bis man schließlich bei den Eingangsknoten des Graphen ankommt.
-Alle Knoten, die bis dahin besucht wurden, werden aktive Knoten genannt und sind für die Berechnung des Endergebnisses eines Chromosoms relevant. \newline
+Alle Knoten, die bis dahin besucht wurden, werden aktive Knoten genannt und sind für die Berechnung des Endergebnisses eines Chromosoms relevant. \\
+
 Schließlich soll anhand der eingeführten Abbildung ein Beispiel berechnet werden:\newline
-Anzunehmen sind die Eingänge $x_0$ = 10 und $x_1$ = 20.
+Angenommen werden die Systemeingänge $x_0$ = 10 und $x_1$ = 20.
 Demnach sind die Ausgänge der beiden Eingangsknoten mit den Indices 0 und 1 gleich den Werten 10 und 20.
 Der erste Rechenknoten (Index = 2) verwendet als Eingänge die beiden Eingangsknoten (Indices = 0 und 1) und besitzt die Rechenfunktion +.
 Demnach ist das Ergebnis des Rechenknotens (10 + 20 =) 30.
@@ -123,7 +125,7 @@ In diesem Beispiel werden durch das Chromosom die folgenden Ausgänge aus den be
 Zusammengefasst hat das Beispielchromosom aus dem Eingangstupel (10; 20) ein Ausgangstupel (30; 200; 2,5; 100) berechnet.\\
 
 Wie bereits erläutert, ist die Population in CGP eine Menge an Chromosomen, also eine Menge an gerichteten, azyklischen Graphen, die aus definierten Systemeingaben Ausgaben berechnen können.
-Diese Population wird zu Beginn zufällig erstellt.
+Diese Population wird zu Beginn zufällig initialisiert.
 Dabei werden folgende Angaben vorausgesetzt:
 \begin{itemize}
     \item Größe der Population
@@ -131,15 +133,13 @@ Dabei werden folgende Angaben vorausgesetzt:
     \item Anzahl der Systemausgänge
     \item Anzahl der Rechenknoten pro Chromosom
 \end{itemize}
-Im Initialisierungsprozess wird anschließend eine Menge an Chromosomen initialisiert.
-In diesem Prozess werden pro Knoten innerhalb der Chromosome zufällig Eingangskanten und gegebenenfalls Rechenoperationen bestimmt.
+Im Initialisierungsprozess werden für jedes Chromosom pro Knoten zufällige Eingangskanten und gegebenenfalls Rechenoperationen bestimmt.
 Dabei muss beachtet werden, dass es sich anschließend um einen azyklischen Graphen handeln muss.
 Im Quellcode von Cui wird dies erzielt, indem Knoten nur Ausgänge von denjenigen Knoten verwenden dürfen, deren Indices kleiner sind als der eigene Index.\\
 
-Nachdem die initiale Population erstellt wurde, muss der erste Evaluations- und Selektionsschritt erfolgen. 
+Nachdem die initiale Population erstellt wurde, erfolgt der erste Evaluations- und Selektionsschritt. 
 Der folgende Abschnitt \ref{sec:evalUndSelektion} erläutert, wie diese Schritte ausgeführt werden.
 
-TODO: initiale Population prüfen, ob die Quellen alle relevanten Aussagen decken
 
 \section{Evaluation und Selektion}
 \label{sec:evalUndSelektion}
@@ -153,7 +153,7 @@ Demnach werden die performantesten Chromosomen verwendet, um die nächste Genera
 Um zu bestimmen, welche Individuen die beste Performance aufweisen, muss eine numerische Bewertung erfolgen.
 Diese wird durch die Fitness der einzelnen Chromosomen bestimmt. \cite{koza_survey_1995}
 Wie der Fitnesswert berechnet wird, hängt von den zu lösenden Problemen ab.
-Ein Beispiel zeigt der Quellcode von Cui: Dabei wird für symbolische Regression der mittlere absolute Fehler zwischen korrekter Lösung und tatsächlicher Lösung für einen Evaluationsdatensatz berechnet. \cite{cuihen_cuihencgp_with_crossover_strategies_2024}\\
+Beispielsweise verwenden Cui et al. für symbolische Regressionsprobleme den mittleren absoluten Fehler zwischen korrekter Lösung und tatsächlicher Lösung für einen Evaluationsdatensatz. \cite{affenzeller_positional_2024}\\
 
 Koza beschreibt in seinem Paper, dass für die Selektion der Eltern der nächsten Generation, jedem Chromosom ein Wahrscheinlichkeitswert zugewiesen wird.
 Dieser hängt von dessen Fitness ab.
@@ -411,14 +411,21 @@ Die mutierten Teile des Chromosoms werden rot hervorgehoben.
 \section{Evaluation Fitness, Stopp-Kriterium und Ergebnis}
 \label{sec:fitness,StopKrit,Ergebnis}
 
-TODO:
-- neue aktiven Knoten aus Beispiel berechnen\\
-- Fitness berechnen (je nach zu lösendes Problem) -> gängige Metriken aufzeigen\\
-- Stopp-Kriterium: fitness ca 0\\
-- Ergebnis, wenn Stopp-Kriterium erfüllt
+Nachdem der Mutationsschritt für alle Chromosome der Population ausgeführt wurde, findet erneut ein Evaluationsschritt statt.
+Dabei wird für jedes Chromosom ein Fitness-Wert bestimmt, der bewertet wie exakt die Trainingsdaten durch das Chromosom beschrieben werden. \cite{milad_taleby_ahvanooey_survey_2019}
+Die Berechnung der Fitness hängt wie in Abschnitt \ref{sec:evalUndSelektion} geschrieben vom zu lösenden Ausgangsproblem ab.\\
+Sobald für alle Chromosome einer Population ein Fitness-Wert bestimmt wurde, werden diese auf das Stopp-Kriterium geprüft.
+Dieses gibt an, ab welcher Bedingung ein Algorithmus als konvergiert gilt.
+Im Beispiel von Cui et al. ist diese Bedingung für $Fitness < 0.01$ erfüllt. \cite{affenzeller_positional_2024}\\
+Wird das Stopp-Kriterium erfüllt, wird der CGP-Algorithmus abgebrochen.
+Das Ergebnis ist das beste Chromosom der letzten Generation.
+Dieses löst das Ausgangsproblem hinreichend gut.
+Andernfalls wird eine weitere Iteration des CGP-Algorithmus gestartet. 
+Dabei werden erneut Selektion, Rekombination und Mutation ausgeführt, um eine bessere Lösung des Ausgangsproblems zu finden.
 
 \section{Hyperparameteranalyse}
 \label{sec:Hyperparameteranalyse}
+
 
 \section{statistische Analyse mit ANOVA}
 \label{sec:anova}

@@ -15,9 +15,11 @@
 \contentsline {subsubsection}{\nonumberline Rekombinationsrate mit Offset}{15}{subsubsection*.11}%
 \contentsline {section}{\numberline {2.4}Evolutionärer Operator: Mutation}{15}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Evaluation Fitness, Stopp-Kriterium und Ergebnis}{17}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Hyperparameteranalyse}{17}{section.2.6}%
-\contentsline {section}{\numberline {2.7}statistische Analyse mit ANOVA}{17}{section.2.7}%
-\contentsline {chapter}{\numberline {3}Praktischer Teil}{19}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Fazit aus Ausblick}{21}{chapter.4}%
+\contentsline {section}{\numberline {2.6}Hyperparameteranalyse}{18}{section.2.6}%
+\contentsline {section}{\numberline {2.7}statistische Analyse mit ANOVA}{18}{section.2.7}%
+\contentsline {chapter}{\numberline {3}Praktischer Teil}{21}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Aufbau der Experimente}{21}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Ergebnisse}{21}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Fazit aus Ausblick}{23}{chapter.4}%
 \contentsline {chapter}{\numberline {A}Anhang}{I}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

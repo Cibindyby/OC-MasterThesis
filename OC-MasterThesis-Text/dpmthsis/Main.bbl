@@ -134,6 +134,113 @@
       \verb http://link.springer.com/10.1007/s10710-019-09361-5
       \endverb
     \endentry
+    \entry{affenzeller_positional_2024}{incollection}{}{}
+      \name{author}{3}{}{%
+        {{hash=200af4ac4fdee2f4cd27797ad17195ed}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Henning},
+           giveni={H\bibinitperiod}}}%
+        {{hash=d58d0efccc3e212ab4db230870cc6c8f}{%
+           family={Heider},
+           familyi={H\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4909578fc1f1faae256161c65657625d}{%
+           family={Hähner},
+           familyi={H\bibinitperiod},
+           given={Jörg},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{editor}{7}{}{%
+        {{hash=3b3bd7ec0b86dacdb3988998da410572}{%
+           family={Affenzeller},
+           familyi={A\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f08ec0e3ab03f30bba46f1b637d76dae}{%
+           family={Winkler},
+           familyi={W\bibinitperiod},
+           given={Stephan\bibnamedelima M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=99a18a49666163c2257997060312e77c}{%
+           family={Kononova},
+           familyi={K\bibinitperiod},
+           given={Anna\bibnamedelima V.},
+           giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=5f68ce10c238f4be96bfe2a8193836de}{%
+           family={Trautmann},
+           familyi={T\bibinitperiod},
+           given={Heike},
+           giveni={H\bibinitperiod}}}%
+        {{hash=08f03c75c9e9b5afea3b578b903ffc47}{%
+           family={Tušar},
+           familyi={T\bibinitperiod},
+           given={Tea},
+           giveni={T\bibinitperiod}}}%
+        {{hash=e4b3739c80831823ba3a2b38d2841643}{%
+           family={Machado},
+           familyi={M\bibinitperiod},
+           given={Penousal},
+           giveni={P\bibinitperiod}}}%
+        {{hash=63db21b1dd89fc12aac7791967820b87}{%
+           family={Bäck},
+           familyi={B\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer Nature Switzerland}%
+      }
+      \strng{namehash}{74451f1f5c73a974c568b124cd1f0228}
+      \strng{fullhash}{74451f1f5c73a974c568b124cd1f0228}
+      \strng{fullhashraw}{74451f1f5c73a974c568b124cd1f0228}
+      \strng{bibnamehash}{74451f1f5c73a974c568b124cd1f0228}
+      \strng{authorbibnamehash}{74451f1f5c73a974c568b124cd1f0228}
+      \strng{authornamehash}{74451f1f5c73a974c568b124cd1f0228}
+      \strng{authorfullhash}{74451f1f5c73a974c568b124cd1f0228}
+      \strng{authorfullhashraw}{74451f1f5c73a974c568b124cd1f0228}
+      \strng{editorbibnamehash}{2342b3cf9c52f6354ff52bb3a78c1989}
+      \strng{editornamehash}{2342b3cf9c52f6354ff52bb3a78c1989}
+      \strng{editorfullhash}{ef205237566a2ee27234e49b71dcd5d6}
+      \strng{editorfullhashraw}{ef205237566a2ee27234e49b71dcd5d6}
+      \field{labelalpha}{CHH24}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The recombination operator plays an important role in many evolutionary algorithms. However, in Cartesian Genetic Programming (CGP), which is part of the aforementioned category, the usefulness of crossover is contested. In this work, we investigate whether CGP’s positional bias actually inﬂuences the usefulness of the crossover operator negatively. This bias describes a skewed distribution of CGP’s active and inactive nodes, which might lead to destructive behaviours of standard recombination operators. We try to answer our hypothesis by employing one standard CGP implementation and one without the eﬀects of positional bias. Both versions are combined with one of four standard crossover operators, or with no crossover operator. Additionally, two different selection methods are used to conﬁgure a CGP variant. We then analyse their performance and convergence behaviour on eight benchmarks taken from the Boolean and symbolic regression domain. By using Bayesian inference, we are able to rank them, and we found that positional bias does not inﬂuence CGP with crossover. Furthermore, we argue that the current research on CGP with standard crossover operators is incomplete, and CGP with recombination might not negatively impact its evolutionary search process. On the contrary, using CGP with crossover improves its performance.}
+      \field{booktitle}{Parallel {Problem} {Solving} from {Nature} – {PPSN} {XVIII}}
+      \field{isbn}{978-3-031-70054-5 978-3-031-70055-2}
+      \field{note}{Series Title: Lecture Notes in Computer Science}
+      \field{title}{Positional {Bias} {Does} {Not} {Influence} {Cartesian} {Genetic} {Programming} with {Crossover}}
+      \field{urlday}{18}
+      \field{urlmonth}{10}
+      \field{urlyear}{2024}
+      \field{volume}{15148}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \field{pages}{151\bibrangedash 167}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1007/978-3-031-70055-2_10
+      \endverb
+      \verb{file}
+      \verb Cui et al. - 2024 - Positional Bias Does Not Influence Cartesian Genet.pdf:files/333/Cui et al. - 2024 - Positional Bias Does Not Influence Cartesian Genet.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/10.1007/978-3-031-70055-2_10
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/10.1007/978-3-031-70055-2_10
+      \endverb
+    \endentry
     \entry{crepinsek_exploration_2013}{article}{}{}
       \name{author}{3}{}{%
         {{hash=254edfb69de028c3d0ca8c6fabec15f3}{%
