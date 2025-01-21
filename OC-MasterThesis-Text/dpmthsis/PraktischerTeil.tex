@@ -4,6 +4,22 @@
 \section{Aufbau der Experimente}
 \label{sec:aufbauExperimente}
 
+Für die Beantwortung der Forschungsfragen werden unterschiedliche Experimente ausgeführt, deren Ergebnisse in dieser Arbeit ausgewertet und interpretiert werden sollen.
+Der Programmcode für die Experimente wurde in der Sprache Julia verfasst.
+Dabei fand eine Orientierung an folgenden Code statt: \cite{cuihen_cuihencgp_with_crossover_strategies_2024}\\
+Um Ergebnisse von Ausgangsproblemen aus unterschiedlichen Domänen für eine umfangreichere Bewertung zur Verfügung zu stellen, werden mehrere Benchmark-Testszenarien überprüft.
+Diese werden in den folgenden Abschnitten näher betrachtet.
+
+\subsection{Testszenarien}
+\label{subsec:testszenarien}
+
+\subsubsection{Boolean Problems}
+\label{subsubsec:booleanProblems}
+
+
+\subsubsection{Symbolische Regression}
+\label{subsubsec:symbolicRegression}
+
 \section{Ergebnisse}
 \label{Ergebnisse}
 
@@ -20,17 +36,19 @@
         \item weitere Einstellungen (Welche Selektionsverfahren, Mutationsverfahren, Rekomb...)
         \item Hyperparameteroptimierung
         \begin{itemize}
+        	\item HPO wird in Grundlagen nicht erklärt also hier kurz erwähnen, dass die besten Parameter gesucht werden also eine HPO ausgeführt wird
             \item Welche Bib benutzt
             \item Welche Parameter optimiert; mit welchen Ranges
             \item 10 Ausführungen pro Optimierungsschritt
-            \item händische Auswahl der besten Ergebnisse über Zeit
+            \item Probleme Rechenzeit HPO
+            \item verschiedene Sampler keinen Mehrwert
         \end{itemize}
         \item Ausführen mehrerer Durchläufe, um statistische Auswertung vorzunehmen
     \end{itemize}
     \item Ergebnisse und Evaluation
     \begin{itemize}
         \item Metriken zur Auswertung
-        \item händische Auswertung der Ergebnisse
+        \item händische Auswertung der Ergebnisse, eventuell auch durch Median, um zu sehen in welchen Fällen es mehr Streuung gibt?
         \item bayesian Auswertung der Ergebnisse
         \item Bewertung der statistischen Aussagekraft mit ANOVA
     \end{itemize}

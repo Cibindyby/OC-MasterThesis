@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  20 JAN 2025 22:15
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  21 JAN 2025 22:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2246,36 +2246,29 @@ File: Bilder/TorabiBeispielGenotypNeu.png Graphic file (type bmp)
 [16]
 File: Bilder/GenotypNachMutation.png Graphic file (type bmp)
 <Bilder/GenotypNachMutation.png>
-
-Underfull \vbox (badness 2452) has occurred while \output is active []
-
-
+) (./PraktischerTeil.tex
 
 [17]
 
-[18]) (./PraktischerTeil.tex
-
-[19]
-
-[20
+[18
 
 
 ]
 chapter 3.
 
 
-[21]) (./Fazit.tex
+[19]) (./Fazit.tex
 
-[22]
+[20]
 chapter 4.
 )
 
-[23
+[21
 
 
 ]
 
-[24
+[22
 
 
 ]
@@ -2294,9 +2287,9 @@ GP_with_Crossover_Strategies\TU/LinLibertine(0)/m/n/10.95 . original-date: 2024
 
 
 
-[25]
+[23]
 
-[26]
+[24]
 Overfull \hbox (11.8301pt too wide) in paragraph at lines 50--50
 []\TU/LinLibertine(0)/m/n/10.95 José Eduardo da Silva und Heder S. Bernardino. 
 „  Cartesian Genetic Programming
@@ -2304,9 +2297,9 @@ Overfull \hbox (11.8301pt too wide) in paragraph at lines 50--50
 
 
 
-[27]
+[25]
 
-[28]
+[26]
 chapter A.
 
 
@@ -2331,12 +2324,12 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47590 strings out of 473889
- 1002458 string characters out of 5734826
- 1927580 words of memory out of 5000000
- 69982 multiletter control sequences out of 15000+600000
+ 47592 strings out of 473889
+ 1002510 string characters out of 5734826
+ 1927704 words of memory out of 5000000
+ 69984 multiletter control sequences out of 15000+600000
  562633 words of font info for 98 fonts, out of 8000000 for 9000
  1350 hyphenation exceptions out of 8191
  122i,17n,136p,10900b,6837s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Main.pdf (37 pages).
+Output written on Main.pdf (35 pages).
