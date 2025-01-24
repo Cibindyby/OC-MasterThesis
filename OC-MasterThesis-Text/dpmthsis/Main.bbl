@@ -359,6 +359,7 @@
       \strng{editornamehash}{39b72e5567474a107027d9257749de35}
       \strng{editorfullhash}{39b72e5567474a107027d9257749de35}
       \strng{editorfullhashraw}{39b72e5567474a107027d9257749de35}
+      \field{extraname}{1}
       \field{labelalpha}{CMH22}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
@@ -387,6 +388,72 @@
       \endverb
       \verb{url}
       \verb https://link.springer.com/10.1007/978-3-031-21094-5_14
+      \endverb
+    \endentry
+    \entry{cui_equidistant_2023}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=200af4ac4fdee2f4cd27797ad17195ed}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Henning},
+           giveni={H\bibinitperiod}}}%
+        {{hash=a0ccc9d3a9573f3e4d89ab50cc73e769}{%
+           family={Margraf},
+           familyi={M\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4909578fc1f1faae256161c65657625d}{%
+           family={Hähner},
+           familyi={H\bibinitperiod},
+           given={Jörg},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Rome, Italy}%
+      }
+      \list{publisher}{2}{%
+        {SCITEPRESS - Science}%
+        {Technology Publications}%
+      }
+      \strng{namehash}{e47342c2480984531985d790ddfd6ce1}
+      \strng{fullhash}{e47342c2480984531985d790ddfd6ce1}
+      \strng{fullhashraw}{e47342c2480984531985d790ddfd6ce1}
+      \strng{bibnamehash}{e47342c2480984531985d790ddfd6ce1}
+      \strng{authorbibnamehash}{e47342c2480984531985d790ddfd6ce1}
+      \strng{authornamehash}{e47342c2480984531985d790ddfd6ce1}
+      \strng{authorfullhash}{e47342c2480984531985d790ddfd6ce1}
+      \strng{authorfullhashraw}{e47342c2480984531985d790ddfd6ce1}
+      \field{extraname}{2}
+      \field{labelalpha}{CMH23}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{booktitle}{Proceedings of the 15th {International} {Joint} {Conference} on {Computational} {Intelligence}}
+      \field{isbn}{978-989-758-674-3}
+      \field{shorttitle}{Equidistant {Reorder} {Operator} for {Cartesian} {Genetic} {Programming}}
+      \field{title}{Equidistant {Reorder} {Operator} for {Cartesian} {Genetic} {Programming}:}
+      \field{urlday}{17}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \field{pages}{64\bibrangedash 74}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.5220/0012174100003595
+      \endverb
+      \verb{file}
+      \verb Cui et al. - 2023 - Equidistant Reorder Operator for Cartesian Genetic.pdf:files/238/Cui et al. - 2023 - Equidistant Reorder Operator for Cartesian Genetic.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.scitepress.org/DigitalLibrary/Link.aspx?doi=10.5220/0012174100003595
+      \endverb
+      \verb{url}
+      \verb https://www.scitepress.org/DigitalLibrary/Link.aspx?doi=10.5220/0012174100003595
       \endverb
     \endentry
     \entry{cuihen_cuihencgp_with_crossover_strategies_2024}{misc}{}{}
@@ -691,6 +758,86 @@
       \endverb
       \verb{url}
       \verb https://www.mdpi.com/2078-2489/10/12/390
+      \endverb
+    \endentry
+    \entry{kalkreuth_towards_2023}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{hash=191998c928f7d855e0b7952e1dfe679f}{%
+           family={Kalkreuth},
+           familyi={K\bibinitperiod},
+           given={Roman},
+           giveni={R\bibinitperiod}}}%
+        {{hash=19df64e499481847a8f48b501e9ea9a4}{%
+           family={Vašíček},
+           familyi={V\bibinitperiod},
+           given={Zdeněk},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=b8267c78cb8e7b5129bb917001dbd77a}{%
+           family={Husa},
+           familyi={H\bibinitperiod},
+           given={Jakub},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2adfc715c2f5069eb2a4d4f26c603803}{%
+           family={Vermetten},
+           familyi={V\bibinitperiod},
+           given={Diederick\bibnamedelima ´.},
+           giveni={D\bibinitperiod\bibinitdelim ´.\bibinitperiod}}}%
+        {{hash=41c8b90aff2c99739017b09cd9a6e427}{%
+           family={Ye},
+           familyi={Y\bibinitperiod},
+           given={Furong},
+           giveni={F\bibinitperiod}}}%
+        {{hash=63db21b1dd89fc12aac7791967820b87}{%
+           family={Bäck},
+           familyi={B\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Lisbon Portugal}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{67e6ae831ecd4f1103efcc483b3fa5b5}
+      \strng{fullhash}{dff2960304343cb03a8f527e17ddb938}
+      \strng{fullhashraw}{dff2960304343cb03a8f527e17ddb938}
+      \strng{bibnamehash}{67e6ae831ecd4f1103efcc483b3fa5b5}
+      \strng{authorbibnamehash}{67e6ae831ecd4f1103efcc483b3fa5b5}
+      \strng{authornamehash}{67e6ae831ecd4f1103efcc483b3fa5b5}
+      \strng{authorfullhash}{dff2960304343cb03a8f527e17ddb938}
+      \strng{authorfullhashraw}{dff2960304343cb03a8f527e17ddb938}
+      \field{labelalpha}{Kal+23}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Just over a decade ago, the first comprehensive review on the state of benchmarking in Genetic Programming (GP) analyzed the mismatch between the problems that are used to test the performance of GP systems and real-world problems. Since then, several benchmark suites in major GP problem domains have been proposed over time, which were able to fill some of the major gaps. In the framework of the first review about the state of benchmarking in GP, logic synthesis was classified as one of the major GP problem domains. However, a diverse and accessible benchmark suite for logic synthesis is still missing in the field of GP. In this work, we take a first step towards a benchmark suite for logic synthesis that covers different types of Boolean functions that are commonly used for the evaluation of GP systems. We also present baseline results that have been obtained by former work and in our evaluation experiments by using Cartesian Genetic Programming.}
+      \field{booktitle}{Proceedings of the {Companion} {Conference} on {Genetic} and {Evolutionary} {Computation}}
+      \field{isbn}{9798400701207}
+      \field{month}{7}
+      \field{title}{Towards a {General} {Boolean} {Function} {Benchmark} {Suite}}
+      \field{urlday}{24}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \field{pages}{591\bibrangedash 594}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1145/3583133.3590685
+      \endverb
+      \verb{file}
+      \verb Kalkreuth et al. - 2023 - Towards a General Boolean Function Benchmark Suite.pdf:files/363/Kalkreuth et al. - 2023 - Towards a General Boolean Function Benchmark Suite.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3583133.3590685
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3583133.3590685
       \endverb
     \endentry
     \entry{kalkreuth_comprehensive_2020}{inproceedings}{}{}

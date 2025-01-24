@@ -20,8 +20,8 @@
 \contentsline {section}{\numberline {3.1}Aufbau der Experimente}{19}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Testszenarien}{19}{subsection.3.1.1}%
 \contentsline {subsubsection}{\nonumberline Boolean Problems}{19}{subsubsection*.13}%
-\contentsline {subsubsection}{\nonumberline Symbolische Regression}{19}{subsubsection*.15}%
-\contentsline {section}{\numberline {3.2}Ergebnisse}{19}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Fazit aus Ausblick}{21}{chapter.4}%
+\contentsline {subsubsection}{\nonumberline Symbolische Regression}{20}{subsubsection*.15}%
+\contentsline {section}{\numberline {3.2}Ergebnisse}{20}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Fazit aus Ausblick}{23}{chapter.4}%
 \contentsline {chapter}{\numberline {A}Anhang}{I}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
