@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  24 JAN 2025 11:45
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  24 JAN 2025 15:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2247,13 +2247,13 @@ File: Bilder/TorabiBeispielGenotypNeu.png Graphic file (type bmp)
 File: Bilder/GenotypNachMutation.png Graphic file (type bmp)
 <Bilder/GenotypNachMutation.png>
 ) (./PraktischerTeil.tex
+Underfull \vbox (badness 2452) has occurred while \output is active []
+
+
 
 [17]
 
-[18
-
-
-]
+[18]
 chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 25--28
@@ -2262,7 +2262,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--28
 
 
 
-[19]
+[19
+
+
+]
 
 [20]) (./Fazit.tex
 
@@ -2355,8 +2358,8 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  47598 strings out of 473889
- 1002846 string characters out of 5734826
- 1928862 words of memory out of 5000000
+ 1002849 string characters out of 5734826
+ 1928833 words of memory out of 5000000
  69990 multiletter control sequences out of 15000+600000
  562633 words of font info for 98 fonts, out of 8000000 for 9000
  1350 hyphenation exceptions out of 8191

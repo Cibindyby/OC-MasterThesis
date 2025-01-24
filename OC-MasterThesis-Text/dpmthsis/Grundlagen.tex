@@ -423,5 +423,12 @@ Dieses löst das Ausgangsproblem hinreichend gut.
 Andernfalls wird eine weitere Iteration des CGP-Algorithmus gestartet. 
 Dabei werden erneut Selektion, Rekombination und Mutation ausgeführt, um eine bessere Lösung des Ausgangsproblems zu finden.
 
-\section{statistische Analyse mit ANOVA oder Bayesian?}
-\label{sec:anova}
+\section{Bayesian Analyse}
+\label{sec:bayesian}
+TODO:
+- Idee Bayesian erklären: Experimente als Blackbox und dann nur Daten als Ausgabe auf Wahrscheinlichkeitsverteilung fitten
+- Plankett-Luce Modell als statistisches Modell für Bayesian: Wahrscheinlichkeit, dass Algorithmus der beste aus allen ist; Rückschlüsse auf Performance der Algorithmen möglich
+- Konfidenzintervall von 95\% verwenden für sinnvolle Aussagen über Endergebnisse; Streuung kann besser beurteilt werden (HPDI Wert)
+- prior sensitivity analysis nicht machen (to ensure robustness of all models)
+- cmpbayes verwendet Markov Chain Monte-Carlo Sampling => Sampler bisschen erklären
+- Hanning Paper für Modell und Sampler verwendet
