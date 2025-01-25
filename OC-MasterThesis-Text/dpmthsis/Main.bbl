@@ -1200,6 +1200,104 @@
       \endverb
       \keyw{Computer Science - Neural and Evolutionary Computing}
     \endentry
+    \entry{nenning_bayessche_1980}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=bbdfa29ccfc1dfd5b4036d08be3848f2}{%
+           family={Nenning},
+           familyi={N\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{bbdfa29ccfc1dfd5b4036d08be3848f2}
+      \strng{fullhash}{bbdfa29ccfc1dfd5b4036d08be3848f2}
+      \strng{fullhashraw}{bbdfa29ccfc1dfd5b4036d08be3848f2}
+      \strng{bibnamehash}{bbdfa29ccfc1dfd5b4036d08be3848f2}
+      \strng{authorbibnamehash}{bbdfa29ccfc1dfd5b4036d08be3848f2}
+      \strng{authornamehash}{bbdfa29ccfc1dfd5b4036d08be3848f2}
+      \strng{authorfullhash}{bbdfa29ccfc1dfd5b4036d08be3848f2}
+      \strng{authorfullhashraw}{bbdfa29ccfc1dfd5b4036d08be3848f2}
+      \field{labelalpha}{Nen80}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Statistisch-analytische Auswertungen von Marktbeobachtungs-Daten münden oft in Ergebnisse, die weder den theoretischen Erwartungen noch den praktischen Erfahrungen der mit dem Markt vertrauten Manager entsprechen. Unplausible Resultate sind aber meistens die Konsequenz eines Datendefizits, welches gegebenenfalls durch die formale Einbeziehung statistisch bisher nicht genützter apriori-Informationen ohne zusätzliche Kosten abgebaut werden kann. Die Verknüpfung der Informationsteile erfolgt im Rahmen des Bayes'schen Konzeptes. Nach der Vorstellung des notwendigen Instrumentariums der Bayes'schen Inferenz wird im empirischen Teil des Beitrages am Beispiel der Parametrisierung einer Marktreaktionsfunktion mit realen Daten gezeigt, da{\textbackslash} bei sorgfältiger Berücksichtigung des Anfangsbestandes an Marktinformationen plausiblere und verlä{\textbackslash}lichere Ergebnisse zu erwarten sind als im Falle der traditionellen Auswertung von Marktdaten.}
+      \field{issn}{1432-5217}
+      \field{journaltitle}{Zeitschrift für Operations Research}
+      \field{month}{12}
+      \field{number}{8}
+      \field{title}{Bayes'sche {Inferenz} bei der statistischen {Auswertung} von {Marktdaten}}
+      \field{volume}{24}
+      \field{year}{1980}
+      \field{pages}{B259\bibrangedash B273}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1007/BF01918729
+      \endverb
+      \verb{file}
+      \verb BF01918729.pdf:files/368/BF01918729.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF01918729
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF01918729
+      \endverb
+    \endentry
+    \entry{peyrolon_definition_2020}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=79ead70018f9b50cdbfc4213f8419ee7}{%
+           family={Peyrolón},
+           familyi={P\bibinitperiod},
+           given={Pablo},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {de}%
+      }
+      \list{location}{1}{%
+        {Wiesbaden}%
+      }
+      \list{publisher}{1}{%
+        {Springer Fachmedien Wiesbaden}%
+      }
+      \strng{namehash}{79ead70018f9b50cdbfc4213f8419ee7}
+      \strng{fullhash}{79ead70018f9b50cdbfc4213f8419ee7}
+      \strng{fullhashraw}{79ead70018f9b50cdbfc4213f8419ee7}
+      \strng{bibnamehash}{79ead70018f9b50cdbfc4213f8419ee7}
+      \strng{authorbibnamehash}{79ead70018f9b50cdbfc4213f8419ee7}
+      \strng{authornamehash}{79ead70018f9b50cdbfc4213f8419ee7}
+      \strng{authorfullhash}{79ead70018f9b50cdbfc4213f8419ee7}
+      \strng{authorfullhashraw}{79ead70018f9b50cdbfc4213f8419ee7}
+      \field{labelalpha}{Pey20}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Der {Satz} von {Bayes}}
+      \field{isbn}{978-3-658-31022-6 978-3-658-31023-3}
+      \field{note}{Series Title: essentials}
+      \field{title}{Definition des {Satzes} von {Bayes} oder das {Bayes}-{Theorem}}
+      \field{urlday}{25}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \field{pages}{13\bibrangedash 21}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1007/978-3-658-31023-3_2
+      \endverb
+      \verb{file}
+      \verb Peyrolón - 2020 - Definition des Satzes von Bayes oder das Bayes-The.pdf:files/365/Peyrolón - 2020 - Definition des Satzes von Bayes oder das Bayes-The.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/978-3-658-31023-3_2
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/978-3-658-31023-3_2
+      \endverb
+    \endentry
     \entry{pavai_survey_2017}{article}{}{}
       \name{author}{2}{}{%
         {{hash=ec687c32125812f3423d51f5b34e7ed6}{%

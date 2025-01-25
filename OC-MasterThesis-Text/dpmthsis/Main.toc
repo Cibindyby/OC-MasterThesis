@@ -15,13 +15,13 @@
 \contentsline {subsubsection}{\nonumberline Rekombinationsrate mit Offset}{15}{subsubsection*.11}%
 \contentsline {section}{\numberline {2.4}Evolutionärer Operator: Mutation}{15}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Evaluation Fitness, Stopp-Kriterium und Ergebnis}{17}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Bayesian Analyse}{18}{section.2.6}%
-\contentsline {chapter}{\numberline {3}Praktischer Teil}{19}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Aufbau der Experimente}{19}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Testszenarien}{19}{subsection.3.1.1}%
-\contentsline {subsubsection}{\nonumberline Boolean Problems}{19}{subsubsection*.13}%
-\contentsline {subsubsection}{\nonumberline Symbolische Regression}{20}{subsubsection*.15}%
-\contentsline {section}{\numberline {3.2}Ergebnisse}{20}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Fazit aus Ausblick}{23}{chapter.4}%
+\contentsline {section}{\numberline {2.6}Bayes'sche Analyse}{18}{section.2.6}%
+\contentsline {chapter}{\numberline {3}Praktischer Teil}{21}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Aufbau der Experimente}{21}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Testszenarien}{21}{subsection.3.1.1}%
+\contentsline {subsubsection}{\nonumberline Boolean Problems}{21}{subsubsection*.13}%
+\contentsline {subsubsection}{\nonumberline Symbolische Regression}{22}{subsubsection*.15}%
+\contentsline {section}{\numberline {3.2}Ergebnisse}{22}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Fazit aus Ausblick}{25}{chapter.4}%
 \contentsline {chapter}{\numberline {A}Anhang}{I}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

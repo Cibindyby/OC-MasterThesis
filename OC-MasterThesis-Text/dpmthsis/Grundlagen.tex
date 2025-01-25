@@ -423,12 +423,34 @@ Dieses löst das Ausgangsproblem hinreichend gut.
 Andernfalls wird eine weitere Iteration des CGP-Algorithmus gestartet. 
 Dabei werden erneut Selektion, Rekombination und Mutation ausgeführt, um eine bessere Lösung des Ausgangsproblems zu finden.
 
-\section{Bayesian Analyse}
+\section{Bayes'sche Analyse}
 \label{sec:bayesian}
-TODO:
-- Idee Bayesian erklären: Experimente als Blackbox und dann nur Daten als Ausgabe auf Wahrscheinlichkeitsverteilung fitten
-- Plankett-Luce Modell als statistisches Modell für Bayesian: Wahrscheinlichkeit, dass Algorithmus der beste aus allen ist; Rückschlüsse auf Performance der Algorithmen möglich
-- Konfidenzintervall von 95\% verwenden für sinnvolle Aussagen über Endergebnisse; Streuung kann besser beurteilt werden (HPDI Wert)
-- prior sensitivity analysis nicht machen (to ensure robustness of all models)
-- cmpbayes verwendet Markov Chain Monte-Carlo Sampling => Sampler bisschen erklären
-- Hanning Paper für Modell und Sampler verwendet
+
+Für die Evaluation der Ergebnisse werden in diesem Abschnitt statistische Grundlagen zur Bayes'schen Analyse erläutert.\\
+Der Satz von Bayes (Bayes'sches Therorem) bietet Grundlagen zur Berechnung der bedingten Wahrscheinlichkeit.
+Zu Beginn wird eine Anfangshypothese über das Ergebnis eines Wahrscheinlichkeitsproblems angenommen.
+Mit zusätzlichen Informationen wird die Anfangshypothese schließlich korrigiert.
+Das Ergebnis ist eine neue Wahrscheinlichkeit, die alle vorhandenen Informationen einschließt. \cite{peyrolon_definition_2020}
+
+Vereinfacht dargestellt funktioniert die Anwendung des Satzes von Bayes in der Bayes'schen Analyse wie in folgender Abbildung.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.8]{Bilder/bayesianInterence.png}
+	\caption{Bayes'sche Analyse, angelehnt an \cite{nenning_bayessche_1980}}
+	\label{fig:bayesianInference}
+\end{figure}
+
+Zu Beginn wird die Realität als Modell mit bestimmten Annahmen ($\theta$) vereinfacht.
+Diese ursprünglichen Annahmen werden als Wahrscheinlichkeitsverteilung (apriori-Wahrscheinlichkeit) dargestellt. 
+Aus den neuen Daten y kann die sogenannte
+Likelihood-Funktion errechnet werden, die eine Dichtefunktion für die Beobachtung y darstellt unter der Bedingung, dass $\theta$ zutrifft.
+Mit Hilfe des Bayes'schen Theorems können die apriori-Dichtefunktion und die Stichprobeninformationen miteinander verknüpft werden.
+Das Ergebnis ist eine neue Wahrscheinlichkeitsverteilung für $\theta$ (aposteriori-Wahrscheinlichkeit). \cite{nenning_bayessche_1980}
+Mit diesem Vorgehen kann also mit Hilfe von empirischen Daten eine Wahrscheinlichkeitsverteilung für ein Modell gefittet werden.
+
+TODO: Plankett-Luce Modell als statistisches Modell für Bayesian: Wahrscheinlichkeit, dass Algorithmus der beste aus allen ist; Rückschlüsse auf Performance der Algorithmen möglich
+
+TODO: cmpbayes verwendet Markov Chain Monte-Carlo Sampling => Sampler bisschen erklären
+
+TODO: Konfidenzintervall von 95\% verwenden für sinnvolle Aussagen über Endergebnisse; Streuung kann besser beurteilt werden (HPDI Wert)
