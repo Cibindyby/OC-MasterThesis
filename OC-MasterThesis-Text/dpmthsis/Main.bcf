@@ -2437,9 +2437,17 @@
     <bcf:citekey order="72" intorder="1">nenning_bayessche_1980</bcf:citekey>
     <bcf:citekey order="73" intorder="1">nenning_bayessche_1980</bcf:citekey>
     <bcf:citekey order="74" intorder="1">nenning_bayessche_1980</bcf:citekey>
-    <bcf:citekey order="75" intorder="1">cuihen_cuihencgp_with_crossover_strategies_2024</bcf:citekey>
-    <bcf:citekey order="76" intorder="1">kalkreuth_towards_2023</bcf:citekey>
-    <bcf:citekey order="77" intorder="1">cui_equidistant_2023</bcf:citekey>
+    <bcf:citekey order="75" intorder="1">cui_equidistant_2023</bcf:citekey>
+    <bcf:citekey order="76" intorder="1">cui_equidistant_2023</bcf:citekey>
+    <bcf:citekey order="76" intorder="2">calvo_plackett_luce</bcf:citekey>
+    <bcf:citekey order="77" intorder="1">patzel_dpaetzelcmpbayes_2024</bcf:citekey>
+    <bcf:citekey order="78" intorder="1">cui_equidistant_2023</bcf:citekey>
+    <bcf:citekey order="79" intorder="1">patzel_dpaetzelcmpbayes_2024</bcf:citekey>
+    <bcf:citekey order="79" intorder="2">cui_equidistant_2023</bcf:citekey>
+    <bcf:citekey order="80" intorder="1">kruschke_bayesian_estimation</bcf:citekey>
+    <bcf:citekey order="81" intorder="1">cuihen_cuihencgp_with_crossover_strategies_2024</bcf:citekey>
+    <bcf:citekey order="82" intorder="1">kalkreuth_towards_2023</bcf:citekey>
+    <bcf:citekey order="83" intorder="1">cui_equidistant_2023</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">

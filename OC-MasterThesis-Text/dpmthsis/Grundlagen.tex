@@ -447,10 +447,20 @@ Aus den neuen Daten y kann die sogenannte
 Likelihood-Funktion errechnet werden, die eine Dichtefunktion für die Beobachtung y darstellt unter der Bedingung, dass $\theta$ zutrifft.
 Mit Hilfe des Bayes'schen Theorems können die apriori-Dichtefunktion und die Stichprobeninformationen miteinander verknüpft werden.
 Das Ergebnis ist eine neue Wahrscheinlichkeitsverteilung für $\theta$ (aposteriori-Wahrscheinlichkeit). \cite{nenning_bayessche_1980}
-Mit diesem Vorgehen kann also mit Hilfe von empirischen Daten eine Wahrscheinlichkeitsverteilung für ein Modell gefittet werden.
+Mit diesem Vorgehen kann also mit Hilfe von empirischen Daten eine Wahrscheinlichkeitsverteilung für ein Modell gefittet werden.\\
 
-TODO: Plankett-Luce Modell als statistisches Modell für Bayesian: Wahrscheinlichkeit, dass Algorithmus der beste aus allen ist; Rückschlüsse auf Performance der Algorithmen möglich
+In dieser Arbeit werden basierend auf \cite{cui_equidistant_2023} zwei Modelle verwendet: das Plackett-Luce-Modell und das Gammaverteilung-basierte Modell.\\
+Mit Hilfe des Plackett-Luce-Modells können die Wahrscheinlichkeiten berechnet werden, mit denen die jeweiligen CGP-Konfigurationen besser als alle anderen Konfigurationen sind.
+Demnach kann eine Reihenfolge bestimmt werden, die die Effizienz der Konfigurationen sortiert angibt.
+Das verwendete Modell basiert auf dem Plackett-Luce-Modell, das von Calvo et al. eingeführt wird. \cite{cui_equidistant_2023, calvo_plackett_luce}\\
+Der Code von Pätzel (\cite{patzel_dpaetzelcmpbayes_2024}) ermöglicht es mit einem Gammaverteilung-basierten Modell nicht-negative Daten zu vergleichen und daraus die Wahrscheinlichkeitsverteilung von $\mu_config$ zu schätzen.
+$\mu_config$ ist dabei eine zufällige Variable, die dem jeweiligen Mittelwert der Iterationenzahl entspricht, die gebraucht werden, um eine CGP-Lösung konvergieren zu lassen.
+Für jede CPG-Konfiguration kann so ein 95\% HPDI (highest posterior density interval) von $\mu_config$ bestimmt werden.
+Dies bedeutet, dass innerhalb dieses Intervalls 95\% der Ergebnisse liegen. \cite{cui_equidistant_2023}
+Dadurch können die Streuungen der Iterationszahlen für jede CGP-Konfiguration miteinander verglichen werden, ohne von einer gleichverteilten Dichtefunktion ausgehen zu müssen.\\
 
-TODO: cmpbayes verwendet Markov Chain Monte-Carlo Sampling => Sampler bisschen erklären
+Pätzel verwendet in seinem Code das Markov Chain Monte-Carlo (MCMC) Sampling zur Berechnung der Verteilungen \cite{patzel_dpaetzelcmpbayes_2024, cui_equidistant_2023}.
+Bei MCMC werden mehrere Tausend Kombinationen von Parameterwerten ($\mu_1$, $\sigma_1$, $\mu_2$, $\sigma_2$, v) generiert.
+Jede Wertekombination ist repräsentativ für glaubwürdige Parameterwerte, die gleichzeitig die eingehenden Daten und die vorherigen Verteilungen berücksichtigen.
+Diese Parameterwerte werden anschließend in zusammengefasst. \cite{kruschke_bayesian_estimation}
 
-TODO: Konfidenzintervall von 95\% verwenden für sinnvolle Aussagen über Endergebnisse; Streuung kann besser beurteilt werden (HPDI Wert)

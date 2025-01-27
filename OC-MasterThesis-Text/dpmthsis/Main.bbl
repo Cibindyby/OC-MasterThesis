@@ -134,6 +134,62 @@
       \verb http://link.springer.com/10.1007/s10710-019-09361-5
       \endverb
     \endentry
+    \entry{calvo_plackett_luce}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=b1a83bd0e746764e208bce6e72ad441b}{%
+           family={Calvo},
+           familyi={C\bibinitperiod},
+           given={Borja},
+           giveni={B\bibinitperiod}}}%
+        {{hash=b50d6640ffda2f17a15d15fd704f1cd2}{%
+           family={Ceberio},
+           familyi={C\bibinitperiod},
+           given={Josu},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e74af45a9aa9f5d51dcc16745de85135}{%
+           family={Lozano},
+           familyi={L\bibinitperiod},
+           given={Jose\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Kyoto, Japan}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{76b54d1dd6232d7c7ab0c12ecd368040}
+      \strng{fullhash}{76b54d1dd6232d7c7ab0c12ecd368040}
+      \strng{fullhashraw}{76b54d1dd6232d7c7ab0c12ecd368040}
+      \strng{bibnamehash}{76b54d1dd6232d7c7ab0c12ecd368040}
+      \strng{authorbibnamehash}{76b54d1dd6232d7c7ab0c12ecd368040}
+      \strng{authornamehash}{76b54d1dd6232d7c7ab0c12ecd368040}
+      \strng{authorfullhash}{76b54d1dd6232d7c7ab0c12ecd368040}
+      \strng{authorfullhashraw}{76b54d1dd6232d7c7ab0c12ecd368040}
+      \field{labelalpha}{CCL18}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The statistical assessment of the empirical comparison of algorithms is an essential step in heuristic optimization. Classically, researchers have relied on the use of statistical tests. However, recently, concerns about their use have arisen and, in many fields, other (Bayesian) alternatives are being considered. For a proper analysis, different aspects should be considered. In this work we focus on the question: what is the probability of a given algorithm being the best? To tackle this question, we propose a Bayesian analysis based on the Plackett-Luce model over rankings that allows several algorithms to be considered at the same time.}
+      \field{booktitle}{Proceedings of the Genetic and Evolutionary Computation Conference Companion}
+      \field{isbn}{9781450357647}
+      \field{series}{GECCO '18}
+      \field{title}{Bayesian inference for algorithm ranking analysis}
+      \field{year}{2018}
+      \field{pages}{324\bibrangedash 325}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1145/3205651.3205658
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3205651.3205658
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3205651.3205658
+      \endverb
+      \keyw{statistical analysis,ranking models,plackett-luce model,bayesian analysis,algorithm comparison}
+    \endentry
     \entry{affenzeller_positional_2024}{incollection}{}{}
       \name{author}{3}{}{%
         {{hash=200af4ac4fdee2f4cd27797ad17195ed}{%
@@ -1098,6 +1154,36 @@
       \verb http://link.springer.com/10.1007/978-3-642-37207-0
       \endverb
     \endentry
+    \entry{kruschke_bayesian_estimation}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=8c9fdd177e85e0bb82c9faf29f51803d}{%
+           family={Kruschke},
+           familyi={K\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{8c9fdd177e85e0bb82c9faf29f51803d}
+      \strng{fullhash}{8c9fdd177e85e0bb82c9faf29f51803d}
+      \strng{fullhashraw}{8c9fdd177e85e0bb82c9faf29f51803d}
+      \strng{bibnamehash}{8c9fdd177e85e0bb82c9faf29f51803d}
+      \strng{authorbibnamehash}{8c9fdd177e85e0bb82c9faf29f51803d}
+      \strng{authornamehash}{8c9fdd177e85e0bb82c9faf29f51803d}
+      \strng{authorfullhash}{8c9fdd177e85e0bb82c9faf29f51803d}
+      \strng{authorfullhashraw}{8c9fdd177e85e0bb82c9faf29f51803d}
+      \field{labelalpha}{Kru12}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of experimental psychology. General}
+      \field{month}{07}
+      \field{title}{Bayesian Estimation Supersedes the t Test}
+      \field{volume}{142}
+      \field{year}{2012}
+      \verb{doi}
+      \verb 10.1037/a0029146
+      \endverb
+    \endentry
     \entry{miller_cartesian_2020}{article}{}{}
       \name{author}{1}{}{%
         {{hash=707c6e450c0448e2a3ef630bd0bfa21f}{%
@@ -1242,6 +1328,42 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1007/BF01918729
+      \endverb
+    \endentry
+    \entry{patzel_dpaetzelcmpbayes_2024}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=5384df27223bb452d4e3384f2a88f0e2}{%
+           family={Pätzel},
+           familyi={P\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{5384df27223bb452d4e3384f2a88f0e2}
+      \strng{fullhash}{5384df27223bb452d4e3384f2a88f0e2}
+      \strng{fullhashraw}{5384df27223bb452d4e3384f2a88f0e2}
+      \strng{bibnamehash}{5384df27223bb452d4e3384f2a88f0e2}
+      \strng{authorbibnamehash}{5384df27223bb452d4e3384f2a88f0e2}
+      \strng{authornamehash}{5384df27223bb452d4e3384f2a88f0e2}
+      \strng{authorfullhash}{5384df27223bb452d4e3384f2a88f0e2}
+      \strng{authorfullhashraw}{5384df27223bb452d4e3384f2a88f0e2}
+      \field{labelalpha}{Pät24}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{note}{original-date: 2022-03-24T10:52:44Z}
+      \field{title}{dpaetzel/cmpbayes}
+      \field{urlday}{27}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/dpaetzel/cmpbayes
+      \endverb
+      \verb{url}
+      \verb https://github.com/dpaetzel/cmpbayes
       \endverb
     \endentry
     \entry{peyrolon_definition_2020}{incollection}{}{}
