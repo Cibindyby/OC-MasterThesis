@@ -816,6 +816,57 @@
       \verb https://www.mdpi.com/2078-2489/10/12/390
       \endverb
     \endentry
+    \entry{hohil_1999}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=77a789ec6770911d4d580c10996db2e2}{%
+           family={Hohil},
+           familyi={H\bibinitperiod},
+           given={Myron\bibnamedelima E},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=661f1f91238a95e2633af7c18954f6af}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Derong},
+           giveni={D\bibinitperiod}}}%
+        {{hash=08ca9386571fbbb7dade17bb33be0b99}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Stanley\bibnamedelima H},
+           giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{b5787a4a7333ab71a57953f9931f9712}
+      \strng{fullhash}{b5787a4a7333ab71a57953f9931f9712}
+      \strng{fullhashraw}{b5787a4a7333ab71a57953f9931f9712}
+      \strng{bibnamehash}{b5787a4a7333ab71a57953f9931f9712}
+      \strng{authorbibnamehash}{b5787a4a7333ab71a57953f9931f9712}
+      \strng{authornamehash}{b5787a4a7333ab71a57953f9931f9712}
+      \strng{authorfullhash}{b5787a4a7333ab71a57953f9931f9712}
+      \strng{authorfullhashraw}{b5787a4a7333ab71a57953f9931f9712}
+      \field{labelalpha}{HLS99}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this letter, a constructive solution to the N-bit parity problem is provided with a neural network that allows direct connections between the input layer and the output layer. The present approach requires no training and adaptation, and thus it warrants the use of the simple threshold activation function for the output and hidden layer neurons. It is previously shown that this choice of activation function and network structure leads to several solutions for the 3-bit parity problem obtained using linear programming. One of the solutions for the 3-bit parity problem is then generalized to obtain a solution for the N-bit parity problem using ⌊N/2⌋ hidden layer neurons. It is shown that through the choice of a “staircase” type activation function, the ⌊N/2⌋ hidden layer neurons can be further combined into a single hidden layer neuron.}
+      \field{issn}{0893-6080}
+      \field{journaltitle}{Neural Networks}
+      \field{number}{9}
+      \field{title}{Solving the N-bit parity problem using neural networks}
+      \field{volume}{12}
+      \field{year}{1999}
+      \field{pages}{1321\bibrangedash 1323}
+      \range{pages}{3}
+      \verb{doi}
+      \verb https://doi.org/10.1016/S0893-6080(99)00069-6
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0893608099000696
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0893608099000696
+      \endverb
+      \keyw{-bit parity problem,Exclusive-OR problem,Neural networks}
+    \endentry
     \entry{kalkreuth_towards_2023}{inproceedings}{}{}
       \name{author}{6}{}{%
         {{hash=191998c928f7d855e0b7952e1dfe679f}{%
@@ -951,6 +1002,94 @@
       \verb https://www.scitepress.org/DigitalLibrary/Link.aspx?doi=10.5220/0010110700590070
       \endverb
       \keyw{Regression}
+    \endentry
+    \entry{kaufmann_kalkreuth_2017}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=1dc542593f31bf4ee89d0234a7d14c34}{%
+           family={Kaufmann},
+           familyi={K\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=191998c928f7d855e0b7952e1dfe679f}{%
+           family={Kalkreuth},
+           familyi={K\bibinitperiod},
+           given={Roman},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Germany}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{0c5078db2d02c84516247c6483faef26}
+      \strng{fullhash}{0c5078db2d02c84516247c6483faef26}
+      \strng{fullhashraw}{0c5078db2d02c84516247c6483faef26}
+      \strng{bibnamehash}{0c5078db2d02c84516247c6483faef26}
+      \strng{authorbibnamehash}{0c5078db2d02c84516247c6483faef26}
+      \strng{authornamehash}{0c5078db2d02c84516247c6483faef26}
+      \strng{authorfullhash}{0c5078db2d02c84516247c6483faef26}
+      \strng{authorfullhashraw}{0c5078db2d02c84516247c6483faef26}
+      \field{extraname}{1}
+      \field{labelalpha}{KK17}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Since its introduction two decades ago, the way researchers parameterized and optimized Cartesian Genetic Programming (CGP) remained almost unchanged. In this work we investigate non-standard parameterizations and optimization algorithms for CGP. We show that the conventional way of using CGP, i.e. configuring it as a single line optimized by an (1+4) Evolutionary Strategies-style search scheme, is a very good choice but that rectangular CGP geometries and more elaborate metaheuristics, such as Simulated Annealing, can lead to faster convergence rates.}
+      \field{booktitle}{Proceedings of the Genetic and Evolutionary Computation Conference Companion}
+      \field{isbn}{9781450349390}
+      \field{series}{GECCO '17}
+      \field{title}{An empirical study on the parametrization of cartesian genetic programming}
+      \field{year}{2017}
+      \field{pages}{231\bibrangedash 232}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1145/3067695.3075980
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3067695.3075980
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3067695.3075980
+      \endverb
+    \endentry
+    \entry{kaufmann_kalkreuth_2020}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=1dc542593f31bf4ee89d0234a7d14c34}{%
+           family={Kaufmann},
+           familyi={K\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=191998c928f7d855e0b7952e1dfe679f}{%
+           family={Kalkreuth},
+           familyi={K\bibinitperiod},
+           given={Roman},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{0c5078db2d02c84516247c6483faef26}
+      \strng{fullhash}{0c5078db2d02c84516247c6483faef26}
+      \strng{fullhashraw}{0c5078db2d02c84516247c6483faef26}
+      \strng{bibnamehash}{0c5078db2d02c84516247c6483faef26}
+      \strng{authorbibnamehash}{0c5078db2d02c84516247c6483faef26}
+      \strng{authornamehash}{0c5078db2d02c84516247c6483faef26}
+      \strng{authorfullhash}{0c5078db2d02c84516247c6483faef26}
+      \strng{authorfullhashraw}{0c5078db2d02c84516247c6483faef26}
+      \field{extraname}{2}
+      \field{labelalpha}{KK20}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2020 IEEE Congress on Evolutionary Computation (CEC)}
+      \field{title}{On the Parameterization of Cartesian Genetic Programming}
+      \field{year}{2020}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/CEC48606.2020.9185492
+      \endverb
+      \keyw{Genetic programming;Wires;Encoding;Convergence;Optimization;Next generation networking;Cartesian Genetic Programming}
     \endentry
     \entry{koza_survey_1995}{inproceedings}{}{}
       \name{author}{1}{}{%
@@ -1678,6 +1817,215 @@
       \endverb
       \verb{url}
       \verb https://link.springer.com/10.1007/s11063-022-11093-0
+      \endverb
+    \endentry
+    \entry{white_better_2013}{article}{}{}
+      \name{author}{9}{}{%
+        {{hash=d186798474471837a060bdce47c062bf}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={David\bibnamedelima R.},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=77fb39006a46585a774e002f399ce8af}{%
+           family={McDermott},
+           familyi={M\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=48e8e1d8c5932a910f283fd008da6699}{%
+           family={Castelli},
+           familyi={C\bibinitperiod},
+           given={Mauro},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c75b73d8372a27598eec1eea1a5a4d23}{%
+           family={Manzoni},
+           familyi={M\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod}}}%
+        {{hash=137c6c8f2af2fa3ab9ea04faa906beff}{%
+           family={Goldman},
+           familyi={G\bibinitperiod},
+           given={Brian\bibnamedelima W.},
+           giveni={B\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=4e7fc4ce8d355b40d67bf4aa32cac29a}{%
+           family={Kronberger},
+           familyi={K\bibinitperiod},
+           given={Gabriel},
+           giveni={G\bibinitperiod}}}%
+        {{hash=21391672aad15c933c93005bcca0c304}{%
+           family={Jaśkowski},
+           familyi={J\bibinitperiod},
+           given={Wojciech},
+           giveni={W\bibinitperiod}}}%
+        {{hash=f6d4990c9fda5c2ac225c017a584c3ad}{%
+           family={O’Reilly},
+           familyi={O\bibinitperiod},
+           given={Una-May},
+           giveni={U\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=fc0da695d3774401949060e332fa8677}{%
+           family={Luke},
+           familyi={L\bibinitperiod},
+           given={Sean},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{ae281e650d14b9ae33c124a24d0d1e24}
+      \strng{fullhash}{35bc3ff96f05868668d84f467e88add0}
+      \strng{fullhashraw}{35bc3ff96f05868668d84f467e88add0}
+      \strng{bibnamehash}{ae281e650d14b9ae33c124a24d0d1e24}
+      \strng{authorbibnamehash}{ae281e650d14b9ae33c124a24d0d1e24}
+      \strng{authornamehash}{ae281e650d14b9ae33c124a24d0d1e24}
+      \strng{authorfullhash}{35bc3ff96f05868668d84f467e88add0}
+      \strng{authorfullhashraw}{35bc3ff96f05868668d84f467e88add0}
+      \field{labelalpha}{Whi+13}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We present the results of a community survey regarding genetic programming benchmark practices. Analysis shows broad consensus that improvement is needed in problem selection and experimental rigor. While views expressed in the survey dissuade us from proposing a large-scale benchmark suite, we ﬁnd community support for creating a ‘‘blacklist’’ of problems which are in common use but have important ﬂaws, and whose use should therefore be discouraged. We propose a set of possible replacement problems.}
+      \field{issn}{1389-2576, 1573-7632}
+      \field{journaltitle}{Genetic Programming and Evolvable Machines}
+      \field{month}{3}
+      \field{number}{1}
+      \field{shorttitle}{Better {GP} benchmarks}
+      \field{title}{Better {GP} benchmarks: community survey results and proposals}
+      \field{urlday}{16}
+      \field{urlmonth}{9}
+      \field{urlyear}{2024}
+      \field{volume}{14}
+      \field{year}{2013}
+      \field{urldateera}{ce}
+      \field{pages}{3\bibrangedash 29}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.1007/s10710-012-9177-2
+      \endverb
+      \verb{file}
+      \verb White et al. - 2013 - Better GP benchmarks community survey results and.pdf:files/287/White et al. - 2013 - Better GP benchmarks community survey results and.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/s10710-012-9177-2
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/s10710-012-9177-2
+      \endverb
+    \endentry
+    \entry{walker_2008}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=947fbc85c85bae243c1abbbdb3abfad2}{%
+           family={Walker},
+           familyi={W\bibinitperiod},
+           given={James\bibnamedelima Alfred},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=707c6e450c0448e2a3ef630bd0bfa21f}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Julian\bibnamedelima Francis},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{ea3e1cf3c7c683b889d8da43d73bc7ac}
+      \strng{fullhash}{ea3e1cf3c7c683b889d8da43d73bc7ac}
+      \strng{fullhashraw}{ea3e1cf3c7c683b889d8da43d73bc7ac}
+      \strng{bibnamehash}{ea3e1cf3c7c683b889d8da43d73bc7ac}
+      \strng{authorbibnamehash}{ea3e1cf3c7c683b889d8da43d73bc7ac}
+      \strng{authornamehash}{ea3e1cf3c7c683b889d8da43d73bc7ac}
+      \strng{authorfullhash}{ea3e1cf3c7c683b889d8da43d73bc7ac}
+      \strng{authorfullhashraw}{ea3e1cf3c7c683b889d8da43d73bc7ac}
+      \field{labelalpha}{WM08}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Evolutionary Computation}
+      \field{number}{4}
+      \field{title}{The Automatic Acquisition, Evolution and Reuse of Modules in Cartesian Genetic Programming}
+      \field{volume}{12}
+      \field{year}{2008}
+      \field{pages}{397\bibrangedash 417}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1109/TEVC.2007.903549
+      \endverb
+      \keyw{Genetic programming;Circuit testing;Benchmark testing;Digital circuits;Algorithms;Tree graphs;Encapsulation;Assembly;Automatically defined functions (ADFs);Cartesian genetic programming (CGP);embedded Cartesian genetic programming (ECGP);genetic programming (GP);graph-based representations;modularity;module acquisition;Automatically defined functions (ADFs);Cartesian genetic programming (CGP);embedded Cartesian genetic programming (ECGP);genetic programming (GP);graph-based representations;modularity;module acquisition}
+    \endentry
+    \entry{yu_neutrality_2001}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=124223a0aa483da97437981c95e51871}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Tina},
+           giveni={T\bibinitperiod}}}%
+        {{hash=138df81bd2309119d1d83b856026ab00}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Julian},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{editor}{6}{}{%
+        {{hash=138df81bd2309119d1d83b856026ab00}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Julian},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f4a578b97c2ebf8c23a1ce021ba2eb00}{%
+           family={Tomassini},
+           familyi={T\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=433e7ec680a759516559c049fab5fae1}{%
+           family={Lanzi},
+           familyi={L\bibinitperiod},
+           given={Pier\bibnamedelima Luca},
+           giveni={P\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=f4a76e3192428c449e76fe826182f443}{%
+           family={Ryan},
+           familyi={R\bibinitperiod},
+           given={Conor},
+           giveni={C\bibinitperiod}}}%
+        {{hash=cf37a7b4d71dbc3d832b939e8f0c4b32}{%
+           family={Tettamanzi},
+           familyi={T\bibinitperiod},
+           given={Andrea\bibnamedelimb G.\bibnamedelimi B.},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=a636929892867056989b0efeaec1e145}{%
+           family={Langdon},
+           familyi={L\bibinitperiod},
+           given={William\bibnamedelima B.},
+           giveni={W\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{8e9d2283715ff4ecb0add9edd21e402a}
+      \strng{fullhash}{8e9d2283715ff4ecb0add9edd21e402a}
+      \strng{fullhashraw}{8e9d2283715ff4ecb0add9edd21e402a}
+      \strng{bibnamehash}{8e9d2283715ff4ecb0add9edd21e402a}
+      \strng{authorbibnamehash}{8e9d2283715ff4ecb0add9edd21e402a}
+      \strng{authornamehash}{8e9d2283715ff4ecb0add9edd21e402a}
+      \strng{authorfullhash}{8e9d2283715ff4ecb0add9edd21e402a}
+      \strng{authorfullhashraw}{8e9d2283715ff4ecb0add9edd21e402a}
+      \strng{editorbibnamehash}{ff5fe344abbea9de9831ca8abb4aefe3}
+      \strng{editornamehash}{ff5fe344abbea9de9831ca8abb4aefe3}
+      \strng{editorfullhash}{4d4bf93a4e7d33d240743e3f461473b0}
+      \strng{editorfullhashraw}{4d4bf93a4e7d33d240743e3f461473b0}
+      \field{labelalpha}{YM01}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This work is a study of neutrality in the context of Evolutionary Computation systems. In particular, we introduce the use of explicit neutrality with an integer string coding scheme to allow neutrality to be measured during evolution. We tested this method on a Boolean benchmark problem. The experimental results indicate that there is a positive relationship between neutrality and evolvability: neutrality improves evolvability. We also identify four characteristics of adaptive/neutral mutations that are associated with high evolvability. They may be the ingredients in designing effective Evolutionary Computation systems for the Boolean class problem.}
+      \field{booktitle}{Genetic {Programming}}
+      \field{isbn}{978-3-540-45355-0}
+      \field{title}{Neutrality and the {Evolvability} of {Boolean} {Function} {Landscape}}
+      \field{year}{2001}
+      \field{pages}{204\bibrangedash 217}
+      \range{pages}{14}
+      \verb{file}
+      \verb Yu und Miller - 2001 - Neutrality and the Evolvability of Boolean Functio.pdf:files/377/Yu und Miller - 2001 - Neutrality and the Evolvability of Boolean Functio.pdf:application/pdf
       \endverb
     \endentry
   \enddatalist

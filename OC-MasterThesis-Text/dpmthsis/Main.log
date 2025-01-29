@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  27 JAN 2025 14:06
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  29 JAN 2025 22:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2292,13 +2292,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--24
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--30
+Underfull \hbox (badness 10000) in paragraph at lines 25--31
 
  []
 
 
 
 [21]
+Underfull \hbox (badness 10000) in paragraph at lines 32--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--41
+
+ []
+
+
 
 [22]) (./Fazit.tex
 
@@ -2356,14 +2366,21 @@ LinLibertine(0)/m/n/10.95 : 9798400701207.
  []
 
 
+Overfull \hbox (13.3813pt too wide) in paragraph at lines 50--50
+\TU/LinLibertine(0)/m/n/10.95 ny: Association for Computing Machinery, 2017, S.
+ 231–232. \TU/LinLibertine(0)/m/sc/10.95 isbn\TU/LinLibertine(0)/m/n/10.95 : 97
+81450349390.
+ []
+
+
+
+[29]
 Overfull \hbox (1.4203pt too wide) in paragraph at lines 50--50
 []\TU/LinLibertine(0)/m/n/10.95 M. Nenning. „  Bayes’sche Inferenz bei der stat
 istischen Auswertung von Markt-
  []
 
 
-
-[29]
 Overfull \hbox (4.25897pt too wide) in paragraph at lines 50--50
 []\TU/LinLibertine(0)/m/n/10.95 David Pätzel. \TU/LinLibertine(0)/m/it/10.95 dp
 aetzel/cmpbayes\TU/LinLibertine(0)/m/n/10.95 . original-date: 2022-03-24T10:52:
@@ -2379,12 +2396,17 @@ Overfull \hbox (11.8301pt too wide) in paragraph at lines 50--50
 
 
 [30]
+
+[31]
+
+[32
+
+
+]
 chapter A.
 
 
 [1
-
-
 
 
 ] (./Main.aux)
@@ -2403,12 +2425,12 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47628 strings out of 473889
- 1004198 string characters out of 5734826
- 1929349 words of memory out of 5000000
- 70019 multiletter control sequences out of 15000+600000
+ 47651 strings out of 473889
+ 1005883 string characters out of 5734826
+ 1929775 words of memory out of 5000000
+ 70042 multiletter control sequences out of 15000+600000
  562633 words of font info for 98 fonts, out of 8000000 for 9000
  1350 hyphenation exceptions out of 8191
  122i,17n,136p,10900b,6837s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Main.pdf (39 pages).
+Output written on Main.pdf (41 pages).

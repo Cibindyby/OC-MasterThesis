@@ -17,19 +17,27 @@ Diese werden in den folgenden Abschnitten näher betrachtet.
 \label{subsubsec:booleanProblems}
 
 Nach der Aussage von Kalkreuth et al. spielen Boolean Problems eine wichtige Rolle in der Forschung zu GP.
-Grundsätzlich ist bei Boolean Problems das Ziel einen sinnvollen Zusammenhang zwischen Ein- und Ausgaben zu generieren.
-Dieser wird von Boolean Funktionen bestimmt, welche wiederum durch Boolean-Ausdrücke mathematisch beschrieben werden können.
+Grundsätzlich ist bei Boolean Problems das Ziel einen sinnvollen Zusammenhang zwischen Ein- und Ausgaben zu generieren, welcher von Boolean Funktionen bestimmt wird.
+Diese können wiederum durch Boolean Ausdrücke mathematisch beschrieben werden.
 Die verschiedenen Boolean Funktionen können durch Wahrheitstabellen dargestellt werden, in denen die jeweiligen Ein- und Ausgaben miteinander verknüpft werden. \cite{kalkreuth_towards_2023}
 Das Ziel von CGP-Algorithmen ist es aus Eingängen die richtigen Ausgänge zu generieren, welche dem Mapping der Boolean Funktionen entsprechen.\\
 
-Insgesamt werden in dieser Arbeit vier Boolean Benchmark Problems für die Evaluation der CGP Algorithmen betrachtet.
-Die Auswahl dieser beruht auf der Argumentationskette von Cui et al., die für sinnvoll befunden wird.
+Insgesamt werden in dieser Arbeit vier Boolean Benchmark Problems für die Evaluation der CGP Algorithmen betrachtet: 3-bit Parity, 16-4-bit Encode, 4-16-bit Decode und 3-bit Multiply (vereinfacht bezeichnet als Parity, Encode, Decode und Multiply).
+Die Auswahl dieser beruht auf der Argumentationskette von Cui et al., die für sinnvoll befunden wird. \cite{cui_equidistant_2023}\\
+Obwohl Parity als zu leichtes Ausgangsproblem für GP bezeichnet wird \cite{white_better_2013}, wird es häufig als Benchmarkproblem genutzt \cite{yu_neutrality_2001, kaufmann_kalkreuth_2017, kaufmann_kalkreuth_2020}.
+Um Benchmarkprobleme mit unterschiedlichen Ein- und Ausgangsgrößen miteinzubeziehen, werden Encode und Decode verwendet.
+Sinnvoll ist es ebenfalls Testprobleme verschiedener Schwierigkeitsstufen zu bewerten.
+Multiply ist dabei ein vergleichsweise schwer zu lösendes Testproblem und wird deswegen herangezogen \cite{walker_2008}.\\
 
-TODO: hier die Argumente für die Auswahl dieser vier BBP treffen -> für Argumentationskette Henning zitieren und deren Quellen mit angeben\\
-\cite{cui_equidistant_2023}\\
+Das verwendete Standardfunktionsset aller vier Testszenarien beinhaltet die Boolean Rechenoperatoren AND, OR, NAND und NOR.
+Außerdem wird die Standardfitnessfunktion für Boolean Benchmarkprobleme verwendet.
+Diese wird definiert durch den Anteil an korrekt zugeordneten Bits. \cite{cui_equidistant_2023}\\
 
-
-TODO: Die vier Probleme näher beschreiben: Inputs, Outputs und Berechnung
+Folgend werden die vier verwendeten Boolean Benchmark Problems näher erläutert:\\
+\textbf{Parity:} \cite{hohil_1999}TODO: Anzahl In/Outputs, Berechnung\\
+\textbf{Encode:} TODO: Anzahl In/Outputs, Berechnung\\
+\textbf{Decode:} TODO: Anzahl In/Outputs, Berechnung\\
+\textbf{Multiply:} TODO: Anzahl In/Outputs, Berechnung\\
 
 \subsubsection{Symbolische Regression}
 \label{subsubsec:symbolicRegression}
