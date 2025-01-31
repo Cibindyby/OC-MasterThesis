@@ -32,6 +32,7 @@ Multiply ist dabei ein vergleichsweise schwer zu lösendes Testproblem und wird 
 Das verwendete Standardfunktionsset aller vier Testszenarien beinhaltet die Boolean Rechenoperatoren AND, OR, NAND und NOR.
 Außerdem wird die Standardfitnessfunktion für Boolean Benchmarkprobleme verwendet.
 Diese wird definiert durch den Anteil an korrekt zugeordneten Bits. \cite{cui_equidistant_2023}
+Das Stopp-Kriterium ist erfüllt, wenn die Fitness den Wert 0 erreicht.
 Folgend werden die vier verwendeten Boolean Benchmark Problems näher erläutert:
 
 \textbf{Parity:} N-bit Parity ist eine Mapping-Funktion, die angibt, ob die Summe der Komponenten eines Binär-Vektors gerade oder ungerade ist.
@@ -58,6 +59,50 @@ Der Testdatensatz besteht aus $2^6=64$ verschiedenen Kombinationen der mögliche
 
 \subsubsection{Symbolische Regression}
 \label{subsubsec:symbolicRegression}
+
+Symbolische Regression (SR) zählt seit Beginn von GP als Grundlage für methodologische Forschung und als primäres Anwendungsgebiet \cite{orzechowski}.
+Das Ziel von SR ist das Erlernen einer Beziehung zwischen Ein- und Ausgängen nur aufgrund von gegebenen Daten.
+Diese Beziehung beruht auf interpretierbaren mathematischen Ausdrücken.
+Der Fehler von errechnetem und vorgegebenem Ausgang pro Eingang soll dabei minimiert werden. \cite{makke_interpretable_2024}
+
+Die in dieser Arbeit verwendeten SR Probleme werden aus dem Paper von Cui et al. übernommen: Keijzer-6, Koza-3, Nguyen-7.
+Im folgenden werden diese durch Keijzer, Koza und Nguyen abgekürzt.
+Sie sind von der GP-Community empfohlen und wurden bereits in früheren Arbeiten verwendet
+\cite{white_better_2013, kalkreuth_comprehensive_2020}. Die Pagie-1 Funktion wurde in dieser Arbeit aus Gründen des zeitlichen Rahmens nicht näher betrachtet. \\
+Der verwendete Funktionssatz besteht aus den folgenden acht mathematischen Funktionen: Addition, Subtraktion, Multiplikation, Division, Sinus, Cosinus, natürlicher Logarithmus und Exponentialfunktion.
+Bei der Division wird sichergestellt, dass eine Division durch null abgefangen wird. \cite{affenzeller_positional_2024}
+Dabei wird der Wert 1,0 ausgegeben, statt eine Division auszuführen.
+Zur Absicherung des natürlichen Logarithmus werden für alle Eingaben nur die absoluten Werte in die Berechnung einbezogen.
+Für den Fall, dass die Eingabe gleich 0 ist, wird vergleichbar zur Division der Wert 1,0 zurückgegeben.
+Da es bei der Programmierung mit Julia zu Fehlern kommen kann, wenn die Eingaben von Sinus oder Cosinus zu groß sind, werden diese Fälle ebenfalls abgefangen.
+Dabei werden die Eingaben nicht weiter verrechnet sondern durchgereicht.\\
+Für die Berechnung der Fitness wird der mittlere absolute Fehler zwischen vorhergesagter und tatsächlicher Ausgabe pro Eingabe berechnet.
+Das Stopp-Kriterium ist erfüllt, sobald die Fitness den Wert 0,01 unterschreitet. \cite{affenzeller_positional_2024}\\
+Die folgende Tabelle beschreibt die verwendeten SR Probleme näher.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{l | c | c | c | c}
+		Name & Variablen & Gleichung & Trainingsdatensatz & Testdatensatz\\
+		\hline
+		Keijzer & 1 & $\sum\limits_{i}^{x}\frac{1}{i}$ & E[1, 50, 1] & E[1, 120, 1]\\
+		\hline
+		Koza & 1 & $x^6−2\cdot x^4+x^2$ & U[−1, 1, 20] & -\\
+		\hline
+		Nguyen & 1 & $ln(x + 1) + ln(x^2 + 1)$ & U[0, 2, 20]  & -\\
+	\end{tabular}
+	\caption{Beschreibung SR Benchmark Problems nach \cite{affenzeller_positional_2024}}
+	\label{table:SRProblems}
+\end{table}
+
+Zu beobachten ist, dass in unterschiedlichen Papern verschiedene Keijzer-6 Funktionen beschrieben werden \cite{oliveira_analysing_2018, li_generative_2024, kommenda_local_2018}. 
+In dieser Arbeit wurden alle SR Benchmark Probleme auf das Paper von Cui et al. bezogen \cite{affenzeller_positional_2024}.
+
+\subsection{CGP-Konfigurationen}
+\label{subsec:CGPkonfigurationen}
+
+In dieser Arbeit werden unterschiedliche CGP-Konfigurationen evaluiert. Diese werden in diesem Abschnitt näher beschrieben.\\
+TODO: Konfigurationen beschreiben -> Selektion, Mutation, Rekombination, Raten; dann Tabelle die alle Kombinationen listet
 
 \section{Evaluation}
 \label{sec:Evaluation}

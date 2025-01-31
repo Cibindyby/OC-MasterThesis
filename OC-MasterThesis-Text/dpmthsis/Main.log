@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  31 JAN 2025 11:33
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  31 JAN 2025 17:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2302,27 +2302,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--31
 
 [22]
 
-[23]) (./Ergebnisse.tex
+[23]
 
-[24]
-chapter 4.
-) (./Fazit.tex
+[24]) (./Ergebnisse.tex
 
-[25
+[25]
+
+[26
 
 
 ]
+chapter 4.
+) (./Fazit.tex
 
-[26
+[27]
+
+[28
 
 
 ]
 chapter 5.
 )
 
-[27]
+[29]
 
-[28
+[30
 
 
 ]
@@ -2334,7 +2338,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 
-[29]
+[31]
 Overfull \hbox (3.8058pt too wide) in paragraph at lines 51--51
 \TU/LinLibertine(0)/m/n/10.95 758-674-3. \TU/LinLibertine(0)/m/sc/10.95 doi\TU/
 LinLibertine(0)/m/n/10.95 : []$[][] [] [][][][] [] [][][][][][][][][][][][][][]
@@ -2351,7 +2355,7 @@ GP_with_Crossover_Strategies\TU/LinLibertine(0)/m/n/10.95 . original-date: 2024
 
 
 
-[30]
+[32]
 Overfull \hbox (3.7585pt too wide) in paragraph at lines 51--51
 []\TU/LinLibertine(0)/m/n/10.95 Roman Kalkreuth u.a. „  Towards a General Boole
 an Function Benchmark Suite“.
@@ -2373,13 +2377,15 @@ Overfull \hbox (13.3813pt too wide) in paragraph at lines 51--51
 
 
 
-[31]
+[33]
 Overfull \hbox (1.4203pt too wide) in paragraph at lines 51--51
 []\TU/LinLibertine(0)/m/n/10.95 M. Nenning. „  Bayes’sche Inferenz bei der stat
 istischen Auswertung von Markt-
  []
 
 
+
+[34]
 Overfull \hbox (4.25897pt too wide) in paragraph at lines 51--51
 []\TU/LinLibertine(0)/m/n/10.95 David Pätzel. \TU/LinLibertine(0)/m/it/10.95 dp
 aetzel/cmpbayes\TU/LinLibertine(0)/m/n/10.95 . original-date: 2022-03-24T10:52:
@@ -2387,8 +2393,6 @@ aetzel/cmpbayes\TU/LinLibertine(0)/m/n/10.95 . original-date: 2022-03-24T10:52:
  []
 
 
-
-[32]
 Overfull \hbox (11.8301pt too wide) in paragraph at lines 51--51
 []\TU/LinLibertine(0)/m/n/10.95 José Eduardo da Silva und Heder S. Bernardino. 
 „  Cartesian Genetic Programming
@@ -2396,9 +2400,9 @@ Overfull \hbox (11.8301pt too wide) in paragraph at lines 51--51
 
 
 
-[33]
+[35]
 
-[34]
+[36]
 chapter A.
 
 
@@ -2423,12 +2427,12 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47672 strings out of 473889
- 1006610 string characters out of 5734826
- 1929959 words of memory out of 5000000
- 70060 multiletter control sequences out of 15000+600000
+ 47700 strings out of 473889
+ 1007752 string characters out of 5734826
+ 1930484 words of memory out of 5000000
+ 70088 multiletter control sequences out of 15000+600000
  562633 words of font info for 98 fonts, out of 8000000 for 9000
  1350 hyphenation exceptions out of 8191
  122i,17n,136p,10900b,6837s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Main.pdf (43 pages).
+Output written on Main.pdf (45 pages).

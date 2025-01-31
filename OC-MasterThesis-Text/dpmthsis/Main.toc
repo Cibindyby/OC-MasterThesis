@@ -21,8 +21,9 @@
 \contentsline {subsection}{\numberline {3.1.1}Testszenarien}{21}{subsection.3.1.1}%
 \contentsline {subsubsection}{\nonumberline Boolean Problems}{21}{subsubsection*.13}%
 \contentsline {subsubsection}{\nonumberline Symbolische Regression}{23}{subsubsection*.15}%
-\contentsline {section}{\numberline {3.2}Evaluation}{23}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Ergebnisse}{25}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Fazit aus Ausblick}{27}{chapter.5}%
+\contentsline {subsection}{\numberline {3.1.2}CGP-Konfigurationen}{24}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Evaluation}{24}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Ergebnisse}{27}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Fazit aus Ausblick}{29}{chapter.5}%
 \contentsline {chapter}{\numberline {A}Anhang}{I}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

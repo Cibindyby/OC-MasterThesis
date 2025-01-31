@@ -1190,6 +1190,51 @@
       \endverb
       \keyw{Genetic programming;Wires;Encoding;Convergence;Optimization;Next generation networking;Cartesian Genetic Programming}
     \endentry
+    \entry{kommenda_local_2018}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=62a8866eed8af86dbee0b242c87525d2}{%
+           family={Kommenda},
+           familyi={K\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Johannes Kepler University Linz}%
+      }
+      \list{location}{1}{%
+        {Linz, Austria}%
+      }
+      \strng{namehash}{62a8866eed8af86dbee0b242c87525d2}
+      \strng{fullhash}{62a8866eed8af86dbee0b242c87525d2}
+      \strng{fullhashraw}{62a8866eed8af86dbee0b242c87525d2}
+      \strng{bibnamehash}{62a8866eed8af86dbee0b242c87525d2}
+      \strng{authorbibnamehash}{62a8866eed8af86dbee0b242c87525d2}
+      \strng{authornamehash}{62a8866eed8af86dbee0b242c87525d2}
+      \strng{authorfullhash}{62a8866eed8af86dbee0b242c87525d2}
+      \strng{authorfullhashraw}{62a8866eed8af86dbee0b242c87525d2}
+      \field{labelalpha}{Kom18}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Local {Optimization} and {Complexity} {Control} for {Symbolic} {Regression}}
+      \field{type}{Dissertation}
+      \field{urlday}{31}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Local Optimization and Complexity Control for Symbolic Regression.pdf:files/396/Local Optimization and Complexity Control for Symbolic Regression.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://resolver.obvsg.at/urn:nbn:at:at-ubl:1-21036
+      \endverb
+      \verb{url}
+      \verb https://resolver.obvsg.at/urn:nbn:at:at-ubl:1-21036
+      \endverb
+      \keyw{Genetische Programmierung,Levenberg-Marquardt-Algorithmus,Pareto-Verteilung,Regressionsmodell}
+    \endentry
     \entry{koza_survey_1995}{inproceedings}{}{}
       \name{author}{1}{}{%
         {{hash=34e11484ceb01437ef4dab79c4b8c38d}{%
@@ -1422,6 +1467,129 @@
       \verb 10.1037/a0029146
       \endverb
     \endentry
+    \entry{li_generative_2024}{misc}{}{}
+      \name{author}{9}{}{%
+        {{hash=e37598c4ce1aa1fb674325b4d0d3c2fe}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yanjie},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=c8ec4667cea281ee8f1e8c044a97fb76}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Weijun},
+           giveni={W\bibinitperiod}}}%
+        {{hash=4f8698d60b6c6054467b587741dd6c34}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Lina},
+           giveni={L\bibinitperiod}}}%
+        {{hash=95b6d28f9dd62176f72f62fc7c148126}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Min},
+           giveni={M\bibinitperiod}}}%
+        {{hash=6c75aa6c36387de874c31c37d57afeb5}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Jingyi},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2df376a25a1e579a9bacf942536215f3}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Wenqiang},
+           giveni={W\bibinitperiod}}}%
+        {{hash=55b90e266db9604cbac2e21b1ab90d2f}{%
+           family={Hao},
+           familyi={H\bibinitperiod},
+           given={Meilan},
+           giveni={M\bibinitperiod}}}%
+        {{hash=511645b7c20ba1c96f5d90fd7399ce22}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={Shu},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7a8e080c590bb07ddef678eb2e283bca}{%
+           family={Deng},
+           familyi={D\bibinitperiod},
+           given={Yusong},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{c7c09d8d5850e57de63a28fdfde51592}
+      \strng{fullhash}{c7ac98a0c81531e55e1e7b57e6bc3103}
+      \strng{fullhashraw}{c7ac98a0c81531e55e1e7b57e6bc3103}
+      \strng{bibnamehash}{c7c09d8d5850e57de63a28fdfde51592}
+      \strng{authorbibnamehash}{c7c09d8d5850e57de63a28fdfde51592}
+      \strng{authornamehash}{c7c09d8d5850e57de63a28fdfde51592}
+      \strng{authorfullhash}{c7ac98a0c81531e55e1e7b57e6bc3103}
+      \strng{authorfullhashraw}{c7ac98a0c81531e55e1e7b57e6bc3103}
+      \field{labelalpha}{Li+24}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\_eprint: 2404.06330}
+      \field{title}{Generative {Pre}-{Trained} {Transformer} for {Symbolic} {Regression} {Base} {In}-{Context} {Reinforcement} {Learning}}
+      \field{year}{2024}
+      \verb{file}
+      \verb Li et al. - 2024 - Generative Pre-Trained Transformer for Symbolic Re.pdf:files/400/Li et al. - 2024 - Generative Pre-Trained Transformer for Symbolic Re.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2404.06330
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2404.06330
+      \endverb
+    \endentry
+    \entry{makke_interpretable_2024}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=2d403d51e733236c6bde2075b1613e3f}{%
+           family={Makke},
+           familyi={M\bibinitperiod},
+           given={Nour},
+           giveni={N\bibinitperiod}}}%
+        {{hash=54ff2f270b001c9403fc0563fe52d8aa}{%
+           family={Chawla},
+           familyi={C\bibinitperiod},
+           given={Sanjay},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{a7f157d3d7b7d9b1c66fbf91834f8e76}
+      \strng{fullhash}{a7f157d3d7b7d9b1c66fbf91834f8e76}
+      \strng{fullhashraw}{a7f157d3d7b7d9b1c66fbf91834f8e76}
+      \strng{bibnamehash}{a7f157d3d7b7d9b1c66fbf91834f8e76}
+      \strng{authorbibnamehash}{a7f157d3d7b7d9b1c66fbf91834f8e76}
+      \strng{authornamehash}{a7f157d3d7b7d9b1c66fbf91834f8e76}
+      \strng{authorfullhash}{a7f157d3d7b7d9b1c66fbf91834f8e76}
+      \strng{authorfullhashraw}{a7f157d3d7b7d9b1c66fbf91834f8e76}
+      \field{labelalpha}{MC24}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Symbolic regression is emerging as a promising machine learning method for learning succinct underlying interpretable mathematical expressions directly from data. Whereas it has been traditionally tackled with genetic programming, it has recently gained a growing interest in deep learning as a data-driven model discovery tool, achieving significant advances in various application domains ranging from fundamental to applied sciences. In this survey, we present a structured and comprehensive overview of symbolic regression methods, review the adoption of these methods for model discovery in various areas, and assess their effectiveness. We have also grouped state-of-the-art symbolic regression applications in a categorized manner in a living review.}
+      \field{issn}{1573-7462}
+      \field{journaltitle}{Artificial Intelligence Review}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Interpretable scientific discovery with symbolic regression: a review}
+      \field{volume}{57}
+      \field{year}{2024}
+      \field{pages}{2}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1007/s10462-023-10622-0
+      \endverb
+      \verb{file}
+      \verb Makke und Chawla - 2024 - Interpretable scientific discovery with symbolic r.pdf:files/394/Makke und Chawla - 2024 - Interpretable scientific discovery with symbolic r.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s10462-023-10622-0
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s10462-023-10622-0
+      \endverb
+    \endentry
     \entry{miller_cartesian_2020}{article}{}{}
       \name{author}{1}{}{%
         {{hash=707c6e450c0448e2a3ef630bd0bfa21f}{%
@@ -1567,6 +1735,127 @@
       \verb{url}
       \verb https://doi.org/10.1007/BF01918729
       \endverb
+    \endentry
+    \entry{oliveira_analysing_2018}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=3153a8fe8e9fe342028dc92464950dbc}{%
+           family={Oliveira},
+           familyi={O\bibinitperiod},
+           given={Luiz\bibnamedelimb Otavio\bibnamedelimb Vilas\bibnamedelima Boas},
+           giveni={L\bibinitperiod\bibinitdelim O\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=74ca202e69cea9ee76de9c57b877da63}{%
+           family={Martins},
+           familyi={M\bibinitperiod},
+           given={Joao\bibnamedelimb Francisco\bibnamedelimb Barreto\bibnamedelimb da\bibnamedelima Silva},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=8ddac0493ab754c1b511d4c9489ca7c5}{%
+           family={Miranda},
+           familyi={M\bibinitperiod},
+           given={Luis\bibnamedelima Fernando},
+           giveni={L\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=56c933da2aee3a87799540e799c8c76d}{%
+           family={Pappa},
+           familyi={P\bibinitperiod},
+           given={Gisele\bibnamedelima Lobo},
+           giveni={G\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{8e4a6b723c633e9ccb5ea5ffbd73eecf}
+      \strng{fullhash}{1c5ededea52c80a6249d80174b95447f}
+      \strng{fullhashraw}{1c5ededea52c80a6249d80174b95447f}
+      \strng{bibnamehash}{8e4a6b723c633e9ccb5ea5ffbd73eecf}
+      \strng{authorbibnamehash}{8e4a6b723c633e9ccb5ea5ffbd73eecf}
+      \strng{authornamehash}{8e4a6b723c633e9ccb5ea5ffbd73eecf}
+      \strng{authorfullhash}{1c5ededea52c80a6249d80174b95447f}
+      \strng{authorfullhashraw}{1c5ededea52c80a6249d80174b95447f}
+      \field{labelalpha}{Oli+18}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The definition of a concise and effective testbed for Genetic Programming (GP) is a recurrent matter in the research community. This paper takes a new step in this direction, proposing a different approach to measure the quality of the symbolic regression benchmarks quantitatively. The proposed approach is based on meta-learning and uses a set of dataset meta-features---such as the number of examples or output skewness---to describe the datasets. Our idea is to correlate these meta-features with the errors obtained by a GP method. These meta-features define a space of benchmarks that should, ideally, have datasets (points) covering different regions of the space. An initial analysis of 63 datasets showed that current benchmarks are concentrated in a small region of this benchmark space. We also found out that number of instances and output skewness are the most relevant meta-features to GP output error. Both conclusions can help define which datasets should compose an effective testbed for symbolic regression methods.}
+      \field{booktitle}{Proceedings of the {Genetic} and {Evolutionary} {Computation} {Conference} {Companion}}
+      \field{month}{7}
+      \field{note}{arXiv:1805.10365 [cs]}
+      \field{title}{Analysing {Symbolic} {Regression} {Benchmarks} under a {Meta}-{Learning} {Approach}}
+      \field{urlday}{7}
+      \field{urlmonth}{10}
+      \field{urlyear}{2024}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \field{pages}{1342\bibrangedash 1349}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1145/3205651.3208293
+      \endverb
+      \verb{file}
+      \verb Oliveira et al. - 2018 - Analysing Symbolic Regression Benchmarks under a M.pdf:files/316/Oliveira et al. - 2018 - Analysing Symbolic Regression Benchmarks under a M.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1805.10365
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1805.10365
+      \endverb
+      \keyw{Computer Science - Neural and Evolutionary Computing}
+    \endentry
+    \entry{orzechowski}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=13713dc48e0c5456008471042a770ec8}{%
+           family={Orzechowski},
+           familyi={O\bibinitperiod},
+           given={Patryk},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4e77aa188a998bb89e0f1ca24ee07b34}{%
+           family={La\bibnamedelima Cava},
+           familyi={L\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+        {{hash=c854f672f8ca1e35a7de3d92215e023c}{%
+           family={Moore},
+           familyi={M\bibinitperiod},
+           given={Jason\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Kyoto, Japan}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{c2b95f3b94c29fc63777ee5605a71adf}
+      \strng{fullhash}{c2b95f3b94c29fc63777ee5605a71adf}
+      \strng{fullhashraw}{c2b95f3b94c29fc63777ee5605a71adf}
+      \strng{bibnamehash}{c2b95f3b94c29fc63777ee5605a71adf}
+      \strng{authorbibnamehash}{c2b95f3b94c29fc63777ee5605a71adf}
+      \strng{authornamehash}{c2b95f3b94c29fc63777ee5605a71adf}
+      \strng{authorfullhash}{c2b95f3b94c29fc63777ee5605a71adf}
+      \strng{authorfullhashraw}{c2b95f3b94c29fc63777ee5605a71adf}
+      \field{labelalpha}{OLM18}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper we provide a broad benchmarking of recent genetic programming approaches to symbolic regression in the context of state of the art machine learning approaches. We use a set of nearly 100 regression benchmark problems culled from open source repositories across the web. We conduct a rigorous benchmarking of four recent symbolic regression approaches as well as nine machine learning approaches from scikit-learn. The results suggest that symbolic regression performs strongly compared to state-of-the-art gradient boosting algorithms, although in terms of running times is among the slowest of the available methodologies. We discuss the results in detail and point to future research directions that may allow symbolic regression to gain wider adoption in the machine learning community.}
+      \field{booktitle}{Proceedings of the Genetic and Evolutionary Computation Conference}
+      \field{isbn}{9781450356183}
+      \field{series}{GECCO '18}
+      \field{title}{Where are we now? a large benchmark study of recent symbolic regression methods}
+      \field{year}{2018}
+      \field{pages}{1183\bibrangedash 1190}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1145/3205455.3205539
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3205455.3205539
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3205455.3205539
+      \endverb
+      \keyw{benchmarking,genetic programming,machine learning,symbolic regression}
     \endentry
     \entry{patzel_dpaetzelcmpbayes_2024}{misc}{}{}
       \name{author}{1}{}{%
