@@ -1,3 +1,32 @@
+@inproceedings{cui_weighted_mutation,
+	author = {Cui, Henning and P\"{a}tzel, David and Margraf, Andreas and H\"{a}hner, J\"{o}rg},
+	title = {Weighted Mutation of Connections To Mitigate Search Space Limitations in Cartesian Genetic Programming},
+	year = {2023},
+	isbn = {9798400702020},
+	publisher = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	url = {https://doi.org/10.1145/3594805.3607130},
+	doi = {10.1145/3594805.3607130},
+	abstract = {This work presents and evaluates a novel modification to existing mutation operators for Cartesian Genetic Programming (CGP). We discuss and highlight a so far unresearched limitation of how CGP explores its search space which is caused by certain nodes being inactive for long periods of time. Our new mutation operator is intended to avoid this by associating each node with a dynamically changing weight. When mutating a connection between nodes, those weights are then used to bias the probability distribution in favour of inactive nodes. This way, inactive nodes have a higher probability of becoming active again. We include our mutation operator into two variants of CGP and benchmark both versions on four Boolean learning tasks. We analyse the average numbers of iterations a node is inactive and show that our modification has the intended effect on node activity. The influence of our modification on the number of iterations until a solution is reached is ambiguous if the same number of nodes is used as in the baseline without our modification. However, our results show that our new mutation operator leads to fewer nodes being required for the same performance; this saves CPU time in each iteration.},
+	booktitle = {Proceedings of the 17th ACM/SIGEVO Conference on Foundations of Genetic Algorithms},
+	pages = {50–60},
+	numpages = {11},
+	keywords = {CGP, Cartesian Genetic Programming, Evolutionary Algorithm, Genetic Programming, Mutation},
+	location = {Potsdam, Germany},
+	series = {FOGA '23}
+}
+
+@ARTICLE{goldman_2015,
+	author={Goldman, Brian W. and Punch, William F.},
+	journal={IEEE Transactions on Evolutionary Computation}, 
+	title={Analysis of Cartesian Genetic Programming’s Evolutionary Mechanisms}, 
+	year={2015},
+	volume={19},
+	number={3},
+	pages={359-373},
+	keywords={Genomics;Bioinformatics;Indexes;Genetic programming;Complexity theory;Equations;Mathematical model;Analysis;Cartesian genetic programming},
+	doi={10.1109/TEVC.2014.2324539}}
+
 @article{hohil_1999,
 	title = {Solving the N-bit parity problem using neural networks},
 	journal = {Neural Networks},

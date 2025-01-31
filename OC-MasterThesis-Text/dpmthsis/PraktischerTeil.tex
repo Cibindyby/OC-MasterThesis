@@ -1,4 +1,4 @@
-\chapter{Praktischer Teil}
+\chapter{Experimente und Evaluation}
 \label{praktischer Teil}
 
 \section{Aufbau der Experimente}
@@ -31,19 +31,36 @@ Multiply ist dabei ein vergleichsweise schwer zu lösendes Testproblem und wird 
 
 Das verwendete Standardfunktionsset aller vier Testszenarien beinhaltet die Boolean Rechenoperatoren AND, OR, NAND und NOR.
 Außerdem wird die Standardfitnessfunktion für Boolean Benchmarkprobleme verwendet.
-Diese wird definiert durch den Anteil an korrekt zugeordneten Bits. \cite{cui_equidistant_2023}\\
+Diese wird definiert durch den Anteil an korrekt zugeordneten Bits. \cite{cui_equidistant_2023}
+Folgend werden die vier verwendeten Boolean Benchmark Problems näher erläutert:
 
-Folgend werden die vier verwendeten Boolean Benchmark Problems näher erläutert:\\
-\textbf{Parity:} \cite{hohil_1999}TODO: Anzahl In/Outputs, Berechnung\\
-\textbf{Encode:} TODO: Anzahl In/Outputs, Berechnung\\
-\textbf{Decode:} TODO: Anzahl In/Outputs, Berechnung\\
-\textbf{Multiply:} TODO: Anzahl In/Outputs, Berechnung\\
+\textbf{Parity:} N-bit Parity ist eine Mapping-Funktion, die angibt, ob die Summe der Komponenten eines Binär-Vektors gerade oder ungerade ist.
+Bei 3-bit Parity handelt es sich dabei um Binär-Vektoren der Länge 3.
+Das Evaluationsset besteht aus $2^N=2^3$ Testvektoren. \cite{hohil_1999}
+Demnach gibt es für das CGP drei Eingaben (die Komponenten eines Binär-Vektors) und eine Ausgabe (Binärwert für \glqq gerade\grqq\space / \glqq ungerade\grqq).
+
+\textbf{Encode:} Beim 16-4-bit Encoding wird aus einer 16-stelligen One-Hot-Kodierung ein 4-bit Integer erstellt.
+Die One-Hot-Kodierung besteht dabei aus einem 16-stelligen Binär-Vektor, wobei nur eine Stelle mit einer 1 belegt ist, die restlichen Stellen sind 0.
+Ziel ist es diejenige Stelle zu finden, die die 1 hält und diese als üblichen 4-bit Integer zu kodieren. \cite{cui_weighted_mutation, goldman_2015}
+Daraus ergibt sich eine Eingabegröße von 16 und eine Ausgabegröße von vier.
+Der Testdatensatz enthält 16 verschiedene One-Hot-Kodierungen, die umgewandelt werden sollen.
+
+\textbf{Decode:} 4-16-bit Decode hat das genau umgekehrte Ziel als 16-4-bit Encode.
+Es wird ein 4-bit Integer-Wert angegeben, der durch eine 16-bit One-Hot-Kodierung dargestellt werden soll. \cite{cui_weighted_mutation}
+Demnach werden für 4-16-bit Decode vier Eingaben in 16 Ausgaben umgewandelt.
+Der Testdatensatz besteht aus 16 verschiedenen 4-bit Integerwerten.
+
+\textbf{Multiply:} Ziel von 3-bit Multiply ist die Multiplikation von zwei 3-bit Integer-Werten.
+Das Ergebnis wird durch einen 6-bit Integer-Wert dargestellt. \cite{cui_weighted_mutation}
+Folglich ist die Anzahl der CGP-Eingaben gleich 6, da beide 3-bit Faktoren als Eingang in das CGP-Modell einfließen müssen.
+Für die Ausgabe werden ebenfalls 6 Binärausgaben benötigt.
+Der Testdatensatz besteht aus $2^6=64$ verschiedenen Kombinationen der möglichen Binär-Faktoren.
 
 \subsubsection{Symbolische Regression}
 \label{subsubsec:symbolicRegression}
 
-\section{Ergebnisse}
-\label{Ergebnisse}
+\section{Evaluation}
+\label{sec:Evaluation}
 
 \begin{itemize}
     \item Versuchsaufbau und Durchführung

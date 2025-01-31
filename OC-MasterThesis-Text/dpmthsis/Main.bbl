@@ -512,6 +512,67 @@
       \verb https://www.scitepress.org/DigitalLibrary/Link.aspx?doi=10.5220/0012174100003595
       \endverb
     \endentry
+    \entry{cui_weighted_mutation}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=200af4ac4fdee2f4cd27797ad17195ed}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Henning},
+           giveni={H\bibinitperiod}}}%
+        {{hash=5384df27223bb452d4e3384f2a88f0e2}{%
+           family={Pätzel},
+           familyi={P\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=a0ccc9d3a9573f3e4d89ab50cc73e769}{%
+           family={Margraf},
+           familyi={M\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4909578fc1f1faae256161c65657625d}{%
+           family={Hähner},
+           familyi={H\bibinitperiod},
+           given={Jörg},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Potsdam, Germany}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{2c265b24f943f7b3a37e047602f2dd98}
+      \strng{fullhash}{c6963cb1b50b8358a3a2bc3f2f5ae279}
+      \strng{fullhashraw}{c6963cb1b50b8358a3a2bc3f2f5ae279}
+      \strng{bibnamehash}{2c265b24f943f7b3a37e047602f2dd98}
+      \strng{authorbibnamehash}{2c265b24f943f7b3a37e047602f2dd98}
+      \strng{authornamehash}{2c265b24f943f7b3a37e047602f2dd98}
+      \strng{authorfullhash}{c6963cb1b50b8358a3a2bc3f2f5ae279}
+      \strng{authorfullhashraw}{c6963cb1b50b8358a3a2bc3f2f5ae279}
+      \field{labelalpha}{Cui+23}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This work presents and evaluates a novel modification to existing mutation operators for Cartesian Genetic Programming (CGP). We discuss and highlight a so far unresearched limitation of how CGP explores its search space which is caused by certain nodes being inactive for long periods of time. Our new mutation operator is intended to avoid this by associating each node with a dynamically changing weight. When mutating a connection between nodes, those weights are then used to bias the probability distribution in favour of inactive nodes. This way, inactive nodes have a higher probability of becoming active again. We include our mutation operator into two variants of CGP and benchmark both versions on four Boolean learning tasks. We analyse the average numbers of iterations a node is inactive and show that our modification has the intended effect on node activity. The influence of our modification on the number of iterations until a solution is reached is ambiguous if the same number of nodes is used as in the baseline without our modification. However, our results show that our new mutation operator leads to fewer nodes being required for the same performance; this saves CPU time in each iteration.}
+      \field{booktitle}{Proceedings of the 17th ACM/SIGEVO Conference on Foundations of Genetic Algorithms}
+      \field{isbn}{9798400702020}
+      \field{series}{FOGA '23}
+      \field{title}{Weighted Mutation of Connections To Mitigate Search Space Limitations in Cartesian Genetic Programming}
+      \field{year}{2023}
+      \field{pages}{50\bibrangedash 60}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1145/3594805.3607130
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3594805.3607130
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3594805.3607130
+      \endverb
+      \keyw{CGP,Cartesian Genetic Programming,Evolutionary Algorithm,Genetic Programming,Mutation}
+    \endentry
     \entry{cuihen_cuihencgp_with_crossover_strategies_2024}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=9635677a9eb4220a31d968237b90e479}{%
@@ -739,6 +800,44 @@
       \verb{url}
       \verb https://www.mdpi.com/2076-3417/12/16/8198
       \endverb
+    \endentry
+    \entry{goldman_2015}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=137c6c8f2af2fa3ab9ea04faa906beff}{%
+           family={Goldman},
+           familyi={G\bibinitperiod},
+           given={Brian\bibnamedelima W.},
+           giveni={B\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=ad4f05c4271835a6b75cc5a864fac85a}{%
+           family={Punch},
+           familyi={P\bibinitperiod},
+           given={William\bibnamedelima F.},
+           giveni={W\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{7dedce614846c478582c05e497ab94ab}
+      \strng{fullhash}{7dedce614846c478582c05e497ab94ab}
+      \strng{fullhashraw}{7dedce614846c478582c05e497ab94ab}
+      \strng{bibnamehash}{7dedce614846c478582c05e497ab94ab}
+      \strng{authorbibnamehash}{7dedce614846c478582c05e497ab94ab}
+      \strng{authornamehash}{7dedce614846c478582c05e497ab94ab}
+      \strng{authorfullhash}{7dedce614846c478582c05e497ab94ab}
+      \strng{authorfullhashraw}{7dedce614846c478582c05e497ab94ab}
+      \field{labelalpha}{GP15}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Evolutionary Computation}
+      \field{number}{3}
+      \field{title}{Analysis of Cartesian Genetic Programming’s Evolutionary Mechanisms}
+      \field{volume}{19}
+      \field{year}{2015}
+      \field{pages}{359\bibrangedash 373}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1109/TEVC.2014.2324539
+      \endverb
+      \keyw{Genomics;Bioinformatics;Indexes;Genetic programming;Complexity theory;Equations;Mathematical model;Analysis;Cartesian genetic programming}
     \endentry
     \entry{hassanat_choosing_2019}{article}{}{}
       \name{author}{6}{}{%
