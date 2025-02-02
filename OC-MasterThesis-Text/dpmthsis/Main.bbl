@@ -134,6 +134,44 @@
       \verb http://link.springer.com/10.1007/s10710-019-09361-5
       \endverb
     \endentry
+    \entry{carlson_baggepinnenhyperoptjl_2025}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=f8a7fe1b9efc32f72ba7d6b44bb4befe}{%
+           family={Carlson},
+           familyi={C\bibinitperiod},
+           given={Fredrik\bibnamedelima Bagge},
+           giveni={F\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{f8a7fe1b9efc32f72ba7d6b44bb4befe}
+      \strng{fullhash}{f8a7fe1b9efc32f72ba7d6b44bb4befe}
+      \strng{fullhashraw}{f8a7fe1b9efc32f72ba7d6b44bb4befe}
+      \strng{bibnamehash}{f8a7fe1b9efc32f72ba7d6b44bb4befe}
+      \strng{authorbibnamehash}{f8a7fe1b9efc32f72ba7d6b44bb4befe}
+      \strng{authornamehash}{f8a7fe1b9efc32f72ba7d6b44bb4befe}
+      \strng{authorfullhash}{f8a7fe1b9efc32f72ba7d6b44bb4befe}
+      \strng{authorfullhashraw}{f8a7fe1b9efc32f72ba7d6b44bb4befe}
+      \field{labelalpha}{Car25}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Hyperparameter optimization in Julia.}
+      \field{month}{1}
+      \field{note}{original-date: 2018-08-04T11:25:52Z}
+      \field{title}{baggepinnen/{Hyperopt}.jl}
+      \field{urlday}{2}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/baggepinnen/Hyperopt.jl
+      \endverb
+      \verb{url}
+      \verb https://github.com/baggepinnen/Hyperopt.jl
+      \endverb
+      \keyw{bayesian-optimization,bohb,global-optimization,hyperband,hyperparameter-optimization,optimization,parameter-tuning,random-sampling}
+    \endentry
     \entry{calvo_plackett_luce}{inproceedings}{}{}
       \name{author}{3}{}{%
         {{hash=b1a83bd0e746764e208bce6e72ad441b}{%

@@ -82,8 +82,8 @@ Die folgende Tabelle beschreibt die verwendeten SR Probleme näher.
 
 \begin{table}[h]
 	\centering
-	\begin{tabular}{l | c | c | c | c}
-		Name & Variablen & Gleichung & Trainingsdatensatz & Testdatensatz\\
+	\begin{tabular}{c | c | c | c | c}
+		\textbf{Name} & \textbf{Variablen} & \textbf{Gleichung} & \textbf{Trainingsdaten} & \textbf{Testdaten}\\
 		\hline
 		Keijzer & 1 & $\sum\limits_{i}^{x}\frac{1}{i}$ & E[1, 50, 1] & E[1, 120, 1]\\
 		\hline
@@ -101,8 +101,112 @@ In dieser Arbeit wurden alle SR Benchmark Probleme auf das Paper von Cui et al. 
 \subsection{CGP-Konfigurationen}
 \label{subsec:CGPkonfigurationen}
 
-In dieser Arbeit werden unterschiedliche CGP-Konfigurationen evaluiert. Diese werden in diesem Abschnitt näher beschrieben.\\
-TODO: Konfigurationen beschreiben -> Selektion, Mutation, Rekombination, Raten; dann Tabelle die alle Kombinationen listet
+In dieser Arbeit werden unterschiedliche CGP-Konfigurationen miteinander verglichen und evaluiert. Diese werden in diesem Abschnitt näher beschrieben.\\
+Ein Ziel der Arbeit ist es die Effizienz von Rekombination in CGP zu bewerten.
+Ebenfalls sollen unterschiedliche Rekombinationsalgorithmen und -konfigurationen miteinander verglichen werden, um eine Aussage über deren Effektivität zu treffen.
+Aus diesem Grund müssen für die unterschiedlichen Testszenarien mehrere Rekombinationskonfigurationen getestet werden.
+Um eine Vergleichbarkeit der Ergebnisse zu gewährleisten müssen Selektion und Mutation in allen Experimenten gleichen Algorithmen entsprechen.
+Diese werden im Folgenden beschrieben.\newline
+\textbf{Selektion:} Für die Selektion wird in allen Experimenten das ($\mu$+$\lambda$)-Selektionsverfahren verwendet.
+Dabei wurde für die CGP-Konfiguration ohne Rekombinationsschritt nicht $\mu = 1$ festgelegt, obwohl dies den Standard-Einstellungen eines CGP ohne Rekombination entspricht.
+Dieser zusätzliche Freiheitsgrad soll einen ausgewogeneren Vergleich zwischen den CGP-Konfigurationen mit und ohne Rekombinationsschritt ermöglichen.
+Für die Auswahl der Elitisten wird das neutral search Verfahren herangezogen.\\
+\textbf{Mutation:} In allen Experimenten dieser Arbeit wird die Single Active Mutation angewendet.\\
+
+Die nachfolgende Tabelle gibt alle Konfigurationen für die \textbf{Rekombination} an, die für jedes Testszenario aus Abschnitt \ref{subsec:testszenarien} getestet werden.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{c | c | c}
+		\textbf{Rekombinationsverfahren} & \textbf{Art der Rekombinationsrate} & \textbf{Offset}\\
+		\hline
+		One-Point Rekombination & konstante Rekombinationsrate  & aktiv \\
+		\hline
+		Two-Point Rekombination & linear fallende Rekombinationsrate & inaktiv \\
+		\hline
+		Uniform Rekombination & Rekombinationsrate mit One-Fifth Regel & - \\
+		\hline
+		keine Rekombination &  - &  - \\
+	\end{tabular}
+	\caption{Konfigurationen Rekombination}
+	\label{table:Rekombinationskonfigurationen}
+\end{table}
+
+Zu beachten ist, dass diese einzelnen Einstellungen miteinander kombiniert werden, solange es die Verfahren zulassen.
+Falls keine Rekombination ausgeführt wird, wird selbstverständlich auch die Rekombinationsrate nicht angepasst und es kann kein Offset eingeführt werden.
+Grundsätzlich werden die Konfigurationskombinationen nach folgendem Muster erstellt:
+\begin{itemize}
+	\item Auswahl Rekombinationsverfahren
+	\item Auswahl Art der Rekombinationsrate
+	\item Auswahl Offset aktiv / inaktiv
+\end{itemize}
+
+Dementsprechend ergeben sich 19 verschiedene Konfigurationen für den Rekombinationsschritt, die miteinander verglichen werden sollen. 
+
+
+\subsection{Hyperparameteroptimierung}
+\label{subsec:hpo}
+
+Da CGP mehrere Hyperparameter ausweist, die die Effektivität eines CGP-Modells beeinflussen, muss eine Hyperparameteroptimierung ausgeführt werden, die einen optimierten Parametersatz ausgibt.
+Für jede in Abschnitt \ref{subsec:CGPkonfigurationen} eingeführte CGP-Konfiguration wird eine eigene Hyperparameteroptimierung ausgeführt, da nicht von einem optimierten Datensatz auf den nächsten geschlussfolgert werden kann.
+Außerdem müssen die Hyperparameter auf das jeweilige Testszenario angepasst werden.\\
+Für die Hyperparameteroptimierungen in dieser Arbeit wird das Julia-Paket HyperOpt.jl verwendet \cite{carlson_baggepinnenhyperoptjl_2025}.
+Mit Hilfe des Pakets können die Hyperparameter, sowie deren Wertebereiche angegeben werden, sodass eine automatisierte Optimierung stattfinden kann.
+Eben diese werden in folgender Tabelle aufgelistet.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{c | c | c | c}
+		\textbf{Parameter} & \textbf{min} & \textbf{max} & \textbf{Schrittweite}\\
+		\hline
+		Anzahl Rechenknoten & 50 & 2000 & 50 \\
+		\hline
+		$\mu$ (Anzahl Elitisten) & 2 & 20 & 2\\
+		\hline
+		$\lambda$ (Anzahl Nachkommen) & 10 & 60 & 2 \\
+		\hline
+		Offset Rekombination (in Iterationen)& 0 & 500 & 50\\
+		\hline
+		Konstante Rekombinationsrate & 0,1 & 1,0 & 0,1\\
+		\hline
+		Fallende Rekombinationsrate (Abzug) & 0,005 & 0,05 & 0,005\\
+		\hline
+		One-Fifth Regel Rekombinationsrate (Startwert Rate) & 0,3 & 0,05 & 0,75\\
+	\end{tabular}
+	\caption{Optimierte Hyperparameter und deren Wertebereiche}
+	\label{table:hyperopt}
+\end{table}
+
+Zu beachten ist, dass $\mu <= \lambda$ gilt.
+Außerdem werden die Einträge der Tabelle je nach CGP-Konfiguration verwendet.
+Zum Beispiel wird der Wert \glqq Offset Rekombination\grqq\space nur verwendet, wenn der Rekombinationsoffset aktiv ist. 
+Dieser Wert wird in Iterationen angegeben, in denen die Rekombination ausgesetzt wird.
+Die obere Grenze des Offsets wurde abgeschätzt, indem die Iterationen derjenigen Tests betrachtet wurde, in denen der Offset inaktiv war.
+Die drei letzten Zeilen der Tabelle geben die verschiedenen Arten an Rekombinationsraten an, die in dieser Arbeit verglichen werden.
+Für jede dieser Ratenarten wird gezielt nur ein Hyperparameter verwendet, um die Rechenzeit der Hyperparameteroptimierung zu reduzieren.
+Für die linear fallende Rekombinationsrate gibt dieser Parameter an, mit welcher Schrittweite die Rekombinationsrate pro Iteration sinkt.
+In der One-Fifth Regel wird der Startwert der Rekombinationsrate angegeben, also diejenige Rekombinationsrate, mit der das CGP-Modell initialisiert wird.\\
+
+In einer Optimierungsschleife werden pro Parametersatz 10 Testdurchläufe durchgeführt, in denen das CGP trainiert wird.
+Für Boolean Problems wird die Effizienz die Parametersätze anhand der Iterationen gemessen, die der CGP-Algorithmus braucht, bis er konvergiert.
+Bei symbolischer Regression bezieht sich der Vergleich auf die berechnete Fitness.
+Es wurde eine Iterationsgrenze eingeführt, ab der der CGP-Algorithmus in der Hyperparameteroptimierung abbricht, um Rechenzeit zu sparen.
+Diese Grenze wurde durch vorhergehende Tests so gesetzt, dass nur wenige Ausreißer diese überschreiten.
+Trifft dies zu wird bei Boolean Problems die Anzahl an benötigten Iterationen verdoppelt, um so das gescheiterte Training härter zu bestrafen.\\
+Nach 150 getesteten Parametersätzen bricht die Hyperparameteroptimierung ab und gibt den besten Parametersatz aus.\\
+
+Das verwendete Julia-Paket bietet verschiedene Sampler an.
+Der als Standardeinstellung zur Verfügung gestellte Sampler ist ein Random-Sampler.
+Da der verwendete BHOB Sampler mit und ohne Hyperband keine Einsparungen in der Rechenzeit ergeben haben, wurde weiterhin der einfach zu konfigurierende Random-Sampler verwendet. 
+
+TODO: in main Branch schauen, ob Hyperparameter Ranges so passen
+
+\subsection{Teststruktur}
+\label{subsec:struktur}
+
+TODO: zwei Tests; einmal mit HPO für Endergebnisse und einmal ohne HPO für Veränderungen bei Änderung der Raten
+angeben, wieso diese Tests gespalten werden => Rechenzeit HPO
+
 
 \section{Evaluation}
 \label{sec:Evaluation}
