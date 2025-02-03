@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  2 FEB 2025 20:25
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  3 FEB 2025 15:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2310,42 +2310,57 @@ Underfull \hbox (badness 10000) in paragraph at lines 104--115
 
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 180--189
+Underfull \hbox (badness 10000) in paragraph at lines 180--192
 
  []
 
 
 
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 190--197
+Underfull \hbox (badness 10000) in paragraph at lines 193--200
 
  []
 
 
 
 [26]
+Underfull \hbox (badness 10000) in paragraph at lines 222--230
 
-[27]) (./Ergebnisse.tex
+ []
 
-[28]
-chapter 4.
-) (./Fazit.tex
 
-[29
+
+[27]
+Overfull \hbox (1.48967pt too wide) in paragraph at lines 238--245
+\TU/LinLibertine(0)/m/n/10.95 gen Hyperparameter (Rekombinationsrate und Offset
+) werden variiert und in CGP-Modelle
+ []
+
+
+
+[28]) (./Ergebnisse.tex
+
+[29]
+
+[30
 
 
 ]
+chapter 4.
+) (./Fazit.tex
 
-[30
+[31]
+
+[32
 
 
 ]
 chapter 5.
 )
 
-[31]
+[33]
 
-[32
+[34
 
 
 ]
@@ -2364,7 +2379,7 @@ Overfull \hbox (30.69048pt too wide) in paragraph at lines 51--51
 
 
 
-[33]
+[35]
 Overfull \hbox (3.8058pt too wide) in paragraph at lines 51--51
 \TU/LinLibertine(0)/m/n/10.95 758-674-3. \TU/LinLibertine(0)/m/sc/10.95 doi\TU/
 LinLibertine(0)/m/n/10.95 : []$[][] [] [][][][] [] [][][][][][][][][][][][][][]
@@ -2381,7 +2396,7 @@ GP_with_Crossover_Strategies\TU/LinLibertine(0)/m/n/10.95 . original-date: 2024
 
 
 
-[34]
+[36]
 Overfull \hbox (3.7585pt too wide) in paragraph at lines 51--51
 []\TU/LinLibertine(0)/m/n/10.95 Roman Kalkreuth u.a. „  Towards a General Boole
 an Function Benchmark Suite“.
@@ -2403,9 +2418,9 @@ Overfull \hbox (13.3813pt too wide) in paragraph at lines 51--51
 
 
 
-[35]
+[37]
 
-[36]
+[38]
 Overfull \hbox (1.4203pt too wide) in paragraph at lines 51--51
 []\TU/LinLibertine(0)/m/n/10.95 M. Nenning. „  Bayes’sche Inferenz bei der stat
 istischen Auswertung von Markt-
@@ -2420,7 +2435,7 @@ aetzel/cmpbayes\TU/LinLibertine(0)/m/n/10.95 . original-date: 2022-03-24T10:52:
 
 
 
-[37]
+[39]
 Overfull \hbox (11.8301pt too wide) in paragraph at lines 51--51
 []\TU/LinLibertine(0)/m/n/10.95 José Eduardo da Silva und Heder S. Bernardino. 
 „  Cartesian Genetic Programming
@@ -2428,7 +2443,7 @@ Overfull \hbox (11.8301pt too wide) in paragraph at lines 51--51
 
 
 
-[38]
+[40]
 chapter A.
 
 
@@ -2453,12 +2468,12 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47717 strings out of 473889
- 1008264 string characters out of 5734826
- 1930826 words of memory out of 5000000
- 70105 multiletter control sequences out of 15000+600000
+ 47722 strings out of 473889
+ 1008451 string characters out of 5734826
+ 1932029 words of memory out of 5000000
+ 70110 multiletter control sequences out of 15000+600000
  562633 words of font info for 98 fonts, out of 8000000 for 9000
  1350 hyphenation exceptions out of 8191
  122i,17n,136p,10900b,6837s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Main.pdf (47 pages).
+Output written on Main.pdf (49 pages).

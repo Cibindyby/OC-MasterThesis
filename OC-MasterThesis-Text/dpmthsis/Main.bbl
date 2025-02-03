@@ -611,6 +611,51 @@
       \endverb
       \keyw{CGP,Cartesian Genetic Programming,Evolutionary Algorithm,Genetic Programming,Mutation}
     \endentry
+    \entry{cui_results}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=200af4ac4fdee2f4cd27797ad17195ed}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Henning},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Zenodo}%
+      }
+      \strng{namehash}{200af4ac4fdee2f4cd27797ad17195ed}
+      \strng{fullhash}{200af4ac4fdee2f4cd27797ad17195ed}
+      \strng{fullhashraw}{200af4ac4fdee2f4cd27797ad17195ed}
+      \strng{bibnamehash}{200af4ac4fdee2f4cd27797ad17195ed}
+      \strng{authorbibnamehash}{200af4ac4fdee2f4cd27797ad17195ed}
+      \strng{authornamehash}{200af4ac4fdee2f4cd27797ad17195ed}
+      \strng{authorfullhash}{200af4ac4fdee2f4cd27797ad17195ed}
+      \strng{authorfullhashraw}{200af4ac4fdee2f4cd27797ad17195ed}
+      \field{labelalpha}{Cui24}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extraalpha}{1}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{3}
+      \field{title}{The {Positional} {Bias} might not {Influence} {Cartesian} {Genetic} {Programming} with {Crossover}}
+      \field{urlday}{3}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.5281/zenodo.10830014
+      \endverb
+      \verb{file}
+      \verb Snapshot:files/403/10830014.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://zenodo.org/records/10830014
+      \endverb
+      \verb{url}
+      \verb https://zenodo.org/records/10830014
+      \endverb
+    \endentry
     \entry{cuihen_cuihencgp_with_crossover_strategies_2024}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=9635677a9eb4220a31d968237b90e479}{%
@@ -628,6 +673,7 @@
       \field{labelalpha}{Cui24}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extraalpha}{2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{4}

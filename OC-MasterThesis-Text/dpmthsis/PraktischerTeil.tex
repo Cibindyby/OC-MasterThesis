@@ -165,23 +165,26 @@ Eben diese werden in folgender Tabelle aufgelistet.
 		\hline
 		$\lambda$ (Anzahl Nachkommen) & 10 & 60 & 2 \\
 		\hline
-		Offset Rekombination (in Iterationen)& 0 & 500 & 50\\
+		Offset Rekombination (in Iterationen)& 0 & P:55 / K:300 & P:5 / K:30\\
 		\hline
 		Konstante Rekombinationsrate & 0,1 & 1,0 & 0,1\\
 		\hline
 		Fallende Rekombinationsrate (Abzug) & 0,005 & 0,05 & 0,005\\
 		\hline
-		One-Fifth Regel Rekombinationsrate (Startwert Rate) & 0,3 & 0,05 & 0,75\\
+		One-Fifth Regel Rekombinationsrate (Startwert) & 0,3 & 0,05 & 0,75\\
 	\end{tabular}
 	\caption{Optimierte Hyperparameter und deren Wertebereiche}
 	\label{table:hyperopt}
 \end{table}
 
-Zu beachten ist, dass $\mu <= \lambda$ gilt.
+Zu beachten ist, dass $\mu <= \lambda$ gilt und die Hyperparameteranalysen nur für Parity und Keijzer (in der Tabelle durch P und K markiert) ausgeführt werden.
+Eine ausführliche Begründung liefert Abschnitt \ref{subsec:struktur}.
 Außerdem werden die Einträge der Tabelle je nach CGP-Konfiguration verwendet.
 Zum Beispiel wird der Wert \glqq Offset Rekombination\grqq\space nur verwendet, wenn der Rekombinationsoffset aktiv ist. 
 Dieser Wert wird in Iterationen angegeben, in denen die Rekombination ausgesetzt wird.
-Die obere Grenze des Offsets wurde abgeschätzt, indem die Iterationen derjenigen Tests betrachtet wurde, in denen der Offset inaktiv war.
+Um die obere Grenze des Offsets sinnvoll abzuschätzen wurden zuerst die Hyperparameteranalysen derjeniger CGP-Konfigurationen vorgenommen, die keinen Offset verwenden.
+Für jeweils ein Testszenario wurden anschließend die Mittelwerte der benötigten Iterationen berechnet.
+Auf Basis dieser Mittelwerte konnten die Offset Wertebereiche sinnvoller gewählt werden, sodass sich der Wert der wahrscheinlich benötigten Iterationen mit der oberen Grenze deckt.
 Die drei letzten Zeilen der Tabelle geben die verschiedenen Arten an Rekombinationsraten an, die in dieser Arbeit verglichen werden.
 Für jede dieser Ratenarten wird gezielt nur ein Hyperparameter verwendet, um die Rechenzeit der Hyperparameteroptimierung zu reduzieren.
 Für die linear fallende Rekombinationsrate gibt dieser Parameter an, mit welcher Schrittweite die Rekombinationsrate pro Iteration sinkt.
@@ -199,13 +202,46 @@ Das verwendete Julia-Paket bietet verschiedene Sampler an.
 Der als Standardeinstellung zur Verfügung gestellte Sampler ist ein Random-Sampler.
 Da der verwendete BHOB Sampler mit und ohne Hyperband keine Einsparungen in der Rechenzeit ergeben haben, wurde weiterhin der einfach zu konfigurierende Random-Sampler verwendet. 
 
-TODO: in main Branch schauen, ob Hyperparameter Ranges so passen
-
 \subsection{Teststruktur}
 \label{subsec:struktur}
 
-TODO: zwei Tests; einmal mit HPO für Endergebnisse und einmal ohne HPO für Veränderungen bei Änderung der Raten
-angeben, wieso diese Tests gespalten werden => Rechenzeit HPO
+Ursprünglich sollte für jedes Testszenario und für jede CGP-Konfiguration eine eigene Hyperparameteroptimierung durchgeführt werden.
+Mit den daraus resultierenden Parametersätzen hätten für jede Kombination aus Testszenario und CGP-Konfiguration eine annähernd optimale Lösung gefunden werden können.
+Diese hätten anschließend systematisch evaluiert und verglichen werden können.
+Angesichts der begrenzten Rechenkapazitäten konnten nur für die beiden leichtesten Testszenarien Parity und Keijzer sinnvolle Hyperparameteranalysen ausgeführt werden.
+Für die jeweiligen anderen Szenarien wurde außerdem versucht eine stark reduzierte Hyperparameteranalyse auszuführen, indem alle Parameter, die nichts mit der Rekombination zu tun haben aus den Ergebnissen von Cui et al. herangezogen werden \cite{cui_results}.
+So sollten nur die für die Rekombination relevanten Parameter optimiert werden, also die Rekombinationsrate und gegebenenfalls der Offset.
+Bei den Versuchen dieses Testverfahren für die umfangreicheren Testszenarien auszuführen, wurde ebenfalls festgestellt, dass die verfügbare Rechenkapazitäten nicht ausreichen.
+Diese Beobachtung wurde auch gemacht als der Offset-Parameter bei der Optimierung vollständig herausgenommen wurde.\\
+Aus diesen Gründen wurde eine neue Methodik entwickelt, die in diesem Abschnitt näher erläutert werden soll.
+Die Teststruktur wird in zwei voneinander unabhängige Testblöcke geteilt.
+
+\subsubsection{1. Testblock: einfache Testszenarien}
+\label{subsub:ersterTestblock}
+
+Für die einfachen Testszenarien Parity und Keijzer kann eine Hyperparameteranalyse trotz eingeschränkter Rechenzeit ausgeführt werden, indem die Iterationenzahl bis zum Abbruch des CGP-Algorithmus heruntergesetzt werden.
+Dieser wird schrittweise reduziert, bis die Hyperparameteranalyse ausgeführt werden kann.\\
+Um zu Überprüfen, ob die angepassten Iterationsgrenzen für Parity sinnvoll sind, werden die Ergebnisse von Cui et al. herangezogen. Dabei wurden nur die Ergebnisse mit ($\mu + \lambda$)-Selektion ohne E-Reorder-Schritt verwendet \cite{cui_results}.
+Es ergibt sich ein HPDI-Maximalwert von ca. 495 Iterationen. 
+Mit einer Iterationsgrenze von 500 ist es wahrscheinlich, dass vor allem schlechte Parametersätze zu einer Überschreitung dieses Werts führen.
+Durch die erhöhte Bestrafung dieser Überschreitung, wird sichergestellt, dass die sichere Konvergenz des CGP-Algorithmus bis zur Iterationsgrenze priorisiert wird.\\
+Da für Keijzer die Hyperparameteranalyse auf Basis der Fitness ausgewertet wird, können Güte-Aussagen ebenfalls getroffen werden, auch wenn der CGP-Algorithmus nicht vollständig konvergiert ist, da bereits vor Erreichen des Stopp-Kriteriums eine Aussage über das Konvergenzverhalten getroffen werden kann.
+Demnach wird für Keijzer die unter den Rechenzeit-Umständen höchste Iterationsgrenze von 500 Iterationen als genügend für die Hyperparameteroptimierung angesehen.\\
+
+Mit Hilfe der optimierten Parametersätze können anschließend jeweils 50 CGP-Modelle pro Testszenario und CGP-Konfiguration ausgeführt werden.
+Die Ergebnisse dieser Modelle können verwendet werden, um die Güte der CGP-Konfigurationen auf einfache Testszenarien zu evaluieren.
+Das Evaluierungsverfahren wird in Abschnitt \ref{sec:Evaluation} näher erläutert.
+
+\subsubsection{2. Testblock: komplexe Testszenarien}
+\label{subsub:zweiterTestblock}
+
+Da durch die erhöhte Rechenzeit der komplexeren Testszenarien keine sinnvolle Hyperparameteroptimierung ausführen lässt, wird für diese Fälle eine andere Teststrategie entwickelt.\\
+Diejenigen Hyperparameter eines CGP-Modells, die nicht mit Rekombination in Verbindung stehen, werden aus den Ergebnissen von Cui et al. herangezogen \cite{cui_results}.
+Die übrigen Hyperparameter (Rekombinationsrate und Offset) werden variiert und in CGP-Modelle eingepflegt.
+Diese werden anschließend in mehreren Durchläufen trainiert.
+Für die Evaluation stehen daraufhin die Ergebnisse mehrerer CGP-Einstellungen zur Verfügung, die allerdings nicht die Ergebnisse der besten Parametersätze darstellen.
+Trotzdem können die Ergebnisse verwendet werden, um einen näheren Einblick zum Verhalten des CGP-Modells zu erhalten, wenn die Rekombinationsparameter variiert werden.\\
+Nähere Informationen zur Evaluierung werden in Abschnitt \ref{sec:Evaluation} gegeben.
 
 
 \section{Evaluation}

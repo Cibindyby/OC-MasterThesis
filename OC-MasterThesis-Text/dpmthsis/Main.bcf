@@ -2472,6 +2472,9 @@
     <bcf:citekey order="99" intorder="3">kommenda_local_2018</bcf:citekey>
     <bcf:citekey order="100" intorder="1">affenzeller_positional_2024</bcf:citekey>
     <bcf:citekey order="101" intorder="1">carlson_baggepinnenhyperoptjl_2025</bcf:citekey>
+    <bcf:citekey order="102" intorder="1">cui_results</bcf:citekey>
+    <bcf:citekey order="103" intorder="1">cui_results</bcf:citekey>
+    <bcf:citekey order="104" intorder="1">cui_results</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
