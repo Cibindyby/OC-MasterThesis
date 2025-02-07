@@ -134,6 +134,207 @@
       \verb http://link.springer.com/10.1007/s10710-019-09361-5
       \endverb
     \endentry
+    \entry{carlson_baggepinnenhyperoptjl_2025}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=f8a7fe1b9efc32f72ba7d6b44bb4befe}{%
+           family={Carlson},
+           familyi={C\bibinitperiod},
+           given={Fredrik\bibnamedelima Bagge},
+           giveni={F\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{f8a7fe1b9efc32f72ba7d6b44bb4befe}
+      \strng{fullhash}{f8a7fe1b9efc32f72ba7d6b44bb4befe}
+      \strng{fullhashraw}{f8a7fe1b9efc32f72ba7d6b44bb4befe}
+      \strng{bibnamehash}{f8a7fe1b9efc32f72ba7d6b44bb4befe}
+      \strng{authorbibnamehash}{f8a7fe1b9efc32f72ba7d6b44bb4befe}
+      \strng{authornamehash}{f8a7fe1b9efc32f72ba7d6b44bb4befe}
+      \strng{authorfullhash}{f8a7fe1b9efc32f72ba7d6b44bb4befe}
+      \strng{authorfullhashraw}{f8a7fe1b9efc32f72ba7d6b44bb4befe}
+      \field{labelalpha}{Car25}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Hyperparameter optimization in Julia.}
+      \field{month}{1}
+      \field{note}{original-date: 2018-08-04T11:25:52Z}
+      \field{title}{baggepinnen/{Hyperopt}.jl}
+      \field{urlday}{2}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/baggepinnen/Hyperopt.jl
+      \endverb
+      \verb{url}
+      \verb https://github.com/baggepinnen/Hyperopt.jl
+      \endverb
+      \keyw{bayesian-optimization,bohb,global-optimization,hyperband,hyperparameter-optimization,optimization,parameter-tuning,random-sampling}
+    \endentry
+    \entry{calvo_plackett_luce}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=b1a83bd0e746764e208bce6e72ad441b}{%
+           family={Calvo},
+           familyi={C\bibinitperiod},
+           given={Borja},
+           giveni={B\bibinitperiod}}}%
+        {{hash=b50d6640ffda2f17a15d15fd704f1cd2}{%
+           family={Ceberio},
+           familyi={C\bibinitperiod},
+           given={Josu},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e74af45a9aa9f5d51dcc16745de85135}{%
+           family={Lozano},
+           familyi={L\bibinitperiod},
+           given={Jose\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Kyoto, Japan}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{76b54d1dd6232d7c7ab0c12ecd368040}
+      \strng{fullhash}{76b54d1dd6232d7c7ab0c12ecd368040}
+      \strng{fullhashraw}{76b54d1dd6232d7c7ab0c12ecd368040}
+      \strng{bibnamehash}{76b54d1dd6232d7c7ab0c12ecd368040}
+      \strng{authorbibnamehash}{76b54d1dd6232d7c7ab0c12ecd368040}
+      \strng{authornamehash}{76b54d1dd6232d7c7ab0c12ecd368040}
+      \strng{authorfullhash}{76b54d1dd6232d7c7ab0c12ecd368040}
+      \strng{authorfullhashraw}{76b54d1dd6232d7c7ab0c12ecd368040}
+      \field{labelalpha}{CCL18}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The statistical assessment of the empirical comparison of algorithms is an essential step in heuristic optimization. Classically, researchers have relied on the use of statistical tests. However, recently, concerns about their use have arisen and, in many fields, other (Bayesian) alternatives are being considered. For a proper analysis, different aspects should be considered. In this work we focus on the question: what is the probability of a given algorithm being the best? To tackle this question, we propose a Bayesian analysis based on the Plackett-Luce model over rankings that allows several algorithms to be considered at the same time.}
+      \field{booktitle}{Proceedings of the Genetic and Evolutionary Computation Conference Companion}
+      \field{isbn}{9781450357647}
+      \field{series}{GECCO '18}
+      \field{title}{Bayesian inference for algorithm ranking analysis}
+      \field{year}{2018}
+      \field{pages}{324\bibrangedash 325}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1145/3205651.3205658
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3205651.3205658
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3205651.3205658
+      \endverb
+      \keyw{statistical analysis,ranking models,plackett-luce model,bayesian analysis,algorithm comparison}
+    \endentry
+    \entry{affenzeller_positional_2024}{incollection}{}{}
+      \name{author}{3}{}{%
+        {{hash=200af4ac4fdee2f4cd27797ad17195ed}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Henning},
+           giveni={H\bibinitperiod}}}%
+        {{hash=d58d0efccc3e212ab4db230870cc6c8f}{%
+           family={Heider},
+           familyi={H\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4909578fc1f1faae256161c65657625d}{%
+           family={Hähner},
+           familyi={H\bibinitperiod},
+           given={Jörg},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{editor}{7}{}{%
+        {{hash=3b3bd7ec0b86dacdb3988998da410572}{%
+           family={Affenzeller},
+           familyi={A\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f08ec0e3ab03f30bba46f1b637d76dae}{%
+           family={Winkler},
+           familyi={W\bibinitperiod},
+           given={Stephan\bibnamedelima M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=99a18a49666163c2257997060312e77c}{%
+           family={Kononova},
+           familyi={K\bibinitperiod},
+           given={Anna\bibnamedelima V.},
+           giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=5f68ce10c238f4be96bfe2a8193836de}{%
+           family={Trautmann},
+           familyi={T\bibinitperiod},
+           given={Heike},
+           giveni={H\bibinitperiod}}}%
+        {{hash=08f03c75c9e9b5afea3b578b903ffc47}{%
+           family={Tušar},
+           familyi={T\bibinitperiod},
+           given={Tea},
+           giveni={T\bibinitperiod}}}%
+        {{hash=e4b3739c80831823ba3a2b38d2841643}{%
+           family={Machado},
+           familyi={M\bibinitperiod},
+           given={Penousal},
+           giveni={P\bibinitperiod}}}%
+        {{hash=63db21b1dd89fc12aac7791967820b87}{%
+           family={Bäck},
+           familyi={B\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer Nature Switzerland}%
+      }
+      \strng{namehash}{74451f1f5c73a974c568b124cd1f0228}
+      \strng{fullhash}{74451f1f5c73a974c568b124cd1f0228}
+      \strng{fullhashraw}{74451f1f5c73a974c568b124cd1f0228}
+      \strng{bibnamehash}{74451f1f5c73a974c568b124cd1f0228}
+      \strng{authorbibnamehash}{74451f1f5c73a974c568b124cd1f0228}
+      \strng{authornamehash}{74451f1f5c73a974c568b124cd1f0228}
+      \strng{authorfullhash}{74451f1f5c73a974c568b124cd1f0228}
+      \strng{authorfullhashraw}{74451f1f5c73a974c568b124cd1f0228}
+      \strng{editorbibnamehash}{2342b3cf9c52f6354ff52bb3a78c1989}
+      \strng{editornamehash}{2342b3cf9c52f6354ff52bb3a78c1989}
+      \strng{editorfullhash}{ef205237566a2ee27234e49b71dcd5d6}
+      \strng{editorfullhashraw}{ef205237566a2ee27234e49b71dcd5d6}
+      \field{labelalpha}{CHH24}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The recombination operator plays an important role in many evolutionary algorithms. However, in Cartesian Genetic Programming (CGP), which is part of the aforementioned category, the usefulness of crossover is contested. In this work, we investigate whether CGP’s positional bias actually inﬂuences the usefulness of the crossover operator negatively. This bias describes a skewed distribution of CGP’s active and inactive nodes, which might lead to destructive behaviours of standard recombination operators. We try to answer our hypothesis by employing one standard CGP implementation and one without the eﬀects of positional bias. Both versions are combined with one of four standard crossover operators, or with no crossover operator. Additionally, two different selection methods are used to conﬁgure a CGP variant. We then analyse their performance and convergence behaviour on eight benchmarks taken from the Boolean and symbolic regression domain. By using Bayesian inference, we are able to rank them, and we found that positional bias does not inﬂuence CGP with crossover. Furthermore, we argue that the current research on CGP with standard crossover operators is incomplete, and CGP with recombination might not negatively impact its evolutionary search process. On the contrary, using CGP with crossover improves its performance.}
+      \field{booktitle}{Parallel {Problem} {Solving} from {Nature} – {PPSN} {XVIII}}
+      \field{isbn}{978-3-031-70054-5 978-3-031-70055-2}
+      \field{note}{Series Title: Lecture Notes in Computer Science}
+      \field{title}{Positional {Bias} {Does} {Not} {Influence} {Cartesian} {Genetic} {Programming} with {Crossover}}
+      \field{urlday}{18}
+      \field{urlmonth}{10}
+      \field{urlyear}{2024}
+      \field{volume}{15148}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \field{pages}{151\bibrangedash 167}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1007/978-3-031-70055-2_10
+      \endverb
+      \verb{file}
+      \verb Cui et al. - 2024 - Positional Bias Does Not Influence Cartesian Genet.pdf:files/333/Cui et al. - 2024 - Positional Bias Does Not Influence Cartesian Genet.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/10.1007/978-3-031-70055-2_10
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/10.1007/978-3-031-70055-2_10
+      \endverb
+    \endentry
     \entry{crepinsek_exploration_2013}{article}{}{}
       \name{author}{3}{}{%
         {{hash=254edfb69de028c3d0ca8c6fabec15f3}{%
@@ -252,6 +453,7 @@
       \strng{editornamehash}{39b72e5567474a107027d9257749de35}
       \strng{editorfullhash}{39b72e5567474a107027d9257749de35}
       \strng{editorfullhashraw}{39b72e5567474a107027d9257749de35}
+      \field{extraname}{1}
       \field{labelalpha}{CMH22}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
@@ -282,6 +484,178 @@
       \verb https://link.springer.com/10.1007/978-3-031-21094-5_14
       \endverb
     \endentry
+    \entry{cui_equidistant_2023}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=200af4ac4fdee2f4cd27797ad17195ed}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Henning},
+           giveni={H\bibinitperiod}}}%
+        {{hash=a0ccc9d3a9573f3e4d89ab50cc73e769}{%
+           family={Margraf},
+           familyi={M\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4909578fc1f1faae256161c65657625d}{%
+           family={Hähner},
+           familyi={H\bibinitperiod},
+           given={Jörg},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Rome, Italy}%
+      }
+      \list{publisher}{2}{%
+        {SCITEPRESS - Science}%
+        {Technology Publications}%
+      }
+      \strng{namehash}{e47342c2480984531985d790ddfd6ce1}
+      \strng{fullhash}{e47342c2480984531985d790ddfd6ce1}
+      \strng{fullhashraw}{e47342c2480984531985d790ddfd6ce1}
+      \strng{bibnamehash}{e47342c2480984531985d790ddfd6ce1}
+      \strng{authorbibnamehash}{e47342c2480984531985d790ddfd6ce1}
+      \strng{authornamehash}{e47342c2480984531985d790ddfd6ce1}
+      \strng{authorfullhash}{e47342c2480984531985d790ddfd6ce1}
+      \strng{authorfullhashraw}{e47342c2480984531985d790ddfd6ce1}
+      \field{extraname}{2}
+      \field{labelalpha}{CMH23}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{booktitle}{Proceedings of the 15th {International} {Joint} {Conference} on {Computational} {Intelligence}}
+      \field{isbn}{978-989-758-674-3}
+      \field{shorttitle}{Equidistant {Reorder} {Operator} for {Cartesian} {Genetic} {Programming}}
+      \field{title}{Equidistant {Reorder} {Operator} for {Cartesian} {Genetic} {Programming}:}
+      \field{urlday}{17}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \field{pages}{64\bibrangedash 74}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.5220/0012174100003595
+      \endverb
+      \verb{file}
+      \verb Cui et al. - 2023 - Equidistant Reorder Operator for Cartesian Genetic.pdf:files/238/Cui et al. - 2023 - Equidistant Reorder Operator for Cartesian Genetic.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.scitepress.org/DigitalLibrary/Link.aspx?doi=10.5220/0012174100003595
+      \endverb
+      \verb{url}
+      \verb https://www.scitepress.org/DigitalLibrary/Link.aspx?doi=10.5220/0012174100003595
+      \endverb
+    \endentry
+    \entry{cui_weighted_mutation}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=200af4ac4fdee2f4cd27797ad17195ed}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Henning},
+           giveni={H\bibinitperiod}}}%
+        {{hash=5384df27223bb452d4e3384f2a88f0e2}{%
+           family={Pätzel},
+           familyi={P\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=a0ccc9d3a9573f3e4d89ab50cc73e769}{%
+           family={Margraf},
+           familyi={M\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4909578fc1f1faae256161c65657625d}{%
+           family={Hähner},
+           familyi={H\bibinitperiod},
+           given={Jörg},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Potsdam, Germany}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{2c265b24f943f7b3a37e047602f2dd98}
+      \strng{fullhash}{c6963cb1b50b8358a3a2bc3f2f5ae279}
+      \strng{fullhashraw}{c6963cb1b50b8358a3a2bc3f2f5ae279}
+      \strng{bibnamehash}{2c265b24f943f7b3a37e047602f2dd98}
+      \strng{authorbibnamehash}{2c265b24f943f7b3a37e047602f2dd98}
+      \strng{authornamehash}{2c265b24f943f7b3a37e047602f2dd98}
+      \strng{authorfullhash}{c6963cb1b50b8358a3a2bc3f2f5ae279}
+      \strng{authorfullhashraw}{c6963cb1b50b8358a3a2bc3f2f5ae279}
+      \field{labelalpha}{Cui+23}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This work presents and evaluates a novel modification to existing mutation operators for Cartesian Genetic Programming (CGP). We discuss and highlight a so far unresearched limitation of how CGP explores its search space which is caused by certain nodes being inactive for long periods of time. Our new mutation operator is intended to avoid this by associating each node with a dynamically changing weight. When mutating a connection between nodes, those weights are then used to bias the probability distribution in favour of inactive nodes. This way, inactive nodes have a higher probability of becoming active again. We include our mutation operator into two variants of CGP and benchmark both versions on four Boolean learning tasks. We analyse the average numbers of iterations a node is inactive and show that our modification has the intended effect on node activity. The influence of our modification on the number of iterations until a solution is reached is ambiguous if the same number of nodes is used as in the baseline without our modification. However, our results show that our new mutation operator leads to fewer nodes being required for the same performance; this saves CPU time in each iteration.}
+      \field{booktitle}{Proceedings of the 17th ACM/SIGEVO Conference on Foundations of Genetic Algorithms}
+      \field{isbn}{9798400702020}
+      \field{series}{FOGA '23}
+      \field{title}{Weighted Mutation of Connections To Mitigate Search Space Limitations in Cartesian Genetic Programming}
+      \field{year}{2023}
+      \field{pages}{50\bibrangedash 60}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1145/3594805.3607130
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3594805.3607130
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3594805.3607130
+      \endverb
+      \keyw{CGP,Cartesian Genetic Programming,Evolutionary Algorithm,Genetic Programming,Mutation}
+    \endentry
+    \entry{cui_results}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=200af4ac4fdee2f4cd27797ad17195ed}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Henning},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Zenodo}%
+      }
+      \strng{namehash}{200af4ac4fdee2f4cd27797ad17195ed}
+      \strng{fullhash}{200af4ac4fdee2f4cd27797ad17195ed}
+      \strng{fullhashraw}{200af4ac4fdee2f4cd27797ad17195ed}
+      \strng{bibnamehash}{200af4ac4fdee2f4cd27797ad17195ed}
+      \strng{authorbibnamehash}{200af4ac4fdee2f4cd27797ad17195ed}
+      \strng{authornamehash}{200af4ac4fdee2f4cd27797ad17195ed}
+      \strng{authorfullhash}{200af4ac4fdee2f4cd27797ad17195ed}
+      \strng{authorfullhashraw}{200af4ac4fdee2f4cd27797ad17195ed}
+      \field{labelalpha}{Cui24}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extraalpha}{1}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{3}
+      \field{title}{The {Positional} {Bias} might not {Influence} {Cartesian} {Genetic} {Programming} with {Crossover}}
+      \field{urlday}{3}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.5281/zenodo.10830014
+      \endverb
+      \verb{file}
+      \verb Snapshot:files/403/10830014.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://zenodo.org/records/10830014
+      \endverb
+      \verb{url}
+      \verb https://zenodo.org/records/10830014
+      \endverb
+    \endentry
     \entry{cuihen_cuihencgp_with_crossover_strategies_2024}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=9635677a9eb4220a31d968237b90e479}{%
@@ -299,6 +673,7 @@
       \field{labelalpha}{Cui24}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extraalpha}{2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{4}
@@ -510,6 +885,44 @@
       \verb https://www.mdpi.com/2076-3417/12/16/8198
       \endverb
     \endentry
+    \entry{goldman_2015}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=137c6c8f2af2fa3ab9ea04faa906beff}{%
+           family={Goldman},
+           familyi={G\bibinitperiod},
+           given={Brian\bibnamedelima W.},
+           giveni={B\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=ad4f05c4271835a6b75cc5a864fac85a}{%
+           family={Punch},
+           familyi={P\bibinitperiod},
+           given={William\bibnamedelima F.},
+           giveni={W\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{7dedce614846c478582c05e497ab94ab}
+      \strng{fullhash}{7dedce614846c478582c05e497ab94ab}
+      \strng{fullhashraw}{7dedce614846c478582c05e497ab94ab}
+      \strng{bibnamehash}{7dedce614846c478582c05e497ab94ab}
+      \strng{authorbibnamehash}{7dedce614846c478582c05e497ab94ab}
+      \strng{authornamehash}{7dedce614846c478582c05e497ab94ab}
+      \strng{authorfullhash}{7dedce614846c478582c05e497ab94ab}
+      \strng{authorfullhashraw}{7dedce614846c478582c05e497ab94ab}
+      \field{labelalpha}{GP15}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Evolutionary Computation}
+      \field{number}{3}
+      \field{title}{Analysis of Cartesian Genetic Programming’s Evolutionary Mechanisms}
+      \field{volume}{19}
+      \field{year}{2015}
+      \field{pages}{359\bibrangedash 373}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1109/TEVC.2014.2324539
+      \endverb
+      \keyw{Genomics;Bioinformatics;Indexes;Genetic programming;Complexity theory;Equations;Mathematical model;Analysis;Cartesian genetic programming}
+    \endentry
     \entry{hassanat_choosing_2019}{article}{}{}
       \name{author}{6}{}{%
         {{hash=fb41cc7955c90577ac12c036d5d89813}{%
@@ -586,6 +999,137 @@
       \verb https://www.mdpi.com/2078-2489/10/12/390
       \endverb
     \endentry
+    \entry{hohil_1999}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=77a789ec6770911d4d580c10996db2e2}{%
+           family={Hohil},
+           familyi={H\bibinitperiod},
+           given={Myron\bibnamedelima E},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=661f1f91238a95e2633af7c18954f6af}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Derong},
+           giveni={D\bibinitperiod}}}%
+        {{hash=08ca9386571fbbb7dade17bb33be0b99}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Stanley\bibnamedelima H},
+           giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{b5787a4a7333ab71a57953f9931f9712}
+      \strng{fullhash}{b5787a4a7333ab71a57953f9931f9712}
+      \strng{fullhashraw}{b5787a4a7333ab71a57953f9931f9712}
+      \strng{bibnamehash}{b5787a4a7333ab71a57953f9931f9712}
+      \strng{authorbibnamehash}{b5787a4a7333ab71a57953f9931f9712}
+      \strng{authornamehash}{b5787a4a7333ab71a57953f9931f9712}
+      \strng{authorfullhash}{b5787a4a7333ab71a57953f9931f9712}
+      \strng{authorfullhashraw}{b5787a4a7333ab71a57953f9931f9712}
+      \field{labelalpha}{HLS99}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this letter, a constructive solution to the N-bit parity problem is provided with a neural network that allows direct connections between the input layer and the output layer. The present approach requires no training and adaptation, and thus it warrants the use of the simple threshold activation function for the output and hidden layer neurons. It is previously shown that this choice of activation function and network structure leads to several solutions for the 3-bit parity problem obtained using linear programming. One of the solutions for the 3-bit parity problem is then generalized to obtain a solution for the N-bit parity problem using ⌊N/2⌋ hidden layer neurons. It is shown that through the choice of a “staircase” type activation function, the ⌊N/2⌋ hidden layer neurons can be further combined into a single hidden layer neuron.}
+      \field{issn}{0893-6080}
+      \field{journaltitle}{Neural Networks}
+      \field{number}{9}
+      \field{title}{Solving the N-bit parity problem using neural networks}
+      \field{volume}{12}
+      \field{year}{1999}
+      \field{pages}{1321\bibrangedash 1323}
+      \range{pages}{3}
+      \verb{doi}
+      \verb https://doi.org/10.1016/S0893-6080(99)00069-6
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0893608099000696
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0893608099000696
+      \endverb
+      \keyw{-bit parity problem,Exclusive-OR problem,Neural networks}
+    \endentry
+    \entry{kalkreuth_towards_2023}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{hash=191998c928f7d855e0b7952e1dfe679f}{%
+           family={Kalkreuth},
+           familyi={K\bibinitperiod},
+           given={Roman},
+           giveni={R\bibinitperiod}}}%
+        {{hash=19df64e499481847a8f48b501e9ea9a4}{%
+           family={Vašíček},
+           familyi={V\bibinitperiod},
+           given={Zdeněk},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=b8267c78cb8e7b5129bb917001dbd77a}{%
+           family={Husa},
+           familyi={H\bibinitperiod},
+           given={Jakub},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2adfc715c2f5069eb2a4d4f26c603803}{%
+           family={Vermetten},
+           familyi={V\bibinitperiod},
+           given={Diederick\bibnamedelima ´.},
+           giveni={D\bibinitperiod\bibinitdelim ´.\bibinitperiod}}}%
+        {{hash=41c8b90aff2c99739017b09cd9a6e427}{%
+           family={Ye},
+           familyi={Y\bibinitperiod},
+           given={Furong},
+           giveni={F\bibinitperiod}}}%
+        {{hash=63db21b1dd89fc12aac7791967820b87}{%
+           family={Bäck},
+           familyi={B\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Lisbon Portugal}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{67e6ae831ecd4f1103efcc483b3fa5b5}
+      \strng{fullhash}{dff2960304343cb03a8f527e17ddb938}
+      \strng{fullhashraw}{dff2960304343cb03a8f527e17ddb938}
+      \strng{bibnamehash}{67e6ae831ecd4f1103efcc483b3fa5b5}
+      \strng{authorbibnamehash}{67e6ae831ecd4f1103efcc483b3fa5b5}
+      \strng{authornamehash}{67e6ae831ecd4f1103efcc483b3fa5b5}
+      \strng{authorfullhash}{dff2960304343cb03a8f527e17ddb938}
+      \strng{authorfullhashraw}{dff2960304343cb03a8f527e17ddb938}
+      \field{labelalpha}{Kal+23}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Just over a decade ago, the first comprehensive review on the state of benchmarking in Genetic Programming (GP) analyzed the mismatch between the problems that are used to test the performance of GP systems and real-world problems. Since then, several benchmark suites in major GP problem domains have been proposed over time, which were able to fill some of the major gaps. In the framework of the first review about the state of benchmarking in GP, logic synthesis was classified as one of the major GP problem domains. However, a diverse and accessible benchmark suite for logic synthesis is still missing in the field of GP. In this work, we take a first step towards a benchmark suite for logic synthesis that covers different types of Boolean functions that are commonly used for the evaluation of GP systems. We also present baseline results that have been obtained by former work and in our evaluation experiments by using Cartesian Genetic Programming.}
+      \field{booktitle}{Proceedings of the {Companion} {Conference} on {Genetic} and {Evolutionary} {Computation}}
+      \field{isbn}{9798400701207}
+      \field{month}{7}
+      \field{title}{Towards a {General} {Boolean} {Function} {Benchmark} {Suite}}
+      \field{urlday}{24}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \field{pages}{591\bibrangedash 594}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1145/3583133.3590685
+      \endverb
+      \verb{file}
+      \verb Kalkreuth et al. - 2023 - Towards a General Boolean Function Benchmark Suite.pdf:files/363/Kalkreuth et al. - 2023 - Towards a General Boolean Function Benchmark Suite.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3583133.3590685
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3583133.3590685
+      \endverb
+    \endentry
     \entry{kalkreuth_comprehensive_2020}{inproceedings}{}{}
       \name{author}{1}{}{%
         {{hash=191998c928f7d855e0b7952e1dfe679f}{%
@@ -641,6 +1185,139 @@
       \verb https://www.scitepress.org/DigitalLibrary/Link.aspx?doi=10.5220/0010110700590070
       \endverb
       \keyw{Regression}
+    \endentry
+    \entry{kaufmann_kalkreuth_2017}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=1dc542593f31bf4ee89d0234a7d14c34}{%
+           family={Kaufmann},
+           familyi={K\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=191998c928f7d855e0b7952e1dfe679f}{%
+           family={Kalkreuth},
+           familyi={K\bibinitperiod},
+           given={Roman},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Germany}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{0c5078db2d02c84516247c6483faef26}
+      \strng{fullhash}{0c5078db2d02c84516247c6483faef26}
+      \strng{fullhashraw}{0c5078db2d02c84516247c6483faef26}
+      \strng{bibnamehash}{0c5078db2d02c84516247c6483faef26}
+      \strng{authorbibnamehash}{0c5078db2d02c84516247c6483faef26}
+      \strng{authornamehash}{0c5078db2d02c84516247c6483faef26}
+      \strng{authorfullhash}{0c5078db2d02c84516247c6483faef26}
+      \strng{authorfullhashraw}{0c5078db2d02c84516247c6483faef26}
+      \field{extraname}{1}
+      \field{labelalpha}{KK17}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Since its introduction two decades ago, the way researchers parameterized and optimized Cartesian Genetic Programming (CGP) remained almost unchanged. In this work we investigate non-standard parameterizations and optimization algorithms for CGP. We show that the conventional way of using CGP, i.e. configuring it as a single line optimized by an (1+4) Evolutionary Strategies-style search scheme, is a very good choice but that rectangular CGP geometries and more elaborate metaheuristics, such as Simulated Annealing, can lead to faster convergence rates.}
+      \field{booktitle}{Proceedings of the Genetic and Evolutionary Computation Conference Companion}
+      \field{isbn}{9781450349390}
+      \field{series}{GECCO '17}
+      \field{title}{An empirical study on the parametrization of cartesian genetic programming}
+      \field{year}{2017}
+      \field{pages}{231\bibrangedash 232}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1145/3067695.3075980
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3067695.3075980
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3067695.3075980
+      \endverb
+    \endentry
+    \entry{kaufmann_kalkreuth_2020}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=1dc542593f31bf4ee89d0234a7d14c34}{%
+           family={Kaufmann},
+           familyi={K\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=191998c928f7d855e0b7952e1dfe679f}{%
+           family={Kalkreuth},
+           familyi={K\bibinitperiod},
+           given={Roman},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{0c5078db2d02c84516247c6483faef26}
+      \strng{fullhash}{0c5078db2d02c84516247c6483faef26}
+      \strng{fullhashraw}{0c5078db2d02c84516247c6483faef26}
+      \strng{bibnamehash}{0c5078db2d02c84516247c6483faef26}
+      \strng{authorbibnamehash}{0c5078db2d02c84516247c6483faef26}
+      \strng{authornamehash}{0c5078db2d02c84516247c6483faef26}
+      \strng{authorfullhash}{0c5078db2d02c84516247c6483faef26}
+      \strng{authorfullhashraw}{0c5078db2d02c84516247c6483faef26}
+      \field{extraname}{2}
+      \field{labelalpha}{KK20}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2020 IEEE Congress on Evolutionary Computation (CEC)}
+      \field{title}{On the Parameterization of Cartesian Genetic Programming}
+      \field{year}{2020}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/CEC48606.2020.9185492
+      \endverb
+      \keyw{Genetic programming;Wires;Encoding;Convergence;Optimization;Next generation networking;Cartesian Genetic Programming}
+    \endentry
+    \entry{kommenda_local_2018}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=62a8866eed8af86dbee0b242c87525d2}{%
+           family={Kommenda},
+           familyi={K\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Johannes Kepler University Linz}%
+      }
+      \list{location}{1}{%
+        {Linz, Austria}%
+      }
+      \strng{namehash}{62a8866eed8af86dbee0b242c87525d2}
+      \strng{fullhash}{62a8866eed8af86dbee0b242c87525d2}
+      \strng{fullhashraw}{62a8866eed8af86dbee0b242c87525d2}
+      \strng{bibnamehash}{62a8866eed8af86dbee0b242c87525d2}
+      \strng{authorbibnamehash}{62a8866eed8af86dbee0b242c87525d2}
+      \strng{authornamehash}{62a8866eed8af86dbee0b242c87525d2}
+      \strng{authorfullhash}{62a8866eed8af86dbee0b242c87525d2}
+      \strng{authorfullhashraw}{62a8866eed8af86dbee0b242c87525d2}
+      \field{labelalpha}{Kom18}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Local {Optimization} and {Complexity} {Control} for {Symbolic} {Regression}}
+      \field{type}{Dissertation}
+      \field{urlday}{31}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Local Optimization and Complexity Control for Symbolic Regression.pdf:files/396/Local Optimization and Complexity Control for Symbolic Regression.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://resolver.obvsg.at/urn:nbn:at:at-ubl:1-21036
+      \endverb
+      \verb{url}
+      \verb https://resolver.obvsg.at/urn:nbn:at:at-ubl:1-21036
+      \endverb
+      \keyw{Genetische Programmierung,Levenberg-Marquardt-Algorithmus,Pareto-Verteilung,Regressionsmodell}
     \endentry
     \entry{koza_survey_1995}{inproceedings}{}{}
       \name{author}{1}{}{%
@@ -844,6 +1521,159 @@
       \verb http://link.springer.com/10.1007/978-3-642-37207-0
       \endverb
     \endentry
+    \entry{kruschke_bayesian_estimation}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=8c9fdd177e85e0bb82c9faf29f51803d}{%
+           family={Kruschke},
+           familyi={K\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{8c9fdd177e85e0bb82c9faf29f51803d}
+      \strng{fullhash}{8c9fdd177e85e0bb82c9faf29f51803d}
+      \strng{fullhashraw}{8c9fdd177e85e0bb82c9faf29f51803d}
+      \strng{bibnamehash}{8c9fdd177e85e0bb82c9faf29f51803d}
+      \strng{authorbibnamehash}{8c9fdd177e85e0bb82c9faf29f51803d}
+      \strng{authornamehash}{8c9fdd177e85e0bb82c9faf29f51803d}
+      \strng{authorfullhash}{8c9fdd177e85e0bb82c9faf29f51803d}
+      \strng{authorfullhashraw}{8c9fdd177e85e0bb82c9faf29f51803d}
+      \field{labelalpha}{Kru12}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of experimental psychology. General}
+      \field{month}{07}
+      \field{title}{Bayesian Estimation Supersedes the t Test}
+      \field{volume}{142}
+      \field{year}{2012}
+      \verb{doi}
+      \verb 10.1037/a0029146
+      \endverb
+    \endentry
+    \entry{li_generative_2024}{misc}{}{}
+      \name{author}{9}{}{%
+        {{hash=e37598c4ce1aa1fb674325b4d0d3c2fe}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yanjie},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=c8ec4667cea281ee8f1e8c044a97fb76}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Weijun},
+           giveni={W\bibinitperiod}}}%
+        {{hash=4f8698d60b6c6054467b587741dd6c34}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Lina},
+           giveni={L\bibinitperiod}}}%
+        {{hash=95b6d28f9dd62176f72f62fc7c148126}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Min},
+           giveni={M\bibinitperiod}}}%
+        {{hash=6c75aa6c36387de874c31c37d57afeb5}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Jingyi},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2df376a25a1e579a9bacf942536215f3}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Wenqiang},
+           giveni={W\bibinitperiod}}}%
+        {{hash=55b90e266db9604cbac2e21b1ab90d2f}{%
+           family={Hao},
+           familyi={H\bibinitperiod},
+           given={Meilan},
+           giveni={M\bibinitperiod}}}%
+        {{hash=511645b7c20ba1c96f5d90fd7399ce22}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={Shu},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7a8e080c590bb07ddef678eb2e283bca}{%
+           family={Deng},
+           familyi={D\bibinitperiod},
+           given={Yusong},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{c7c09d8d5850e57de63a28fdfde51592}
+      \strng{fullhash}{c7ac98a0c81531e55e1e7b57e6bc3103}
+      \strng{fullhashraw}{c7ac98a0c81531e55e1e7b57e6bc3103}
+      \strng{bibnamehash}{c7c09d8d5850e57de63a28fdfde51592}
+      \strng{authorbibnamehash}{c7c09d8d5850e57de63a28fdfde51592}
+      \strng{authornamehash}{c7c09d8d5850e57de63a28fdfde51592}
+      \strng{authorfullhash}{c7ac98a0c81531e55e1e7b57e6bc3103}
+      \strng{authorfullhashraw}{c7ac98a0c81531e55e1e7b57e6bc3103}
+      \field{labelalpha}{Li+24}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\_eprint: 2404.06330}
+      \field{title}{Generative {Pre}-{Trained} {Transformer} for {Symbolic} {Regression} {Base} {In}-{Context} {Reinforcement} {Learning}}
+      \field{year}{2024}
+      \verb{file}
+      \verb Li et al. - 2024 - Generative Pre-Trained Transformer for Symbolic Re.pdf:files/400/Li et al. - 2024 - Generative Pre-Trained Transformer for Symbolic Re.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2404.06330
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2404.06330
+      \endverb
+    \endentry
+    \entry{makke_interpretable_2024}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=2d403d51e733236c6bde2075b1613e3f}{%
+           family={Makke},
+           familyi={M\bibinitperiod},
+           given={Nour},
+           giveni={N\bibinitperiod}}}%
+        {{hash=54ff2f270b001c9403fc0563fe52d8aa}{%
+           family={Chawla},
+           familyi={C\bibinitperiod},
+           given={Sanjay},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{a7f157d3d7b7d9b1c66fbf91834f8e76}
+      \strng{fullhash}{a7f157d3d7b7d9b1c66fbf91834f8e76}
+      \strng{fullhashraw}{a7f157d3d7b7d9b1c66fbf91834f8e76}
+      \strng{bibnamehash}{a7f157d3d7b7d9b1c66fbf91834f8e76}
+      \strng{authorbibnamehash}{a7f157d3d7b7d9b1c66fbf91834f8e76}
+      \strng{authornamehash}{a7f157d3d7b7d9b1c66fbf91834f8e76}
+      \strng{authorfullhash}{a7f157d3d7b7d9b1c66fbf91834f8e76}
+      \strng{authorfullhashraw}{a7f157d3d7b7d9b1c66fbf91834f8e76}
+      \field{labelalpha}{MC24}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Symbolic regression is emerging as a promising machine learning method for learning succinct underlying interpretable mathematical expressions directly from data. Whereas it has been traditionally tackled with genetic programming, it has recently gained a growing interest in deep learning as a data-driven model discovery tool, achieving significant advances in various application domains ranging from fundamental to applied sciences. In this survey, we present a structured and comprehensive overview of symbolic regression methods, review the adoption of these methods for model discovery in various areas, and assess their effectiveness. We have also grouped state-of-the-art symbolic regression applications in a categorized manner in a living review.}
+      \field{issn}{1573-7462}
+      \field{journaltitle}{Artificial Intelligence Review}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Interpretable scientific discovery with symbolic regression: a review}
+      \field{volume}{57}
+      \field{year}{2024}
+      \field{pages}{2}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1007/s10462-023-10622-0
+      \endverb
+      \verb{file}
+      \verb Makke und Chawla - 2024 - Interpretable scientific discovery with symbolic r.pdf:files/394/Makke und Chawla - 2024 - Interpretable scientific discovery with symbolic r.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s10462-023-10622-0
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s10462-023-10622-0
+      \endverb
+    \endentry
     \entry{miller_cartesian_2020}{article}{}{}
       \name{author}{1}{}{%
         {{hash=707c6e450c0448e2a3ef630bd0bfa21f}{%
@@ -945,6 +1775,261 @@
       \verb http://arxiv.org/abs/1810.09485
       \endverb
       \keyw{Computer Science - Neural and Evolutionary Computing}
+    \endentry
+    \entry{nenning_bayessche_1980}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=bbdfa29ccfc1dfd5b4036d08be3848f2}{%
+           family={Nenning},
+           familyi={N\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{bbdfa29ccfc1dfd5b4036d08be3848f2}
+      \strng{fullhash}{bbdfa29ccfc1dfd5b4036d08be3848f2}
+      \strng{fullhashraw}{bbdfa29ccfc1dfd5b4036d08be3848f2}
+      \strng{bibnamehash}{bbdfa29ccfc1dfd5b4036d08be3848f2}
+      \strng{authorbibnamehash}{bbdfa29ccfc1dfd5b4036d08be3848f2}
+      \strng{authornamehash}{bbdfa29ccfc1dfd5b4036d08be3848f2}
+      \strng{authorfullhash}{bbdfa29ccfc1dfd5b4036d08be3848f2}
+      \strng{authorfullhashraw}{bbdfa29ccfc1dfd5b4036d08be3848f2}
+      \field{labelalpha}{Nen80}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Statistisch-analytische Auswertungen von Marktbeobachtungs-Daten münden oft in Ergebnisse, die weder den theoretischen Erwartungen noch den praktischen Erfahrungen der mit dem Markt vertrauten Manager entsprechen. Unplausible Resultate sind aber meistens die Konsequenz eines Datendefizits, welches gegebenenfalls durch die formale Einbeziehung statistisch bisher nicht genützter apriori-Informationen ohne zusätzliche Kosten abgebaut werden kann. Die Verknüpfung der Informationsteile erfolgt im Rahmen des Bayes'schen Konzeptes. Nach der Vorstellung des notwendigen Instrumentariums der Bayes'schen Inferenz wird im empirischen Teil des Beitrages am Beispiel der Parametrisierung einer Marktreaktionsfunktion mit realen Daten gezeigt, da{\textbackslash} bei sorgfältiger Berücksichtigung des Anfangsbestandes an Marktinformationen plausiblere und verlä{\textbackslash}lichere Ergebnisse zu erwarten sind als im Falle der traditionellen Auswertung von Marktdaten.}
+      \field{issn}{1432-5217}
+      \field{journaltitle}{Zeitschrift für Operations Research}
+      \field{month}{12}
+      \field{number}{8}
+      \field{title}{Bayes'sche {Inferenz} bei der statistischen {Auswertung} von {Marktdaten}}
+      \field{volume}{24}
+      \field{year}{1980}
+      \field{pages}{B259\bibrangedash B273}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1007/BF01918729
+      \endverb
+      \verb{file}
+      \verb BF01918729.pdf:files/368/BF01918729.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF01918729
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF01918729
+      \endverb
+    \endentry
+    \entry{oliveira_analysing_2018}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=3153a8fe8e9fe342028dc92464950dbc}{%
+           family={Oliveira},
+           familyi={O\bibinitperiod},
+           given={Luiz\bibnamedelimb Otavio\bibnamedelimb Vilas\bibnamedelima Boas},
+           giveni={L\bibinitperiod\bibinitdelim O\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=74ca202e69cea9ee76de9c57b877da63}{%
+           family={Martins},
+           familyi={M\bibinitperiod},
+           given={Joao\bibnamedelimb Francisco\bibnamedelimb Barreto\bibnamedelimb da\bibnamedelima Silva},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=8ddac0493ab754c1b511d4c9489ca7c5}{%
+           family={Miranda},
+           familyi={M\bibinitperiod},
+           given={Luis\bibnamedelima Fernando},
+           giveni={L\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=56c933da2aee3a87799540e799c8c76d}{%
+           family={Pappa},
+           familyi={P\bibinitperiod},
+           given={Gisele\bibnamedelima Lobo},
+           giveni={G\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{8e4a6b723c633e9ccb5ea5ffbd73eecf}
+      \strng{fullhash}{1c5ededea52c80a6249d80174b95447f}
+      \strng{fullhashraw}{1c5ededea52c80a6249d80174b95447f}
+      \strng{bibnamehash}{8e4a6b723c633e9ccb5ea5ffbd73eecf}
+      \strng{authorbibnamehash}{8e4a6b723c633e9ccb5ea5ffbd73eecf}
+      \strng{authornamehash}{8e4a6b723c633e9ccb5ea5ffbd73eecf}
+      \strng{authorfullhash}{1c5ededea52c80a6249d80174b95447f}
+      \strng{authorfullhashraw}{1c5ededea52c80a6249d80174b95447f}
+      \field{labelalpha}{Oli+18}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The definition of a concise and effective testbed for Genetic Programming (GP) is a recurrent matter in the research community. This paper takes a new step in this direction, proposing a different approach to measure the quality of the symbolic regression benchmarks quantitatively. The proposed approach is based on meta-learning and uses a set of dataset meta-features---such as the number of examples or output skewness---to describe the datasets. Our idea is to correlate these meta-features with the errors obtained by a GP method. These meta-features define a space of benchmarks that should, ideally, have datasets (points) covering different regions of the space. An initial analysis of 63 datasets showed that current benchmarks are concentrated in a small region of this benchmark space. We also found out that number of instances and output skewness are the most relevant meta-features to GP output error. Both conclusions can help define which datasets should compose an effective testbed for symbolic regression methods.}
+      \field{booktitle}{Proceedings of the {Genetic} and {Evolutionary} {Computation} {Conference} {Companion}}
+      \field{month}{7}
+      \field{note}{arXiv:1805.10365 [cs]}
+      \field{title}{Analysing {Symbolic} {Regression} {Benchmarks} under a {Meta}-{Learning} {Approach}}
+      \field{urlday}{7}
+      \field{urlmonth}{10}
+      \field{urlyear}{2024}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \field{pages}{1342\bibrangedash 1349}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1145/3205651.3208293
+      \endverb
+      \verb{file}
+      \verb Oliveira et al. - 2018 - Analysing Symbolic Regression Benchmarks under a M.pdf:files/316/Oliveira et al. - 2018 - Analysing Symbolic Regression Benchmarks under a M.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1805.10365
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1805.10365
+      \endverb
+      \keyw{Computer Science - Neural and Evolutionary Computing}
+    \endentry
+    \entry{orzechowski}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=13713dc48e0c5456008471042a770ec8}{%
+           family={Orzechowski},
+           familyi={O\bibinitperiod},
+           given={Patryk},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4e77aa188a998bb89e0f1ca24ee07b34}{%
+           family={La\bibnamedelima Cava},
+           familyi={L\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+        {{hash=c854f672f8ca1e35a7de3d92215e023c}{%
+           family={Moore},
+           familyi={M\bibinitperiod},
+           given={Jason\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Kyoto, Japan}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{c2b95f3b94c29fc63777ee5605a71adf}
+      \strng{fullhash}{c2b95f3b94c29fc63777ee5605a71adf}
+      \strng{fullhashraw}{c2b95f3b94c29fc63777ee5605a71adf}
+      \strng{bibnamehash}{c2b95f3b94c29fc63777ee5605a71adf}
+      \strng{authorbibnamehash}{c2b95f3b94c29fc63777ee5605a71adf}
+      \strng{authornamehash}{c2b95f3b94c29fc63777ee5605a71adf}
+      \strng{authorfullhash}{c2b95f3b94c29fc63777ee5605a71adf}
+      \strng{authorfullhashraw}{c2b95f3b94c29fc63777ee5605a71adf}
+      \field{labelalpha}{OLM18}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper we provide a broad benchmarking of recent genetic programming approaches to symbolic regression in the context of state of the art machine learning approaches. We use a set of nearly 100 regression benchmark problems culled from open source repositories across the web. We conduct a rigorous benchmarking of four recent symbolic regression approaches as well as nine machine learning approaches from scikit-learn. The results suggest that symbolic regression performs strongly compared to state-of-the-art gradient boosting algorithms, although in terms of running times is among the slowest of the available methodologies. We discuss the results in detail and point to future research directions that may allow symbolic regression to gain wider adoption in the machine learning community.}
+      \field{booktitle}{Proceedings of the Genetic and Evolutionary Computation Conference}
+      \field{isbn}{9781450356183}
+      \field{series}{GECCO '18}
+      \field{title}{Where are we now? a large benchmark study of recent symbolic regression methods}
+      \field{year}{2018}
+      \field{pages}{1183\bibrangedash 1190}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1145/3205455.3205539
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3205455.3205539
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3205455.3205539
+      \endverb
+      \keyw{benchmarking,genetic programming,machine learning,symbolic regression}
+    \endentry
+    \entry{patzel_dpaetzelcmpbayes_2024}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=5384df27223bb452d4e3384f2a88f0e2}{%
+           family={Pätzel},
+           familyi={P\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{5384df27223bb452d4e3384f2a88f0e2}
+      \strng{fullhash}{5384df27223bb452d4e3384f2a88f0e2}
+      \strng{fullhashraw}{5384df27223bb452d4e3384f2a88f0e2}
+      \strng{bibnamehash}{5384df27223bb452d4e3384f2a88f0e2}
+      \strng{authorbibnamehash}{5384df27223bb452d4e3384f2a88f0e2}
+      \strng{authornamehash}{5384df27223bb452d4e3384f2a88f0e2}
+      \strng{authorfullhash}{5384df27223bb452d4e3384f2a88f0e2}
+      \strng{authorfullhashraw}{5384df27223bb452d4e3384f2a88f0e2}
+      \field{labelalpha}{Pät24}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{note}{original-date: 2022-03-24T10:52:44Z}
+      \field{title}{dpaetzel/cmpbayes}
+      \field{urlday}{27}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/dpaetzel/cmpbayes
+      \endverb
+      \verb{url}
+      \verb https://github.com/dpaetzel/cmpbayes
+      \endverb
+    \endentry
+    \entry{peyrolon_definition_2020}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=79ead70018f9b50cdbfc4213f8419ee7}{%
+           family={Peyrolón},
+           familyi={P\bibinitperiod},
+           given={Pablo},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {de}%
+      }
+      \list{location}{1}{%
+        {Wiesbaden}%
+      }
+      \list{publisher}{1}{%
+        {Springer Fachmedien Wiesbaden}%
+      }
+      \strng{namehash}{79ead70018f9b50cdbfc4213f8419ee7}
+      \strng{fullhash}{79ead70018f9b50cdbfc4213f8419ee7}
+      \strng{fullhashraw}{79ead70018f9b50cdbfc4213f8419ee7}
+      \strng{bibnamehash}{79ead70018f9b50cdbfc4213f8419ee7}
+      \strng{authorbibnamehash}{79ead70018f9b50cdbfc4213f8419ee7}
+      \strng{authornamehash}{79ead70018f9b50cdbfc4213f8419ee7}
+      \strng{authorfullhash}{79ead70018f9b50cdbfc4213f8419ee7}
+      \strng{authorfullhashraw}{79ead70018f9b50cdbfc4213f8419ee7}
+      \field{labelalpha}{Pey20}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Der {Satz} von {Bayes}}
+      \field{isbn}{978-3-658-31022-6 978-3-658-31023-3}
+      \field{note}{Series Title: essentials}
+      \field{title}{Definition des {Satzes} von {Bayes} oder das {Bayes}-{Theorem}}
+      \field{urlday}{25}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \field{pages}{13\bibrangedash 21}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1007/978-3-658-31023-3_2
+      \endverb
+      \verb{file}
+      \verb Peyrolón - 2020 - Definition des Satzes von Bayes oder das Bayes-The.pdf:files/365/Peyrolón - 2020 - Definition des Satzes von Bayes oder das Bayes-The.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/978-3-658-31023-3_2
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/978-3-658-31023-3_2
+      \endverb
     \endentry
     \entry{pavai_survey_2017}{article}{}{}
       \name{author}{2}{}{%
@@ -1204,6 +2289,215 @@
       \endverb
       \verb{url}
       \verb https://link.springer.com/10.1007/s11063-022-11093-0
+      \endverb
+    \endentry
+    \entry{white_better_2013}{article}{}{}
+      \name{author}{9}{}{%
+        {{hash=d186798474471837a060bdce47c062bf}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={David\bibnamedelima R.},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=77fb39006a46585a774e002f399ce8af}{%
+           family={McDermott},
+           familyi={M\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=48e8e1d8c5932a910f283fd008da6699}{%
+           family={Castelli},
+           familyi={C\bibinitperiod},
+           given={Mauro},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c75b73d8372a27598eec1eea1a5a4d23}{%
+           family={Manzoni},
+           familyi={M\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod}}}%
+        {{hash=137c6c8f2af2fa3ab9ea04faa906beff}{%
+           family={Goldman},
+           familyi={G\bibinitperiod},
+           given={Brian\bibnamedelima W.},
+           giveni={B\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=4e7fc4ce8d355b40d67bf4aa32cac29a}{%
+           family={Kronberger},
+           familyi={K\bibinitperiod},
+           given={Gabriel},
+           giveni={G\bibinitperiod}}}%
+        {{hash=21391672aad15c933c93005bcca0c304}{%
+           family={Jaśkowski},
+           familyi={J\bibinitperiod},
+           given={Wojciech},
+           giveni={W\bibinitperiod}}}%
+        {{hash=f6d4990c9fda5c2ac225c017a584c3ad}{%
+           family={O’Reilly},
+           familyi={O\bibinitperiod},
+           given={Una-May},
+           giveni={U\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=fc0da695d3774401949060e332fa8677}{%
+           family={Luke},
+           familyi={L\bibinitperiod},
+           given={Sean},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{ae281e650d14b9ae33c124a24d0d1e24}
+      \strng{fullhash}{35bc3ff96f05868668d84f467e88add0}
+      \strng{fullhashraw}{35bc3ff96f05868668d84f467e88add0}
+      \strng{bibnamehash}{ae281e650d14b9ae33c124a24d0d1e24}
+      \strng{authorbibnamehash}{ae281e650d14b9ae33c124a24d0d1e24}
+      \strng{authornamehash}{ae281e650d14b9ae33c124a24d0d1e24}
+      \strng{authorfullhash}{35bc3ff96f05868668d84f467e88add0}
+      \strng{authorfullhashraw}{35bc3ff96f05868668d84f467e88add0}
+      \field{labelalpha}{Whi+13}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We present the results of a community survey regarding genetic programming benchmark practices. Analysis shows broad consensus that improvement is needed in problem selection and experimental rigor. While views expressed in the survey dissuade us from proposing a large-scale benchmark suite, we ﬁnd community support for creating a ‘‘blacklist’’ of problems which are in common use but have important ﬂaws, and whose use should therefore be discouraged. We propose a set of possible replacement problems.}
+      \field{issn}{1389-2576, 1573-7632}
+      \field{journaltitle}{Genetic Programming and Evolvable Machines}
+      \field{month}{3}
+      \field{number}{1}
+      \field{shorttitle}{Better {GP} benchmarks}
+      \field{title}{Better {GP} benchmarks: community survey results and proposals}
+      \field{urlday}{16}
+      \field{urlmonth}{9}
+      \field{urlyear}{2024}
+      \field{volume}{14}
+      \field{year}{2013}
+      \field{urldateera}{ce}
+      \field{pages}{3\bibrangedash 29}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.1007/s10710-012-9177-2
+      \endverb
+      \verb{file}
+      \verb White et al. - 2013 - Better GP benchmarks community survey results and.pdf:files/287/White et al. - 2013 - Better GP benchmarks community survey results and.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/s10710-012-9177-2
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/s10710-012-9177-2
+      \endverb
+    \endentry
+    \entry{walker_2008}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=947fbc85c85bae243c1abbbdb3abfad2}{%
+           family={Walker},
+           familyi={W\bibinitperiod},
+           given={James\bibnamedelima Alfred},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=707c6e450c0448e2a3ef630bd0bfa21f}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Julian\bibnamedelima Francis},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{ea3e1cf3c7c683b889d8da43d73bc7ac}
+      \strng{fullhash}{ea3e1cf3c7c683b889d8da43d73bc7ac}
+      \strng{fullhashraw}{ea3e1cf3c7c683b889d8da43d73bc7ac}
+      \strng{bibnamehash}{ea3e1cf3c7c683b889d8da43d73bc7ac}
+      \strng{authorbibnamehash}{ea3e1cf3c7c683b889d8da43d73bc7ac}
+      \strng{authornamehash}{ea3e1cf3c7c683b889d8da43d73bc7ac}
+      \strng{authorfullhash}{ea3e1cf3c7c683b889d8da43d73bc7ac}
+      \strng{authorfullhashraw}{ea3e1cf3c7c683b889d8da43d73bc7ac}
+      \field{labelalpha}{WM08}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Evolutionary Computation}
+      \field{number}{4}
+      \field{title}{The Automatic Acquisition, Evolution and Reuse of Modules in Cartesian Genetic Programming}
+      \field{volume}{12}
+      \field{year}{2008}
+      \field{pages}{397\bibrangedash 417}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1109/TEVC.2007.903549
+      \endverb
+      \keyw{Genetic programming;Circuit testing;Benchmark testing;Digital circuits;Algorithms;Tree graphs;Encapsulation;Assembly;Automatically defined functions (ADFs);Cartesian genetic programming (CGP);embedded Cartesian genetic programming (ECGP);genetic programming (GP);graph-based representations;modularity;module acquisition;Automatically defined functions (ADFs);Cartesian genetic programming (CGP);embedded Cartesian genetic programming (ECGP);genetic programming (GP);graph-based representations;modularity;module acquisition}
+    \endentry
+    \entry{yu_neutrality_2001}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=124223a0aa483da97437981c95e51871}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Tina},
+           giveni={T\bibinitperiod}}}%
+        {{hash=138df81bd2309119d1d83b856026ab00}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Julian},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{editor}{6}{}{%
+        {{hash=138df81bd2309119d1d83b856026ab00}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Julian},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f4a578b97c2ebf8c23a1ce021ba2eb00}{%
+           family={Tomassini},
+           familyi={T\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=433e7ec680a759516559c049fab5fae1}{%
+           family={Lanzi},
+           familyi={L\bibinitperiod},
+           given={Pier\bibnamedelima Luca},
+           giveni={P\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=f4a76e3192428c449e76fe826182f443}{%
+           family={Ryan},
+           familyi={R\bibinitperiod},
+           given={Conor},
+           giveni={C\bibinitperiod}}}%
+        {{hash=cf37a7b4d71dbc3d832b939e8f0c4b32}{%
+           family={Tettamanzi},
+           familyi={T\bibinitperiod},
+           given={Andrea\bibnamedelimb G.\bibnamedelimi B.},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=a636929892867056989b0efeaec1e145}{%
+           family={Langdon},
+           familyi={L\bibinitperiod},
+           given={William\bibnamedelima B.},
+           giveni={W\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{8e9d2283715ff4ecb0add9edd21e402a}
+      \strng{fullhash}{8e9d2283715ff4ecb0add9edd21e402a}
+      \strng{fullhashraw}{8e9d2283715ff4ecb0add9edd21e402a}
+      \strng{bibnamehash}{8e9d2283715ff4ecb0add9edd21e402a}
+      \strng{authorbibnamehash}{8e9d2283715ff4ecb0add9edd21e402a}
+      \strng{authornamehash}{8e9d2283715ff4ecb0add9edd21e402a}
+      \strng{authorfullhash}{8e9d2283715ff4ecb0add9edd21e402a}
+      \strng{authorfullhashraw}{8e9d2283715ff4ecb0add9edd21e402a}
+      \strng{editorbibnamehash}{ff5fe344abbea9de9831ca8abb4aefe3}
+      \strng{editornamehash}{ff5fe344abbea9de9831ca8abb4aefe3}
+      \strng{editorfullhash}{4d4bf93a4e7d33d240743e3f461473b0}
+      \strng{editorfullhashraw}{4d4bf93a4e7d33d240743e3f461473b0}
+      \field{labelalpha}{YM01}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This work is a study of neutrality in the context of Evolutionary Computation systems. In particular, we introduce the use of explicit neutrality with an integer string coding scheme to allow neutrality to be measured during evolution. We tested this method on a Boolean benchmark problem. The experimental results indicate that there is a positive relationship between neutrality and evolvability: neutrality improves evolvability. We also identify four characteristics of adaptive/neutral mutations that are associated with high evolvability. They may be the ingredients in designing effective Evolutionary Computation systems for the Boolean class problem.}
+      \field{booktitle}{Genetic {Programming}}
+      \field{isbn}{978-3-540-45355-0}
+      \field{title}{Neutrality and the {Evolvability} of {Boolean} {Function} {Landscape}}
+      \field{year}{2001}
+      \field{pages}{204\bibrangedash 217}
+      \range{pages}{14}
+      \verb{file}
+      \verb Yu und Miller - 2001 - Neutrality and the Evolvability of Boolean Functio.pdf:files/377/Yu und Miller - 2001 - Neutrality and the Evolvability of Boolean Functio.pdf:application/pdf
       \endverb
     \endentry
   \enddatalist

@@ -23,3 +23,10 @@ Notizen aus Zettel:
     \item innerhalb von HPO bewerten, wie sich die fitness ändert in Crossover-Verlauf
 \end{itemize}
 
+Hier Notizen zu den Ergebnissen bei der HPO für Parity und Keijzer:\\
+Sieht so aus als würde Offset richtig oft über die verwendete Anzahl an Iterationen gehen.\\
+Heißt das, dass Crossover immer schlechter ist, wo das der Fall ist?\\
+Nicht unbedingt, es können auch ungünstige Parametersätze verwendet werden. (bei Parity, single-point, konstant ohne Offset ist das Ergebnis besser als mit Offset und trotzdem verwendet "mit Offset" kein Crossover)\\
+Als Lösung wird Offset nicht mehr über die ganze Range von 500 Iterationen erlaubt, sondern eingegrenzt. Die Range für Offset wird an den Ergebnissen ohne Offset angepasst.\\
+Der Mittelwert der Iterationen für alle Lösungsarten von Parity liegt bei ca. 55 Iterationen. Also wird die Offset-Grenze auf 55 Iterationen begrenzt.\\
+Der Mittelwert der Iterationen bei Keijzer liegt bei ca TODO Iterationen, also wird auf TODO Iterationen gerundet.
