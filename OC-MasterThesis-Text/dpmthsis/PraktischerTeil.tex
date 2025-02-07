@@ -238,8 +238,8 @@ Das Evaluierungsverfahren wird in Abschnitt \ref{sec:Evaluation} näher erläute
 Da durch die erhöhte Rechenzeit der komplexeren Testszenarien keine sinnvolle Hyperparameteroptimierung ausführen lässt, wird für diese Fälle eine andere Teststrategie entwickelt.\\
 Diejenigen Hyperparameter eines CGP-Modells, die nicht mit Rekombination in Verbindung stehen, werden aus den Ergebnissen von Cui et al. herangezogen \cite{cui_results}.
 Die übrigen Hyperparameter (Rekombinationsrate und Offset) werden variiert und in CGP-Modelle eingepflegt.
-Diese werden anschließend in mehreren Durchläufen trainiert.
-Für die Evaluation stehen daraufhin die Ergebnisse mehrerer CGP-Einstellungen zur Verfügung, die allerdings nicht die Ergebnisse der besten Parametersätze darstellen.
+Für jede CGP-Konfiguration werden mehrere Testdurchläufe ausgeführt, um eine statistische Auswertung ausführen zu können.\\
+Für die Evaluation stehen daraufhin dementsprechend die Ergebnisse mehrerer CGP-Kon\-fi\-gu\-ra\-tio\-nen zur Verfügung, die allerdings nicht die Ergebnisse der besten Parametersätze darstellen.
 Trotzdem können die Ergebnisse verwendet werden, um einen näheren Einblick zum Verhalten des CGP-Modells zu erhalten, wenn die Rekombinationsparameter variiert werden.\\
 Nähere Informationen zur Evaluierung werden in Abschnitt \ref{sec:Evaluation} gegeben.
 
@@ -247,38 +247,39 @@ Nähere Informationen zur Evaluierung werden in Abschnitt \ref{sec:Evaluation} g
 \section{Evaluation}
 \label{sec:Evaluation}
 
+Für die Auswertung der Ergebnisse werden für jedes CGP-Training verschiedene Metriken aufgezeichnet, die einen Einblick in die Effizienz der Modelle geben sollen.
+Diese werden für jede Trainingsiteration gespeichert, um den Verlauf beobachten und bewerten zu können.
+Die folgende Liste gibt die Metriken an, die in dieser Arbeit näher betrachtet werden:
 \begin{itemize}
-    \item Versuchsaufbau und Durchführung
-    \begin{itemize}
-        \item an Hennings Code orientiert
-        \item Testszenarien -> welche Testdaten und Berechnung fitness
-        \begin{itemize}
-            \item boolean Problems
-            \item symbolic regression
-            \item ggf. Ameisenoptimierungsproblem
-        \end{itemize}
-        \item weitere Einstellungen (Welche Selektionsverfahren, Mutationsverfahren, Rekomb...)
-        \item Hyperparameteroptimierung
-        \begin{itemize}
-        	\item HPO wird in Grundlagen nicht erklärt also hier kurz erwähnen, dass die besten Parameter gesucht werden also eine HPO ausgeführt wird
-            \item Welche Bib benutzt
-            \item Welche Parameter optimiert; mit welchen Ranges
-            \item 10 Ausführungen pro Optimierungsschritt
-            \item Probleme Rechenzeit HPO
-            \item verschiedene Sampler keinen Mehrwert
-        \end{itemize}
-        \item Ausführen mehrerer Durchläufe, um statistische Auswertung vorzunehmen
-    \end{itemize}
-    \item Ergebnisse und Evaluation
-    \begin{itemize}
-        \item Metriken zur Auswertung
-        \item händische Auswertung des zeitlichen Verlaufs der Metriken (Mittelwert und Standardabweichung)
-        \item bayesian Auswertung der Endergebnisse -> wie viele Iterationen (erklären wieso Bayes verwendet wird: Henning sagt in Paper, dass andere Verteilungen das Modell nicht gut beschreiben; siehe negative Werte für Iterationen)
-        \item Plankett-Luce-Modell gibt Wahrscheinlichkeit bestes Ergebnis zu sein -> wie in Hennings Paper
-        \item cmpbayes verwendet Markov Chain Monte-Carlo Sampling -> also auch verwenden
-        \item HPDI für Bewertung der Endergebnisse (Iterationen bis konvergent)
-        \item prior sensitivity analysis nicht machen (to ensure robustness of all models)
-        \item ggf Bewertung der statistischen Aussagekraft mit ANOVA
-    \end{itemize}
+	\item Fitness nach Rekombination
+	\item Fitness nach Mutation
+	\item Anzahl aktiver Knoten
+	\item Anteil aktiver Knoten
 \end{itemize}
+
+Die Evaluation umfasst unterschiedliche Techniken zur Bewertung der ausgezeichneten Daten.
+Diese werden im Folgenden eingeführt und erläutert.\\
+
+\textbf{Analyse der Rohdaten:} Der erste Evaluationsschritt umfasst eine händische Analyse der Rohdaten.
+Dabei werden die Ergebnisse der Hyperparameteranalyse näher betrachtet und bewertet.
+Es werden erste Erkenntnisse über die Effizienz der verschiedenen Rekombinationstypen gesammelt, indem beispielsweise die Anzahl der Rechenknoten verglichen wird.
+Außerdem wird beobachtet wie die unterschiedlichen Rekombinationsparameter gesetzt werden.\\
+Des weiteren werden die Ergebnisse des CGP-Trainings näher analysiert.
+Der Trainingserfolg zwischen Rekombination und Mutation können anhand der jeweiligen Fitness-Werte miteinander verglichen werden.\\
+
+\textbf{Bayes'sche Analyse:} Die Bayes'sche Analyse wird einerseits für die Sortierung der Effizienz der CGP-Konfigurationen verwendet. 
+Dafür wird wie in Abschnitt \ref{sec:bayesian} beschrieben das Plackett-Luce-Modell verwendet.
+Für die einfacheren Testszenarien Parity und Keijzer können so die Ergebnisse, der aus der Hyperparameteranalyse erhaltenen besten CGP-Konfigurationen miteinander verglichen werden.\\
+Für weitere Bewertungen wird das Gammaverteilung-basierte genutzt.
+Durch die Berechnung des Mittelwerts und HPDI der Iterationen für jede CPG-Konfiguration können sowohl die einfacheren als auch die komplexeren Testszenarien ausgewertet werden.
+Für Parity und Keijzer kann so eingeschätzt werden, welche CGP-Konfiguration die Ausgangsprobleme schneller lösen kann als andere.
+Außerdem kann bewertet werden wie hoch die Streuung dieser Ergebnisse ist.
+Für die komplexeren Ausgangsprobleme kann beobachtet werden, welche Auswirkungen die Änderung der Rekombinationsparameter auf die Effizienz der CGP-Modelle hat.\\
+Die Prior-Sensitivitätsanalyse, die Cui et al. in ihrem Paper untersuchen, wird aus Gründen des Umfangs in dieser Arbeit nicht näher betrachtet \cite{cui_equidistant_2023}.\\
+
+\textbf{Graphische Evaluation:} Für alle Testszenarien kann neben der bayes'schen Analyse eine graphische Evaluation ausgeführt werden.
+Dafür werden nicht die Endergebnisse des CGP-Trainings betrachtet, sondern deren Verlauf.
+Es werden die Fitnesswerte und Anteile der aktiven Knoten über die Iterationen hinweg geplottet.
+Dabei werden die Mittelwerte und Standardabweichungen der Metriken verwendet.
+Im Anschluss können die Plots visuell bewertet werden.\\
 
