@@ -22,7 +22,6 @@ function Base.show(io::IO, c::Chromosome)
 end
 
 function Chromosome(params::CgpParameters)
-    @assert params.nbr_outputs == 1
 
     nodes_grid = Vector{Node}()
     output_node_ids = Vector{Int}()
