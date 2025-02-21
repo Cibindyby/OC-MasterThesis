@@ -66,8 +66,8 @@ function evaluate!(self::Chromosome, inputs::Vector{Float32}, labels::Vector{Flo
         elseif current_node.node_type == OutputNode
             con1 = current_node.connection0
             prev_output1 = outputsNode[con1]
-            outputsNode[node_id] = copy(prev_output1)
-            prediction = copy(prev_output1)
+            outputsNode[node_id] = deepcopy(prev_output1)
+            prediction = deepcopy(prev_output1)
         elseif current_node.node_type == ComputationalNode
             con1 = current_node.connection0
             prev_output1 = outputsNode[con1]

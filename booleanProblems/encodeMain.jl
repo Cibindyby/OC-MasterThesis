@@ -31,6 +31,7 @@ include("utils/runner_multiple_parents_with_elitist_mulambda.jl")
 import XLSX
 
 datasetToLoad = parse(Int, ARGS[1])
+
 if datasetToLoad == 0
     include("datasets/3parity.jl")
 elseif datasetToLoad == 1
@@ -108,7 +109,7 @@ function main()
         iterations = iterations + 1
 
         open(save_path, "a") do file
-            write(file, "$iterations, $fitnessAfterCrossover, $fitnessAfterMutation, $activeNodesNumber, $activeNodesRatio\n")
+            write(file, replace(string("$iterations; $fitnessAfterCrossover; $fitnessAfterMutation; $activeNodesNumber; $activeNodesRatio\n"), "." => ","))
             close(file)
         end
 
@@ -188,7 +189,7 @@ open(save_path, "w") do file
 end
 
 open(save_path, "a") do file
-    write(file, "Iteration, Fitness nach Rekombination, Fitness nach Mutation, Anzahl aktiver Knoten, Anteil aktiver Knoten\n")
+    write(file, "Iteration; Fitness nach Rekombination; Fitness nach Mutation; Anzahl aktiver Knoten; Anteil aktiver Knoten\n")
     close(file)
 end
 
@@ -219,8 +220,8 @@ crossover_offset = offset_value
 mu = 1
 lambda = 4
 eval_after_iterations = 35000 #10 mal mehr als maximales mean bei Ergebnis von Henning 
-nbr_inputs = 4 #Achtung, das gilt nur für Encode!!!
-nbr_outputs = 16
+nbr_inputs = 16 #Achtung, das gilt nur für Encode!!!
+nbr_outputs = 4
 tournament_size = 0
 
 main()
