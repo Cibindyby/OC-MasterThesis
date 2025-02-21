@@ -8,8 +8,6 @@ import matplotlib.pyplot as plt
 def create_all_plots(nameOfTable, nameOfSheet, nameOfPlot):
     df = pd.read_excel(f'Endergebnisse/Parity/{nameOfTable}.xlsx', nameOfSheet)
 
-    maxIteration = np.max(df['Iteration'])
-
     runs = df['Source.Name'].nunique()
 
     iteration_counts = df['Iteration'].value_counts().sort_index()
@@ -74,7 +72,6 @@ def create_all_plots(nameOfTable, nameOfSheet, nameOfPlot):
 
     # X-Achse: Iterationen (1 bis Anzahl Mittelwerte)
     x = np.arange(1, len(result_means_array) + 1)
-    marker_positions = range(99, len(x), 100)
 
     # Y-Achse: Mittelwerte
     y = result_means_array
@@ -83,26 +80,28 @@ def create_all_plots(nameOfTable, nameOfSheet, nameOfPlot):
 
     # Plot erstellen
     plt.figure(figsize=(10, 8))
-    plt.plot(x, y, linestyle='-', color='b', label='Mittelwert Fitness', marker='o', markevery=marker_positions)
-    plt.plot(x, y_plus, linestyle='-', color='g', label="positive Standardabweichung", marker='o', markevery=marker_positions)
-    plt.plot(x, y_minus, linestyle='-', color='r', label="negative Standardabweichung", marker='o', markevery=marker_positions)
+    plt.plot(x, y, linestyle='-', color='b', label='Mittelwert Fitness')
+    plt.plot(x, y_plus, linestyle='-', color='g', label="positive Standardabweichung")
+    plt.plot(x, y_minus, linestyle='-', color='r', label="negative Standardabweichung")
     plt.title(nameOfPlot, loc='left')
+    plt.fill_between(x, y, y_plus, color='g', alpha= 0.1)
+    plt.fill_between(x, y_minus, y, color='r', alpha=0.1)
+    plt.legend(bbox_to_anchor=(0.82, 1.13),loc='upper center')
+    plt.annotate(f'{y[-1]:.4f}', xy=(x[-1], y[-1]), xytext=(27, -7),
+             textcoords='offset points',
+             ha='left',
+             va='bottom')
+    plt.annotate(f'{y_plus[-1]:.4f}', xy=(x[-1], y_plus[-1]), xytext=(27,0),
+             textcoords='offset points',
+             ha='left',
+             va='bottom')
+    plt.annotate(f'{y_minus[-1]:.4f}', xy=(x[-1], y_minus[-1]), xytext=(27, -14),
+             textcoords='offset points',
+             ha='left',
+             va='bottom')
     plt.xlabel("Iteration")
     plt.ylabel("Fitness")
     plt.grid(True)
-    plt.legend(bbox_to_anchor=(0.82, 1.13),loc='upper center')
-    for i, (xi, yi) in enumerate(zip(x, y)):
-        if xi%100 == 0:
-            plt.annotate(f'{yi:.4f}', (xi, yi), textcoords="offset points", xytext=(0, 5), ha='center')
-    
-    for i, (xi, yi) in enumerate(zip(x, y_plus)):
-        if xi%100 == 0:
-            plt.annotate(f'{yi:.4f}', (xi, yi), textcoords="offset points", xytext=(0, 10), ha='center')
-            
-    for i, (xi, yi) in enumerate(zip(x, y_minus)):
-        if xi%100 == 0:
-            plt.annotate(f'{yi:.4f}', (xi, yi), textcoords="offset points", xytext=(0, -15), ha='center')
-    
     #plt.show()
     plt.savefig(f'Endergebnisse/Parity/Plots/{nameOfSheet}Fitness.png')
 
@@ -114,26 +113,27 @@ def create_all_plots(nameOfTable, nameOfSheet, nameOfPlot):
 
     # Plot erstellen
     plt.figure(figsize=(10, 8))
-    plt.plot(x, y_active, linestyle='-', color='b', label='Mittelwert Anteil aktiver Knoten', marker='o', markevery=marker_positions)
-    plt.plot(x, y_plus_active, linestyle='-', color='g', label="positive Standardabweichung", marker='o', markevery=marker_positions)
-    plt.plot(x, y_minus_active, linestyle='-', color='r', label="negative Standardabweichung", marker='o', markevery=marker_positions)
+    plt.plot(x, y_active, linestyle='-', color='b', label='Mittelwert Anteil aktiver Knoten')
+    plt.plot(x, y_plus_active, linestyle='-', color='g', label="positive Standardabweichung")
+    plt.plot(x, y_minus_active, linestyle='-', color='r', label="negative Standardabweichung")
     plt.title(nameOfPlot, loc='left')
     plt.xlabel("Iteration")
     plt.ylabel("Anteil aktiver Knoten")
+    plt.fill_between(x, y_active, y_plus_active, color='g', alpha= 0.1)
+    plt.fill_between(x, y_minus_active, y_active, color='r', alpha=0.1)
     plt.grid(True)
-    plt.legend(bbox_to_anchor=(0.82, 1.13),loc='upper center')
-    for i, (xi, yi) in enumerate(zip(x, y_active)):
-        if xi%100 == 0:
-            plt.annotate(f'{yi:.4f}', (xi, yi), textcoords="offset points", xytext=(0, 5), ha='center')
-    
-    for i, (xi, yi) in enumerate(zip(x, y_plus_active)):
-        if xi%100 == 0:
-            plt.annotate(f'{yi:.4f}', (xi, yi), textcoords="offset points", xytext=(0, 10), ha='center')
-            
-    for i, (xi, yi) in enumerate(zip(x, y_minus_active)):
-        if xi%100 == 0:
-            plt.annotate(f'{yi:.4f}', (xi, yi), textcoords="offset points", xytext=(0, -15), ha='center')
-    
+    plt.annotate(f'{y_active[-1]:.4f}', xy=(x[-1], y_active[-1]), xytext=(27, -7),
+             textcoords='offset points',
+             ha='left',
+             va='bottom')
+    plt.annotate(f'{y_plus_active[-1]:.4f}', xy=(x[-1], y_plus_active[-1]), xytext=(27, -7),
+             textcoords='offset points',
+             ha='left',
+             va='bottom')
+    plt.annotate(f'{y_minus_active[-1]:.4f}', xy=(x[-1], y_minus_active[-1]), xytext=(27, -7),
+             textcoords='offset points',
+             ha='left',
+             va='bottom')
     #plt.show()
     plt.savefig(f'Endergebnisse/Parity/Plots/{nameOfSheet}ActiveNodes.png')
 
@@ -161,7 +161,6 @@ list_of_plots = [
     ['Parity Uniform Konstant kein Offset', 'Parity Uniform Konstant mit Offset', 'Parity Uniform Clegg kein Offset', 'Parity Uniform Clegg mit Offset', 'Parity Uniform OneFifth kein Offset', 'Parity Uniform OneFifth mit Offset']
 ]
 
-nameOfTableUsed = ['ParityNoCrossover', 'ParityNoCrossover', 'Parity No Crossover']
 
 for table_index in range(0, 4, 1):
     if table_index == 0: #no crossover
