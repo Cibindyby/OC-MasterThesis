@@ -219,7 +219,7 @@ crossover_offset = offset_value
 
 mu = 1
 lambda = 4
-eval_after_iterations = 35000 #10 mal mehr als maximales mean bei Ergebnis von Henning 
+eval_after_iterations = 10000 #niedriger, wegen Zeit (ursprünglich 35000)
 nbr_inputs = 16 #Achtung, das gilt nur für Encode!!!
 nbr_outputs = 4
 tournament_size = 0
