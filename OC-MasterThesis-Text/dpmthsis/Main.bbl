@@ -64,23 +64,13 @@
       \field{month}{4}
       \field{number}{4}
       \field{title}{A {Survey} of {Genetic} {Programming} and {Its} {Applications}}
-      \field{urlday}{18}
-      \field{urlmonth}{9}
-      \field{urlyear}{2024}
       \field{volume}{13}
       \field{year}{2019}
-      \field{urldateera}{ce}
       \verb{doi}
       \verb 10.3837/tiis.2019.04.002
       \endverb
       \verb{file}
       \verb 2019 - A Survey of Genetic Programming and Its Applicatio.pdf:files/309/2019 - A Survey of Genetic Programming and Its Applicatio.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://itiis.org/digital-library/manuscript/2311
-      \endverb
-      \verb{url}
-      \verb http://itiis.org/digital-library/manuscript/2311
       \endverb
     \endentry
     \entry{araujo_genetic_2020}{article}{}{}
@@ -113,12 +103,8 @@
       \field{month}{6}
       \field{number}{1-2}
       \field{title}{Genetic programming for natural language processing}
-      \field{urlday}{25}
-      \field{urlmonth}{11}
-      \field{urlyear}{2024}
       \field{volume}{21}
       \field{year}{2020}
-      \field{urldateera}{ce}
       \field{pages}{11\bibrangedash 32}
       \range{pages}{22}
       \verb{doi}
@@ -126,12 +112,6 @@
       \endverb
       \verb{file}
       \verb Araujo - 2020 - Genetic programming for natural language processin.pdf:files/337/Araujo - 2020 - Genetic programming for natural language processin.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://link.springer.com/10.1007/s10710-019-09361-5
-      \endverb
-      \verb{url}
-      \verb http://link.springer.com/10.1007/s10710-019-09361-5
       \endverb
     \endentry
     \entry{carlson_baggepinnenhyperoptjl_2025}{misc}{}{}
@@ -219,12 +199,6 @@
       \range{pages}{2}
       \verb{doi}
       \verb 10.1145/3205651.3205658
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1145/3205651.3205658
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1145/3205651.3205658
       \endverb
       \keyw{statistical analysis,ranking models,plackett-luce model,bayesian analysis,algorithm comparison}
     \endentry
@@ -314,12 +288,8 @@
       \field{isbn}{978-3-031-70054-5 978-3-031-70055-2}
       \field{note}{Series Title: Lecture Notes in Computer Science}
       \field{title}{Positional {Bias} {Does} {Not} {Influence} {Cartesian} {Genetic} {Programming} with {Crossover}}
-      \field{urlday}{18}
-      \field{urlmonth}{10}
-      \field{urlyear}{2024}
       \field{volume}{15148}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \field{pages}{151\bibrangedash 167}
       \range{pages}{17}
       \verb{doi}
@@ -327,12 +297,6 @@
       \endverb
       \verb{file}
       \verb Cui et al. - 2024 - Positional Bias Does Not Influence Cartesian Genet.pdf:files/333/Cui et al. - 2024 - Positional Bias Does Not Influence Cartesian Genet.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://link.springer.com/10.1007/978-3-031-70055-2_10
-      \endverb
-      \verb{url}
-      \verb https://link.springer.com/10.1007/978-3-031-70055-2_10
       \endverb
     \endentry
     \entry{crepinsek_exploration_2013}{article}{}{}
@@ -376,12 +340,8 @@
       \field{number}{3}
       \field{shorttitle}{Exploration and exploitation in evolutionary algorithms}
       \field{title}{Exploration and exploitation in evolutionary algorithms: {A} survey}
-      \field{urlday}{29}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
       \field{volume}{45}
       \field{year}{2013}
-      \field{urldateera}{ce}
       \field{pages}{1\bibrangedash 33}
       \range{pages}{33}
       \verb{doi}
@@ -389,12 +349,6 @@
       \endverb
       \verb{file}
       \verb Črepinšek et al. - 2013 - Exploration and exploitation in evolutionary algor.pdf:files/357/Črepinšek et al. - 2013 - Exploration and exploitation in evolutionary algor.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://dl.acm.org/doi/10.1145/2480741.2480752
-      \endverb
-      \verb{url}
-      \verb https://dl.acm.org/doi/10.1145/2480741.2480752
       \endverb
     \endentry
     \entry{mernik_refining_2022}{incollection}{}{}
@@ -463,12 +417,8 @@
       \field{isbn}{978-3-031-21094-5}
       \field{note}{Series Title: Lecture Notes in Computer Science}
       \field{title}{Refining {Mutation} {Variants} in {Cartesian} {Genetic} {Programming}}
-      \field{urlday}{10}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
       \field{volume}{13627}
       \field{year}{2022}
-      \field{urldateera}{ce}
       \field{pages}{185\bibrangedash 200}
       \range{pages}{16}
       \verb{doi}
@@ -476,12 +426,6 @@
       \endverb
       \verb{file}
       \verb Cui et al. - 2022 - Refining Mutation Variants in Cartesian Genetic Pr.pdf:files/344/Cui et al. - 2022 - Refining Mutation Variants in Cartesian Genetic Pr.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://link.springer.com/10.1007/978-3-031-21094-5_14
-      \endverb
-      \verb{url}
-      \verb https://link.springer.com/10.1007/978-3-031-21094-5_14
       \endverb
     \endentry
     \entry{cui_equidistant_2023}{inproceedings}{}{}
@@ -530,11 +474,7 @@
       \field{isbn}{978-989-758-674-3}
       \field{shorttitle}{Equidistant {Reorder} {Operator} for {Cartesian} {Genetic} {Programming}}
       \field{title}{Equidistant {Reorder} {Operator} for {Cartesian} {Genetic} {Programming}:}
-      \field{urlday}{17}
-      \field{urlmonth}{6}
-      \field{urlyear}{2024}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \field{pages}{64\bibrangedash 74}
       \range{pages}{11}
       \verb{doi}
@@ -542,12 +482,6 @@
       \endverb
       \verb{file}
       \verb Cui et al. - 2023 - Equidistant Reorder Operator for Cartesian Genetic.pdf:files/238/Cui et al. - 2023 - Equidistant Reorder Operator for Cartesian Genetic.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://www.scitepress.org/DigitalLibrary/Link.aspx?doi=10.5220/0012174100003595
-      \endverb
-      \verb{url}
-      \verb https://www.scitepress.org/DigitalLibrary/Link.aspx?doi=10.5220/0012174100003595
       \endverb
     \endentry
     \entry{cui_weighted_mutation}{inproceedings}{}{}
@@ -603,12 +537,6 @@
       \verb{doi}
       \verb 10.1145/3594805.3607130
       \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1145/3594805.3607130
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1145/3594805.3607130
-      \endverb
       \keyw{CGP,Cartesian Genetic Programming,Evolutionary Algorithm,Genetic Programming,Mutation}
     \endentry
     \entry{cui_results}{misc}{}{}
@@ -638,22 +566,12 @@
       \field{labeltitlesource}{title}
       \field{month}{3}
       \field{title}{The {Positional} {Bias} might not {Influence} {Cartesian} {Genetic} {Programming} with {Crossover}}
-      \field{urlday}{3}
-      \field{urlmonth}{2}
-      \field{urlyear}{2025}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \verb{doi}
       \verb 10.5281/zenodo.10830014
       \endverb
       \verb{file}
       \verb Snapshot:files/403/10830014.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://zenodo.org/records/10830014
-      \endverb
-      \verb{url}
-      \verb https://zenodo.org/records/10830014
       \endverb
     \endentry
     \entry{cuihen_cuihencgp_with_crossover_strategies_2024}{misc}{}{}
@@ -735,11 +653,7 @@
       \field{isbn}{978-1-59593-697-4}
       \field{month}{7}
       \field{title}{A new crossover technique for {Cartesian} genetic programming}
-      \field{urlday}{30}
-      \field{urlmonth}{5}
-      \field{urlyear}{2023}
       \field{year}{2007}
-      \field{urldateera}{ce}
       \field{pages}{1580\bibrangedash 1587}
       \range{pages}{8}
       \verb{doi}
@@ -747,12 +661,6 @@
       \endverb
       \verb{file}
       \verb Full Text PDF:files/50/Clegg et al. - 2007 - A new crossover technique for Cartesian genetic pr.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://dl.acm.org/doi/10.1145/1276958.1277276
-      \endverb
-      \verb{url}
-      \verb https://dl.acm.org/doi/10.1145/1276958.1277276
       \endverb
     \endentry
     \entry{doerr_self-adjusting_2019}{inproceedings}{}{}
@@ -799,11 +707,7 @@
       \field{isbn}{978-1-4503-6111-8}
       \field{month}{7}
       \field{title}{Self-adjusting mutation rates with provably optimal success rules}
-      \field{urlday}{3}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
       \field{year}{2019}
-      \field{urldateera}{ce}
       \field{pages}{1479\bibrangedash 1487}
       \range{pages}{9}
       \verb{doi}
@@ -811,12 +715,6 @@
       \endverb
       \verb{file}
       \verb Volltext:files/360/Doerr et al. - 2019 - Self-adjusting mutation rates with provably optima.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://dl.acm.org/doi/10.1145/3321707.3321733
-      \endverb
-      \verb{url}
-      \verb https://dl.acm.org/doi/10.1145/3321707.3321733
       \endverb
     \endentry
     \entry{demirbas_stress_2022}{article}{}{}
@@ -864,12 +762,8 @@
       \field{month}{8}
       \field{number}{16}
       \field{title}{Stress {Analysis} of {2D}-{FG} {Rectangular} {Plates} with {Multi}-{Gene} {Genetic} {Programming}}
-      \field{urlday}{25}
-      \field{urlmonth}{11}
-      \field{urlyear}{2024}
       \field{volume}{12}
       \field{year}{2022}
-      \field{urldateera}{ce}
       \field{pages}{8198}
       \range{pages}{1}
       \verb{doi}
@@ -877,12 +771,6 @@
       \endverb
       \verb{file}
       \verb Demirbas et al. - 2022 - Stress Analysis of 2D-FG Rectangular Plates with M.pdf:files/335/Demirbas et al. - 2022 - Stress Analysis of 2D-FG Rectangular Plates with M.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://www.mdpi.com/2076-3417/12/16/8198
-      \endverb
-      \verb{url}
-      \verb https://www.mdpi.com/2076-3417/12/16/8198
       \endverb
     \endentry
     \entry{goldman_2015}{article}{}{}
@@ -978,12 +866,8 @@
       \field{month}{12}
       \field{number}{12}
       \field{title}{Choosing {Mutation} and {Crossover} {Ratios} for {Genetic} {Algorithms}—{A} {Review} with a {New} {Dynamic} {Approach}}
-      \field{urlday}{10}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
       \field{volume}{10}
       \field{year}{2019}
-      \field{urldateera}{ce}
       \field{pages}{390}
       \range{pages}{1}
       \verb{doi}
@@ -991,12 +875,6 @@
       \endverb
       \verb{file}
       \verb Hassanat et al. - 2019 - Choosing Mutation and Crossover Ratios for Genetic.pdf:files/346/Hassanat et al. - 2019 - Choosing Mutation and Crossover Ratios for Genetic.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://www.mdpi.com/2078-2489/10/12/390
-      \endverb
-      \verb{url}
-      \verb https://www.mdpi.com/2078-2489/10/12/390
       \endverb
     \endentry
     \entry{hohil_1999}{article}{}{}
@@ -1041,12 +919,6 @@
       \range{pages}{3}
       \verb{doi}
       \verb https://doi.org/10.1016/S0893-6080(99)00069-6
-      \endverb
-      \verb{urlraw}
-      \verb https://www.sciencedirect.com/science/article/pii/S0893608099000696
-      \endverb
-      \verb{url}
-      \verb https://www.sciencedirect.com/science/article/pii/S0893608099000696
       \endverb
       \keyw{-bit parity problem,Exclusive-OR problem,Neural networks}
     \endentry
@@ -1110,11 +982,7 @@
       \field{isbn}{9798400701207}
       \field{month}{7}
       \field{title}{Towards a {General} {Boolean} {Function} {Benchmark} {Suite}}
-      \field{urlday}{24}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \field{pages}{591\bibrangedash 594}
       \range{pages}{4}
       \verb{doi}
@@ -1122,12 +990,6 @@
       \endverb
       \verb{file}
       \verb Kalkreuth et al. - 2023 - Towards a General Boolean Function Benchmark Suite.pdf:files/363/Kalkreuth et al. - 2023 - Towards a General Boolean Function Benchmark Suite.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://dl.acm.org/doi/10.1145/3583133.3590685
-      \endverb
-      \verb{url}
-      \verb https://dl.acm.org/doi/10.1145/3583133.3590685
       \endverb
     \endentry
     \entry{kalkreuth_comprehensive_2020}{inproceedings}{}{}
@@ -1165,11 +1027,7 @@
       \field{isbn}{978-989-758-475-6}
       \field{shorttitle}{A {Comprehensive} {Study} on {Subgraph} {Crossover} in {Cartesian} {Genetic} {Programming}}
       \field{title}{A {Comprehensive} {Study} on {Subgraph} {Crossover} in {Cartesian} {Genetic} {Programming}:}
-      \field{urlday}{11}
-      \field{urlmonth}{6}
-      \field{urlyear}{2024}
       \field{year}{2020}
-      \field{urldateera}{ce}
       \field{pages}{59\bibrangedash 70}
       \range{pages}{12}
       \verb{doi}
@@ -1177,12 +1035,6 @@
       \endverb
       \verb{file}
       \verb Kalkreuth - 2020 - A Comprehensive Study on Subgraph Crossover in Car.pdf:files/205/Kalkreuth - 2020 - A Comprehensive Study on Subgraph Crossover in Car.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://www.scitepress.org/DigitalLibrary/Link.aspx?doi=10.5220/0010110700590070
-      \endverb
-      \verb{url}
-      \verb https://www.scitepress.org/DigitalLibrary/Link.aspx?doi=10.5220/0010110700590070
       \endverb
       \keyw{Regression}
     \endentry
@@ -1229,12 +1081,6 @@
       \range{pages}{2}
       \verb{doi}
       \verb 10.1145/3067695.3075980
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1145/3067695.3075980
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1145/3067695.3075980
       \endverb
     \endentry
     \entry{kaufmann_kalkreuth_2020}{inproceedings}{}{}
@@ -1353,11 +1199,7 @@
       \field{booktitle}{Proceedings of {WESCON}'95}
       \field{isbn}{978-0-7803-2636-1}
       \field{title}{Survey of genetic algorithms and genetic programming}
-      \field{urlday}{9}
-      \field{urlmonth}{8}
-      \field{urlyear}{2024}
       \field{year}{1995}
-      \field{urldateera}{ce}
       \field{pages}{589}
       \range{pages}{1}
       \verb{doi}
@@ -1365,12 +1207,6 @@
       \endverb
       \verb{file}
       \verb Koza - 1995 - Survey of genetic algorithms and genetic programmi.pdf:files/280/Koza - 1995 - Survey of genetic algorithms and genetic programmi.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://ieeexplore.ieee.org/document/485447/
-      \endverb
-      \verb{url}
-      \verb http://ieeexplore.ieee.org/document/485447/
       \endverb
     \endentry
     \entry{krawiec_genetic_2013}{book}{}{}
@@ -1502,23 +1338,13 @@
       \field{series}{Lecture {Notes} in {Computer} {Science}}
       \field{shorttitle}{Genetic {Programming}}
       \field{title}{Genetic {Programming}: 16th {European} {Conference}, {EuroGP} 2013, {Vienna}, {Austria}, {April} 3-5, 2013. {Proceedings}}
-      \field{urlday}{1}
-      \field{urlmonth}{7}
-      \field{urlyear}{2024}
       \field{volume}{7831}
       \field{year}{2013}
-      \field{urldateera}{ce}
       \verb{doi}
       \verb 10.1007/978-3-642-37207-0
       \endverb
       \verb{file}
       \verb Krawiec et al. - 2013 - Genetic Programming 16th European Conference, Eur.pdf:files/254/Krawiec et al. - 2013 - Genetic Programming 16th European Conference, Eur.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://link.springer.com/10.1007/978-3-642-37207-0
-      \endverb
-      \verb{url}
-      \verb http://link.springer.com/10.1007/978-3-642-37207-0
       \endverb
     \endentry
     \entry{kruschke_bayesian_estimation}{article}{}{}
@@ -1667,12 +1493,6 @@
       \verb{file}
       \verb Makke und Chawla - 2024 - Interpretable scientific discovery with symbolic r.pdf:files/394/Makke und Chawla - 2024 - Interpretable scientific discovery with symbolic r.pdf:application/pdf
       \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1007/s10462-023-10622-0
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1007/s10462-023-10622-0
-      \endverb
     \endentry
     \entry{miller_cartesian_2020}{article}{}{}
       \name{author}{1}{}{%
@@ -1705,12 +1525,8 @@
       \field{number}{1-2}
       \field{shorttitle}{Cartesian genetic programming}
       \field{title}{Cartesian genetic programming: its status and future}
-      \field{urlday}{11}
-      \field{urlmonth}{6}
-      \field{urlyear}{2024}
       \field{volume}{21}
       \field{year}{2020}
-      \field{urldateera}{ce}
       \field{pages}{129\bibrangedash 168}
       \range{pages}{40}
       \verb{doi}
@@ -1718,12 +1534,6 @@
       \endverb
       \verb{file}
       \verb Miller - 2020 - Cartesian genetic programming its status and futu.pdf:files/209/Miller - 2020 - Cartesian genetic programming its status and futu.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://link.springer.com/10.1007/s10710-019-09360-6
-      \endverb
-      \verb{url}
-      \verb http://link.springer.com/10.1007/s10710-019-09360-6
       \endverb
       \keyw{Grundlagen}
     \endentry
@@ -1813,12 +1623,6 @@
       \verb{file}
       \verb BF01918729.pdf:files/368/BF01918729.pdf:application/pdf
       \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1007/BF01918729
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1007/BF01918729
-      \endverb
     \endentry
     \entry{oliveira_analysing_2018}{inproceedings}{}{}
       \name{author}{4}{}{%
@@ -1864,11 +1668,7 @@
       \field{month}{7}
       \field{note}{arXiv:1805.10365 [cs]}
       \field{title}{Analysing {Symbolic} {Regression} {Benchmarks} under a {Meta}-{Learning} {Approach}}
-      \field{urlday}{7}
-      \field{urlmonth}{10}
-      \field{urlyear}{2024}
       \field{year}{2018}
-      \field{urldateera}{ce}
       \field{pages}{1342\bibrangedash 1349}
       \range{pages}{8}
       \verb{doi}
@@ -1876,12 +1676,6 @@
       \endverb
       \verb{file}
       \verb Oliveira et al. - 2018 - Analysing Symbolic Regression Benchmarks under a M.pdf:files/316/Oliveira et al. - 2018 - Analysing Symbolic Regression Benchmarks under a M.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://arxiv.org/abs/1805.10365
-      \endverb
-      \verb{url}
-      \verb http://arxiv.org/abs/1805.10365
       \endverb
       \keyw{Computer Science - Neural and Evolutionary Computing}
     \endentry
@@ -1932,12 +1726,6 @@
       \range{pages}{8}
       \verb{doi}
       \verb 10.1145/3205455.3205539
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1145/3205455.3205539
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1145/3205455.3205539
       \endverb
       \keyw{benchmarking,genetic programming,machine learning,symbolic regression}
     \endentry
@@ -2011,11 +1799,7 @@
       \field{isbn}{978-3-658-31022-6 978-3-658-31023-3}
       \field{note}{Series Title: essentials}
       \field{title}{Definition des {Satzes} von {Bayes} oder das {Bayes}-{Theorem}}
-      \field{urlday}{25}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
       \field{year}{2020}
-      \field{urldateera}{ce}
       \field{pages}{13\bibrangedash 21}
       \range{pages}{9}
       \verb{doi}
@@ -2023,12 +1807,6 @@
       \endverb
       \verb{file}
       \verb Peyrolón - 2020 - Definition des Satzes von Bayes oder das Bayes-The.pdf:files/365/Peyrolón - 2020 - Definition des Satzes von Bayes oder das Bayes-The.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://link.springer.com/10.1007/978-3-658-31023-3_2
-      \endverb
-      \verb{url}
-      \verb http://link.springer.com/10.1007/978-3-658-31023-3_2
       \endverb
     \endentry
     \entry{pavai_survey_2017}{article}{}{}
@@ -2066,12 +1844,8 @@
       \field{month}{12}
       \field{number}{4}
       \field{title}{A {Survey} on {Crossover} {Operators}}
-      \field{urlday}{10}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
       \field{volume}{49}
       \field{year}{2017}
-      \field{urldateera}{ce}
       \field{pages}{1\bibrangedash 43}
       \range{pages}{43}
       \verb{doi}
@@ -2079,12 +1853,6 @@
       \endverb
       \verb{file}
       \verb Pavai und Geetha - 2017 - A Survey on Crossover Operators.pdf:files/349/Pavai und Geetha - 2017 - A Survey on Crossover Operators.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://dl.acm.org/doi/10.1145/3009966
-      \endverb
-      \verb{url}
-      \verb https://dl.acm.org/doi/10.1145/3009966
       \endverb
     \endentry
     \entry{sette_genetic_2001}{article}{}{}
@@ -2123,12 +1891,8 @@
       \field{number}{6}
       \field{shorttitle}{Genetic programming}
       \field{title}{Genetic programming: principles and applications}
-      \field{urlday}{9}
-      \field{urlmonth}{8}
-      \field{urlyear}{2024}
       \field{volume}{14}
       \field{year}{2001}
-      \field{urldateera}{ce}
       \field{pages}{727\bibrangedash 736}
       \range{pages}{10}
       \verb{doi}
@@ -2136,12 +1900,6 @@
       \endverb
       \verb{file}
       \verb Sette und Boullart - 2001 - Genetic programming principles and applications.pdf:files/283/Sette und Boullart - 2001 - Genetic programming principles and applications.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S0952197602000131
-      \endverb
-      \verb{url}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S0952197602000131
       \endverb
     \endentry
     \entry{da_silva_cartesian_2018}{inproceedings}{}{}
@@ -2273,22 +2031,12 @@
       \field{journaltitle}{Neural Processing Letters}
       \field{month}{12}
       \field{title}{Using {Cartesian} {Genetic} {Programming} {Approach} with {New} {Crossover} {Technique} to {Design} {Convolutional} {Neural} {Networks}}
-      \field{urlday}{30}
-      \field{urlmonth}{5}
-      \field{urlyear}{2023}
       \field{year}{2022}
-      \field{urldateera}{ce}
       \verb{doi}
       \verb 10.1007/s11063-022-11093-0
       \endverb
       \verb{file}
       \verb Torabi et al. - 2022 - Using Cartesian Genetic Programming Approach with .pdf:files/64/Torabi et al. - 2022 - Using Cartesian Genetic Programming Approach with .pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://link.springer.com/10.1007/s11063-022-11093-0
-      \endverb
-      \verb{url}
-      \verb https://link.springer.com/10.1007/s11063-022-11093-0
       \endverb
     \endentry
     \entry{white_better_2013}{article}{}{}
@@ -2362,12 +2110,8 @@
       \field{number}{1}
       \field{shorttitle}{Better {GP} benchmarks}
       \field{title}{Better {GP} benchmarks: community survey results and proposals}
-      \field{urlday}{16}
-      \field{urlmonth}{9}
-      \field{urlyear}{2024}
       \field{volume}{14}
       \field{year}{2013}
-      \field{urldateera}{ce}
       \field{pages}{3\bibrangedash 29}
       \range{pages}{27}
       \verb{doi}
@@ -2375,12 +2119,6 @@
       \endverb
       \verb{file}
       \verb White et al. - 2013 - Better GP benchmarks community survey results and.pdf:files/287/White et al. - 2013 - Better GP benchmarks community survey results and.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://link.springer.com/10.1007/s10710-012-9177-2
-      \endverb
-      \verb{url}
-      \verb http://link.springer.com/10.1007/s10710-012-9177-2
       \endverb
     \endentry
     \entry{walker_2008}{article}{}{}

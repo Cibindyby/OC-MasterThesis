@@ -13,27 +13,26 @@ Diese werden in den folgenden Abschnitten näher betrachtet.
 \subsection{Testszenarien}
 \label{subsec:testszenarien}
 
-\subsubsection{Boolean Problems}
+\subsubsection{Boolesche Probleme}
 \label{subsubsec:booleanProblems}
 
-Nach der Aussage von Kalkreuth et al. spielen Boolean Problems eine wichtige Rolle in der Forschung zu GP.
-Grundsätzlich ist bei Boolean Problems das Ziel einen sinnvollen Zusammenhang zwischen Ein- und Ausgaben zu generieren, welcher von Boolean Funktionen bestimmt wird.
-Diese können wiederum durch Boolean Ausdrücke mathematisch beschrieben werden.
-Die verschiedenen Boolean Funktionen können durch Wahrheitstabellen dargestellt werden, in denen die jeweiligen Ein- und Ausgaben miteinander verknüpft werden. \cite{kalkreuth_towards_2023}
+Nach der Aussage von Kalkreuth et al. spielen Boolesche Probleme eine wichtige Rolle in der Forschung zu GP.
+Grundsätzlich ist bei Booleschen Problemen das Ziel einen sinnvollen Zusammenhang zwischen Ein- und Ausgaben zu generieren, welcher von Booleschen Funktionen bestimmt wird.
+Diese können wiederum durch Boolesche Ausdrücke mathematisch beschrieben werden.
+Die verschiedenen Booleschen Funktionen können durch Wahrheitstabellen dargestellt werden, in denen die jeweiligen Ein- und Ausgaben miteinander verknüpft werden. \cite{kalkreuth_towards_2023}
 Das Ziel von CGP-Algorithmen ist es aus Eingängen die richtigen Ausgänge zu generieren, welche dem Mapping der Boolean Funktionen entsprechen.\\
 
-Insgesamt werden in dieser Arbeit vier Boolean Benchmark Problems für die Evaluation der CGP Algorithmen betrachtet: 3-bit Parity, 16-4-bit Encode, 4-16-bit Decode und 3-bit Multiply (vereinfacht bezeichnet als Parity, Encode, Decode und Multiply).
-Die Auswahl dieser beruht auf der Argumentationskette von Cui et al., die für sinnvoll befunden wird. \cite{cui_equidistant_2023}\\
+Insgesamt werden in dieser Arbeit vier Boolesche Benchmarkprobleme für die Evaluation der CGP Algorithmen betrachtet: 3-bit Parity, 16-4-bit Encode, 4-16-bit Decode und 3-bit Multiply (vereinfacht bezeichnet als Parity, Encode, Decode und Multiply).\\
 Obwohl Parity als zu leichtes Ausgangsproblem für GP bezeichnet wird \cite{white_better_2013}, wird es häufig als Benchmarkproblem genutzt \cite{yu_neutrality_2001, kaufmann_kalkreuth_2017, kaufmann_kalkreuth_2020}.
 Um Benchmarkprobleme mit unterschiedlichen Ein- und Ausgangsgrößen miteinzubeziehen, werden Encode und Decode verwendet.
 Sinnvoll ist es ebenfalls Testprobleme verschiedener Schwierigkeitsstufen zu bewerten.
 Multiply ist dabei ein vergleichsweise schwer zu lösendes Testproblem und wird deswegen herangezogen \cite{walker_2008}.\\
 
-Das verwendete Standardfunktionsset aller vier Testszenarien beinhaltet die Boolean Rechenoperatoren AND, OR, NAND und NOR.
-Außerdem wird die Standardfitnessfunktion für Boolean Benchmarkprobleme verwendet.
+Das verwendete Standardfunktionsset aller vier Testszenarien beinhaltet die Boolesche Rechenoperatoren AND, OR, NAND und NOR.
+Außerdem wird die Standardfitnessfunktion für Boolesche Benchmarkprobleme verwendet.
 Diese wird definiert durch den Anteil an korrekt zugeordneten Bits. \cite{cui_equidistant_2023}
 Das Stopp-Kriterium ist erfüllt, wenn die Fitness den Wert 0 erreicht.
-Folgend werden die vier verwendeten Boolean Benchmark Problems näher erläutert:
+Folgend werden die vier verwendeten Boolesche Benchmarkprobleme näher erläutert:
 
 \textbf{Parity:} N-bit Parity ist eine Mapping-Funktion, die angibt, ob die Summe der Komponenten eines Binär-Vektors gerade oder ungerade ist.
 Bei 3-bit Parity handelt es sich dabei um Binär-Vektoren der Länge 3.
@@ -68,17 +67,17 @@ Der Fehler von errechnetem und vorgegebenem Ausgang pro Eingang soll dabei minim
 Die in dieser Arbeit verwendeten SR Probleme werden aus dem Paper von Cui et al. übernommen: Keijzer-6, Koza-3, Nguyen-7.
 Im folgenden werden diese durch Keijzer, Koza und Nguyen abgekürzt.
 Sie sind von der GP-Community empfohlen und wurden bereits in früheren Arbeiten verwendet
-\cite{white_better_2013, kalkreuth_comprehensive_2020}. Die Pagie-1 Funktion wurde in dieser Arbeit aus Gründen des zeitlichen Rahmens nicht näher betrachtet. \\
+\cite{white_better_2013, kalkreuth_comprehensive_2020}.\\
 Der verwendete Funktionssatz besteht aus den folgenden acht mathematischen Funktionen: Addition, Subtraktion, Multiplikation, Division, Sinus, Cosinus, natürlicher Logarithmus und Exponentialfunktion.
 Bei der Division wird sichergestellt, dass eine Division durch null abgefangen wird. \cite{affenzeller_positional_2024}
-Dabei wird der Wert 1,0 ausgegeben, statt eine Division auszuführen.
+Dabei wird der Wert 1,0 ausgegeben, statt eine Division durch null auszuführen.
 Zur Absicherung des natürlichen Logarithmus werden für alle Eingaben nur die absoluten Werte in die Berechnung einbezogen.
 Für den Fall, dass die Eingabe gleich 0 ist, wird vergleichbar zur Division der Wert 1,0 zurückgegeben.
 Da es bei der Programmierung mit Julia zu Fehlern kommen kann, wenn die Eingaben von Sinus oder Cosinus zu groß sind, werden diese Fälle ebenfalls abgefangen.
 Dabei werden die Eingaben nicht weiter verrechnet sondern durchgereicht.\\
 Für die Berechnung der Fitness wird der mittlere absolute Fehler zwischen vorhergesagter und tatsächlicher Ausgabe pro Eingabe berechnet.
 Das Stopp-Kriterium ist erfüllt, sobald die Fitness den Wert 0,01 unterschreitet. \cite{affenzeller_positional_2024}\\
-Die folgende Tabelle beschreibt die verwendeten SR Probleme näher.
+Die folgende Tabelle \ref{table:SRProblems} beschreibt die verwendeten SR Probleme näher.
 
 \begin{table}[h]
 	\centering
@@ -91,12 +90,12 @@ Die folgende Tabelle beschreibt die verwendeten SR Probleme näher.
 		\hline
 		Nguyen & 1 & $ln(x + 1) + ln(x^2 + 1)$ & U[0, 2, 20]  & -\\
 	\end{tabular}
-	\caption{Beschreibung SR Benchmark Problems nach \cite{affenzeller_positional_2024}}
+	\caption{Beschreibung SR Benchmarkprobleme nach \cite{affenzeller_positional_2024}}
 	\label{table:SRProblems}
 \end{table}
 
 Zu beobachten ist, dass in unterschiedlichen Papern verschiedene Keijzer-6 Funktionen beschrieben werden \cite{oliveira_analysing_2018, li_generative_2024, kommenda_local_2018}. 
-In dieser Arbeit wurden alle SR Benchmark Probleme auf das Paper von Cui et al. bezogen \cite{affenzeller_positional_2024}.
+In dieser Arbeit wurden alle SR Benchmarkprobleme auf das Paper von Cui et al. bezogen \cite{affenzeller_positional_2024}.
 
 \subsection{CGP-Konfigurationen}
 \label{subsec:CGPkonfigurationen}
@@ -113,7 +112,7 @@ Dieser zusätzliche Freiheitsgrad soll einen ausgewogeneren Vergleich zwischen d
 Für die Auswahl der Elitisten wird das neutral search Verfahren herangezogen.\\
 \textbf{Mutation:} In allen Experimenten dieser Arbeit wird die Single Active Mutation angewendet.\\
 
-Die nachfolgende Tabelle gibt alle Konfigurationen für die \textbf{Rekombination} an, die für jedes Testszenario aus Abschnitt \ref{subsec:testszenarien} getestet werden.
+Die nachfolgende Tabelle \ref{table:Rekombinationskonfigurationen} gibt alle Konfigurationen für die \textbf{Rekombination} an, die für jedes Testszenario aus Abschnitt \ref{subsec:testszenarien} getestet werden.
 
 \begin{table}[h]
 	\centering
@@ -152,7 +151,7 @@ Für jede in Abschnitt \ref{subsec:CGPkonfigurationen} eingeführte CGP-Konfigur
 Außerdem müssen die Hyperparameter auf das jeweilige Testszenario angepasst werden.\\
 Für die Hyperparameteroptimierungen in dieser Arbeit wird das Julia-Paket HyperOpt.jl verwendet \cite{carlson_baggepinnenhyperoptjl_2025}.
 Mit Hilfe des Pakets können die Hyperparameter, sowie deren Wertebereiche angegeben werden, sodass eine automatisierte Optimierung stattfinden kann.
-Eben diese werden in folgender Tabelle aufgelistet.
+Eben diese werden in folgender Tabelle \ref{table:hyperopt} aufgelistet.
 
 \begin{table}[h]
 	\centering
@@ -177,25 +176,25 @@ Eben diese werden in folgender Tabelle aufgelistet.
 	\label{table:hyperopt}
 \end{table}
 
-Zu beachten ist, dass $\mu <= \lambda$ gilt und die Hyperparameteranalysen nur für Parity und Keijzer (in der Tabelle durch P und K markiert) ausgeführt werden.
+Zu beachten ist, dass $\mu <= \lambda$ gilt und die Hyperparameteranalysen nur für Parity und Keijzer (in Tabelle \ref{table:hyperopt} durch P und K markiert) ausgeführt werden.
 Eine ausführliche Begründung liefert Abschnitt \ref{subsec:struktur}.
-Außerdem werden die Einträge der Tabelle je nach CGP-Konfiguration verwendet.
+Außerdem werden die Einträge der Tabelle \ref{table:hyperopt} je nach CGP-Konfiguration verwendet.
 Zum Beispiel wird der Wert \glqq Offset Rekombination\grqq\space nur verwendet, wenn der Rekombinationsoffset aktiv ist. 
 Dieser Wert wird in Iterationen angegeben, in denen die Rekombination ausgesetzt wird.
 Um die obere Grenze des Offsets sinnvoll abzuschätzen wurden zuerst die Hyperparameteranalysen derjeniger CGP-Konfigurationen vorgenommen, die keinen Offset verwenden.
 Für jeweils ein Testszenario wurden anschließend die Mittelwerte der benötigten Iterationen berechnet.
 Auf Basis dieser Mittelwerte konnten die Offset Wertebereiche sinnvoller gewählt werden, sodass sich der Wert der wahrscheinlich benötigten Iterationen mit der oberen Grenze deckt.
-Die drei letzten Zeilen der Tabelle geben die verschiedenen Arten an Rekombinationsraten an, die in dieser Arbeit verglichen werden.
+Die drei letzten Zeilen der Tabelle \ref{table:hyperopt} geben die verschiedenen Arten an Rekombinationsraten an, die in dieser Arbeit verglichen werden.
 Für jede dieser Ratenarten wird gezielt nur ein Hyperparameter verwendet, um die Rechenzeit der Hyperparameteroptimierung zu reduzieren.
 Für die linear fallende Rekombinationsrate gibt dieser Parameter an, mit welcher Schrittweite die Rekombinationsrate pro Iteration sinkt.
 In der One-Fifth Regel wird der Startwert der Rekombinationsrate angegeben, also diejenige Rekombinationsrate, mit der das CGP-Modell initialisiert wird.\\
 
 In einer Optimierungsschleife werden pro Parametersatz 10 Testdurchläufe durchgeführt, in denen das CGP trainiert wird.
-Für Boolean Problems wird die Effizienz die Parametersätze anhand der Iterationen gemessen, die der CGP-Algorithmus braucht, bis er konvergiert.
+Für Boolesche Probleme wird die Effizienz die Parametersätze anhand der Iterationen gemessen, die der CGP-Algorithmus braucht, bis er konvergiert.
 Bei symbolischer Regression bezieht sich der Vergleich auf die berechnete Fitness.
 Es wurde eine Iterationsgrenze eingeführt, ab der der CGP-Algorithmus in der Hyperparameteroptimierung abbricht, um Rechenzeit zu sparen.
 Diese Grenze wurde durch vorhergehende Tests so gesetzt, dass nur wenige Ausreißer diese überschreiten.
-Trifft dies zu wird bei Boolean Problems die Anzahl an benötigten Iterationen verdoppelt, um so das gescheiterte Training härter zu bestrafen.\\
+Trifft dies zu wird bei Booleschen Problemen die Anzahl an benötigten Iterationen verdoppelt, um so das gescheiterte Training härter zu bestrafen.\\
 Nach 150 getesteten Parametersätzen bricht die Hyperparameteroptimierung ab und gibt den besten Parametersatz aus.\\
 
 Das verwendete Julia-Paket bietet verschiedene Sampler an.
@@ -221,7 +220,8 @@ Die Teststruktur wird in zwei voneinander unabhängige Testblöcke geteilt.
 
 Für die einfachen Testszenarien Parity und Keijzer kann eine Hyperparameteranalyse trotz eingeschränkter Rechenzeit ausgeführt werden, indem die Iterationenzahl bis zum Abbruch des CGP-Algorithmus heruntergesetzt werden.
 Dieser wird schrittweise reduziert, bis die Hyperparameteranalyse ausgeführt werden kann.\\
-Um zu Überprüfen, ob die angepassten Iterationsgrenzen für Parity sinnvoll sind, werden die Ergebnisse von Cui et al. herangezogen. Dabei wurden nur die Ergebnisse mit ($\mu + \lambda$)-Selektion ohne E-Reorder-Schritt verwendet \cite{cui_results}.
+Um zu Überprüfen, ob die angepassten Iterationsgrenzen für Parity sinnvoll sind, werden die Ergebnisse von Cui et al. herangezogen. 
+Dabei wurden nur die Ergebnisse mit ($\mu + \lambda$)-Selektion verwendet, die mit den CGP-Konfigurationen dieser Arbeit entsprechen \cite{cui_results}.
 Es ergibt sich ein HPDI-Maximalwert von ca. 495 Iterationen. 
 Mit einer Iterationsgrenze von 500 ist es wahrscheinlich, dass vor allem schlechte Parametersätze zu einer Überschreitung dieses Werts führen.
 Durch die erhöhte Bestrafung dieser Überschreitung, wird sichergestellt, dass die sichere Konvergenz des CGP-Algorithmus bis zur Iterationsgrenze priorisiert wird.\\
