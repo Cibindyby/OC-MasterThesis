@@ -16,13 +16,13 @@ Diese werden in den folgenden Abschnitten näher betrachtet.
 \subsubsection{Boolesche Probleme}
 \label{subsubsec:booleanProblems}
 
-Nach der Aussage von Kalkreuth et al. spielen Boolesche Probleme eine wichtige Rolle in der Forschung zu GP.
+Nach der Aussage von Kalkreuth et al. spielen \emph{Boolesche Probleme} eine wichtige Rolle in der Forschung zu GP.
 Grundsätzlich ist bei Booleschen Problemen das Ziel einen sinnvollen Zusammenhang zwischen Ein- und Ausgaben zu generieren, welcher von Booleschen Funktionen bestimmt wird.
 Diese können wiederum durch Boolesche Ausdrücke mathematisch beschrieben werden.
 Die verschiedenen Booleschen Funktionen können durch Wahrheitstabellen dargestellt werden, in denen die jeweiligen Ein- und Ausgaben miteinander verknüpft werden. \cite{kalkreuth_towards_2023}
 Das Ziel von CGP-Algorithmen ist es aus Eingängen die richtigen Ausgänge zu generieren, welche dem Mapping der Boolean Funktionen entsprechen.\\
 
-Insgesamt werden in dieser Arbeit vier Boolesche Benchmarkprobleme für die Evaluation der CGP Algorithmen betrachtet: 3-bit Parity, 16-4-bit Encode, 4-16-bit Decode und 3-bit Multiply (vereinfacht bezeichnet als Parity, Encode, Decode und Multiply).\\
+Insgesamt werden in dieser Arbeit vier Boolesche Benchmarkprobleme für die Evaluation der CGP-Algorithmen betrachtet: 3-bit Parity, 16-4-bit Encode, 4-16-bit Decode und 3-bit Multiply (vereinfacht bezeichnet als Parity, Encode, Decode und Multiply).\\
 Obwohl Parity als zu leichtes Ausgangsproblem für GP bezeichnet wird \cite{white_better_2013}, wird es häufig als Benchmarkproblem genutzt \cite{yu_neutrality_2001, kaufmann_kalkreuth_2017, kaufmann_kalkreuth_2020}.
 Um Benchmarkprobleme mit unterschiedlichen Ein- und Ausgangsgrößen miteinzubeziehen, werden Encode und Decode verwendet.
 Sinnvoll ist es ebenfalls Testprobleme verschiedener Schwierigkeitsstufen zu bewerten.
@@ -59,7 +59,7 @@ Der Testdatensatz besteht aus $2^6=64$ verschiedenen Kombinationen der mögliche
 \subsubsection{Symbolische Regression}
 \label{subsubsec:symbolicRegression}
 
-Symbolische Regression (SR) zählt seit Beginn von GP als Grundlage für methodologische Forschung und als primäres Anwendungsgebiet \cite{orzechowski}.
+\emph{Symbolische Regression} (SR) zählt seit Beginn von GP als Grundlage für methodologische Forschung und als primäres Anwendungsgebiet \cite{orzechowski}.
 Das Ziel von SR ist das Erlernen einer Beziehung zwischen Ein- und Ausgängen nur aufgrund von gegebenen Daten.
 Diese Beziehung beruht auf interpretierbaren mathematischen Ausdrücken.
 Der Fehler von errechnetem und vorgegebenem Ausgang pro Eingang soll dabei minimiert werden. \cite{makke_interpretable_2024}
@@ -79,7 +79,7 @@ Für die Berechnung der Fitness wird der mittlere absolute Fehler zwischen vorhe
 Das Stopp-Kriterium ist erfüllt, sobald die Fitness den Wert 0,01 unterschreitet. \cite{affenzeller_positional_2024}\\
 Die folgende Tabelle \ref{table:SRProblems} beschreibt die verwendeten SR Probleme näher.
 
-\begin{table}[h]
+\begin{table}[H]
 	\centering
 	\begin{tabular}{c | c | c | c | c}
 		\textbf{Name} & \textbf{Variablen} & \textbf{Gleichung} & \textbf{Trainingsdaten} & \textbf{Testdaten}\\
@@ -100,7 +100,8 @@ In dieser Arbeit wurden alle SR Benchmarkprobleme auf das Paper von Cui et al. b
 \subsection{CGP-Konfigurationen}
 \label{subsec:CGPkonfigurationen}
 
-In dieser Arbeit werden unterschiedliche CGP-Konfigurationen miteinander verglichen und evaluiert. Diese werden in diesem Abschnitt näher beschrieben.\\
+In dieser Arbeit werden unterschiedliche \emph{CGP-Konfigurationen} miteinander verglichen und evaluiert. 
+Diese enthalten verschiedene Parametrierungen innerhalb eines CGPs und werden in diesem Abschnitt näher erläutert.\\
 Ein Ziel der Arbeit ist es die Effizienz von Rekombination in CGP zu bewerten.
 Ebenfalls sollen unterschiedliche Rekombinationsalgorithmen und -konfigurationen miteinander verglichen werden, um eine Aussage über deren Effektivität zu treffen.
 Aus diesem Grund müssen für die unterschiedlichen Testszenarien mehrere Rekombinationskonfigurationen getestet werden.
@@ -114,7 +115,7 @@ Für die Auswahl der Elitisten wird das neutral search Verfahren herangezogen.\\
 
 Die nachfolgende Tabelle \ref{table:Rekombinationskonfigurationen} gibt alle Konfigurationen für die \textbf{Rekombination} an, die für jedes Testszenario aus Abschnitt \ref{subsec:testszenarien} getestet werden.
 
-\begin{table}[h]
+\begin{table}[H]
 	\centering
 	\begin{tabular}{c | c | c}
 		\textbf{Rekombinationsverfahren} & \textbf{Art der Rekombinationsrate} & \textbf{Offset}\\
@@ -146,14 +147,14 @@ Dementsprechend ergeben sich 19 verschiedene Konfigurationen für den Rekombinat
 \subsection{Hyperparameteroptimierung}
 \label{subsec:hpo}
 
-Da CGP mehrere Hyperparameter ausweist, die die Effektivität eines CGP-Modells beeinflussen, muss eine Hyperparameteroptimierung ausgeführt werden, die einen optimierten Parametersatz ausgibt.
+Da CGP mehrere Hyperparameter ausweist, die die Effektivität eines CGP-Modells beeinflussen, muss eine \emph{Hyperparameteroptimierung} ausgeführt werden, die einen optimierten Parametersatz ausgibt.
 Für jede in Abschnitt \ref{subsec:CGPkonfigurationen} eingeführte CGP-Konfiguration wird eine eigene Hyperparameteroptimierung ausgeführt, da nicht von einem optimierten Datensatz auf den nächsten geschlussfolgert werden kann.
 Außerdem müssen die Hyperparameter auf das jeweilige Testszenario angepasst werden.\\
 Für die Hyperparameteroptimierungen in dieser Arbeit wird das Julia-Paket HyperOpt.jl verwendet \cite{carlson_baggepinnenhyperoptjl_2025}.
 Mit Hilfe des Pakets können die Hyperparameter, sowie deren Wertebereiche angegeben werden, sodass eine automatisierte Optimierung stattfinden kann.
 Eben diese werden in folgender Tabelle \ref{table:hyperopt} aufgelistet.
 
-\begin{table}[h]
+\begin{table}[H]
 	\centering
 	\begin{tabular}{c | c | c | c}
 		\textbf{Parameter} & \textbf{min} & \textbf{max} & \textbf{Schrittweite}\\
@@ -204,7 +205,7 @@ Da der verwendete BHOB Sampler mit und ohne Hyperband keine Einsparungen in der 
 \subsection{Teststruktur}
 \label{subsec:struktur}
 
-Ursprünglich sollte für jedes Testszenario und für jede CGP-Konfiguration eine eigene Hyperparameteroptimierung durchgeführt werden.
+Ursprünglich sollte für jedes Testproblem/Testszenario und für jede CGP-Konfiguration eine eigene Hyperparameteroptimierung durchgeführt werden.
 Mit den daraus resultierenden Parametersätzen hätten für jede Kombination aus Testszenario und CGP-Konfiguration eine annähernd optimale Lösung gefunden werden können.
 Diese hätten anschließend systematisch evaluiert und verglichen werden können.
 Angesichts der begrenzten Rechenkapazitäten konnten nur für die beiden leichtesten Testszenarien Parity und Keijzer sinnvolle Hyperparameteranalysen ausgeführt werden.
@@ -237,10 +238,17 @@ Das Evaluierungsverfahren wird in Abschnitt \ref{sec:Evaluation} näher erläute
 
 Da durch die erhöhte Rechenzeit der komplexeren Testszenarien keine sinnvolle Hyperparameteroptimierung ausführen lässt, wird für diese Fälle eine andere Teststrategie entwickelt.\\
 Diejenigen Hyperparameter eines CGP-Modells, die nicht mit Rekombination in Verbindung stehen, werden aus den Ergebnissen von Cui et al. herangezogen \cite{cui_results}.
-Die übrigen Hyperparameter (Rekombinationsrate und Offset) werden variiert und in CGP-Modelle eingepflegt.
-Für jede CGP-Konfiguration werden mehrere Testdurchläufe ausgeführt, um eine statistische Auswertung ausführen zu können.\\
-Für die Evaluation stehen daraufhin dementsprechend die Ergebnisse mehrerer CGP-Kon\-fi\-gu\-ra\-tio\-nen zur Verfügung, die allerdings nicht die Ergebnisse der besten Parametersätze darstellen.
-Trotzdem können die Ergebnisse verwendet werden, um einen näheren Einblick zum Verhalten des CGP-Modells zu erhalten, wenn die Rekombinationsparameter variiert werden.\\
+Die Rekombinationsrate wird variiert und mit diesen Parametern in CGP-Modelle eingepflegt.
+Für jede CGP-Konfiguration werden 50 Testdurchläufe ausgeführt, um eine statistische Auswertung ausführen zu können.
+Dabei werden die CGP-Modelle nicht bis zur vollständigen Konvergenz trainiert, sondern nur 10000 Iterationen lang, damit Rechenzeit eingespart wird.\\
+Da sich die Wirkung von Rekombinationsrate und Offset gegenseitig beeinflussen kann, ist es sinnvoller die Bewertung der beiden Parameter einzeln zu betrachten.
+Aufgrund der hohen Anzahl der zu bewertenden Testergebnisse, die sich bereits für einen variierenden Parameter ergeben, soll nur einer dieser Parameter in dieser Arbeit näher betrachtet werden.
+Dieser Parameter ist wie bereits beschrieben die Rekombinationsrate.
+Dies ergibt sich daraus, dass die Ergebnisse der Hyperparameteranalyse der einfachen Tests bereits vermuten lassen, dass der Offset keinen deutlichen Mehrwert für das CGP-Training mit sich bringt.
+Details zu den jeweiligen Ergebnissen können in den Abschnitten \ref{parity:analyseRohdaten} und \ref{keijzer:analyseRohdaten} nachgelesen werden.
+Außerdem können mit Hilfe der Rekombinationsrate nähere Erkenntnisse zu den unterschiedlichen Rekombinationsarten gewonnen werden, die in dieser Arbeit verglichen werden.\\
+Für die Evaluation stehen nach dem Testdurchlauf die Ergebnisse bis zur 10000. Iteration mehrerer CGP-Kon\-fi\-gu\-ra\-tio\-nen zur Verfügung, die allerdings nicht die Ergebnisse der CGPs mit den jeweils besten Parametersätzen darstellen, da keine Hyperparameteroptimierung ausgeführt wurde.
+Trotzdem können die Ergebnisse verwendet werden, um einen näheren Einblick zum Verhalten des CGP-Modells zu erhalten, wenn die Rekombinationsrate variiert wird.\\
 Nähere Informationen zur Evaluierung werden in Abschnitt \ref{sec:Evaluation} gegeben.
 
 
@@ -275,7 +283,7 @@ Durch die Berechnung des Mittelwerts und HPDI der Iterationen für jede CPG-Konf
 Für Parity und Keijzer kann so eingeschätzt werden, welche CGP-Konfiguration die Ausgangsprobleme schneller lösen kann als andere.
 Außerdem kann bewertet werden wie hoch die Streuung dieser Ergebnisse ist.
 Für die komplexeren Ausgangsprobleme kann beobachtet werden, welche Auswirkungen die Änderung der Rekombinationsparameter auf die Effizienz der CGP-Modelle hat.\\
-Die Prior-Sensitivitätsanalyse, die Cui et al. in ihrem Paper untersuchen, wird aus Gründen des Umfangs in dieser Arbeit nicht näher betrachtet \cite{cui_equidistant_2023}.\\
+Die \emph{Prior-Sensitivitätsanalyse}, die Cui et al. in ihrem Paper untersuchen, wird aus Gründen des Umfangs in dieser Arbeit nicht näher betrachtet \cite{cui_equidistant_2023}.\\
 
 \textbf{Graphische Evaluation:} Für alle Testszenarien kann neben der bayes'schen Analyse eine graphische Evaluation ausgeführt werden.
 Dafür werden nicht die Endergebnisse des CGP-Trainings betrachtet, sondern deren Verlauf.

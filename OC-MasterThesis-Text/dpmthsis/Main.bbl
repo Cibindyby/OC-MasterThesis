@@ -773,6 +773,52 @@
       \verb Demirbas et al. - 2022 - Stress Analysis of 2D-FG Rectangular Plates with M.pdf:files/335/Demirbas et al. - 2022 - Stress Analysis of 2D-FG Rectangular Plates with M.pdf:application/pdf
       \endverb
     \endentry
+    \entry{eiben_introduction_2015}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=37f918f86142087e36a5d91ce7026b2c}{%
+           family={Eiben},
+           familyi={E\bibinitperiod},
+           given={A.E.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e20acd00c580a24c04314a6ddc680a86}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={J.E.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{aa9f836d8318138e1fb4ed8c5103a345}
+      \strng{fullhash}{aa9f836d8318138e1fb4ed8c5103a345}
+      \strng{fullhashraw}{aa9f836d8318138e1fb4ed8c5103a345}
+      \strng{bibnamehash}{aa9f836d8318138e1fb4ed8c5103a345}
+      \strng{authorbibnamehash}{aa9f836d8318138e1fb4ed8c5103a345}
+      \strng{authornamehash}{aa9f836d8318138e1fb4ed8c5103a345}
+      \strng{authorfullhash}{aa9f836d8318138e1fb4ed8c5103a345}
+      \strng{authorfullhashraw}{aa9f836d8318138e1fb4ed8c5103a345}
+      \field{labelalpha}{ES15}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-662-44873-1 978-3-662-44874-8}
+      \field{series}{Natural {Computing} {Series}}
+      \field{title}{Introduction to {Evolutionary} {Computing}}
+      \field{year}{2015}
+      \verb{doi}
+      \verb 10.1007/978-3-662-44874-8
+      \endverb
+      \verb{file}
+      \verb Eiben und Smith - 2015 - Introduction to Evolutionary Computing.pdf:files/404/Eiben und Smith - 2015 - Introduction to Evolutionary Computing.pdf:application/pdf
+      \endverb
+    \endentry
     \entry{goldman_2015}{article}{}{}
       \name{author}{2}{}{%
         {{hash=137c6c8f2af2fa3ab9ea04faa906beff}{%
