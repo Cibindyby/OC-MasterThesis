@@ -29,18 +29,27 @@ Die \emph{Population} von CGP ist eine Menge von \emph{Chromosomen}, auch Indivi
 Chromosome sind individuelle Möglichkeiten ein komplexes Ausgangsproblem zu lösen.
 Jedes Chromosom ist in CGP ein gerichteter, azyklischer Graph, bestehend aus \emph{Eingangsknoten}, \emph{Rechenknoten} und \emph{Ausgangsknoten}.
 Dabei gibt es zwei Darstellungsmöglichkeiten für ein Chromosom: den \emph{Genotyp} und den daraus resultierenden \emph{Phänotyp}. 
-Anhand der folgenden Abbildungen \ref{fig:genotypNeu} und \ref{fig:phänotyp} kann beispielhaft näher erläutert werden, wie die Chromosome in CGP aufgebaut sind und funktionieren.
+Anhand der folgenden Abbildung \ref{fig:genoPhänoGesamt} kann beispielhaft näher erläutert werden, wie die Chromosome in CGP aufgebaut sind und funktionieren.
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[scale = 0.45]{Bilder/TorabiBeispielGenotypNeu.png}
-    \caption{Beispiel Genotyp, angelehnt an \cite{torabi_using_2022}}
-    \label{fig:genotypNeu}
-\end{figure}
-\begin{figure}[H]
-    \includegraphics[scale = 0.45]{Bilder/BeispielChromosom.png}
-    \caption{Beispiel Phänotyp, angelehnt an \cite{torabi_using_2022}}
-    \label{fig:phänotyp}
+	\centering
+	\begin{subfigure}[b]{\textwidth}
+		\centering
+		\includegraphics[scale = 0.45]{Bilder/TorabiBeispielGenotypNeu.png}
+		\caption{Beispiel Genotyp}
+		\label{fig:genotypNeu}
+	\end{subfigure}
+	
+	\hfill
+    
+    \begin{subfigure}[b]{\textwidth}
+    	\centering
+    	\includegraphics[scale = 0.45]{Bilder/BeispielChromosom.png}
+    	\caption{Beispiel Phänotyp}
+    	\label{fig:phänotyp}
+    \end{subfigure}
+    \caption{Darstellungsmöglichkeiten eines Chromosoms, angelehnt an \cite{torabi_using_2022}}
+    \label{fig:genoPhänoGesamt}
 \end{figure}
 
 Abbildung \ref{fig:genotypNeu} zeigt einen Genotyp und Abbildung \ref{fig:phänotyp} den daraus resultierenden Phänotyp.
