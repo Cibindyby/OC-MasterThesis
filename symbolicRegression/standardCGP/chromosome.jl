@@ -22,13 +22,16 @@ function Base.show(io::IO, c::Chromosome)
 end
 
 function Chromosome(params::CgpParameters)
+    #this version of chromosome does only evaluate problems with one output
+    @assert params.nbr_outputs == 1
 
     nodes_grid = Vector{Node}()
     output_node_ids = Vector{Int}()
 
     # input nodes
     for position in 0:params.nbr_inputs-1
-        push!(nodes_grid, Node(position, params.nbr_inputs, params.nbr_computational_nodes, InputNode))
+        inputNode = Node(position, params.nbr_inputs, params.nbr_computational_nodes, InputNode)
+        push!(nodes_grid, inputNode)
     end
     # computational nodes
     for position in params.nbr_inputs:(params.nbr_inputs + params.nbr_computational_nodes - 1)
@@ -49,11 +52,12 @@ end
 
 using DataStructures
 
-function evaluate!(self::Chromosome, inputs::Vector{Vector{Float32}}, labels::Vector{Vector{Float32}})
+#this evaluation function only works for problems with one output!
+function evaluate!(self::Chromosome, inputs::Vector{Float32}, labels::Vector{Float32})
     get_active_nodes_id!(self)
 
     outputsNode = Dict{Int, Vector{Float32}}()
-    prediction = Vector{Vector{Float32}}()
+    prediction = Vector{Float32}()
     
     for node_id in self.active_nodes
         current_node = self.nodes_grid[node_id + 1]
@@ -65,7 +69,7 @@ function evaluate!(self::Chromosome, inputs::Vector{Vector{Float32}}, labels::Ve
             con1 = current_node.connection0
             prev_output1 = outputsNode[con1]
             outputsNode[node_id] = deepcopy(prev_output1)
-            push!(prediction, deepcopy(prev_output1))
+            prediction = deepcopy(prev_output1)
         elseif current_node.node_type == ComputationalNode
             con1 = current_node.connection0
             prev_output1 = outputsNode[con1]
@@ -80,16 +84,9 @@ function evaluate!(self::Chromosome, inputs::Vector{Vector{Float32}}, labels::Ve
             outputsNode[node_id] = calculated_result
         end
     end
-    
-    fitness_array = Vector{Float32}()
-    for i in 1:length(prediction)
+    fitness = fitness_regression(prediction, labels)
 
-        fitness = fitness_regression(prediction[i], labels[i])
-        push!(fitness_array, deepcopy(fitness))
-    end
-    finalFitness = mean(fitness_array)
-
-    return finalFitness
+    return fitness
 end
 
 using Random
@@ -155,5 +152,4 @@ function mutate_single!(self::Chromosome)
         end
     end
 end
-
 
