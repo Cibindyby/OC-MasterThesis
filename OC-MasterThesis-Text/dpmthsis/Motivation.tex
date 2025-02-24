@@ -8,12 +8,13 @@ Cartesian Genetic Programming (CGP) ist eine Methode des GPs, in der Lösungen f
 Im Standard-CGP werde laut Miller der Rekombinationsschritt normalerweise nicht ausgeführt und in den meisten Arbeiten werde dieser Schritt gänzlich ignoriert. 
 Er bezieht dieses Verhalten auf Forschungsergebnisse aus dem Jahr 1999, die nach Miller aufzeigen, dass der Rekombinationsschritt kaum einen Effekt auf die Effizienz von CPG hat. \cite{miller_cartesian_2020} 
 In mehreren weiteren Papern werden andere Rekombinationsalgorithmen mit dem Ziel vorgestellt, dass der Rekombinationsschritt neben der Mutation sinnvoll in CGP eingebaut werden kann. 
+Dieser weitere Operator könnte die Effizienz von CGP-Modellen im Training steigern und somit komplexere Ausgangsprobleme lösbar machen.
 Innerhalb dieser Paper wird als Prämisse angenommen, dass wie von Miller geschildert in Standard-CGP keine Rekombination verwendet wird. \cite{clegg_new_2007,kalkreuth_comprehensive_2020, torabi_using_2022}\\
 Da die Aussage, dass der Rekombinationsschritt nicht zielführend in Standard-CGP sei auf den Papern von Miller aus dem Jahr 1999 und 2011 basiert, kommt die Frage auf, ob dies immer noch zutrifft.
 Die erste Forschungsfrage, die in dieser Arbeit beantwortet werden soll, ist demnach die folgende: \glqq Kann mit heutigem Forschungsstand nachgewiesen werden, dass Rekombination in Standard-CGP sinnvoll eingesetzt werden kann im Vergleich zu CGP ohne Rekombinationsschritt?\grqq\\
 
 Da der Erfolg der Rekombination ebenfalls von der Rekombinationsrate abhängt, ist es sinnvoll diese näher zu betrachten. 
-Clegg et al. und Torabi et al. beschreiben in ihren Papern unterschiedliche Herangehensweisen an die Rekombinationsrate:\\
+Clegg et al. und Torabi et al. beschreiben in ihren Papern unterschiedliche Herangehensweisen an die Rekombinationsrate \cite{clegg_new_2007, torabi_using_2022}:\\
 Clegg et al. führen eine variable Rekombinationsrate in ihrem Paper ein.
 Dabei wird eine hohe Rekombinationsrate linear verringert, sodass in den letzten Lernschritten keine Rekombination mehr ausgeführt wird. \cite{clegg_new_2007}\\
 Torabi et al. fügen für ihre Rekombination ein Offset zu Beginn des CGP ein. 

@@ -1,18 +1,19 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
-[0] Config.pm:311> INFO - Logfile is 'Main.blg'
-[129] biber-MSWIN64:340> INFO - === 
-[181] Biber.pm:420> INFO - Reading 'Main.bcf'
-[337] Biber.pm:994> INFO - Found 42 citekeys in bib section 0
-[356] Biber.pm:4463> INFO - Processing section 0
-[372] Biber.pm:4654> INFO - Looking for bibtex file 'References.bib' for section 0
-[419] bibtex.pm:1713> INFO - LaTeX decoding ...
-[573] bibtex.pm:1519> INFO - Found BibTeX data source 'References.bib'
-[911] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[912] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[912] Biber.pm:4283> INFO - Sorting list 'anyt/global//global/global/global' of type 'entry' with template 'anyt' and locale 'de-DE'
-[912] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
-[965] bbl.pm:676> INFO - Writing 'Main.bbl' with encoding 'UTF-8'
-[1006] bbl.pm:779> INFO - Output to Main.bbl
-[1007] Biber.pm:131> WARN - ISBN '978-3-031-70054-5 978-3-031-70055-2' in entry 'affenzeller_positional_2024' is invalid - run biber with '--validate_datamodel' for details.
-[1007] Biber.pm:131> WARN - ISBN '978-3-658-31022-6 978-3-658-31023-3' in entry 'peyrolon_definition_2020' is invalid - run biber with '--validate_datamodel' for details.
-[1007] Biber.pm:133> INFO - WARNINGS: 2
+[1] Config.pm:311> INFO - Logfile is 'Main.blg'
+[168] biber-MSWIN64:340> INFO - === 
+[219] Biber.pm:420> INFO - Reading 'Main.bcf'
+[375] Biber.pm:994> INFO - Found 43 citekeys in bib section 0
+[410] Biber.pm:4463> INFO - Processing section 0
+[427] Biber.pm:4654> INFO - Looking for bibtex file 'References.bib' for section 0
+[474] bibtex.pm:1713> INFO - LaTeX decoding ...
+[567] bibtex.pm:1519> INFO - Found BibTeX data source 'References.bib'
+[953] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[954] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[954] Biber.pm:4283> INFO - Sorting list 'anyt/global//global/global/global' of type 'entry' with template 'anyt' and locale 'de-DE'
+[954] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
+[1035] bbl.pm:676> INFO - Writing 'Main.bbl' with encoding 'UTF-8'
+[1085] bbl.pm:779> INFO - Output to Main.bbl
+[1085] Biber.pm:131> WARN - ISBN '978-3-662-44873-1 978-3-662-44874-8' in entry 'eiben_introduction_2015' is invalid - run biber with '--validate_datamodel' for details.
+[1085] Biber.pm:131> WARN - ISBN '978-3-031-70054-5 978-3-031-70055-2' in entry 'affenzeller_positional_2024' is invalid - run biber with '--validate_datamodel' for details.
+[1085] Biber.pm:131> WARN - ISBN '978-3-658-31022-6 978-3-658-31023-3' in entry 'peyrolon_definition_2020' is invalid - run biber with '--validate_datamodel' for details.
+[1086] Biber.pm:133> INFO - WARNINGS: 3
