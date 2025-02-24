@@ -194,30 +194,38 @@ Die folgenden Absätze erläutern diese näher.
 \label{subsubsec:onePointCrossover}
 Das erste Standard-Rekombinationsverfahren, das in dieser Arbeit verwendet wird, ist die \emph{One-Point Rekombination}, auf die im Folgenden näher eingegangen wird.
 Für die Grundlagen, die in diesem Abschnitt erläutert werden, wurde folgende Quelle verwendet: \cite{pavai_survey_2017}\\
-Der One-Point Rekombinationsalgorithmus soll anhand folgender Beispielabbildung \ref{fig:onePointCrossoverEltern} erläutert werden:
+Der One-Point Rekombinationsalgorithmus soll anhand folgender Beispielabbildung \ref{fig:onePointGesamt} erläutert werden:
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[scale = 0.45]{Bilder/BeispielOnePointCrossover.png}
-    \caption{Eltern-Chromosomen One-Point Rekombination, angelehnt an \cite{torabi_using_2022}}
-    \label{fig:onePointCrossoverEltern}
+	\centering
+	\begin{subfigure}[b]{\textwidth}
+		\centering
+		\includegraphics[scale = 0.45]{Bilder/BeispielOnePointCrossover.png}
+		\caption{Eltern-Chromosomen One-Point Rekombination}
+		\label{fig:onePointCrossoverEltern}
+	\end{subfigure}
+	
+	\hfill
+	
+	\begin{subfigure}[b]{\textwidth}
+		\centering
+		\includegraphics[scale = 0.55]{Bilder/BeispielOnePointCrossover2.png}
+		\caption{Nachwuchs-Chromosomen One-Point Rekombination}
+		\label{fig:onePointCrossoverNachwuchs}
+	\end{subfigure}
+	\caption{One-Point Rekombination, angelehnt an \cite{torabi_using_2022}}
+	\label{fig:onePointGesamt}
 \end{figure}
 
-Das erste Eltern-Chromosom (E1, rot) in diesem Beispiel wurde aus Abbildung \ref{fig:genotyp} entnommen.
+Das erste Eltern-Chromosom (E1, rot) in diesem Beispiel wurde aus Abbildung \ref{fig:genotypNeu} entnommen.
 Das zweite Eltern-Chromosom (E2, blau) ist ein zufällig gewähltes Beispielchromosom.\\
 Bei beiden Chromosomen wird vorerst nicht weiter betrachtet, ob die Knoten aktiv oder inaktiv sind, da sich dieses Merkmal mit der Rekombination und Mutation ändern kann.
 Angenommen wird, dass C1 und C2 aus der letzten Generation übernommen wurden, da sie die beste Fitness aufgewiesen haben.\\
 Für die One-Point Rekombination wird zuerst eine zufällige Stelle innerhalb der Eltern-Chromosomen bestimmt.
 Diese ist in Abbildung \ref{fig:onePointCrossoverEltern} grün markiert.
 Die Eltern-Chromosomen werden anschließend an dieser Stelle geteilt und überkreuzt zusammengesetzt.
-Für dieses Beispiel ergeben sich die beiden folgenden Nachwuchs-Chromosomen:
+Für dieses Beispiel ergeben sich die beiden Nachwuchs-Chromosomen aus Abbildung \ref{fig:onePointCrossoverNachwuchs}.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale = 0.5]{Bilder/BeispielOnePointCrossover2.png}
-    \caption{Nachwuchs-Chromosomen One-Point Rekombination, angelehnt an \cite{torabi_using_2022}}
-    \label{fig:onePointCrossoverNachwuchs}
-\end{figure}
 
 \subsection{Two-Point Rekombination}
 \label{subsubsec:twoPointCrossover}
@@ -228,20 +236,28 @@ Anhand des nachfolgenden Beispiels kann dies nachvollzogen werden:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.5]{Bilder/BeispielTwoPointCrossover.png}
-    \caption{Eltern-Chromosomen Two-Point Rekombination, angelehnt an \cite{torabi_using_2022}}
-    \label{fig:twoPointCrossoverEltern}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale = 0.5]{Bilder/BeispielTwoPointCrossover2.png}
-    \caption{Nachwuchs-Chromosomen Two-Point Rekombination, angelehnt an \cite{torabi_using_2022}}
-    \label{fig:twoPointCrossoverNachwuchs}
+    \begin{subfigure}[b]{\textwidth}
+    	\centering
+    	\includegraphics[scale = 0.55]{Bilder/BeispielTwoPointCrossover.png}
+    	\caption{Eltern-Chromosomen Two-Point Rekombination}
+    	\label{fig:twoPointCrossoverEltern}
+    \end{subfigure}
+    
+    \hfill
+    
+    \begin{subfigure}[b]{\textwidth}
+    	\centering
+    	\includegraphics[scale = 0.55]{Bilder/BeispielTwoPointCrossover2.png}
+    	\caption{Nachwuchs-Chromosomen Two-Point Rekombination}
+    	\label{fig:twoPointCrossoverNachwuchs}
+    \end{subfigure}
+    \caption{Two-Point Rekombination, angelehnt an \cite{torabi_using_2022}}
+    \label{fig:twoPointGesamt}
 \end{figure}
 
 Zu beobachten ist, dass die Eltern-Chromosomen an jeweils zwei Stellen aufgeteilt werden (grün).
 Die Nachwuchs-Chromosomen bilden sich anschließend abwechselnd aus den Teilstücken der beiden Eltern-Chromosomen.
-In den Abbildungen \ref{fig:twoPointCrossoverEltern} und \ref{fig:twoPointCrossoverNachwuchs} wird dieser Prozess deutlich, indem die Chromosomenteile des ersten Elternteils rot markiert sind und des zweiten blau.
+In der Abbildung \ref{fig:twoPointGesamt} wird dieser Prozess deutlich, indem die Chromosomenteile des ersten Elternteils rot markiert sind und des zweiten blau.
 
 
 \subsection{Uniform Rekombination}
@@ -251,13 +267,27 @@ Was die Uniform Rekombination von der One-Point oder Two-Point Rekombination abh
 Die Maske ist genauso lang wie die Eltern-Chromosomen und beinhaltet für jede Stelle binäre Werte.
 Diese Werte geben jeweils an, von welchem Elternteil die jeweilige Stelle im Chromosom des Nachwuchses stammen soll.
 Der zweite gebildete Nachwuchs bekommt in diesem Prozess das Gen des jeweils anderen Elternteils.\\
-Anhand der Abbildungen \ref{fig:uniformCrossoverEltern} und \ref{fig:uniformCrossoverNachwuchs} lässt sich die Uniform Rekombination beispielhaft erklären:
+Anhand der Abbildung \ref{fig:uniformGesamt} lässt sich die Uniform Rekombination beispielhaft erklären:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.45]{Bilder/BeispielUniformCrossover.png}
-    \caption{Eltern-Chromosomen Uniform Rekombination, angelehnt an \cite{torabi_using_2022}}
-    \label{fig:uniformCrossoverEltern}
+    \begin{subfigure}[b]{\textwidth}
+    	\centering
+    	\includegraphics[scale = 0.55]{Bilder/BeispielUniformCrossover.png}
+    	\caption{Eltern-Chromosomen Uniform Rekombination}
+    	\label{fig:uniformCrossoverEltern}
+    \end{subfigure}
+    
+    \hfill
+    
+    \begin{subfigure}[b]{\textwidth}
+    	\centering
+    	\includegraphics[scale = 0.55]{Bilder/BeispielUniformCrossover2.png}
+    	\caption{Nachwuchs-Chromosomen Uniform Rekombination}
+    	\label{fig:uniformCrossoverNachwuchs}
+    \end{subfigure}
+    \caption{Uniform Rekombination, angelehnt an \cite{torabi_using_2022}}
+    \label{fig:uniformGesamt}
 \end{figure}
 
 Abbildung \ref{fig:uniformCrossoverEltern} zeigt die Ausgangssituation mit den beiden Eltern-Chromosomen (E1 und E2) in rot und blau.
@@ -272,14 +302,7 @@ Das zweite Nachwuchs-Chromosom (N2) bekommt demnach den entsprechenden Knoten au
 Für den darauffolgenden Index hat die Maske den Wert 1.
 Dies bedeutet, dass die Vererbungen genau andersherum ablaufen: N1 bekommt den Knoten von E2 und N2 bekommt den Knoten von E1.
 Dieser Prozess wird für alle Indices ausgeführt.
-Die folgende Abbildung \ref{fig:uniformCrossoverNachwuchs} zeigt die resultierenden Ergebnisse für dieses Beispiel der Uniform Rekombination.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale = 0.45]{Bilder/BeispielUniformCrossover2.png}
-    \caption{Nachwuchs-Chromosomen Uniform Rekombination, angelehnt an \cite{torabi_using_2022}}
-    \label{fig:uniformCrossoverNachwuchs}
-\end{figure}
+Die Abbildung \ref{fig:uniformCrossoverNachwuchs} zeigt die resultierenden Ergebnisse für dieses Beispiel der Uniform Rekombination.
 
 
 \subsection{Rekombinationsraten}
@@ -386,18 +409,33 @@ Da ein Eingangsknoten nur aus den Dateneingängen besteht und keine Parameter en
 
 Um die Single Active Mutation anhand eines Beispiels näher zu erläutern wird folgender Gentyp eines Chromosoms aus Abbildung \ref{fig:genotypNeu} erneut eingeführt.
 Es wird angenommen, dass dieses Chromosom durch vorherige Rekombination entstanden ist und somit im nächsten Schritt mutiert werden soll.
+Die folgende Abbildung \ref{fig:mutationGesamt} beschreibt dieses Mutationsbeispiel:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale = 0.5]{Bilder/TorabiBeispielGenotypNeu.png}
-	\caption{Beispiel Genotyp vor Mutation, angelehnt an \cite{torabi_using_2022}}
-	\label{fig:genotypVorMutation}
+	\begin{subfigure}[b]{\textwidth}
+		\centering
+		\includegraphics[scale = 0.55]{Bilder/TorabiBeispielGenotypNeu.png}
+		\caption{Genotyp vor Mutation}
+		\label{fig:genotypVorMutation}
+	\end{subfigure}
+	
+	\hfill
+	
+	\begin{subfigure}[b]{\textwidth}
+		\centering
+		\includegraphics[scale = 0.55]{Bilder/GenotypNachMutation.png}
+		\caption{Genotyp nach Mutation}
+		\label{fig:genotypNachMutation}
+	\end{subfigure}
+	\caption{Single Active Mutation, angelehnt an \cite{torabi_using_2022}}
+	\label{fig:mutationGesamt}
 \end{figure}
 
 Der Algorithmus beginnt und ein zufälliger Index wird für die Mutation ausgewählt.
 Angenommen dieser Index hat den Wert 6.
 Dabei handelt es sich um einen Rechenknoten.
-Da in diesem Beispiel die Rechenknoten jeweils 3 Parameter aufweisen, wird zufällig zwischen einer dieser Parameter für die Mutation bestimmt.
+Da in diesem Beispiel die Rechenknoten jeweils 3 Parameter aufweisen, wird zufällig einer aus drei Parametern für die Mutation bestimmt.
 In diesem Beispiel wird der erste Parameter verändert, also der Rechenoperator.
 Wie bereits in Tabelle \ref{table:kodierung} aufgezeigt, werden die Rechenoperationen durch 0 bis 3 kodiert.
 Sei beispielsweise die zufällig gewählte Zahl für den Rechenoperator gleich 1.
@@ -406,15 +444,8 @@ Angenommen der zufällig gewählte Index ist 8, was dem Index von $O_A$ entspric
 Da es sich, um einen Ausgangsknoten handelt, muss ein neuer Vorgängerknoten zufällig gewählt werden.
 Beispielsweise wird nun dieser Parameter mit dem Index 3 belegt.
 Da dieser Knoten Teil der aktiven Knoten ist, terminiert hier der Mutationsalgorithmus.
-Die folgende Abbildung \ref{fig:genotypNachMutation} zeigt das Ergebnis des Mutationsbeispiels (mit Kennzeichnung der neuen aktiven / inaktiven Knoten).
-Die mutierten Teile des Chromosoms werden rot hervorgehoben.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale = 0.5]{Bilder/GenotypNachMutation.png}
-	\caption{Beispiel Genotyp nach Mutation}
-	\label{fig:genotypNachMutation}
-\end{figure}
+Die Abbildung \ref{fig:genotypNachMutation} zeigt das Ergebnis des Mutationsbeispiels (mit Kennzeichnung der neuen aktiven / inaktiven Knoten).
+Die mutierten Teile des Chromosoms, sowie der neu entstandene inaktive Knoten werden rot hervorgehoben.
 
 
 \section{Evaluation Fitness, Stopp-Kriterium und Ergebnis}
