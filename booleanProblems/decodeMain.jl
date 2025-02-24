@@ -195,7 +195,7 @@ open(save_path, "a") do file
 end
 
 excelFile = XLSX.readxlsx("HPOErgebnisse.xlsx")
-worksheet = excelFile["Encode"]
+worksheet = excelFile["Decode"]
 if crossover_type == 3
     lineCounter = 20
 else
@@ -221,8 +221,8 @@ crossover_offset = offset_value
 mu = 1
 lambda = 4
 eval_after_iterations = 10000 #niedriger, wegen Zeit (ursprünglich 35000)
-nbr_inputs = 16 #Achtung, das gilt nur für Encode!!!
-nbr_outputs = 4
+nbr_inputs = 4 #Achtung, das gilt nur für Decode!!!
+nbr_outputs = 16
 tournament_size = 0
 
 main()

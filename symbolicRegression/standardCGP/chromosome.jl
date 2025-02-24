@@ -22,15 +22,13 @@ function Base.show(io::IO, c::Chromosome)
 end
 
 function Chromosome(params::CgpParameters)
-    @assert params.nbr_outputs == 1
 
     nodes_grid = Vector{Node}()
     output_node_ids = Vector{Int}()
 
     # input nodes
     for position in 0:params.nbr_inputs-1
-        inputNode = Node(position, params.nbr_inputs, params.nbr_computational_nodes, InputNode)
-        push!(nodes_grid, inputNode)
+        push!(nodes_grid, Node(position, params.nbr_inputs, params.nbr_computational_nodes, InputNode))
     end
     # computational nodes
     for position in params.nbr_inputs:(params.nbr_inputs + params.nbr_computational_nodes - 1)
@@ -51,11 +49,11 @@ end
 
 using DataStructures
 
-function evaluate!(self::Chromosome, inputs::Vector{Float32}, labels::Vector{Float32})
+function evaluate!(self::Chromosome, inputs::Vector{Vector{Float32}}, labels::Vector{Vector{Float32}})
     get_active_nodes_id!(self)
 
     outputsNode = Dict{Int, Vector{Float32}}()
-    prediction = Vector{Float32}()
+    prediction = Vector{Vector{Float32}}()
     
     for node_id in self.active_nodes
         current_node = self.nodes_grid[node_id + 1]
@@ -67,7 +65,7 @@ function evaluate!(self::Chromosome, inputs::Vector{Float32}, labels::Vector{Flo
             con1 = current_node.connection0
             prev_output1 = outputsNode[con1]
             outputsNode[node_id] = deepcopy(prev_output1)
-            prediction = deepcopy(prev_output1)
+            push!(prediction, deepcopy(prev_output1))
         elseif current_node.node_type == ComputationalNode
             con1 = current_node.connection0
             prev_output1 = outputsNode[con1]
@@ -82,9 +80,16 @@ function evaluate!(self::Chromosome, inputs::Vector{Float32}, labels::Vector{Flo
             outputsNode[node_id] = calculated_result
         end
     end
-    fitness = fitness_regression(prediction, labels)
+    
+    fitness_array = Vector{Float32}()
+    for i in 1:length(prediction)
 
-    return fitness
+        fitness = fitness_regression(prediction[i], labels[i])
+        push!(fitness_array, deepcopy(fitness))
+    end
+    finalFitness = mean(fitness_array)
+
+    return finalFitness
 end
 
 using Random

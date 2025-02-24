@@ -53,7 +53,7 @@ function evaluate!(self::Chromosome, inputs::Adjoint{Bool, Matrix{Bool}}, labels
     get_active_nodes_id!(self)
 
     outputsNode = Dict{Int, Vector{Bool}}()
-    prediction = Vector{Bool}()
+    prediction = Vector{Vector{Bool}}()
 
     for node_id in self.active_nodes
         current_node = self.nodes_grid[node_id + 1]  # Adjust for 1-based indexing
@@ -65,7 +65,7 @@ function evaluate!(self::Chromosome, inputs::Adjoint{Bool, Matrix{Bool}}, labels
             con1 = current_node.connection0
             prev_output1 = outputsNode[con1]
             outputsNode[node_id] = deepcopy(prev_output1)
-            prediction = deepcopy(prev_output1)
+            push!(prediction, deepcopy(prev_output1))
         elseif current_node.node_type == ComputationalNode
             con1 = current_node.connection0
             prev_output1 = outputsNode[con1]
@@ -76,9 +76,16 @@ function evaluate!(self::Chromosome, inputs::Adjoint{Bool, Matrix{Bool}}, labels
             outputsNode[node_id] = calculated_result
         end
     end
-    fitness = fitness_boolean(prediction, labels[:,1])
 
-    return fitness
+    fitness_array = Vector{Float32}()
+    for i in 1:length(prediction)
+
+        fitness = fitness_boolean(prediction[i], labels[:,i])
+        push!(fitness_array, deepcopy(fitness))
+    end
+    finalFitness = mean(fitness_array)
+
+    return finalFitness
 end
 
 using Random
