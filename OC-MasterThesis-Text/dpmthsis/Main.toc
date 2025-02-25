@@ -28,21 +28,29 @@
 \contentsline {subsubsection}{\nonumberline 2. Testblock: komplexe Testszenarien}{28}{subsubsection*.32}%
 \contentsline {section}{\numberline {3.2}Evaluation}{29}{section.3.2}%
 \contentsline {chapter}{\numberline {4}Ergebnisse}{31}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Ergebnisse: Boolesche Probleme}{31}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Ergebnisse: Parity}{31}{subsection.4.1.1}%
-\contentsline {subsubsection}{\nonumberline Analyse der Rohdaten}{31}{subsubsection*.34}%
-\contentsline {subsubsection}{\nonumberline Bayes'sche Analyse}{31}{subsubsection*.36}%
-\contentsline {subsubsection}{\nonumberline Graphische Evaluation}{31}{subsubsection*.38}%
-\contentsline {subsection}{\numberline {4.1.2}Ergebnisse: Encode}{31}{subsection.4.1.2}%
-\contentsline {subsubsection}{\nonumberline Analyse der Rohdaten}{31}{subsubsection*.40}%
-\contentsline {subsubsection}{\nonumberline Bayes'sche Analyse}{31}{subsubsection*.42}%
-\contentsline {subsubsection}{\nonumberline Graphische Evaluation}{31}{subsubsection*.44}%
-\contentsline {section}{\numberline {4.2}Ergebnisse: Symbolische Regression}{32}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Ergebnisse: Keijzer}{32}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.1}Ergebnisse: Boolesche Probleme}{32}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Ergebnisse: Parity}{32}{subsection.4.1.1}%
+\contentsline {subsubsection}{\nonumberline Analyse der Rohdaten}{32}{subsubsection*.34}%
+\contentsline {subsubsection}{\nonumberline Bayes'sche Analyse}{32}{subsubsection*.36}%
+\contentsline {subsubsection}{\nonumberline Graphische Evaluation}{32}{subsubsection*.38}%
+\contentsline {subsection}{\numberline {4.1.2}Ergebnisse: Encode}{32}{subsection.4.1.2}%
+\contentsline {subsubsection}{\nonumberline Analyse der Rohdaten}{32}{subsubsection*.40}%
+\contentsline {subsubsection}{\nonumberline Bayes'sche Analyse}{32}{subsubsection*.42}%
+\contentsline {subsubsection}{\nonumberline Graphische Evaluation}{32}{subsubsection*.44}%
+\contentsline {subsection}{\numberline {4.1.3}Ergebnisse: Decode}{32}{subsection.4.1.3}%
 \contentsline {subsubsection}{\nonumberline Analyse der Rohdaten}{32}{subsubsection*.46}%
 \contentsline {subsubsection}{\nonumberline Bayes'sche Analyse}{32}{subsubsection*.48}%
 \contentsline {subsubsection}{\nonumberline Graphische Evaluation}{32}{subsubsection*.50}%
-\contentsline {section}{\numberline {4.3}Zusammenfassung der Ergebnisse}{32}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Fazit aus Ausblick}{33}{chapter.5}%
+\contentsline {section}{\numberline {4.2}Ergebnisse: Symbolische Regression}{33}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Ergebnisse: Keijzer}{33}{subsection.4.2.1}%
+\contentsline {subsubsection}{\nonumberline Analyse der Rohdaten}{33}{subsubsection*.52}%
+\contentsline {subsubsection}{\nonumberline Bayes'sche Analyse}{33}{subsubsection*.54}%
+\contentsline {subsubsection}{\nonumberline Graphische Evaluation}{33}{subsubsection*.56}%
+\contentsline {subsection}{\numberline {4.2.2}Ergebnisse: Koza}{33}{subsection.4.2.2}%
+\contentsline {subsubsection}{\nonumberline Analyse der Rohdaten}{33}{subsubsection*.58}%
+\contentsline {subsubsection}{\nonumberline Bayes'sche Analyse}{33}{subsubsection*.60}%
+\contentsline {subsubsection}{\nonumberline Graphische Evaluation}{33}{subsubsection*.62}%
+\contentsline {section}{\numberline {4.3}Zusammenfassung der Ergebnisse}{33}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Fazit aus Ausblick}{35}{chapter.5}%
 \contentsline {chapter}{\numberline {A}Anhang}{I}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
