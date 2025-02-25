@@ -240,15 +240,15 @@ Da durch die erhöhte Rechenzeit der komplexeren Testszenarien keine sinnvolle H
 Diejenigen Hyperparameter eines CGP-Modells, die nicht mit Rekombination in Verbindung stehen, werden aus den Ergebnissen von Cui et al. herangezogen \cite{cui_results}.
 Die Rekombinationsrate wird variiert und mit diesen Parametern in CGP-Modelle eingepflegt.
 Für jede CGP-Konfiguration werden 50 Testdurchläufe ausgeführt, um eine statistische Auswertung ausführen zu können.
-Dabei werden die CGP-Modelle gegebenenfalls nicht bis zur vollständigen Konvergenz trainiert, um die Rechenzeit zu reduzieren. 
-Für Boolesche Probleme werden den CGP-Modelle dabei weniger Iterationen Trainingszeit zur Verfügung gestellt als für SR Probleme, da diese in der Hyperparameteranalyse von Cui et al. mehr Rechenknoten brauchen und somit für jeweils eine Iteration mehr Rechenzeit benötigen als bei SR. \cite{cui_results}\\
+Dabei werden die CGP-Modellen gegebenenfalls nicht bis zur vollständigen Konvergenz trainiert, um die Rechenzeit zu reduzieren. 
+Für Boolesche Probleme werden den CGP-Modelle dabei weniger Iterationen Trainingszeit zur Verfügung gestellt als für SR Probleme, da diese in der Hyperparameteranalyse von Cui et al. mehr Rechenknoten brauchen und somit für jeweils eine Iteration mehr Rechenzeit benötigen als es bei SR der Fall ist. \cite{cui_results}\\
 Da sich die Wirkung von Rekombinationsrate und Offset gegenseitig beeinflussen kann, ist es sinnvoller die Bewertung der beiden Parameter einzeln zu betrachten.
 Aufgrund der hohen Anzahl der zu bewertenden Testergebnisse, die sich bereits für einen variierenden Parameter ergeben, soll nur einer dieser Parameter in dieser Arbeit näher betrachtet werden.
 Dieser Parameter ist wie bereits beschrieben die Rekombinationsrate.
 Dies ergibt sich daraus, dass die Ergebnisse der Hyperparameteranalyse der einfachen Tests bereits vermuten lassen, dass der Offset keinen deutlichen Mehrwert für das CGP-Training mit sich bringt.
 Details zu den jeweiligen Ergebnissen können in den Abschnitten \ref{parity:analyseRohdaten} und \ref{keijzer:analyseRohdaten} nachgelesen werden.
 Außerdem können mit Hilfe der Rekombinationsrate nähere Erkenntnisse zu den unterschiedlichen Rekombinationsarten gewonnen werden, die in dieser Arbeit verglichen werden.\\
-Für die Evaluation stehen nach dem Testdurchlauf die Ergebnisse bis zur 10000. Iteration mehrerer CGP-Kon\-fi\-gu\-ra\-tio\-nen zur Verfügung, die allerdings nicht die Ergebnisse der CGPs mit den jeweils besten Parametersätzen darstellen, da keine Hyperparameteroptimierung ausgeführt wurde.
+Für die Evaluation stehen nach dem Testdurchlauf die Ergebnisse mehrerer CGP-Kon\-fi\-gu\-ra\-tio\-nen zur Verfügung, die allerdings nicht unbedingt die Ergebnisse der CGPs mit den jeweils besten Parametersätzen darstellen, da keine Hyperparameteroptimierung ausgeführt wurde.
 Trotzdem können die Ergebnisse verwendet werden, um einen näheren Einblick zum Verhalten des CGP-Modells zu erhalten, wenn die Rekombinationsrate variiert wird.\\
 Nähere Informationen zur Evaluierung werden in Abschnitt \ref{sec:Evaluation} gegeben.
 
