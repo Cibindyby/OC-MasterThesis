@@ -27,8 +27,8 @@ for c_art in crossover_art
 #SBATCH --time=4-0
 #SBATCH --array=1-50
 #SBATCH --output=/data/oc-compute03/ebertzci/OC-MasterThesis/output/%x-%A-%a.txt
-#SBATCH --mem=12000
-#SBATCH -c 4
+#SBATCH --mem=4000
+#SBATCH -c 1
 
 
 echo \"SLURM_JOB_ID=\${SLURM_JOB_ID}\"
