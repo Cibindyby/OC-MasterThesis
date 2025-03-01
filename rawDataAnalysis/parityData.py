@@ -95,10 +95,10 @@ list_of_sheets = [
 ]
 
 list_of_names = [
-    ['keine Rekomb.'],
-    ['One-Point Konstant kein Offset', 'One-Point Konstant mit Offset', 'One-Point Clegg kein Offset', 'One-Point Clegg mit Offset', 'One-Point OneFifth kein Offset', 'One-Point One-Fifth mit Offset'],
-    ['Two-Point Konstant kein Offset', 'Two-Point Konstant mit Offset', 'Two-Point Clegg kein Offset', 'Two-Point Clegg mit Offset', 'Two-Point OneFifth kein Offset', 'Two-Point OneFifth mit Offset'],
-    ['Uniform Konstant kein Offset', 'Uniform Konstant mit Offset', 'Uniform Clegg kein Offset', 'Uniform Clegg mit Offset', 'Uniform OneFifth kein Offset', 'Uniform OneFifth mit Offset']
+    ['keine Rekombination'],
+    ['One-Point Konstant kein Offset', 'One-Point Konstant mit Offset', 'One-Point Clegg kein Offset', 'One-Point Clegg mit Offset', 'One-Point One-Fifth kein Offset', 'One-Point One-Fifth mit Offset'],
+    ['Two-Point Konstant kein Offset', 'Two-Point Konstant mit Offset', 'Two-Point Clegg kein Offset', 'Two-Point Clegg mit Offset', 'Two-Point One-Fifth kein Offset', 'Two-Point One-Fifth mit Offset'],
+    ['Uniform Konstant kein Offset', 'Uniform Konstant mit Offset', 'Uniform Clegg kein Offset', 'Uniform Clegg mit Offset', 'Uniform One-Fifth kein Offset', 'Uniform One-Fifth mit Offset']
 ]
 
 

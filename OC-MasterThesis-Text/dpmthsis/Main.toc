@@ -31,26 +31,26 @@
 \contentsline {section}{\numberline {4.1}Ergebnisse: Boolesche Probleme}{33}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Ergebnisse: Parity}{33}{subsection.4.1.1}%
 \contentsline {subsubsection}{\nonumberline Analyse der Rohdaten}{33}{subsubsection*.34}%
-\contentsline {subsubsection}{\nonumberline Bayes'sche Analyse}{34}{subsubsection*.37}%
-\contentsline {subsubsection}{\nonumberline Graphische Evaluation}{34}{subsubsection*.39}%
-\contentsline {subsection}{\numberline {4.1.2}Ergebnisse: Encode}{34}{subsection.4.1.2}%
-\contentsline {subsubsection}{\nonumberline Analyse der Rohdaten}{34}{subsubsection*.41}%
-\contentsline {subsubsection}{\nonumberline Bayes'sche Analyse}{34}{subsubsection*.43}%
-\contentsline {subsubsection}{\nonumberline Graphische Evaluation}{34}{subsubsection*.45}%
-\contentsline {subsection}{\numberline {4.1.3}Ergebnisse: Decode}{34}{subsection.4.1.3}%
-\contentsline {subsubsection}{\nonumberline Analyse der Rohdaten}{34}{subsubsection*.47}%
-\contentsline {subsubsection}{\nonumberline Bayes'sche Analyse}{34}{subsubsection*.49}%
-\contentsline {subsubsection}{\nonumberline Graphische Evaluation}{34}{subsubsection*.51}%
-\contentsline {section}{\numberline {4.2}Ergebnisse: Symbolische Regression}{36}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Ergebnisse: Keijzer}{36}{subsection.4.2.1}%
-\contentsline {subsubsection}{\nonumberline Analyse der Rohdaten}{36}{subsubsection*.53}%
-\contentsline {subsubsection}{\nonumberline Bayes'sche Analyse}{37}{subsubsection*.56}%
-\contentsline {subsubsection}{\nonumberline Graphische Evaluation}{37}{subsubsection*.58}%
-\contentsline {subsection}{\numberline {4.2.2}Ergebnisse: Koza}{37}{subsection.4.2.2}%
-\contentsline {subsubsection}{\nonumberline Analyse der Rohdaten}{37}{subsubsection*.60}%
-\contentsline {subsubsection}{\nonumberline Bayes'sche Analyse}{37}{subsubsection*.62}%
-\contentsline {subsubsection}{\nonumberline Graphische Evaluation}{37}{subsubsection*.64}%
-\contentsline {section}{\numberline {4.3}Zusammenfassung der Ergebnisse}{37}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Fazit aus Ausblick}{39}{chapter.5}%
+\contentsline {subsubsection}{\nonumberline Bayes'sche Analyse}{35}{subsubsection*.38}%
+\contentsline {subsubsection}{\nonumberline Graphische Evaluation}{35}{subsubsection*.40}%
+\contentsline {subsection}{\numberline {4.1.2}Ergebnisse: Encode}{35}{subsection.4.1.2}%
+\contentsline {subsubsection}{\nonumberline Analyse der Rohdaten}{35}{subsubsection*.42}%
+\contentsline {subsubsection}{\nonumberline Bayes'sche Analyse}{35}{subsubsection*.44}%
+\contentsline {subsubsection}{\nonumberline Graphische Evaluation}{35}{subsubsection*.46}%
+\contentsline {subsection}{\numberline {4.1.3}Ergebnisse: Decode}{35}{subsection.4.1.3}%
+\contentsline {subsubsection}{\nonumberline Analyse der Rohdaten}{35}{subsubsection*.48}%
+\contentsline {subsubsection}{\nonumberline Bayes'sche Analyse}{35}{subsubsection*.50}%
+\contentsline {subsubsection}{\nonumberline Graphische Evaluation}{35}{subsubsection*.52}%
+\contentsline {section}{\numberline {4.2}Ergebnisse: Symbolische Regression}{37}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Ergebnisse: Keijzer}{37}{subsection.4.2.1}%
+\contentsline {subsubsection}{\nonumberline Analyse der Rohdaten}{37}{subsubsection*.54}%
+\contentsline {subsubsection}{\nonumberline Bayes'sche Analyse}{39}{subsubsection*.58}%
+\contentsline {subsubsection}{\nonumberline Graphische Evaluation}{39}{subsubsection*.60}%
+\contentsline {subsection}{\numberline {4.2.2}Ergebnisse: Koza}{39}{subsection.4.2.2}%
+\contentsline {subsubsection}{\nonumberline Analyse der Rohdaten}{39}{subsubsection*.62}%
+\contentsline {subsubsection}{\nonumberline Bayes'sche Analyse}{39}{subsubsection*.64}%
+\contentsline {subsubsection}{\nonumberline Graphische Evaluation}{39}{subsubsection*.66}%
+\contentsline {section}{\numberline {4.3}Zusammenfassung der Ergebnisse}{39}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Fazit aus Ausblick}{41}{chapter.5}%
 \contentsline {chapter}{\numberline {A}Anhang}{I}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
