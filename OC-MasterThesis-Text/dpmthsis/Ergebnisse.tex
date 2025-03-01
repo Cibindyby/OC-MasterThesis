@@ -13,6 +13,54 @@ TODO: Argumentation, dass Offset nicht so viel bringt (damit Kapitel \glqq prakt
 \label{subsec:ergebnisseParity}
 \subsubsection{Analyse der Rohdaten}
 \label{parity:analyseRohdaten}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c | c | c | c | c | c }
+		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn}\\
+		\hline
+		keine Rekomb. & 133 & 0 & 0 & - & 58.5\\
+		\hline
+		One-Point Konstant kein Offset & 126 & 8 & 2 & 5.5 & 44.0\\
+		\hline
+		One-Point Konstant mit Offset & 136 & 0 & 0 & - & 49\\
+		\hline
+		One-Point Clegg kein Offset & 123 & 13 & 3 & 4 & 74\\
+		\hline
+		One-Point Clegg mit Offset & 126 & 0 & 0 & - & 43.5\\
+		\hline
+		One-Point OneFifth kein Offset & 116 & 2 & 1 & 2.0 & 37.0\\
+		\hline
+		One-Point One-Fifth mit Offset & 127 & 0 & 0 & - & 27.5\\
+		\hline
+		Two-Point Konstant kein Offset & 108 & 10 & 2 & 3.0 & 33.5\\
+		\hline
+		Two-Point Konstant mit Offset & 129 & 0 & 0 & - & 64\\
+		\hline
+		Two-Point Clegg kein Offset & 106 & 20 & 8 & 6.5 & 40.0\\
+		\hline
+		Two-Point Clegg mit Offset & 125 & 0 & 0 & - & 70.5\\
+		\hline
+		Two-Point OneFifth kein Offset & 126 & 4 & 2 & 3.0 & 59.5\\
+		\hline
+		Two-Point OneFifth mit Offset & 125 & 0 & 0 & - & 43\\
+		\hline
+		Uniform Konstant kein Offset & 85 & 44 & 15 & 14.0 & 55\\
+		\hline
+		Uniform Konstant mit Offset & 131 & 0 & 0 & - & 37.5\\
+		\hline
+		Uniform Clegg kein Offset & 101 & 41 & 15 & 4 & 31\\
+		\hline
+		Uniform Clegg mit Offset & 130 & 0 & 0 & - & 51.5\\
+		\hline
+		Uniform OneFifth kein Offset & 108 & 22 & 12 & 5.0 & 69.5\\
+		\hline
+		Uniform OneFifth mit Offset & 123 & 0 & 0 & - & 54.0\\
+	\end{tabular}
+	\caption{Parity: Auswertung der Rohdaten}
+	\label{table:parityRohdaten}
+\end{table}
+
 \subsubsection{Bayes'sche Analyse}
 \label{parity:bayes}
 \subsubsection{Graphische Evaluation}
@@ -46,6 +94,54 @@ TODO: ggf mehr Testprobleme einfügen
 \label{subsec:ergebnisseKeijzer}
 \subsubsection{Analyse der Rohdaten}
 \label{keijzer:analyseRohdaten}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c | c | c | c | c | c }
+		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn}\\
+		\hline
+		keine Rekomb. & 2260 & 0 & 0 & - & 624\\
+		\hline
+		One-Point Konstant kein Offset & 1183 & 26 & 16 & 13.0 & 756\\
+		\hline
+		One-Point Konstant mit Offset & 1531 & 0 & 0 & - & 374.0\\
+		\hline
+		One-Point Clegg kein Offset & 1584 & 59 & 28 & 5 & 243\\
+		\hline
+		One-Point Clegg mit Offset & 1534 & 0 & 0 & - & 396.5\\
+		\hline
+		One-Point OneFifth kein Offset & 1307 & 35 & 18 & 3 & 766.0\\
+		\hline
+		One-Point One-Fifth mit Offset & 1776 & 0 & 0 & - & 229.0\\
+		\hline
+		Two-Point Konstant kein Offset & 1854 & 79 & 25 & 15 & 803.0\\
+		\hline
+		Two-Point Konstant mit Offset & 1361 & 0 & 0 & - & 548\\
+		\hline
+		Two-Point Clegg kein Offset & 1467 & 106 & 62 & 18.5 & 735\\
+		\hline
+		Two-Point Clegg mit Offset & 1862 & 0 & 0 & - & 201.0\\
+		\hline
+		Two-Point OneFifth kein Offset & 1788 & 17 & 10 & 4 & 753\\
+		\hline
+		Two-Point OneFifth mit Offset & 1124 & 0 & 0 & - & 158.0\\
+		\hline
+		Uniform Konstant kein Offset & 1224 & 480 & 239 & 24.0 & 363\\
+		\hline
+		Uniform Konstant mit Offset & 1890 & 0 & 0 & - & 260.5\\
+		\hline
+		Uniform Clegg kein Offset & 1386 & 77 & 57 & 6 & 723\\
+		\hline
+		Uniform Clegg mit Offset & 2232 & 0 & 0 & - & 385.5\\
+		\hline
+		Uniform OneFifth kein Offset & 1491 & 106 & 50 & 8.0 & 155\\
+		\hline
+		Uniform OneFifth mit Offset & 1749 & 0 & 0 & - & 445.5\\
+	\end{tabular}
+	\caption{Keijzer: Auswertung der Rohdaten}
+	\label{table:keijzerRohdaten}
+\end{table}
+
 \subsubsection{Bayes'sche Analyse}
 \label{keijzer:bayes}
 \subsubsection{Graphische Evaluation}
