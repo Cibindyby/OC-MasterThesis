@@ -216,7 +216,7 @@ crossover_offset = offset_value
 
 mu = 1
 lambda = 4
-eval_after_iterations = 60000
+eval_after_iterations = 70000
 nbr_inputs = 1 #Achtung, das gilt nur für Koza!!!
 nbr_outputs = 1
 tournament_size = 0
