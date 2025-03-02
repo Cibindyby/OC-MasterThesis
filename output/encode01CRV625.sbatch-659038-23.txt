@@ -1,0 +1,13 @@
+SLURM_JOB_ID=659320
+hostname=oc222
+path '/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/scripts' does not contain a 'flake.nix', searching up
+srun: got SIGCONT
+[K[Kslurmstepd: error: *** STEP 659320.0 ON oc222 CANCELLED AT 2025-02-22T11:42:31 ***
+slurmstepd: error: *** JOB 659320 ON oc222 CANCELLED AT 2025-02-22T11:42:31 ***
+srun: forcing job termination
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+error:
+       … while fetching the input 'git+file:///data/oc-compute03/ebertzci/OC-MasterThesis?dir=julia-nix-slurm-env-main'
+
+       error: failed to extract archive (Source threw exception: error: interrupted by the user)
+srun: error: oc222: task 0: Exited with exit code 1

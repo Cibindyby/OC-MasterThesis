@@ -1,0 +1,111 @@
+SLURM_JOB_ID=668366
+hostname=oc222
+path '/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/scripts' does not contain a 'flake.nix', searching up
+warning: Git tree '/data/oc-compute03/ebertzci/OC-MasterThesis' is dirty
+warning: ignoring untrusted flake configuration setting 'extra-substituters'.
+Pass '--accept-flake-config' to trust it
+warning: ignoring untrusted flake configuration setting 'extra-trusted-public-keys'.
+Pass '--accept-flake-config' to trust it
+Running tasks     devenv:enterShell
+
+[1A[0JRunning           devenv:enterShell 0ms
+1 Running                           36.86µs
+[2A[0JSucceeded         devenv:enterShell 14895ms
+1 Succeeded                         14.90s
+
+Waiting for lock /home/ebertzci/JULIALOCK …
+Acquired lock /home/ebertzci/JULIALOCK.
+Relinquishing lock /home/ebertzci/JULIALOCK …
+Relinquished lock /home/ebertzci/JULIALOCK.
+srun: got SIGCONT
+slurmstepd: error: *** STEP 668366.0 ON oc222 CANCELLED AT 2025-03-02T18:35:44 ***
+slurmstepd: error: *** JOB 668366 ON oc222 CANCELLED AT 2025-03-02T18:35:44 ***
+
+[1966878] signal (15): Terminated
+in expression starting at /data/oc-compute03/ebertzci/OC-MasterThesis/booleanProblems/encodeMain.jl:228
+ijl_isa at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/subtype.c:2328
+unknown function (ip: 0x7fffffff53af)
+jl_typemap_entry_assoc_exact at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/typemap.c:1182
+jl_typemap_assoc_exact at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/julia_internal.h:1438 [inlined]
+jl_lookup_generic_ at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:3017 [inlined]
+ijl_apply_generic at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:3073
+deepcopy_internal at ./deepcopy.jl:65
+srun: forcing job termination
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+jfptr_deepcopy_internal_78214.1 at /nix/store/06qnp46ihg0vzsbg1hiqcs58pjyph135-julia-bin-1.10.4/lib/julia/sys.so (unknown line)
+_jl_invoke at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:2895 [inlined]
+ijl_apply_generic at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:3077
+_deepcopy_array_t at ./deepcopy.jl:105
+deepcopy_internal at ./deepcopy.jl:92
+unknown function (ip: 0x7ffff6797e39)
+_jl_invoke at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:2895 [inlined]
+ijl_apply_generic at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:3077
+deepcopy_internal at ./deepcopy.jl:65
+deepcopy at ./deepcopy.jl:26 [inlined]
+crossover at /data/oc-compute03/ebertzci/OC-MasterThesis/booleanProblems/utils/runner_multiple_parents_with_elitist_mulambda.jl:238
+main at /data/oc-compute03/ebertzci/OC-MasterThesis/booleanProblems/encodeMain.jl:85
+unknown function (ip: 0x7ffff6796e72)
+_jl_invoke at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:2895 [inlined]
+ijl_apply_generic at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:3077
+jl_apply at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/julia.h:1982 [inlined]
+do_call at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/interpreter.c:126
+eval_value at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/interpreter.c:223
+eval_stmt_value at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/interpreter.c:174 [inlined]
+eval_body at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/interpreter.c:617
+jl_interpret_toplevel_thunk at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/interpreter.c:775
+jl_toplevel_eval_flex at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/toplevel.c:934
+jl_toplevel_eval_flex at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/toplevel.c:877
+ijl_toplevel_eval_in at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/toplevel.c:985
+eval at ./boot.jl:385 [inlined]
+include_string at ./loading.jl:2076
+_jl_invoke at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:2895 [inlined]
+ijl_apply_generic at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:3077
+_include at ./loading.jl:2136
+include at ./Base.jl:495
+jfptr_include_46393.1 at /nix/store/06qnp46ihg0vzsbg1hiqcs58pjyph135-julia-bin-1.10.4/lib/julia/sys.so (unknown line)
+_jl_invoke at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:2895 [inlined]
+ijl_apply_generic at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:3077
+exec_options at ./client.jl:318
+_start at ./client.jl:552
+jfptr__start_82729.1 at /nix/store/06qnp46ihg0vzsbg1hiqcs58pjyph135-julia-bin-1.10.4/lib/julia/sys.so (unknown line)
+_jl_invoke at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:2895 [inlined]
+ijl_apply_generic at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/gf.c:3077
+jl_apply at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/julia.h:1982 [inlined]
+true_main at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/jlapi.c:582
+jl_repl_entrypoint at /cache/build/builder-amdci4-0/julialang/julia-release-1-dot-10/src/jlapi.c:731
+main at julia (unknown line)
+__libc_start_call_main at /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/libc.so.6 (unknown line)
+__libc_start_main at /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/libc.so.6 (unknown line)
+unknown function (ip: 0x4010b8)
+unknown function (ip: (nil))
+Allocations: 1198571512 (Pool: 1198057605; Big: 513907); GC: 1043
+      From worker 2:	
+Worker 4 terminated.
+      From worker 2:	[1967150] signal (15): Terminated
+┌ Warning: Forcibly interrupting busy workers
+│   exception = IOError: write: broken pipe (EPIPE)
+└ @ Distributed /nix/store/06qnp46ihg0vzsbg1hiqcs58pjyph135-julia-bin-1.10.4/share/julia/stdlib/v1.10/Distributed/src/cluster.jl:1253
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#739")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:947
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:955
+ [3] unsafe_read
+   @ ./io.jl:774 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:773
+ [5] read!
+   @ ./io.jl:775 [inlined]
+ [6] deserialize_hdr_raw
+   @ /nix/store/06qnp46ihg0vzsbg1hiqcs58pjyph135-julia-bin-1.10.4/share/julia/stdlib/v1.10/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /nix/store/06qnp46ihg0vzsbg1hiqcs58pjyph135-julia-bin-1.10.4/share/julia/stdlib/v1.10/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /nix/store/06qnp46ihg0vzsbg1hiqcs58pjyph135-julia-bin-1.10.4/share/julia/stdlib/v1.10/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed /nix/store/06qnp46ihg0vzsbg1hiqcs58pjyph135-julia-bin-1.10.4/share/julia/stdlib/v1.10/Distributed/src/process_messages.jl:121
+      From worker 2:	in expression starting at none:0
+┌ Warning: rmprocs: process 1 not removed
+└ @ Distributed /nix/store/06qnp46ihg0vzsbg1hiqcs58pjyph135-julia-bin-1.10.4/share/julia/stdlib/v1.10/Distributed/src/cluster.jl:1049
+srun: error: oc222: task 0: Exited with exit code 130

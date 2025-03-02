@@ -1,0 +1,5 @@
+SLURM_JOB_ID=659619
+hostname=oc-compute02
+path '/data/oc-compute03/ebertzci/OC-MasterThesis' does not contain a 'flake.nix', searching up
+srun: error: oc-compute02: task 0: Exited with exit code 1
+error: path '/data/oc-compute03/ebertzci/OC-MasterThesis' is not part of a flake (neither it nor its parent directories contain a 'flake.nix' file)

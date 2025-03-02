@@ -1,0 +1,24 @@
+SLURM_JOB_ID=668247
+hostname=oc-compute03
+path '/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/scripts' does not contain a 'flake.nix', searching up
+warning: Git tree '/data/oc-compute03/ebertzci/OC-MasterThesis' is dirty
+warning: ignoring untrusted flake configuration setting 'extra-substituters'.
+Pass '--accept-flake-config' to trust it
+warning: ignoring untrusted flake configuration setting 'extra-trusted-public-keys'.
+Pass '--accept-flake-config' to trust it
+Running tasks     devenv:enterShell
+
+Running           devenv:enterShell 0ms
+1 Running                           297.91µs
+[2A[0JRunning           devenv:enterShell 0ms
+1 Running                           383.11µs
+[2A[0JSucceeded         devenv:enterShell 14ms
+1 Succeeded                         14.67ms
+
+Waiting for lock /home/ebertzci/JULIALOCK …
+srun: got SIGCONT
+slurmstepd: error: *** JOB 668247 ON oc-compute03 CANCELLED AT 2025-03-02T18:11:47 ***
+srun: forcing job termination
+slurmstepd: error: *** STEP 668247.0 ON oc-compute03 CANCELLED AT 2025-03-02T18:11:47 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: oc-compute03: task 0: Exited with exit code 130

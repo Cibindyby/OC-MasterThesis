@@ -1,0 +1,10 @@
+SLURM_JOB_ID=666570
+hostname=oc222
+path '/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/scripts' does not contain a 'flake.nix', searching up
+warning: Git tree '/data/oc-compute03/ebertzci/OC-MasterThesis' is dirty
+error (ignored): error: reached end of FramedSource
+error:
+       … while fetching the input 'git+file:///data/oc-compute03/ebertzci/OC-MasterThesis?dir=julia-nix-slurm-env-main'
+
+       error: getting status of '/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/scripts/.devenv/CusV7IGI': No such file or directory
+srun: error: oc222: task 0: Exited with exit code 1
