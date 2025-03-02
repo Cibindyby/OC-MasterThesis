@@ -4,7 +4,7 @@
 #SBATCH --array=1-50
 #SBATCH --output=/data/oc-compute03/ebertzci/OC-MasterThesis/output/%x-%A-%a.txt
 #SBATCH --mem=4000
-#SBATCH -c 1
+#SBATCH -c 2
 
 
 echo "SLURM_JOB_ID=${SLURM_JOB_ID}"
