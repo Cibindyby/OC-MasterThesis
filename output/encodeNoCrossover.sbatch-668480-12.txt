@@ -14,3 +14,10 @@ Running tasks     devenv:enterShell
 1 Succeeded                         12.20ms
 
 Waiting for lock /home/ebertzci/JULIALOCK …
+srun: got SIGCONT
+slurmstepd: error: *** JOB 668492 ON oc-compute03 CANCELLED AT 2025-03-03T15:25:30 ***
+srun: forcing job termination
+slurmstepd: error: *** STEP 668492.0 ON oc-compute03 CANCELLED AT 2025-03-03T15:25:30 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+error: Recipe `setup` was terminated by signal 15
+srun: error: oc-compute03: task 0: Exited with exit code 1

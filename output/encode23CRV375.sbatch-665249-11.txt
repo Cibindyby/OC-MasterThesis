@@ -1,24 +1,0 @@
-SLURM_JOB_ID=665993
-hostname=oc222
-path '/data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/scripts' does not contain a 'flake.nix', searching up
-warning: Git tree '/data/oc-compute03/ebertzci/OC-MasterThesis' is dirty
-warning: ignoring untrusted flake configuration setting 'extra-substituters'.
-Pass '--accept-flake-config' to trust it
-warning: ignoring untrusted flake configuration setting 'extra-trusted-public-keys'.
-Pass '--accept-flake-config' to trust it
-Running tasks     devenv:enterShell
-
-Running           devenv:enterShell 0ms
-1 Running                           293.69µs
-[2A[0JRunning           devenv:enterShell 0ms
-1 Running                           377.42µs
-[2A[0JSucceeded         devenv:enterShell 15ms
-1 Succeeded                         15.56ms
-
-Waiting for lock /home/ebertzci/JULIALOCK …
-Acquired lock /home/ebertzci/JULIALOCK.
-Relinquishing lock /home/ebertzci/JULIALOCK …
-Relinquished lock /home/ebertzci/JULIALOCK.
-ERROR: julia: -p,--procs=<n> must be an integer >= 1
-error: Recipe `justfilefunc` failed with exit code 1
-srun: error: oc222: task 0: Exited with exit code 1

@@ -14,3 +14,9 @@ Running tasks     devenv:enterShell
 1 Succeeded                         13.38ms
 
 Waiting for lock /home/ebertzci/JULIALOCK …
+srun: got SIGCONT
+slurmstepd: error: *** STEP 668504.0 ON oc-compute03 CANCELLED AT 2025-03-03T15:25:30 ***
+slurmstepd: error: *** JOB 668504 ON oc-compute03 CANCELLED AT 2025-03-03T15:25:30 ***
+srun: forcing job termination
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: oc-compute03: task 0: Exited with exit code 130
