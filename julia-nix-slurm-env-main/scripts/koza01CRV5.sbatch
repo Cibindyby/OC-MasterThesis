@@ -7,6 +7,7 @@
 #SBATCH -c 2
 #SBATCH --exclude=oc-compute03
 
+
 echo "SLURM_JOB_ID=${SLURM_JOB_ID}"
 echo hostname=$(hostname)
 

@@ -5,6 +5,7 @@
 #SBATCH --output=/data/oc-compute03/ebertzci/OC-MasterThesis/output/%x-%A-%a.txt
 #SBATCH --mem=4000
 #SBATCH -c 2
+#SBATCH --exclude=oc-compute03
 
 
 echo "SLURM_JOB_ID=${SLURM_JOB_ID}"
