@@ -28,29 +28,24 @@
 \contentsline {subsubsection}{\nonumberline 2. Testblock: komplexe Testszenarien}{28}{subsubsection*.32}%
 \contentsline {section}{\numberline {3.2}Evaluation}{29}{section.3.2}%
 \contentsline {chapter}{\numberline {4}Ergebnisse}{31}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Ergebnisse: Boolesche Probleme}{33}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Ergebnisse: Parity}{33}{subsection.4.1.1}%
-\contentsline {subsubsection}{\nonumberline Analyse der Rohdaten}{33}{subsubsection*.34}%
-\contentsline {subsubsection}{\nonumberline Bayes'sche Analyse}{35}{subsubsection*.38}%
-\contentsline {subsubsection}{\nonumberline Graphische Evaluation}{35}{subsubsection*.40}%
-\contentsline {subsection}{\numberline {4.1.2}Ergebnisse: Encode}{35}{subsection.4.1.2}%
-\contentsline {subsubsection}{\nonumberline Analyse der Rohdaten}{35}{subsubsection*.42}%
-\contentsline {subsubsection}{\nonumberline Bayes'sche Analyse}{35}{subsubsection*.44}%
-\contentsline {subsubsection}{\nonumberline Graphische Evaluation}{35}{subsubsection*.46}%
-\contentsline {subsection}{\numberline {4.1.3}Ergebnisse: Decode}{35}{subsection.4.1.3}%
-\contentsline {subsubsection}{\nonumberline Analyse der Rohdaten}{35}{subsubsection*.48}%
-\contentsline {subsubsection}{\nonumberline Bayes'sche Analyse}{35}{subsubsection*.50}%
-\contentsline {subsubsection}{\nonumberline Graphische Evaluation}{35}{subsubsection*.52}%
-\contentsline {section}{\numberline {4.2}Ergebnisse: Symbolische Regression}{37}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Ergebnisse: Keijzer}{37}{subsection.4.2.1}%
-\contentsline {subsubsection}{\nonumberline Analyse der Rohdaten}{37}{subsubsection*.54}%
-\contentsline {subsubsection}{\nonumberline Bayes'sche Analyse}{39}{subsubsection*.58}%
-\contentsline {subsubsection}{\nonumberline Graphische Evaluation}{39}{subsubsection*.60}%
-\contentsline {subsection}{\numberline {4.2.2}Ergebnisse: Koza}{39}{subsection.4.2.2}%
-\contentsline {subsubsection}{\nonumberline Analyse der Rohdaten}{39}{subsubsection*.62}%
-\contentsline {subsubsection}{\nonumberline Bayes'sche Analyse}{39}{subsubsection*.64}%
-\contentsline {subsubsection}{\nonumberline Graphische Evaluation}{39}{subsubsection*.66}%
-\contentsline {section}{\numberline {4.3}Zusammenfassung der Ergebnisse}{39}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Fazit aus Ausblick}{41}{chapter.5}%
+\contentsline {section}{\numberline {4.1}Ergebnisse Rohdatenanalyse}{32}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Rohdatenanalyse: Parity}{32}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Rohdatenanalyse: Keijzer}{34}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Rohdatenanalyse: Encode}{36}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Rohdatenanalyse: Koza}{36}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Rohdatenanalyse: Zusammenfassung}{36}{subsection.4.1.5}%
+\contentsline {section}{\numberline {4.2}Ergebnisse Bayes'sche Analyse}{36}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Bayes'sche Analyse: Parity}{36}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Bayes'sche Analyse: Keijzer}{36}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Bayes'sche Analyse: Encode}{36}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Bayes'sche Analyse: Koza}{36}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Bayes'sche Analyse: Zusammenfassung}{36}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}Ergebnisse Graphische Evaluation}{36}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Graphische Evaluation: Parity}{36}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Graphische Evaluation: Keijzer}{36}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Graphische Evaluation: Encode}{36}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Graphische Evaluation: Koza}{36}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Graphische Evaluation: Zusammenfassung}{36}{subsection.4.3.5}%
+\contentsline {chapter}{\numberline {5}Fazit aus Ausblick}{37}{chapter.5}%
 \contentsline {chapter}{\numberline {A}Anhang}{I}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
