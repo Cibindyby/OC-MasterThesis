@@ -5,7 +5,19 @@ import statistics
 
 import matplotlib.pyplot as plt
 
+plots_array_fitness = []
+plots_array_active_nodes = []
+highest_y_value_fitness = 0.0
+lowest_y_value_fitness = 0.0
+highest_y_value_active_nodes = 0.0
+lowest_y_value_active_nodes = 0.0
+
 def create_all_plots(nameOfTable, nameOfSheet, nameOfPlot):
+    global highest_y_value_fitness
+    global highest_y_value_active_nodes
+    global lowest_y_value_fitness
+    global lowest_y_value_active_nodes
+
     df = pd.read_excel(f'Endergebnisse/Keijzer/{nameOfTable}.xlsx', nameOfSheet)
 
     runs = df['Source.Name'].nunique()
@@ -78,64 +90,79 @@ def create_all_plots(nameOfTable, nameOfSheet, nameOfPlot):
     y_plus = positive_site
     y_minus = negative_site
 
+    for i in y_plus:
+        highest_y_value_fitness = max(i, highest_y_value_fitness)
+
+        
+    for i in y_minus:
+        lowest_y_value_fitness = min(i, lowest_y_value_fitness)
+
     # Plot erstellen
-    plt.figure(figsize=(10, 8))
-    plt.plot(x, y, linestyle='-', color='b', label='Mittelwert Fitness')
-    plt.plot(x, y_plus, linestyle='-', color='g', label="positive Standardabweichung")
-    plt.plot(x, y_minus, linestyle='-', color='r', label="negative Standardabweichung")
-    plt.title(nameOfPlot, loc='left')
-    plt.fill_between(x, y, y_plus, color='g', alpha= 0.1)
-    plt.fill_between(x, y_minus, y, color='r', alpha=0.1)
-    plt.legend(bbox_to_anchor=(0.82, 1.13),loc='upper center')
-    plt.annotate(f'{y[-1]:.4f}', xy=(x[-1], y[-1]), xytext=(27, -7),
+    fig_fitness, ax_fitness = plt.subplots(figsize=(10, 8))
+    ax_fitness.plot(x, y, linestyle='-', color='b', label='Mittelwert Fitness')
+    ax_fitness.plot(x, y_plus, linestyle='-', color='g', label="positive Standardabweichung")
+    ax_fitness.plot(x, y_minus, linestyle='-', color='r', label="negative Standardabweichung")
+    ax_fitness.set_title(nameOfPlot, loc='left')
+    ax_fitness.fill_between(x, y, y_plus, color='g', alpha= 0.1)
+    ax_fitness.fill_between(x, y_minus, y, color='r', alpha=0.1)
+    ax_fitness.legend(bbox_to_anchor=(0.82, 1.13),loc='upper center')
+    ax_fitness.annotate(f'{y[-1]:.4f}', xy=(x[-1], y[-1]), xytext=(27, -7),
              textcoords='offset points',
              ha='left',
              va='bottom')
-    plt.annotate(f'{y_plus[-1]:.4f}', xy=(x[-1], y_plus[-1]), xytext=(27,0),
+    ax_fitness.annotate(f'{y_plus[-1]:.4f}', xy=(x[-1], y_plus[-1]), xytext=(27,0),
              textcoords='offset points',
              ha='left',
              va='bottom')
-    plt.annotate(f'{y_minus[-1]:.4f}', xy=(x[-1], y_minus[-1]), xytext=(27, -14),
+    ax_fitness.annotate(f'{y_minus[-1]:.4f}', xy=(x[-1], y_minus[-1]), xytext=(27, -14),
              textcoords='offset points',
              ha='left',
              va='bottom')
-    plt.xlabel("Iteration")
-    plt.ylabel("Fitness")
-    plt.grid(True)
+    ax_fitness.set_xlabel("Iteration")
+    ax_fitness.set_ylabel("Fitness")
+    ax_fitness.grid(True)
     #plt.show()
-    plt.savefig(f'Endergebnisse/Keijzer/Plots/{nameOfSheet}Fitness.png')
+    #plt.savefig(f'Endergebnisse/Keijzer/Plots/{nameOfSheet}Fitness.png')
+    plots_array_fitness.append([fig_fitness, nameOfSheet])
 
 
     # Y-Achse: active nodes
     y_active = result_means_array_active
     y_plus_active = positive_site_active
     y_minus_active = negative_site_active
+    
+    for i in y_plus_active:
+        highest_y_value_active_nodes = max(i, highest_y_value_active_nodes)
+        
+    for i in y_minus_active:
+        lowest_y_value_active_nodes = min(i, lowest_y_value_active_nodes)
 
     # Plot erstellen
-    plt.figure(figsize=(10, 8))
-    plt.plot(x, y_active, linestyle='-', color='b', label='Mittelwert Anteil aktiver Knoten')
-    plt.plot(x, y_plus_active, linestyle='-', color='g', label="positive Standardabweichung")
-    plt.plot(x, y_minus_active, linestyle='-', color='r', label="negative Standardabweichung")
-    plt.title(nameOfPlot, loc='left')
-    plt.xlabel("Iteration")
-    plt.ylabel("Anteil aktiver Knoten")
-    plt.fill_between(x, y_active, y_plus_active, color='g', alpha= 0.1)
-    plt.fill_between(x, y_minus_active, y_active, color='r', alpha=0.1)
-    plt.grid(True)
-    plt.annotate(f'{y_active[-1]:.4f}', xy=(x[-1], y_active[-1]), xytext=(27, -7),
+    fig_active, ax_active = plt.subplots(figsize=(10, 8))
+    ax_active.plot(x, y_active, linestyle='-', color='b', label='Mittelwert Anteil aktiver Knoten')
+    ax_active.plot(x, y_plus_active, linestyle='-', color='g', label="positive Standardabweichung")
+    ax_active.plot(x, y_minus_active, linestyle='-', color='r', label="negative Standardabweichung")
+    ax_active.set_title(nameOfPlot, loc='left')
+    ax_active.set_xlabel("Iteration")
+    ax_active.set_ylabel("Anteil aktiver Knoten")
+    ax_active.fill_between(x, y_active, y_plus_active, color='g', alpha= 0.1)
+    ax_active.fill_between(x, y_minus_active, y_active, color='r', alpha=0.1)
+    ax_active.grid(True)
+    ax_active.annotate(f'{y_active[-1]:.4f}', xy=(x[-1], y_active[-1]), xytext=(27, -7),
              textcoords='offset points',
              ha='left',
              va='bottom')
-    plt.annotate(f'{y_plus_active[-1]:.4f}', xy=(x[-1], y_plus_active[-1]), xytext=(27, -7),
+    ax_active.annotate(f'{y_plus_active[-1]:.4f}', xy=(x[-1], y_plus_active[-1]), xytext=(27, -7),
              textcoords='offset points',
              ha='left',
              va='bottom')
-    plt.annotate(f'{y_minus_active[-1]:.4f}', xy=(x[-1], y_minus_active[-1]), xytext=(27, -7),
+    ax_active.annotate(f'{y_minus_active[-1]:.4f}', xy=(x[-1], y_minus_active[-1]), xytext=(27, -7),
              textcoords='offset points',
              ha='left',
              va='bottom')
     #plt.show()
-    plt.savefig(f'Endergebnisse/Keijzer/Plots/{nameOfSheet}ActiveNodes.png')
+    #plt.savefig(f'Endergebnisse/Keijzer/Plots/{nameOfSheet}ActiveNodes.png')
+    plots_array_active_nodes.append([fig_active, nameOfSheet])
 
 
 
@@ -170,3 +197,18 @@ for table_index in range(0, 4, 1):
         for sheet_index in range(0, 6, 1): 
             print(f'Creating plots for: \n{list_of_tables[table_index]}, \n{list_of_sheets[table_index][sheet_index]}, \n{list_of_plots[table_index][sheet_index]}\n\n')
             create_all_plots(list_of_tables[table_index], list_of_sheets[table_index][sheet_index], list_of_plots[table_index][sheet_index])
+
+
+for plotAndName in plots_array_fitness:
+    ax = plotAndName[0].gca()
+    ax.set_ylim(top=highest_y_value_fitness*1.05, bottom=lowest_y_value_fitness)
+    plotAndName[0].savefig(f'Endergebnisse/Keijzer/Plots/{plotAndName[1]}Fitness.png')
+    plt.close(plotAndName[0])
+
+    
+
+for plotAndName in plots_array_active_nodes:
+    ax = plotAndName[0].gca()
+    ax.set_ylim(top=highest_y_value_active_nodes*1.05, bottom=lowest_y_value_active_nodes)
+    plotAndName[0].savefig(f'Endergebnisse/Keijzer/Plots/{plotAndName[1]}ActiveNodes.png')
+    plt.close(plotAndName[0])
