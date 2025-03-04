@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  4 MAR 2025 16:59
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  4 MAR 2025 17:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2486,7 +2486,7 @@ GP_with_Crossover_Strategies\TU/LinLibertine(0)/m/n/10.95 . original-date: 2024
 
 [46]
 chapter A.
-
+(./Anhang1.tex)
 
 [1
 
@@ -2505,10 +2505,10 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49309 strings out of 473889
- 1039509 string characters out of 5734826
+ 49316 strings out of 473889
+ 1039604 string characters out of 5734826
  1966169 words of memory out of 5000000
- 71680 multiletter control sequences out of 15000+600000
+ 71684 multiletter control sequences out of 15000+600000
  562698 words of font info for 99 fonts, out of 8000000 for 9000
  1350 hyphenation exceptions out of 8191
  122i,17n,136p,10900b,6836s stack positions out of 10000i,1000n,20000p,200000b,200000s
