@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #SBATCH --partition=cpu
 #SBATCH --time=4-0
-#SBATCH --array=1-50
+#SBATCH --array=44-50
 #SBATCH --output=/data/oc-compute03/ebertzci/OC-MasterThesis/output/%x-%A-%a.txt
 #SBATCH --mem=4000
 #SBATCH -c 2
