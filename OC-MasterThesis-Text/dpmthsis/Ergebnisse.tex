@@ -321,8 +321,75 @@ TODO: beschreiben, dass mehrere Offsets als (ohne Offset gesetzt wurden)
 	\label{table:encodeTwoPointRohdaten}
 \end{table}
 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c | c | c | c | c | c | c}
+		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn} & \begin{turn}{270} \textbf{Stopp-Kriterium erfüllt} \end{turn}\\
+		\hline
+		Uniform Konstant: 0,125 & 1105 & 52 & 12 & 7.0 & 4058 & 9\\
+		\hline
+		Uniform Konstant: 0,25 & 1099 & 69 & 3 & 13 & 3831.5 & 10\\
+		\hline
+		Uniform Konstant: 0,375 & 1076 & 64 & 10 & 9.0 & 4071.5 & 6\\
+		\hline
+		Uniform Konstant: 0,5 & 1105 & 68 & 2 & 12.5 & 993.5 & 8\\
+		\hline
+		Uniform Konstant: 0,625 & 1099 & 78 & 3 & 9.0 & 1306.5 & 6\\
+		\hline
+		Uniform Konstant: 0,75 & 1085 & 81 & 6 & 10 & 3459.0 & 8\\
+		\hline
+		Uniform Konstant: 0,875 & 1088 & 83 & 1 & 10 & 2490.5 & 6\\
+		\hline
+		Uniform Konstant: 1,0 & 1081 & 67 & 5 & 10 & 4785 & 9\\
+		\hline
+		Uniform Clegg: 0,0005 & 1092 & 76 & 5 & 8.0 & 2562 & 13\\
+		\hline
+		Uniform Clegg: 0,0015 & 1099 & 78 & 2 & 10.5 & 1777 & 11\\
+		\hline
+		Uniform Clegg: 0,0025 & 1096 & 74 & 7 & 11.0 & 2401.5 & 10\\
+		\hline
+		Uniform Clegg: 0,0035 & 1095 & 56 & 4 & 12.0 & 4674.5 & 4\\
+		\hline
+		Uniform Clegg: 0,0045 & 1080 & 70 & 2 & 13.0 & 5118.0 & 10\\
+		\hline
+		Uniform Clegg: 0,0055 & 1122 & 68 & 10 & 9.5 & 4044.5 & 8\\
+		\hline
+		Uniform One-Fifth: 0,125 & 1152 & 18 & 2 & 6.5 & 3876 & 7\\
+		\hline
+		Uniform One-Fifth: 0,25 & 1126 & 25 & 6 & 6 & 3393 & 11\\
+		\hline
+		Uniform One-Fifth: 0,375 & 1128 & 29 & 2 & 8 & 988.5 & 6\\
+		\hline
+		Uniform One-Fifth: 0,5 & 1156 & 44 & 5 & 7.0 & 3968 & 11\\
+		\hline
+		Uniform One-Fifth: 0,625 & 1122 & 40 & 4 & 8.0 & 1781 & 7\\
+		\hline
+		Uniform One-Fifth: 0,75 & 1104 & 47 & 4 & 6 & 3385.5 & 12\\
+		\hline
+		Uniform One-Fifth: 0,875 & 1075 & 51 & 10 & 10 & 1831.5 & 6\\
+		\hline
+		Uniform One-Fifth: 1,0 & 1129 & 55 & 7 & 6 & 4972 & 9\\
+	\end{tabular}
+	\caption{Encode Uniform Rekombination: Auswertung der Rohdaten}
+	\label{table:encodeUniformRohdaten}
+\end{table}
+
+Encode ohne Rekombination:
+\begin{itemize}
+	\item Median Iterationen bis Konvergenz: 3847,5
+	\item Stopp-Kriterium erfüllt: 8
+\end{itemize}
+
+
 \subsection{Rohdatenanalyse: Koza}
 \label{subsec:rohdatenKoza}
+
+Koza ohne Rekombination:
+\begin{itemize}
+	\item Median Iterationen bis Konvergenz: 208
+	\item Stopp-Kriterium erfüllt: 48
+\end{itemize}
+
 
 \subsection{Rohdatenanalyse: Zusammenfassung}
 \label{subsec:rohdatenZusammenfassung}

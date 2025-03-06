@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  4 MAR 2025 17:06
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  6 MAR 2025 17:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2432,23 +2432,33 @@ Underfull \vbox (badness 3557) has occurred while \output is active []
 
 
 
-[36]) (./Fazit.tex
+[36]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [37]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[38]
+
+
+[38]) (./Fazit.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[39]
+
+[40]
 chapter 5.
 )
 
-[39
+[41
 
 
 ]
 
-[40
+[42
 
 
 ]
@@ -2467,7 +2477,7 @@ Underfull \hbox (badness 5667) in paragraph at lines 55--55
 
 
 
-[41]
+[43]
 Underfull \hbox (badness 10000) in paragraph at lines 55--55
 []\TU/LinLibertine(0)/m/n/10.95 CuiHen. \TU/LinLibertine(0)/m/it/10.95 CuiHen/C
 GP_with_Crossover_Strategies\TU/LinLibertine(0)/m/n/10.95 . original-date: 2024
@@ -2476,15 +2486,15 @@ GP_with_Crossover_Strategies\TU/LinLibertine(0)/m/n/10.95 . original-date: 2024
 
 
 
-[42]
-
-[43]
-
 [44]
 
 [45]
 
 [46]
+
+[47]
+
+[48]
 chapter A.
 (./Anhang1.tex)
 
@@ -2505,12 +2515,12 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49316 strings out of 473889
- 1039604 string characters out of 5734826
- 1966169 words of memory out of 5000000
- 71684 multiletter control sequences out of 15000+600000
+ 49320 strings out of 473889
+ 1039714 string characters out of 5734826
+ 1966460 words of memory out of 5000000
+ 71688 multiletter control sequences out of 15000+600000
  562698 words of font info for 99 fonts, out of 8000000 for 9000
  1350 hyphenation exceptions out of 8191
  122i,17n,136p,10900b,6836s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Main.pdf (55 pages).
+Output written on Main.pdf (57 pages).
