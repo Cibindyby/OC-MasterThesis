@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  6 MAR 2025 18:11
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  7 MAR 2025 15:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2133,11 +2133,6 @@ File: Bilder/AufbauCGPVorgehenNachbildung.png Graphic file (type bmp)
 
 
 ]
-Overfull \hbox (1.30626pt too wide) in paragraph at lines 26--33
-\TU/LinLibertine(0)/m/n/10.95 Die Initialisierung der Population bezieht sich a
-uf die Paper [[]Mil20[]], [[]TST22[]] und [[]Ahv+19[]].
- []
-
 File: Bilder/TorabiBeispielGenotypNeu.png Graphic file (type bmp)
 <Bilder/TorabiBeispielGenotypNeu.png>
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/n' will be
@@ -2148,58 +2143,48 @@ File: Bilder/BeispielChromosom.png Graphic file (type bmp)
 
 [4]
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/b/n' will be
-(Font)              scaled to size 10.95pt on input line 77.
+(Font)              scaled to size 10.95pt on input line 69.
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--100
+Underfull \hbox (badness 10000) in paragraph at lines 79--92
 
  []
 
 
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 101--104
+Underfull \hbox (badness 10000) in paragraph at lines 93--111
 
  []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 142--143
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--155
+Underfull \hbox (badness 10000) in paragraph at lines 160--162
 
  []
 
 
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 163--168
+Underfull \hbox (badness 10000) in paragraph at lines 170--175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--173
+Underfull \hbox (badness 10000) in paragraph at lines 176--180
 
- []
-
-
-Overfull \hbox (8.73363pt too wide) in paragraph at lines 174--192
-\TU/LinLibertine(0)/m/n/10.95 folgt. Dabei werden jeweils $\OML/cmm/m/it/10.95 
-^^V$\TU/LinLibertine(0)/m/n/10.95 -viele Eltern für die folgende Generation sel
-ektiert. Im Standard-
  []
 
 
 
 [8]
 LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 202.
+(Font)              scaled to size 12.0pt on input line 209.
 File: Bilder/BeispielOnePointCrossover.png Graphic file (type bmp)
 <Bilder/BeispielOnePointCrossover.png>
 File: Bilder/BeispielOnePointCrossover2.png Graphic file (type bmp)
@@ -2207,10 +2192,13 @@ File: Bilder/BeispielOnePointCrossover2.png Graphic file (type bmp)
 
 
 [9]
-Overfull \hbox (13.96901pt too wide) in paragraph at lines 229--237
+Overfull \hbox (13.96901pt too wide) in paragraph at lines 236--244
 \TU/LinLibertine(0)/m/n/10.95 Chromosomen bestimmt. Diese ist in Abbildung []2.
 3a[] grün markiert. Die Eltern-Chromosomen
  []
+
+
+Underfull \vbox (badness 7433) has occurred while \output is active []
 
 
 
@@ -2220,10 +2208,13 @@ File: Bilder/BeispielTwoPointCrossover.png Graphic file (type bmp)
 File: Bilder/BeispielTwoPointCrossover2.png Graphic file (type bmp)
 <Bilder/BeispielTwoPointCrossover2.png>
 
-Overfull \hbox (20.47975pt too wide) in paragraph at lines 274--280
+Overfull \hbox (20.47975pt too wide) in paragraph at lines 281--287
 \TU/LinLibertine(0)/m/n/10.95 hebt, ist die Verwendung einer Maske. Die Maske i
 st genauso lang wie die Eltern-Chromosomen
  []
+
+
+Underfull \vbox (badness 1845) has occurred while \output is active []
 
 
 
@@ -2235,34 +2226,34 @@ File: Bilder/BeispielUniformCrossover2.png Graphic file (type bmp)
 
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 319--331
+Underfull \hbox (badness 10000) in paragraph at lines 326--338
 
  []
 
 
 
 [13]
-Overfull \hbox (10.851pt too wide) in paragraph at lines 348--358
+Overfull \hbox (10.851pt too wide) in paragraph at lines 355--365
 \TU/LinLibertine(0)/m/n/10.95 duzieren. Ebenfalls ist es ein Vorteil, nur einen
  variablen Parameter pro Rekombinationsraten-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--370
+Underfull \hbox (badness 10000) in paragraph at lines 369--377
 
  []
 
 
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 381--385
+Underfull \hbox (badness 10000) in paragraph at lines 388--392
 
  []
 
 
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 395--407
+Underfull \hbox (badness 10000) in paragraph at lines 402--414
 
  []
 
@@ -2276,7 +2267,7 @@ File: Bilder/GenotypNachMutation.png Graphic file (type bmp)
 
 
 [17]
-Overfull \hbox (5.70909pt too wide) in paragraph at lines 484--485
+Overfull \hbox (5.70909pt too wide) in paragraph at lines 491--492
 []\TU/LinLibertine(0)/m/n/10.95 Vereinfacht dargestellt funktioniert die Anwend
 ung des Satzes von Bayes in der Bayes’schen
  []
@@ -2286,27 +2277,30 @@ File: Bilder/bayesianInterence.png Graphic file (type bmp)
 
 
 [18]
-Overfull \hbox (4.57909pt too wide) in paragraph at lines 493--500
+Overfull \hbox (4.57909pt too wide) in paragraph at lines 500--507
 \TU/LinLibertine(0)/m/n/10.95 gung, dass $\OML/cmm/m/it/10.95 ^^R$ \TU/LinLiber
 tine(0)/m/n/10.95 zutrifft. Mit Hilfe des Bayes’schen Theorems können die aprio
 ri-Dichtefunktion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 493--500
+Underfull \hbox (badness 10000) in paragraph at lines 500--507
 
  []
 
 
-Overfull \hbox (0.18938pt too wide) in paragraph at lines 501--511
+Overfull \hbox (0.18938pt too wide) in paragraph at lines 508--518
 \TU/LinLibertine(0)/m/n/10.95 braucht werden, um eine CGP-Lösung konvergieren z
 u lassen. Für jede CPG-Konfiguration
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 501--511
+Underfull \hbox (badness 10000) in paragraph at lines 508--518
 
  []
+
+
+Underfull \vbox (badness 1552) has occurred while \output is active []
 
 
 
@@ -2363,7 +2357,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 193--200
  []
 
 
-Overfull \hbox (2.01526pt too wide) in paragraph at lines 208--218
+Overfull \hbox (2.01526pt too wide) in paragraph at lines 208--219
 \TU/LinLibertine(0)/m/n/10.95 den Parametersätzen hätten für jede Kombination a
 us Testszenario und CGP-Konfiguration
  []
@@ -2371,7 +2365,7 @@ us Testszenario und CGP-Konfiguration
 
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 222--231
+Underfull \hbox (badness 10000) in paragraph at lines 223--232
 
  []
 
@@ -2380,24 +2374,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 222--231
 [27]
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 269--271
+Underfull \hbox (badness 10000) in paragraph at lines 270--272
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--278
+Underfull \hbox (badness 10000) in paragraph at lines 273--279
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 279--288
+Underfull \hbox (badness 10000) in paragraph at lines 280--289
 
  []
 
 
 
 [29]
-Underfull \hbox (badness 10000) in paragraph at lines 289--294
+Underfull \hbox (badness 10000) in paragraph at lines 290--295
 
  []
 
@@ -2528,7 +2522,7 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 Here is how much of TeX's memory you used:
  49321 strings out of 473889
  1039733 string characters out of 5734826
- 1966551 words of memory out of 5000000
+ 1966566 words of memory out of 5000000
  71689 multiletter control sequences out of 15000+600000
  562698 words of font info for 99 fonts, out of 8000000 for 9000
  1350 hyphenation exceptions out of 8191

@@ -21,14 +21,14 @@ Dabei lernt das System über mehrere Iterationen hinweg die beste Lösung eines 
 Die folgenden Unterkapitel beziehen sich jeweils auf einen Knoten des Graphen und erläutern diesen genauer.
 
 
-\section{Initiale Population}
+\section{Aufbau CGP und initiale Population}
 \label{sec:initialePopulation}
-Die Initialisierung der Population bezieht sich auf die Paper \cite{miller_cartesian_2020}, \cite{torabi_using_2022} und \cite{milad_taleby_ahvanooey_survey_2019}.
+Dieser Abschnitt bezieht sich auf die Paper \cite{miller_cartesian_2020}, \cite{torabi_using_2022} und \cite{milad_taleby_ahvanooey_survey_2019}.
 Außerdem werden Erkenntnisse aus dem Quellcode von Cui verwendet \cite{cuihen_cuihencgp_with_crossover_strategies_2024}.\\
 Die \emph{Population} von CGP ist eine Menge von \emph{Chromosomen}, auch Individuen genannt.
 Chromosome sind individuelle Möglichkeiten ein komplexes Ausgangsproblem zu lösen.
 Jedes Chromosom ist in CGP ein gerichteter, azyklischer Graph, bestehend aus \emph{Eingangsknoten}, \emph{Rechenknoten} und \emph{Ausgangsknoten}.
-Dabei gibt es zwei Darstellungsmöglichkeiten für ein Chromosom: den \emph{Genotyp} und den daraus resultierenden \emph{Phänotyp}. 
+Dabei gibt es zwei Darstellungsmöglichkeiten für ein Chromosom. 
 Anhand der folgenden Abbildung \ref{fig:genoPhänoGesamt} kann beispielhaft näher erläutert werden, wie die Chromosome in CGP aufgebaut sind und funktionieren.
 
 \begin{figure}[H]
@@ -52,20 +52,12 @@ Anhand der folgenden Abbildung \ref{fig:genoPhänoGesamt} kann beispielhaft näh
     \label{fig:genoPhänoGesamt}
 \end{figure}
 
-Abbildung \ref{fig:genotypNeu} zeigt einen Genotyp und Abbildung \ref{fig:phänotyp} den daraus resultierenden Phänotyp.
-Der Genotyp ist dabei das volle Individuum, während der Phänotyp die Dekodierung dessen ist.
-Die Lösung des CGPs ist dementsprechend ein Phänotyp, also die Dekodierung des besten Individuums des CGPs.
-Der Genotyp- und Phänotyp-Raum können sich dabei stark voneinander unterscheiden. \cite{eiben_introduction_2015}
-Dies lässt sich dadurch erklären, dass nicht alle Teile des Genotyps für die Berechnung des Endergebnisses verwendet werden.
-Diejenigen Anteile, die für die Berechnung der Lösung nicht gebraucht werden, werden \emph{inaktive Knoten} genannt.
-So ein inaktiver Knoten wird in Abbildung \ref{fig:genotypNeu} durch gestrichelte Linien dargestellt.
-Da der Phänotyp die Lösung des CGPs ist, müssen inaktive Knoten auch nicht im Phänotyp dargestellt werden, da diese für die Berechnung keine Verwendung finden.
-Der Vollständigkeit halber wird der inaktive Knoten aus Abbildung \ref{fig:genotypNeu} auch in Abbildung \ref{fig:phänotyp} aufgenommen.
-So können also verschiedene Genotypen zum gleichen Phänotyp und somit zum gleichen Ergebnis des CGPs führen: indem die gleichen aktiven Knoten innerhalb mehrerer Genotypen, allerdings unterschiedliche inaktive Knoten vorhanden sind.
-Dies kann die Weiterentwicklung der Chromosomen stören, wie in einem Beispiel in Abschnitt \ref{subsec:Mutation} beschrieben wird.\\
-Anhand des Phänotyps in Abbildung \ref{fig:phänotyp} lässt sich die klassische Struktur von CGP erkennen:
+
+Anhand Abbildung \ref{fig:phänotyp} lässt sich die klassische Struktur von CGP erkennen:
 Es handelt sich um einen gerichteten, azyklischen Graphen mit Ein- und Ausgängen.
-Bei den Eingängen (hier: $x_0$ und $x_1$) handelt es sich um die Systemeingänge, aus denen Ausgänge (hier: $O_A$ – $O_D$) abgeleitet werden sollen.
+In diesem Beispiel werden die beiden Systemeingänge $x_0$ und $x_1$ vorausgesetzt, welche durch Eingangsknoten zur Verfügung gestellt werden.
+Aus diesen Eingaben sollen anschließend durch verschiedene Berechnungen die Ausgänge resultieren.
+In diesem Fall werden vier Systemausgänge berechnet, die durch die Ausgangsknoten $O_A$ – $O_D$ dargestellt werden.
 Zwischen den Ein- und Ausgangsknoten liegen die Rechenknoten.
 Diese werden verwendet, um verschiedene Rechenoperationen an den Eingangsknoten auszuführen, bis schließlich die Inhalte der Ausgangsknoten als Ergebnis resultieren.
 Die Rechenoperationen, die von den Rechenknoten ausgeführt werden, werden je nach Anwendungsfall definiert und codiert.
@@ -84,20 +76,35 @@ In diesem Beispiel ergibt sich folgende Kodierung:
     \label{table:kodierung}
 \end{table}
 
-Diese Kodierungen werden im Phänotyp innerhalb der Knoten angegeben und stellen die erste (unterstrichene) Zahl innerhalb der Genotyp-Arrays dar.
-Ein Genotyp-Array wird in Abbildung \ref{fig:genotypNeu} umrandet dargestellt und steht jeweils für einen Knoten.
+Diese Kodierungen werden in Abbildung \ref{fig:phänotyp} innerhalb der Knoten angegeben und stellen die erste (unterstrichene) Zahl innerhalb des Arrays in Abbildung \ref{fig:genotypNeu} dar.
+Die umrandeten Teile des gesamten Arrays stellen jeweils einen Knoten des Graphen dar und werden folgend Array-Blöcke genannt.
 Unterhalb dieser Array-Blöcke wird jeweils der Index des zugehörigen Knotens angegeben.
-Im Phänotyp wird dieser Index am Ausgang des jeweiligen Knotens (rot) angezeigt.\newline
-Des Weiteren werden im Genotyp die Eingangskanten für jeden Knoten angegeben. 
+Im CGP-Graph wird dieser Index am Ausgang des jeweiligen Knotens (rot) angezeigt.\newline
+Des Weiteren werden in Abbildung \ref{fig:genotypNeu} die Eingangskanten für jeden Knoten angegeben. 
 In diesem Beispiel hat jeder Rechenknoten zwei Eingänge und jeder Ausgangsknoten hat jeweils nur einen Eingang, in dem das Ergebnis eines Rechenknoten weitergeleitet und ausgegeben wird.
 Die Knoteneingänge sind in Abbildung \ref{fig:phänotyp} blau markiert.
 Hier werden die Indices derjenigen Knoten angegeben, deren Ausgangswerte verwendet werden.
-Diese spiegeln sich ebenfalls im Genotyp wider: hier werden die Knoteneingänge innerhalb der Array-Blöcke als nicht-unterstrichene Indices angegeben.
+Diese spiegeln sich ebenfalls in Abbildung \ref{fig:genotypNeu} wider: hier werden die Knoteneingänge innerhalb der Array-Blöcke als nicht-unterstrichene Indices angegeben.
 Damit ergibt sich eine vollständige Beschreibung eines Knotens: einem Index werden Eingänge und gegebenenfalls eine Rechenoperation zugeschrieben.\newline
 Durch dieses Beispiel wird ebenfalls ersichtlich, was die Eingangsknoten eines Chromosoms ausmacht:
 Sie geben die Systemeingänge wieder, ohne diese auf irgendeine Weise zu verarbeiten.
 Aus diesem Grund müssen die Eingangsknoten nicht im Genotyp aufgezeigt werden, um sie vollständig zu beschreiben, denn sie weisen weder Eingänge noch Rechenoperationen auf, die beschrieben werden müssten.\\
 
+Die beiden Darstellungsmöglichkeiten eines Chromosoms werden wie in Abbildung \ref{fig:genoPhänoGesamt} \emph{Genotyp} und \emph{Phänotyp} genannt.
+Der Phänotyp resultiert dabei aus dem Genotyp.
+Der Genotyp ist das volle Individuum, während der Phänotyp die Dekodierung dessen ist.
+Die Lösung des CGPs ist dementsprechend ein Phänotyp, also die Dekodierung des besten Individuums des CGPs.
+Der Genotyp- und Phänotyp-Raum können sich dabei stark voneinander unterscheiden. \cite{eiben_introduction_2015}
+Dies lässt sich dadurch erklären, dass nicht alle Teile des Genotyps für die Berechnung des Endergebnisses verwendet werden.
+Diejenigen Anteile, die für die Berechnung der Lösung nicht gebraucht werden, werden \emph{inaktive Knoten} genannt.
+So ein inaktiver Knoten wird in Abbildung \ref{fig:genotypNeu} durch gestrichelte Linien dargestellt.
+Da der Phänotyp die Lösung des CGPs ist, müssen inaktive Knoten auch nicht im Phänotyp dargestellt werden, da diese für die Berechnung keine Verwendung finden.
+Der Vollständigkeit halber wird der inaktive Knoten aus Abbildung \ref{fig:genotypNeu} auch in Abbildung \ref{fig:phänotyp} aufgenommen.
+So können also verschiedene Genotypen zum gleichen Phänotyp führen, indem sich verschiedene Genotypen nur anhand ihrer inaktiven Knoten unterscheiden.
+Da der Phänotyp auch den auszuführenden Programmcode darstellt, können auch verschiedene Genotypen zum gleichen Ergebnis führen.
+Dies kann die Weiterentwicklung der Chromosomen stören, indem beispielsweise nur inaktive Knoten eines Chromosoms angepasst werden.
+Das kann sich wiederum negativ auf die Trainingsdauer auswirken.
+Eine nähere Erklärung wird in Abschnitt \ref{subsec:Mutation} gegeben.\\
 Ob ein Knoten für die Berechnung der Lösung verwendet wird oder nicht, hängt davon ab, ob ein nachfolgender Knoten auf dessen Ausgang zugreift.
 Um aktive Knoten von inaktiven Knoten zu unterscheiden, werden demnach zuerst die Ausgangsknoten betrachtet, die offensichtlich für die Auswertung der Ausgabe verwendet werden.
 Anschließend werden iterativ die Eingangskanten der Rechenknoten zurückverfolgt, bis man schließlich bei den Eingangsknoten des Graphen ankommt.\\
@@ -106,7 +113,7 @@ Schließlich soll anhand der eingeführten Abbildungen \ref{fig:genotypNeu} und 
 Angenommen werden die Systemeingänge $x_0$ = 10 und $x_1$ = 20.
 Demnach sind die Ausgänge der beiden Eingangsknoten mit den Indices 0 und 1 gleich den Werten 10 und 20.
 Der erste Rechenknoten (Index = 2) verwendet als Eingänge die beiden Eingangsknoten (Indices = 0 und 1) und besitzt die Rechenfunktion +.
-Demnach ist das Ergebnis des Rechenknotens (10 + 20 =) 30.
+Demnach ist das Ergebnis des Rechenknotens 10 + 20 = 30.
 Führt man dieses Vorgehen für die restlichen Rechenknoten aus, ergeben sich folgende Ergebnisse:
 
 \begin{table}[H]
@@ -182,7 +189,7 @@ Für die Auswahl der Elitisten wird in dieser Arbeit der \emph{neutral search Al
 Dieser wird relevant, falls innerhalb einer Generation ein Elter-Chromosom und ein Kind-Chromosom die gleiche Fitness aufweisen.
 In diesem Fall wird stets das Kind-Chromosom als Elitist ausgewählt.
 Dies führt dazu, dass anschließend bessere Nachkommen erzeugt werden können. \cite{mernik_refining_2022}\newline
-Mit dem in dieser Arbeit verwendeten \emph{($\mu$ + $\lambda$)-Selektionsverfahren} wird dieser Ansatz verfolgt. 
+Mit dem in dieser Arbeit verwendeten Selektionsverfahren namens \emph{($\mu$ + $\lambda$)-Evolution Strategy (ES)} wird dieser Ansatz verfolgt. 
 Dabei werden jeweils $\mu$-viele Eltern für die folgende Generation selektiert.
 Im Standard-CGP wird $\mu$ mit 1 belegt.
 Die restlichen Individuen der Population ($\lambda$-viele) werden anschließend durch \emph{Mutation} aus dem Elter-Chromosom gebildet. \cite{da_silva_cartesian_2018}
@@ -209,7 +216,7 @@ Der One-Point Rekombinationsalgorithmus soll anhand folgender Beispielabbildung 
 	\centering
 	\begin{subfigure}[b]{\textwidth}
 		\centering
-		\includegraphics[scale = 0.45]{Bilder/BeispielOnePointCrossover.png}
+		\includegraphics[scale = 0.77]{Bilder/BeispielOnePointCrossover.png}
 		\caption{Eltern-Chromosomen One-Point Rekombination}
 		\label{fig:onePointCrossoverEltern}
 	\end{subfigure}
@@ -282,7 +289,7 @@ Anhand der Abbildung \ref{fig:uniformGesamt} lässt sich die Uniform Rekombinati
     \centering
     \begin{subfigure}[b]{\textwidth}
     	\centering
-    	\includegraphics[scale = 0.55]{Bilder/BeispielUniformCrossover.png}
+    	\includegraphics[scale = 0.855]{Bilder/BeispielUniformCrossover.png}
     	\caption{Eltern-Chromosomen Uniform Rekombination}
     	\label{fig:uniformCrossoverEltern}
     \end{subfigure}
@@ -346,7 +353,7 @@ Mit Hilfe der in den nächsten Abschnitten folgenden Anpassungen der Rekombinati
 \label{subsubsec:CleggCrossover}
 
 Clegg et al. präsentieren in ihrem Paper aus 2007 eine neue Form der Rekombination.
-Dabei treffen sie auch einige Aussagen über die Rekombinationsrate, die in diesem Abschnitt näher betrachtet werden sollen.\cite{clegg_new_2007}\\
+Dabei treffen sie auch einige Aussagen über die Rekombinationsrate, die in diesem Abschnitt näher betrachtet werden sollen. \cite{clegg_new_2007}\\
 Sie beobachten, dass sich für höhere Rekombinationsraten eine schnellere Konvergenz der Fitness innerhalb der ersten Generationen einstellt.
 Gleichzeitig stellen sie fest, dass in ihrem Beispiel ab der 200. Generation Rekombination keinen signifikanten Vorteil mehr in der Performance liefert.\\
 Aus diesen beiden Beobachtungen konstruieren sie eine neue, dynamische Rekombinationsrate.
@@ -433,7 +440,7 @@ Die folgende Abbildung \ref{fig:mutationGesamt} beschreibt dieses Mutationsbeisp
 	
 	\begin{subfigure}[b]{\textwidth}
 		\centering
-		\includegraphics[scale = 0.55]{Bilder/GenotypNachMutation.png}
+		\includegraphics[scale = 0.568]{Bilder/GenotypNachMutation.png}
 		\caption{Genotyp nach Mutation}
 		\label{fig:genotypNachMutation}
 	\end{subfigure}
@@ -510,7 +517,7 @@ Dies bedeutet, dass innerhalb dieses Intervalls 95\% der Ergebnisse liegen. \cit
 Dadurch können die Streuungen der Iterationszahlen für jede CGP-Konfiguration miteinander verglichen werden, ohne von einer gleichverteilten Dichtefunktion ausgehen zu müssen.\\
 
 Pätzel verwendet in seinem Code das \emph{Markov Chain Monte-Carlo (MCMC) Sampling} zur Berechnung der Verteilungen \cite{patzel_dpaetzelcmpbayes_2024, cui_equidistant_2023}.
-Bei MCMC werden mehrere Tausend Kombinationen von Parameterwerten ($\mu_1$, $\sigma_1$, $\mu_2$, $\sigma_2$, v) generiert.
+Bei MCMC werden mehrere Tausend Kombinationen von Parameterwerten ($\mu_1$, $\sigma_1$, $\mu_2$, $\sigma_2$, v) generiert, die jeweils zwei verschiedene Gamma-Wahrscheinlichkeitsverteilungen darstellen.
 Jede Wertekombination ist repräsentativ für glaubwürdige Parameterwerte, die gleichzeitig die eingehenden Daten und die vorherigen Verteilungen berücksichtigen.
 Diese Parameterwerte werden anschließend in zusammengefasst. \cite{kruschke_bayesian_estimation}
 

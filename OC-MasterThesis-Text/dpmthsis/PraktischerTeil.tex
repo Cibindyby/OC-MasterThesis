@@ -209,9 +209,10 @@ Ursprünglich sollte für jedes Testproblem/Testszenario und für jede CGP-Konfi
 Mit den daraus resultierenden Parametersätzen hätten für jede Kombination aus Testszenario und CGP-Konfiguration eine annähernd optimale Lösung gefunden werden können.
 Diese hätten anschließend systematisch evaluiert und verglichen werden können.
 Angesichts der begrenzten Rechenkapazitäten konnten nur für die beiden leichtesten Testszenarien Parity und Keijzer sinnvolle Hyperparameteranalysen ausgeführt werden.
-Für die jeweiligen anderen Szenarien wurde außerdem versucht eine stark reduzierte Hyperparameteranalyse auszuführen, indem alle Parameter, die nichts mit der Rekombination zu tun haben aus den Ergebnissen von Cui et al. herangezogen werden \cite{cui_results}.
+Für die jeweiligen anderen Szenarien wurde deswegen eine stark vereinfachte Hyperparameterstudie ausgeführt.
+Hyperparameter, welche nicht die Rekombination betreffen (beispielsweise Anzahl der Rechenknoten) wurden aus der Arbeit von Cui et al. \cite{cui_results} herangezogen.
 So sollten nur die für die Rekombination relevanten Parameter optimiert werden, also die Rekombinationsrate und gegebenenfalls der Offset.
-Bei den Versuchen dieses Testverfahren für die umfangreicheren Testszenarien auszuführen, wurde ebenfalls festgestellt, dass die verfügbare Rechenkapazitäten nicht ausreichen.
+Bei den Versuchen dieses Testverfahren für die umfangreicheren Testszenarien auszuführen, wurde ebenfalls festgestellt, dass die verfügbare Rechenkapazität nicht ausreicht.
 Diese Beobachtung wurde auch gemacht als der Offset-Parameter bei der Optimierung vollständig herausgenommen wurde.\\
 Aus diesen Gründen wurde eine neue Methodik entwickelt, die in diesem Abschnitt näher erläutert werden soll.
 Die Teststruktur wird in zwei voneinander unabhängige Testblöcke geteilt.
@@ -222,10 +223,10 @@ Die Teststruktur wird in zwei voneinander unabhängige Testblöcke geteilt.
 Für die einfachen Testszenarien Parity und Keijzer kann eine Hyperparameteranalyse trotz eingeschränkter Rechenzeit ausgeführt werden, indem die Iterationenzahl bis zum Abbruch des CGP-Algorithmus heruntergesetzt werden.
 Dieser wird schrittweise reduziert, bis die Hyperparameteranalyse ausgeführt werden kann.\\
 Um zu Überprüfen, ob die angepassten Iterationsgrenzen für Parity sinnvoll sind, werden die Ergebnisse von Cui et al. herangezogen. 
-Dabei wurden nur die Ergebnisse mit ($\mu + \lambda$)-Selektion verwendet, die mit den CGP-Konfigurationen dieser Arbeit entsprechen \cite{cui_results}.
+Dabei wurden nur die Ergebnisse mit ($\mu + \lambda$)-Selektion verwendet, die den CGP-Konfigurationen dieser Arbeit entsprechen \cite{cui_results}.
 Es ergibt sich ein HPDI-Maximalwert von ca. 495 Iterationen. 
 Mit einer Iterationsgrenze von 500 ist es wahrscheinlich, dass vor allem schlechte Parametersätze zu einer Überschreitung dieses Werts führen.
-Durch die erhöhte Bestrafung dieser Überschreitung, wird sichergestellt, dass die sichere Konvergenz des CGP-Algorithmus bis zur Iterationsgrenze priorisiert wird.\\
+Durch die erhöhte Bestrafung dieser Überschreitung wird sichergestellt, dass die sichere Konvergenz des CGP-Algorithmus bis zur Iterationsgrenze priorisiert wird.\\
 Da für Keijzer die Hyperparameteranalyse auf Basis der Fitness ausgewertet wird, können Güte-Aussagen ebenfalls getroffen werden, auch wenn der CGP-Algorithmus nicht vollständig konvergiert ist, da bereits vor Erreichen des Stopp-Kriteriums eine Aussage über das Konvergenzverhalten getroffen werden kann.
 Demnach wird für Keijzer die unter den Rechenzeit-Umständen höchste Iterationsgrenze von 500 Iterationen als genügend für die Hyperparameteroptimierung angesehen.\\
 
@@ -236,12 +237,13 @@ Das Evaluierungsverfahren wird in Abschnitt \ref{sec:Evaluation} näher erläute
 \subsubsection{2. Testblock: komplexe Testszenarien}
 \label{subsub:zweiterTestblock}
 
-Da durch die erhöhte Rechenzeit der komplexeren Testszenarien keine sinnvolle Hyperparameteroptimierung ausführen lässt, wird für diese Fälle eine andere Teststrategie entwickelt.\\
+Da sich durch die erhöhte Rechenzeit der komplexeren Testszenarien keine sinnvolle Hyperparameteroptimierung ausführen lässt, wird für diese Fälle eine andere Teststrategie entwickelt.\\
 Diejenigen Hyperparameter eines CGP-Modells, die nicht mit Rekombination in Verbindung stehen, werden aus den Ergebnissen von Cui et al. herangezogen \cite{cui_results}.
 Die Rekombinationsrate wird variiert und mit diesen Parametern in CGP-Modelle eingepflegt.
 Für jede CGP-Konfiguration werden 50 Testdurchläufe ausgeführt, um eine statistische Auswertung ausführen zu können.
 Dabei werden die CGP-Modellen gegebenenfalls nicht bis zur vollständigen Konvergenz trainiert, um die Rechenzeit zu reduzieren. 
-Für Boolesche Probleme werden den CGP-Modelle dabei weniger Iterationen Trainingszeit zur Verfügung gestellt als für SR Probleme, da diese in der Hyperparameteranalyse von Cui et al. mehr Rechenknoten brauchen und somit für jeweils eine Iteration mehr Rechenzeit benötigen als es bei SR der Fall ist. \cite{cui_results}\\
+Für Boolesche Probleme werden den CGP-Modellen dabei weniger Iterationen Trainingszeit zur Verfügung gestellt als für SR Probleme.
+Dies ergibt sich daraus, dass Boolesche Probleme in der Hyperparameteranalyse von Cui et al. mehr Rechenknoten brauchen und somit mehr Rechenzeit für jeweils eine Iteration benötigen als es bei SR der Fall ist. \cite{cui_results}\\
 Da sich die Wirkung von Rekombinationsrate und Offset gegenseitig beeinflussen kann, ist es sinnvoller die Bewertung der beiden Parameter einzeln zu betrachten.
 Aufgrund der hohen Anzahl der zu bewertenden Testergebnisse, die sich bereits für einen variierenden Parameter ergeben, soll nur einer dieser Parameter in dieser Arbeit näher betrachtet werden.
 Dieser Parameter ist wie bereits beschrieben die Rekombinationsrate.
@@ -249,8 +251,7 @@ Dies ergibt sich daraus, dass die Ergebnisse der Hyperparameter- und Rohdatenana
 Details zu den jeweiligen Ergebnissen können in den Abschnitten \ref{subsec:rohdatenParity} und \ref{subsec:rohdatenKeijzer} nachgelesen werden.
 Außerdem können mit Hilfe der Rekombinationsrate nähere Erkenntnisse zu den unterschiedlichen Rekombinationsarten gewonnen werden, die in dieser Arbeit verglichen werden.\\
 Für die Evaluation stehen nach dem Testdurchlauf die Ergebnisse mehrerer CGP-Kon\-fi\-gu\-ra\-tio\-nen zur Verfügung, die allerdings nicht unbedingt die Ergebnisse der CGPs mit den jeweils besten Parametersätzen darstellen, da keine Hyperparameteroptimierung ausgeführt wurde.
-Trotzdem können die Ergebnisse verwendet werden, um einen näheren Einblick zum Verhalten des CGP-Modells zu erhalten, wenn die Rekombinationsrate variiert wird.\\
-Nähere Informationen zur Evaluierung werden in Abschnitt \ref{sec:Evaluation} gegeben.
+Trotzdem können die Ergebnisse verwendet werden, um einen näheren Einblick zum Verhalten des CGP-Modells zu erhalten, wenn die Rekombinationsrate variiert wird.
 
 
 \section{Evaluation}
