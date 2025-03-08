@@ -1,0 +1,20 @@
+Parity keine Rekombination               0.034518
+Parity One-Point Konstant kein Offset    0.072723
+Parity One-Point Konstant mit Offset     0.059872
+Parity One-Point Clegg kein Offset       0.058134
+Parity One-Point Clegg mit Offset        0.064637
+Parity One-Point OneFifth kein Offset    0.041265
+Parity One-Point One-Fifth mit Offset    0.072643
+Parity Two-Point Konstant kein Offset    0.056980
+Parity Two-Point Konstant mit Offset     0.043839
+Parity Two-Point Clegg kein Offset       0.055768
+Parity Two-Point Clegg mit Offset        0.041189
+Parity Two-Point OneFifth kein Offset    0.051913
+Parity Two-Point OneFifth mit Offset     0.049240
+Parity Uniform Konstant kein Offset      0.043305
+Parity Uniform Konstant mit Offset       0.060934
+Parity Uniform Clegg kein Offset         0.063633
+Parity Uniform Clegg mit Offset          0.051520
+Parity Uniform OneFifth kein Offset      0.040460
+Parity Uniform OneFifth mit Offset       0.037426
+dtype: float64
