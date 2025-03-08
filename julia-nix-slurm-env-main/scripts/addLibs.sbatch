@@ -17,4 +17,3 @@ export XDG_RUNTIME_DIR=~/XDG_RUNTIME_DIR
 srun nix develop --impure --command bash -c "
     just justfilefunc /data/oc-compute03/ebertzci/OC-MasterThesis/julia-nix-slurm-env-main/scripts/addLibs.jl
 "
-test
