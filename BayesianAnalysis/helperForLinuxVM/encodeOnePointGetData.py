@@ -75,7 +75,8 @@ for table_index in range(0, 4, 1):
                 last_iterations_all=last_iterations_all,
                 name_of_algo=np.array(name_of_algo, dtype='S')
             )
-            data_counter =+ 1
+            print(data_counter)
+            data_counter += 1
     elif table_index == 2: #Clegg
         for sheet_index in range(0, 6, 1): 
             name_of_algo = list_of_algo_names[table_index][sheet_index]
@@ -86,7 +87,8 @@ for table_index in range(0, 4, 1):
                 last_iterations_all=last_iterations_all,
                 name_of_algo=np.array(name_of_algo, dtype='S')
             )
-            data_counter =+ 1
+            print(data_counter)
+            data_counter += 1
     else:
         for sheet_index in range(0, 8, 1): 
             name_of_algo = list_of_algo_names[table_index][sheet_index]
@@ -96,4 +98,5 @@ for table_index in range(0, 4, 1):
                 last_iterations_all=last_iterations_all,
                 name_of_algo=np.array(name_of_algo, dtype='S')
             )
-            data_counter =+ 1
+            print(data_counter)
+            data_counter += 1
