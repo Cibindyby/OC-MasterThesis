@@ -1,0 +1,23 @@
+Encode keine Rekombination         0.037060
+Encode Uniform Konstant: 0,125     0.038501
+Encode Uniform Konstant: 0,25      0.040006
+Encode Uniform Konstant: 0,375     0.034479
+Encode Uniform Konstant: 0,5       0.050278
+Encode Uniform Konstant: 0,625     0.046887
+Encode Uniform Konstant: 0,75      0.050394
+Encode Uniform Konstant: 0,875     0.052041
+Encode Uniform Konstant: 1,0       0.048403
+Encode Uniform Clegg: 0,0005       0.053799
+Encode Uniform Clegg: 0,0015       0.052238
+Encode Uniform Clegg: 0,0025       0.057695
+Encode Uniform Clegg: 0,0035       0.041420
+Encode Uniform Clegg: 0,0045       0.037226
+Encode Uniform Clegg: 0,0055       0.044593
+Encode Uniform One-Fifth: 0,125    0.046835
+Encode Uniform One-Fifth: 0,25     0.046254
+Encode Uniform One-Fifth: 0,375    0.039581
+Encode Uniform One-Fifth: 0,5      0.063355
+Encode Uniform One-Fifth: 0,625    0.048598
+Encode Uniform One-Fifth: 0,75     0.042721
+Encode Uniform One-Fifth: 0,875    0.027637
+dtype: float64

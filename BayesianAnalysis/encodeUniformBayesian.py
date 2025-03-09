@@ -20,18 +20,14 @@ def calvo_and_hpdi_for_all():
         array = data["last_iterations_all"]
         name = data["name_of_algo"].item().decode()
 
-        #array[array==0.0] = 0.0000001
-        if i == 4:
-            print(name)
-            print(array)
-            print("\n")
+        array[array==0.0] = 0.0000001
         
-        #hpdi(np.array(array), name)
+        hpdi(np.array(array), name)
 
         calvo_names.append(name)
         calvo_results.append(np.array(array))
 
-    #calvo(calvo_names, np.stack(calvo_results, axis=1))
+    calvo(calvo_names, np.stack(calvo_results, axis=1))
     
 def calvo(algorithm_labels, results):
     #  ++++++++++++++++++++++++++++++++++++++
