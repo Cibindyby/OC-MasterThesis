@@ -1,0 +1,20 @@
+Keijzer keine Rekombination               0.046669
+Keijzer One-Point Konstant kein Offset    0.056954
+Keijzer One-Point Konstant mit Offset     0.047578
+Keijzer One-Point Clegg kein Offset       0.053452
+Keijzer One-Point Clegg mit Offset        0.046700
+Keijzer One-Point OneFifth kein Offset    0.050072
+Keijzer One-Point One-Fifth mit Offset    0.057995
+Keijzer Two-Point Konstant kein Offset    0.061749
+Keijzer Two-Point Konstant mit Offset     0.064480
+Keijzer Two-Point Clegg kein Offset       0.033887
+Keijzer Two-Point Clegg mit Offset        0.055730
+Keijzer Two-Point OneFifth kein Offset    0.053392
+Keijzer Two-Point OneFifth mit Offset     0.052018
+Keijzer Uniform Konstant kein Offset      0.049104
+Keijzer Uniform Konstant mit Offset       0.069820
+Keijzer Uniform Clegg kein Offset         0.060934
+Keijzer Uniform Clegg mit Offset          0.043535
+Keijzer Uniform OneFifth kein Offset      0.070569
+Keijzer Uniform OneFifth mit Offset       0.025362
+dtype: float64
