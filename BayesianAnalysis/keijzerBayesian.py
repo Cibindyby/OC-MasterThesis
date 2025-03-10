@@ -115,12 +115,13 @@ def hpdi(result, max_iteration_without_censoring, number_censored, name_algo):
     print("HDPI Algo 1: ", hdi)
     data = np.concatenate(model.infdata_.posterior.mean2)
     data = np.sort(data)
+    mean = np.mean(data)
     hdi = (data[int(len(data) * 0.025)], data[int(len(data) * 0.975)])
     print("HDPI Algo 2: ", hdi)
 
 
     with open("BayesianAnalysis/bayesianResults/Keijzer/hpdi.txt", "a") as file:
-        file.write(f"{name_algo}: {hdi}\n")
+        file.write(f"{name_algo} & {hdi} & {mean}\\\\\n\hline\n")
 
 
 
