@@ -1,19 +1,38 @@
-Keijzer keine Rekombination: (5446.690410310438, 16772.637789979653)
-Keijzer One-Point Konstant kein Offset: (3155.154402073864, 8685.286535202296)
-Keijzer One-Point Konstant mit Offset: (5791.946856468407, 19545.587350714086)
-Keijzer One-Point Clegg kein Offset: (4055.4705235595243, 14388.58684409474)
-Keijzer One-Point Clegg mit Offset: (5182.28218575942, 17954.643424031055)
-Keijzer One-Point OneFifth kein Offset: (3746.883061874997, 10479.686004566976)
-Keijzer One-Point One-Fifth mit Offset: (4972.2285145901515, 16087.7801567059)
-Keijzer Two-Point Konstant kein Offset: (4207.924487055595, 13285.672799622427)
-Keijzer Two-Point Konstant mit Offset: (3544.144836607607, 10355.4126914937)
-Keijzer Two-Point Clegg kein Offset: (5468.641067117638, 17877.60733271395)
-Keijzer Two-Point Clegg mit Offset: (4105.7721718420535, 13578.136222172589)
-Keijzer Two-Point OneFifth kein Offset: (4408.582838961478, 12408.349386739103)
-Keijzer Two-Point OneFifth mit Offset: (6970.619874870356, 22911.685153093815)
-Keijzer Uniform Konstant kein Offset: (8010.603303929808, 23268.991321115303)
-Keijzer Uniform Konstant mit Offset: (3406.4377540905807, 10751.973621292354)
-Keijzer Uniform Clegg kein Offset: (3856.791225120323, 10850.478720751784)
-Keijzer Uniform Clegg mit Offset: (6067.492571299987, 20498.9848451542)
-Keijzer Uniform OneFifth kein Offset: (3511.828051868149, 12119.350710069191)
-Keijzer Uniform OneFifth mit Offset: (4025.0841402695, 11844.356614651624)
+Keijzer keine Rekombination & (5446.690410310438, 16772.637789979653) & 9551.657372894353\\
+\hline
+Keijzer One-Point Konstant kein Offset & (3155.154402073864, 8685.286535202296) & 5214.911320730526\\
+\hline
+Keijzer One-Point Konstant mit Offset & (5791.946856468407, 19545.587350714086) & 10837.605357529015\\
+\hline
+Keijzer One-Point Clegg kein Offset & (4055.4705235595243, 14388.58684409474) & 7754.999894626074\\
+\hline
+Keijzer One-Point Clegg mit Offset & (5182.28218575942, 17954.643424031055) & 9757.394842367436\\
+\hline
+Keijzer One-Point OneFifth kein Offset & (3746.883061874997, 10479.686004566976) & 6233.279885396876\\
+\hline
+Keijzer One-Point One-Fifth mit Offset & (4972.2285145901515, 16087.7801567059) & 9402.618269973478\\
+\hline
+Keijzer Two-Point Konstant kein Offset & (4207.924487055595, 13285.672799622427) & 7464.243770762213\\
+\hline
+Keijzer Two-Point Konstant mit Offset & (3544.144836607607, 10355.4126914937) & 6056.680063455567\\
+\hline
+Keijzer Two-Point Clegg kein Offset & (5468.641067117638, 17877.60733271395) & 10017.89205422949\\
+\hline
+Keijzer Two-Point Clegg mit Offset & (4105.7721718420535, 13578.136222172589) & 7663.952921786409\\
+\hline
+Keijzer Two-Point OneFifth kein Offset & (4408.582838961478, 12408.349386739103) & 7381.426580938128\\
+\hline
+Keijzer Two-Point OneFifth mit Offset & (6970.619874870356, 22911.685153093815) & 13432.511872112134\\
+\hline
+Keijzer Uniform Konstant kein Offset & (8010.603303929808, 23268.991321115303) & 14688.052301783251\\
+\hline
+Keijzer Uniform Konstant mit Offset & (3406.4377540905807, 10751.973621292354) & 6052.727271755727\\
+\hline
+Keijzer Uniform Clegg kein Offset & (3856.791225120323, 10850.478720751784) & 6440.975876356098\\
+\hline
+Keijzer Uniform Clegg mit Offset & (6067.492571299987, 20498.9848451542) & 11238.547359260312\\
+\hline
+Keijzer Uniform OneFifth kein Offset & (3511.828051868149, 12119.350710069191) & 6587.897186562681\\
+\hline
+Keijzer Uniform OneFifth mit Offset & (4025.0841402695, 11844.356614651624) & 6893.3701969077365\\
+\hline

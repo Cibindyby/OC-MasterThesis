@@ -1,0 +1,23 @@
+Koza keine Rekombination         0.046653
+Koza Uniform Konstant: 0,125     0.038759
+Koza Uniform Konstant: 0,25      0.032483
+Koza Uniform Konstant: 0,375     0.054234
+Koza Uniform Konstant: 0,5       0.048150
+Koza Uniform Konstant: 0,625     0.044384
+Koza Uniform Konstant: 0,75      0.042284
+Koza Uniform Konstant: 0,875     0.037376
+Koza Uniform Konstant: 1,0       0.050811
+Koza Uniform Clegg: 0,0005       0.039935
+Koza Uniform Clegg: 0,0015       0.070103
+Koza Uniform Clegg: 0,0025       0.062192
+Koza Uniform Clegg: 0,0035       0.042816
+Koza Uniform Clegg: 0,0045       0.045873
+Koza Uniform Clegg: 0,0055       0.047253
+Koza Uniform One-Fifth: 0,125    0.041516
+Koza Uniform One-Fifth: 0,25     0.045399
+Koza Uniform One-Fifth: 0,375    0.045936
+Koza Uniform One-Fifth: 0,5      0.039174
+Koza Uniform One-Fifth: 0,625    0.039264
+Koza Uniform One-Fifth: 0,75     0.040292
+Koza Uniform One-Fifth: 0,875    0.045112
+dtype: float64
