@@ -43,7 +43,7 @@ def calvo(algorithm_labels, results):
     sample = sample.mean()
     print(sample)
 
-    with open("BayesianAnalysis/bayesianResults/Keijzer/calvo.txt", "a") as file:
+    with open("BayesianAnalysis/bayesianResults/KozaOnePoint/calvo.txt", "a") as file:
         file.write(f"{sample}")
 
 
@@ -76,7 +76,7 @@ def hpdi(result, max_iteration_without_censoring, number_censored, name_algo):
     print("HDPI Algo 2: ", hdi)
 
 
-    with open("BayesianAnalysis/bayesianResults/Keijzer/hpdi.txt", "a") as file:
+    with open("BayesianAnalysis/bayesianResults/KozaOnePoint/hpdi.txt", "a") as file:
         file.write(f"{name_algo} & {hdi} & {mean} \\\\\n\\hline\n")
 
 

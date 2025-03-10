@@ -1,0 +1,23 @@
+Koza keine Rekombination           0.044276
+Koza Two-Point Konstant: 0,125     0.050079
+Koza Two-Point Konstant: 0,25      0.043383
+Koza Two-Point Konstant: 0,375     0.042903
+Koza Two-Point Konstant: 0,5       0.047157
+Koza Two-Point Konstant: 0,625     0.052680
+Koza Two-Point Konstant: 0,75      0.036253
+Koza Two-Point Konstant: 0,875     0.039958
+Koza Two-Point Konstant: 1,0       0.058410
+Koza Two-Point Clegg: 0,0005       0.046851
+Koza Two-Point Clegg: 0,0015       0.040274
+Koza Two-Point Clegg: 0,0025       0.039712
+Koza Two-Point Clegg: 0,0035       0.052770
+Koza Two-Point Clegg: 0,0045       0.049098
+Koza Two-Point Clegg: 0,0055       0.059170
+Koza Two-Point One-Fifth: 0,125    0.042831
+Koza Two-Point One-Fifth: 0,25     0.033087
+Koza Two-Point One-Fifth: 0,375    0.033814
+Koza Two-Point One-Fifth: 0,5      0.034314
+Koza Two-Point One-Fifth: 0,625    0.051706
+Koza Two-Point One-Fifth: 0,75     0.047033
+Koza Two-Point One-Fifth: 0,875    0.054242
+dtype: float64
