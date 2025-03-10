@@ -36,17 +36,17 @@
 \contentsline {subsection}{\numberline {4.1.5}Rohdatenanalyse: Zusammenfassung}{43}{subsection.4.1.5}%
 \contentsline {section}{\numberline {4.2}Ergebnisse Bayes'sche Analyse}{43}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Bayes'sche Analyse: Parity}{43}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Bayes'sche Analyse: Keijzer}{43}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Bayes'sche Analyse: Encode}{43}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Bayes'sche Analyse: Koza}{43}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Bayes'sche Analyse: Zusammenfassung}{43}{subsection.4.2.5}%
-\contentsline {section}{\numberline {4.3}Ergebnisse Graphische Evaluation}{43}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Graphische Evaluation: Parity}{43}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Graphische Evaluation: Keijzer}{43}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Graphische Evaluation: Encode}{43}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Graphische Evaluation: Koza}{43}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}Graphische Evaluation: Zusammenfassung}{43}{subsection.4.3.5}%
-\contentsline {chapter}{\numberline {5}Fazit aus Ausblick}{45}{chapter.5}%
+\contentsline {subsection}{\numberline {4.2.2}Bayes'sche Analyse: Keijzer}{44}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Bayes'sche Analyse: Encode}{45}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Bayes'sche Analyse: Koza}{48}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Bayes'sche Analyse: Zusammenfassung}{51}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}Ergebnisse Graphische Evaluation}{51}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Graphische Evaluation: Parity}{51}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Graphische Evaluation: Keijzer}{51}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Graphische Evaluation: Encode}{51}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Graphische Evaluation: Koza}{51}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Graphische Evaluation: Zusammenfassung}{51}{subsection.4.3.5}%
+\contentsline {chapter}{\numberline {5}Fazit aus Ausblick}{53}{chapter.5}%
 \contentsline {chapter}{\numberline {A}Anhang}{I}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Plots Parity}{I}{section.A.1}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
