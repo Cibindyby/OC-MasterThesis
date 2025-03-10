@@ -5,7 +5,6 @@
 """
 import numpy as np
 import pandas as pd
-from cmpbayes import Calvo, NonNegative
 
 # ++++++++++++++++++++
 # Daten laden
