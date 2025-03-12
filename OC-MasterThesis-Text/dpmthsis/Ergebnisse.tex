@@ -173,6 +173,13 @@ Die Tabelle zeigt einige wichtige Merkmale auf, die das CGP-Training ergeben hat
 \subsection{Rohdatenanalyse: Keijzer}
 \label{subsec:rohdatenKeijzer}
 
+Die folgende Tabelle \ref{table:keijzerHPO} zeigt die Ergebnisse der Hyperparameteranalyse des Keijzer-Testszenarios.
+Die Umstände der Hyperparameteroptimierung sind die gleichen wie bei Parity und können in Abschnitt \ref{subsec:rohdatenParity} nachgelesen werden.
+Wie bei den Ergebnissen bei Parity gibt es auch bei der Offset-Optimierung im Keijzer-Testszenario zwei aus neun Fällen, bei denen der Offset ursprünglich auf 0 gesetzt wurde.
+Diese Parametersätze wurden durch den jeweils zweitbesten Parametersatz ersetzt und sind in der Tabelle rot markiert.
+Die Beobachtungen in diesem Abschnitt beziehen sich nur auf den Keijzer-Benchmark.
+In Abschnitt \ref{subsec:rohdatenZusammenfassung} werden abschließende Erkenntnisse aus den Hyperparameteranalysen von Parity und Keijzer zusammengetragen.
+
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c | c | c | c | c | c | c}
@@ -220,9 +227,43 @@ Die Tabelle zeigt einige wichtige Merkmale auf, die das CGP-Training ergeben hat
 	\label{table:keijzerHPO}
 \end{table}
 
-TODO: Tabellen erklären (Spaltennamen; etc)\\
-TODO: für HPO beschreiben welche Daten wie ansonsten gefüllt werden; falls leer (Start Rekombinationsrate für Clegg)\\
-TODO: beschreiben; dass mehrere Offsets als (ohne Offset gesetzt wurden)
+Wie bereits in Abschnitt \ref{subsec:rohdatenParity} erklärt, kann eine Reduktion der Rechenknoten in einem CGP-Modell dazu führen, dass Systemressourcen und Rechenzeit gespart werden können.
+Dies gilt natürlich nur unter Anbetracht, dass die Effizienz des CGPs zur Berechnung der Lösung nicht darunter leidet.
+Wird der Mittelwert aller verwendeten Rechenknoten gebildet, liegt der Wert bei ungefähr 1305. 
+Zu beobachten ist, dass die Anzahl der Rechenknoten beim CGP-Verfahren ohne Rekombination deutlich höher als dieser Durchschnittswert ausfällt.
+Alle Mittelwerte der Anzahl an Rechenknoten der einzelnen Rekombinationsalgorithmen liegen unterhalb des allgemeinen Mittelwerts.
+Das in diesem Sinne beste Verfahren ist in diesem Fall die Two-Point Rekombination.
+Dieser Rekombinationsalgorithmus braucht durchschnittlich ca. 983 Rechenknoten und liegt damit weit unter dem allgemeinen Mittelwert.
+Mit ca. 1117 Rechenknoten im Mittel folgt die One-Point Rekombination, während mit durchschnittlich 1300 Rechenknoten die UNiform Rekombination ungefähr dem allgemeinen Mittelwert entspricht.
+Bei Betrachtung der Werte fällt außerdem auf, dass die One-Point Rekombination eine sehr große Kluft zwischen höchster und niedrigster Anzahl der Rechenknoten aufweist:
+Einerseits wird der allgemein niedrigste Wert für die verwendeten Rechenknoten aufgezeigt (350), andererseits wird die obere Grenze ausgereizt (2000).
+Bei der Two-Point Rekombination kann dieser Effekt nicht beobachtet werden.
+Außerhalb eines Ausreißers (1700) sind alle Werte relativ ähnlich groß.
+Ein Hinweis darauf mit welchen Parametern diese Beobachtungen in Verbindung stehen kann anhand der Tabelle nicht getroffen werden.
+Weder von der Rekombinationsrate noch andere Parameter weisen offensichtliche Korrelationen auf.
+Dieser Aspekt könnte in weiteren Untersuchungen näher betrachtet werden.\\
+Ein Faktor, der ebenfalls Rechenzeit einsparen kann ist die Populationsgröße ($\mu$+$\lambda$).
+Diese weisen im Keijzer-Testszenario keine deutlich ersichtlichen Zusammenhänge zu den CGP-Konfigurationen auf.
+Die $\mu$- und $\lambda$-Werte weichen grundsätzlich nicht stark voneinander ab, mit einigen unregelmäßigen Schwankungen, bei denen die Werte deutlich kleiner werden.
+Allerdings können diese Schwankungen nicht gleichzeitig bei $\mu$ und $\lambda$ festgestellt werden.
+Für Two-Point und Uniform Rekombination verringert sich der $\lambda$-Wert bei der linear fallenden Rekombinationsrate ohne Offset.
+Allerdings kann durch diese Ergebnisse nicht näher ergründet werden, ob darin ein näherer Zusammenhang liegt.\\
+Bei den Rekombinationsraten fällt auf, dass für die Start-Rekombinationsrate der One-Fifth Regel nur sehr hohe oder sehr niedrige Raten gewählt wurden.
+Dies könnte darauf hindeuten, dass noch extremere Werte gewählt worden wären, wenn die Grenzen der Start-Rekombinationsrate einen größeren Spielraum zugelassen hätten.
+Für die One-Point und Uniform Rekombination wurden für die konstanten Start-Rekombinationsraten ebenfalls Werte nahe des Definitionsbereichs gewählt.
+Für die Two-Point Rekombination trifft dies nicht zu.
+Ebenfalls bei der linear fallenden Rekombinationsrate werden solche extremen Werte beobachtet.
+Zusammenfassend lässt sich also sagen, dass für das Keijzer-Testszenario überwiegend die Grenzen des Definitionsbereichs als Rekombinationsraten gewählt wurden.\\
+Die Offsets wurden durchschnittlich bei 153 Iterationen gewählt, wobei zu beachten ist, dass zwei Parametersätze ursprünglich bessere Ergebnisse erbracht hätten, ohne die Rekombination zu Beginn auszusetzen.
+Die in der Tabelle \ref{table:keijzerHPO} rot markierten Offsets wären dementsprechend ursprünglich gleich 0 gewesen.
+Mit den originalen Parametersätzen wäre der Mittelwerts des Offsets bei 100 gelegen.
+Es fällt auf, dass die zweitbesten Parametersätze Offset-Werte besitzen, die deutlich höher sind, als der Mittelwert aller Offsets.
+Der Offset der One-Point Rekombination mit linear fallender Rekombinationsrate ist dabei sogar der maximal mögliche Offset-Wert (300).
+Diese extreme Schwankung der Offsets zwischen erstbestem und zweitbestem Parametersatz spricht dafür, dass die Güte eines CGPs nicht kausal mit der Höhe des Offsets zusammenhängt.\\
+
+Folgend werden die Rohdaten der Keijzer-Testdurchläufe anhand von Tabelle \ref{table:keijzerRohdaten} bewertet.
+Wie für Parity wurden dabei 50 Durchläufe für jede CGP-Konfiguration ausgeführt, um statistische Abweichungen einzufangen.
+
 
 \begin{table}[H]
 	\centering
