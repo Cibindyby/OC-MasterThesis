@@ -1,22 +1,48 @@
 \chapter{Ergebnisse}
 \label{Ergebnisse}
-Ergebnisse
 
-TODO: Argumentation; dass Offset nicht so viel bringt (damit Kapitel \glqq praktischer Teil\grqq\space darauf verweisen kann)\\
-- HPO: mehrere Durchläufe wählen garkeinen Offset\\
-- restliche Tests vergleichen zwischen mit Offset und ohne\\
-- Rohdatenanalyse: Rekombinationserfolge; wenn kein Offset da ist
+In den folgenden Abschnitten werden die Ergebnisse dieser Arbeit aufgezeigt und erklärt.
+Sie sind unterteilt in die drei Evaluations-Strategien, die in Abschnitt \ref{sec:Evaluation} erläutert wurden: Analyse der Rohdaten, bayes'sche Analyse und graphische Evaluation.
+Zur Vereinfachung wird die konstante Rekombinationsrate kurz \glqq Konstant\grqq\space genannt, die linear fallende Rekombinationsrate \glqq Clegg \grqq\space und die Rekombinationsrate mit der One-Fifth Regel \glqq One-Fifth\grqq.
 
 \section{Ergebnisse Rohdatenanalyse}
 \label{sec:ergebnisseRohdaten}
 
+Die Analyse der Rohdaten besteht aus zwei Teilen.
+Die Ergebnisse der Hyperparameteranalyse werden für Parity und Keijzer näher betrachtet.
+Es werden dabei folgende Werte für jede CGP-Konfiguration aufgezeigt:\\
+\textbf{Anzahl der Rechenknoten:} Anzahl der Rechenknoten in jedem Chromosom des CGP-Modells\\
+\textbf{$\lambda$ (Nachwuchs):} Anzahl der Nachwuchs-Chromosomen in jeder Generation; $\lambda$-Wert in der ($\mu$+$\lambda$)-ES\\
+\textbf{Start-Rekombinationsrate:} Rekombinationsrate bei der Initialisierung; nur relevant für die konstante Rekombinationsrate und die One-Fifth Regel (linear fallende Rekombinationsrate wird mit 0,9 initialisiert)\\
+\textbf{Delta Rekombinationsrate:} Dieser Wert wird bei linear fallender Rekombinationsrate in jeder Generation von der bisherigen Rekombinationsrate abgezogen.\\
+\textbf{$\mu$ (Elitisten):} Anzahl der Elitisten in jeder Generation; $\mu$-Wert in der ($\mu$+$\lambda$)-ES\\
+\textbf{Offset:} Gibt an in wie vielen Trainings-Iterationen nach Initialisierung des CGP-Modells keine Rekombination ausgeführt wird.\\
+
+Des Weiteren werden für alle Testszenarien die Ergebnisse des CGP-Trainings näher betrachtet.
+Dabei werden die folgenden Metriken für jede CGP-Konfiguration in den Tabellen aufgezeigt:\\
+\textbf{Anzahl positive Mutationen:} Gibt an wie häufig Mutation zu einer Verbesserung der Fitness geführt hat (summiert über alle 50 Durchläufe).\\
+\textbf{Anzahl positive Rekombination:} Anzahl der Rekombinationsschritte, die die Fitness verbessert haben (summiert über alle 50 Durchläufe).\\
+\textbf{Anzahl negative Mutationen:} Anzahl der Mutationsschritte, bei denen der vorherige Rekombinationsschritt eine Verbesserung der Fitness erzielt hat, die nach der Mutation verloren ging (summiert über alle 50 Durchläufe).\\
+\textbf{Median Iterationen positiver Rekombination:} Median der Iterationen, bei denen der Rekombinationsschritt zur Verbesserung der Fitness beigetragen hat (über 50 Durchgänge hinweg)\\
+\textbf{Median Iterationen bis Konvergenz:} Median der Iterationen bis das Stopp-Kriterium erfüllt wurde (über 50 Durchläufe hinweg)\\
+\textbf{Stopp-Kriterium erfüllt:} Gibt an wie häufig das Stopp-Kriterium bei 50 Durchläufen erfüllt wurde. Dieser Wert wird verwendet, um Entscheidungen darüber zu treffen, wie die bayes'sche Analyse ausgeführt werden soll (für die komplexeren Testszenarien).
+
 \subsection{Rohdatenanalyse: Parity}
 \label{subsec:rohdatenParity}
+
+Die folgende Tabelle \ref{table:parityHPO} zeigt die Hyperparameter, die für die Ausführung des CGP-Trainings für Parity verwendet wurden.
+Dabei wurden die Ergebnisse der Hyperparameteranalyse verwendet, um die effizientesten CGP-Konfigurationen miteinander zu vergleichen.
+Zu beachten ist, dass bei der Optimierung des Rekombinations-Offsets dem Optimierer ebenfalls die Möglichkeit gegeben wurde den Offset auf 0 zu stellen und somit auszuschalten.
+Diese Möglichkeit wurde bei zwei aus neun CGP-Konfigurationen genutzt.
+Für diese Fälle aus der Hyperparameteroptimierung wurden die nächstbesten Hyperparameter gewählt, die einen Offset enthalten.
+Die jeweiligen Offset-Werte sind in der Tabelle rot markiert.
+Alle Beobachtungen in diesem Abschnitt beziehen sich ausschließlich auf das Parity-Testszenario.
+Demnach kann nicht grundsätzlich auf die Allgemeinheit geschlossen werden und alle Aussagen müssen kritisch begutachtet werden.
 
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c | c | c | c | c | c | c}
-		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl Rechenknoten} \end{turn} & \begin{turn}{270} \textbf{Populationsgröße} \end{turn} & \begin{turn}{270} \textbf{Start-Rekombinationsrate} \end{turn} & \begin{turn}{270} \textbf{Delta Rekombinationsrate} \end{turn} & \begin{turn}{270} \textbf{Elitisten} \end{turn} & \begin{turn}{270} \textbf{Offset} \end{turn}\\
+		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl Rechenknoten} \end{turn} & \begin{turn}{270} \textbf{$\lambda$ (Nachwuchs)} \end{turn} & \begin{turn}{270} \textbf{Start-Rekombinationsrate} \end{turn} & \begin{turn}{270} \textbf{Delta Rekombinationsrate} \end{turn} & \begin{turn}{270} \textbf{$\mu$ (Elitisten)} \end{turn} & \begin{turn}{270} \textbf{Offset} \end{turn}\\
 		\hline
 		keine Rekombination & 1000 & 20 & - & - & 18 & -\\
 		\hline
@@ -30,7 +56,7 @@ TODO: Argumentation; dass Offset nicht so viel bringt (damit Kapitel \glqq prakt
 		\hline
 		One-Point One-Fifth kein Offset & 1150 & 46 & 0,55 & - & 6 & - \\
 		\hline
-		One-Point One-Fifth mit Offset & 1100 & 54 & 0,35 & - & 20 & 30 \\
+		One-Point One-Fifth mit Offset & 1100 & 54 & 0,35 & - & 20 & \color{red}30\color{black} \\
 		\hline
 		Two-Point Konstant kein Offset & 1900 & 58 & 0,4 & - & 20 & - \\
 		\hline
@@ -38,7 +64,7 @@ TODO: Argumentation; dass Offset nicht so viel bringt (damit Kapitel \glqq prakt
 		\hline
 		Two-Point Clegg kein Offset & 750 & 56 & - & 0,02 & 18 & - \\
 		\hline
-		Two-Point Clegg mit Offset & 1700 & 28 & - & 0,04 & 12 & 20 \\
+		Two-Point Clegg mit Offset & 1700 & 28 & - & 0,04 & 12 & \color{red}20\color{black} \\
 		\hline
 		Two-Point One-Fifth kein Offset & 1800 & 44 & 0,55 & - & 16 & - \\
 		\hline
@@ -60,9 +86,42 @@ TODO: Argumentation; dass Offset nicht so viel bringt (damit Kapitel \glqq prakt
 	\label{table:parityHPO}
 \end{table}
 
-TODO: Tabellen erklären (Spaltennamen; etc)\\
-TODO: für HPO beschreiben welche Daten wie ansonsten gefüllt werden; falls leer (Start Rekombinationsrate für Clegg)\\
-TODO: beschreiben; dass mehrere Offsets als (ohne Offset gesetzt wurden)
+Betrachtet wird zuerst die Anzahl der Rechenknoten. 
+Zu beobachten ist hier, dass die CGP-Konfiguration ohne Rekombination weniger Rechenknoten benötigt als der Mittelwert aller Verfahren von ca. 1305 Rechenknoten pro Chromosom.
+Die Modelle, die die One-Point Rekombination verwenden, weisen mit ca 1442 den höchsten Mittelwert an Rechenknoten auf.
+Mit durchschnittlich 1350 Rechenknoten haben die Modelle mit Two-Point Rekombination ein wenig mehr Rechenknoten benötigt als der Durchschnitt.
+Mit 1200 Rechenknoten im Mittel haben Modelle, die die Uniform Rekombination verwenden weniger Rechenknoten als der Durchschnitt benötigt.
+Da eine höhere Anzahl der Rechenknoten eine höhere Rechenzeit mit sich zieht, ist es von Vorteil diese reduzieren zu können.
+Unter dem Aspekt lässt sich in der Betrachtung der Hyperparameteranalyse von Parity ein Trend schätzen: wird keine Rekombination verwendet könnten Rechenzeit und Speicherressourcen gespart werden, indem weniger Rechenknoten benötigt werden. 
+Falls Rekombination verwendet wird, könnte es sich lohnen die aufwendigeren Algorithmen zu verwenden, da es so aussieht als ob diese weniger Rechenknoten benötigen.
+Diese Aussagen können allerdings nicht getroffen werden, indem nur ein einzelnes Testszenario ausgewertet wird, gibt allerdings Denkanstöße für weitere Betrachtungen.\\
+Des Weiteren fällt auf, dass die Streuung der Anzahl der Rechenknoten immer größer zu werden scheint, umso komplexer das Rekombinationsverfahren gewählt wird. 
+Während bei One-Point Rekombination alle Werte relativ nah am Mittelwert liegen, entsteht bei Uniform Rekombination eine große Kluft zwischen extrem großen und sehr kleinen Werten. 
+So könnte es sich im Hinblick auf die Ressourcen lohnen Rekombination einzusetzen, wenn durch eine gute Hyperparameteranalyse festgestellt werden kann, mit welcher CPG-Konfiguration das Einsparpotential am besten ausgeschöpft werden könnte.
+Zu beachten ist hierbei allerdings auch, dass komplexere Rekombinationsalgorithmen (und Rekombination im allgemeinen) grundsätzlich mehr Rechenzeit benötigen als wenn dieser Rekombinationsschritt ausgelassen wird.
+Diese Metriken müssten sinnvoll miteinander abgeglichen werden.\\
+Wird die Populationsgröße ($\mu$ + $\lambda$) näher betrachtet, fällt auf, dass auch hier das Verfahren ohne Rekombination eine deutlich kleinere Population benötigt als die meisten anderen.
+Auch dieser Faktor spart Ressourcen ein und kann für die Entscheidung für oder gegen ein Verfahren eine Rolle spielen.
+Die CGP-Konfiguration "Two-Point Clegg mit Offset" hat ebenfalls eine sehr niedrige Populationsgröße erreicht, allerdings handelt es sich bei dieser Zeile der Tabelle nicht um die beste Parametrierung der Konfiguration.
+Dies ist der Fall, da in dieser Zeile wie vorher beschrieben der Offset auf 0 gesetzt worden wäre, weshalb nur der zweitbeste Parametersatz gewählt wurde.
+Der beste Parametersatz hätte die Werte $\lambda$=44 und $\mu$=12, was wiederum eine größere Populationsgröße ergeben würde.\\
+Bei der Begutachtung der verschiedenen Rekombinationsraten (Start-Rekombinationsrate und Delta Rekombinationsrate) können keine genauen Zusammenhänge zwischen den CGP-Konfigurationen und der Höhe der Rekombinationsraten erkannt werden.
+Die Start-Rekombinationsrate kann allerdings bei allen Verfahren mit konstanter Rekombinationsrate beobachtet werden, dass extrem hohe oder sehr niedrige Rekombinationsraten vermieden werden.
+Für die One-Fifth Regel wurde genau dieser mittelhohe Bereich zwischen 0 und 1 für die Hyperparameteranalyse freigegeben.
+Dieser Bereich wird nahezu vollständig in den Ergebnissen ausgenutzt.
+In weiteren Tests könnte überprüft werden, ob die Bereiche für den Start-Wert der Rekombinationsrate sinnvoll gewählt wurden oder ob die Hyperparameteranalyse für diese Fälle extremere Werte bevorzugen würde.\\
+Zuletzt wird die Offset-Spalte betrachtet.
+Der Mittelwert der gewählten Offsets liegt bei ca. 27 Iterationen ohne Rekombination.
+Am geringsten fällt der Mittelwert für die Two-Point Rekombination aus mit einem Durchschnittswert von ca. 17.
+Betrachtet man nicht die verbesserte Zeile der Hyperparameteranalyse, sondern die originalen Ergebnisse, ist der Mittelwert sogar noch kleiner mit 10 Iterationen ohne Rekombination.
+Im Vergleich dazu liegt die Uniform Rekombination mit durchschnittlich ca. 37 Iterationen ohne Rekombination weit darüber.
+Das bringt die Frage auf, ob die Uniform Rekombination weniger Effizienz bietet als beispielsweise die Two-Point Rekombination, da mehr Rekombinationsschritte ausgesetzt werden.\\
+
+
+Die folgende Tabelle \ref{table:parityRohdaten} gibt einen Einblick in die Rohdaten der CGP-Trainings.
+Alle CGP-Konfigurationen wurden dabei 50 mal am Parity-Datensatz getestet.
+Die Tabelle zeigt einige wichtige Merkmale auf, die das CGP-Training ergeben hat.
+
 
 \begin{table}[H]
 	\centering
@@ -117,17 +176,17 @@ TODO: beschreiben; dass mehrere Offsets als (ohne Offset gesetzt wurden)
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c | c | c | c | c | c | c}
-		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl Rechenknoten} \end{turn} & \begin{turn}{270} \textbf{Populationsgröße} \end{turn} & \begin{turn}{270} \textbf{Start-Rekombinationsrate} \end{turn} & \begin{turn}{270} \textbf{Delta Rekombinationsrate} \end{turn} & \begin{turn}{270} \textbf{Elitisten} \end{turn} & \begin{turn}{270} \textbf{Offset} \end{turn}\\
+		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl Rechenknoten} \end{turn} & \begin{turn}{270} \textbf{$\lambda$ (Nachwuchs)} \end{turn} & \begin{turn}{270} \textbf{Start-Rekombinationsrate} \end{turn} & \begin{turn}{270} \textbf{Delta Rekombinationsrate} \end{turn} & \begin{turn}{270} \textbf{$\mu$ (Elitisten)} \end{turn} & \begin{turn}{270} \textbf{Offset} \end{turn}\\
 		\hline
 		keine Rekombination & 1850 & 44 & - & - & 20 & -\\
 		\hline
 		One-Point Konstant kein Offset & 600 & 50 & 0,2 & - & 20 & - \\
 		\hline
-		One-Point Konstant mit Offset & 1200 & 50 & 1 & - & 4 & 120 \\
+		One-Point Konstant mit Offset & 1200 & 50 & 1 & - & 4 & 120\\
 		\hline
 		One-Point Clegg kein Offset & 1100 & 60 & - & 0,05 & 16 & - \\
 		\hline
-		One-Point Clegg mit Offset & 850 & 60 & - & 0,005 & 16 & 300 \\
+		One-Point Clegg mit Offset & 850 & 60 & - & 0,005 & 16 & \color{red}300\color{black} \\
 		\hline
 		One-Point One-Fifth kein Offset & 350 & 34 & 0,75 & - & 18 & - \\
 		\hline
@@ -135,7 +194,7 @@ TODO: beschreiben; dass mehrere Offsets als (ohne Offset gesetzt wurden)
 		\hline
 		Two-Point Konstant kein Offset & 1700 & 60 & 0,5 & - & 8 & - \\
 		\hline
-		Two-Point Konstant mit Offset & 600 & 48 & 0,3 & - & 16 & 180 \\
+		Two-Point Konstant mit Offset & 600 & 48 & 0,3 & - & 16 & \color{red}180\color{black} \\
 		\hline
 		Two-Point Clegg kein Offset & 750 & 34 & - & 0,005 & 14 & - \\
 		\hline
@@ -552,6 +611,19 @@ Koza ohne Rekombination:
 
 \subsection{Rohdatenanalyse: Zusammenfassung}
 \label{subsec:rohdatenZusammenfassung}
+
+TODO: Argumentation; dass Offset nicht so viel bringt (damit Kapitel \glqq praktischer Teil\grqq\space darauf verweisen kann)\\
+- HPO: mehrere Durchläufe wählen garkeinen Offset\\
+- restliche Tests vergleichen zwischen mit Offset und ohne\\
+- Rohdatenanalyse: Rekombinationserfolge; wenn kein Offset da ist
+
+TODO: HPO mit Vorsicht bewerten -> ggf. Ausblick auf HPO mit mehr als 10 Durchläufen pro Bewertungsschritt für mehr Einblick
+
+TODO: Wieso wurde Offset überhaupt in HPO verwendet?
+
+
+
+
 
 \section{Ergebnisse Bayes'sche Analyse}
 \label{sec:ergebnisseBayes}
