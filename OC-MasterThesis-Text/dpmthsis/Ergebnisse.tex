@@ -259,7 +259,10 @@ Zusammenfassend lässt sich also sagen, dass für das Keijzer-Testszenario über
 Die Offsets wurden durchschnittlich bei 153 Iterationen gewählt, wobei zu beachten ist, dass zwei Parametersätze ursprünglich bessere Ergebnisse erbracht hätten, ohne die Rekombination zu Beginn auszusetzen.
 Die in der Tabelle \ref{table:keijzerHPO} rot markierten Offsets wären dementsprechend ursprünglich gleich 0 gewesen.
 Mit den originalen Parametersätzen wäre der Mittelwerts des Offsets bei 100 gelegen.
-Es fällt auf, dass die zweitbesten Parametersätze Offset-Werte besitzen, die deutlich höher sind, als der Mittelwert aller Offsets.
+Betrachtet man die Werte der Tabelle \ref{table:keijzerHPO} (mit angepassten, roten) Einträgen, fällt auf, dass der Offset-Mittelwert der CGP-Konfigurationen mit Uniform Rekombination kleiner ist als derjenige von One-Point und Two-Point Rekombination.
+Werden diese verbesserten Parametersätze wieder auf ihren Originalwert (0) zurückgesetzt, ändert sich dies allerdings: Dadurch wird der durchschnittliche Offset-Wert der Uniform Rekombination höher als die jeweils anderen.
+In diesem Fall ist der Durchschnitts-Offset der Two-Point Rekombination der geringste.
+Es fällt außerdem auf, dass die zweitbesten Parametersätze Offset-Werte besitzen, die deutlich höher sind, als der Mittelwert aller Offsets.
 Der Offset der One-Point Rekombination mit linear fallender Rekombinationsrate ist dabei sogar der maximal mögliche Offset-Wert (300).
 Diese extreme Schwankung der Offsets zwischen erstbestem und zweitbestem Parametersatz spricht dafür, dass die Güte eines CGPs nicht kausal mit der Höhe des Offsets zusammenhängt.\\
 
@@ -655,55 +658,43 @@ Koza ohne Rekombination:
 \subsection{Rohdatenanalyse: Zusammenfassung}
 \label{subsec:rohdatenZusammenfassung}
 
-Rechenknoten:
-Parity:
-- ohne Rekombination weniger als Mittelwert
-- One-Point höchster Mittelwert
-- Two-Point weniger etwas mehr als Mittelwert
-- Uniform am wenigsten
-- Trendschätzung: ohne Rekombination am wenigsten; aufwendigere Rekombination weniger Rechenknoten als leichtere
-- Streuung Rechenknoten höher für komplexere Rekombination
+Zuerst sollen die Ergebnisse der Hyperparameteranalyse von Parity und Keijzer miteinander verglichen werden, um Zusammenhänge zu erschließen und einzelne Beobachtungen validieren zu können.
+Die folgenden Abschnitte beziehen sich dabei auf die jeweiligen Spalten der Tabellen \ref{table:parityHPO} und \ref{table:keijzerHPO}.\\
+\textbf{Rechenknoten:} Bei Parity kann beobachtet werden, dass die CGP-Konfiguration ohne Rekombination am wenigsten Rechenknoten aufweist. 
+Außerdem kann der Trend beobachtet werden, dass komplexere Rekombinationsalgorithmen durchschnittlich weniger Rechenknoten zugeschrieben bekommen als einfachere Algorithmen.
+Dabei ist die Streuung um den Mittelwert höher, umso komplexer die Rekombinationsalgorithmen sind.
+Dies könnte bedeuten, dass aus einer größeren Rechenknotenanzahl eine kleinere Streuung um diese pro Rekombinationsart folgt.
+Im Vergleich dazu ergeben die Ergebnisse von Keijzer ein völlig anderes Bild: gegensätzlich zu Parity hat die CGP-Konfiguration ohne Rekombination die höchste Anzahl an Rechenknoten im Vergleich zu den Mittelwerten über die unterschiedlichen Rekombinationsalgorithmen.
+Den bei Parity beobachteten Trend, dass komplexere Rekombinationen eine niedrigere Anzahl an Rechenknoten erfordern könnten, kann bei Keijzer nicht bestätigt werden.
+Hier wird für die Uniform-Rekombination die höchste durchschnittliche Anzahl an Rechenknoten erfordert.
+Ebenso ergibt sich für Keijzer ein anderes Bild als bei Parity, wenn man die Streuung der Rechenknotenanzahl betrachtet: Die Two-Point Rekombination weist am wenigsten Rechenknoten auf, allerdings auch die geringste Streuung.
+Zusammenfassend lässt sich für die Anzahl der Rechenknoten sagen, dass Parity und Keijzer vollkommen unterschiedliche Ergebnisse liefern.
+Demnach können keine Aussagen getroffen werden, wie die Anzahl der Rechenknoten mit den unterschiedlichen CGP-Konfigurationen zusammenhängen.
+Die Möglichkeit besteht ebenfalls, dass überhaupt kein Zusammenhang zwischen diesen beiden Komponenten besteht.
+Durch weitere Tests könnte dies näher betrachtet werden.\\
+\textbf{Populationsgröße:} Bei Betrachtung der Populationsgröße kann für Parity zusammengefasst werden, dass die CGP-Konfiguration ohne Rekombination die deutlich kleinste Populationsgröße benötigt hat.
+Für Keijzer konnte diese Beobachtung nicht geteilt werden.
+Umgekehrt konnte bei Parity nicht bestätigt werden, dass Two-Point und Uniform Rekombination mit linear fallender Rekombinationsrate ohne Offset einen geringeren $\lambda$-Wert aufweisen.
+Zusammenfassend lässt sich also auch für die Populationsgröße kein Zusammenhang zu den unterschiedlichen Rekombinationsarten herstellen.\\
+\textbf{Rekombinationsraten:} Bei den Ergebnissen der Hyperparameteroptimierung vom Parity-Testszenario werden von konstanten Rekombinationsalgorithmen besonders hohe und besonders niedrige Rekombinationsraten vermieden.
+Für die linear fallende Rate und die Rekombinationsrate mit der One-Fifth Regel wird (nahezu) der gesamte Definitionsbereich genutzt.
+Wieder im Gegensatz dazu stehen die Ergebnisse des Keijzer-Testszenarios.
+Hier werden für nahezu alle CGP-Konfigurationen sehr hohe oder niedrige Werte für die Rekombinationsrate verwendet.
+Somit kann durch die Ergebnisse der Hyperparameteranalyse nicht bewertet werden, welche Bereiche der Rekombinationsrate besonders effektiv sind.\\
+\textbf{Offset:} Bei Parity wird der geringste Offset bei der Two-Point Rekombination und der höchste Offset bei der Uniform Rekombination verwendet.
+Werden bei Keijzer die originalen Ergebnisse verwendet, bei denen ein Offset von 0 zugelassen wird, kann dieses Verhalten ebenfalls beobachtet werden.
+Dies könnte bedeuten, dass die Two-Point Rekombination effizienter ist als die Uniform Rekombination, da bei ersterem weniger Rekombinationsschritte ausgesetzt werden.
+Die für den Offset neu eingefügten Werte, falls ein Offset gleich 0 bestimmt wird, sind bei Parity ähnlich zum allgemeinen Mittelwert des Offsets.
+Ein anderes Verhalten kann für das Keijzer-Testszenario beobachtet werden, bei dem die zweitbesten Parametersätze sehr hohe Offset-Werte verwenden.
+Dies ergibt also einen extrem hohen Sprung im Offset zwischen erstbestem und zweitbestem Parametersatz.
+Das ist ein Indiz dafür, dass die Güte eines CGPs nicht kausal mit der Höhe des Offsets zusammenhängt.\\
+Zu beachten ist, dass die Ergebnisse der Hyperparameteranalyse mit Vorsicht zu begutachten sind.
+Um die Ergebnisse und die daraus abgeleiteten Aussagen zu validieren könnte es sinnvoll sein eine umfangreichere Hyperparameteranalyse auszuführen.
+Diese sollte mit Hilfe von mehr Rechenkapazität ausgeführt werden, damit mehr Hyperparameter getestet werden können.
+Außerdem kann die Anzahl an ausgeführten CGP-Trainings pro Bewertungsschritt in der Hyperparameteranalyse höher gesetzt werden.
+Durch diese Schritte könnten sich die Ergebnisse von Parity und Keijzer aneinander angleichen, wodurch bessere Bewertungen stattfinden könnten.
+Andernfalls könnte die Aussage gestärkt werden, dass die CGP-Konfigurationen keinen Zusammenhang zur Auswahl einzelner Hyperparameter aufweisen.
 
-Keijzer:
-- ohne Rekombination deutlich höher als MIttelwert
-- alle Rekombinationsverfahren unter Mittelwert
-- Two-Point am wenigsten
-- One-Point am zweitwenigsten
-- Uniform etwas unter Mittelwert
-- Streuung am höchsten für One-Point
-- Two-Point kaum Streuung
-
-Population:
-Parity:
-- keine Rekombination am wenigsten Population
-- Rest höhere Population
-
-Keijzer:
-- keine starken Abweichungen über Rekombinationsalgorithmen hinweg
-- einige unregelmäßige Schwankungen, bei denen die Werte vereinzelt deutlich kleiner werden
-- Two-Point und Uniform Clegg ohne Offset: lambda Wert deutlich kleiner (aber Zusammenhang kann nur mit dieser einer Keijzer-HPO nicht bestätigt werden)
-
-Rekombinationsraten:
-Parity:
-- konstant vermeidet hohe und tiefe Werte
-- one fifth nutzt gesamten Definitionsbereich
-- Clegg nahezu gesamter Definitionsbereich genutzt
-
-Keijzer:
-- One-Fifth nur sehr hohe oder sehr niedrige Werte
-- konstant: onePoint und Uniform auch extreme Werte
-- Clegg: auch extreme Werte
-
-Offset:
-Parity:
-- Two-Point Rekombination geringster Offset
-- Uniform deutlich mehr Offset als Two-Point und Mittelwert
-- neu eingefügte Werte ca. gleich wie Mittelwert
-
-Keijzer:
-- Offsets, die ersetzt wurden extrem hoch
--> Güte des CGPs hängt nicht kausal mit der Höhe des Offsets zusammen
-- Mittelwert Uniform am geringsten (aber nur wenn Ersatzwerte betrachtet werden, ansonsten Uniform am höchsten; ohne Ersatzwerte Two-Point am geringsten)
 
 
 
@@ -712,7 +703,6 @@ TODO: Argumentation; dass Offset nicht so viel bringt (damit Kapitel \glqq prakt
 - restliche Tests vergleichen zwischen mit Offset und ohne\\
 - Rohdatenanalyse: Rekombinationserfolge; wenn kein Offset da ist
 
-TODO: HPO mit Vorsicht bewerten -> ggf. Ausblick auf HPO mit mehr als 10 Durchläufen pro Bewertungsschritt für mehr Einblick
 
 TODO: Wieso wurde Offset überhaupt in HPO Ergebnissen (7 aus 9) verwendet?
 
