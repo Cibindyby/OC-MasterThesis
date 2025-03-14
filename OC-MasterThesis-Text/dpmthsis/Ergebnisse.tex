@@ -102,20 +102,22 @@ Zu beachten ist hierbei allerdings auch, dass komplexere Rekombinationsalgorithm
 Diese Metriken müssten sinnvoll miteinander abgeglichen werden.\\
 Wird die Populationsgröße ($\mu$ + $\lambda$) näher betrachtet, fällt auf, dass auch hier das Verfahren ohne Rekombination eine deutlich kleinere Population benötigt als die meisten anderen.
 Auch dieser Faktor spart Ressourcen ein und kann für die Entscheidung für oder gegen ein Verfahren eine Rolle spielen.
-Die CGP-Konfiguration "Two-Point Clegg mit Offset" hat ebenfalls eine sehr niedrige Populationsgröße erreicht, allerdings handelt es sich bei dieser Zeile der Tabelle nicht um die beste Parametrierung der Konfiguration.
+Die CGP-Konfiguration "Two-Point Clegg mit Offset hat ebenfalls eine sehr niedrige Populationsgröße erreicht, allerdings handelt es sich bei dieser Zeile der Tabelle nicht um die beste Parametrierung der Konfiguration.
 Dies ist der Fall, da in dieser Zeile wie vorher beschrieben der Offset auf 0 gesetzt worden wäre, weshalb nur der zweitbeste Parametersatz gewählt wurde.
 Der beste Parametersatz hätte die Werte $\lambda$=44 und $\mu$=12, was wiederum eine größere Populationsgröße ergeben würde.\\
 Bei der Begutachtung der verschiedenen Rekombinationsraten (Start-Rekombinationsrate und Delta Rekombinationsrate) können keine genauen Zusammenhänge zwischen den CGP-Konfigurationen und der Höhe der Rekombinationsraten erkannt werden.
-Die Start-Rekombinationsrate kann allerdings bei allen Verfahren mit konstanter Rekombinationsrate beobachtet werden, dass extrem hohe oder sehr niedrige Rekombinationsraten vermieden werden.
+Für die Start-Rekombinationsrate kann allerdings bei allen Verfahren mit konstanter Rekombinationsrate beobachtet werden, dass extrem hohe oder sehr niedrige Rekombinationsraten vermieden werden.
 Für die One-Fifth Regel wurde genau dieser mittelhohe Bereich zwischen 0 und 1 für die Hyperparameteranalyse freigegeben.
 Dieser Bereich wird nahezu vollständig in den Ergebnissen ausgenutzt.
-In weiteren Tests könnte überprüft werden, ob die Bereiche für den Start-Wert der Rekombinationsrate sinnvoll gewählt wurden oder ob die Hyperparameteranalyse für diese Fälle extremere Werte bevorzugen würde.\\
+In weiteren Tests könnte überprüft werden, ob die Bereiche für den Start-Wert der Rekombinationsrate sinnvoll gewählt wurden oder ob die Hyperparameteranalyse für diese Fälle extremere Werte bevorzugen würde.
+Auch bei der linear fallenden Rekombinationsrate wurde nahezu der gesamte Definitionsbereich für die Hyperparameteranalyse ausgenutzt.\\
 Zuletzt wird die Offset-Spalte betrachtet.
-Der Mittelwert der gewählten Offsets liegt bei ca. 27 Iterationen ohne Rekombination.
+Der Mittelwert der gewählten Offsets liegt bei ca. 27 Iterationen.
 Am geringsten fällt der Mittelwert für die Two-Point Rekombination aus mit einem Durchschnittswert von ca. 17.
-Betrachtet man nicht die verbesserte Zeile der Hyperparameteranalyse, sondern die originalen Ergebnisse, ist der Mittelwert sogar noch kleiner mit 10 Iterationen ohne Rekombination.
+Betrachtet man nicht die nachbearbeiteten Zeilen der Hyperparameteranalyse, sondern die originalen Ergebnisse, ist der Mittelwert sogar noch kleiner mit 10 Iterationen ohne Rekombination.
 Im Vergleich dazu liegt die Uniform Rekombination mit durchschnittlich ca. 37 Iterationen ohne Rekombination weit darüber.
-Das bringt die Frage auf, ob die Uniform Rekombination weniger Effizienz bietet als beispielsweise die Two-Point Rekombination, da mehr Rekombinationsschritte ausgesetzt werden.\\
+Das bringt die Frage auf, ob die Uniform Rekombination weniger Effizienz bietet als beispielsweise die Two-Point Rekombination, da mehr Rekombinationsschritte ausgesetzt werden.
+Die zwei neu eingepflegten Offset-Werte (rot) entsprechen ungefähr dem allgemeinen Mittelwert.\\
 
 
 Die folgende Tabelle \ref{table:parityRohdaten} gibt einen Einblick in die Rohdaten der CGP-Trainings.
@@ -234,7 +236,7 @@ Zu beobachten ist, dass die Anzahl der Rechenknoten beim CGP-Verfahren ohne Reko
 Alle Mittelwerte der Anzahl an Rechenknoten der einzelnen Rekombinationsalgorithmen liegen unterhalb des allgemeinen Mittelwerts.
 Das in diesem Sinne beste Verfahren ist in diesem Fall die Two-Point Rekombination.
 Dieser Rekombinationsalgorithmus braucht durchschnittlich ca. 983 Rechenknoten und liegt damit weit unter dem allgemeinen Mittelwert.
-Mit ca. 1117 Rechenknoten im Mittel folgt die One-Point Rekombination, während mit durchschnittlich 1300 Rechenknoten die UNiform Rekombination ungefähr dem allgemeinen Mittelwert entspricht.
+Mit ca. 1117 Rechenknoten im Mittel folgt die One-Point Rekombination, während mit durchschnittlich 1300 Rechenknoten die Uniform Rekombination ungefähr dem allgemeinen Mittelwert entspricht.
 Bei Betrachtung der Werte fällt außerdem auf, dass die One-Point Rekombination eine sehr große Kluft zwischen höchster und niedrigster Anzahl der Rechenknoten aufweist:
 Einerseits wird der allgemein niedrigste Wert für die verwendeten Rechenknoten aufgezeigt (350), andererseits wird die obere Grenze ausgereizt (2000).
 Bei der Two-Point Rekombination kann dieser Effekt nicht beobachtet werden.
@@ -653,6 +655,58 @@ Koza ohne Rekombination:
 \subsection{Rohdatenanalyse: Zusammenfassung}
 \label{subsec:rohdatenZusammenfassung}
 
+Rechenknoten:
+Parity:
+- ohne Rekombination weniger als Mittelwert
+- One-Point höchster Mittelwert
+- Two-Point weniger etwas mehr als Mittelwert
+- Uniform am wenigsten
+- Trendschätzung: ohne Rekombination am wenigsten; aufwendigere Rekombination weniger Rechenknoten als leichtere
+- Streuung Rechenknoten höher für komplexere Rekombination
+
+Keijzer:
+- ohne Rekombination deutlich höher als MIttelwert
+- alle Rekombinationsverfahren unter Mittelwert
+- Two-Point am wenigsten
+- One-Point am zweitwenigsten
+- Uniform etwas unter Mittelwert
+- Streuung am höchsten für One-Point
+- Two-Point kaum Streuung
+
+Population:
+Parity:
+- keine Rekombination am wenigsten Population
+- Rest höhere Population
+
+Keijzer:
+- keine starken Abweichungen über Rekombinationsalgorithmen hinweg
+- einige unregelmäßige Schwankungen, bei denen die Werte vereinzelt deutlich kleiner werden
+- Two-Point und Uniform Clegg ohne Offset: lambda Wert deutlich kleiner (aber Zusammenhang kann nur mit dieser einer Keijzer-HPO nicht bestätigt werden)
+
+Rekombinationsraten:
+Parity:
+- konstant vermeidet hohe und tiefe Werte
+- one fifth nutzt gesamten Definitionsbereich
+- Clegg nahezu gesamter Definitionsbereich genutzt
+
+Keijzer:
+- One-Fifth nur sehr hohe oder sehr niedrige Werte
+- konstant: onePoint und Uniform auch extreme Werte
+- Clegg: auch extreme Werte
+
+Offset:
+Parity:
+- Two-Point Rekombination geringster Offset
+- Uniform deutlich mehr Offset als Two-Point und Mittelwert
+- neu eingefügte Werte ca. gleich wie Mittelwert
+
+Keijzer:
+- Offsets, die ersetzt wurden extrem hoch
+-> Güte des CGPs hängt nicht kausal mit der Höhe des Offsets zusammen
+- Mittelwert Uniform am geringsten (aber nur wenn Ersatzwerte betrachtet werden, ansonsten Uniform am höchsten; ohne Ersatzwerte Two-Point am geringsten)
+
+
+
 TODO: Argumentation; dass Offset nicht so viel bringt (damit Kapitel \glqq praktischer Teil\grqq\space darauf verweisen kann)\\
 - HPO: mehrere Durchläufe wählen garkeinen Offset\\
 - restliche Tests vergleichen zwischen mit Offset und ohne\\
@@ -660,7 +714,7 @@ TODO: Argumentation; dass Offset nicht so viel bringt (damit Kapitel \glqq prakt
 
 TODO: HPO mit Vorsicht bewerten -> ggf. Ausblick auf HPO mit mehr als 10 Durchläufen pro Bewertungsschritt für mehr Einblick
 
-TODO: Wieso wurde Offset überhaupt in HPO verwendet?
+TODO: Wieso wurde Offset überhaupt in HPO Ergebnissen (7 aus 9) verwendet?
 
 
 
