@@ -144,7 +144,7 @@ Die Tabelle zeigt einige wichtige Merkmale auf, die das CGP-Training ergeben hat
 		\hline
 		One-Point One-Fifth mit Offset & 127 & 0 & 0 & - & 27,5\\
 		\hline
-		Two-Point Konstant kein Offset & 113 & 10 & 2 & 3,0 & 39,5\\
+		Two-Point Konstant kein Offset & 113 & 10 & 2 & 3 & 39,5\\
 		\hline
 		Two-Point Konstant mit Offset & 129 & 0 & 0 & - & 64\\
 		\hline
@@ -378,7 +378,7 @@ Diese Frage muss also in weiteren Analysen näher betrachtet werden.
 In diesem Abschnitt werden die Rohdaten der Encode Benchmark Tests ausgewertet.
 Zu beachten ist, dass sich dieser Abschnitt nur auf die Ergebnisse von Encode bezieht und alle Schlussfolgerungen und Thesen in Abschnitt \ref{subsec:rohdatenZusammenfassung} erneut evaluiert werden.
 Denkanstöße und Beobachtungen jeder Art sind in diesem Abschnitt nur auf die jeweiligen Ergebnisse von Encode bezogen und stellen keine allgemeinen Aussagen dar.\\
-Die folgenden Tabellen \ref{table:encodeOnePointRohdaten}, \ref{table:encodeTwoPointRohdaten} und \ref{table:encodeUniformRohdaten} stellen die Ergebnisse von jeweils 50 Testdurchläufen für die unterschiedlichen CGP-Konfigurationen dar. 
+Die folgenden Tabellen \ref{table:encodeOnePointRohdaten}, \ref{table:encodeTwoPointRohdaten} und \ref{table:encodeUniformRohdaten} stellen die Ergebnisse von jeweils 50 Testdurchläufen mit 10000 Iterationen für die unterschiedlichen CGP-Konfigurationen dar. 
 Dabei ist jede Tabelle auf eine Rekombinationsart eingeschränkt.
 Ziel ist es mehr über das Zusammenspiel von Rekombinationsart und Einstellungen der Rekombinationsrate zu erfahren.
 Der Offset wurde hier nicht weiter betrachtet, da die Ergebnisse von Parity und Keijzer zeigen, dass der Offset dazu führt, dass die Rekombination die Fitness des CGPs nicht verbessern kann.
@@ -390,23 +390,25 @@ Aus diesen Gründen wurde es für sinnvoll empfunden den Offset für diesen Absc
 	\begin{tabular}{c | c | c | c | c | c | c}
 		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn} & \begin{turn}{270} \textbf{Stopp-Kriterium erfüllt} \end{turn}\\
 		\hline
+		keine Rekombination & 1138 & - & - & - & 3847,5 & 8\\
+		\hline
 		One-Point Konstant: 0,125 & 1126 & 20 & 4 & 9,5 & 3362 & 9\\
 		\hline
 		One-Point Konstant: 0,25 & 1100 & 42 & 5 & 12,5 & 1963 & 9\\
 		\hline
 		One-Point Konstant: 0,375 & 1120 & 43 & 5 & 6 & 4578,5 & 8\\
 		\hline
-		One-Point Konstant: 0,5 & 1104 & 34 & 2 & 10,0 & 936 & 9\\
+		One-Point Konstant: 0,5 & 1104 & 34 & 2 & 10 & 936 & 9\\
 		\hline
-		One-Point Konstant: 0,625 & 1096 & 45 & 4 & 12 & 3293,0 & 6\\
+		One-Point Konstant: 0,625 & 1096 & 45 & 4 & 12 & 3293 & 6\\
 		\hline
 		One-Point Konstant: 0,75 & 1103 & 55 & 11 & 16 & 1898,5 & 6\\
 		\hline
-		One-Point Konstant: 0,875 & 1093 & 59 & 6 & 15 & 1913,0 & 10\\
+		One-Point Konstant: 0,875 & 1093 & 59 & 6 & 15 & 1913 & 10\\
 		\hline
-		One-Point Konstant: 1,0 & 1086 & 58 & 9 & 8,0 & 3754,5 & 8\\
+		One-Point Konstant: 1,0 & 1086 & 58 & 9 & 8 & 3754,5 & 8\\
 		\hline
-		One-Point Clegg: 0,0005 & 1125 & 48 & 6 & 11,0 & 1905,5 & 12\\
+		One-Point Clegg: 0,0005 & 1125 & 48 & 6 & 11 & 1905,5 & 12\\
 		\hline
 		One-Point Clegg: 0,0015 & 1062 & 51 & 5 & 12 & 2754,5 & 6\\
 		\hline
@@ -414,23 +416,23 @@ Aus diesen Gründen wurde es für sinnvoll empfunden den Offset für diesen Absc
 		\hline
 		One-Point Clegg: 0,0035 & 1114 & 34 & 2 & 10,5 & 2840,5 & 6\\
 		\hline
-		One-Point Clegg: 0,0045 & 1127 & 38 & 2 & 10,0 & 2558 & 9\\
+		One-Point Clegg: 0,0045 & 1127 & 38 & 2 & 10 & 2558 & 9\\
 		\hline
 		One-Point Clegg: 0,0055 & 1079 & 55 & 7 & 9 & 4007,5 & 8\\
 		\hline
 		One-Point One-Fifth: 0,125 & 1138 & 19 & 1 & 7 & 3950 & 9\\
 		\hline
-		One-Point One-Fifth: 0,25 & 1135 & 22 & 3 & 7,0 & 4111,5 & 12\\
+		One-Point One-Fifth: 0,25 & 1135 & 22 & 3 & 7 & 4111,5 & 12\\
 		\hline
-		One-Point One-Fifth: 0,375 & 1155 & 20 & 1 & 4,0 & 1685 & 7\\
+		One-Point One-Fifth: 0,375 & 1155 & 20 & 1 & 4 & 1685 & 7\\
 		\hline
-		One-Point One-Fifth: 0,5 & 1123 & 26 & 0 & 5,0 & 3205 & 11\\
+		One-Point One-Fifth: 0,5 & 1123 & 26 & 0 & 5 & 3205 & 11\\
 		\hline
 		One-Point One-Fifth: 0,625 & 1100 & 35 & 3 & 6 & 3809 & 11\\
 		\hline
 		One-Point One-Fifth: 0,75 & 1089 & 25 & 1 & 6 & 795 & 7\\
 		\hline
-		One-Point One-Fifth: 0,875 & 1126 & 32 & 5 & 8,0 & 5213 & 5\\
+		One-Point One-Fifth: 0,875 & 1126 & 32 & 5 & 8 & 5213 & 5\\
 		\hline
 		One-Point One-Fifth: 1,0 & 1112 & 42 & 3 & 5,5 & 2863 & 5\\
 	\end{tabular}
@@ -442,6 +444,8 @@ Aus diesen Gründen wurde es für sinnvoll empfunden den Offset für diesen Absc
 	\centering
 	\begin{tabular}{c | c | c | c | c | c | c}
 		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn} & \begin{turn}{270} \textbf{Stopp-Kriterium erfüllt} \end{turn}\\
+		\hline
+		keine Rekombination & 1138 & - & - & - & 3847,5 & 8\\
 		\hline
 		Two-Point Konstant: 0,125 & 1044 & 27 & 2 & 6 & 4039,5 & 2\\
 		\hline
@@ -459,31 +463,31 @@ Aus diesen Gründen wurde es für sinnvoll empfunden den Offset für diesen Absc
 		\hline
 		Two-Point Konstant: 1,0 & 1031 & 65 & 10 & 5 & 3476,5 & 6\\
 		\hline
-		Two-Point Clegg: 0,0005 & 1041 & 70 & 7 & 6,0 & 3383 & 5\\
+		Two-Point Clegg: 0,0005 & 1041 & 70 & 7 & 6 & 3383 & 5\\
 		\hline
 		Two-Point Clegg: 0,0015 & 1015 & 53 & 8 & 8 & 2524,5 & 2\\
 		\hline
 		Two-Point Clegg: 0,0025 & 1026 & 75 & 8 & 9 & 6024 & 3\\
 		\hline
-		Two-Point Clegg: 0,0035 & 977 & 64 & 9 & 7,0 & 2061 & 3\\
+		Two-Point Clegg: 0,0035 & 977 & 64 & 9 & 7 & 2061 & 3\\
 		\hline
 		Two-Point Clegg: 0,0045 & 1046 & 51 & 9 & 8 & 2616 & 5\\
 		\hline
 		Two-Point Clegg: 0,0055 & 1019 & 52 & 8 & 9,5 & 3475 & 7\\
 		\hline
-		Two-Point One-Fifth: 0,125 & 1067 & 10 & 3 & 5,0 & 575,0 & 2\\
+		Two-Point One-Fifth: 0,125 & 1067 & 10 & 3 & 5 & 575 & 2\\
 		\hline
-		Two-Point One-Fifth: 0,25 & 1077 & 16 & 4 & 4,0 & 707 & 1\\
+		Two-Point One-Fifth: 0,25 & 1077 & 16 & 4 & 4 & 707 & 1\\
 		\hline
 		Two-Point One-Fifth: 0,375 & 1067 & 17 & 1 & 4 & 7538 & 1\\
 		\hline
-		Two-Point One-Fifth: 0,5 & 1063 & 24 & 5 & 5,0 & 3363 & 3\\
+		Two-Point One-Fifth: 0,5 & 1063 & 24 & 5 & 5 & 3363 & 3\\
 		\hline
-		Two-Point One-Fifth: 0,625 & 1075 & 32 & 6 & 4,0 & 4919 & 5\\
+		Two-Point One-Fifth: 0,625 & 1075 & 32 & 6 & 4 & 4919 & 5\\
 		\hline
-		Two-Point One-Fifth: 0,75 & 1078 & 34 & 8 & 4,0 & 1312,0 & 6\\
+		Two-Point One-Fifth: 0,75 & 1078 & 34 & 8 & 4 & 1312 & 6\\
 		\hline
-		Two-Point One-Fifth: 0,875 & 1088 & 36 & 4 & 5,0 & 2529,5 & 6\\
+		Two-Point One-Fifth: 0,875 & 1088 & 36 & 4 & 5 & 2529,5 & 6\\
 		\hline
 		Two-Point One-Fifth: 1,0 & 1049 & 43 & 7 & 4 & 1140 & 5\\
 	\end{tabular}
@@ -496,31 +500,33 @@ Aus diesen Gründen wurde es für sinnvoll empfunden den Offset für diesen Absc
 	\begin{tabular}{c | c | c | c | c | c | c}
 		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn} & \begin{turn}{270} \textbf{Stopp-Kriterium erfüllt} \end{turn}\\
 		\hline
-		Uniform Konstant: 0,125 & 1105 & 52 & 12 & 7,0 & 4058 & 9\\
+		keine Rekombination & 1138 & - & - & - & 3847,5 & 8\\
+		\hline
+		Uniform Konstant: 0,125 & 1105 & 52 & 12 & 7 & 4058 & 9\\
 		\hline
 		Uniform Konstant: 0,25 & 1099 & 69 & 3 & 13 & 3831,5 & 10\\
 		\hline
-		Uniform Konstant: 0,375 & 1076 & 64 & 10 & 9,0 & 4071,5 & 6\\
+		Uniform Konstant: 0,375 & 1076 & 64 & 10 & 9 & 4071,5 & 6\\
 		\hline
 		Uniform Konstant: 0,5 & 1105 & 68 & 2 & 12,5 & 993,5 & 8\\
 		\hline
-		Uniform Konstant: 0,625 & 1099 & 78 & 3 & 9,0 & 1306,5 & 6\\
+		Uniform Konstant: 0,625 & 1099 & 78 & 3 & 9 & 1306,5 & 6\\
 		\hline
-		Uniform Konstant: 0,75 & 1085 & 81 & 6 & 10 & 3459,0 & 8\\
+		Uniform Konstant: 0,75 & 1085 & 81 & 6 & 10 & 3459 & 8\\
 		\hline
 		Uniform Konstant: 0,875 & 1088 & 83 & 1 & 10 & 2490,5 & 6\\
 		\hline
 		Uniform Konstant: 1,0 & 1081 & 67 & 5 & 10 & 4785 & 9\\
 		\hline
-		Uniform Clegg: 0,0005 & 1092 & 76 & 5 & 8,0 & 2562 & 13\\
+		Uniform Clegg: 0,0005 & 1092 & 76 & 5 & 8 & 2562 & 13\\
 		\hline
 		Uniform Clegg: 0,0015 & 1099 & 78 & 2 & 10,5 & 1777 & 11\\
 		\hline
-		Uniform Clegg: 0,0025 & 1096 & 74 & 7 & 11,0 & 2401,5 & 10\\
+		Uniform Clegg: 0,0025 & 1096 & 74 & 7 & 11 & 2401,5 & 10\\
 		\hline
-		Uniform Clegg: 0,0035 & 1095 & 56 & 4 & 12,0 & 4674,5 & 4\\
+		Uniform Clegg: 0,0035 & 1095 & 56 & 4 & 12 & 4674,5 & 4\\
 		\hline
-		Uniform Clegg: 0,0045 & 1080 & 70 & 2 & 13,0 & 5118,0 & 10\\
+		Uniform Clegg: 0,0045 & 1080 & 70 & 2 & 13 & 5118 & 10\\
 		\hline
 		Uniform Clegg: 0,0055 & 1122 & 68 & 10 & 9,5 & 4044,5 & 8\\
 		\hline
@@ -530,9 +536,9 @@ Aus diesen Gründen wurde es für sinnvoll empfunden den Offset für diesen Absc
 		\hline
 		Uniform One-Fifth: 0,375 & 1128 & 29 & 2 & 8 & 988,5 & 6\\
 		\hline
-		Uniform One-Fifth: 0,5 & 1156 & 44 & 5 & 7,0 & 3968 & 11\\
+		Uniform One-Fifth: 0,5 & 1156 & 44 & 5 & 7 & 3968 & 11\\
 		\hline
-		Uniform One-Fifth: 0,625 & 1122 & 40 & 4 & 8,0 & 1781 & 7\\
+		Uniform One-Fifth: 0,625 & 1122 & 40 & 4 & 8 & 1781 & 7\\
 		\hline
 		Uniform One-Fifth: 0,75 & 1104 & 47 & 4 & 6 & 3385,5 & 12\\
 		\hline
@@ -544,62 +550,120 @@ Aus diesen Gründen wurde es für sinnvoll empfunden den Offset für diesen Absc
 	\label{table:encodeUniformRohdaten}
 \end{table}
 
-Encode ohne Rekombination:
-\begin{itemize}
-	\item Median Iterationen bis Konvergenz: 3847,5
-	\item Stopp-Kriterium erfüllt: 8
-\end{itemize}
+Betrachtet man die drei Tabellen \ref{table:encodeOnePointRohdaten}, \ref{table:encodeTwoPointRohdaten} und \ref{table:encodeUniformRohdaten} lässt sich feststellen, dass innerhalb der 10000 Iterationen nur die wenigsten CGP-Modelle konvergiert sind.
+Aus diesem Grund wird für den Encode Benchmark bei der bayes'schen Analyse die Wahrscheinlichkeitsfunktion der Fitness nach der 10000. Iteration gefittet und analysiert.\\
+Um Zusammenhängen zwischen den CGP-Konfigurationen und der Güte der CGP-Modelle zu erforschen wurden Muster in verschiedenen Spalten der Tabellen miteinander abgeglichen.
+Dabei wurden die Spalten \glqq Anzahl positive Rekombinationen\grqq, \glqq Anzahl negativer Mutationen\grqq\space und \glqq Median Iterationen positive Rekombination\grqq\space mit den zwei Spalten \glqq Median Iterationen bis Konvergenz\grqq\space und \glqq Stopp-Kriterium erfüllt\grqq\space verglichen.
+Bei diesem Musterabgleich wurden kein Hinweis darauf gefunden, dass die Spalten sich gegenseitig beeinflussen.\\
+Bei der One-Point Rekombination haben durchschnittlich ca. 8 Durchläufe das Stopp-Kri\-te\-rium erfüllt, bei der Two-Point Rekombination 3,7 und bei der Uniform Rekombination 8,5. 
+Die CGP-Modelle mit Two-Point Rekombination erfüllen damit deutlich weniger Stopp-Kriterien als die CGP-Modelle ohne Rekombination.
+Dies gilt nicht nur für den Durchschnitt, sondern auch jeweils für alle CGP-Konfigurationen mit Two-Point Rekombination.
+Vergleicht man den Durchschnitt der konvergierten CGP-Modelle für jede Re\-kom\-bi\-na\-tions\-ra\-ten-Art (konstant, linear fallend und mit One-Fifth Regel) für jede Rekombinationsart, stellt man fest, dass sich die Mittelwerte kaum voneinander unterscheiden.
+Beispielsweise konvergieren für die One-Point Rekombination mit konstanter Rekombinationsrate durchschnittlich 8,1 Durchläufe, bei der linear fallenden Rekombinationsrate 7,7 Durchläufe und bei der Rekombinationsrate mit One-Fifth Regel 8,4 Durchläufe. 
+Dies gilt für alle Rekombinationsarten gleichermaßen.
+Auf den ersten Blick scheint es also so, als ob die Rekombinations-Arten keinen großen Unterschied zueinander aufweisen, wenn es darum geht wie schnell CGP-Modelle konvergieren.
+Außerdem scheint die Anzahl der positiven Rekombinationen keinen Einfluss auf die Anzahl der erfüllten Stopp-Kriterien zu haben, da bei der One-Point Rekombination mit One-Fifth Regel vergleichsweise wenig positive Rekombinationen zu einer ähnlichen Anzahl an konvergierten CGP-Modellen führt.
+Über diese beiden Punkte lässt sich allerdings so leicht keine Aussage machen, da nur ersichtlich ist, wie viele Durchläufe bis zur 10000. Iteration konvergieren.
+Es wird nicht ersichtlich wie schnell die CGP-Modelle danach konvergieren.
+Ein Vergleich der Rekombinationsraten-Arten für das Encode-Testszenario muss demnach später bei weiteren Analysen festgestellt werden.
+Für weitere Testfälle könnten mehr Erkenntnisse gewonnen werden, wenn mehr Durchgänge das Stopp-Kriterium erfüllen.\\
+Versucht man die Anzahl der konvergenten CGP-Modelle mit der Rekombinationsrate in Verbindung zu bringen, ergeben sich folgende Erkenntnisse: Für konstante Rekombinationsraten werden bei besonders hohen Rekombinationsraten die meisten Stopp-Kriterien erfüllt. 
+Außerdem werden hierfür in der ersten Hälfte des Definitionsbereichs (Rekombinationsrate gleich 0,125-0,5) sporadisch auch Erfolge in der Konvergenz festgestellt.
+Für die linear fallende Rekombinationsrate werden bei besonders kleinen und großen Schrittweiten, mit denen die Rekombinationsrate verkleinert wird, eine größere Anzahl an erfüllten Stopp-Kriterien beobachtet.
+Für die One-Fifth Regel konnten keine Muster gefunden werden.
+Allerdings unterscheiden sich die Anzahlen der konvergenten Durchgänge nicht stark voneinander, was auch bedeuten kann, dass diese Schwankungen rein zufälliger Natur sind.\\
+Die unterschiedlichen Mediane der Iterationen, bei denen die Re\-kom\-bi\-na\-tions\-er\-folge entstehen, unterscheiden sind nicht stark voneinander.
+Diese Beobachtung kann für alle CGP-Konfigurationen getroffen werden, unabhängig von welche Rekombinationsart oder Re\-kom\-bi\-na\-tions\-ra\-ten-Art verwendet wird.
+Dies weist darauf hin, dass das Fenster an Iterationen, in denen die Rekombination die Fitness verbessern kann, nicht durch die Rekombinationsrate beeinflusst werden kann.\\
+Die folgende Abbildung \ref{fig:encodePosRekombination} beschreibt die Zusammenhänge aus Rekombinationsraten-Arten und der Anzahl positiver Rekombinationen.
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.32\textwidth}
+		\includegraphics[width=\textwidth]{Bilder/EncodePlotPositiveRekombinationKonstant.png}
+		\caption{Konstant}
+		\label{fig:encodePosRekombinationKonstant}
+	\end{subfigure}%
+	\hfill
+	\begin{subfigure}[b]{0.32\textwidth}
+		\includegraphics[width=\textwidth]{Bilder/EncodePlotPositiveRekombinationClegg.png}
+		\caption{linear fallend}
+		\label{fig:encodePosRekombinationClegg}
+	\end{subfigure}%
+	\hfill
+	\begin{subfigure}[b]{0.32\textwidth}
+		\includegraphics[width=\textwidth]{Bilder/EncodePlotPositiveRekombinationOneFifth.png}
+		\caption{One-Fifth Regel}
+		\label{fig:encodePosRekombinationOneFifth}
+	\end{subfigure}
+	\caption{Rekombinationsraten-Arten und Anzahl positive Rekombinationen}
+	\label{fig:encodePosRekombination}
+\end{figure}
+
+In Abbildung \ref{fig:encodePosRekombination} kann beobachtet werden, dass für jede Rekombinationsraten-Art die Uniform Rekombination die höchsten Anzahlen an positiver Rekombination produziert.
+Für die konstante und linear fallende Rekombinationsrate ist die Two-Point Rekombination in dieser Hinsicht besser als die One-Point Rekombination.
+Auch wird ersichtlich, dass die Rekombinationsrate mit der One-Fifth Regel niedrigere Rekombinationserfolge einfährt als die anderen Rekombinationsraten-Arten.\\
+Eine höhere Rekombinationsrate bedeutet auch eine höhere Chance, dass die Rekombination ausgeführt wird und somit die Fitness verbessert.
+So ist es nicht überraschend, dass die Abbildungen \ref{fig:encodePosRekombinationKonstant} und \ref{fig:encodePosRekombinationOneFifth} insgesamt eine positive Steigung aufzeigen.
+Nicht ersichtlich ist allerdings, wieso die konstanten Rekombinationsraten gleich 1,0 weniger gute Ergebnisse liefern als die konstanten Rekombinationsraten gleich 0,875.
+Dies gilt für alle Rekombinationsarten mit der konstanten Rekombinationsrate.\\
+Ebenfalls überraschend sind die kurzfristigen lokalen Maxima, die die Abbildungen \ref{fig:encodePosRekombinationKonstant} und \ref{fig:encodePosRekombinationOneFifth} bei geringen Rekombinationsraten aufzeigen.
+Die hohen Anzahlen an positiven Rekombinationen, obwohl die Rekombination nicht wahrscheinlich ausgeführt wird, könnte darauf hindeuten, dass die ausgeführten Rekombinationsschritte effektiver waren als diejenigen Rekombinationsschritte, die häufiger ausgeführt werden.
 
 
 \subsection{Rohdatenanalyse: Koza}
 \label{subsec:rohdatenKoza}
+
+keine Ahnung wieso hier eine Seite leer bleibt, wenn der Text hier nicht steht
 
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c | c | c | c | c | c | c}
 		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn} & \begin{turn}{270} \textbf{Stopp-Kriterium erfüllt} \end{turn}\\
 		\hline
-		One-Point Konstant: 0,125 & 1338 & 8 & 8 & 46,0 & 616 & 41\\
+		keine Rekombination & 1157 & 0 & 0 & - & 208 & 48\\
+		\hline
+		One-Point Konstant: 0,125 & 1338 & 8 & 8 & 46 & 616 & 41\\
 		\hline
 		One-Point Konstant: 0,25 & 1180 & 22 & 16 & 7,5 & 611 & 45\\
 		\hline
 		One-Point Konstant: 0,375 & 1493 & 41 & 25 & 46 & 2012 & 47\\
 		\hline
-		One-Point Konstant: 0,5 & 1477 & 54 & 40 & 20,0 & 602,5 & 36\\
+		One-Point Konstant: 0,5 & 1477 & 54 & 40 & 20 & 602,5 & 36\\
 		\hline
 		One-Point Konstant: 0,625 & 1287 & 45 & 23 & 91 & 2302 & 45\\
 		\hline
 		One-Point Konstant: 0,75 & 1423 & 62 & 43 & 30,5 & 989 & 47\\
 		\hline
-		One-Point Konstant: 0,875 & 1593 & 77 & 48 & 20 & 848,0 & 34\\
+		One-Point Konstant: 0,875 & 1593 & 77 & 48 & 20 & 848 & 34\\
 		\hline
 		One-Point Konstant: 1,0 & 1548 & 128 & 83 & 75,5 & 667 & 41\\
 		\hline
 		One-Point Clegg: 0,0005 & 1460 & 92 & 56 & 60,5 & 603 & 43\\
 		\hline
-		One-Point Clegg: 0,0015 & 1525 & 71 & 43 & 15 & 659,0 & 40\\
+		One-Point Clegg: 0,0015 & 1525 & 71 & 43 & 15 & 659 & 40\\
 		\hline
 		One-Point Clegg: 0,0025 & 1303 & 49 & 31 & 8 & 583 & 41\\
 		\hline
 		One-Point Clegg: 0,0035 & 1233 & 57 & 35 & 6 & 529 & 42\\
 		\hline
-		One-Point Clegg: 0,0045 & 1187 & 57 & 36 & 14 & 511,0 & 44\\
+		One-Point Clegg: 0,0045 & 1187 & 57 & 36 & 14 & 511 & 44\\
 		\hline
-		One-Point Clegg: 0,0055 & 1622 & 48 & 28 & 11,0 & 1320,0 & 42\\
+		One-Point Clegg: 0,0055 & 1622 & 48 & 28 & 11 & 1320 & 42\\
 		\hline
-		One-Point One-Fifth: 0,125 & 1434 & 1 & 1 & 2 & 462,0 & 44\\
+		One-Point One-Fifth: 0,125 & 1434 & 1 & 1 & 2 & 462 & 44\\
 		\hline
-		One-Point One-Fifth: 0,25 & 1544 & 3 & 6 & 2 & 1400,0 & 44\\
+		One-Point One-Fifth: 0,25 & 1544 & 3 & 6 & 2 & 1400 & 44\\
 		\hline
 		One-Point One-Fifth: 0,375 & 1005 & 10 & 8 & 2,5 & 838,5 & 46\\
 		\hline
 		One-Point One-Fifth: 0,5 & 1137 & 8 & 10 & 2,5 & 360,5 & 41\\
 		\hline
-		One-Point One-Fifth: 0,625 & 1207 & 14 & 12 & 3,5 & 947,0 & 44\\
+		One-Point One-Fifth: 0,625 & 1207 & 14 & 12 & 3,5 & 947 & 44\\
 		\hline
-		One-Point One-Fifth: 0,75 & 1387 & 12 & 11 & 3,0 & 910 & 43\\
+		One-Point One-Fifth: 0,75 & 1387 & 12 & 11 & 3 & 910 & 43\\
 		\hline
-		One-Point One-Fifth: 0,875 & 1160 & 26 & 14 & 4,0 & 301 & 43\\
+		One-Point One-Fifth: 0,875 & 1160 & 26 & 14 & 4 & 301 & 43\\
 		\hline
 		One-Point One-Fifth: 1,0 & 1393 & 29 & 25 & 6 & 568 & 43\\
 	\end{tabular}
@@ -612,39 +676,41 @@ Encode ohne Rekombination:
 	\begin{tabular}{c | c | c | c | c | c | c}
 		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn} & \begin{turn}{270} \textbf{Stopp-Kriterium erfüllt} \end{turn}\\
 		\hline
+		keine Rekombination & 1157 & 0 & 0 & - & 208 & 48\\
+		\hline
 		Two-Point Konstant: 0,125 & 1383 & 39 & 24 & 172 & 106 & 45\\
 		\hline
-		Two-Point Konstant: 0,25 & 1475 & 82 & 55 & 47,5 & 613,0 & 48\\
+		Two-Point Konstant: 0,25 & 1475 & 82 & 55 & 47,5 & 613 & 48\\
 		\hline
-		Two-Point Konstant: 0,375 & 1207 & 91 & 58 & 75 & 153,0 & 43\\
+		Two-Point Konstant: 0,375 & 1207 & 91 & 58 & 75 & 153 & 43\\
 		\hline
 		Two-Point Konstant: 0,5 & 1120 & 84 & 49 & 30,5 & 194 & 46\\
 		\hline
-		Two-Point Konstant: 0,625 & 1013 & 90 & 38 & 16,0 & 124,0 & 49\\
+		Two-Point Konstant: 0,625 & 1013 & 90 & 38 & 16 & 124 & 49\\
 		\hline
 		Two-Point Konstant: 0,75 & 1373 & 141 & 65 & 23 & 190 & 43\\
 		\hline
-		Two-Point Konstant: 0,875 & 1400 & 138 & 76 & 28,5 & 731,0 & 46\\
+		Two-Point Konstant: 0,875 & 1400 & 138 & 76 & 28,5 & 731 & 46\\
 		\hline
-		Two-Point Konstant: 1,0 & 1176 & 215 & 140 & 52 & 207,0 & 48\\
+		Two-Point Konstant: 1,0 & 1176 & 215 & 140 & 52 & 207 & 48\\
 		\hline
-		Two-Point Clegg: 0,0005 & 1446 & 189 & 99 & 31 & 205,0 & 47\\
+		Two-Point Clegg: 0,0005 & 1446 & 189 & 99 & 31 & 205 & 47\\
 		\hline
-		Two-Point Clegg: 0,0015 & 1167 & 101 & 59 & 16 & 154,0 & 45\\
+		Two-Point Clegg: 0,0015 & 1167 & 101 & 59 & 16 & 154 & 45\\
 		\hline
-		Two-Point Clegg: 0,0025 & 1396 & 100 & 53 & 19,0 & 504,5 & 44\\
+		Two-Point Clegg: 0,0025 & 1396 & 100 & 53 & 19 & 504,5 & 44\\
 		\hline
 		Two-Point Clegg: 0,0035 & 1043 & 93 & 45 & 13 & 142 & 46\\
 		\hline
-		Two-Point Clegg: 0,0045 & 1023 & 96 & 50 & 15,5 & 96,0 & 46\\
+		Two-Point Clegg: 0,0045 & 1023 & 96 & 50 & 15,5 & 96 & 46\\
 		\hline
-		Two-Point Clegg: 0,0055 & 1160 & 90 & 43 & 12,0 & 223,5 & 49\\
+		Two-Point Clegg: 0,0055 & 1160 & 90 & 43 & 12 & 223,5 & 49\\
 		\hline
-		Two-Point One-Fifth: 0,125 & 1422 & 4 & 4 & 4,0 & 226 & 45\\
+		Two-Point One-Fifth: 0,125 & 1422 & 4 & 4 & 4 & 226 & 45\\
 		\hline
-		Two-Point One-Fifth: 0,25 & 1348 & 8 & 5 & 7,0 & 404,5 & 44\\
+		Two-Point One-Fifth: 0,25 & 1348 & 8 & 5 & 7 & 404,5 & 44\\
 		\hline
-		Two-Point One-Fifth: 0,375 & 1365 & 14 & 4 & 4,0 & 460 & 46\\
+		Two-Point One-Fifth: 0,375 & 1365 & 14 & 4 & 4 & 460 & 46\\
 		\hline
 		Two-Point One-Fifth: 0,5 & 1761 & 13 & 4 & 6 & 584 & 47\\
 		\hline
@@ -652,7 +718,7 @@ Encode ohne Rekombination:
 		\hline
 		Two-Point One-Fifth: 0,75 & 1041 & 21 & 13 & 5 & 213,5 & 46\\
 		\hline
-		Two-Point One-Fifth: 0,875 & 1050 & 41 & 19 & 7 & 185,0 & 48\\
+		Two-Point One-Fifth: 0,875 & 1050 & 41 & 19 & 7 & 185 & 48\\
 		\hline
 		Two-Point One-Fifth: 1,0 & 1142 & 31 & 20 & 5 & 348 & 49\\
 	\end{tabular}
@@ -665,9 +731,11 @@ Encode ohne Rekombination:
 	\begin{tabular}{c | c | c | c | c | c | c}
 		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn} & \begin{turn}{270} \textbf{Stopp-Kriterium erfüllt} \end{turn}\\
 		\hline
-		Uniform Konstant: 0,125 & 1178 & 123 & 75 & 32 & 316,0 & 44\\
+		keine Rekombination & 1157 & 0 & 0 & - & 208 & 48\\
 		\hline
-		Uniform Konstant: 0,25 & 1233 & 156 & 90 & 45,0 & 479 & 43\\
+		Uniform Konstant: 0,125 & 1178 & 123 & 75 & 32 & 316 & 44\\
+		\hline
+		Uniform Konstant: 0,25 & 1233 & 156 & 90 & 45 & 479 & 43\\
 		\hline
 		Uniform Konstant: 0,375 & 1166 & 245 & 132 & 37 & 257,5 & 47\\
 		\hline
@@ -675,23 +743,23 @@ Encode ohne Rekombination:
 		\hline
 		Uniform Konstant: 0,625 & 1277 & 292 & 152 & 31,5 & 430 & 47\\
 		\hline
-		Uniform Konstant: 0,75 & 1301 & 269 & 141 & 33 & 382,0 & 43\\
+		Uniform Konstant: 0,75 & 1301 & 269 & 141 & 33 & 382 & 43\\
 		\hline
-		Uniform Konstant: 0,875 & 1102 & 324 & 181 & 32,0 & 467,0 & 44\\
+		Uniform Konstant: 0,875 & 1102 & 324 & 181 & 32 & 467 & 44\\
 		\hline
-		Uniform Konstant: 1,0 & 1080 & 320 & 199 & 22,0 & 176,0 & 43\\
+		Uniform Konstant: 1,0 & 1080 & 320 & 199 & 22 & 176 & 43\\
 		\hline
 		Uniform Clegg: 0,0005 & 1155 & 369 & 197 & 41 & 709 & 46\\
 		\hline
 		Uniform Clegg: 0,0015 & 793 & 255 & 147 & 17 & 81 & 48\\
 		\hline
-		Uniform Clegg: 0,0025 & 887 & 312 & 181 & 26,0 & 140,0 & 48\\
+		Uniform Clegg: 0,0025 & 887 & 312 & 181 & 26 & 140 & 48\\
 		\hline
 		Uniform Clegg: 0,0035 & 1415 & 309 & 162 & 18 & 162 & 46\\
 		\hline
 		Uniform Clegg: 0,0045 & 1404 & 294 & 153 & 18,5 & 637 & 48\\
 		\hline
-		Uniform Clegg: 0,0055 & 1364 & 294 & 141 & 20,0 & 143 & 46\\
+		Uniform Clegg: 0,0055 & 1364 & 294 & 141 & 20 & 143 & 46\\
 		\hline
 		Uniform One-Fifth: 0,125 & 1545 & 11 & 6 & 6 & 147 & 41\\
 		\hline
@@ -699,25 +767,19 @@ Encode ohne Rekombination:
 		\hline
 		Uniform One-Fifth: 0,375 & 1384 & 36 & 14 & 8,5 & 273 & 47\\
 		\hline
-		Uniform One-Fifth: 0,5 & 1718 & 59 & 28 & 6 & 848,0 & 46\\
+		Uniform One-Fifth: 0,5 & 1718 & 59 & 28 & 6 & 848 & 46\\
 		\hline
 		Uniform One-Fifth: 0,625 & 1244 & 67 & 35 & 6 & 363 & 47\\
 		\hline
-		Uniform One-Fifth: 0,75 & 1320 & 82 & 49 & 6,0 & 207,0 & 44\\
+		Uniform One-Fifth: 0,75 & 1320 & 82 & 49 & 6 & 207 & 44\\
 		\hline
-		Uniform One-Fifth: 0,875 & 1406 & 86 & 49 & 10,0 & 470,0 & 46\\
+		Uniform One-Fifth: 0,875 & 1406 & 86 & 49 & 10 & 470 & 46\\
 		\hline
 		Uniform One-Fifth: 1,0 & 1444 & 79 & 40 & 7 & 794,5 & 47\\
 	\end{tabular}
 	\caption{Koza Uniform Rekombination: Auswertung der Rohdaten}
 	\label{table:kozaUniformRohdaten}
 \end{table}
-
-Koza ohne Rekombination:
-\begin{itemize}
-	\item Median Iterationen bis Konvergenz: 208
-	\item Stopp-Kriterium erfüllt: 48
-\end{itemize}
 
 
 \subsection{Rohdatenanalyse: Zusammenfassung}
@@ -770,6 +832,8 @@ TODO: Argumentation; dass Offset nicht so viel bringt (damit Kapitel \glqq prakt
 
 
 TODO: Wieso wurde Offset überhaupt in HPO Ergebnissen (7 aus 9) verwendet?
+
+TODO: Encode und Koza Ergebnisse mit Vorsicht betrachten: Hier wurden für "keine Rekombination" eine HPO ausgeführt und für Rest nicht
 
 
 
