@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  15 MAR 2025 13:51
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  15 MAR 2025 15:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2435,28 +2435,16 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [35]
-Overfull \hbox (17.67838pt too wide) in paragraph at lines 175--207
-\TU/LinLibertine(0)/m/n/10.95 Mehrwert der Rekombination blockieren besteht die
- Frage, wieso 7 aus 9 CGP-Konfigurationen
- []
-
-
 
 [36]
 
 [37]
-Overfull \hbox (33.88708pt too wide) in paragraph at lines 211--217
-\TU/LinLibertine(0)/m/n/10.95 Die folgende Tabelle []4.3[] zeigt die Ergebnisse
- der Hyperparameteranalyse des Keijzer-Testszenarios.
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1303) has occurred while \output is active []
 
 
 
 [38]
-Underfull \hbox (badness 10000) in paragraph at lines 265--301
+Underfull \hbox (badness 10000) in paragraph at lines 269--305
 
  []
 
@@ -2470,14 +2458,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [41]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [42]
-Underfull \vbox (badness 3557) has occurred while \output is active []
-
-
 
 [43]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2485,6 +2467,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [44]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [45]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2492,9 +2477,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [46]
-Underfull \vbox (badness 3557) has occurred while \output is active []
-
-
 
 [47]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2502,37 +2484,34 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [48]
+Underfull \vbox (badness 3557) has occurred while \output is active []
+
+
 
 [49]
-Overfull \hbox (3.27357pt too wide) in paragraph at lines 694--730
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[50]
+
+[51]
+Overfull \hbox (3.27357pt too wide) in paragraph at lines 726--762
 \TU/LinLibertine(0)/b/n/10.95 Rekombinationsraten: \TU/LinLibertine(0)/m/n/10.9
 5 Bei den Ergebnissen der Hyperparameteroptimierung vom Parity-
  []
 
 
 
-[50]
-Underfull \vbox (badness 2698) has occurred while \output is active []
+[52]
 
-
-
-[51]
-Overfull \hbox (5.90866pt too wide) in paragraph at lines 804--846
+[53]
+Overfull \hbox (5.90866pt too wide) in paragraph at lines 836--878
  [][] 
  []
 
 
 Underfull \vbox (badness 1424) has occurred while \output is active []
-
-
-
-[52]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[53]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -2556,23 +2535,33 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[58]) (./Fazit.tex
+[58]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [59]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[60]
+
+
+[60]) (./Fazit.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[61]
+
+[62]
 chapter 5.
 )
 
-[61
+[63
 
 
 ]
 
-[62
+[64
 
 
 ]
@@ -2591,7 +2580,7 @@ Underfull \hbox (badness 5667) in paragraph at lines 55--55
 
 
 
-[63]
+[65]
 Underfull \hbox (badness 10000) in paragraph at lines 55--55
 []\TU/LinLibertine(0)/m/n/10.95 CuiHen. \TU/LinLibertine(0)/m/it/10.95 CuiHen/C
 GP_with_Crossover_Strategies\TU/LinLibertine(0)/m/n/10.95 . original-date: 2024
@@ -2600,15 +2589,15 @@ GP_with_Crossover_Strategies\TU/LinLibertine(0)/m/n/10.95 . original-date: 2024
 
 
 
-[64]
-
-[65]
-
 [66]
 
 [67]
 
 [68]
+
+[69]
+
+[70]
 chapter A.
 (./Anhang1.tex)
 
@@ -2631,10 +2620,10 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 Here is how much of TeX's memory you used:
  49332 strings out of 473889
  1039985 string characters out of 5734826
- 1967398 words of memory out of 5000000
+ 1968398 words of memory out of 5000000
  71700 multiletter control sequences out of 15000+600000
  562698 words of font info for 99 fonts, out of 8000000 for 9000
  1350 hyphenation exceptions out of 8191
  122i,17n,136p,10900b,6836s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Main.pdf (77 pages).
+Output written on Main.pdf (79 pages).
