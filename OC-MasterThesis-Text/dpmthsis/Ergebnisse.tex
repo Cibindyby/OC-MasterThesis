@@ -132,7 +132,7 @@ Die Tabelle zeigt einige wichtige Merkmale auf, die das CGP-Training ergeben hat
 		\hline
 		keine Rekombination & 133 & 0 & 0 & - & 58,5\\
 		\hline
-		One-Point Konstant kein Offset & 126 & 8 & 2 & 5,5 & 44,0\\
+		One-Point Konstant kein Offset & 126 & 8 & 2 & 5,5 & 44\\
 		\hline
 		One-Point Konstant mit Offset & 136 & 0 & 0 & - & 49\\
 		\hline
@@ -140,7 +140,7 @@ Die Tabelle zeigt einige wichtige Merkmale auf, die das CGP-Training ergeben hat
 		\hline
 		One-Point Clegg mit Offset & 126 & 0 & 0 & - & 43,5\\
 		\hline
-		One-Point One-Fifth kein Offset & 119 & 2 & 1 & 2,0 & 34\\
+		One-Point One-Fifth kein Offset & 119 & 2 & 1 & 2 & 34\\
 		\hline
 		One-Point One-Fifth mit Offset & 127 & 0 & 0 & - & 27,5\\
 		\hline
@@ -148,15 +148,15 @@ Die Tabelle zeigt einige wichtige Merkmale auf, die das CGP-Training ergeben hat
 		\hline
 		Two-Point Konstant mit Offset & 129 & 0 & 0 & - & 64\\
 		\hline
-		Two-Point Clegg kein Offset & 106 & 20 & 8 & 6,5 & 40,0\\
+		Two-Point Clegg kein Offset & 106 & 20 & 8 & 6,5 & 40\\
 		\hline
 		Two-Point Clegg mit Offset & 125 & 0 & 0 & - & 70,5\\
 		\hline
-		Two-Point One-Fifth kein Offset & 126 & 4 & 2 & 3,0 & 59,5\\
+		Two-Point One-Fifth kein Offset & 126 & 4 & 2 & 3 & 59,5\\
 		\hline
 		Two-Point One-Fifth mit Offset & 125 & 0 & 0 & - & 43\\
 		\hline
-		Uniform Konstant kein Offset & 85 & 44 & 15 & 14,0 & 55\\
+		Uniform Konstant kein Offset & 85 & 44 & 15 & 14 & 55\\
 		\hline
 		Uniform Konstant mit Offset & 131 & 0 & 0 & - & 37,5\\
 		\hline
@@ -164,13 +164,46 @@ Die Tabelle zeigt einige wichtige Merkmale auf, die das CGP-Training ergeben hat
 		\hline
 		Uniform Clegg mit Offset & 130 & 0 & 0 & - & 51,5\\
 		\hline
-		Uniform One-Fifth kein Offset & 108 & 22 & 12 & 5,0 & 69,5\\
+		Uniform One-Fifth kein Offset & 108 & 22 & 12 & 5 & 69,5\\
 		\hline
-		Uniform One-Fifth mit Offset & 123 & 0 & 0 & - & 54,0\\
+		Uniform One-Fifth mit Offset & 123 & 0 & 0 & - & 54\\
 	\end{tabular}
 	\caption{Parity: Auswertung der Rohdaten}
 	\label{table:parityRohdaten}
 \end{table}
+
+Betrachtet man Tabelle \ref{table:parityRohdaten} erkennt man, dass die Mutationsschritte deutlich häufiger zu einer Verbesserung der Fitness führen als es für die Rekombinationsschritte der Fall ist.
+Für die CGP-Konfigurationen mit Offset kann beobachtet werden, dass keine einzige Rekombination die Fitness verbessern konnte. 
+Dies deutet darauf hin, dass Rekombination in den ersten Iterationen des Trainings effizienter ist, da sie eigenständig zu besserer Fitness führt und nicht nur eine Kombination aus Rekombination und anschließender Mutation die Fitness verbessert.
+Um diesen Zusammenhang zu validieren, wird der Median der Iterationen betrachtet, bei denen die positiven Rekombinationen auftauchen.
+Wird dieser Wert mit dem Median der Iterationen bis zur Konvergenz verglichen, kann festgestellt werden, dass die Rekombination besonders in frühen Trainingsphasen einen höheren Mehrwert bringt.
+Für CGP-Konfigurationen mit linear fallender Rekombinationsrate werden relativ hohe Anzahlen an positiver Rekombination erreicht.
+Dies könnte damit zusammenhängen, dass bei der Initialisierung eine hohe Rekombinationsrate (0,9) gewählt wird und somit die Rekombination in den anfänglichen Iterationen wahrscheinlicher ausgeführt wird.
+Bei Verwendung der One-Fifth Regel erreichen die CGP-Modelle einen geringeren Wert an positiven Rekombinationen, was ein Zeichen dafür sein kann, dass diese Rekombinationsrate die Effizienz der Rekombination nicht sinnvoll steigert.\\
+Neben diesem Zusammenhang, dass Rekombination in früheren Iterationen zu einer besseren Fitness beitragen kann, kann auch festgestellt werden, dass komplexere Rekombinationsalgorithmen mehr positive Rekombinationen aufweisen als die leichteren.
+Dies kann darauf hindeuten, dass komplexere Rekombinationsarten wie die Uniform Rekombination die Fitness mit einer höheren Wahrscheinlichkeit verbessern.
+Betrachtet man die Mediane der Iterationen bis zur Konvergenz, sollte dementsprechend festgestellt werden können, dass die CGP-Modelle mit linear fallender Rekombinationsrate deutlich geringere Werte aufweisen als die restlichen Modelle.
+Dies ist allerdings nicht Fall.
+Alle CGP-Modelle mit Rekombination brauchen ähnlich viele Iterationen bis zur Konvergenz.
+Dies kann daran an mehreren Gründen liegen.
+Einer davon kann sein, dass der Median der Iterationen bis zur Konvergenz nur diejenigen Trainingsdurchläufe einbezieht, die das Stopp-Kriterium erfüllen. 
+Es kann also sein, dass linear fallende Rekombinationsraten dazu führen, dass mehr Testdurchläufe konvergieren.
+Dieser Trend kann also nicht in der Tabellenspalte \glqq Median Iterationen bis Konvergenz\grqq\space nachvollzogen werden.
+Ein anderer Grund könnte sein, dass nicht alle positiven Rekombinationen aus Tabelle \ref{table:parityRohdaten} auch in das Training des CGP-Modells einfließen. 
+Die Spalte \glqq Anzahl negative Mutationen\grqq\space gibt an in wie vielen Fällen eine positive Rekombination durch Mutation zerstört wurde.
+Dies heißt in solchen Trainingsschritten wurde durch Rekombination eine Verbesserung der Fitness bewirkt.
+Anschließend wurde in der gleichen Iteration ein Mutationsschritt ausgeführt, der die Fitness wieder verschlechtert.
+Da die Selektion der neuen Elitisten nur nach dem Mutationsschritt stattfindet, können Fortschritte aus dem Rekombinationsschritt verloren gehen.
+Zu beobachten ist, dass die Anzahlen der verlorenen positiven Rekombinationen höhere Werte aufweisen, wenn bereits mehr Rekombinationsschritte zu einer Verbesserung der Fitness beigetragen haben.
+Dies könnte ein Grund dafür sein, dass sich die Anzahl der positiven Rekombinationen nicht auf die Iterationen bis zur Konvergenz auswirkt.\\
+Einen Widerspruch in den Daten lässt sich finden, wenn man die Auswirkungen des Offsets mit den Ergebnissen der Hyperparameteroptimierung vergleicht.
+Da die Offsets den Mehrwert der Rekombination blockieren besteht die Frage, wieso 7 aus 9 CGP-Konfigurationen trotzdem einen Offset verwenden sollen.
+Dies kann einerseits daran liegen, dass die Hyperparameteranalyse mehr Parametersätze hätte testen müssen, um auf effizientere Ergebnisse zu stoßen.
+Ein anderer Grund könnte sein, dass die Höhe des Offsets einen Zusammenhang mit der Anzahl der negativen Mutationen aufweist.
+Es könnte sein, dass die positiven Ergebnisse der Rekombination mögliche positive Ergebnisse der Rekombination beeinflussen und anschließend (bei einer Kombination aus beiden genetischen Operatoren) eine schlechtere Fitness erzielt wird.
+Die Uniform Rekombination weist hohe Zahlen auf, wenn es um die Anzahl der negativen Mutationen geht. 
+Werden die Ergebnisse auf der Hyperparameteranalyse in Tabelle \ref{table:parityHPO} hinzugezogen, kann beobachtet werden, dass Uniform die höchsten Werte an Offsets aufweist.
+Außerdem musste keiner der Uniform-Offset-Werte korrigiert werden, da keine CGP-Konfiguration mit Uniform Rekombination den Offset anfänglich ausgesetzt hat.
 
 \subsection{Rohdatenanalyse: Keijzer}
 \label{subsec:rohdatenKeijzer}
