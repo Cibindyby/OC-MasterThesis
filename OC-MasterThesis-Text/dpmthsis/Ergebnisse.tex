@@ -179,32 +179,35 @@ Um diesen Zusammenhang zu validieren, wird der Median der Iterationen betrachtet
 Wird dieser Wert mit dem Median der Iterationen bis zur Konvergenz verglichen, kann festgestellt werden, dass die Rekombination besonders in frühen Trainingsphasen einen höheren Mehrwert bringt.
 Für CGP-Konfigurationen mit linear fallender Rekombinationsrate werden relativ hohe Anzahlen an positiver Rekombination erreicht.
 Dies könnte damit zusammenhängen, dass bei der Initialisierung eine hohe Rekombinationsrate (0,9) gewählt wird und somit die Rekombination in den anfänglichen Iterationen wahrscheinlicher ausgeführt wird.
-Bei Verwendung der One-Fifth Regel erreichen die CGP-Modelle einen geringeren Wert an positiven Rekombinationen, was ein Zeichen dafür sein kann, dass diese Rekombinationsrate die Effizienz der Rekombination nicht sinnvoll steigert.\\
-Neben diesem Zusammenhang, dass Rekombination in früheren Iterationen zu einer besseren Fitness beitragen kann, kann auch festgestellt werden, dass komplexere Rekombinationsalgorithmen mehr positive Rekombinationen aufweisen als die leichteren.
-Dies kann darauf hindeuten, dass komplexere Rekombinationsarten wie die Uniform Rekombination die Fitness mit einer höheren Wahrscheinlichkeit verbessern.
+Für die konstante Rekombinationsrate ist dies nicht der Fall, da die Rekombinationsrate laut Tabelle \ref{table:parityHPO} recht niedrig gewählt wurde (0,3).
 Betrachtet man die Mediane der Iterationen bis zur Konvergenz, sollte dementsprechend festgestellt werden können, dass die CGP-Modelle mit linear fallender Rekombinationsrate deutlich geringere Werte aufweisen als die restlichen Modelle.
 Dies ist allerdings nicht Fall.
-Alle CGP-Modelle mit Rekombination brauchen ähnlich viele Iterationen bis zur Konvergenz.
+Alle CGP-Modelle mit Rekombination brauchen ähnlich viele Iterationen bis zur Konvergenz unabhängig von der Rekombinationsraten-Art.
 Dies kann daran an mehreren Gründen liegen.
 Einer davon kann sein, dass der Median der Iterationen bis zur Konvergenz nur diejenigen Trainingsdurchläufe einbezieht, die das Stopp-Kriterium erfüllen. 
-Es kann also sein, dass linear fallende Rekombinationsraten dazu führen, dass mehr Testdurchläufe konvergieren.
-Dieser Trend kann also nicht in der Tabellenspalte \glqq Median Iterationen bis Konvergenz\grqq\space nachvollzogen werden.
+Es kann also sein, dass linear fallende Rekombinationsraten dazu führen, dass mehr Testdurchläufe konvergieren ohne dass dies in der Tabelle deutlich wird.
 Ein anderer Grund könnte sein, dass nicht alle positiven Rekombinationen aus Tabelle \ref{table:parityRohdaten} auch in das Training des CGP-Modells einfließen. 
 Die Spalte \glqq Anzahl negative Mutationen\grqq\space gibt an in wie vielen Fällen eine positive Rekombination durch Mutation zerstört wurde.
 Dies heißt in solchen Trainingsschritten wurde durch Rekombination eine Verbesserung der Fitness bewirkt.
 Anschließend wurde in der gleichen Iteration ein Mutationsschritt ausgeführt, der die Fitness wieder verschlechtert.
 Da die Selektion der neuen Elitisten nur nach dem Mutationsschritt stattfindet, können Fortschritte aus dem Rekombinationsschritt verloren gehen.
 Zu beobachten ist, dass die Anzahlen der verlorenen positiven Rekombinationen höhere Werte aufweisen, wenn bereits mehr Rekombinationsschritte zu einer Verbesserung der Fitness beigetragen haben.
-Dies könnte ein Grund dafür sein, dass sich die Anzahl der positiven Rekombinationen nicht auf die Iterationen bis zur Konvergenz auswirkt.
-Vergleicht man die CGP-Konfiguration ohne Rekombination mit den Durchschnittswerten der CGP-Konfigurationen pro Rekombinationsart (One-Point, Two-Point und Uniform), dann fällt auf, dass der Median der Iterationen bis zur Konvergenz bei CGPs ohne Rekombination höher ausfällt. 
-Das deutet darauf hin, dass es sich lohnen könnte Rekombination anzuwenden, da diese im Durchschnitt weniger Iterationen bis zu Konvergenz benötigen.
+Dies könnte ein Grund dafür sein, dass sich die Anzahl der positiven Rekombinationen nicht auf die Iterationen bis zur Konvergenz auswirkt.\\
+Bei Verwendung der One-Fifth Regel erreichen die CGP-Modelle einen geringeren Wert an positiven Rekombinationen, was ein Zeichen dafür sein kann, dass diese Rekombinationsrate die Effizienz der Rekombination nicht sinnvoll steigert.
+Außerdem kann auch festgestellt werden, dass komplexere Rekombinationsalgorithmen mehr positive Rekombinationen aufweisen als die leichteren.
+Dies kann darauf hindeuten, dass komplexere Rekombinationsarten wie die Uniform Rekombination die Fitness mit einer höheren Wahrscheinlichkeit verbessern.
+Allerdings wurden für die Uniform Rekombinationen ohne Offset laut Tabelle \ref{table:parityHPO} relativ hohe Rekombinationsraten gewählt, die auch einen Grund für die hohen positiven Rekombinationen darstellen könnten.\\
+Vergleicht man den \glqq Median Iterationen bis Konvergenz\grqq\space von CGPs ohne Rekombination mit den Durchschnittswerten pro Rekombinationsart (One-Point, Two-Point und Uniform), dann fällt auf, dass der CGPs ohne Rekombination mehr Iterationen brauchen bis sie konvergieren.
+Das deutet darauf hin, dass es sich lohnen könnte Rekombination anzuwenden, da diese im Durchschnitt weniger Iterationen bis zur Konvergenz benötigen.
 Allerdings werden hier wieder nur die Durchläufe gewertet, die das Stopp-Kriterium erreicht haben.
 Diese Aussage muss also mit der bayes'schen Analyse und der graphischen Analyse erneut bewertet werden.\\
-Einen Widerspruch in den Daten lässt sich finden, wenn man die Auswirkungen des Offsets mit den Ergebnissen der Hyperparameteroptimierung vergleicht.
+Vorerst widersprüchlich wirken die Ergebnisse, wenn man die Auswirkungen des Offsets mit den Ergebnissen der Hyperparameteroptimierung vergleicht.
 Da die Offsets den Mehrwert der Rekombination blockieren besteht die Frage, wieso 7 aus 9 CGP-Kon\-fi\-gu\-ra\-tionen trotzdem einen Offset verwenden sollen.
 Dies kann einerseits daran liegen, dass die Hyperparameteranalyse mehr Parametersätze hätte testen müssen, um auf effizientere Ergebnisse zu stoßen.
-Ein anderer Grund könnte sein, dass die Höhe des Offsets einen Zusammenhang mit der Anzahl der negativen Mutationen aufweist.
+Ein anderer Grund könnte sein, dass der Offset im Zusammenhang mit den negativen Mutationen steht.
 Es könnte sein, dass die positiven Ergebnisse der Rekombination mögliche positive Ergebnisse der Rekombination beeinflussen und anschließend (bei einer Kombination aus beiden genetischen Operatoren) eine schlechtere Fitness erzielt wird.
+In diesen Fällen würde die Rekombination Fortschritte bringen, wenn anschließend keine Mutation ausgeführt werden würde.
+Wenn aber eine Mutation ausgeführt wird, kann nicht nur der Fortschritt der Rekombination aufgehoben werden, sondern auch der potentielle Fortschritt der Mutation entfällt.
 Die Uniform Rekombination weist hohe Zahlen auf, wenn es um die Anzahl der negativen Mutationen geht. 
 Werden die Ergebnisse auf der Hyperparameteranalyse in Tabelle \ref{table:parityHPO} hinzugezogen, kann beobachtet werden, dass Uniform die höchsten Werte an Offsets aufweist.
 Außerdem musste keiner der Uniform-Offset-Werte korrigiert werden, da keine CGP-Konfiguration mit Uniform Rekombination den Offset anfänglich ausgesetzt hat.
@@ -903,7 +906,32 @@ Um die Ergebnisse und die daraus abgeleiteten Aussagen zu validieren könnte es 
 Diese sollte mit Hilfe von mehr Rechenkapazität ausgeführt werden, damit mehr Hyperparameter getestet werden können.
 Außerdem kann die Anzahl an ausgeführten CGP-Trainings pro Bewertungsschritt in der Hyperparameteranalyse höher gesetzt werden.
 Durch diese Schritte könnten sich die Ergebnisse von Parity und Keijzer aneinander angleichen, wodurch bessere Bewertungen stattfinden könnten.
-Andernfalls könnte die Aussage gestärkt werden, dass die CGP-Konfigurationen keinen Zusammenhang zur Auswahl einzelner Hyperparameter aufweisen.
+Andernfalls könnte die Aussage gestärkt werden, dass die CGP-Konfigurationen keinen Zusammenhang zur Auswahl einzelner Hyperparameter aufweisen.\\
+
+Folgend sollen die Rohdatenanalysen der vier Testszenarien Parity, Keijzer, Encode und Koza zusammengefasst und miteinander verglichen werden.
+
+Parity:
+- Mutation häufiger positiv als Rekombination
+- mit Offset keine positive Rekombination + Median Iterationen pos. Rekombinationen
+=> Rekombination in frühen Trainingsphasen effizienter
+- linear fallende Rekombination bringt hohe Zahlen an pos. Rekombination (wegen hohem Startwert 0,9)
+- Konstante Rekombination recht niedrige Werte wegen niedriger Rekombinationsrate 0,3
+- One Fifth kaum pos. Rekombinationen 
+=> könnte darauf hinweisen, dass One-Fifth keine effiziente Rekombination ergibt
+- komplexere Rekombinationsarten machen mehr pos. Rekombinationen
+=> kann heißen, dass komplexere Rekombinationen mit höherer Wahrscheinlichkeit Fitness verbessern
+=> hohe pos. Rekombinationen können aber auch von hohen Rekombinationsraten aus HPO kommen
+- alle Modelle ca. gleich viele Iterationen bis Konvergenz (nicht Clegg am besten wie gedacht) => bedeutet, dass Iterationen bis Konvergenz nicht mit pos. Rekombination zusammenhängt
+=> Grund 1: Clegg könnte mehr konvergente Durchläufe haben ohne das man das sehen könnte (ist nicht in Tabelle aufgeführt)
+=> Grund 2: negative Mutationen beeinflussen Vorteil aus pos. Rekombinationen
+- CGP ohne Rekombination brauchen länger bis Konvergenz (Achtung eingeschränkte Sicht, weil nur die konvergenten Iterationen einbezogen werden und nicht wie viele CGP konvergieren)
+=> kann trotzdem darauf hinweisen, dass es sich lohnen kann Rekombination auszuführen
+=> Bayes und Graphen müssen mehr Infos bringen
+- 7 aus 9 Offsets aktiviert, obwohl diese Rekombination blockieren -> wieso?
+=> HPO hätte evtl mehr Parametersätze testen sollen
+=> Offset im Zusammenhang mit negativen Mutationen -> negative Mutationen machen nicht nur pos. Rekombinationen kaputt, sondern verhindern auch lernen mit Mutation (also ist am Ende "keine Rekombination", weil dann wenigsten Mutation klappt)
+- Uniform hat viel Offset und auch viel neg. Mutation (+ Offset bei Uniform war nie gleich 0 in HPO)
+
 
 
 

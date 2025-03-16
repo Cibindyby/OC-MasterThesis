@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  16 MAR 2025 18:51
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  17 MAR 2025 00:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2439,14 +2439,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [36]
 
 [37]
-Underfull \vbox (badness 1303) has occurred while \output is active []
-
-
 
 [38]
-Underfull \hbox (badness 10000) in paragraph at lines 269--305
+Underfull \hbox (badness 10000) in paragraph at lines 272--308
 
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -2477,7 +2477,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [46]
-Overfull \hbox (0.4713pt too wide) in paragraph at lines 553--579
+Overfull \hbox (0.4713pt too wide) in paragraph at lines 556--582
 \TU/LinLibertine(0)/m/n/10.95 Um Zusammenhängen zwischen den CGP-Konfiguratione
 n und der Güte der CGP-Modelle
  []
@@ -2499,7 +2499,7 @@ File: Bilder/EncodePlotPositiveRekombinationOneFifth.png Graphic file (type bmp
 )
 <Bilder/EncodePlotPositiveRekombinationOneFifth.png>
 
-Overfull \hbox (0.1702pt too wide) in paragraph at lines 603--612
+Overfull \hbox (0.1702pt too wide) in paragraph at lines 606--615
 \TU/LinLibertine(0)/m/n/10.95 Rekombinationen, obwohl die Rekombination nicht w
 ahrscheinlich ausgeführt wird, könn-
  []
@@ -2541,9 +2541,14 @@ Underfull \vbox (badness 2608) has occurred while \output is active []
 
 
 [55]
-Overfull \hbox (3.27357pt too wide) in paragraph at lines 871--907
+Overfull \hbox (3.27357pt too wide) in paragraph at lines 874--910
 \TU/LinLibertine(0)/b/n/10.95 Rekombinationsraten: \TU/LinLibertine(0)/m/n/10.9
 5 Bei den Ergebnissen der Hyperparameteroptimierung vom Parity-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 874--910
+
  []
 
 
@@ -2551,21 +2556,18 @@ Overfull \hbox (3.27357pt too wide) in paragraph at lines 871--907
 [56]
 
 [57]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [58]
-Overfull \hbox (5.90866pt too wide) in paragraph at lines 983--1025
- [][] 
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [59]
+Overfull \hbox (5.90866pt too wide) in paragraph at lines 1011--1053
+ [][] 
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2595,23 +2597,26 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[65]) (./Fazit.tex
+[65]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[66]
+[66]) (./Fazit.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [67]
 
-[68
-
-
-]
+[68]
 chapter 5.
 )
 
-[69]
+[69
+
+
+]
 
 [70
 
@@ -2663,26 +2668,17 @@ chapter A.
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-09>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `Main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                Main
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'Main.run.xml'.
 \openout1 = `Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49403 strings out of 473889
- 1043350 string characters out of 5734826
- 1970103 words of memory out of 5000000
- 71765 multiletter control sequences out of 15000+600000
+ 49404 strings out of 473889
+ 1043364 string characters out of 5734826
+ 1971101 words of memory out of 5000000
+ 71766 multiletter control sequences out of 15000+600000
  562698 words of font info for 99 fonts, out of 8000000 for 9000
  1350 hyphenation exceptions out of 8191
  122i,17n,136p,10900b,6836s stack positions out of 10000i,1000n,20000p,200000b,200000s
