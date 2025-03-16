@@ -35,6 +35,9 @@ def get_row_of_table(nameOfTable, nameOfSheet, nameConfig):
 
             if row[' Fitness nach Mutation'] > row[' Fitness nach Rekombination']:
                 better_if_no_mutation_happend += 1
+                if row['Iteration'] == 1:
+                    crossover_better += 1
+                    iterations_of_successful_crossover.append(1)
 
             if row[' Fitness nach Mutation'] < fitness_finished_when:
                 anzahl_konvergent += 1
