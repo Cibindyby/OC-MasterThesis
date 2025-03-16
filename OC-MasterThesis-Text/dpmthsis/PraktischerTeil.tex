@@ -22,17 +22,15 @@ Diese können wiederum durch Boolesche Ausdrücke mathematisch beschrieben werde
 Die verschiedenen Booleschen Funktionen können durch Wahrheitstabellen dargestellt werden, in denen die jeweiligen Ein- und Ausgaben miteinander verknüpft werden. \cite{kalkreuth_towards_2023}
 Das Ziel von CGP-Algorithmen ist es aus Eingängen die richtigen Ausgänge zu generieren, welche dem Mapping der Boolean Funktionen entsprechen.\\
 
-Insgesamt werden in dieser Arbeit vier Boolesche Benchmarkprobleme für die Evaluation der CGP-Algorithmen betrachtet: 3-bit Parity, 16-4-bit Encode, 4-16-bit Decode und 3-bit Multiply (vereinfacht bezeichnet als Parity, Encode, Decode und Multiply).\\
+Insgesamt werden in dieser Arbeit zwei Boolesche Benchmarkprobleme für die Evaluation der CGP-Algorithmen betrachtet: 3-bit Parity und 16-4-bit Encode (vereinfacht bezeichnet als Parity und Encode).\\
 Obwohl Parity als zu leichtes Ausgangsproblem für GP bezeichnet wird \cite{white_better_2013}, wird es häufig als Benchmarkproblem genutzt \cite{yu_neutrality_2001, kaufmann_kalkreuth_2017, kaufmann_kalkreuth_2020}.
-Um Benchmarkprobleme mit unterschiedlichen Ein- und Ausgangsgrößen miteinzubeziehen, werden Encode und Decode verwendet.
-Sinnvoll ist es ebenfalls Testprobleme verschiedener Schwierigkeitsstufen zu bewerten.
-Multiply ist dabei ein vergleichsweise schwer zu lösendes Testproblem und wird deswegen herangezogen \cite{walker_2008}.\\
+Um Benchmarkprobleme mit unterschiedlichen Ein- und Ausgangsgrößen miteinzubeziehen, wird Encode verwendet.\\
 
-Das verwendete Standardfunktionsset aller vier Testszenarien beinhaltet die Boolesche Rechenoperatoren AND, OR, NAND und NOR.
+Das verwendete Standardfunktionsset aller Testszenarien beinhaltet die Booleschen Rechenoperatoren AND, OR, NAND und NOR.
 Außerdem wird die Standardfitnessfunktion für Boolesche Benchmarkprobleme verwendet.
 Diese wird definiert durch den Anteil an korrekt zugeordneten Bits. \cite{cui_equidistant_2023}
 Das Stopp-Kriterium ist erfüllt, wenn die Fitness den Wert 0 erreicht.
-Folgend werden die vier verwendeten Boolesche Benchmarkprobleme näher erläutert:
+Folgend werden die beiden verwendeten Boolesche Benchmarkprobleme näher erläutert:
 
 \textbf{Parity:} N-bit Parity ist eine Mapping-Funktion, die angibt, ob die Summe der Komponenten eines Binär-Vektors gerade oder ungerade ist.
 Bei 3-bit Parity handelt es sich dabei um Binär-Vektoren der Länge 3.
@@ -45,16 +43,6 @@ Ziel ist es diejenige Stelle zu finden, die die 1 hält und diese als üblichen 
 Daraus ergibt sich eine Eingabegröße von 16 und eine Ausgabegröße von vier.
 Der Testdatensatz enthält 16 verschiedene One-Hot-Kodierungen, die umgewandelt werden sollen.
 
-\textbf{Decode:} 4-16-bit Decode hat das genau umgekehrte Ziel als 16-4-bit Encode.
-Es wird ein 4-bit Integer-Wert angegeben, der durch eine 16-bit One-Hot-Kodierung dargestellt werden soll. \cite{cui_weighted_mutation}
-Demnach werden für 4-16-bit Decode vier Eingaben in 16 Ausgaben umgewandelt.
-Der Testdatensatz besteht aus 16 verschiedenen 4-bit Integerwerten.
-
-\textbf{Multiply:} Ziel von 3-bit Multiply ist die Multiplikation von zwei 3-bit Integer-Werten.
-Das Ergebnis wird durch einen 6-bit Integer-Wert dargestellt. \cite{cui_weighted_mutation}
-Folglich ist die Anzahl der CGP-Eingaben gleich 6, da beide 3-bit Faktoren als Eingang in das CGP-Modell einfließen müssen.
-Für die Ausgabe werden ebenfalls 6 Binärausgaben benötigt.
-Der Testdatensatz besteht aus $2^6=64$ verschiedenen Kombinationen der möglichen Binär-Faktoren.
 
 \subsubsection{Symbolische Regression}
 \label{subsubsec:symbolicRegression}
@@ -64,8 +52,8 @@ Das Ziel von SR ist das Erlernen einer Beziehung zwischen Ein- und Ausgängen nu
 Diese Beziehung beruht auf interpretierbaren mathematischen Ausdrücken.
 Der Fehler von errechnetem und vorgegebenem Ausgang pro Eingang soll dabei minimiert werden. \cite{makke_interpretable_2024}
 
-Die in dieser Arbeit verwendeten SR Probleme werden aus dem Paper von Cui et al. übernommen: Keijzer-6, Koza-3, Nguyen-7.
-Im folgenden werden diese durch Keijzer, Koza und Nguyen abgekürzt.
+Die beiden in dieser Arbeit verwendeten SR Probleme werden aus dem Paper von Cui et al. übernommen: Keijzer-6 und Koza-3.
+Im folgenden werden diese durch Keijzer und Koza abgekürzt.
 Sie sind von der GP-Community empfohlen und wurden bereits in früheren Arbeiten verwendet
 \cite{white_better_2013, kalkreuth_comprehensive_2020}.\\
 Der verwendete Funktionssatz besteht aus den folgenden acht mathematischen Funktionen: Addition, Subtraktion, Multiplikation, Division, Sinus, Cosinus, natürlicher Logarithmus und Exponentialfunktion.
@@ -87,8 +75,6 @@ Die folgende Tabelle \ref{table:SRProblems} beschreibt die verwendeten SR Proble
 		Keijzer & 1 & $\sum\limits_{i}^{x}\frac{1}{i}$ & E[1, 50, 1] & E[1, 120, 1]\\
 		\hline
 		Koza & 1 & $x^6−2\cdot x^4+x^2$ & U[−1, 1, 20] & -\\
-		\hline
-		Nguyen & 1 & $ln(x + 1) + ln(x^2 + 1)$ & U[0, 2, 20]  & -\\
 	\end{tabular}
 	\caption{Beschreibung SR Benchmarkprobleme nach \cite{affenzeller_positional_2024}}
 	\label{table:SRProblems}
@@ -263,7 +249,6 @@ Die folgende Liste gibt die Metriken an, die in dieser Arbeit näher betrachtet 
 \begin{itemize}
 	\item Fitness nach Rekombination
 	\item Fitness nach Mutation
-	\item Anzahl aktiver Knoten
 	\item Anteil aktiver Knoten
 \end{itemize}
 

@@ -614,12 +614,23 @@ Die hohen Anzahlen an positiven Rekombinationen, obwohl die Rekombination nicht 
 \subsection{Rohdatenanalyse: Koza}
 \label{subsec:rohdatenKoza}
 
-keine Ahnung wieso hier eine Seite leer bleibt, wenn der Text hier nicht steht
+Die folgenden Tabellen \ref{table:kozaOnePointRohdaten}, \ref{table:kozaTwoPointRohdaten} und \ref{table:kozaUniformRohdaten} zeigen die Rohdaten-Auswertungen des Koza-Testszenarios.
+Für jede CGP-Konfiguration wurden 50 Modelle innerhalb von maximal 50000 Iterationen trainiert.
+Jede der Tabellen stellt eine Rekombinationsart mit verschiedenen Parametrierungen der Rekombinationsraten dar.
+Wie in Abschnitt \ref{subsec:rohdatenEncode} wurde für das Koza-Testszenario der Offset als Parameter ausgestellt.
+Dies geht aus den Ergebnissen von Parity und Keijzer hervor, bei denen keine erfolgreichen Rekombinationsschritte ausgeführt wurden, wenn ein Offset aktiv war.
+Ziel des Abschnittes ist es die Zusammenhänge zwischen verschiedenen Rekombinationsraten-Arten und dem Erfolg des CGP-Trainings zu finden.
+Außerdem soll bestimmt werden, welche Metrik für die Auswertung der bayes'schen Analyse verwendet werden soll.
+In diesem Abschnitt werden nur die Ergebnisse von Koza ausgewertet und erlauben noch keine allgemeinen Aussagen.
+Diese werden in Abschnitt \ref{subsec:rohdatenZusammenfassung} ausgewertet, indem die Ergebnisse aus allen Testszenarien zusammengetragen und verglichen werden.
+
 
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c | c | c | c | c | c | c}
 		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn} & \begin{turn}{270} \textbf{Stopp-Kriterium erfüllt} \end{turn}\\
+		\hline
+		keine Rekombination & 1157 & - & - & - & 208 & 48\\
 		\hline
 		One-Point Konstant: 0,125 & 1338 & 9 & 8 & 42 & 616 & 41\\
 		\hline
@@ -675,6 +686,8 @@ keine Ahnung wieso hier eine Seite leer bleibt, wenn der Text hier nicht steht
 	\centering
 	\begin{tabular}{c | c | c | c | c | c | c}
 		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn} & \begin{turn}{270} \textbf{Stopp-Kriterium erfüllt} \end{turn}\\
+		\hline
+		keine Rekombination & 1157 & - & - & - & 208 & 48\\
 		\hline
 		Two-Point Konstant: 0,125 & 1383 & 41 & 24 & 106 & 106 & 45\\
 		\hline
@@ -732,6 +745,8 @@ keine Ahnung wieso hier eine Seite leer bleibt, wenn der Text hier nicht steht
 	\begin{tabular}{c | c | c | c | c | c | c}
 		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn} & \begin{turn}{270} \textbf{Stopp-Kriterium erfüllt} \end{turn}\\
 		\hline
+		keine Rekombination & 1157 & - & - & - & 208 & 48\\
+		\hline
 		Uniform Konstant: 0,125 & 1178 & 124 & 75 & 31,5 & 316 & 44\\
 		\hline
 		Uniform Konstant: 0,25 & 1233 & 157 & 90 & 44 & 479 & 43\\
@@ -780,6 +795,40 @@ keine Ahnung wieso hier eine Seite leer bleibt, wenn der Text hier nicht steht
 	\label{table:kozaUniformRohdaten}
 \end{table}
 
+Aus den Spalten \glqq Stopp-Kriterium erfüllt\grqq\space der drei Tabellen \ref{table:kozaOnePointRohdaten}, \ref{table:kozaTwoPointRohdaten} und \ref{table:kozaUniformRohdaten} geht hervor, dass relativ viele Durchgänge des CGP-Trainings konvergiert sind.
+Deswegen wird für die bayes'sche Analyse in Abschnitt \ref{subsec:bayesKoza} die Anzahl an Iterationen bis zur Konvergenz als Metrik verwendet.
+Außerdem lässt sich erkennen, dass mehr Mutationen zu einer Verbesserung der Fitness geführt haben als es die Rekombinationsschritte getan haben.
+Gleichzeitig werden einige Erfolge der Rekombinationsschritte verloren, indem anschließend noch eine Mutation ausgeführt wurde, wie in den Spalten \glqq Anzahl negative Mutationen\grqq\space zu sehen ist.
+Dies kann dadurch passieren, dass die Auswahl der Elitisten erst nach der Mutation getroffen wird und so keine Evaluation der Fitness zwischen Rekombination und Mutation stattfindet.
+Eine Möglichkeit dies zu beheben wäre es, die Elitisten nach der Rekombination mit den Elitisten nach der Mutation abzugleichen und so die besten Chromosomen zu verwenden, die aus beiden genetischen Operationen resultieren.\\
+Die Rekombination ist dabei vor allem in den frühen Iterationen erfolgreich.
+Dabei unterscheiden sich die unterschiedlichen Rekombinationsraten-Arten.
+Die Rekombination mit der One-Fifth Regel weist vor allem in den ersten Iterationen Erfolge auf, mit der linear fallenden Rekombinationsrate ist der Median etwas höher und mit der konstanten Rekombinationsrate sind teilweise relativ hohe Iterationen noch erfolgreich.
+Für die konstante Rekombinationsrate werden diese hohen Iterationsmediane allerdings nur für die One-Point und Two-Point Rekombination gesichtet.
+Dabei fällt auf, dass diese späten Rekombinationserfolge im Training nicht im Zusammenhang mit der Höhe der Rekombinationsrate stehen, da einige erhöhte Werte in den Spalten \glqq Median Iterationen positive Rekombination\grqq\space auch für kleinere Rekombinationsraten auftauchen.
+Außerdem kann kein Zusammenhang zwischen den Spalten \glqq Median Iterationen positive Rekombination\grqq\space und \glqq Median Iterationen bis Konvergenz\grqq\space gefunden werden.
+Das bedeutet, dass die Rekombinationserfolge nicht durch längeres Training automatisch auch zu späteren Iterationen stattfinden, sondern dass dieses Verhalten unabhängig von der Trainingsdauer auftritt.
+Dieses Wissen könnte genutzt werden, um so Rekombination gezielter einzusetzen.
+Beispielsweise könnte man die frühen Rekombinationserfolge der linear fallenden Rekombinationsrate nutzen, wobei diese ähnlich viele positive Rekombinationen aufweist wie die konstante Rekombinationsrate.
+So könnte man in den ersten Iterationen die Erfolge der Rekombination nutzen und anschließend die Rekombinationsrate schneller reduzieren.\\
+Werden die Iterationen betrachtet, die die Modelle bis zur Konvergenz gebraucht haben, lässt sich feststellen, dass die CGP-Modelle mit Two-Point Rekombination durchschnittlich weniger Iterationen (278) gebraucht hat als die anderen.
+Darauf folgt die Uniform Rekombination (349 Iterationen) und anschließend die One-Point Rekombination (835 Iterationen).
+Demnach sind alle Mittelwerte der Iterationsmediane bis zur Konvergenz größer als der Median der Anzahl an Iterationen, die das CGP-Modell ohne Rekombination gebraucht hat (208).
+Dabei muss allerdings beachtet werden, dass bei der CGP-Konfiguration ohne Rekombination alle Hyperparameter optimiert wurden.
+Demnach liefern die CGP-Modelle ohne Rekombination optimierte Ergebnisse während alle anderen CGP-Konfigurationen dieses Potential noch ausschöpfen können.
+Trotzdem können für einige vereinzelte CGP-Konfigurationen bereits frühere Konvergenzen bei gleicher Anzahl an erfüllten Stopp-Kriterien beobachtet werden.
+Ein Beispiel bietet die Konfiguration \glqq Uniform Clegg: 0,0015\grqq\space aus Tabelle \ref{table:kozaUniformRohdaten}.
+Dies ist ein Anzeichen dafür, dass CGP-Modelle durch Rekombination effizienter werden können, wenn die Rekombination sinnvoll eingesetzt wird.\\
+Des weiteren wurde beim Vergleich der Spalten \glqq Anzahl positive Rekombinationen\grqq, \glqq Anzahl negative Mutationen\grqq\space und \glqq Median Iterationen positive Rekombinationen\grqq mit den Spalten \glqq Median Iterationen bis Konvergenz\grqq\space und \glqq Stopp-Kriterium erfüllt\grqq\space keine zusammenhängenden Muster erkannt.
+Eine Möglichkeit dafür, dass die Anzahl der positiven Rekombinationen keine deutliche Veränderungen in der Effizienz des CGPs hervorruft, könnten die negativen Mutationen sein.
+In weiteren Tests könnte dieser Zusammenhang untersucht werden, indem keine Mutation ausgeführt wird, wenn bereits eine Rekombination die Fitness des Modells verbessert hat.
+So könnte überprüft werden, ob die CGP-Modelle mit mehr Rekombinationserfolgen auch bessere Ergebnisse liefern oder ob Mutationserfolge relevanter für ein erfolgreiches CGP-Training sind.\\
+Ein weiterer Punkt der auffällt sind die relativ hohen Zahlen der negativen Mutationen im Koza-Testszenario.
+Dies könnte daran liegen, dass die Fitness-Werte in SR Benchmarks kontinuierlich sind, während sie in booleschen Problemen durch diskrete Werte abgebildet werden.
+Dadurch können auch kleinere Trainingserfolge durch Rekombination in den Tabellen abgebildet werden.
+Dies könnte bedeuten, dass vor allen bei SR die Evaluierung nach der Rekombination als Zwischenschritt sinnvoll sein könnte.\\
+Um die positiven Rekombinationen zu bewerten wird folgende Abbildung \ref{fig:kozaPosRekombination} eingeführt:
+
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}[b]{0.32\textwidth}
@@ -802,6 +851,18 @@ keine Ahnung wieso hier eine Seite leer bleibt, wenn der Text hier nicht steht
 	\caption{Koza: Raten-Arten und Anzahl positive Rekombinationen}
 	\label{fig:kozaPosRekombination}
 \end{figure}
+
+Abbildung \ref{fig:kozaPosRekombination} beschreibt die positiven Rekombinationsraten pro CGP-Konfiguration, aufgeteilt in die verschiedenen Rekombinationsraten-Arten. 
+Dabei sind die verschiedenen Rekombinationsarten mit unterschiedlichen Farben dargestellt.
+Zu erkennen ist, dass die Uniform Rekombination für jede Rekombinationsraten-Art mehr positive Rekombinationen erzeugt als es die anderen Rekombinationsarten schaffen.
+Die Rekombination mit der One-Fifth Regel schneidet in dieser Betrachtung schlechter ab als die konstante und linear fallende Rekombinationsrate.
+Zu beachten ist, dass es sich dabei um eine quantitative Bewertung handelt.
+Es wird also nicht ersichtlich wie hoch die jeweiligen Trainingserfolge der Rekombinationen ausfallen.
+Es macht Sinn dies besonders für SR Benchmarks in weiteren Tests näher zu betrachten, da hier die Fitness einen kontinuierlichen Wert einnimmt und sich die Trainingserfolge stark voneinander unterscheiden können.\\
+Für die konstante Rekombinationsrate und diejenige mit der One-Fifth Regel, werden mit höheren Rekombinationsraten auch höhere Chancen gegeben, dass eine Rekombination die Fitness verbessert.
+Demnach macht es Sinn, dass für höhere Rekombinationsraten die Anzahl an positiven Rekombinationen steigt, wie es in den Abbildungen \ref{fig:kozaPosRekombinationKonstant} und \ref{fig:kozaPosRekombinationOneFifth} der Fall ist.
+Interessant werden demnach diejenigen lokalen Maxima, die bereits entstehen, bevor jeweils die maximale Rekombinationsrate erreicht wurde.
+In diesen Punkten könnte die Rekombinationsrate für diese Konfigurationen der Hyperparameter besonders gut ausfallen, da hier prozentual mehr ausgeführte Rekombinationen zu einer Verbesserung der Fitness führen.
 
 
 \subsection{Rohdatenanalyse: Zusammenfassung}

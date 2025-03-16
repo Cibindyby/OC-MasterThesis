@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  16 MAR 2025 14:40
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  16 MAR 2025 18:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2314,7 +2314,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--24
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--30
+Underfull \hbox (badness 10000) in paragraph at lines 25--28
 
  []
 
@@ -2326,38 +2326,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--30
 ]
 
 [22]
-Underfull \vbox (badness 2600) has occurred while \output is active []
-
-
-
-[23]
-Overfull \hbox (0.27785pt too wide) in paragraph at lines 103--115
+Overfull \hbox (0.27785pt too wide) in paragraph at lines 89--101
 \TU/LinLibertine(0)/m/n/10.95 In dieser Arbeit werden unterschiedliche \TU/LinL
 ibertine(0)/m/it/10.95 CGP-Konfigurationen \TU/LinLibertine(0)/m/n/10.95 mitein
 ander verglichen und
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--115
+Underfull \hbox (badness 10000) in paragraph at lines 89--101
 
  []
 
 
 
+[23]
+
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 180--192
+Underfull \hbox (badness 10000) in paragraph at lines 166--178
 
  []
 
 
 
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 193--200
+Underfull \hbox (badness 10000) in paragraph at lines 179--186
 
  []
 
 
-Overfull \hbox (2.01526pt too wide) in paragraph at lines 208--219
+Overfull \hbox (2.01526pt too wide) in paragraph at lines 194--205
 \TU/LinLibertine(0)/m/n/10.95 den Parametersätzen hätten für jede Kombination a
 us Testszenario und CGP-Konfiguration
  []
@@ -2365,33 +2362,36 @@ us Testszenario und CGP-Konfiguration
 
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 223--232
+Underfull \hbox (badness 10000) in paragraph at lines 209--218
 
  []
 
 
 
 [27]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 270--272
+Underfull \hbox (badness 10000) in paragraph at lines 255--257
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--279
+Underfull \hbox (badness 10000) in paragraph at lines 258--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--289
+Underfull \hbox (badness 10000) in paragraph at lines 265--274
 
  []
 
 
 
 [29]
-Underfull \hbox (badness 10000) in paragraph at lines 290--295
+Underfull \hbox (badness 10000) in paragraph at lines 275--280
 
  []
 
@@ -2522,6 +2522,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [52]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[53]
+
+[54]
 File: Bilder/KozaPlotPositiveRekombinationKonstant.png Graphic file (type bmp)
 <Bilder/KozaPlotPositiveRekombinationKonstant.png>
 File: Bilder/KozaPlotPositiveRekombinationClegg.png Graphic file (type bmp)
@@ -2529,34 +2536,19 @@ File: Bilder/KozaPlotPositiveRekombinationClegg.png Graphic file (type bmp)
 File: Bilder/KozaPlotPositiveRekombinationOneFifth.png Graphic file (type bmp)
 <Bilder/KozaPlotPositiveRekombinationOneFifth.png>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2608) has occurred while \output is active []
 
 
 
-[53]
-Overfull \hbox (3.27357pt too wide) in paragraph at lines 810--846
+[55]
+Overfull \hbox (3.27357pt too wide) in paragraph at lines 871--907
 \TU/LinLibertine(0)/b/n/10.95 Rekombinationsraten: \TU/LinLibertine(0)/m/n/10.9
 5 Bei den Ergebnissen der Hyperparameteroptimierung vom Parity-
  []
 
 
 
-[54]
-
-[55]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
 [56]
-Overfull \hbox (5.90866pt too wide) in paragraph at lines 922--964
- [][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [57]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2564,6 +2556,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [58]
+Overfull \hbox (5.90866pt too wide) in paragraph at lines 983--1025
+ [][] 
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2588,25 +2585,35 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[63]) (./Fazit.tex
+[63]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [64]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[65]
 
-[66
+
+[65]) (./Fazit.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[66]
+
+[67]
+
+[68
 
 
 ]
 chapter 5.
 )
 
-[67]
+[69]
 
-[68
+[70
 
 
 ]
@@ -2625,7 +2632,7 @@ Underfull \hbox (badness 5667) in paragraph at lines 55--55
 
 
 
-[69]
+[71]
 Underfull \hbox (badness 10000) in paragraph at lines 55--55
 []\TU/LinLibertine(0)/m/n/10.95 CuiHen. \TU/LinLibertine(0)/m/it/10.95 CuiHen/C
 GP_with_Crossover_Strategies\TU/LinLibertine(0)/m/n/10.95 . original-date: 2024
@@ -2634,15 +2641,15 @@ GP_with_Crossover_Strategies\TU/LinLibertine(0)/m/n/10.95 . original-date: 2024
 
 
 
-[70]
-
-[71]
-
 [72]
 
 [73]
 
 [74]
+
+[75]
+
+[76]
 chapter A.
 (./Anhang1.tex)
 
@@ -2656,8 +2663,17 @@ chapter A.
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-09>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `Main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                Main
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'Main.run.xml'.
 \openout1 = `Main.run.xml'.
 
@@ -2665,10 +2681,10 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 Here is how much of TeX's memory you used:
  49403 strings out of 473889
  1043350 string characters out of 5734826
- 1969126 words of memory out of 5000000
+ 1970103 words of memory out of 5000000
  71765 multiletter control sequences out of 15000+600000
  562698 words of font info for 99 fonts, out of 8000000 for 9000
  1350 hyphenation exceptions out of 8191
  122i,17n,136p,10900b,6836s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Main.pdf (83 pages).
+Output written on Main.pdf (85 pages).
