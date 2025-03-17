@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  17 MAR 2025 00:04
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  17 MAR 2025 19:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2441,12 +2441,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [37]
 
 [38]
-Underfull \hbox (badness 10000) in paragraph at lines 272--308
+Underfull \hbox (badness 10000) in paragraph at lines 273--309
 
  []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -2477,7 +2474,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [46]
-Overfull \hbox (0.4713pt too wide) in paragraph at lines 556--582
+Overfull \hbox (0.4713pt too wide) in paragraph at lines 564--590
 \TU/LinLibertine(0)/m/n/10.95 Um Zusammenhängen zwischen den CGP-Konfiguratione
 n und der Güte der CGP-Modelle
  []
@@ -2499,7 +2496,7 @@ File: Bilder/EncodePlotPositiveRekombinationOneFifth.png Graphic file (type bmp
 )
 <Bilder/EncodePlotPositiveRekombinationOneFifth.png>
 
-Overfull \hbox (0.1702pt too wide) in paragraph at lines 606--615
+Overfull \hbox (0.1702pt too wide) in paragraph at lines 614--623
 \TU/LinLibertine(0)/m/n/10.95 Rekombinationen, obwohl die Rekombination nicht w
 ahrscheinlich ausgeführt wird, könn-
  []
@@ -2541,13 +2538,13 @@ Underfull \vbox (badness 2608) has occurred while \output is active []
 
 
 [55]
-Overfull \hbox (3.27357pt too wide) in paragraph at lines 874--910
+Overfull \hbox (3.27357pt too wide) in paragraph at lines 883--919
 \TU/LinLibertine(0)/b/n/10.95 Rekombinationsraten: \TU/LinLibertine(0)/m/n/10.9
 5 Bei den Ergebnissen der Hyperparameteroptimierung vom Parity-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 874--910
+Underfull \hbox (badness 10000) in paragraph at lines 883--919
 
  []
 
@@ -2558,21 +2555,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 874--910
 [57]
 
 [58]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [59]
-Overfull \hbox (5.90866pt too wide) in paragraph at lines 1011--1053
- [][] 
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [60]
+Overfull \hbox (5.90866pt too wide) in paragraph at lines 1032--1074
+ [][] 
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2602,23 +2596,30 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[66]) (./Fazit.tex
+[66]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[67]
+[67]) (./Fazit.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [68]
-chapter 5.
-)
 
-[69
+[69]
+
+[70
 
 
 ]
+chapter 5.
+)
 
-[70
+[71]
+
+[72
 
 
 ]
@@ -2637,7 +2638,7 @@ Underfull \hbox (badness 5667) in paragraph at lines 55--55
 
 
 
-[71]
+[73]
 Underfull \hbox (badness 10000) in paragraph at lines 55--55
 []\TU/LinLibertine(0)/m/n/10.95 CuiHen. \TU/LinLibertine(0)/m/it/10.95 CuiHen/C
 GP_with_Crossover_Strategies\TU/LinLibertine(0)/m/n/10.95 . original-date: 2024
@@ -2646,15 +2647,15 @@ GP_with_Crossover_Strategies\TU/LinLibertine(0)/m/n/10.95 . original-date: 2024
 
 
 
-[72]
-
-[73]
-
 [74]
 
 [75]
 
 [76]
+
+[77]
+
+[78]
 chapter A.
 (./Anhang1.tex)
 
@@ -2675,12 +2676,12 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49404 strings out of 473889
- 1043364 string characters out of 5734826
- 1971101 words of memory out of 5000000
- 71766 multiletter control sequences out of 15000+600000
+ 49400 strings out of 473889
+ 1043309 string characters out of 5734826
+ 1972104 words of memory out of 5000000
+ 71762 multiletter control sequences out of 15000+600000
  562698 words of font info for 99 fonts, out of 8000000 for 9000
  1350 hyphenation exceptions out of 8191
  122i,17n,136p,10900b,6836s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Main.pdf (85 pages).
+Output written on Main.pdf (87 pages).
