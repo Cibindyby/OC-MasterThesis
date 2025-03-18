@@ -6,7 +6,7 @@ Encode Uniform Konstant: 0,25 & (0.02356, 0.06581) & 0.03963\\
 \hline
 Encode Uniform Konstant: 0,375 & (0.03039, 0.07186) & 0.047\\
 \hline
-Encode Uniform Konstant: 0,5 & (0.02241, 0.05759) & 0.03583\\
+Encode Uniform Konstant: 0,5 & (0.01916, 0.0637) & 0.03541\\
 \hline
 Encode Uniform Konstant: 0,625 & (0.02416, 0.05673) & 0.03719\\
 \hline
@@ -41,4 +41,6 @@ Encode Uniform One-Fifth: 0,625 & (0.02459, 0.06074) & 0.03881\\
 Encode Uniform One-Fifth: 0,75 & (0.02107, 0.06167) & 0.03642\\
 \hline
 Encode Uniform One-Fifth: 0,875 & (0.03182, 0.07718) & 0.04969\\
+\hline
+Encode Uniform One-Fifth: 1,0 & (0.02304, 0.06027) & 0.03742\\
 \hline

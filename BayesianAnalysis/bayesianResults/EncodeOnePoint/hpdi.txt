@@ -42,3 +42,5 @@ Encode One-Point One-Fifth: 0,75 & (0.02746, 0.06625) & 0.04286\\
 \hline
 Encode One-Point One-Fifth: 0,875 & (0.02436, 0.05364) & 0.03622\\
 \hline
+Encode One-Point One-Fifth: 1,0 & (0.02887, 0.06487) & 0.04343\\
+\hline
