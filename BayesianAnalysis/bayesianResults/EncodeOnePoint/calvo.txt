@@ -1,23 +1,24 @@
-Encode keine Rekombination           0.040300
-Encode One-Point Konstant: 0,125     0.039235
-Encode One-Point Konstant: 0,25      0.044399
-Encode One-Point Konstant: 0,375     0.052266
-Encode One-Point Konstant: 0,5       0.041112
-Encode One-Point Konstant: 0,625     0.039622
-Encode One-Point Konstant: 0,75      0.047276
-Encode One-Point Konstant: 0,875     0.042973
-Encode One-Point Konstant: 1,0       0.040402
-Encode One-Point Clegg: 0,0005       0.058275
-Encode One-Point Clegg: 0,0015       0.033251
-Encode One-Point Clegg: 0,0025       0.036894
-Encode One-Point Clegg: 0,0035       0.043415
-Encode One-Point Clegg: 0,0045       0.047645
-Encode One-Point Clegg: 0,0055       0.044801
-Encode One-Point One-Fifth: 0,125    0.048045
-Encode One-Point One-Fifth: 0,25     0.053389
-Encode One-Point One-Fifth: 0,375    0.049249
-Encode One-Point One-Fifth: 0,5      0.060271
-Encode One-Point One-Fifth: 0,625    0.045892
-Encode One-Point One-Fifth: 0,75     0.041786
-Encode One-Point One-Fifth: 0,875    0.049501
+Encode keine Rekombination           0.037632
+Encode One-Point Konstant: 0,125     0.038324
+Encode One-Point Konstant: 0,25      0.042129
+Encode One-Point Konstant: 0,375     0.051500
+Encode One-Point Konstant: 0,5       0.039946
+Encode One-Point Konstant: 0,625     0.037295
+Encode One-Point Konstant: 0,75      0.043181
+Encode One-Point Konstant: 0,875     0.043490
+Encode One-Point Konstant: 1,0       0.038647
+Encode One-Point Clegg: 0,0005       0.055842
+Encode One-Point Clegg: 0,0015       0.033818
+Encode One-Point Clegg: 0,0025       0.036098
+Encode One-Point Clegg: 0,0035       0.041856
+Encode One-Point Clegg: 0,0045       0.048900
+Encode One-Point Clegg: 0,0055       0.041741
+Encode One-Point One-Fifth: 0,125    0.045181
+Encode One-Point One-Fifth: 0,25     0.047502
+Encode One-Point One-Fifth: 0,375    0.046065
+Encode One-Point One-Fifth: 0,5      0.059094
+Encode One-Point One-Fifth: 0,625    0.044798
+Encode One-Point One-Fifth: 0,75     0.039122
+Encode One-Point One-Fifth: 0,875    0.050632
+Encode One-Point One-Fifth: 1,0      0.037210
 dtype: float64

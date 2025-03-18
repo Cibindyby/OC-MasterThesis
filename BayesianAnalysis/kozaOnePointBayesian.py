@@ -12,7 +12,7 @@ def calvo_and_hpdi_for_all():
 
     calvo_names = []
     calvo_results = []
-    for i in range(0,22,1):
+    for i in range(0,23,1):
         data = np.load(f"BayesianAnalysis/helperForLinuxVM/kozaOnePointData/data{i}.npz")
         last_iterations_all = data["last_iterations_all"]
         last_iterations_finished = data["last_iterations_finished"]
@@ -71,8 +71,9 @@ def hpdi(result, max_iteration_without_censoring, number_censored, name_algo):
     print("HDPI Algo 1: ", hdi)
     data = np.concatenate(model.infdata_.posterior.mean2)
     data = np.sort(data)
-    mean = np.mean(data)
-    hdi = (data[int(len(data) * 0.025)], data[int(len(data) * 0.975)])
+    hdi = (round(data[int(len(data) * 0.025)],3), round(data[int(len(data) * 0.975)], 3))
+
+    mean = round(np.mean(data),3)
     print("HDPI Algo 2: ", hdi)
 
 

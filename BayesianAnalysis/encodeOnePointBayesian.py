@@ -15,7 +15,7 @@ def calvo_and_hpdi_for_all():
 
     calvo_names = []
     calvo_results = []
-    for i in range(0,22,1):
+    for i in range(0,23,1):
         data = np.load(f"BayesianAnalysis/helperForLinuxVM/encodeOnePointData/data{i}.npz")
         array = data["last_iterations_all"]
         name = data["name_of_algo"].item().decode()

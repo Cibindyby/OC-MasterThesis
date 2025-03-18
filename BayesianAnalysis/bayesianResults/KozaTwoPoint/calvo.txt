@@ -1,23 +1,24 @@
-Koza keine Rekombination           0.044276
-Koza Two-Point Konstant: 0,125     0.050079
-Koza Two-Point Konstant: 0,25      0.043383
-Koza Two-Point Konstant: 0,375     0.042903
-Koza Two-Point Konstant: 0,5       0.047157
-Koza Two-Point Konstant: 0,625     0.052680
-Koza Two-Point Konstant: 0,75      0.036253
-Koza Two-Point Konstant: 0,875     0.039958
-Koza Two-Point Konstant: 1,0       0.058410
-Koza Two-Point Clegg: 0,0005       0.046851
-Koza Two-Point Clegg: 0,0015       0.040274
-Koza Two-Point Clegg: 0,0025       0.039712
-Koza Two-Point Clegg: 0,0035       0.052770
-Koza Two-Point Clegg: 0,0045       0.049098
-Koza Two-Point Clegg: 0,0055       0.059170
-Koza Two-Point One-Fifth: 0,125    0.042831
-Koza Two-Point One-Fifth: 0,25     0.033087
-Koza Two-Point One-Fifth: 0,375    0.033814
-Koza Two-Point One-Fifth: 0,5      0.034314
-Koza Two-Point One-Fifth: 0,625    0.051706
-Koza Two-Point One-Fifth: 0,75     0.047033
-Koza Two-Point One-Fifth: 0,875    0.054242
+Koza keine Rekombination           0.041976
+Koza Two-Point Konstant: 0,125     0.043277
+Koza Two-Point Konstant: 0,25      0.040612
+Koza Two-Point Konstant: 0,375     0.042435
+Koza Two-Point Konstant: 0,5       0.044918
+Koza Two-Point Konstant: 0,625     0.050621
+Koza Two-Point Konstant: 0,75      0.035667
+Koza Two-Point Konstant: 0,875     0.037577
+Koza Two-Point Konstant: 1,0       0.054635
+Koza Two-Point Clegg: 0,0005       0.044844
+Koza Two-Point Clegg: 0,0015       0.043259
+Koza Two-Point Clegg: 0,0025       0.031819
+Koza Two-Point Clegg: 0,0035       0.050110
+Koza Two-Point Clegg: 0,0045       0.045218
+Koza Two-Point Clegg: 0,0055       0.056192
+Koza Two-Point One-Fifth: 0,125    0.041023
+Koza Two-Point One-Fifth: 0,25     0.032085
+Koza Two-Point One-Fifth: 0,375    0.032155
+Koza Two-Point One-Fifth: 0,5      0.034781
+Koza Two-Point One-Fifth: 0,625    0.049453
+Koza Two-Point One-Fifth: 0,75     0.043354
+Koza Two-Point One-Fifth: 0,875    0.052401
+Koza Two-Point One-Fifth: 1,0      0.051587
 dtype: float64
