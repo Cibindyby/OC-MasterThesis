@@ -1117,15 +1117,55 @@ Dementsprechend wäre es für das Standard-CGP-Verfahren empfehlenswert verschie
 Für die Testszenarien Parity und Keijzer wurde in den Evaluationen der bayes'schen Analyse in den Abschnitten \ref{subsec:bayesParity} und \ref{subsec:bayesKeijzer} herausgefunden, dass kleine untere Grenzen in den HPDI-Werten sehr wahrscheinlich eine kleine Intervallgröße hervorbringen.
 Bei diesen bayes'schen Analysen wurde allerdings die Anzahl der Iteration bis zur Konvergenz betrachtet, nicht so wie bei Encode, bei dem die Fitness zu einer bestimmten Iteration betrachtet wird.
 Demnach soll diese Beobachtung für den Fall der Fitness-Bewertung auch betrachtet werden.
-Wenn diese Behauptung für die Fitness-HPDI-Werte zutrifft, kann es keine HPDI-Intervalle geben, die ineinander liegen, denn dann würde ein kleinerer unterer Grenzwert ein größeres Intervall mit sich ziehen.
-Allerdings fällt bereits bei der Betrachtung der ersten Tabelle \ref{table:encodeOnePointBayesian} auf, dass diese Beobachtung für die Fitness-Bewertung nicht zutrifft.
-Ein Gegenbeispiel ergeben die beiden fett gedruckten HPDI-Werte dieser Tabelle, wobei ein Intervall in dem anderen liegt.
+Allerdings fällt bei der Betrachtung der Tabelle \ref{table:encodeTwoPointBayesian} auf, dass diese Beobachtung für die Fitness-Bewertung nicht zutrifft:
+Ein Gegenbeispiel ergeben die drei fett gedruckten HPDI-Werte dieser Tabelle, die alle drei die kleinsten untersten Grenzen abbilden.
+Diese kleinen unteren Grenzen führen allerdings zu relativ großen HPDI-Ranges.
 Dementsprechend kann keine Aussage darüber gemacht werden die gut die Fitnesswerte der anderen Durchläufe zu einer bestimmten Iteration sind, wenn bereits bekannt ist, dass einige Fitness-Werte sehr klein sind.
 
 
 \subsection{Bayes'sche Analyse: Koza}
 \label{subsec:bayesKoza}
 
+TODO: bei Encode Einleitungstext einfügen, dass Ergebnisse mit Rekombination noch verbessert werden können durch HPO
+
+Einleitungstext:
+- bei Koza Iterationen bis Konvergenz bewertet
+- alle Aussagen beziehen sich nur auf Koza
+- Ohne Rekombination hat HPO -> Ergebnisse dementsprechend bewertet, dass Rekombination-CGPs noch verbessert werden können
+
+
+MW:
+- One-Point: keins besser als ohne Rekombination
+- Two-Point 5 aus 22 besser als ohne Rekombination
+- Uniform 3 aus 22 besser als Rekombination
+- Tabelle Mittelwerte der Rekombinationsraten-Arten pro Rekombinationsart (alles nur ungefähre Werte)
+- Uniform funktioniert Clegg besonders gut (sogar bester Mittelwert in Tabelle und um einiges besser als bester Mittelwert für Two-Point); aber hohe konstante Rate nicht => heißt für viele Iterationen (die Koza nunmal braucht) ist es sinnvoll Uniform zu nehmen, wegen hoher Anzahl an positiven Rekombinationen (überwiegt wahrscheinlich Mutationserfolge) und danach weniger Rekombination (für so lange Testverfahren bringt die der kleine Delta-Wert bei Clegg auch mehr) 
+- sonst keine Muster erkannt
+
+\begin{table}[H]
+	\centering
+	\begin{tabular} {c | c | c | c}
+		& \textbf{Konstant} & \textbf{Clegg} & \textbf{One-Fifth} \\
+		\hline
+		\textbf{One-Point Rekombination} & 22164 & 19272 & 14804\\
+		\hline
+		\textbf{Two-Point Rekombination} & 9510 & 8509 & 8444 \\
+		\hline
+		\textbf{Uniform Rekombination} & 12599 & 7015 & 11273 \\
+	\end{tabular}
+	\caption{Koza: Durchschnittliche Iterationen bei Konvergenz}
+	\label{table:kozaMW}
+\end{table}
+
+HPDI:
+- kleine/große untere und obere Grenzen markiert
+- fallen in den meisten Fällen aufeinander
+- bei Ausnahmen ähnliche Werte
+- kleine untere und obere Grenzen haben weniger Range + andersherum
+=> frühe Konvergenzen mehrerer Durchläufe (keine Ausreißer) bedeuten kleine Streuung
+=> das heißt die anderen Durchläufe müssen auch zeitig fertig werden
+=> für späte ersten Konvergenzen große Streuung
+=> die anderen Durchläufe werden noch später fertig
 
 
 \subsection{Bayes'sche Analyse: Zusammenfassung}
