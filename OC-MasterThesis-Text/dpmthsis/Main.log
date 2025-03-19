@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  18 MAR 2025 15:39
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  19 MAR 2025 12:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1609,6 +1609,9 @@ Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 \rot@float@box=\box78
 \rot@mess@toks=\toks47
 )
+(c:/texlive/2024/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+)
 (c:/texlive/2024/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
 
@@ -1850,26 +1853,26 @@ Package csquotes Info: Redefining alias 'default' -> 'german'.
  (./Main.aux)
 \openout1 = `Main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 
 Package fontspec Info: 
 (fontspec)             Adjusting the maths setup (use [no-math] to avoid
@@ -1877,74 +1880,74 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 22.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 22.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 22.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 22.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 22.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 22.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 22.
-LaTeX Font Info:    Redeclaring math accent \check on input line 22.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 22.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 22.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 22.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 22.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 22.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 22.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 22.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 22.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 22.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 22.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 22.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 22.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 22.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 22.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 22.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 22.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 23.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 23.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 23.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 23.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 23.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 23.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 23.
+LaTeX Font Info:    Redeclaring math accent \check on input line 23.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 23.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 23.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 23.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 23.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 23.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 23.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 23.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 23.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 23.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 23.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 23.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 23.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 23.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 23.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 23.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 23.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 22.
+(Font)              `operators' in the math version `normal' on input line 23.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/LinLibertine(0)/m/n on input line 22
+(Font)                  OT1/cmr/m/n --> TU/LinLibertine(0)/m/n on input line 23
 .
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 22.
+(Font)              `operators' in the math version `bold' on input line 23.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/LinLibertine(0)/m/n on input line 2
-2.
+3.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/LinLibertine(0)/m/n --> TU/LinLibertine(0)/m/n on in
-put line 22.
+put line 23.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/LinLibertine(0)/m/it on input line 
-22.
+23.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/LinLibertine(0)/b/n on input line 2
-2.
+3.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/LinBiolinum(0)/m/n on input line 22
+(Font)                  OT1/cmss/m/n --> TU/LinBiolinum(0)/m/n on input line 23
 .
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/inconsolata(0)/m/n on input line 22
+(Font)                  OT1/cmtt/m/n --> TU/inconsolata(0)/m/n on input line 23
 .
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/LinLibertine(0)/m/n --> TU/LinLibertine(0)/b/n on in
-put line 22.
+put line 23.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> TU/LinLibertine(0)/b/it on input line
- 22.
+ 23.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/LinBiolinum(0)/b/n on input line 2
-2.
+3.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/inconsolata(0)/b/n on input line 22
+(Font)                  OT1/cmtt/m/n --> TU/inconsolata(0)/b/n on input line 23
 .
-LaTeX Info: Redefining \microtypecontext on input line 22.
-Package microtype Info: Applying patch `item' on input line 22.
-Package microtype Info: Applying patch `toc' on input line 22.
-Package microtype Info: Applying patch `eqnum' on input line 22.
-Package microtype Info: Applying patch `footnote' on input line 22.
-Package microtype Info: Applying patch `verbatim' on input line 22.
-LaTeX Info: Redefining \microtypesetup on input line 22.
+LaTeX Info: Redefining \microtypecontext on input line 23.
+Package microtype Info: Applying patch `item' on input line 23.
+Package microtype Info: Applying patch `toc' on input line 23.
+Package microtype Info: Applying patch `eqnum' on input line 23.
+Package microtype Info: Applying patch `footnote' on input line 23.
+Package microtype Info: Applying patch `verbatim' on input line 23.
+LaTeX Info: Redefining \microtypesetup on input line 23.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
@@ -1967,7 +1970,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 
 ))
-Package hyperref Info: Link coloring OFF on input line 22.
+Package hyperref Info: Link coloring OFF on input line 23.
  (./Main.out)
 (./Main.out)
 \@outlinefile=\write5
@@ -1980,7 +1983,7 @@ Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           `bookmarkpackage=false' before \begin{document} and
 (scrbook)           you can avoid this message adding:
 (scrbook)             \usepackage{bookmark}
-(scrbook)           before \begin{document} on input line 22.
+(scrbook)           before \begin{document} on input line 23.
  (c:/texlive/2024/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
 
@@ -2006,8 +2009,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Main.bbl' found.
  (./Main.bbl)
-Package biblatex Info: Reference section=0 on input line 22.
-Package biblatex Info: Reference segment=0 on input line 22.
+Package biblatex Info: Reference section=0 on input line 23.
+Package biblatex Info: Reference segment=0 on input line 23.
 File: out/CoverDE.pdf Graphic file (type pdf)
 <use out/CoverDE.pdf>
 File: out/CoverDE.pdf Graphic file (type pdf)
@@ -2054,8 +2057,8 @@ LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/b/n' will be
 
 ]
 LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/b/n' will be
-(Font)              scaled to size 20.74pt on input line 37.
-Package tocbasic Info: character protrusion at toc deactivated on input line 37
+(Font)              scaled to size 20.74pt on input line 38.
+Package tocbasic Info: character protrusion at toc deactivated on input line 38
 .
  (./Main.toc
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/n' will be
@@ -2077,7 +2080,7 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 
 
 [6]
-Package tocbasic Info: character protrusion at lof deactivated on input line 38
+Package tocbasic Info: character protrusion at lof deactivated on input line 39
 .
  (./Main.lof)
 \tf@lof=\write7
@@ -2556,21 +2559,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 883--919
 
 [58]
 
-[59]) (./Fazit.tex
+[59]
+
+[60]
+
+Package caption Warning: \label without proper reference on input line 66.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `table:parityBayesian' on page 61 undefined on input l
+ine 1004.
+
+
+Package caption Warning: \label without proper reference on input line 66.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `table:parityBayesian' on page 61 undefined on input l
+ine 1008.
+
+
+Package caption Warning: \label without proper reference on input line 66.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `table:parityBayesian' on page 61 undefined on input l
+ine 1019.
+
+
+Package caption Warning: \label without proper reference on input line 66.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `table:parityBayesian' on page 61 undefined on input l
+ine 1026.
+
+
+
+[61]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[60]
-
-[61]
-
-[62
-
-
-]
-chapter 5.
-)
+[62]) (./Fazit.tex
 
 [63]
 
@@ -2578,14 +2609,23 @@ chapter 5.
 
 
 ]
+chapter 5.
+)
+
+[65]
+
+[66
+
+
+]
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/sc' will be
-(Font)              scaled to size 10.95pt on input line 54.
+(Font)              scaled to size 10.95pt on input line 55.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `inconsolata' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 5667) in paragraph at lines 55--55
+Underfull \hbox (badness 5667) in paragraph at lines 56--56
 []\TU/LinLibertine(0)/m/n/10.95 Fredrik Bagge Carlson. \TU/LinLibertine(0)/m/it
 /10.95 baggepinnen/Hyperopt.jl\TU/LinLibertine(0)/m/n/10.95 . original-date: 20
 18-08-
@@ -2593,8 +2633,8 @@ Underfull \hbox (badness 5667) in paragraph at lines 55--55
 
 
 
-[65]
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
+[67]
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
 []\TU/LinLibertine(0)/m/n/10.95 CuiHen. \TU/LinLibertine(0)/m/it/10.95 CuiHen/C
 GP_with_Crossover_Strategies\TU/LinLibertine(0)/m/n/10.95 . original-date: 2024
 -03-
@@ -2602,15 +2642,15 @@ GP_with_Crossover_Strategies\TU/LinLibertine(0)/m/n/10.95 . original-date: 2024
 
 
 
-[66]
-
-[67]
-
 [68]
 
 [69]
 
 [70]
+
+[71]
+
+[72]
 chapter A.
 (./Anhang1.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2623,7 +2663,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-Overfull \hbox (5.90866pt too wide) in paragraph at lines 73--115
+Overfull \hbox (5.90866pt too wide) in paragraph at lines 76--118
  [][] 
  []
 
@@ -2669,6 +2709,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-09>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `Main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'Main.run.xml'.
@@ -2676,12 +2720,12 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49414 strings out of 473889
- 1043550 string characters out of 5734826
- 1972514 words of memory out of 5000000
- 71776 multiletter control sequences out of 15000+600000
+ 49489 strings out of 473889
+ 1044781 string characters out of 5734826
+ 1975496 words of memory out of 5000000
+ 71848 multiletter control sequences out of 15000+600000
  562698 words of font info for 99 fonts, out of 8000000 for 9000
  1350 hyphenation exceptions out of 8191
  122i,17n,136p,10900b,6836s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Main.pdf (87 pages).
+Output written on Main.pdf (89 pages).

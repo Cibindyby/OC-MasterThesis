@@ -970,12 +970,71 @@ Die folgenden Abschnitte \ref{sec:ergebnisseBayes} und \ref{sec:ergebnissePlots}
 \section{Ergebnisse Bayes'sche Analyse}
 \label{sec:ergebnisseBayes}
 
-TODO: Tabellen beschreiben
-TODO: Encode Fitness
-TODO: Koza Iterationen
+In diesem Abschnitt werden die Ergebnisse der bayes'schen Analyse aufgezeigt und bewertet.
+Dafür werden die Tabellen aus dem Anhang \ref{sec:appendixTabellenBayes} verwendet.
+Aus den Ergebnissen der Rohdatenanalyse von Encode (Abschnitt \ref{subsec:rohdatenEncode}) und Koza (Abschnitt \ref{subsec:rohdatenKoza}) geht hervor, dass für Encode die Fitness bei der 10000. Iteration bewertet wird und für Koza die Anzahl der Iterationen bis zur Konvergenz.
+Für die restlichen Testszenarien Parity und Keijzer wird ebenfalls die Anzahl der Iterationen bis zur Konvergenz analysiert.
+Ziel der bayes'schen Analyse ist es herauszufinden, ob Rekombination die Effizienz von CGPs verbessern.
+Aus Abschnitt \ref{subsec:rohdatenZusammenfassung} geht hervor, dass Rekombination ein vermutlich größeres Potential besitzt als mit Standard-Vorgehensweisen genutzt wird.
+Die bayes'sche Analyse wird verwendet, um die Effizienz der Standard-Vorgehensweisen mit und ohne Rekombination abzugleichen.\\
+Folgend werden die Spalten der Tabellen näher erläutert:\\
+\textbf{CGP-Konfiguration:} Es handelt sich um die jeweils für das Training verwendete CGP-Konfiguration.
+Für Parity und Keijzer sind das die durch die Hyperparameteranalyse optimierten CGP-Konfigurationen mit und ohne Offset.
+Bei Encode und Koza wird der Offset wie in den Abschnitten \ref{subsec:rohdatenEncode} und \ref{subsec:rohdatenKoza} beschrieben kein Offset betrachtet.
+Dafür werden jeweils verschiedene Belegungen der Rekombinationsraten analysiert.\\
+\textbf{HPDI (Iter. / Fitn.):} Diese Spalte gibt den HPDI von 95\% an.
+\glqq Iter.\grqq\space und \glqq Fitn.\grqq\space gibt dabei an, ob dabei die Fitness oder die Anzahl der Iterationen bewertet werden.
+Die HPDI-Berechnung kann ebenfalls mit zensierten Werten umgehen.
+Dies wird für die Analyse der Iterationen bis zur Konvergenz relevant.
+Dabei wird dem Modell mitgegeben wie viele CGP-Modelle nicht konvergiert sind und bei welcher Iteration ungefähr alle Durchläufe das Stopp-Kriterium erfüllen.
+Diese Bewertung enthält demnach Schätzwerte und sind mit Vorsicht zu bewerten.
+Die Schätzwerte bewerten wie hoch die Fitness zur Abbruchiteration ist und lassen diese Information in die Schätzung einfließen.
+Da für alle bewerteten CGP-Konfigurationen das gleiche Verfahren angewendet wurde, sollten die Ergebnisse allerdings miteinander vergleichbar sein können.\\
+\textbf{MW:} Diese Spalte gibt den Mittelwert der gefitteten Wahrscheinlichkeitsverteilung an.\\
+\textbf{PL-Platz:} Dabei handelt es sich um die Platzierung der CGP-Konfigurationen mit Hilfe des Plackett-Luce-Modells.
+Die Platzierung gibt eine Wahrscheinlichkeit an, dass die jeweilige CGP-Konfiguration die besten Ergebnisse liefert.
+Demnach werden Werte von 0 bis 1 vergeben, die zusammen 100\% ergeben.
+Das Plackett-Luce-Modell kann mit einer Zensur der Daten nicht umgehen.
+Deswegen wurden dem Modell die jeweils vorliegenden Ergebnissen zur Abbruchiteration mitgegeben.
+
 
 \subsection{Bayes'sche Analyse: Parity}
 \label{subsec:bayesParity}
+
+Dieser Abschnitt bezieht sich auf die Tabelle \ref{table:parityBayesian} und bewertet lediglich die Ergebnisse der bayes'schen Analyse von Parity.
+Jegliche Aussagen können noch nicht auf die Allgemeinheit geschlossen werden und werden in Abschnitt \ref{subsec:bayesZusammenfassung} näher bewertet.\\
+Werden die MW der verschiedenen CGP-Modelle betrachtet, wird deutlich, dass nur 2 der 18 CGP-Konfigurationen mit Rekombination schlechter abschneiden als diejenige ohne Rekombination.
+Das ist ein Zeichen dafür, dass Rekombination durchaus die Effizienz von CGP steigern kann, wenn die Rekombination sinnvoll konfiguriert wird.\\
+Die jeweils drei niedrigsten MW und drei höchsten PL-Plätze sind in der Tabelle \ref{table:parityBayesian} grün markiert, während die drei höchsten MW und drei niedrigsten PL-Plätze rot sind.
+Zu sehen ist, dass die MW und PL-Plätze nicht genau die gleichen CGP-Konfigurationen als gleich gut oder schlecht bewerten.
+Dies kann daher rühren, dass in die Berechnung der MW die Schätzwerte einfließen, wann ein CGP-Modell konvergiert.
+Für die Berechnung der PL-Plätze ist das nicht der Fall.
+Die MW geben also mehr Eindrücke daraus wie nah die CGP-Modelle an der Konvergenz sind, wenn sie das Stopp-Kriterium noch nicht erfüllt haben.
+Allerdings handelt es sich dabei wie bereits erwähnt um einen Schätzwert, der durchaus mit Vorsicht betrachtet werden muss.
+Die Tabelle zeigt aber, dass die Trends ob eine CGP-Konfiguration gute oder schlechte Ergebnisse hervorbringt durch MW und PL-Plätze gleich bewertet werden.
+Bei den Unterschieden handelt es sich nur um einzelne Platzierungen der CGP-Konfigurationen.
+Durch die gemeinsame Betrachtung von MW und PL-Plätze kann demnach ein gutes Bild davon gegeben werden wie effizient einzelne CGP-Modelle trainieren.
+Werden die besten und schlechtesten MW und PL-Plätze in der Tabelle betrachtet, wird deutlich, dass die CGP-Konfigurationen mit der One-Point Rekombination deutlich bessere Ergebnisse liefert als die anderen Rekombinationsarten.
+Da aus Abschnitt \ref{subsec:rohdatenParity} bekannt ist, dass für die One-Point Rekombination deutlich weniger Rekombinationserfolge auftreten als bei den anderen Rekombinationsarten, kann davon ausgegangen werden, dass bei bei diesen CGP-Konfigurationen die Rekombination weniger Einfluss auf den Erfolg des Trainings hat.
+Vergleicht man die schlechtesten Verfahren nach MW und PL-Plätzen mit Rekombination ohne Offset aus Tabelle \ref{table:parityBayesian} mit der Tabelle \ref{table:parityRohdaten} kann beobachtet werden, dass der Anteil der negativen Mutationen pro positive Rekombinationen relativ hoch ist.
+Das kann dafür sprechen, dass Rekombination mit dem Standard-CGP-Verfahren mit weniger einflussreicher Rekombination besser funktioniert, da Rekombination und Mutation nicht ausreichend aneinander abgestimmt sind und damit einflussreichere Rekombination (mit mehr möglichen positiven Rekombinationsschritten) weniger gute Ergebnisse liefern.
+Wenn dieser Ansatz der Realität entspricht, könnte demnach durch eine Anpassung des CGP-Verfahrens Rekombination sinnvoller eingesetzt werden, sodass einflussreichere Rekombinationsarten wie die Uniform Rekombination einen größeren Mehrwert generieren.\\
+Des weiteren werden die Ergebnisse jeweils bezüglich MW und PL-Plätzen von Verfahren mit Offset mit den Ergebnissen der jeweils gleichen CGP-Konfigurationen ohne Offset verglichen.
+Dabei weisen jeweils sechs aus neun CGP-Konfigurationen ohne Offset bessere Ergebnisse auf als diejenigen mit Offset.
+Dies spricht dafür, dass ein Rekombinationsoffset der Effizient eines CGP-Modells schadet.
+Ein Grund dafür könnte sein, dass damit die positiven Einflüsse der Rekombination gestrichen werden, während die nachteiligen Effekte des Zusammenspiels von Rekombination und Mutation weiterhin bestehen bleiben.\\
+Analysiert werden nun die HPDI-Werte aus Tabelle \ref{table:parityBayesian}.
+
+- Stichproben
+- drei kleinste ranges grün
+- drei größte ranges rot
+- one point bestes
+- kleinste untere Grenzen führen zu kleinsten ranges
+- größte untere Grenzen führen zu großen Ranges (nicht immer die größsten, aber Trend ersichtlich)
+=> frühe Konvergenz der frühesten erfolgreichen Trainings führt auch zu weniger Streuung
+=> frühe Trainingserfolge wichtig, da danach Erfolg mehr Streuung hat
+=> Potential Rekombination ausschöpfen könnte sehr sinnvoll sein
+
 
 
 \subsection{Bayes'sche Analyse: Keijzer}
