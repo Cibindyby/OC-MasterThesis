@@ -1024,26 +1024,103 @@ Dabei weisen jeweils sechs aus neun CGP-Konfigurationen ohne Offset bessere Erge
 Dies spricht dafür, dass ein Rekombinationsoffset der Effizient eines CGP-Modells schadet.
 Ein Grund dafür könnte sein, dass damit die positiven Einflüsse der Rekombination gestrichen werden, während die nachteiligen Effekte des Zusammenspiels von Rekombination und Mutation weiterhin bestehen bleiben.\\
 Analysiert werden nun die HPDI-Werte aus Tabelle \ref{table:parityBayesian}.
-
-- Stichproben
-- drei kleinste ranges grün
-- drei größte ranges rot
-- one point bestes
-- kleinste untere Grenzen führen zu kleinsten ranges
-- größte untere Grenzen führen zu großen Ranges (nicht immer die größsten, aber Trend ersichtlich)
-=> frühe Konvergenz der frühesten erfolgreichen Trainings führt auch zu weniger Streuung
-=> frühe Trainingserfolge wichtig, da danach Erfolg mehr Streuung hat
-=> Potential Rekombination ausschöpfen könnte sehr sinnvoll sein
-
-
+Dabei werden die HPDI-Werte mit dem kleinsten Umfang grün markiert und die mit dem größten rot.
+Diese werden verwendet, um die Ergebnisse stichprobenartig zu bewerten.
+Es fällt auf, dass auch was den HPDI-Umfang betrifft, die One-Point Rekombination die besten drei Werte beinhaltet.
+Wenn aus allen HPDI-Werten die unteren Grenzen betrachtet und verglichen werden, kann außerdem beobachtet werden, dass die drei kleinsten unteren Grenzen Teil der grün markierten HPDIs sind.
+Umgekehrt lässt sich beobachten, dass besonders große untere Grenzen zu großen Umfängen der HPDI führen.
+Bei den drei größten unteren Grenzen ist dies in einem Fall keine rot markierte HPDI, allerdings handelt es sich dabei um einen ähnlich großen HPDI-Umfang, wodurch ein Trend erkennbar wird.
+Dieses Verhalten weist darauf hin, dass frühe Konvergenz der frühesten erfolgreichen Trainings ein Anzeichen dafür ist, dass die meisten CGP-Modelle relativ früh konvergieren.
+Zu beachten ist, dass es sich hierbei nicht um Ausreißer handeln darf, da diese in der 95\%-igen HPDI nicht erfasst werden.
+Wenn diese Beobachtung zutrifft, heißt das, dass frühe Trainingserfolge besonders wichtig sind, wenn man eine verlässliche CGP-Konfiguration generieren möchte, deren Modelle in einer relativ kleinen Iterationsspanne konvergieren sollen.
+Da Rekombination laut Abschnitt \ref{subsec:rohdatenZusammenfassung} in früheren Iterationen ein besonders hohes Potential aufweist, ist es demnach sinnvoll die Rekombination und deren Einsatz effizienter zu gestalten.
 
 \subsection{Bayes'sche Analyse: Keijzer}
 \label{subsec:bayesKeijzer}
+
+Dieser Abschnitt beurteilt die bayes'sche Analyse des Keijzer-Testszenarios und bezieht sich dabei auf die Tabelle \ref{table:keijzerBayesian}.
+Im ersten Schritt wird der MW aller CGP-Konfigurationen bewertet.
+Bei sechs aus 18 Verfahren mit Rekombination sind die MW kleiner als die der CGP-Konfiguration ohne Rekombination.
+Bei Betrachtung der Mittelwerte der Spalte MW über die verschiedenen Rekombinationsarten hinweg ergeben sich folgende Werte: One-Point Rekombination braucht durchschnittlich ca. 8200 Iterationen, Two-Point ca. 8670 und Uniform ungefähr 8650.
+Damit liegen alle Mittelwerte unterhalb von ca. 9552 Iterationen, die das CGP-Modell ohne Rekombination benötigt.
+Das heißt, dass es sich beim Standard-CGP-Vorgehen im Durchschnitt lohnt Rekombination anzuwenden.\\
+Die jeweils drei besten MW und PL-Plätze sind in der Tabelle grün markiert, während die schlechtesten rot sind.
+Zu beobachten ist, dass sich die jeweils besten und schlechtesten Werte der beiden Spalten nicht immer entsprechen.
+Dies ist der Fall, da bei den PL-Plätzen keine Schätzung darüber abgegeben wird, wann nicht-konvergente CGP-Modelle das Stopp-Kriterium erfüllen. 
+Hier wird nur die maximale Iterationsgrenze (6500 Iterationen) angegeben, falls ein CGP-Modell nicht fertig trainiert wurde.
+Demnach fängt die Spalte MW besser ein wie hoch die Fitness bei Abbruch des CGP-Trainings war.
+Allerdings gibt es bei der Schätzung der Iterationen eine gewisse Unsicherheit darüber, wie sich die Ergebnisse der CGP-Modelle entwickeln.
+Deswegen werden beide Spalten in die Bewertung einbezogen.
+Zu sehen ist, dass die schlechtesten Ergebnisse von MW und PL-PLatz in den Rekombinationsraten Two-Point und Uniform auftreten.
+Die besten Ergebnisse treten allerdings auch vor allem in diesem Rekombinationsarten auf, was aufzeigt wie wichtig es ist nicht nur die Rekombinationsart richtig zu wählen, sondern auch die Rekombinationsraten-Arten und deren Parametrierungen abzuwägen.\\
+Wird ein näherer Blick auf diejenigen CGP-Konfigurationen aus Tabelle \ref{table:keijzerRohdaten} mit Rekombination und ohne Offset geworden, bei denen die Spalten MW und PL-Platz aus Tabelle \ref{table:keijzerBayesian} besonders gut oder besonders schlecht ausfallen, fällt auf, dass die schlechten Ergebnisse vor allem bei denjenigen CGP-Konfigurationen auftreten, in denen an sich viele negative Mutationen auftreten (Two-Point Clegg und Uniform Konstant).
+Dies kann bedeuten, dass in diesen CGP-Modellen die Rekombination und Mutation häufiger gegeneinander gearbeitet haben als gemeinsam bessere Ergebnisse zu liefern.
+Die besseren Ergebnisse nach MW und PL-Plätzen treten in denjenigen Konfigurationen auf, in denen die positiven Rekombinationserfolge entweder relativ selten auftreten oder in denen die negativen Mutationen anteilig weniger auftreten (One-Point Konstant und Uniform One-Fifth).
+Das könnten diejenigen CGP-Konfigurationen sein, in denen die Rekombination weniger einflussreich ist oder sich die Rekombination und Mutation weniger negativ beeinflussen.
+Da bei der CGP-Konfiguration \glqq Uniform One-Fifth ohne Offset\grqq\space in Tabelle \ref{table:keijzerRohdaten} eine sehr frühe Iterationenzahl für positive Rekombination erfasst werden kann, kann es sein, dass die Rekombination anschließend mit Hilfe der One-Fifth Regel so reduziert werden konnte, dass die Mutation anschließend nicht mehr negativ beeinflusst werden konnte.
+Dieses Szenario ist kann allerdings mit den vorliegenden Daten untersucht demnach nicht evaluiert werden.\\
+Des weiteren werden alle Ergebnisse aus MW und PL-Plätzen derjenigen CGP-Kon\-fi\-gu\-ra\-tionen mit Offset mit den Ergebnissen der gleichen Konfigurationen ohne Offset verglichen.
+Für den MW sind die Ergebnisse von sechs aus neun Konfigurationen ohne Offset besser.
+Werden die PL-Plätze bewertet sind es nur 5 aus 9.
+Die Ergebnisse zeigen, dass es im Durchschnitt besser ist die Rekombination nicht auszusetzen.
+Trotzdem zeigen diese Ergebnisse auch, dass das Potential von Rekombination noch weiter ausgebaut werden muss, um eine verlässliche Lösung anzubieten, bei der kein Offset mehr benötigt wird.\\
+Für die nähere Betrachtung der HPDI-Werte aus Tabelle \ref{table:keijzerBayesian} werden die drei HPDI-Ranges mit dem geringsten Umfang grün markiert, während diejenigen mit dem größten Umfang rot markiert werden.
+Es fällt auf, dass die Uniform Rekombination relativ kleine HPDI-Ranges aufweist, bis auf die zwei sehr großen Umfänge.
+Die One-Point Rekombination weist zwei sehr geringe HPDI-Umfänge auf, während die restlichen relativ hoch ausfallen.
+In der näheren Analyse wurde kein Grund gefunden, wieso gerade diese CGP-Konfigurationen so niedrige oder hohe HPDI-Ranges aufweisen. 
+Werden die drei höchsten unteren Grenzen der HPDI-Werte gesammelt, fällt auf, dass diese zu den HPDI-Werten mit den größten Umfängen gehören.
+Wenn umgekehrt die niedrigsten unteren Grenzen gesammelt werden, passen zwei von drei zu den HPDI-Werten mit den geringsten Umfängen, während der dritte einen ähnlich kleinen HPDI-Umfang aufzeigt.
+Dies zeigt, dass wie bereits in \ref{subsec:bayesParity} erläutert, frühe Konvergenzen zu einem kleineren HPDI-Umfang führen.
+So ist es zum Beispiel unwahrscheinlich, dass ein CGP bei mehreren Durchläufen relativ lange bis zur Konvergenz braucht aber dafür alle Durchläufe ähnlich lange benötigen.
+Demnach ist es wichtig frühe Iterationen sinnvoll für das Training zu nutzen, um eine verlässliche Konvergenzrate zu erzielen.
+Da Abschnitt \ref{subsec:rohdatenZusammenfassung} zufolge die Rekombination besonders in frühen Iterationen Potential aufzeigt, ist es umso wichtiger die Rekombination effizienter zu gestalten.
 
 
 \subsection{Bayes'sche Analyse: Encode}
 \label{subsec:bayesEncode}
 
+Dieser Abschnitt befasst sich mit der Evaluierung der bayes'schen Analyse von Encode und bezieht sich auf die Tabellen \ref{table:encodeOnePointBayesian}, \ref{table:encodeTwoPointBayesian} und \ref{table:encodeUniformBayesian}.
+In der bayes'schen Analyse von Encode wird bewertet wie hoch die Fitness-Werte der CGP-Modelle bei der 10000. Iteration sind.
+Zu beachten ist, dass sich die Aussagen innerhalb dieses Abschnittes nur auf den Encode-Testfall beziehen und vorerst keine allgemeinen Schlussfolgerungen zulassen.
+In Abschnitt \ref{subsec:bayesZusammenfassung} werden alle Ergebnisse der bayes'schen Analysen zusammengetragen und miteinander abgeglichen.\\
+Innerhalb der Tabellen \ref{table:encodeOnePointBayesian}, \ref{table:encodeTwoPointBayesian} und \ref{table:encodeUniformBayesian} wurden die besten drei Ergebnisse pro Spalte grün markiert und die schlechtesten rot.
+Zu beachten ist, dass die CGP-Konfiguration ohne Rekombination durch eine Hyperparameteranalyse optimiert wurde.
+Die restlichen CGP-Konfigurationen haben die Hyperparameter übernommen und die Rekombinationsrate belegt.\\
+Werden die MW der CGP-Konfigurationen verglichen, kann beobachtet werden, dass für die One-Point und Uniform Rekombination jeweils 20 der 22 Verfahren mit Rekombination eine bessere Fitness aufweisen als die CGP-Konfiguration ohne Rekombination.
+Für die Two-Point Rekombination sind alle Verfahren schlechter, wenn Rekombination ausgeführt wird.
+Werden die Mittelwerte der Spalte MW über jede Rekombinationsraten-Art gebildet, folgt folgende Tabelle \ref{table:encodeMW}:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular} {c | c | c | c}
+		& \textbf{Konstant} & \textbf{Clegg} & \textbf{One-Fifth} \\
+		\hline
+		\textbf{One-Point Rekombination} & 0,03967 & 0,04082 & 0,03803\\
+		\hline
+		\textbf{Two-Point Rekombination} & 0,05690 & 0,05618 & 0,05387\\
+		\hline
+		\textbf{Uniform Rekombination} & 0,03858 & 0,03582 & 0,03748\\
+	\end{tabular}
+	\caption{Encode: Durchschnittliche Fitness nach 10000. Iteration}
+	\label{table:encodeMW}
+\end{table}
+
+Aus den durchschnittlichen Fitness-Werten nach der 10000. Iteration folgt, dass für den Encode-Testfall die Two-Point Rekombination deutlich schlechtere Ergebnisse liefert als die anderen Rekombinationsarten.
+Für jede Rekombinationsraten-Art bietet die Uniform Rekombination die besten Ergebnisse.
+Werden die Rekombinationsraten-Arten für bewertet, ist für die One-Point Rekombination ist die One-Fifth Rekombinationsrate die beste, anschließend die konstante Rekombinationsrate und zuletzt die linear fallende.
+Die Two-Point Rekombination weißt sehr ähnliche Werte für alle Rekombinationsraten auf.
+Will man diese trotzdem in eine Reihenfolge bringen, ergibt sich die folgende: One-Fifth, linear fallend, konstant.
+Bei der Uniform Rekombination ist die linear fallende Rekombinationsrate die beste, es folgt die One-Fifth Rekombinationsrate und anschließend die konstante Rekombinationsrate.
+Es lässt sich also keine einheitliche Reihenfolge bilden, die die Effizienz der Rekombinationsraten-Arten abbildet.
+Ebenfalls lassen sich durch die Auswertung der gesamten Tabellen keine Muster finden wie die verschiedenen Rekombinationsraten-Arten am besten zu parametrieren sind.
+Dementsprechend wäre es für das Standard-CGP-Verfahren empfehlenswert verschiedene Rekombinationsraten-Arten innerhalb der Hyperparameteranalyse zu testen.\\
+Für die Testszenarien Parity und Keijzer wurde in den Evaluationen der bayes'schen Analyse in den Abschnitten \ref{subsec:bayesParity} und \ref{subsec:bayesKeijzer} herausgefunden, dass kleine untere Grenzen in den HPDI-Werten sehr wahrscheinlich eine kleine Intervallgröße hervorbringen.
+Bei diesen bayes'schen Analysen wurde allerdings die Anzahl der Iteration bis zur Konvergenz betrachtet, nicht so wie bei Encode, bei dem die Fitness zu einer bestimmten Iteration betrachtet wird.
+Demnach soll diese Beobachtung für den Fall der Fitness-Bewertung auch betrachtet werden.
+Wenn diese Behauptung für die Fitness-HPDI-Werte zutrifft, kann es keine HPDI-Intervalle geben, die ineinander liegen, denn dann würde ein kleinerer unterer Grenzwert ein größeres Intervall mit sich ziehen.
+Allerdings fällt bereits bei der Betrachtung der ersten Tabelle \ref{table:encodeOnePointBayesian} auf, dass diese Beobachtung für die Fitness-Bewertung nicht zutrifft.
+Ein Gegenbeispiel ergeben die beiden fett gedruckten HPDI-Werte dieser Tabelle, wobei ein Intervall in dem anderen liegt.
+Dementsprechend kann keine Aussage darüber gemacht werden die gut die Fitnesswerte der anderen Durchläufe zu einer bestimmten Iteration sind, wenn bereits bekannt ist, dass einige Fitness-Werte sehr klein sind.
 
 
 \subsection{Bayes'sche Analyse: Koza}
@@ -1053,6 +1130,8 @@ Analysiert werden nun die HPDI-Werte aus Tabelle \ref{table:parityBayesian}.
 
 \subsection{Bayes'sche Analyse: Zusammenfassung}
 \label{subsec:bayesZusammenfassung}
+
+TODO: Parity / Keijzer bevorzugen One-Point und Encode/Koza nicht => woran liegt das => Parity und Keijzer sind optimiert => das heißt aus One-Point kann mit HPO am meisten herausgeholt werden mit jetzigem Verfahren (evtl wegen niedrigem Einfluss in Lernen; kleinere Schritte im Lösungsraum / kleinschrittigere Veränderungen lassen sich mit Mutation wahrscheinlich besser in Einklang bringen) => Rohdatenanalyse zeigt, dass Uniform mehr Potential besitzt, also Verfahren verbessern kann Uniform evtl noch pushen
 
 \section{Ergebnisse Graphische Evaluation}
 \label{sec:ergebnissePlots}
