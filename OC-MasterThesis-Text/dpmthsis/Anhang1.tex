@@ -1,15 +1,14 @@
 \section{Tabellen Rohdatenanalyse}
 \label{sec:tablesRohdatenanalyseAppendix}
-
 \subsection{Parity: Tabellen Rohdatenanalyse}
 \label{subsec:appendixTabellenRohdatenanalyseParity}
-
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c | c | c | c | c | c | c}
 		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl Rechenknoten} \end{turn} & \begin{turn}{270} \textbf{$\lambda$ (Nachwuchs)} \end{turn} & \begin{turn}{270} \textbf{Start-Rekombinationsrate} \end{turn} & \begin{turn}{270} \textbf{Delta Rekombinationsrate} \end{turn} & \begin{turn}{270} \textbf{$\mu$ (Elitisten)} \end{turn} & \begin{turn}{270} \textbf{Offset} \end{turn}\\
 		\hline
 		keine Rekombination & 1000 & 20 & - & - & 18 & -\\
+		\hline
 		\hline
 		One-Point Konstant kein Offset & 1350 & 52 & 0,30 & - & 16 & - \\
 		\hline
@@ -23,6 +22,7 @@
 		\hline
 		One-Point One-Fifth mit Offset & 1100 & 54 & 0,35 & - & 20 & \color{red}30\color{black} \\
 		\hline
+		\hline
 		Two-Point Konstant kein Offset & 1900 & 58 & 0,4 & - & 20 & - \\
 		\hline
 		Two-Point Konstant mit Offset & 850 & 54 & 0,3 & - & 16 & 15 \\
@@ -34,6 +34,7 @@
 		Two-Point One-Fifth kein Offset & 1800 & 44 & 0,55 & - & 16 & - \\
 		\hline
 		Two-Point One-Fifth mit Offset & 950 & 58 & 0,7 & - & 10 & 15 \\
+		\hline
 		\hline
 		Uniform Konstant kein Offset & 1800 & 58 & 0,8 & - & 20 & - \\
 		\hline
@@ -50,14 +51,13 @@
 	\caption{Parity: Ergebnis Hyperparameteranalyse}
 	\label{table:parityHPO}
 \end{table}
-
-
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c | c | c | c | c | c }
 		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn}\\
 		\hline
 		keine Rekombination & 133 & 0 & 0 & - & 58,5\\
+		\hline
 		\hline
 		One-Point Konstant kein Offset & 126 & 8 & 2 & 5,5 & 44\\
 		\hline
@@ -71,6 +71,7 @@
 		\hline
 		One-Point One-Fifth mit Offset & 127 & 0 & 0 & - & 27,5\\
 		\hline
+		\hline
 		Two-Point Konstant kein Offset & 113 & 10 & 2 & 3 & 39,5\\
 		\hline
 		Two-Point Konstant mit Offset & 129 & 0 & 0 & - & 64\\
@@ -82,6 +83,7 @@
 		Two-Point One-Fifth kein Offset & 126 & 4 & 2 & 3 & 59,5\\
 		\hline
 		Two-Point One-Fifth mit Offset & 125 & 0 & 0 & - & 43\\
+		\hline
 		\hline
 		Uniform Konstant kein Offset & 85 & 44 & 15 & 14 & 55\\
 		\hline
@@ -98,17 +100,15 @@
 	\caption{Parity: Auswertung der Rohdaten}
 	\label{table:parityRohdaten}
 \end{table}
-
-
 \subsection{Keijzer: Tabellen Rohdatenanalyse}
 \label{subsec:appendixTabellenRohdatenanalyseKeijzer}
-
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c | c | c | c | c | c | c}
 		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl Rechenknoten} \end{turn} & \begin{turn}{270} \textbf{$\lambda$ (Nachwuchs)} \end{turn} & \begin{turn}{270} \textbf{Start-Rekombinationsrate} \end{turn} & \begin{turn}{270} \textbf{Delta Rekombinationsrate} \end{turn} & \begin{turn}{270} \textbf{$\mu$ (Elitisten)} \end{turn} & \begin{turn}{270} \textbf{Offset} \end{turn}\\
 		\hline
 		keine Rekombination & 1850 & 44 & - & - & 20 & -\\
+		\hline
 		\hline
 		One-Point Konstant kein Offset & 600 & 50 & 0,2 & - & 20 & - \\
 		\hline
@@ -122,6 +122,7 @@
 		\hline
 		One-Point One-Fifth mit Offset & 2000 & 28 & 0,65 & - & 18 & 180 \\
 		\hline
+		\hline
 		Two-Point Konstant kein Offset & 1700 & 60 & 0,5 & - & 8 & - \\
 		\hline
 		Two-Point Konstant mit Offset & 600 & 48 & 0,3 & - & 16 & \color{red}180\color{black} \\
@@ -133,6 +134,7 @@
 		Two-Point One-Fifth kein Offset & 1350 & 40 & 0,35 & - & 20 & - \\
 		\hline
 		Two-Point One-Fifth mit Offset & 700 & 52 & 0,7 & - & 8 & 30 \\
+		\hline
 		\hline
 		Uniform Konstant kein Offset & 1100 & 52 & 0,8 & - & 8 & - \\
 		\hline
@@ -149,13 +151,13 @@
 	\caption{Keijzer: Ergebnis Hyperparameteranalyse}
 	\label{table:keijzerHPO}
 \end{table}
-
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c | c | c | c | c | c }
 		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn}\\
 		\hline
 		keine Rekombination & 2260 & 0 & 0 & - & 624\\
+		\hline
 		\hline
 		One-Point Konstant kein Offset & 1183 & 26 & 16 & 13 & 756\\
 		\hline
@@ -169,6 +171,7 @@
 		\hline
 		One-Point One-Fifth mit Offset & 1776 & 0 & 0 & - & 229\\
 		\hline
+		\hline
 		Two-Point Konstant kein Offset & 1854 & 79 & 25 & 15 & 803\\
 		\hline
 		Two-Point Konstant mit Offset & 1361 & 0 & 0 & - & 548\\
@@ -180,6 +183,7 @@
 		Two-Point One-Fifth kein Offset & 1788 & 17 & 10 & 4 & 753\\
 		\hline
 		Two-Point One-Fifth mit Offset & 1124 & 0 & 0 & - & 158\\
+		\hline
 		\hline
 		Uniform Konstant kein Offset & 1224 & 480 & 239 & 24 & 363\\
 		\hline
@@ -196,16 +200,15 @@
 	\caption{Keijzer: Auswertung der Rohdaten}
 	\label{table:keijzerRohdaten}
 \end{table}
-
 \subsection{Encode: Tabellen Rohdatenanalyse}
 \label{subsec:appendix:TabellenReohdatenanalyseEncode}
-
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c | c | c | c | c | c | c}
 		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn} & \begin{turn}{270} \textbf{Stopp-Kriterium erfüllt} \end{turn}\\
 		\hline
 		keine Rekombination & 1138 & - & - & - & 3847,5 & 8\\
+		\hline
 		\hline
 		One-Point Konstant: 0,125 & 1126 & 20 & 4 & 9,5 & 3362 & 9\\
 		\hline
@@ -223,6 +226,7 @@
 		\hline
 		One-Point Konstant: 1,0 & 1086 & 58 & 9 & 8 & 3754,5 & 8\\
 		\hline
+		\hline
 		One-Point Clegg: 0,0005 & 1125 & 48 & 6 & 11 & 1905,5 & 12\\
 		\hline
 		One-Point Clegg: 0,0015 & 1062 & 51 & 5 & 12 & 2754,5 & 6\\
@@ -234,6 +238,7 @@
 		One-Point Clegg: 0,0045 & 1127 & 38 & 2 & 10 & 2558 & 9\\
 		\hline
 		One-Point Clegg: 0,0055 & 1079 & 55 & 7 & 9 & 4007,5 & 8\\
+		\hline
 		\hline
 		One-Point One-Fifth: 0,125 & 1138 & 19 & 1 & 7 & 3950 & 9\\
 		\hline
@@ -254,13 +259,13 @@
 	\caption{Encode One-Point Rekombination: Auswertung der Rohdaten}
 	\label{table:encodeOnePointRohdaten}
 \end{table}
-
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c | c | c | c | c | c | c}
 		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn} & \begin{turn}{270} \textbf{Stopp-Kriterium erfüllt} \end{turn}\\
 		\hline
 		keine Rekombination & 1138 & - & - & - & 3847,5 & 8\\
+		\hline
 		\hline
 		Two-Point Konstant: 0,125 & 1044 & 27 & 2 & 6 & 4039,5 & 2\\
 		\hline
@@ -278,6 +283,7 @@
 		\hline
 		Two-Point Konstant: 1,0 & 1031 & 65 & 10 & 5 & 3476,5 & 6\\
 		\hline
+		\hline
 		Two-Point Clegg: 0,0005 & 1041 & 70 & 7 & 6 & 3383 & 5\\
 		\hline
 		Two-Point Clegg: 0,0015 & 1015 & 53 & 8 & 8 & 2524,5 & 2\\
@@ -289,6 +295,7 @@
 		Two-Point Clegg: 0,0045 & 1046 & 51 & 9 & 8 & 2616 & 5\\
 		\hline
 		Two-Point Clegg: 0,0055 & 1019 & 52 & 8 & 9,5 & 3475 & 7\\
+		\hline
 		\hline
 		Two-Point One-Fifth: 0,125 & 1067 & 10 & 3 & 5 & 575 & 2\\
 		\hline
@@ -309,13 +316,13 @@
 	\caption{Encode Two-Point Rekombination: Auswertung der Rohdaten}
 	\label{table:encodeTwoPointRohdaten}
 \end{table}
-
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c | c | c | c | c | c | c}
 		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn} & \begin{turn}{270} \textbf{Stopp-Kriterium erfüllt} \end{turn}\\
 		\hline
 		keine Rekombination & 1138 & - & - & - & 3847,5 & 8\\
+		\hline
 		\hline
 		Uniform Konstant: 0,125 & 1105 & 52 & 12 & 7 & 4058 & 9\\
 		\hline
@@ -333,6 +340,7 @@
 		\hline
 		Uniform Konstant: 1,0 & 1081 & 67 & 5 & 10 & 4785 & 9\\
 		\hline
+		\hline
 		Uniform Clegg: 0,0005 & 1092 & 76 & 5 & 8 & 2562 & 13\\
 		\hline
 		Uniform Clegg: 0,0015 & 1099 & 78 & 2 & 10,5 & 1777 & 11\\
@@ -344,6 +352,7 @@
 		Uniform Clegg: 0,0045 & 1080 & 70 & 2 & 13 & 5118 & 10\\
 		\hline
 		Uniform Clegg: 0,0055 & 1122 & 68 & 10 & 9,5 & 4044,5 & 8\\
+		\hline
 		\hline
 		Uniform One-Fifth: 0,125 & 1152 & 18 & 2 & 6,5 & 3876 & 7\\
 		\hline
@@ -364,16 +373,15 @@
 	\caption{Encode Uniform Rekombination: Auswertung der Rohdaten}
 	\label{table:encodeUniformRohdaten}
 \end{table}
-
 \subsection{Koza: Tabellen Rohdatenanalyse}
 \label{subsec:appendixTabellenRohdatenanalyseKoza}
-
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c | c | c | c | c | c | c}
 		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn} & \begin{turn}{270} \textbf{Stopp-Kriterium erfüllt} \end{turn}\\
 		\hline
 		keine Rekombination & 1157 & - & - & - & 208 & 48\\
+		\hline
 		\hline
 		One-Point Konstant: 0,125 & 1338 & 9 & 8 & 42 & 616 & 41\\
 		\hline
@@ -391,6 +399,7 @@
 		\hline
 		One-Point Konstant: 1,0 & 1548 & 136 & 83 & 73,5 & 667 & 41\\
 		\hline
+		\hline
 		One-Point Clegg: 0,0005 & 1460 & 98 & 56 & 45,5 & 603 & 43\\
 		\hline
 		One-Point Clegg: 0,0015 & 1525 & 78 & 43 & 12 & 659 & 40\\
@@ -402,6 +411,7 @@
 		One-Point Clegg: 0,0045 & 1187 & 62 & 36 & 10 & 511 & 44\\
 		\hline
 		One-Point Clegg: 0,0055 & 1622 & 50 & 28 & 9,5 & 1320 & 42\\
+		\hline
 		\hline
 		One-Point One-Fifth: 0,125 & 1434 & 2 & 1 & 1,5 & 462 & 44\\
 		\hline
@@ -422,15 +432,13 @@
 	\caption{Koza One-Point Rekombination: Auswertung der Rohdaten}
 	\label{table:kozaOnePointRohdaten}
 \end{table}
-
-
-
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c | c | c | c | c | c | c}
 		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn} & \begin{turn}{270} \textbf{Stopp-Kriterium erfüllt} \end{turn}\\
 		\hline
 		keine Rekombination & 1157 & - & - & - & 208 & 48\\
+		\hline
 		\hline
 		Two-Point Konstant: 0,125 & 1383 & 41 & 24 & 106 & 106 & 45\\
 		\hline
@@ -448,6 +456,7 @@
 		\hline
 		Two-Point Konstant: 1,0 & 1176 & 220 & 140 & 50,5 & 207 & 48\\
 		\hline
+		\hline
 		Two-Point Clegg: 0,0005 & 1446 & 193 & 99 & 30 & 205 & 47\\
 		\hline
 		Two-Point Clegg: 0,0015 & 1167 & 105 & 59 & 14 & 154 & 45\\
@@ -459,6 +468,7 @@
 		Two-Point Clegg: 0,0045 & 1023 & 100 & 50 & 14,5 & 96 & 46\\
 		\hline
 		Two-Point Clegg: 0,0055 & 1160 & 94 & 43 & 11,5 & 223,5 & 49\\
+		\hline
 		\hline
 		Two-Point One-Fifth: 0,125 & 1422 & 5 & 4 & 2 & 226 & 45\\
 		\hline
@@ -479,16 +489,13 @@
 	\caption{Koza Two-Point Rekombination: Auswertung der Rohdaten}
 	\label{table:kozaTwoPointRohdaten}
 \end{table}
-
-
-
-
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c | c | c | c | c | c | c}
 		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn} & \begin{turn}{270} \textbf{Stopp-Kriterium erfüllt} \end{turn}\\
 		\hline
 		keine Rekombination & 1157 & - & - & - & 208 & 48\\
+		\hline
 		\hline
 		Uniform Konstant: 0,125 & 1178 & 124 & 75 & 31,5 & 316 & 44\\
 		\hline
@@ -506,6 +513,7 @@
 		\hline
 		Uniform Konstant: 1,0 & 1080 & 328 & 199 & 21 & 176 & 43\\
 		\hline
+		\hline
 		Uniform Clegg: 0,0005 & 1155 & 373 & 197 & 40 & 709 & 46\\
 		\hline
 		Uniform Clegg: 0,0015 & 793 & 259 & 147 & 17 & 81 & 48\\
@@ -517,6 +525,7 @@
 		Uniform Clegg: 0,0045 & 1404 & 304 & 153 & 18 & 637 & 48\\
 		\hline
 		Uniform Clegg: 0,0055 & 1364 & 300 & 141 & 19 & 143 & 46\\
+		\hline
 		\hline
 		Uniform One-Fifth: 0,125 & 1545 & 12 & 6 & 5 & 147 & 41\\
 		\hline
@@ -537,13 +546,10 @@
 	\caption{Koza Uniform Rekombination: Auswertung der Rohdaten}
 	\label{table:kozaUniformRohdaten}
 \end{table}
-
 \section{Tabellen Bayes'sche Analyse}
 \label{sec:appendixTabellenBayes}
-
 \subsection{Parity: Tabelle Bayes'sche Analyse}
 \label{subsec:appendixTabelleBayesParity}
-
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c | c | c | c}
@@ -593,11 +599,8 @@
 	\caption{Parity: Bayes'sche Analyse}
 	\label{table:parityBayesian}
 \end{table}
-
-
 \subsection{Keijzer: Tabelle Bayes'sche Analyse}
 \label{subsec:appendixTabelleBayesKeijzer}
-
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c | c | c | c}
@@ -647,8 +650,6 @@
 	\caption{Keijzer: Bayes'sche Analyse}
 	\label{table:keijzerBayesian}
 \end{table}
-
-
 \subsection{Encode: Tabellen Bayes'sche Analyse}
 \label{subsec:appendixTabellesnBayesEncode}
 \begin{table}[H]
@@ -704,12 +705,10 @@
 		Encode One-Point One-Fifth: 0,875 & \color{Green}(0,02436; 0,05364)\color{black} & 0,03622 & 0,050632\\
 		\hline
 		Encode One-Point One-Fifth: 1,0 & (0,02887; 0,06487) & 0,04343 & \color{red}0,037210\color{black}\\
-		
 	\end{tabular}
 	\caption{Encode One-Point Rekombination: Bayes'sche Analyse}
 	\label{table:encodeOnePointBayesian}
 \end{table}
-
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c | c | c | c}
@@ -767,7 +766,6 @@
 	\caption{Encode Two-Point Rekombination: Bayes'sche Analyse}
 	\label{table:encodeTwoPointBayesian}
 \end{table}
-
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c | c | c | c}
@@ -825,9 +823,6 @@
 	\caption{Encode Uniform Rekombination: Bayes'sche Analyse}
 	\label{table:encodeUniformBayesian}
 \end{table}
-
-
-
 \subsection{Koza: Tabellen Bayes'sche Analyse}
 \label{subsec:appendixTabellenBayesKoza}
 \begin{table}[H]
@@ -887,7 +882,6 @@
 	\caption{Koza One-Point Rekombination: Bayes'sche Analyse}
 	\label{table:kozaOnePointBayesian}
 \end{table}
-
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c | c | c | c}
@@ -945,8 +939,6 @@
 	\caption{Koza Two-Point Rekombination: Bayes'sche Analyse}
 	\label{table:kozaTwoPointBayesian}
 \end{table}
-
-
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c | c | c | c}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  20 MAR 2025 20:11
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  20 MAR 2025 20:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2458,7 +2458,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-Overfull \vbox (28.69965pt too high) has occurred while \output is active []
+Overfull \vbox (34.69965pt too high) has occurred while \output is active []
 
 
 
@@ -2483,7 +2483,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [6]
-Overfull \vbox (2.32732pt too high) has occurred while \output is active []
+Overfull \vbox (8.32732pt too high) has occurred while \output is active []
 
 
 
@@ -2503,7 +2503,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [10]
-Overfull \vbox (2.32732pt too high) has occurred while \output is active []
+Overfull \vbox (8.32732pt too high) has occurred while \output is active []
 
 
 
@@ -2518,7 +2518,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [13]
-Overfull \hbox (5.90866pt too wide) in paragraph at lines 603--647
+Overfull \hbox (5.90866pt too wide) in paragraph at lines 606--650
  [][] 
  []
 
@@ -2573,7 +2573,7 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 Here is how much of TeX's memory you used:
  49495 strings out of 473889
  1044996 string characters out of 5734826
- 1972668 words of memory out of 5000000
+ 1985668 words of memory out of 5000000
  71854 multiletter control sequences out of 15000+600000
  562698 words of font info for 99 fonts, out of 8000000 for 9000
  1350 hyphenation exceptions out of 8191
