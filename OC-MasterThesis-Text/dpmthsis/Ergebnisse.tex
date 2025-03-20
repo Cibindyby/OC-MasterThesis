@@ -1015,7 +1015,7 @@ Die Tabelle zeigt aber, dass die Trends ob eine CGP-Konfiguration gute oder schl
 Bei den Unterschieden handelt es sich nur um einzelne Platzierungen der CGP-Konfigurationen.
 Durch die gemeinsame Betrachtung von MW und PL-Plätze kann demnach ein gutes Bild davon gegeben werden wie effizient einzelne CGP-Modelle trainieren.
 Werden die besten und schlechtesten MW und PL-Plätze in der Tabelle betrachtet, wird deutlich, dass die CGP-Konfigurationen mit der One-Point Rekombination deutlich bessere Ergebnisse liefert als die anderen Rekombinationsarten.
-Da aus Abschnitt \ref{subsec:rohdatenParity} bekannt ist, dass für die One-Point Rekombination deutlich weniger Rekombinationserfolge auftreten als bei den anderen Rekombinationsarten, kann davon ausgegangen werden, dass bei bei diesen CGP-Konfigurationen die Rekombination weniger Einfluss auf den Erfolg des Trainings hat.
+Da aus Abschnitt \ref{subsec:rohdatenParity} bekannt ist, dass für die One-Point Rekombination deutlich weniger Rekombinationserfolge auftreten als bei den anderen Rekombinationsarten, kann davon ausgegangen werden, dass bei bei diesen CGP-Konfigurationen die Rekombination weniger Einfluss auf das Training hat.
 Vergleicht man die schlechtesten Verfahren nach MW und PL-Plätzen mit Rekombination ohne Offset aus Tabelle \ref{table:parityBayesian} mit der Tabelle \ref{table:parityRohdaten} kann beobachtet werden, dass der Anteil der negativen Mutationen pro positive Rekombinationen relativ hoch ist.
 Das kann dafür sprechen, dass Rekombination mit dem Standard-CGP-Verfahren mit weniger einflussreicher Rekombination besser funktioniert, da Rekombination und Mutation nicht ausreichend aneinander abgestimmt sind und damit einflussreichere Rekombination (mit mehr möglichen positiven Rekombinationsschritten) weniger gute Ergebnisse liefern.
 Wenn dieser Ansatz der Realität entspricht, könnte demnach durch eine Anpassung des CGP-Verfahrens Rekombination sinnvoller eingesetzt werden, sodass einflussreichere Rekombinationsarten wie die Uniform Rekombination einen größeren Mehrwert generieren.\\
@@ -1039,8 +1039,10 @@ Da Rekombination laut Abschnitt \ref{subsec:rohdatenZusammenfassung} in frühere
 \label{subsec:bayesKeijzer}
 
 Dieser Abschnitt beurteilt die bayes'sche Analyse des Keijzer-Testszenarios und bezieht sich dabei auf die Tabelle \ref{table:keijzerBayesian}.
+Alle Aussagen und Bewertungen der Ergebnisse beziehen sich demnach nur auf den Keijzer-Testfall und können nicht direkt auf die Allgemeinheit bezogen werden.
+In Abschnitt \ref{subsec:bayesZusammenfassung} werden die Ergebnisse aller Testszenarien zusammengefasst und bewertet.\\
 Im ersten Schritt wird der MW aller CGP-Konfigurationen bewertet.
-Bei sechs aus 18 Verfahren mit Rekombination sind die MW kleiner als die der CGP-Konfiguration ohne Rekombination.
+Bei zwölf aus 18 Verfahren mit Rekombination sind die MW kleiner (besser) als die der CGP-Konfiguration ohne Rekombination.
 Bei Betrachtung der Mittelwerte der Spalte MW über die verschiedenen Rekombinationsarten hinweg ergeben sich folgende Werte: One-Point Rekombination braucht durchschnittlich ca. 8200 Iterationen, Two-Point ca. 8670 und Uniform ungefähr 8650.
 Damit liegen alle Mittelwerte unterhalb von ca. 9552 Iterationen, die das CGP-Modell ohne Rekombination benötigt.
 Das heißt, dass es sich beim Standard-CGP-Vorgehen im Durchschnitt lohnt Rekombination anzuwenden.\\
@@ -1051,7 +1053,7 @@ Hier wird nur die maximale Iterationsgrenze (6500 Iterationen) angegeben, falls 
 Demnach fängt die Spalte MW besser ein wie hoch die Fitness bei Abbruch des CGP-Trainings war.
 Allerdings gibt es bei der Schätzung der Iterationen eine gewisse Unsicherheit darüber, wie sich die Ergebnisse der CGP-Modelle entwickeln.
 Deswegen werden beide Spalten in die Bewertung einbezogen.
-Zu sehen ist, dass die schlechtesten Ergebnisse von MW und PL-PLatz in den Rekombinationsraten Two-Point und Uniform auftreten.
+Zu sehen ist, dass die schlechtesten Ergebnisse von MW und PL-Platz in den Rekombinationsraten Two-Point und Uniform auftreten.
 Die besten Ergebnisse treten allerdings auch vor allem in diesem Rekombinationsarten auf, was aufzeigt wie wichtig es ist nicht nur die Rekombinationsart richtig zu wählen, sondern auch die Rekombinationsraten-Arten und deren Parametrierungen abzuwägen.\\
 Wird ein näherer Blick auf diejenigen CGP-Konfigurationen aus Tabelle \ref{table:keijzerRohdaten} mit Rekombination und ohne Offset geworden, bei denen die Spalten MW und PL-Platz aus Tabelle \ref{table:keijzerBayesian} besonders gut oder besonders schlecht ausfallen, fällt auf, dass die schlechten Ergebnisse vor allem bei denjenigen CGP-Konfigurationen auftreten, in denen an sich viele negative Mutationen auftreten (Two-Point Clegg und Uniform Konstant).
 Dies kann bedeuten, dass in diesen CGP-Modellen die Rekombination und Mutation häufiger gegeneinander gearbeitet haben als gemeinsam bessere Ergebnisse zu liefern.
@@ -1061,7 +1063,7 @@ Da bei der CGP-Konfiguration \glqq Uniform One-Fifth ohne Offset\grqq\space in T
 Dieses Szenario ist kann allerdings mit den vorliegenden Daten untersucht demnach nicht evaluiert werden.\\
 Des weiteren werden alle Ergebnisse aus MW und PL-Plätzen derjenigen CGP-Kon\-fi\-gu\-ra\-tionen mit Offset mit den Ergebnissen der gleichen Konfigurationen ohne Offset verglichen.
 Für den MW sind die Ergebnisse von sechs aus neun Konfigurationen ohne Offset besser.
-Werden die PL-Plätze bewertet sind es nur 5 aus 9.
+Werden die PL-Plätze bewertet sind es nur fünf aus neun.
 Die Ergebnisse zeigen, dass es im Durchschnitt besser ist die Rekombination nicht auszusetzen.
 Trotzdem zeigen diese Ergebnisse auch, dass das Potential von Rekombination noch weiter ausgebaut werden muss, um eine verlässliche Lösung anzubieten, bei der kein Offset mehr benötigt wird.\\
 Für die nähere Betrachtung der HPDI-Werte aus Tabelle \ref{table:keijzerBayesian} werden die drei HPDI-Ranges mit dem geringsten Umfang grün markiert, während diejenigen mit dem größten Umfang rot markiert werden.
@@ -1107,9 +1109,9 @@ Werden die Mittelwerte der Spalte MW über jede Rekombinationsraten-Art gebildet
 
 Aus den durchschnittlichen Fitness-Werten nach der 10000. Iteration folgt, dass für den Encode-Testfall die Two-Point Rekombination deutlich schlechtere Ergebnisse liefert als die anderen Rekombinationsarten.
 Für jede Rekombinationsraten-Art bietet die Uniform Rekombination die besten Ergebnisse.
-Werden die Rekombinationsraten-Arten für bewertet, ist für die One-Point Rekombination ist die One-Fifth Rekombinationsrate die beste, anschließend die konstante Rekombinationsrate und zuletzt die linear fallende.
+Werden die Rekombinationsraten-Arten bewertet, ist für die One-Point Rekombination die One-Fifth Rekombinationsrate die beste, anschließend die konstante Rekombinationsrate und zuletzt die linear fallende.
 Die Two-Point Rekombination weißt sehr ähnliche Werte für alle Rekombinationsraten auf.
-Will man diese trotzdem in eine Reihenfolge bringen, ergibt sich die folgende: One-Fifth, linear fallend, konstant.
+Sollen diese trotzdem in eine Reihenfolge gebracht werden, ergibt sich die folgende: One-Fifth, linear fallend, konstant.
 Bei der Uniform Rekombination ist die linear fallende Rekombinationsrate die beste, es folgt die One-Fifth Rekombinationsrate und anschließend die konstante Rekombinationsrate.
 Es lässt sich also keine einheitliche Reihenfolge bilden, die die Effizienz der Rekombinationsraten-Arten abbildet.
 Ebenfalls lassen sich durch die Auswertung der gesamten Tabellen keine Muster finden wie die verschiedenen Rekombinationsraten-Arten am besten zu parametrieren sind.
@@ -1133,9 +1135,13 @@ In Abschnitt \ref{subsec:bayesZusammenfassung} werden die Evaluationsergebnisse 
 Wird die Spalte MW aus den jeweils genannten Tabellen betrachtet und einzeln miteinander verglichen, werden folgende Ergebnisse sichtbar: für die One-Point Rekombination sind keine Verfahren mit Rekombination besser als das ohne Rekombination, für die Two-Point Rekombination sind fünf aus 22 CGP-Modelle mit Rekombination besser, für die Uniform Rekombination sind es lediglich drei Verfahren.
 Dies zeigt, dass für den Koza-Testfall Verfahren mit eingefügtem Rekombinationsschritt deutlich schlechter abschneiden als ohne Rekombination.
 Dabei ist allerdings zu beachten, dass die CGP-Konfiguration ohne Rekombination mit Hilfe einer Hyperparameteranalyse optimiert wurde, während die Verfahren mit Rekombination lediglich diese Parametrierung übernommen und die Rekombinationsrate ergänzt haben.
-Demnach kann keine Aussage darüber getroffen werden wie effizient die Rekombination ist.
-Da aber für Parity (Abschnitt \ref{subsec:bayesParity}) und Keijzer (Abschnitt \ref{subsec:bayesKeijzer}) deutlich bessere Ergebnisse beobachtet werden konnten, ist es durchaus wahrscheinlich, dass eine Hyperparameteranalyse für alle verwendeten CGP-Verfahren die Ergebnisse verbessern könnte.
-Es kann die Annahme aufgestellt werden, dass bei einer Hyperparameteroptimierung alle Parameter einer CGP-Konfiguration auf einmal betrachtet werden müssen und somit keine Hyperparameter einer anderen Optimierung verwendet werden können, um lediglich einen einzelnen Parameter zu optimieren.\\
+Demnach kann keine Aussage darüber getroffen werden wie effizient die Rekombination tatsächlich ist.
+Da aber für Parity (Abschnitt \ref{subsec:bayesParity}) und Keijzer (Abschnitt \ref{subsec:bayesKeijzer}) deutlich bessere Ergebnisse beobachtet werden konnten, könnte es sein, dass eine Hyperparameteranalyse für alle verwendeten CGP-Verfahren die Ergebnisse verbessern könnte.
+Es kann die Annahme aufgestellt werden, dass bei einer Hyperparameteroptimierung alle Parameter einer CGP-Konfiguration auf einmal betrachtet werden müssen und somit keine Hyperparameter einer anderen Optimierung verwendet werden können, um lediglich einen einzelnen Parameter zu optimieren.
+Diese Annahme müsste in weiteren Tests geprüft werden.
+Es kann allerdings auch sein, dass der Koza-Testfall deutlich schlechtere Werte für Verfahren mit Rekombination aufweist, da in diesem Testfall deutlich mehr Iterationen bis zur Konvergenz benötigt werden als bei Parity und Keijzer.
+In diesen weiteren Iterationen werden nach Abschnitt \ref{subsec:rohdatenZusammenfassung} Mutationsschritte relevanter als Rekombinationsschritte für die Effizienz des Trainings.
+Demnach ist es auch möglich, dass die Rekombinationen die Mutation in den späteren Iterationen so negativ beeinflussen, dass das Verfahren ohne Rekombination besser abschneidet.\\
 Die folgende Tabelle \ref{table:kozaMW} zeigt die ungefähren Mittelwerte aller Rekombinationsarten pro Rekombinationsraten-Art. 
 
 \begin{table}[H]
@@ -1154,14 +1160,14 @@ Die folgende Tabelle \ref{table:kozaMW} zeigt die ungefähren Mittelwerte aller 
 \end{table}
 
 Zu beobachten ist, dass die One-Point Rekombination für alle Rekombinationsraten-Arten besonders schlechte Werte hervorbringt.
-Die Two-Point Rekombination ergibt im Vergleich zu den anderen Rekombinationsarten relativ gute Ergebnisse für alle Rekombinationsraten-Arten.
+Die Two-Point Rekombination ergibt im Vergleich zu den anderen Rekombinationsarten relativ gute Ergebnisse für alle Re\-kom\-bi\-na\-tions\-raten-Arten.
 Für die Uniform Rekombination führt nur für die linear fallende Rekombinationsrate zu guten Ergebnissen.
 Diese sind allerdings sogar deutlich besser als die Ergebnisse der Two-Point Rekombination.
 Dieser Erfolg der linear fallenden Rekombinationsrate für die Uniform Rekombination könnte darauf zurückgeführt werden, dass die Start-Rekombinationsrate mit 0,9 ziemlich hoch gewählt wurde.
 Allerdings sind die Ergebnisse der konstanten Rekombinationsrate für hohe Rekombinationsraten aus Tabelle \ref{table:kozaUniformBayesian} besonders schlecht.
 Dementsprechend ist das konsequente Verringern der Rekombinationsrate in diesem Fall der relevante Unterschied zu den anderen Rekombinationsraten-Arten.
 Selbst für eine kleine Delta-Rekombinationsrate wie 0,0005 für linear fallende Rekombinationen wird die Rekombination nach spätestens 2000 Iterationen vollständig ausgesetzt.
-Dies könnte der Grund sein, warum die linear fallende Rekombination für einfachere Testfälle wie Parity oder Keijzer nicht deutlich effizienter als die anderen Rekombiantionsraten-Arten abschneiden.
+Dies könnte der Grund sein, warum die linear fallende Rekombination für einfachere Testfälle wie Parity oder Keijzer nicht deutlich effizienter als die anderen Re\-kom\-bi\-na\-tions\-raten-Arten abschneiden.
 Denn diese Testfälle brauchen deutlich weniger Iterationen als der Koza-Testfall bis zur Konvergenz wodurch die Rekombination womöglich nicht früh genug abgestellt wurde.
 Werden alle Werte der linear fallenden Rekombination aus Tabelle \ref{table:kozaMW} betrachtet, fällt auf, dass die Mittelwerte für komplexere Rekombinationsarten besser ausfallen.
 Dies könnte daran liegen, dass komplexere Rekombinationsarten laut Abschnitt \ref{subsec:rohdatenKoza} deutlich mehr Rekombinationserfolge vermerken können als die weniger komplexen Rekombinationsarten.
@@ -1180,29 +1186,94 @@ Wenn für CGP-Konfigurationen bereits einige Durchläufe deutlich früher konver
 Umgekehrt wird es für die folgenden Durchläufe der langsameren CGP-Modelle wahrscheinlicher, dass diese umso später konvergieren.
 
 
-
 \subsection{Bayes'sche Analyse: Zusammenfassung}
 \label{subsec:bayesZusammenfassung}
+
+Dieser Abschnitt vergleicht die Ergebnisse und Aussagen der bayes'schen Analyse aller Testszenarien und fasst die Erkenntnisse zusammen.\\
+
+MW / PL-Platzierungen:
+Parity:
+- 16 mal mit Rekombination besser; 2 mal ohne 
+=> Rekombination kann Effizienz steigern bei sinnvoller Konfiguration
+- One-Point Rekombination bessere Ergebnisse als andere Rekombinationsarten
+=> weniger Einfluss von Rekombination (kleine Schrittweiten) scheinen von Vorteil zu sein (vermutlich weil Rekombination und Mutation nicht aneinander abgestimmt sind)
+=> Anpassen der Verfahren könnte Potential aus komplexeren Rekombinationsarten besser ausschöpfen
+
+Keijzer:
+- 12 aus 18 mal mit Rekombination besser als ohne
+- alle Mittelwerte je Rekombinationsrate kleiner als bei "keine Rekombination"
+- im Standard-CGP-Verfahren lohnt sich Rekombination im Durchschnitt
+- One-Point im Durchschnitt am besten (nach MW)
+- beste und schlechteste Ergebnisse innerhalb von einer Rekombinationsart (hier Two-Point) => richtige Konfiguration ist relevant
+- schlechte MW und PL Ergebnisse bei Konfigurationen mit viel negativen Mutationen
+=> hier haben Rekombination und Mutation wahrscheinlich am meisten gegeneinander gearbeitet
+- beste Ergebnisse bei Konfigurationen mit entweder wenig pos. Rekombinationen oder anteilig wenig negativer Mutation (gegenüber pos. Rekombination)
+=> wahrscheinlich die Verfahren wo Rekombination weniger Einfluss hat oder sich Rekombination und Mutation weniger schlecht beeinflussen
+
+Encode:
+- One-Point und Uniform: 20 aus 22 Verfahren mit Rekombination besser als ohne
+- Two-Point: mit Rekombination immer schlechter
+- Uniform bietet für jede Rekombinationsraten-Art beste Ergebnisse
+- One-Point: one-fifth am besten, dann konstante, dann clegg
+- Two-Point: One-fifth, clegg, konstant
+- Uniform: Clegg, One-Fifth, Konstant
+=> nicht "die beste" Rekombinationsraten-Art feststellbar
+=> mit HPO verschiedene testen ist sinnvoll
+
 Koza:
-MW:
-- One-Point: keins besser als ohne Rekombination
-- Two-Point 5 aus 22 besser als ohne Rekombination
-- Uniform 3 aus 22 besser als Rekombination
-- Tabelle Mittelwerte der Rekombinationsraten-Arten pro Rekombinationsart (alles nur ungefähre Werte)
-- Uniform funktioniert Clegg besonders gut (sogar bester Mittelwert in Tabelle und um einiges besser als bester Mittelwert für Two-Point); aber hohe konstante Rate nicht => heißt für viele Iterationen (die Koza nunmal braucht) ist es sinnvoll Uniform zu nehmen, wegen hoher Anzahl an positiven Rekombinationen (überwiegt wahrscheinlich Mutationserfolge) und danach weniger Rekombination (für so lange Testverfahren bringt die der kleine Delta-Wert bei Clegg auch mehr) 
-- sonst keine Muster erkannt
+- One-Point: kein Verfahren besser mit Rekombination als ohne
+- Two-Point: 5 aus 22 besser mit Rekombination
+- Uniform: 3 aus 22 besser mit Rekombination
+- Rekombination lohnt sich bei Standard-Verfahren erstmal nicht (aber nicht vergessen, dass keine HPO ausgeführt wurde)
+=> mögliche Folgerung: Hyperparameter müssen alle gleichzeitig optimiert werden
+=> andere mögliche Folgerung: für Testfälle, die dann länger brauchen wird Rekombination zur Last, weil in späteren Iterationen die Mutation wichtiger wird (Uniform mit Clegg als beste Lösung könnte das untermauern)
+- One-Point: für alle Rekombinationsraten-Arten schlecht
+- Two-Point: für alle Rekombinationsraten-Arten relativ gut
+- Uniform: nur für Clegg gut
+=> für lange Trainings macht es wahrscheinlich eher Sinn Rekombination zu cutten 
+=> könnte Grund sein, warum Clegg für Parity und Keijzer nicht besser abschließt: Rekombinationsrate müsste schneller fallen
+- komplexere Rekombinationsarten geben für Clegg bessere Ergebnisse => könnte an höherem Einfluss liegen (mehr pos. Rekombinationsraten)
+=> wenn Rekombination rechtzeitig komplett abgestellt wird, sind wahrscheinlich komplexere Rekombinationsarten sinnvoll
+
+
+
+Offset:
+Parity:
+- 6 aus 9 Verfahren ohne Offset besser als mit
+- Offset schadet eher 
+=> wahrscheinlich werden positive Effekte aus den ersten Iterationen gestrichen während negative Effekte aus späteren Iterationen erhalten bleiben
+
+Keijzer:
+- 5 / 6 aus 9 ohne Offset besser als mit
+=> im Durchschnitt ist es besser Rekombination direkt auszuführen
+=> wahrscheinlich werden positive Effekte aus den ersten Iterationen gestrichen während negative Effekte aus späteren Iterationen erhalten bleiben
+- Ergebnisse zeigen, dass Verfahren noch verbessert werden muss, damit Offset in keinen Verfahren mehr Sinn macht
 
 HPDI:
-- kleine/große untere und obere Grenzen markiert
-- fallen in den meisten Fällen aufeinander
-- bei Ausnahmen ähnliche Werte
-- kleine untere und obere Grenzen haben weniger Range + andersherum
-=> frühe Konvergenzen mehrerer Durchläufe (keine Ausreißer) bedeuten kleine Streuung
-=> das heißt die anderen Durchläufe müssen auch zeitig fertig werden
-=> für späte ersten Konvergenzen große Streuung
-=> die anderen Durchläufe werden noch später fertig
+Parity:
+- One-Point beste (kleine) Ranges
+- kleine untere Grenzen führen zu weniger Umfang
+=> frühe Trainingserfolge besonders wichtig (frühe Konvergenzen führen zu weniger Streuung)
+=> Anpassen des Verfahren für bessere Rekombination ist wichtig
 
-TODO: Parity / Keijzer bevorzugen One-Point und Encode/Koza nicht => woran liegt das => Parity und Keijzer sind optimiert => das heißt aus One-Point kann mit HPO am meisten herausgeholt werden mit jetzigem Verfahren (evtl wegen niedrigem Einfluss in Lernen; kleinere Schritte im Lösungsraum / kleinschrittigere Veränderungen lassen sich mit Mutation wahrscheinlich besser in Einklang bringen) => Rohdatenanalyse zeigt, dass Uniform mehr Potential besitzt, also Verfahren verbessern kann Uniform evtl noch pushen
+Keijzer:
+- Uniform relativ wenig Umfänge
+- One-Point zwei geringe und sonst große Umfänge
+=> anders als bei Parity => Umfänge variieren für Rekombinationsarten => keine allgemeine Aussage möglich
+- Beobachtungen mit unteren Grenzen hier genauso
+- mit oberen Grenzen genau das gleiche
+
+Encode:
+- Beobachtungen von Parity und Keijzer gelten nur für Iterationen und nicht für Fitness bei einer Iteration
+
+Koza:
+- anderes Verfahren als bei Parity und Keijzer (umgekehrt): zuerst alle kleinen und großen Grenzen markiert und dann geschaut ob die matchen
+=> gleiche Aussage wie bei Parity und Koza
+=> + zusätzlich: Streuungen früh einschätzen möglich je nach Iterationen bei Konvergenz der Durchläufe => bei niedrigen Iterationen bleiben wahrscheinlich alle niedrig => bei hohen Iterationen werden die anderen Wahrscheinlich noch höher
+
+
+
+- Notizen zu MW: Parity / Keijzer bevorzugen One-Point und Encode/Koza nicht => woran liegt das => Parity und Keijzer sind optimiert => das heißt aus One-Point kann mit HPO am meisten herausgeholt werden mit jetzigem Verfahren (evtl wegen niedrigem Einfluss in Lernen; kleinere Schritte im Lösungsraum / kleinschrittigere Veränderungen lassen sich mit Mutation wahrscheinlich besser in Einklang bringen) => Rohdatenanalyse zeigt, dass Uniform mehr Potential besitzt, also Verfahren verbessern kann Uniform evtl noch pushen
 
 \section{Ergebnisse Graphische Evaluation}
 \label{sec:ergebnissePlots}
@@ -1218,6 +1289,8 @@ TODO: Parity / Keijzer bevorzugen One-Point und Encode/Koza nicht => woran liegt
 
 \subsection{Graphische Evaluation: Koza}
 \label{subsec:plotsKoza}
+
+schauen, ob "ohne Rekombination" am Anfang schlechter ist und dann in den späteren Iterationen besser (wegen langem Training und überholen der Rekombinations-Fitness durch bessere Mutation in letzten Schritten) -> In Rohdatenanalyse nachschauen was "Anfang" in Iterationen heißt
 
 \subsection{Graphische Evaluation: Zusammenfassung}
 \label{subsec:plotsZusammenfassung}
