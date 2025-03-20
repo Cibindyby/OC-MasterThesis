@@ -30,32 +30,32 @@
 \contentsline {chapter}{\numberline {4}Ergebnisse}{31}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Ergebnisse Rohdatenanalyse}{31}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Rohdatenanalyse: Parity}{32}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Rohdatenanalyse: Keijzer}{38}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Rohdatenanalyse: Encode}{44}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Rohdatenanalyse: Koza}{50}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.1.5}Rohdatenanalyse: Zusammenfassung}{56}{subsection.4.1.5}%
-\contentsline {section}{\numberline {4.2}Ergebnisse Bayes'sche Analyse}{60}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Bayes'sche Analyse: Parity}{61}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Bayes'sche Analyse: Keijzer}{63}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Bayes'sche Analyse: Encode}{65}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Bayes'sche Analyse: Koza}{67}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Bayes'sche Analyse: Zusammenfassung}{69}{subsection.4.2.5}%
-\contentsline {section}{\numberline {4.3}Ergebnisse Graphische Evaluation}{71}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Graphische Evaluation: Parity}{71}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Graphische Evaluation: Keijzer}{71}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Graphische Evaluation: Encode}{71}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Graphische Evaluation: Koza}{71}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}Graphische Evaluation: Zusammenfassung}{72}{subsection.4.3.5}%
+\contentsline {subsection}{\numberline {4.1.2}Rohdatenanalyse: Keijzer}{36}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Rohdatenanalyse: Encode}{42}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Rohdatenanalyse: Koza}{48}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Rohdatenanalyse: Zusammenfassung}{54}{subsection.4.1.5}%
+\contentsline {section}{\numberline {4.2}Ergebnisse Bayes'sche Analyse}{58}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Bayes'sche Analyse: Parity}{59}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Bayes'sche Analyse: Keijzer}{61}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Bayes'sche Analyse: Encode}{63}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Bayes'sche Analyse: Koza}{65}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Bayes'sche Analyse: Zusammenfassung}{67}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}Ergebnisse Graphische Evaluation}{70}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Graphische Evaluation: Parity}{70}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Graphische Evaluation: Keijzer}{70}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Graphische Evaluation: Encode}{70}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Graphische Evaluation: Koza}{70}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Graphische Evaluation: Zusammenfassung}{71}{subsection.4.3.5}%
 \contentsline {chapter}{\numberline {5}Fazit aus Ausblick}{73}{chapter.5}%
 \contentsline {chapter}{\numberline {A}Anhang}{I}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Tabellen Rohdatenanalyse}{I}{section.A.1}%
-\contentsline {subsection}{\numberline {A.1.1}Parity: Tabellen Rohdatenanalyse}{I}{subsection.A.1.1}%
-\contentsline {subsection}{\numberline {A.1.2}Keijzer: Tabellen Rohdatenanalyse}{I}{subsection.A.1.2}%
-\contentsline {subsection}{\numberline {A.1.3}Encode: Tabellen Rohdatenanalyse}{I}{subsection.A.1.3}%
-\contentsline {subsection}{\numberline {A.1.4}Koza: Tabellen Rohdatenanalyse}{I}{subsection.A.1.4}%
-\contentsline {section}{\numberline {A.2}Tabellen Bayes'sche Analyse}{II}{section.A.2}%
-\contentsline {subsection}{\numberline {A.2.1}Parity: Tabelle Bayes'sche Analyse}{II}{subsection.A.2.1}%
-\contentsline {subsection}{\numberline {A.2.2}Keijzer: Tabelle Bayes'sche Analyse}{III}{subsection.A.2.2}%
-\contentsline {subsection}{\numberline {A.2.3}Encode: Tabellen Bayes'sche Analyse}{IV}{subsection.A.2.3}%
-\contentsline {subsection}{\numberline {A.2.4}Koza: Tabellen Bayes'sche Analyse}{VII}{subsection.A.2.4}%
+\contentsline {section}{\numberline {A.1}Tabellen Rohdatenanalyse}{II}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Parity: Tabellen Rohdatenanalyse}{II}{subsection.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Keijzer: Tabellen Rohdatenanalyse}{IV}{subsection.A.1.2}%
+\contentsline {subsection}{\numberline {A.1.3}Encode: Tabellen Rohdatenanalyse}{IV}{subsection.A.1.3}%
+\contentsline {subsection}{\numberline {A.1.4}Koza: Tabellen Rohdatenanalyse}{IV}{subsection.A.1.4}%
+\contentsline {section}{\numberline {A.2}Tabellen Bayes'sche Analyse}{IV}{section.A.2}%
+\contentsline {subsection}{\numberline {A.2.1}Parity: Tabelle Bayes'sche Analyse}{IV}{subsection.A.2.1}%
+\contentsline {subsection}{\numberline {A.2.2}Keijzer: Tabelle Bayes'sche Analyse}{V}{subsection.A.2.2}%
+\contentsline {subsection}{\numberline {A.2.3}Encode: Tabellen Bayes'sche Analyse}{VI}{subsection.A.2.3}%
+\contentsline {subsection}{\numberline {A.2.4}Koza: Tabellen Bayes'sche Analyse}{IX}{subsection.A.2.4}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

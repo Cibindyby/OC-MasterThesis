@@ -2,6 +2,103 @@
 \label{sec:tablesRohdatenanalyseAppendix}
 
 \subsection{Parity: Tabellen Rohdatenanalyse}
+\label{subsec:appendixTabellenRohdatenanalyseParity}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c | c | c | c | c | c | c}
+		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl Rechenknoten} \end{turn} & \begin{turn}{270} \textbf{$\lambda$ (Nachwuchs)} \end{turn} & \begin{turn}{270} \textbf{Start-Rekombinationsrate} \end{turn} & \begin{turn}{270} \textbf{Delta Rekombinationsrate} \end{turn} & \begin{turn}{270} \textbf{$\mu$ (Elitisten)} \end{turn} & \begin{turn}{270} \textbf{Offset} \end{turn}\\
+		\hline
+		keine Rekombination & 1000 & 20 & - & - & 18 & -\\
+		\hline
+		One-Point Konstant kein Offset & 1350 & 52 & 0,30 & - & 16 & - \\
+		\hline
+		One-Point Konstant mit Offset & 1500 & 50 & 0,8 & - & 18 & 25 \\
+		\hline
+		One-Point Clegg kein Offset & 1950 & 42 & - & 0,035 & 14 & - \\
+		\hline
+		One-Point Clegg mit Offset & 1600 & 58 & - & 0,01 & 20 & 25 \\
+		\hline
+		One-Point One-Fifth kein Offset & 1150 & 46 & 0,55 & - & 6 & - \\
+		\hline
+		One-Point One-Fifth mit Offset & 1100 & 54 & 0,35 & - & 20 & \color{red}30\color{black} \\
+		\hline
+		Two-Point Konstant kein Offset & 1900 & 58 & 0,4 & - & 20 & - \\
+		\hline
+		Two-Point Konstant mit Offset & 850 & 54 & 0,3 & - & 16 & 15 \\
+		\hline
+		Two-Point Clegg kein Offset & 750 & 56 & - & 0,02 & 18 & - \\
+		\hline
+		Two-Point Clegg mit Offset & 1700 & 28 & - & 0,04 & 12 & \color{red}20\color{black} \\
+		\hline
+		Two-Point One-Fifth kein Offset & 1800 & 44 & 0,55 & - & 16 & - \\
+		\hline
+		Two-Point One-Fifth mit Offset & 950 & 58 & 0,7 & - & 10 & 15 \\
+		\hline
+		Uniform Konstant kein Offset & 1800 & 58 & 0,8 & - & 20 & - \\
+		\hline
+		Uniform Konstant mit Offset & 1400 & 54 & 0,3 & - & 20 & 45 \\
+		\hline
+		Uniform Clegg kein Offset & 1600 & 50 & - & 0,015 & 20 & - \\
+		\hline
+		Uniform Clegg mit Offset & 1500 & 52 & - & 0,04 & 18 & 25 \\
+		\hline
+		Uniform One-Fifth kein Offset & 650 & 52 & 0,75 & - & 14 & - \\
+		\hline
+		Uniform One-Fifth mit Offset & 250 & 50 & 0,35 & - & 16 & 40 \\
+	\end{tabular}
+	\caption{Parity: Ergebnis Hyperparameteranalyse}
+	\label{table:parityHPO}
+\end{table}
+
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c | c | c | c | c | c }
+		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn}\\
+		\hline
+		keine Rekombination & 133 & 0 & 0 & - & 58,5\\
+		\hline
+		One-Point Konstant kein Offset & 126 & 8 & 2 & 5,5 & 44\\
+		\hline
+		One-Point Konstant mit Offset & 136 & 0 & 0 & - & 49\\
+		\hline
+		One-Point Clegg kein Offset & 123 & 13 & 3 & 4 & 74\\
+		\hline
+		One-Point Clegg mit Offset & 126 & 0 & 0 & - & 43,5\\
+		\hline
+		One-Point One-Fifth kein Offset & 119 & 2 & 1 & 2 & 34\\
+		\hline
+		One-Point One-Fifth mit Offset & 127 & 0 & 0 & - & 27,5\\
+		\hline
+		Two-Point Konstant kein Offset & 113 & 10 & 2 & 3 & 39,5\\
+		\hline
+		Two-Point Konstant mit Offset & 129 & 0 & 0 & - & 64\\
+		\hline
+		Two-Point Clegg kein Offset & 106 & 20 & 8 & 6,5 & 40\\
+		\hline
+		Two-Point Clegg mit Offset & 125 & 0 & 0 & - & 70,5\\
+		\hline
+		Two-Point One-Fifth kein Offset & 126 & 4 & 2 & 3 & 59,5\\
+		\hline
+		Two-Point One-Fifth mit Offset & 125 & 0 & 0 & - & 43\\
+		\hline
+		Uniform Konstant kein Offset & 85 & 44 & 15 & 14 & 55\\
+		\hline
+		Uniform Konstant mit Offset & 131 & 0 & 0 & - & 37,5\\
+		\hline
+		Uniform Clegg kein Offset & 101 & 41 & 15 & 4 & 31\\
+		\hline
+		Uniform Clegg mit Offset & 130 & 0 & 0 & - & 51,5\\
+		\hline
+		Uniform One-Fifth kein Offset & 108 & 22 & 12 & 5 & 69,5\\
+		\hline
+		Uniform One-Fifth mit Offset & 123 & 0 & 0 & - & 54\\
+	\end{tabular}
+	\caption{Parity: Auswertung der Rohdaten}
+	\label{table:parityRohdaten}
+\end{table}
+
 
 \subsection{Keijzer: Tabellen Rohdatenanalyse}
 
