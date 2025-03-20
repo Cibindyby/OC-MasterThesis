@@ -119,60 +119,12 @@ Der Zusammenhang zwischen negativen Mutationen und Offset kann allerdings nicht 
 \subsection{Rohdatenanalyse: Keijzer}
 \label{subsec:rohdatenKeijzer}
 
-Die folgende Tabelle \ref{table:keijzerHPO} zeigt die Ergebnisse der Hyperparameteranalyse des Keijzer-Test\-sze\-narios.
-Die Umstände der Hyperparameteroptimierung sind die gleichen wie bei Parity und können in Abschnitt \ref{subsec:rohdatenParity} nachgelesen werden.
+Die Umstände der Hyperparameteroptimierung für den Keijzer-Testfall sind die gleichen wie bei Parity und können in Abschnitt \ref{subsec:rohdatenParity} nachgelesen werden.
 Wie bei den Ergebnissen bei Parity gibt es auch bei der Offset-Optimierung im Keijzer-Testszenario zwei aus neun Fällen, bei denen der Offset ursprünglich auf 0 gesetzt wurde.
 Diese Parametersätze wurden durch den jeweils zweitbesten Parametersatz ersetzt und sind in der Tabelle rot markiert.
 Die Beobachtungen in diesem Abschnitt beziehen sich nur auf den Keijzer-Benchmark.
-In Abschnitt \ref{subsec:rohdatenZusammenfassung} werden abschließende Erkenntnisse aus den Hyperparameteranalysen von Parity und Keijzer zusammengetragen.
-
-\begin{table}[H]
-	\centering
-	\begin{tabular}{c | c | c | c | c | c | c}
-		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl Rechenknoten} \end{turn} & \begin{turn}{270} \textbf{$\lambda$ (Nachwuchs)} \end{turn} & \begin{turn}{270} \textbf{Start-Rekombinationsrate} \end{turn} & \begin{turn}{270} \textbf{Delta Rekombinationsrate} \end{turn} & \begin{turn}{270} \textbf{$\mu$ (Elitisten)} \end{turn} & \begin{turn}{270} \textbf{Offset} \end{turn}\\
-		\hline
-		keine Rekombination & 1850 & 44 & - & - & 20 & -\\
-		\hline
-		One-Point Konstant kein Offset & 600 & 50 & 0,2 & - & 20 & - \\
-		\hline
-		One-Point Konstant mit Offset & 1200 & 50 & 1 & - & 4 & 120\\
-		\hline
-		One-Point Clegg kein Offset & 1100 & 60 & - & 0,05 & 16 & - \\
-		\hline
-		One-Point Clegg mit Offset & 850 & 60 & - & 0,005 & 16 & \color{red}300\color{black} \\
-		\hline
-		One-Point One-Fifth kein Offset & 350 & 34 & 0,75 & - & 18 & - \\
-		\hline
-		One-Point One-Fifth mit Offset & 2000 & 28 & 0,65 & - & 18 & 180 \\
-		\hline
-		Two-Point Konstant kein Offset & 1700 & 60 & 0,5 & - & 8 & - \\
-		\hline
-		Two-Point Konstant mit Offset & 600 & 48 & 0,3 & - & 16 & \color{red}180\color{black} \\
-		\hline
-		Two-Point Clegg kein Offset & 750 & 34 & - & 0,005 & 14 & - \\
-		\hline
-		Two-Point Clegg mit Offset & 800 & 36 & - & 0,045 & 20 & 210 \\
-		\hline
-		Two-Point One-Fifth kein Offset & 1350 & 40 & 0,35 & - & 20 & - \\
-		\hline
-		Two-Point One-Fifth mit Offset & 700 & 52 & 0,7 & - & 8 & 30 \\
-		\hline
-		Uniform Konstant kein Offset & 1100 & 52 & 0,8 & - & 8 & - \\
-		\hline
-		Uniform Konstant mit Offset & 1800 & 60 & 0,1 & - & 20 & 90 \\
-		\hline
-		Uniform Clegg kein Offset & 850 & 26 & - & 0,05 & 18 & - \\
-		\hline
-		Uniform Clegg mit Offset & 2000 & 44 & - & 0,05 & 14 & 180 \\
-		\hline
-		Uniform One-Fifth kein Offset & 1150 & 54 & 0,75 & - & 18 & - \\
-		\hline
-		Uniform One-Fifth mit Offset & 900 & 48 & 0,35 & - & 20 & 90 \\
-	\end{tabular}
-	\caption{Keijzer: Ergebnis Hyperparameteranalyse}
-	\label{table:keijzerHPO}
-\end{table}
-
+In Abschnitt \ref{subsec:rohdatenZusammenfassung} werden abschließende Erkenntnisse aus den Hyperparameteranalysen von Parity und Keijzer zusammengetragen.\\
+Die Tabelle \ref{table:keijzerHPO} zeigt die Ergebnisse der Hyperparameteranalyse des Keijzer-Test\-sze\-narios.
 Wie bereits in Abschnitt \ref{subsec:rohdatenParity} erklärt, kann eine Reduktion der Rechenknoten in einem CGP-Modell dazu führen, dass Systemressourcen und Rechenzeit gespart werden können.
 Dies gilt natürlich nur unter Anbetracht, dass die Effizienz des CGPs zur Berechnung der Lösung nicht darunter leidet.
 Wird der Mittelwert aller verwendeten Rechenknoten gebildet, liegt der Wert bei ungefähr 1305. 
@@ -208,60 +160,11 @@ Werden diese verbesserten Parametersätze wieder auf ihren Originalwert (0) zur�
 In diesem Fall ist der Durchschnitts-Offset der Two-Point Rekombination der geringste.
 Es fällt außerdem auf, dass die zweitbesten Parametersätze Offset-Werte besitzen, die deutlich höher sind, als der Mittelwert aller Offsets.
 Der Offset der One-Point Rekombination mit linear fallender Rekombinationsrate ist dabei sogar der maximal mögliche Offset-Wert (300).
-Diese extreme Schwankung der Offsets zwischen erstbestem und zweitbestem Parametersatz spricht dafür, dass die Güte eines CGPs nicht kausal mit der Höhe des Offsets zusammenhängt.\\
+Diese extreme Schwankung der Offsets zwischen erstbestem und zweitbestem Parametersatz spricht dafür, dass die Güte eines CGPs nicht kausal mit der Höhe des Offsets zusammenhängt.
 
 Folgend werden die Rohdaten der Keijzer-Testdurchläufe anhand von Tabelle \ref{table:keijzerRohdaten} bewertet.
 Wie für Parity wurden dabei 50 Durchläufe für jede CGP-Konfiguration ausgeführt, um statistische Abweichungen einzufangen.
-
-
-\begin{table}[H]
-	\centering
-	\begin{tabular}{c | c | c | c | c | c }
-		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn}\\
-		\hline
-		keine Rekombination & 2260 & 0 & 0 & - & 624\\
-		\hline
-		One-Point Konstant kein Offset & 1183 & 26 & 16 & 13 & 756\\
-		\hline
-		One-Point Konstant mit Offset & 1531 & 0 & 0 & - & 374\\
-		\hline
-		One-Point Clegg kein Offset & 1584 & 59 & 28 & 5 & 243\\
-		\hline
-		One-Point Clegg mit Offset & 1534 & 0 & 0 & - & 396,5\\
-		\hline
-		One-Point One-Fifth kein Offset & 1307 & 35 & 18 & 3 & 766\\
-		\hline
-		One-Point One-Fifth mit Offset & 1776 & 0 & 0 & - & 229\\
-		\hline
-		Two-Point Konstant kein Offset & 1854 & 79 & 25 & 15 & 803\\
-		\hline
-		Two-Point Konstant mit Offset & 1361 & 0 & 0 & - & 548\\
-		\hline
-		Two-Point Clegg kein Offset & 1467 & 106 & 62 & 18,5 & 735\\
-		\hline
-		Two-Point Clegg mit Offset & 1862 & 0 & 0 & - & 201\\
-		\hline
-		Two-Point One-Fifth kein Offset & 1788 & 17 & 10 & 4 & 753\\
-		\hline
-		Two-Point One-Fifth mit Offset & 1124 & 0 & 0 & - & 158\\
-		\hline
-		Uniform Konstant kein Offset & 1224 & 480 & 239 & 24 & 363\\
-		\hline
-		Uniform Konstant mit Offset & 1890 & 0 & 0 & - & 260,5\\
-		\hline
-		Uniform Clegg kein Offset & 1386 & 77 & 57 & 6 & 723\\
-		\hline
-		Uniform Clegg mit Offset & 2232 & 0 & 0 & - & 385,5\\
-		\hline
-		Uniform One-Fifth kein Offset & 1491 & 106 & 50 & 8 & 155\\
-		\hline
-		Uniform One-Fifth mit Offset & 1749 & 0 & 0 & - & 445,5\\
-	\end{tabular}
-	\caption{Keijzer: Auswertung der Rohdaten}
-	\label{table:keijzerRohdaten}
-\end{table}
-
-Im allgemeinen lässt sich durch die Betrachtung der Tabelle \ref{table:keijzerRohdaten} feststellen, dass die Mutation deutlich öfter eine bessere Fitness hervorbringt als die Rekombination.
+Im allgemeinen lässt sich durch die Betrachtung der Tabelle feststellen, dass die Mutation deutlich öfter eine bessere Fitness hervorbringt als die Rekombination.
 Außerdem tritt keine Verbesserung der Fitness durch Rekombination ein, wenn ein Offset eingesetzt wurde.
 Dieser Fakt und derjenige, dass der Median der Iterationen für positive Rekombinationen deutlich geringere Werte hervorbringt als der Median der Iterationen bis zur Konvergenz, lässt darauf schließen, dass Rekombinationsschritte zu Beginn des Trainings eine höhere Wahrscheinlichkeit aufweisen die Fitness zu verbessern.\\
 Ein Trend, der sich durch die Ergebnisse aufzeigt, ist, dass mehr positive Rekombinationen auftreten, umso komplexer die Rekombinationsarten gewählt werden.
@@ -285,186 +188,20 @@ Neben dieser Beobachtung zum Offset-Verhalten, kann auch gesehen werden, dass di
 Dies kann ein Indiz dafür sein, dass der Offset in der Hyperparameteranalyse nur gewählt wurde, weil Rekombination und Mutation in einigen Iterationen Gegenspieler sind, statt einen gemeinsamen Erfolg zu erzielen und es deswegen in diesen Fällen besser ist die Rekombination komplett auszusetzen.
 
 
-
 \subsection{Rohdatenanalyse: Encode}
 \label{subsec:rohdatenEncode}
 
 In diesem Abschnitt werden die Rohdaten der Encode Benchmark Tests ausgewertet.
 Zu beachten ist, dass sich dieser Abschnitt nur auf die Ergebnisse von Encode bezieht und alle Schlussfolgerungen und Thesen in Abschnitt \ref{subsec:rohdatenZusammenfassung} erneut evaluiert werden.
 Denkanstöße und Beobachtungen jeder Art sind in diesem Abschnitt nur auf die jeweiligen Ergebnisse von Encode bezogen und stellen keine allgemeinen Aussagen dar.\\
-Die folgenden Tabellen \ref{table:encodeOnePointRohdaten}, \ref{table:encodeTwoPointRohdaten} und \ref{table:encodeUniformRohdaten} stellen die Ergebnisse von jeweils 50 Testdurchläufen mit 10000 Iterationen für die unterschiedlichen CGP-Konfigurationen dar. 
+Die Tabellen \ref{table:encodeOnePointRohdaten}, \ref{table:encodeTwoPointRohdaten} und \ref{table:encodeUniformRohdaten} stellen die Ergebnisse von jeweils 50 Testdurchläufen mit 10000 Iterationen für die unterschiedlichen CGP-Konfigurationen dar. 
 Dabei ist jede Tabelle auf eine Rekombinationsart eingeschränkt.
 Ziel ist es mehr über das Zusammenspiel von Rekombinationsart und Einstellungen der Rekombinationsrate zu erfahren.
 Der Offset wurde hier nicht weiter betrachtet, da die Ergebnisse von Parity und Keijzer zeigen, dass der Offset dazu führt, dass die Rekombination die Fitness des CGPs nicht verbessern kann.
 Außerdem schließt der Offset die Rekombination für einige Iterationen aus, was den Einblick auf die Auswirkungen der Rekombinationsraten auf den Erfolg des CGPs einschränkt.
 Aus diesen Gründen wurde es für sinnvoll empfunden den Offset für diesen Abschnitt auszuschließen.
 
-\begin{table}[H]
-	\centering
-	\begin{tabular}{c | c | c | c | c | c | c}
-		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn} & \begin{turn}{270} \textbf{Stopp-Kriterium erfüllt} \end{turn}\\
-		\hline
-		keine Rekombination & 1138 & - & - & - & 3847,5 & 8\\
-		\hline
-		One-Point Konstant: 0,125 & 1126 & 20 & 4 & 9,5 & 3362 & 9\\
-		\hline
-		One-Point Konstant: 0,25 & 1100 & 42 & 5 & 12,5 & 1963 & 9\\
-		\hline
-		One-Point Konstant: 0,375 & 1120 & 43 & 5 & 6 & 4578,5 & 8\\
-		\hline
-		One-Point Konstant: 0,5 & 1104 & 34 & 2 & 10 & 936 & 9\\
-		\hline
-		One-Point Konstant: 0,625 & 1096 & 45 & 4 & 12 & 3293 & 6\\
-		\hline
-		One-Point Konstant: 0,75 & 1103 & 55 & 11 & 16 & 1898,5 & 6\\
-		\hline
-		One-Point Konstant: 0,875 & 1093 & 59 & 6 & 15 & 1913 & 10\\
-		\hline
-		One-Point Konstant: 1,0 & 1086 & 58 & 9 & 8 & 3754,5 & 8\\
-		\hline
-		One-Point Clegg: 0,0005 & 1125 & 48 & 6 & 11 & 1905,5 & 12\\
-		\hline
-		One-Point Clegg: 0,0015 & 1062 & 51 & 5 & 12 & 2754,5 & 6\\
-		\hline
-		One-Point Clegg: 0,0025 & 1063 & 39 & 2 & 9 & 1530 & 5\\
-		\hline
-		One-Point Clegg: 0,0035 & 1114 & 34 & 2 & 10,5 & 2840,5 & 6\\
-		\hline
-		One-Point Clegg: 0,0045 & 1127 & 38 & 2 & 10 & 2558 & 9\\
-		\hline
-		One-Point Clegg: 0,0055 & 1079 & 55 & 7 & 9 & 4007,5 & 8\\
-		\hline
-		One-Point One-Fifth: 0,125 & 1138 & 19 & 1 & 7 & 3950 & 9\\
-		\hline
-		One-Point One-Fifth: 0,25 & 1135 & 22 & 3 & 7 & 4111,5 & 12\\
-		\hline
-		One-Point One-Fifth: 0,375 & 1155 & 20 & 1 & 4 & 1685 & 7\\
-		\hline
-		One-Point One-Fifth: 0,5 & 1123 & 26 & 0 & 5 & 3205 & 11\\
-		\hline
-		One-Point One-Fifth: 0,625 & 1100 & 35 & 3 & 6 & 3809 & 11\\
-		\hline
-		One-Point One-Fifth: 0,75 & 1089 & 25 & 1 & 6 & 795 & 7\\
-		\hline
-		One-Point One-Fifth: 0,875 & 1126 & 32 & 5 & 8 & 5213 & 5\\
-		\hline
-		One-Point One-Fifth: 1,0 & 1112 & 42 & 3 & 5,5 & 2863 & 5\\
-	\end{tabular}
-	\caption{Encode One-Point Rekombination: Auswertung der Rohdaten}
-	\label{table:encodeOnePointRohdaten}
-\end{table}
-
-\begin{table}[H]
-	\centering
-	\begin{tabular}{c | c | c | c | c | c | c}
-		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn} & \begin{turn}{270} \textbf{Stopp-Kriterium erfüllt} \end{turn}\\
-		\hline
-		keine Rekombination & 1138 & - & - & - & 3847,5 & 8\\
-		\hline
-		Two-Point Konstant: 0,125 & 1044 & 27 & 2 & 6 & 4039,5 & 2\\
-		\hline
-		Two-Point Konstant: 0,25 & 1062 & 35 & 9 & 7 & 4292 & 3\\
-		\hline
-		Two-Point Konstant: 0,375 & 1076 & 45 & 4 & 5 & 1840 & 5\\
-		\hline
-		Two-Point Konstant: 0,5 & 1041 & 50 & 12 & 7,5 & 1666 & 3\\
-		\hline
-		Two-Point Konstant: 0,625 & 1050 & 61 & 15 & 7 & 7370 & 3\\
-		\hline
-		Two-Point Konstant: 0,75 & 1019 & 61 & 14 & 10 & 3138 & 1\\
-		\hline
-		Two-Point Konstant: 0,875 & 1023 & 73 & 12 & 9 & 4445 & 5\\
-		\hline
-		Two-Point Konstant: 1,0 & 1031 & 65 & 10 & 5 & 3476,5 & 6\\
-		\hline
-		Two-Point Clegg: 0,0005 & 1041 & 70 & 7 & 6 & 3383 & 5\\
-		\hline
-		Two-Point Clegg: 0,0015 & 1015 & 53 & 8 & 8 & 2524,5 & 2\\
-		\hline
-		Two-Point Clegg: 0,0025 & 1026 & 75 & 8 & 9 & 6024 & 3\\
-		\hline
-		Two-Point Clegg: 0,0035 & 977 & 64 & 9 & 7 & 2061 & 3\\
-		\hline
-		Two-Point Clegg: 0,0045 & 1046 & 51 & 9 & 8 & 2616 & 5\\
-		\hline
-		Two-Point Clegg: 0,0055 & 1019 & 52 & 8 & 9,5 & 3475 & 7\\
-		\hline
-		Two-Point One-Fifth: 0,125 & 1067 & 10 & 3 & 5 & 575 & 2\\
-		\hline
-		Two-Point One-Fifth: 0,25 & 1077 & 16 & 4 & 4 & 707 & 1\\
-		\hline
-		Two-Point One-Fifth: 0,375 & 1067 & 17 & 1 & 4 & 7538 & 1\\
-		\hline
-		Two-Point One-Fifth: 0,5 & 1063 & 24 & 5 & 5 & 3363 & 3\\
-		\hline
-		Two-Point One-Fifth: 0,625 & 1075 & 32 & 6 & 4 & 4919 & 5\\
-		\hline
-		Two-Point One-Fifth: 0,75 & 1078 & 34 & 8 & 4 & 1312 & 6\\
-		\hline
-		Two-Point One-Fifth: 0,875 & 1088 & 36 & 4 & 5 & 2529,5 & 6\\
-		\hline
-		Two-Point One-Fifth: 1,0 & 1049 & 43 & 7 & 4 & 1140 & 5\\
-	\end{tabular}
-	\caption{Encode Two-Point Rekombination: Auswertung der Rohdaten}
-	\label{table:encodeTwoPointRohdaten}
-\end{table}
-
-\begin{table}[H]
-	\centering
-	\begin{tabular}{c | c | c | c | c | c | c}
-		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn} & \begin{turn}{270} \textbf{Stopp-Kriterium erfüllt} \end{turn}\\
-		\hline
-		keine Rekombination & 1138 & - & - & - & 3847,5 & 8\\
-		\hline
-		Uniform Konstant: 0,125 & 1105 & 52 & 12 & 7 & 4058 & 9\\
-		\hline
-		Uniform Konstant: 0,25 & 1099 & 69 & 3 & 13 & 3831,5 & 10\\
-		\hline
-		Uniform Konstant: 0,375 & 1076 & 64 & 10 & 9 & 4071,5 & 6\\
-		\hline
-		Uniform Konstant: 0,5 & 1105 & 68 & 2 & 12,5 & 993,5 & 8\\
-		\hline
-		Uniform Konstant: 0,625 & 1099 & 78 & 3 & 9 & 1306,5 & 6\\
-		\hline
-		Uniform Konstant: 0,75 & 1085 & 81 & 6 & 10 & 3459 & 8\\
-		\hline
-		Uniform Konstant: 0,875 & 1088 & 83 & 1 & 10 & 2490,5 & 6\\
-		\hline
-		Uniform Konstant: 1,0 & 1081 & 67 & 5 & 10 & 4785 & 9\\
-		\hline
-		Uniform Clegg: 0,0005 & 1092 & 76 & 5 & 8 & 2562 & 13\\
-		\hline
-		Uniform Clegg: 0,0015 & 1099 & 78 & 2 & 10,5 & 1777 & 11\\
-		\hline
-		Uniform Clegg: 0,0025 & 1096 & 74 & 7 & 11 & 2401,5 & 10\\
-		\hline
-		Uniform Clegg: 0,0035 & 1095 & 56 & 4 & 12 & 4674,5 & 4\\
-		\hline
-		Uniform Clegg: 0,0045 & 1080 & 70 & 2 & 13 & 5118 & 10\\
-		\hline
-		Uniform Clegg: 0,0055 & 1122 & 68 & 10 & 9,5 & 4044,5 & 8\\
-		\hline
-		Uniform One-Fifth: 0,125 & 1152 & 18 & 2 & 6,5 & 3876 & 7\\
-		\hline
-		Uniform One-Fifth: 0,25 & 1126 & 25 & 6 & 6 & 3393 & 11\\
-		\hline
-		Uniform One-Fifth: 0,375 & 1128 & 29 & 2 & 8 & 988,5 & 6\\
-		\hline
-		Uniform One-Fifth: 0,5 & 1156 & 44 & 5 & 7 & 3968 & 11\\
-		\hline
-		Uniform One-Fifth: 0,625 & 1122 & 40 & 4 & 8 & 1781 & 7\\
-		\hline
-		Uniform One-Fifth: 0,75 & 1104 & 47 & 4 & 6 & 3385,5 & 12\\
-		\hline
-		Uniform One-Fifth: 0,875 & 1075 & 51 & 10 & 10 & 1831,5 & 6\\
-		\hline
-		Uniform One-Fifth: 1,0 & 1129 & 55 & 7 & 6 & 4972 & 9\\
-	\end{tabular}
-	\caption{Encode Uniform Rekombination: Auswertung der Rohdaten}
-	\label{table:encodeUniformRohdaten}
-\end{table}
-
-Betrachtet man die drei Tabellen \ref{table:encodeOnePointRohdaten}, \ref{table:encodeTwoPointRohdaten} und \ref{table:encodeUniformRohdaten} lässt sich feststellen, dass innerhalb der 10000 Iterationen nur die wenigsten CGP-Modelle konvergiert sind.
+Werden die drei Tabellen \ref{table:encodeOnePointRohdaten}, \ref{table:encodeTwoPointRohdaten} und \ref{table:encodeUniformRohdaten} betrachtet, lässt sich feststellen, dass innerhalb der 10000 Iterationen nur die wenigsten CGP-Modelle konvergiert sind.
 Aus diesem Grund wird für den Encode Benchmark bei der bayes'schen Analyse die Wahrscheinlichkeitsfunktion der Fitness nach der 10000. Iteration gefittet und analysiert.\\
 Um Zusammenhängen zwischen den CGP-Konfigurationen und der Güte der CGP-Modelle zu erforschen wurden Muster in verschiedenen Spalten der Tabellen miteinander abgeglichen.
 Dabei wurden die Spalten \glqq Anzahl positive Rekombinationen\grqq, \glqq Anzahl negativer Mutationen\grqq\space und \glqq Median Iterationen positive Rekombination\grqq\space mit den zwei Spalten \glqq Median Iterationen bis Konvergenz\grqq\space und \glqq Stopp-Kriterium erfüllt\grqq\space verglichen.
@@ -528,7 +265,7 @@ Die hohen Anzahlen an positiven Rekombinationen, obwohl die Rekombination nicht 
 \subsection{Rohdatenanalyse: Koza}
 \label{subsec:rohdatenKoza}
 
-Die folgenden Tabellen \ref{table:kozaOnePointRohdaten}, \ref{table:kozaTwoPointRohdaten} und \ref{table:kozaUniformRohdaten} zeigen die Rohdaten-Auswertungen des Koza-Testszenarios.
+Die Tabellen \ref{table:kozaOnePointRohdaten}, \ref{table:kozaTwoPointRohdaten} und \ref{table:kozaUniformRohdaten} zeigen die Rohdaten-Auswertungen des Koza-Testszenarios.
 Für jede CGP-Konfiguration wurden 50 Modelle innerhalb von maximal 50000 Iterationen trainiert.
 Jede der Tabellen stellt eine Rekombinationsart mit verschiedenen Parametrierungen der Rekombinationsraten dar.
 Wie in Abschnitt \ref{subsec:rohdatenEncode} wurde für das Koza-Testszenario der Offset als Parameter ausgestellt.
@@ -538,177 +275,6 @@ Ziel des Abschnittes ist es die Zusammenhänge zwischen verschiedenen Rekombinat
 Außerdem soll bestimmt werden, welche Metrik für die Auswertung der bayes'schen Analyse verwendet werden soll.
 In diesem Abschnitt werden nur die Ergebnisse von Koza ausgewertet und erlauben noch keine allgemeinen Aussagen.
 Diese werden in Abschnitt \ref{subsec:rohdatenZusammenfassung} ausgewertet, indem die Ergebnisse aus allen Testszenarien zusammengetragen und verglichen werden.
-
-
-\begin{table}[H]
-	\centering
-	\begin{tabular}{c | c | c | c | c | c | c}
-		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn} & \begin{turn}{270} \textbf{Stopp-Kriterium erfüllt} \end{turn}\\
-		\hline
-		keine Rekombination & 1157 & - & - & - & 208 & 48\\
-		\hline
-		One-Point Konstant: 0,125 & 1338 & 9 & 8 & 42 & 616 & 41\\
-		\hline
-		One-Point Konstant: 0,25 & 1180 & 23 & 16 & 7 & 611 & 45\\
-		\hline
-		One-Point Konstant: 0,375 & 1493 & 42 & 25 & 43 & 2012 & 47\\
-		\hline
-		One-Point Konstant: 0,5 & 1477 & 57 & 40 & 18 & 602,5 & 36\\
-		\hline
-		One-Point Konstant: 0,625 & 1287 & 48 & 23 & 82,5 & 2302 & 45\\
-		\hline
-		One-Point Konstant: 0,75 & 1423 & 65 & 43 & 29 & 989 & 47\\
-		\hline
-		One-Point Konstant: 0,875 & 1593 & 85 & 48 & 18 & 848 & 34\\
-		\hline
-		One-Point Konstant: 1,0 & 1548 & 136 & 83 & 73,5 & 667 & 41\\
-		\hline
-		One-Point Clegg: 0,0005 & 1460 & 98 & 56 & 45,5 & 603 & 43\\
-		\hline
-		One-Point Clegg: 0,0015 & 1525 & 78 & 43 & 12 & 659 & 40\\
-		\hline
-		One-Point Clegg: 0,0025 & 1303 & 52 & 31 & 7 & 583 & 41\\
-		\hline
-		One-Point Clegg: 0,0035 & 1233 & 61 & 35 & 6 & 529 & 42\\
-		\hline
-		One-Point Clegg: 0,0045 & 1187 & 62 & 36 & 10 & 511 & 44\\
-		\hline
-		One-Point Clegg: 0,0055 & 1622 & 50 & 28 & 9,5 & 1320 & 42\\
-		\hline
-		One-Point One-Fifth: 0,125 & 1434 & 2 & 1 & 1,5 & 462 & 44\\
-		\hline
-		One-Point One-Fifth: 0,25 & 1544 & 7 & 6 & 1 & 1400 & 44\\
-		\hline
-		One-Point One-Fifth: 0,375 & 1005 & 13 & 8 & 2 & 838,5 & 46\\
-		\hline
-		One-Point One-Fifth: 0,5 & 1137 & 14 & 10 & 2 & 360,5 & 41\\
-		\hline
-		One-Point One-Fifth: 0,625 & 1207 & 18 & 12 & 2 & 947 & 44\\
-		\hline
-		One-Point One-Fifth: 0,75 & 1387 & 17 & 11 & 3 & 910 & 43\\
-		\hline
-		One-Point One-Fifth: 0,875 & 1160 & 29 & 14 & 4 & 301 & 43\\
-		\hline
-		One-Point One-Fifth: 1,0 & 1393 & 38 & 25 & 4 & 568 & 43\\
-	\end{tabular}
-	\caption{Koza One-Point Rekombination: Auswertung der Rohdaten}
-	\label{table:kozaOnePointRohdaten}
-\end{table}
-
-
-
-\begin{table}[H]
-	\centering
-	\begin{tabular}{c | c | c | c | c | c | c}
-		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn} & \begin{turn}{270} \textbf{Stopp-Kriterium erfüllt} \end{turn}\\
-		\hline
-		keine Rekombination & 1157 & - & - & - & 208 & 48\\
-		\hline
-		Two-Point Konstant: 0,125 & 1383 & 41 & 24 & 106 & 106 & 45\\
-		\hline
-		Two-Point Konstant: 0,25 & 1475 & 82 & 55 & 47,5 & 613 & 48\\
-		\hline
-		Two-Point Konstant: 0,375 & 1207 & 91 & 58 & 75 & 153 & 43\\
-		\hline
-		Two-Point Konstant: 0,5 & 1120 & 85 & 49 & 29 & 194 & 46\\
-		\hline
-		Two-Point Konstant: 0,625 & 1013 & 93 & 38 & 16 & 124 & 49\\
-		\hline
-		Two-Point Konstant: 0,75 & 1373 & 145 & 65 & 21 & 190 & 43\\
-		\hline
-		Two-Point Konstant: 0,875 & 1400 & 140 & 76 & 26 & 731 & 46\\
-		\hline
-		Two-Point Konstant: 1,0 & 1176 & 220 & 140 & 50,5 & 207 & 48\\
-		\hline
-		Two-Point Clegg: 0,0005 & 1446 & 193 & 99 & 30 & 205 & 47\\
-		\hline
-		Two-Point Clegg: 0,0015 & 1167 & 105 & 59 & 14 & 154 & 45\\
-		\hline
-		Two-Point Clegg: 0,0025 & 1396 & 106 & 53 & 18 & 504,5 & 44\\
-		\hline
-		Two-Point Clegg: 0,0035 & 1043 & 95 & 45 & 13 & 142 & 46\\
-		\hline
-		Two-Point Clegg: 0,0045 & 1023 & 100 & 50 & 14,5 & 96 & 46\\
-		\hline
-		Two-Point Clegg: 0,0055 & 1160 & 94 & 43 & 11,5 & 223,5 & 49\\
-		\hline
-		Two-Point One-Fifth: 0,125 & 1422 & 5 & 4 & 2 & 226 & 45\\
-		\hline
-		Two-Point One-Fifth: 0,25 & 1348 & 10 & 5 & 4 & 404,5 & 44\\
-		\hline
-		Two-Point One-Fifth: 0,375 & 1365 & 15 & 4 & 3 & 460 & 46\\
-		\hline
-		Two-Point One-Fifth: 0,5 & 1761 & 15 & 4 & 5 & 584 & 47\\
-		\hline
-		Two-Point One-Fifth: 0,625 & 1165 & 22 & 13 & 6 & 165 & 48\\
-		\hline
-		Two-Point One-Fifth: 0,75 & 1041 & 26 & 13 & 4 & 213,5 & 46\\
-		\hline
-		Two-Point One-Fifth: 0,875 & 1050 & 42 & 19 & 7 & 185 & 48\\
-		\hline
-		Two-Point One-Fifth: 1,0 & 1142 & 35 & 20 & 5 & 348 & 49\\
-	\end{tabular}
-	\caption{Koza Two-Point Rekombination: Auswertung der Rohdaten}
-	\label{table:kozaTwoPointRohdaten}
-\end{table}
-
-
-
-
-\begin{table}[H]
-	\centering
-	\begin{tabular}{c | c | c | c | c | c | c}
-		\begin{turn}{270} \textbf{CGP-Konfigurationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Anzahl pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Anzahl neg. Mutationen} \end{turn} & \begin{turn}{270} \textbf{Median Iter. pos. Rekomb.} \end{turn} & \begin{turn}{270} \textbf{Median Iter. bis Konv.} \end{turn} & \begin{turn}{270} \textbf{Stopp-Kriterium erfüllt} \end{turn}\\
-		\hline
-		keine Rekombination & 1157 & - & - & - & 208 & 48\\
-		\hline
-		Uniform Konstant: 0,125 & 1178 & 124 & 75 & 31,5 & 316 & 44\\
-		\hline
-		Uniform Konstant: 0,25 & 1233 & 157 & 90 & 44 & 479 & 43\\
-		\hline
-		Uniform Konstant: 0,375 & 1166 & 251 & 132 & 35 & 257,5 & 47\\
-		\hline
-		Uniform Konstant: 0,5 & 1084 & 184 & 92 & 27,5 & 113 & 45\\
-		\hline
-		Uniform Konstant: 0,625 & 1277 & 295 & 152 & 31 & 430 & 47\\
-		\hline
-		Uniform Konstant: 0,75 & 1301 & 276 & 141 & 31 & 382 & 43\\
-		\hline
-		Uniform Konstant: 0,875 & 1102 & 332 & 181 & 31 & 467 & 44\\
-		\hline
-		Uniform Konstant: 1,0 & 1080 & 328 & 199 & 21 & 176 & 43\\
-		\hline
-		Uniform Clegg: 0,0005 & 1155 & 373 & 197 & 40 & 709 & 46\\
-		\hline
-		Uniform Clegg: 0,0015 & 793 & 259 & 147 & 17 & 81 & 48\\
-		\hline
-		Uniform Clegg: 0,0025 & 887 & 319 & 181 & 25 & 140 & 48\\
-		\hline
-		Uniform Clegg: 0,0035 & 1415 & 318 & 162 & 18 & 162 & 46\\
-		\hline
-		Uniform Clegg: 0,0045 & 1404 & 304 & 153 & 18 & 637 & 48\\
-		\hline
-		Uniform Clegg: 0,0055 & 1364 & 300 & 141 & 19 & 143 & 46\\
-		\hline
-		Uniform One-Fifth: 0,125 & 1545 & 12 & 6 & 5 & 147 & 41\\
-		\hline
-		Uniform One-Fifth: 0,25 & 1314 & 24 & 8 & 6 & 153 & 44\\
-		\hline
-		Uniform One-Fifth: 0,375 & 1384 & 36 & 14 & 8,5 & 273 & 47\\
-		\hline
-		Uniform One-Fifth: 0,5 & 1718 & 61 & 28 & 6 & 848 & 46\\
-		\hline
-		Uniform One-Fifth: 0,625 & 1244 & 72 & 35 & 6 & 363 & 47\\
-		\hline
-		Uniform One-Fifth: 0,75 & 1320 & 90 & 49 & 5 & 207 & 44\\
-		\hline
-		Uniform One-Fifth: 0,875 & 1406 & 92 & 49 & 9 & 470 & 46\\
-		\hline
-		Uniform One-Fifth: 1,0 & 1444 & 83 & 40 & 6 & 794,5 & 47\\
-	\end{tabular}
-	\caption{Koza Uniform Rekombination: Auswertung der Rohdaten}
-	\label{table:kozaUniformRohdaten}
-\end{table}
 
 Aus den Spalten \glqq Stopp-Kriterium erfüllt\grqq\space der drei Tabellen \ref{table:kozaOnePointRohdaten}, \ref{table:kozaTwoPointRohdaten} und \ref{table:kozaUniformRohdaten} geht hervor, dass relativ viele Durchgänge des CGP-Trainings konvergiert sind.
 Deswegen wird für die bayes'sche Analyse in Abschnitt \ref{subsec:bayesKoza} die Anzahl an Iterationen bis zur Konvergenz als Metrik verwendet.
@@ -818,7 +384,7 @@ Um die Ergebnisse und die daraus abgeleiteten Aussagen zu validieren könnte es 
 Diese sollte mit Hilfe von mehr Rechenkapazität ausgeführt werden, damit mehr Hyperparameter getestet werden können.
 Außerdem kann die Anzahl an ausgeführten CGP-Trainings pro Bewertungsschritt in der Hyperparameteranalyse höher gesetzt werden.
 Durch diese Schritte könnten sich die Ergebnisse von Parity und Keijzer aneinander angleichen, wodurch bessere Bewertungen stattfinden könnten.
-Andernfalls könnte die Aussage gestärkt werden, dass die CGP-Konfigurationen keinen Zusammenhang zur Auswahl einzelner Hyperparameter aufweisen.\\
+Andernfalls könnte die Aussage gestärkt werden, dass die CGP-Konfigurationen keinen Zusammenhang zur Auswahl einzelner Hyperparameter aufweisen.
 
 Folgend sollen die Rohdatenanalysen der vier Testszenarien Parity, Keijzer, Encode und Koza zusammengefasst und miteinander verglichen werden.\\
 Für alle Testszenarien wurde festgestellt, dass deutlich mehr Mutationen zu einer Verbesserung der Fitness geführt haben als es für Rekombinationen der Fall war.
@@ -1163,7 +729,7 @@ Demnach kann keine Aussage zu der Streuung der Fitness-Werte in einer Iteration 
 \subsection{Graphische Evaluation: Koza}
 \label{subsec:plotsKoza}
 
-schauen, ob "ohne Rekombination" am Anfang schlechter ist und dann in den späteren Iterationen besser (wegen langem Training und überholen der Rekombinations-Fitness durch bessere Mutation in letzten Schritten) -> In Rohdatenanalyse nachschauen was "Anfang" in Iterationen heißt
+Notiz: schauen, ob \glqq ohne Rekombination\grqq\space am Anfang schlechter ist und dann in den späteren Iterationen besser (wegen langem Training und überholen der Rekombinations-Fitness durch bessere Mutation in letzten Schritten) -> In Rohdatenanalyse nachschauen was \glqq Anfang\grqq\space in Iterationen heißt
 
 \subsection{Graphische Evaluation: Zusammenfassung}
 \label{subsec:plotsZusammenfassung}

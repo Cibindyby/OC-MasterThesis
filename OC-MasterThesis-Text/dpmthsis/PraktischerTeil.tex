@@ -20,11 +20,11 @@ Nach der Aussage von Kalkreuth et al. spielen \emph{Boolesche Probleme} eine wic
 Grundsätzlich ist bei Booleschen Problemen das Ziel einen sinnvollen Zusammenhang zwischen Ein- und Ausgaben zu generieren, welcher von Booleschen Funktionen bestimmt wird.
 Diese können wiederum durch Boolesche Ausdrücke mathematisch beschrieben werden.
 Die verschiedenen Booleschen Funktionen können durch Wahrheitstabellen dargestellt werden, in denen die jeweiligen Ein- und Ausgaben miteinander verknüpft werden. \cite{kalkreuth_towards_2023}
-Das Ziel von CGP-Algorithmen ist es aus Eingängen die richtigen Ausgänge zu generieren, welche dem Mapping der Boolean Funktionen entsprechen.\\
+Das Ziel von CGP-Algorithmen ist es aus Eingängen die richtigen Ausgänge zu generieren, welche dem Mapping der Boolean Funktionen entsprechen.
 
 Insgesamt werden in dieser Arbeit zwei Boolesche Benchmarkprobleme für die Evaluation der CGP-Algorithmen betrachtet: 3-bit Parity und 16-4-bit Encode (vereinfacht bezeichnet als Parity und Encode).\\
 Obwohl Parity als zu leichtes Ausgangsproblem für GP bezeichnet wird \cite{white_better_2013}, wird es häufig als Benchmarkproblem genutzt \cite{yu_neutrality_2001, kaufmann_kalkreuth_2017, kaufmann_kalkreuth_2020}.
-Um Benchmarkprobleme mit unterschiedlichen Ein- und Ausgangsgrößen miteinzubeziehen, wird Encode verwendet.\\
+Um Benchmarkprobleme mit unterschiedlichen Ein- und Ausgangsgrößen miteinzubeziehen, wird Encode verwendet.
 
 Das verwendete Standardfunktionsset aller Testszenarien beinhaltet die Booleschen Rechenoperatoren AND, OR, NAND und NOR.
 Außerdem wird die Standardfitnessfunktion für Boolesche Benchmarkprobleme verwendet.
@@ -97,7 +97,7 @@ Diese werden im Folgenden beschrieben.\newline
 Dabei wurde für die CGP-Konfiguration ohne Rekombinationsschritt nicht $\mu = 1$ festgelegt, obwohl dies den Standard-Einstellungen eines CGP ohne Rekombination entspricht.
 Dieser zusätzliche Freiheitsgrad soll einen ausgewogeneren Vergleich zwischen den CGP-Konfigurationen mit und ohne Rekombinationsschritt ermöglichen.
 Für die Auswahl der Elitisten wird das neutral search Verfahren herangezogen.\\
-\textbf{Mutation:} In allen Experimenten dieser Arbeit wird die Single Active Mutation angewendet.\\
+\textbf{Mutation:} In allen Experimenten dieser Arbeit wird die Single Active Mutation angewendet.
 
 Die nachfolgende Tabelle \ref{table:Rekombinationskonfigurationen} gibt alle Konfigurationen für die \textbf{Rekombination} an, die für jedes Testszenario aus Abschnitt \ref{subsec:testszenarien} getestet werden.
 
@@ -174,7 +174,7 @@ Auf Basis dieser Mittelwerte konnten die Offset Wertebereiche sinnvoller gewähl
 Die drei letzten Zeilen der Tabelle \ref{table:hyperopt} geben die verschiedenen Arten an Rekombinationsraten an, die in dieser Arbeit verglichen werden.
 Für jede dieser Ratenarten wird gezielt nur ein Hyperparameter verwendet, um die Rechenzeit der Hyperparameteroptimierung zu reduzieren.
 Für die linear fallende Rekombinationsrate gibt dieser Parameter an, mit welcher Schrittweite die Rekombinationsrate pro Iteration sinkt.
-In der One-Fifth Regel wird der Startwert der Rekombinationsrate angegeben, also diejenige Rekombinationsrate, mit der das CGP-Modell initialisiert wird.\\
+In der One-Fifth Regel wird der Startwert der Rekombinationsrate angegeben, also diejenige Rekombinationsrate, mit der das CGP-Modell initialisiert wird.
 
 In einer Optimierungsschleife werden pro Parametersatz 10 Testdurchläufe durchgeführt, in denen das CGP trainiert wird.
 Für Boolesche Probleme wird die Effizienz die Parametersätze anhand der Iterationen gemessen, die der CGP-Algorithmus braucht, bis er konvergiert.
@@ -182,7 +182,7 @@ Bei symbolischer Regression bezieht sich der Vergleich auf die berechnete Fitnes
 Es wurde eine Iterationsgrenze eingeführt, ab der der CGP-Algorithmus in der Hyperparameteroptimierung abbricht, um Rechenzeit zu sparen.
 Diese Grenze wurde durch vorhergehende Tests so gesetzt, dass nur wenige Ausreißer diese überschreiten.
 Trifft dies zu wird bei Booleschen Problemen die Anzahl an benötigten Iterationen verdoppelt, um so das gescheiterte Training härter zu bestrafen.\\
-Nach 150 getesteten Parametersätzen bricht die Hyperparameteroptimierung ab und gibt den besten Parametersatz aus.\\
+Nach 150 getesteten Parametersätzen bricht die Hyperparameteroptimierung ab und gibt den besten Parametersatz aus.
 
 Das verwendete Julia-Paket bietet verschiedene Sampler an.
 Der als Standardeinstellung zur Verfügung gestellte Sampler ist ein Random-Sampler.
@@ -214,7 +214,7 @@ Es ergibt sich ein HPDI-Maximalwert von ca. 495 Iterationen.
 Mit einer Iterationsgrenze von 500 ist es wahrscheinlich, dass vor allem schlechte Parametersätze zu einer Überschreitung dieses Werts führen.
 Durch die erhöhte Bestrafung dieser Überschreitung wird sichergestellt, dass die sichere Konvergenz des CGP-Algorithmus bis zur Iterationsgrenze priorisiert wird.\\
 Da für Keijzer die Hyperparameteranalyse auf Basis der Fitness ausgewertet wird, können Güte-Aussagen ebenfalls getroffen werden, auch wenn der CGP-Algorithmus nicht vollständig konvergiert ist, da bereits vor Erreichen des Stopp-Kriteriums eine Aussage über das Konvergenzverhalten getroffen werden kann.
-Demnach wird für Keijzer die unter den Rechenzeit-Umständen höchste Iterationsgrenze von 500 Iterationen als genügend für die Hyperparameteroptimierung angesehen.\\
+Demnach wird für Keijzer die unter den Rechenzeit-Umständen höchste Iterationsgrenze von 500 Iterationen als genügend für die Hyperparameteroptimierung angesehen.
 
 Mit Hilfe der optimierten Parametersätze können anschließend jeweils 50 CGP-Modelle pro Testszenario und CGP-Konfiguration ausgeführt werden.
 Die Ergebnisse dieser Modelle können verwendet werden, um die Güte der CGP-Konfigurationen auf einfache Testszenarien zu evaluieren.
@@ -253,14 +253,14 @@ Die folgende Liste gibt die Metriken an, die in dieser Arbeit näher betrachtet 
 \end{itemize}
 
 Die Evaluation umfasst unterschiedliche Techniken zur Bewertung der ausgezeichneten Daten.
-Diese werden im Folgenden eingeführt und erläutert.\\
+Diese werden im Folgenden eingeführt und erläutert.
 
 \textbf{Analyse der Rohdaten:} Der erste Evaluationsschritt umfasst eine händische Analyse der Rohdaten.
 Dabei werden die Ergebnisse der Hyperparameteranalyse näher betrachtet und bewertet.
 Es werden erste Erkenntnisse über die Effizienz der verschiedenen Rekombinationstypen gesammelt, indem beispielsweise die Anzahl der Rechenknoten verglichen wird.
 Außerdem wird beobachtet wie die unterschiedlichen Rekombinationsparameter gesetzt werden.\\
 Des weiteren werden die Ergebnisse des CGP-Trainings näher analysiert.
-Der Trainingserfolg zwischen Rekombination und Mutation können anhand der jeweiligen Fitness-Werte miteinander verglichen werden.\\
+Der Trainingserfolg zwischen Rekombination und Mutation können anhand der jeweiligen Fitness-Werte miteinander verglichen werden.
 
 \textbf{Bayes'sche Analyse:} Die Bayes'sche Analyse wird einerseits für die Sortierung der Effizienz der CGP-Konfigurationen verwendet. 
 Dafür wird wie in Abschnitt \ref{sec:bayesian} beschrieben das Plackett-Luce-Modell verwendet.
@@ -270,11 +270,11 @@ Durch die Berechnung des Mittelwerts und HPDI der Iterationen für jede CPG-Konf
 Für Parity und Keijzer kann so eingeschätzt werden, welche CGP-Konfiguration die Ausgangsprobleme schneller lösen kann als andere.
 Außerdem kann bewertet werden wie hoch die Streuung dieser Ergebnisse ist.
 Für die komplexeren Ausgangsprobleme kann beobachtet werden, welche Auswirkungen die Änderung der Rekombinationsparameter auf die Effizienz der CGP-Modelle hat.\\
-Die \emph{Prior-Sensitivitätsanalyse}, die Cui et al. in ihrem Paper untersuchen, wird aus Gründen des Umfangs in dieser Arbeit nicht näher betrachtet \cite{cui_equidistant_2023}.\\
+Die \emph{Prior-Sensitivitätsanalyse}, die Cui et al. in ihrem Paper untersuchen, wird aus Gründen des Umfangs in dieser Arbeit nicht näher betrachtet \cite{cui_equidistant_2023}.
 
 \textbf{Graphische Evaluation:} Für alle Testszenarien kann neben der bayes'schen Analyse eine graphische Evaluation ausgeführt werden.
 Dafür werden nicht die Endergebnisse des CGP-Trainings betrachtet, sondern deren Verlauf.
 Es werden die Fitnesswerte und Anteile der aktiven Knoten über die Iterationen hinweg geplottet.
 Dabei werden die Mittelwerte und Standardabweichungen der Metriken verwendet.
-Im Anschluss können die Plots visuell bewertet werden.\\
+Im Anschluss können die Plots visuell bewertet werden.
 

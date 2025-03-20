@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  20 MAR 2025 19:44
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  20 MAR 2025 20:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2073,7 +2073,27 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 [5
 
 
-])
+]
+Overfull \hbox (0.90883pt too wide) detected at line 56
+ []\TU/LinLibertine(0)/m/n/10.95 XIV
+ []
+
+
+Overfull \hbox (0.90883pt too wide) detected at line 57
+ []\TU/LinLibertine(0)/m/n/10.95 XIV
+ []
+
+
+Overfull \hbox (0.90883pt too wide) detected at line 59
+ []\TU/LinLibertine(0)/m/n/10.95 XVI
+ []
+
+
+Overfull \hbox (0.73363pt too wide) detected at line 60
+ []\TU/LinLibertine(0)/m/n/10.95 XIX
+ []
+
+)
 \tf@toc=\write6
 \openout6 = `Main.toc'.
 
@@ -2098,21 +2118,6 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 39
 
 ] (./Motivation.tex
 chapter 1.
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--6
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--15
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--25
-
- []
-
 
 
 [1
@@ -2148,18 +2153,8 @@ File: Bilder/BeispielChromosom.png Graphic file (type bmp)
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/b/n' will be
 (Font)              scaled to size 10.95pt on input line 69.
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--92
-
- []
-
-
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 93--111
-
- []
-
-
 
 [6]
 Underfull \hbox (badness 10000) in paragraph at lines 149--150
@@ -2167,23 +2162,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 149--150
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--162
-
- []
-
-
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 170--175
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 176--180
-
- []
-
-
 
 [8]
 LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/b/n' will be
@@ -2201,9 +2181,6 @@ Overfull \hbox (13.96901pt too wide) in paragraph at lines 236--244
  []
 
 
-Underfull \vbox (badness 7433) has occurred while \output is active []
-
-
 
 [10]
 File: Bilder/BeispielTwoPointCrossover.png Graphic file (type bmp)
@@ -2217,9 +2194,6 @@ st genauso lang wie die Eltern-Chromosomen
  []
 
 
-Underfull \vbox (badness 1845) has occurred while \output is active []
-
-
 
 [11]
 File: Bilder/BeispielUniformCrossover.png Graphic file (type bmp)
@@ -2229,11 +2203,6 @@ File: Bilder/BeispielUniformCrossover2.png Graphic file (type bmp)
 
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 326--338
-
- []
-
-
 
 [13]
 Overfull \hbox (10.851pt too wide) in paragraph at lines 355--365
@@ -2242,31 +2211,19 @@ Overfull \hbox (10.851pt too wide) in paragraph at lines 355--365
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--377
-
- []
-
-
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 388--392
-
- []
-
-
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 402--414
-
- []
-
-
 
 [16]
 File: Bilder/TorabiBeispielGenotypNeu.png Graphic file (type bmp)
 <Bilder/TorabiBeispielGenotypNeu.png>
 File: Bilder/GenotypNachMutation.png Graphic file (type bmp)
 <Bilder/GenotypNachMutation.png>
+
+Underfull \vbox (badness 5878) has occurred while \output is active []
+
 
 
 [17]
@@ -2278,6 +2235,9 @@ ung des Satzes von Bayes in der Bayes’schen
 File: Bilder/bayesianInterence.png Graphic file (type bmp)
 <Bilder/bayesianInterence.png>
 
+Underfull \vbox (badness 3189) has occurred while \output is active []
+
+
 
 [18]
 Overfull \hbox (4.57909pt too wide) in paragraph at lines 500--507
@@ -2287,23 +2247,10 @@ ri-Dichtefunktion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 500--507
-
- []
-
-
 Overfull \hbox (0.18938pt too wide) in paragraph at lines 508--518
 \TU/LinLibertine(0)/m/n/10.95 braucht werden, um eine CGP-Lösung konvergieren z
 u lassen. Für jede CPG-Konfiguration
  []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 508--518
-
- []
-
-
-Underfull \vbox (badness 1552) has occurred while \output is active []
 
 
 
@@ -2311,16 +2258,6 @@ Underfull \vbox (badness 1552) has occurred while \output is active []
 
 [20]
 chapter 3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 19--24
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--28
-
- []
-
 
 
 [21
@@ -2336,27 +2273,12 @@ ander verglichen und
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--101
-
- []
-
-
 
 [23]
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 166--178
-
- []
-
-
 
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 179--186
-
- []
-
-
 Overfull \hbox (2.01526pt too wide) in paragraph at lines 194--205
 \TU/LinLibertine(0)/m/n/10.95 den Parametersätzen hätten für jede Kombination a
 us Testszenario und CGP-Konfiguration
@@ -2365,49 +2287,21 @@ us Testszenario und CGP-Konfiguration
 
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 209--218
-
- []
-
-
 
 [27]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-[28]
-Underfull \hbox (badness 10000) in paragraph at lines 255--257
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 258--264
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 265--274
-
- []
-
-
+[28]) (./Ergebnisse.tex
 
 [29]
-Underfull \hbox (badness 10000) in paragraph at lines 275--280
 
- []
-
-) (./Ergebnisse.tex
-
-[30]
-chapter 4.
-
-
-[31
+[30
 
 
 ]
+chapter 4.
+
+
+[31]
 
 [32]
 
@@ -2416,57 +2310,22 @@ chapter 4.
 [34]
 
 [35]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [36]
-Underfull \hbox (badness 10000) in paragraph at lines 176--212
-
- []
-
-
 
 [37]
 
 [38]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [39]
-
-[40]
-
-[41]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[42]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[43]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[44]
-Overfull \hbox (0.4713pt too wide) in paragraph at lines 467--493
+Overfull \hbox (0.4713pt too wide) in paragraph at lines 204--230
 \TU/LinLibertine(0)/m/n/10.95 Um Zusammenhängen zwischen den CGP-Konfiguratione
 n und der Güte der CGP-Modelle
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-[45]
-
-[46]
+[40]
 File: Bilder/EncodePlotPositiveRekombinationKonstant.png Graphic file (type bmp
 )
 <Bilder/EncodePlotPositiveRekombinationKonstant.png>
@@ -2476,42 +2335,18 @@ File: Bilder/EncodePlotPositiveRekombinationOneFifth.png Graphic file (type bmp
 )
 <Bilder/EncodePlotPositiveRekombinationOneFifth.png>
 
-Overfull \hbox (0.1702pt too wide) in paragraph at lines 517--526
+Overfull \hbox (0.1702pt too wide) in paragraph at lines 254--263
 \TU/LinLibertine(0)/m/n/10.95 Rekombinationen, obwohl die Rekombination nicht w
 ahrscheinlich ausgeführt wird, könn-
  []
 
 
 
-[47]
-Overfull \hbox (31.89145pt too wide) in paragraph at lines 531--541
-\TU/LinLibertine(0)/m/n/10.95 Die folgenden Tabellen []4.6[], []4.7[] und []4.8
-[] zeigen die Rohdaten-Auswertungen des Koza-Testszenarios.
- []
+[41]
 
+[42]
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[48]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[49]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[50]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[51]
-
-[52]
+[43]
 File: Bilder/KozaPlotPositiveRekombinationKonstant.png Graphic file (type bmp)
 <Bilder/KozaPlotPositiveRekombinationKonstant.png>
 File: Bilder/KozaPlotPositiveRekombinationClegg.png Graphic file (type bmp)
@@ -2519,26 +2354,39 @@ File: Bilder/KozaPlotPositiveRekombinationClegg.png Graphic file (type bmp)
 File: Bilder/KozaPlotPositiveRekombinationOneFifth.png Graphic file (type bmp)
 <Bilder/KozaPlotPositiveRekombinationOneFifth.png>
 
-Underfull \vbox (badness 2608) has occurred while \output is active []
 
-
-
-[53]
-Overfull \hbox (3.27357pt too wide) in paragraph at lines 786--822
+[44]
+Overfull \hbox (3.27357pt too wide) in paragraph at lines 352--388
 \TU/LinLibertine(0)/b/n/10.95 Rekombinationsraten: \TU/LinLibertine(0)/m/n/10.9
 5 Bei den Ergebnissen der Hyperparameteroptimierung vom Parity-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 786--822
 
- []
+[45]
 
+[46]
 
+[47]
+
+[48]
+
+[49]
+
+[50]
+
+[51]
+
+[52]
+
+[53]
 
 [54]
 
 [55]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [56]
 
@@ -2548,52 +2396,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 786--822
 
 [59]
 
-[60]
+[60]) (./Fazit.tex
 
 [61]
 
-[62]
-Underfull \vbox (badness 1303) has occurred while \output is active []
-
-
-
-[63]
-Underfull \vbox (badness 1515) has occurred while \output is active []
-
-
-
-[64]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[65]
-
-[66]
-
-[67]
-
-[68]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[69]
-
-[70]) (./Fazit.tex
-
-[71]
-
-[72
+[62
 
 
 ]
 chapter 5.
 )
 
-[73]
+[63]
 
-[74
+[64
 
 
 ]
@@ -2612,7 +2428,7 @@ Underfull \hbox (badness 5667) in paragraph at lines 56--56
 
 
 
-[75]
+[65]
 Underfull \hbox (badness 10000) in paragraph at lines 56--56
 []\TU/LinLibertine(0)/m/n/10.95 CuiHen. \TU/LinLibertine(0)/m/it/10.95 CuiHen/C
 GP_with_Crossover_Strategies\TU/LinLibertine(0)/m/n/10.95 . original-date: 2024
@@ -2621,15 +2437,15 @@ GP_with_Crossover_Strategies\TU/LinLibertine(0)/m/n/10.95 . original-date: 2024
 
 
 
-[76]
+[66]
 
-[77]
+[67]
 
-[78]
+[68]
 
-[79]
+[69]
 
-[80]
+[70]
 chapter A.
 (./Anhang1.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2652,9 +2468,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [3]
-Overfull \hbox (5.90866pt too wide) in paragraph at lines 173--217
- [][] 
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -2669,7 +2483,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [6]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \vbox (2.32732pt too high) has occurred while \output is active []
 
 
 
@@ -2688,9 +2502,64 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[10])
+[10]
+Overfull \vbox (2.32732pt too high) has occurred while \output is active []
 
-[11] (./Main.aux)
+
+
+[11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[12]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[13]
+Overfull \hbox (5.90866pt too wide) in paragraph at lines 603--647
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[14]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[15]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[16]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[17]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[18]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[19]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[20])
+
+[21] (./Main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-09>
@@ -2702,10 +2571,10 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49492 strings out of 473889
- 1044857 string characters out of 5734826
- 1974442 words of memory out of 5000000
- 71851 multiletter control sequences out of 15000+600000
+ 49495 strings out of 473889
+ 1044996 string characters out of 5734826
+ 1972668 words of memory out of 5000000
+ 71854 multiletter control sequences out of 15000+600000
  562698 words of font info for 99 fonts, out of 8000000 for 9000
  1350 hyphenation exceptions out of 8191
  122i,17n,136p,10900b,6836s stack positions out of 10000i,1000n,20000p,200000b,200000s

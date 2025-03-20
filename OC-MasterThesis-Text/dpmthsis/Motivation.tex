@@ -2,7 +2,7 @@
 \label{Motivation und Aufbau}
 
 Das klassische Genetic Programming (GP) wird heutzutage für die Problemlösung in den unterschiedlichsten Domänen erforscht.
-Beispiele hierfür sind die Erstellung einer mathematischen Gleichung für einen industriellen Prozess \cite{sette_genetic_2001}, die Strukturanalyse von FGMs (funktionell gradierten Materialien) \cite{demirbas_stress_2022} und der Verarbeitung von natürlicher Sprache \cite{araujo_genetic_2020}.\\
+Beispiele hierfür sind die Erstellung einer mathematischen Gleichung für einen industriellen Prozess \cite{sette_genetic_2001}, die Strukturanalyse von FGMs (funktionell gradierten Materialien) \cite{demirbas_stress_2022} und der Verarbeitung von natürlicher Sprache \cite{araujo_genetic_2020}.
 
 Cartesian Genetic Programming (CGP) ist eine Methode des GPs, in der Lösungen für Probleme als Graphen dargestellt werden \cite{miller_cartesian_2020}. 
 Im Standard-CGP werde laut Miller der Rekombinationsschritt normalerweise nicht ausgeführt und in den meisten Arbeiten werde dieser Schritt gänzlich ignoriert. 
@@ -11,7 +11,7 @@ In mehreren weiteren Papern werden andere Rekombinationsalgorithmen mit dem Ziel
 Dieser weitere Operator könnte die Effizienz von CGP-Modellen im Training steigern und somit komplexere Ausgangsprobleme lösbar machen.
 Innerhalb dieser Paper wird als Prämisse angenommen, dass wie von Miller geschildert in Standard-CGP keine Rekombination verwendet wird. \cite{clegg_new_2007,kalkreuth_comprehensive_2020, torabi_using_2022}\\
 Da die Aussage, dass der Rekombinationsschritt nicht zielführend in Standard-CGP sei auf den Papern von Miller aus dem Jahr 1999 und 2011 basiert, kommt die Frage auf, ob dies immer noch zutrifft.
-Die erste Forschungsfrage, die in dieser Arbeit beantwortet werden soll, ist demnach die folgende: \glqq Kann mit heutigem Forschungsstand nachgewiesen werden, dass Rekombination in Standard-CGP sinnvoll eingesetzt werden kann im Vergleich zu CGP ohne Rekombinationsschritt?\grqq\\
+Die erste Forschungsfrage, die in dieser Arbeit beantwortet werden soll, ist demnach die folgende: \glqq Kann mit heutigem Forschungsstand nachgewiesen werden, dass Rekombination in Standard-CGP sinnvoll eingesetzt werden kann im Vergleich zu CGP ohne Rekombinationsschritt?\grqq
 
 Da der Erfolg der Rekombination ebenfalls von der Rekombinationsrate abhängt, ist es sinnvoll diese näher zu betrachten. 
 Clegg et al. und Torabi et al. beschreiben in ihren Papern unterschiedliche Herangehensweisen an die Rekombinationsrate \cite{clegg_new_2007, torabi_using_2022}:\\
@@ -21,7 +21,7 @@ Torabi et al. fügen für ihre Rekombination ein Offset zu Beginn des CGP ein.
 Dieser Offset wird durch einen Hyperparameter bestimmt und gibt an, wie viele Iterationen die Rekombination ausbleibt. \cite{torabi_using_2022}\\
 Diese beiden Ansätze sollen mit einem selbst entwickelten Ansatz verglichen werden.
 Die neu vorgestellte Rekombinationsrate bezieht sich auf die One-Fifth-Rule zur Berechnung der Mutationsrate.
-Die zweite Forschungsfrage, die in dieser Arbeit beantwortet werden soll, ist: \glqq Hat die Art und Weise der Rekombinationsratenberechnung eine Auswirkung auf die Effektivität des CGP?\grqq\\
+Die zweite Forschungsfrage, die in dieser Arbeit beantwortet werden soll, ist: \glqq Hat die Art und Weise der Rekombinationsratenberechnung eine Auswirkung auf die Effektivität des CGP?\grqq
 
 Die beiden Forschungsfragen sollen anhand unterschiedlicher Experimente beantwortet werden.
 In Abschnitt \ref{Grundlagen} werden die theoretischen Grundlagen gelegt, die für das Verständnis des Experimentaufbaus und der Ergebnisse benötigt werden.
