@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  19 MAR 2025 23:46
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  20 MAR 2025 11:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2580,19 +2580,32 @@ Underfull \vbox (badness 1515) has occurred while \output is active []
 
 
 [66]
+Overfull \hbox (29.15666pt too wide) in paragraph at lines 1156--1181
+\TU/LinLibertine(0)/m/n/10.95 gleich zu den anderen Rekombinationsarten relativ
+ gute Ergebnisse für alle Rekombinationsraten-
+ []
 
-[67]) (./Fazit.tex
 
-[68]
+
+[67]
+
+[68]) (./Fazit.tex
+Underfull \vbox (badness 1072) has occurred while \output is active []
+
+
+
+[69]
+
+[70]
 chapter 5.
 )
 
-[69
+[71
 
 
 ]
 
-[70
+[72
 
 
 ]
@@ -2611,7 +2624,7 @@ Underfull \hbox (badness 5667) in paragraph at lines 56--56
 
 
 
-[71]
+[73]
 Underfull \hbox (badness 10000) in paragraph at lines 56--56
 []\TU/LinLibertine(0)/m/n/10.95 CuiHen. \TU/LinLibertine(0)/m/it/10.95 CuiHen/C
 GP_with_Crossover_Strategies\TU/LinLibertine(0)/m/n/10.95 . original-date: 2024
@@ -2620,15 +2633,15 @@ GP_with_Crossover_Strategies\TU/LinLibertine(0)/m/n/10.95 . original-date: 2024
 
 
 
-[72]
-
-[73]
-
 [74]
 
 [75]
 
 [76]
+
+[77]
+
+[78]
 chapter A.
 (./Anhang1.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2702,4 +2715,4 @@ Here is how much of TeX's memory you used:
  1350 hyphenation exceptions out of 8191
  122i,17n,136p,10900b,6836s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Main.pdf (93 pages).
+Output written on Main.pdf (95 pages).

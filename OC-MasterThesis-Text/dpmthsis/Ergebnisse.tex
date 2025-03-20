@@ -1126,21 +1126,17 @@ Dementsprechend kann keine Aussage darüber gemacht werden die gut die Fitnesswe
 \subsection{Bayes'sche Analyse: Koza}
 \label{subsec:bayesKoza}
 
-TODO: bei Encode Einleitungstext einfügen, dass Ergebnisse mit Rekombination noch verbessert werden können durch HPO
-
-Einleitungstext:
-- bei Koza Iterationen bis Konvergenz bewertet
-- alle Aussagen beziehen sich nur auf Koza
-- Ohne Rekombination hat HPO -> Ergebnisse dementsprechend bewertet, dass Rekombination-CGPs noch verbessert werden können
-
-
-MW:
-- One-Point: keins besser als ohne Rekombination
-- Two-Point 5 aus 22 besser als ohne Rekombination
-- Uniform 3 aus 22 besser als Rekombination
-- Tabelle Mittelwerte der Rekombinationsraten-Arten pro Rekombinationsart (alles nur ungefähre Werte)
-- Uniform funktioniert Clegg besonders gut (sogar bester Mittelwert in Tabelle und um einiges besser als bester Mittelwert für Two-Point); aber hohe konstante Rate nicht => heißt für viele Iterationen (die Koza nunmal braucht) ist es sinnvoll Uniform zu nehmen, wegen hoher Anzahl an positiven Rekombinationen (überwiegt wahrscheinlich Mutationserfolge) und danach weniger Rekombination (für so lange Testverfahren bringt die der kleine Delta-Wert bei Clegg auch mehr) 
-- sonst keine Muster erkannt
+Dieser Abschnitt evaluiert die Ergebnisse der bayes'schen Analyse des Koza-Testszenarios und bezieht sich dabei auf die Tabellen \ref{table:kozaOnePointBayesian}, \ref{table:kozaTwoPointBayesian} und \ref{table:kozaUniformBayesian}.
+Die bayes'sche Analyse des Koza-Testfalls bezieht sich wie in Abschnitt \ref{subsec:rohdatenKoza} beschrieben auf die Anzahl der Iterationen bis zur Konvergenz.
+Alle Aussagen und Ergebnisse in diesem Abschnitt beziehen sich ausschließlich auf die Auswertung des Koza-Testfalls und können nicht als allgemeine Aussagen gewertet werden.
+In Abschnitt \ref{subsec:bayesZusammenfassung} werden die Evaluationsergebnisse aller Testszenarien für die bayes'sche Analyse zusammengefasst und bewertet.\\
+Wird die Spalte MW aus den jeweils genannten Tabellen betrachtet und einzeln miteinander verglichen, werden folgende Ergebnisse sichtbar: für die One-Point Rekombination sind keine Verfahren mit Rekombination besser als das ohne Rekombination, für die Two-Point Rekombination sind fünf aus 22 CGP-Modelle mit Rekombination besser, für die Uniform Rekombination sind es lediglich drei Verfahren.
+Dies zeigt, dass für den Koza-Testfall Verfahren mit eingefügtem Rekombinationsschritt deutlich schlechter abschneiden als ohne Rekombination.
+Dabei ist allerdings zu beachten, dass die CGP-Konfiguration ohne Rekombination mit Hilfe einer Hyperparameteranalyse optimiert wurde, während die Verfahren mit Rekombination lediglich diese Parametrierung übernommen und die Rekombinationsrate ergänzt haben.
+Demnach kann keine Aussage darüber getroffen werden wie effizient die Rekombination ist.
+Da aber für Parity (Abschnitt \ref{subsec:bayesParity}) und Keijzer (Abschnitt \ref{subsec:bayesKeijzer}) deutlich bessere Ergebnisse beobachtet werden konnten, ist es durchaus wahrscheinlich, dass eine Hyperparameteranalyse für alle verwendeten CGP-Verfahren die Ergebnisse verbessern könnte.
+Es kann die Annahme aufgestellt werden, dass bei einer Hyperparameteroptimierung alle Parameter einer CGP-Konfiguration auf einmal betrachtet werden müssen und somit keine Hyperparameter einer anderen Optimierung verwendet werden können, um lediglich einen einzelnen Parameter zu optimieren.\\
+Die folgende Tabelle \ref{table:kozaMW} zeigt die ungefähren Mittelwerte aller Rekombinationsarten pro Rekombinationsraten-Art. 
 
 \begin{table}[H]
 	\centering
@@ -1157,6 +1153,45 @@ MW:
 	\label{table:kozaMW}
 \end{table}
 
+Zu beobachten ist, dass die One-Point Rekombination für alle Rekombinationsraten-Arten besonders schlechte Werte hervorbringt.
+Die Two-Point Rekombination ergibt im Vergleich zu den anderen Rekombinationsarten relativ gute Ergebnisse für alle Rekombinationsraten-Arten.
+Für die Uniform Rekombination führt nur für die linear fallende Rekombinationsrate zu guten Ergebnissen.
+Diese sind allerdings sogar deutlich besser als die Ergebnisse der Two-Point Rekombination.
+Dieser Erfolg der linear fallenden Rekombinationsrate für die Uniform Rekombination könnte darauf zurückgeführt werden, dass die Start-Rekombinationsrate mit 0,9 ziemlich hoch gewählt wurde.
+Allerdings sind die Ergebnisse der konstanten Rekombinationsrate für hohe Rekombinationsraten aus Tabelle \ref{table:kozaUniformBayesian} besonders schlecht.
+Dementsprechend ist das konsequente Verringern der Rekombinationsrate in diesem Fall der relevante Unterschied zu den anderen Rekombinationsraten-Arten.
+Selbst für eine kleine Delta-Rekombinationsrate wie 0,0005 für linear fallende Rekombinationen wird die Rekombination nach spätestens 2000 Iterationen vollständig ausgesetzt.
+Dies könnte der Grund sein, warum die linear fallende Rekombination für einfachere Testfälle wie Parity oder Keijzer nicht deutlich effizienter als die anderen Rekombiantionsraten-Arten abschneiden.
+Denn diese Testfälle brauchen deutlich weniger Iterationen als der Koza-Testfall bis zur Konvergenz wodurch die Rekombination womöglich nicht früh genug abgestellt wurde.
+Werden alle Werte der linear fallenden Rekombination aus Tabelle \ref{table:kozaMW} betrachtet, fällt auf, dass die Mittelwerte für komplexere Rekombinationsarten besser ausfallen.
+Dies könnte daran liegen, dass komplexere Rekombinationsarten laut Abschnitt \ref{subsec:rohdatenKoza} deutlich mehr Rekombinationserfolge vermerken können als die weniger komplexen Rekombinationsarten.
+Wenn die Rekombination also rechtzeitig vollständig unterbrochen wird, könnten besonders die komplexeren Rekombinationsarten einen höheren Erfolg einbringen, da ihr erhöhter Einfluss auf das Trainingsverhalten in den ersten Trainingsphasen sinnvoll genutzt werden könnte aber anschließend keine negativen Effekte auf die Mutation entstehen.\\
+Die Betrachtung der PL-Plätze aus den Tabellen \ref{table:kozaOnePointBayesian}, \ref{table:kozaTwoPointBayesian} und \ref{table:kozaUniformBayesian} hat keine weiteren Erkenntnisse oder Muster hervorgebracht.
+Für die Bewertung der HPDI-Werte wurden jeweils die kleinsten unteren und oberen Grenzen grün markiert, während die größten unteren und oberen Grenzen rot sind.
+Zu beobachten ist, dass in den meisten Fällen die jeweils kleinsten und Größten Grenzen aufeinander treffen.
+In den Ausnahmen werden ähnlich kleine/große Werte markiert.
+Für die markieren HPDI-Werte wurden die HPDI-Umfänge berechnet, wobei sich herausgestellt hat, dass die kleinen Grenzen kleine Ranges hervorbringen und die großen Grenzen große Ranges.
+Diese Bewertung ergibt das gleiche Ergebnis wie die Abschnitte \ref{subsec:bayesParity} und \ref{subsec:bayesKeijzer}, obwohl eine anderen Herangehensweise genutzt wurde, um dieses hervorzubringen:
+Frühe Konvergenzen innerhalb der unteren Grenze des HPDI führen zu kleineren Streuungen der Ergebnisse.
+Demnach ist es wichtig bereits in den frühen Iterationen gute Trainingsergebnisse zu erzielen, um eine große Streuung der Ergebnisse vorzubeugen.
+Deswegen ist es sinnvoll die Rekombination und deren Einsatz weiter zu optimieren, die nach Abschnitt \ref{subsec:rohdatenZusammenfassung} in den ersten Iterationen das größte Potential besitzt einen Mehrwert zu liefern.
+Des weiteren können durch diese Erkenntnis aus den HPDI-Werten die Streuungen der Ergebnisse frühestmöglich eingeschätzt werden, wenn noch nicht alle CGP-Modelle trainiert wurden.
+Wenn für CGP-Konfigurationen bereits einige Durchläufe deutlich früher konvergiert sind als in anderen, ist es wahrscheinlich, dass die folgenden Durchläufe zu einer relativ ähnlichen Iteration konvergieren.
+Umgekehrt wird es für die folgenden Durchläufe der langsameren CGP-Modelle wahrscheinlicher, dass diese umso später konvergieren.
+
+
+
+\subsection{Bayes'sche Analyse: Zusammenfassung}
+\label{subsec:bayesZusammenfassung}
+Koza:
+MW:
+- One-Point: keins besser als ohne Rekombination
+- Two-Point 5 aus 22 besser als ohne Rekombination
+- Uniform 3 aus 22 besser als Rekombination
+- Tabelle Mittelwerte der Rekombinationsraten-Arten pro Rekombinationsart (alles nur ungefähre Werte)
+- Uniform funktioniert Clegg besonders gut (sogar bester Mittelwert in Tabelle und um einiges besser als bester Mittelwert für Two-Point); aber hohe konstante Rate nicht => heißt für viele Iterationen (die Koza nunmal braucht) ist es sinnvoll Uniform zu nehmen, wegen hoher Anzahl an positiven Rekombinationen (überwiegt wahrscheinlich Mutationserfolge) und danach weniger Rekombination (für so lange Testverfahren bringt die der kleine Delta-Wert bei Clegg auch mehr) 
+- sonst keine Muster erkannt
+
 HPDI:
 - kleine/große untere und obere Grenzen markiert
 - fallen in den meisten Fällen aufeinander
@@ -1166,10 +1201,6 @@ HPDI:
 => das heißt die anderen Durchläufe müssen auch zeitig fertig werden
 => für späte ersten Konvergenzen große Streuung
 => die anderen Durchläufe werden noch später fertig
-
-
-\subsection{Bayes'sche Analyse: Zusammenfassung}
-\label{subsec:bayesZusammenfassung}
 
 TODO: Parity / Keijzer bevorzugen One-Point und Encode/Koza nicht => woran liegt das => Parity und Keijzer sind optimiert => das heißt aus One-Point kann mit HPO am meisten herausgeholt werden mit jetzigem Verfahren (evtl wegen niedrigem Einfluss in Lernen; kleinere Schritte im Lösungsraum / kleinschrittigere Veränderungen lassen sich mit Mutation wahrscheinlich besser in Einklang bringen) => Rohdatenanalyse zeigt, dass Uniform mehr Potential besitzt, also Verfahren verbessern kann Uniform evtl noch pushen
 

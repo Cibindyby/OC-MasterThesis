@@ -39,14 +39,14 @@
 \contentsline {subsection}{\numberline {4.2.2}Bayes'sche Analyse: Keijzer}{63}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}Bayes'sche Analyse: Encode}{65}{subsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.2.4}Bayes'sche Analyse: Koza}{67}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Bayes'sche Analyse: Zusammenfassung}{67}{subsection.4.2.5}%
-\contentsline {section}{\numberline {4.3}Ergebnisse Graphische Evaluation}{68}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Graphische Evaluation: Parity}{68}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Graphische Evaluation: Keijzer}{68}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Graphische Evaluation: Encode}{68}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Graphische Evaluation: Koza}{68}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}Graphische Evaluation: Zusammenfassung}{68}{subsection.4.3.5}%
-\contentsline {chapter}{\numberline {5}Fazit aus Ausblick}{69}{chapter.5}%
+\contentsline {subsection}{\numberline {4.2.5}Bayes'sche Analyse: Zusammenfassung}{69}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}Ergebnisse Graphische Evaluation}{70}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Graphische Evaluation: Parity}{70}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Graphische Evaluation: Keijzer}{70}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Graphische Evaluation: Encode}{70}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Graphische Evaluation: Koza}{70}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Graphische Evaluation: Zusammenfassung}{70}{subsection.4.3.5}%
+\contentsline {chapter}{\numberline {5}Fazit aus Ausblick}{71}{chapter.5}%
 \contentsline {chapter}{\numberline {A}Anhang}{I}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Tabellen Rohdatenanalyse}{I}{section.A.1}%
 \contentsline {subsection}{\numberline {A.1.1}Parity: Tabellen Rohdatenanalyse}{I}{subsection.A.1.1}%
