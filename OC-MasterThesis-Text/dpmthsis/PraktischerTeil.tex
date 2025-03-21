@@ -245,14 +245,8 @@ Trotzdem können die Ergebnisse verwendet werden, um einen näheren Einblick zum
 
 Für die Auswertung der Ergebnisse werden für jedes CGP-Training verschiedene Metriken aufgezeichnet, die einen Einblick in die Effizienz der Modelle geben sollen.
 Diese werden für jede Trainingsiteration gespeichert, um den Verlauf beobachten und bewerten zu können.
-Die folgende Liste gibt die Metriken an, die in dieser Arbeit näher betrachtet werden:
-\begin{itemize}
-	\item Fitness nach Rekombination
-	\item Fitness nach Mutation
-	\item Anteil aktiver Knoten
-\end{itemize}
-
-Die Evaluation umfasst unterschiedliche Techniken zur Bewertung der ausgezeichneten Daten.
+In dieser Arbeit handelt es sich dabei um die Fitness nach der Rekombination und die Fitness nach der Mutation.
+Die Evaluation umfasst zwei unterschiedliche Techniken zur Bewertung der ausgezeichneten Daten.
 Diese werden im Folgenden eingeführt und erläutert.
 
 \textbf{Analyse der Rohdaten:} Der erste Evaluationsschritt umfasst eine händische Analyse der Rohdaten.
@@ -271,10 +265,4 @@ Für Parity und Keijzer kann so eingeschätzt werden, welche CGP-Konfiguration d
 Außerdem kann bewertet werden wie hoch die Streuung dieser Ergebnisse ist.
 Für die komplexeren Ausgangsprobleme kann beobachtet werden, welche Auswirkungen die Änderung der Rekombinationsparameter auf die Effizienz der CGP-Modelle hat.\\
 Die \emph{Prior-Sensitivitätsanalyse}, die Cui et al. in ihrem Paper untersuchen, wird aus Gründen des Umfangs in dieser Arbeit nicht näher betrachtet \cite{cui_equidistant_2023}.
-
-\textbf{Graphische Evaluation:} Für alle Testszenarien kann neben der bayes'schen Analyse eine graphische Evaluation ausgeführt werden.
-Dafür werden nicht die Endergebnisse des CGP-Trainings betrachtet, sondern deren Verlauf.
-Es werden die Fitnesswerte und Anteile der aktiven Knoten über die Iterationen hinweg geplottet.
-Dabei werden die Mittelwerte und Standardabweichungen der Metriken verwendet.
-Im Anschluss können die Plots visuell bewertet werden.
 

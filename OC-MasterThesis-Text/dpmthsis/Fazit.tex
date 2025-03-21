@@ -1,8 +1,30 @@
 \chapter{Fazit aus Ausblick}
 \label{Fazit}
 
-\begin{itemize}
-    \item Motivation nochmal aufgreifen und Forschungsfragen
-    \item Forschungsfragen abschließend erneut beantworten
-    \item Ausblick auf weitere Themen oder offene Fragen
-\end{itemize}
+Da das klassische GP bereits in verschiedenen Domänen für Problemlösungen verwendet wird, ist es sinnvoll den Bereich des CGP näher zu betrachten.
+Laut Miller werde der Rekombinationsschritt in CGPs normalerweise nicht ausgeführt, da dieser die Effizienz eines CGP-Modells nicht zielführend steigert \cite{miller_cartesian_2020}.
+Trotzdem wäre es sinnvoll neben der Mutation einen weiteren genetischen Operator einzubinden, um die Effizienz des CGPs zu steigern und somit komplexere Ausgangsprobleme lösbar zu machen.
+Die Aussagen, dass Rekombinationsschritte bisher nicht sinnvoll in das Standard-CGP eingepflegt werden können basiert auf Papern von Miller aus den Jahren 1999 und 2011.
+Diese Aussage wird in dieser Arbeit erneut überprüft.
+Da der Erfolg der Rekombination stark von der Wahl der Rekombinationsrate abhängt, werden in dieser Arbeit ebenfalls unterschiedliche Arten für Rekombinationsraten betrachtet und bewertet.
+Für diese Arbeit ergeben sich demnach die folgenden zwei Forschungsfragen:\\
+1. Kann mit heutigem Forschungsstand nachgewiesen werden, dass Rekombination in Standard-CGP sinnvoll eingesetzt werden kann im Vergleich zu CGP ohne Rekombinationsschritt?\\
+2. Hat die Art und Weise der Rekombinationsratenberechnung eine Auswirkung auf die Effektivität des CGPs?
+
+Für die Beantwortung der Forschungsfragen wurden vier verschiedene Testprobleme aufgebaut, die durch CGP-Modelle mit verschiedenen Konfigurationen gelöst werden sollten.
+Die verschiedenen CGP-Konfigurationen beinhalteten unterschiedliche Rekombinationsarten Var,ianten der Rekombinationsratenberechnung, sowie die völlige Abwesenheit des Rekombinationsschritts.
+Bei zwei der vier Testszenarien wurde eine Hyperparameteranalyse durchlaufen, um die Effizienz der besten Ergebnisse für jede CGP-Konfiguration miteinander zu vergleichen.
+Für die anderen zwei Testfälle wurden die Rekombiantionsraten-Arten facettenreich parametriert, um bewerten zu können, wie sich die Parametrierung der Rekombinationsraten auf die Effizienz des CGPs auswirken.\\
+Für die Analyse der Ergebnisse wurden zwei unterschiedliche Verfahren angewendet.
+Einerseits wurden die aufgezeichneten Rohdaten der Testdurchläufe näher analysiert, andererseits wurde eine Bewertung mit Hilfe der bayes'schen Analyse ausgeführt.\\
+TODO: Ergebnisse Arbeit hier einfügen + dazugehörige offene Fragen (danach dann bewertet, ob offene Fragen weiter runter kommen sollen oder hier oben Sinn machen)
+
+Zusammenfassend lassen sich die zwei Forschungsfragen wie folgt beantworten:\\
+In Standard-CGPs kann Rekombination durchaus sinnvoll eingesetzt werden.
+Dafür ist es allerdings relevant die richtige Parametrierung mit Hilfe einer Hyperparameteranalyse zu ermitteln.
+Teil dieser Analyse sollten ebenfalls die Wahl der richtigen Rekombinationsart und Rekombinationsraten-Art sein.
+Weiter wurde herausgefunden, dass die Rekombination ein größeres Potential für die Verbesserung der Effizienz des CGPs aufweist, das im Standard-CGP-Verfahren nicht vollständig ausgeschöpft wird.
+Hierzu könnten zukünftig weitere Tests ausgeführt werden, um ein geeigneteres CGP-Verfahren zu entwickeln, das Rekombination und Mutation besser vereinen kann.\\
+Des weiteren hat die Art und Weise der Rekombinationsratenberechnung einen großen Einfluss auf die Effizienz des CGPs. 
+Hohe Rekombinationsraten zu Beginn des Trainings und ein anschließender Abbruch der Rekombination erscheinen besonders sinnvoll.
+Zu welcher Iteration die Rekombination im besten Fall ausgesetzt werden soll und ob dies schleichend oder abrupt stattfinden sollte, könnte durch weitere Forschung näher betrachtet werden.

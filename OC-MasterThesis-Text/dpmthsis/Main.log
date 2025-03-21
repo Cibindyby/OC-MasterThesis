@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  20 MAR 2025 21:04
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  21 MAR 2025 15:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2074,22 +2074,22 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 
 
 ]
-Overfull \hbox (0.90883pt too wide) detected at line 56
+Overfull \hbox (0.90883pt too wide) detected at line 50
  []\TU/LinLibertine(0)/m/n/10.95 XIV
  []
 
 
-Overfull \hbox (0.90883pt too wide) detected at line 57
+Overfull \hbox (0.90883pt too wide) detected at line 51
  []\TU/LinLibertine(0)/m/n/10.95 XIV
  []
 
 
-Overfull \hbox (0.90883pt too wide) detected at line 59
+Overfull \hbox (0.90883pt too wide) detected at line 53
  []\TU/LinLibertine(0)/m/n/10.95 XVI
  []
 
 
-Overfull \hbox (0.73363pt too wide) detected at line 60
+Overfull \hbox (0.73363pt too wide) detected at line 54
  []\TU/LinLibertine(0)/m/n/10.95 XIX
  []
 
@@ -2367,6 +2367,11 @@ Overfull \hbox (3.27357pt too wide) in paragraph at lines 352--388
 
 [46]
 
+LaTeX Warning: Reference `sec:ergebnissePlots' on page 47 undefined on input li
+ne 436.
+
+
+
 [47]
 
 [48]
@@ -2405,14 +2410,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 chapter 5.
-)
-
-[63]
-
-[64
 
 
-]
+[63])
+
+[64]
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/sc' will be
 (Font)              scaled to size 10.95pt on input line 55.
 Package microtype Info: Loading generic protrusion settings for font family
@@ -2428,7 +2430,10 @@ Underfull \hbox (badness 5667) in paragraph at lines 56--56
 
 
 
-[65]
+[65
+
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 56--56
 []\TU/LinLibertine(0)/m/n/10.95 CuiHen. \TU/LinLibertine(0)/m/it/10.95 CuiHen/C
 GP_with_Crossover_Strategies\TU/LinLibertine(0)/m/n/10.95 . original-date: 2024
@@ -2564,6 +2569,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-09>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `Main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'Main.run.xml'.
@@ -2571,10 +2580,10 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49495 strings out of 473889
- 1044996 string characters out of 5734826
- 1985668 words of memory out of 5000000
- 71854 multiletter control sequences out of 15000+600000
+ 49484 strings out of 473889
+ 1044852 string characters out of 5734826
+ 1984206 words of memory out of 5000000
+ 71843 multiletter control sequences out of 15000+600000
  562698 words of font info for 99 fonts, out of 8000000 for 9000
  1350 hyphenation exceptions out of 8191
  122i,17n,136p,10900b,6836s stack positions out of 10000i,1000n,20000p,200000b,200000s
