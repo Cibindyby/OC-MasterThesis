@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  22 MAR 2025 19:45
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  22 MAR 2025 23:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2139,6 +2139,12 @@ LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/it' will be
 (Font)              scaled to size 10.95pt on input line 1.
 [2]
 chapter 2.
+
+Overfull \hbox (1.77533pt too wide) in paragraph at lines 4--11
+\TU/LinLibertine(0)/m/n/10.95 CGP ist eine Art von GP, das Lösungen von Rechenp
+roblemen als Graphen darstellt. [[]Mil20[]]
+ []
+
 File: Bilder/AufbauCGPVorgehenNachbildung.png Graphic file (type bmp)
 <Bilder/AufbauCGPVorgehenNachbildung.png>
 
@@ -2206,17 +2212,17 @@ File: Bilder/BeispielUniformCrossover.png Graphic file (type bmp)
 File: Bilder/BeispielUniformCrossover2.png Graphic file (type bmp)
 <Bilder/BeispielUniformCrossover2.png>
 
-Overfull \hbox (22.09938pt too wide) in paragraph at lines 311--324
-\TU/LinLibertine(0)/m/n/10.95 erzeugt. Der entsprechende Index des Knotens kann
- jeweils unterhalb der Eltern-Chromosomen
+
+[12]
+Overfull \hbox (2.26712pt too wide) in paragraph at lines 329--341
+\TU/LinLibertine(0)/m/n/10.95 Die Rekombination wird allerdings nicht für die E
+rzeugung jedes Nachwuchs-Chromosoms
  []
 
 
 
-[12]
-
 [13]
-Overfull \hbox (10.851pt too wide) in paragraph at lines 358--368
+Overfull \hbox (10.851pt too wide) in paragraph at lines 356--368
 \TU/LinLibertine(0)/m/n/10.95 duzieren. Ebenfalls ist es ein Vorteil, nur einen
  variablen Parameter pro Rekombinationsraten-
  []
@@ -2277,7 +2283,7 @@ chapter 3.
 ]
 
 [22]
-Overfull \hbox (0.27785pt too wide) in paragraph at lines 89--101
+Overfull \hbox (0.27785pt too wide) in paragraph at lines 89--102
 \TU/LinLibertine(0)/m/n/10.95 In dieser Arbeit werden unterschiedliche \TU/LinL
 ibertine(0)/m/it/10.95 CGP-Konfigurationen \TU/LinLibertine(0)/m/n/10.95 mitein
 ander verglichen und
@@ -2290,7 +2296,7 @@ ander verglichen und
 [24]
 
 [25]
-Overfull \hbox (2.01526pt too wide) in paragraph at lines 194--205
+Overfull \hbox (2.01526pt too wide) in paragraph at lines 195--206
 \TU/LinLibertine(0)/m/n/10.95 den Parametersätzen hätten für jede Kombination a
 us Testszenario und CGP-Konfiguration
  []
@@ -2466,7 +2472,10 @@ GP_with_Crossover_Strategies\TU/LinLibertine(0)/m/n/10.95 . original-date: 2024
 
 [71]
 
-[72]
+[72
+
+
+]
 chapter A.
 (./Anhang1.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2474,8 +2483,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [1
-
-
 
 
 ]
@@ -2592,10 +2599,10 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49484 strings out of 473889
- 1044859 string characters out of 5734826
- 1984336 words of memory out of 5000000
- 71843 multiletter control sequences out of 15000+600000
+ 49480 strings out of 473889
+ 1044186 string characters out of 5734826
+ 1985301 words of memory out of 5000000
+ 71839 multiletter control sequences out of 15000+600000
  562698 words of font info for 99 fonts, out of 8000000 for 9000
  1350 hyphenation exceptions out of 8191
  122i,17n,136p,10900b,6836s stack positions out of 10000i,1000n,20000p,200000b,200000s

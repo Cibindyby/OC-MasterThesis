@@ -2167,44 +2167,6 @@
       \verb White et al. - 2013 - Better GP benchmarks community survey results and.pdf:files/287/White et al. - 2013 - Better GP benchmarks community survey results and.pdf:application/pdf
       \endverb
     \endentry
-    \entry{walker_2008}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=947fbc85c85bae243c1abbbdb3abfad2}{%
-           family={Walker},
-           familyi={W\bibinitperiod},
-           given={James\bibnamedelima Alfred},
-           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-        {{hash=707c6e450c0448e2a3ef630bd0bfa21f}{%
-           family={Miller},
-           familyi={M\bibinitperiod},
-           given={Julian\bibnamedelima Francis},
-           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
-      }
-      \strng{namehash}{ea3e1cf3c7c683b889d8da43d73bc7ac}
-      \strng{fullhash}{ea3e1cf3c7c683b889d8da43d73bc7ac}
-      \strng{fullhashraw}{ea3e1cf3c7c683b889d8da43d73bc7ac}
-      \strng{bibnamehash}{ea3e1cf3c7c683b889d8da43d73bc7ac}
-      \strng{authorbibnamehash}{ea3e1cf3c7c683b889d8da43d73bc7ac}
-      \strng{authornamehash}{ea3e1cf3c7c683b889d8da43d73bc7ac}
-      \strng{authorfullhash}{ea3e1cf3c7c683b889d8da43d73bc7ac}
-      \strng{authorfullhashraw}{ea3e1cf3c7c683b889d8da43d73bc7ac}
-      \field{labelalpha}{WM08}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Transactions on Evolutionary Computation}
-      \field{number}{4}
-      \field{title}{The Automatic Acquisition, Evolution and Reuse of Modules in Cartesian Genetic Programming}
-      \field{volume}{12}
-      \field{year}{2008}
-      \field{pages}{397\bibrangedash 417}
-      \range{pages}{21}
-      \verb{doi}
-      \verb 10.1109/TEVC.2007.903549
-      \endverb
-      \keyw{Genetic programming;Circuit testing;Benchmark testing;Digital circuits;Algorithms;Tree graphs;Encapsulation;Assembly;Automatically defined functions (ADFs);Cartesian genetic programming (CGP);embedded Cartesian genetic programming (ECGP);genetic programming (GP);graph-based representations;modularity;module acquisition;Automatically defined functions (ADFs);Cartesian genetic programming (CGP);embedded Cartesian genetic programming (ECGP);genetic programming (GP);graph-based representations;modularity;module acquisition}
-    \endentry
     \entry{yu_neutrality_2001}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{hash=124223a0aa483da97437981c95e51871}{%
