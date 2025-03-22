@@ -429,11 +429,11 @@ Im Keijzer-Testszenario konnte die konstante Rekombinationsrate von 0,8 mehr pos
 Auch bei den Testfällen Encode und Koza konnten in den Plots zu positiven Rekombinationen über Rekombinationsraten lokale Maxima gefunden werden.
 Bei diesen wurden Hochpunkte für positive Rekombinationen gefunden, die bei relativ geringen Rekombinationsraten entstanden sind.
 Diese Rekombinationsraten könnten weiter in anderen Testszenarien untersucht werden, um Muster zu erkennen und gegebenenfalls eine ideale Rekombinationsrate zu finden oder mehr Verständnis aufzubauen.\\
-Die Ergebnisse in diesem Abschnitt zeigen, dass im Gebrauch der Rekombinationsalgorithmen mehr Potential steckt als mit dem CGP-Aufbau Abbildung \ref{fig:aufbauCGP} genutzt wird.
+Die Ergebnisse in diesem Abschnitt zeigen, dass im Gebrauch der Rekombinationsalgorithmen mehr Potential steckt als mit dem CGP-Aufbau aus Abbildung \ref{fig:aufbauCGP} genutzt wird.
 Der in diesem Abschnitt erläuterte Ausblick kann verwendet werden, um weitere Erkenntnisse zu sammeln und die Rekombination im allgemeinen weiter zu fördern.
 Trotzdem, dass das Potential nicht voll genutzt wird, konnten die bisherigen Ergebnisse Grund zu der Vermutung geben, dass bereits mit diesem Stand die Effizienz eines CGPs gesteigert werden kann, wenn die Rekombination richtig gewählt und parametriert wird.
 Diese Ergebnisse wurden für Encode und Koza auch erzielt, obwohl nur die Hyperparameter der CGP-Konfigurationen ohne Rekombination optimiert wurden.
-Die folgenden Abschnitte \ref{sec:ergebnisseBayes} und \ref{sec:ergebnissePlots} werten den Ist-Stand der Standard-Rekombination in CGPs weiter aus.
+Der folgende Abschnitt \ref{sec:ergebnisseBayes} wertet den Ist-Stand der Standard-Rekombination in CGPs weiter aus.
 
 
 \section{Ergebnisse Bayes'sche Analyse}
@@ -664,13 +664,13 @@ Für Parity und Keijzer wurde anhand des MW und PL-Platzes bestimmt, welche jewe
 Das Ergebnis zeigt, dass es durchschnittlich besser ist keinen Offset anzuwenden.
 Wahrscheinlich ist dies der Fall, da so die positiven (aber auch negativen) Einflüsse der Rekombination zu Beginn des Trainings blockiert werden, während die negativen Folgen zu den späteren Iterationen wieder eintreten.
 Trotzdem haben ein paar der CGP-Modelle mit Offset bessere Ergebnisse geliefert als ohne Offset.
-In diesen Fällen überwiegen wahrscheinlich die negativen Einflüsse der Rekombination in den ersten Iterationen, sodass ein Offset sinnvoll ist.
+In diesen Fällen überwiegen wahrscheinlich die negativen Einflüsse der Rekombination auf die Mutation in den ersten Iterationen, sodass ein Offset sinnvoll ist.
 Ein Ziel muss es also sein, die Rekombination oder die CGP-Trainingsverfahren so zu verändern, dass die Rekombination effizienter wird.
 
 Folgend werden die Ergebnisse bezüglich der Spalten \glqq MW\grqq\space und \glqq PL-Platz\grqq\space ausgewertet.
 Bei den Testszenarien Parity und Keijzer, bei denen für alle CGP-Konfigurationen durch eine Hyperparameteranalyse optimiert wurden, konnte festgestellt werden, dass die Verwendung von Rekombination durchaus Sinn macht und in relativ vielen Fällen schnellere Konvergenzen mit sich führt.
 Dabei war vor allem die One-Point Rekombination effektiver als die anderen.
-Die Two-Point Rekombination führe zu besonders guten und auch besonders schlechten Ergebnissen, was aufzeigt, dass es sinnvoll wäre bei den Hyperparameteroptimierungen auch unterschiedliche Rekombinationsraten-Arten zu testen, da diese den Trainingserfolg stark beeinflussen können.
+Die Two-Point Rekombination führte zu besonders guten und auch besonders schlechten Ergebnissen, was aufzeigt, dass es sinnvoll wäre bei den Hyperparameteroptimierungen auch unterschiedliche Rekombinationsraten-Arten zu testen, da diese den Trainingserfolg stark beeinflussen können.
 Bei der Untersuchung vom Keijzer-Testfall ist aufgefallen, dass schlechte Ergebnisse vor allem durch diejenigen CGP-Konfigurationen ausgelöst wurden, die viele negative Mutation hervorgerufen haben, also Mutationen die die Fitnessverbesserung der Rekombination teilweise oder vollständig ausgelöscht haben.
 Dies sind wahrscheinlich diejenigen CGP-Modelle, bei denen die Rekombination und Mutation besonders stark gegeneinander arbeiten.
 Besonders gute Ergebnisse wurden beobachtet, wenn entweder wenige Rekombinationsschritte zu einer Verbesserung der Fitness geführt haben (positive Rekombinationen) oder anteilig weniger negative Mutationen im Vergleich zu den positiven Rekombinationen festgestellt wurden.
@@ -684,7 +684,7 @@ Zu beachten ist, dass in diesen Testfällen nur die CGP-Konfiguration ohne Rekom
 Die anderen CGP-Modelle haben diese Parameter übernommen und jeweils eine Rekombinationsrate eingefügt.
 Für den Encode-Testfall haben die One-Point und Uniform Rekombination zu sehr guten Ergebnissen geführt, während bei der Two-Point Rekombination alle Tests schlechter ausgefallen sind als bei Tests ohne Rekombination.
 Da für den Encode-Testfall aber nur die Fitness zur 10000. Iteration betrachtet wurde, kann die Effizient der Rekombination gegenüber des Trainings nicht sinnvoll aufgewertet werden.
-Dadurch, dass die Mutation in den späteren Iterationen mehr Trainingserfolge ausmachen als die Rekombination, kann es passieren, dass bei der Betrachtung der Iterationen bis zur Konvergenz die CGP-Konfigurationen ohne Rekombination bessere Ergebnisse liefern, da die Mutation in diesem Verfahren besser funktionieren könnte.
+Dadurch, dass die Mutation in den späteren Iterationen mehr Trainingserfolge ausmacht als die Rekombination, kann es passieren, dass bei der Betrachtung der Iterationen bis zur Konvergenz die CGP-Konfigurationen ohne Rekombination bessere Ergebnisse liefern, da die Mutation in diesem Verfahren besser funktionieren könnte.
 Für den Koza-Testfall haben sehr wenige CGP-Modelle mit Rekombination besser abgeschnitten als die ohne Rekombination.
 Einerseits könnten die CGP-Konfigurationen mit Rekombination durch eine Hyperparameteroptimierung verbessert werden.
 Andererseits kann es auch sein, dass komplexere Testszenarien wie Encode und Koza andere Rekombinationsverfahren benötigen als die einfachen Testfälle.

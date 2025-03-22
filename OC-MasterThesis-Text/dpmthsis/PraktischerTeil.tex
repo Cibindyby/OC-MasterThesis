@@ -7,7 +7,7 @@
 Für die Beantwortung der Forschungsfragen werden unterschiedliche Experimente ausgeführt, deren Ergebnisse in dieser Arbeit ausgewertet und interpretiert werden sollen.
 Der Programmcode für die Experimente wurde in der Sprache Julia verfasst.
 Dabei fand eine Orientierung an folgendem Code von Henning Cui statt: \cite{cuihen_cuihencgp_with_crossover_strategies_2024}\\
-Um Ergebnisse von Ausgangsproblemen aus unterschiedlichen Domänen für eine umfangreichere Bewertung zur Verfügung zu stellen, werden mehrere Benchmark-Testszenarien überprüft.
+Für eine umfangreichere Bewertung wurden mehrere Benchmark-Testszenarien aus unterschiedlichen Domänen überprüft.
 Diese werden in den folgenden Abschnitten näher betrachtet.
 
 \subsection{Testszenarien}
@@ -28,7 +28,7 @@ Um Benchmarkprobleme mit unterschiedlichen Ein- und Ausgangsgrößen miteinzubez
 
 Das verwendete Standardfunktionsset aller Testszenarien beinhaltet die Booleschen Rechenoperatoren AND, OR, NAND und NOR.
 Außerdem wird die Standardfitnessfunktion für Boolesche Benchmarkprobleme verwendet.
-Diese wird definiert durch den Anteil an korrekt zugeordneten Bits. \cite{cui_equidistant_2023}
+Diese wird durch den Anteil an korrekt zugeordneten Bits definiert. \cite{cui_equidistant_2023}
 Das Stopp-Kriterium ist erfüllt, wenn die Fitness den Wert 0 erreicht.
 Folgend werden die beiden verwendeten Boolesche Benchmarkprobleme näher erläutert:
 
@@ -40,7 +40,7 @@ Demnach gibt es für das CGP drei Eingaben (die Komponenten eines Binär-Vektors
 \textbf{Encode:} Beim 16-4-bit Encoding wird aus einer 16-stelligen One-Hot-Kodierung ein 4-bit Integer erstellt.
 Die One-Hot-Kodierung besteht dabei aus einem 16-stelligen Binär-Vektor, wobei nur eine Stelle mit einer 1 belegt ist, die restlichen Stellen sind 0.
 Ziel ist es diejenige Stelle zu finden, die die 1 hält und diese als üblichen 4-bit Integer zu kodieren. \cite{cui_weighted_mutation, goldman_2015}
-Daraus ergibt sich eine Eingabegröße von 16 und eine Ausgabegröße von vier.
+Daraus ergibt sich eine Eingabegröße von 16 und eine Ausgabegröße von 4.
 Der Testdatensatz enthält 16 verschiedene One-Hot-Kodierungen, die umgewandelt werden sollen.
 
 
@@ -91,7 +91,7 @@ Diese enthalten verschiedene Parametrierungen innerhalb eines CGPs und werden in
 Ein Ziel der Arbeit ist es die Effizienz von Rekombination in CGP zu bewerten.
 Ebenfalls sollen unterschiedliche Rekombinationsalgorithmen und -konfigurationen miteinander verglichen werden, um eine Aussage über deren Effektivität zu treffen.
 Aus diesem Grund müssen für die unterschiedlichen Testszenarien mehrere Rekombinationskonfigurationen getestet werden.
-Um eine Vergleichbarkeit der Ergebnisse zu gewährleisten müssen Selektion und Mutation in allen Experimenten gleichen Algorithmen entsprechen.
+Um eine Vergleichbarkeit der Ergebnisse zu gewährleisten müssen Selektion und Mutation in allen Experimenten den gleichen Algorithmen entsprechen.
 Diese werden im Folgenden beschrieben.\newline
 \textbf{Selektion:} Für die Selektion wird in allen Experimenten das ($\mu$+$\lambda$)-Selektionsverfahren verwendet.
 Dabei wurde für die CGP-Konfiguration ohne Rekombinationsschritt nicht $\mu = 1$ festgelegt, obwohl dies den Standard-Einstellungen eines CGP ohne Rekombination entspricht.
@@ -127,7 +127,7 @@ Grundsätzlich werden die Konfigurationskombinationen nach folgendem Muster erst
 	\item Auswahl Offset aktiv / inaktiv
 \end{itemize}
 
-Dementsprechend ergeben sich 19 verschiedene Konfigurationen für den Rekombinationsschritt, die miteinander verglichen werden sollen. 
+Kombinatorisch betrachtet ergeben sich 19 verschiedene Konfigurationen für den Rekombinationsschritt, die miteinander verglichen werden sollen. 
 
 
 \subsection{Hyperparameteroptimierung}
@@ -138,7 +138,7 @@ Für jede in Abschnitt \ref{subsec:CGPkonfigurationen} eingeführte CGP-Konfigur
 Außerdem müssen die Hyperparameter auf das jeweilige Testszenario angepasst werden.\\
 Für die Hyperparameteroptimierungen in dieser Arbeit wird das Julia-Paket HyperOpt.jl verwendet \cite{carlson_baggepinnenhyperoptjl_2025}.
 Mit Hilfe des Pakets können die Hyperparameter, sowie deren Wertebereiche angegeben werden, sodass eine automatisierte Optimierung stattfinden kann.
-Eben diese werden in folgender Tabelle \ref{table:hyperopt} aufgelistet.
+Diese werden in folgender Tabelle \ref{table:hyperopt} aufgelistet.
 
 \begin{table}[H]
 	\centering
@@ -186,7 +186,7 @@ Nach 150 getesteten Parametersätzen bricht die Hyperparameteroptimierung ab und
 
 Das verwendete Julia-Paket bietet verschiedene Sampler an.
 Der als Standardeinstellung zur Verfügung gestellte Sampler ist ein Random-Sampler.
-Da der verwendete BHOB Sampler mit und ohne Hyperband keine Einsparungen in der Rechenzeit ergeben haben, wurde weiterhin der einfach zu konfigurierende Random-Sampler verwendet. 
+Da der verwendete BHOB Sampler mit und ohne Hyperband keine Einsparungen in der Rechenzeit ergeben hat, wurde weiterhin der einfach zu konfigurierende Random-Sampler verwendet. 
 
 \subsection{Teststruktur}
 \label{subsec:struktur}
@@ -230,10 +230,10 @@ Für jede CGP-Konfiguration werden 50 Testdurchläufe ausgeführt, um eine stati
 Dabei werden die CGP-Modellen gegebenenfalls nicht bis zur vollständigen Konvergenz trainiert, um die Rechenzeit zu reduzieren. 
 Für Boolesche Probleme werden den CGP-Modellen dabei weniger Iterationen Trainingszeit zur Verfügung gestellt als für SR Probleme.
 Dies ergibt sich daraus, dass Boolesche Probleme in der Hyperparameteranalyse von Cui et al. mehr Rechenknoten brauchen und somit mehr Rechenzeit für jeweils eine Iteration benötigen als es bei SR der Fall ist. \cite{cui_results}\\
-Da sich die Wirkung von Rekombinationsrate und Offset gegenseitig beeinflussen kann, ist es sinnvoller die Bewertung der beiden Parameter einzeln zu betrachten.
+Da sich die Wirkungen der Rekombinationsrate und des Offsets gegenseitig beeinflussen können, ist es sinnvoller die Bewertung der beiden Parameter einzeln zu betrachten.
 Aufgrund der hohen Anzahl der zu bewertenden Testergebnisse, die sich bereits für einen variierenden Parameter ergeben, soll nur einer dieser Parameter in dieser Arbeit näher betrachtet werden.
 Dieser Parameter ist wie bereits beschrieben die Rekombinationsrate.
-Dies ergibt sich daraus, dass die Ergebnisse der Hyperparameter- und Rohdatenanalyse der einfachen Tests bereits vermuten lassen, dass der Offset keinen deutlichen Mehrwert für das CGP-Training mit sich bringt.
+Dies ergibt sich daraus, dass die Ergebnisse der Hyperparameter- und Rohdatenanalyse der einfachen Tests bereits vermuten lassen, dass der Offset keinen deutlichen Mehrwert für das CGP-Training bietet.
 Details zu den jeweiligen Ergebnissen können im Abschnitt \ref{sec:ergebnisseRohdaten} nachgelesen werden.
 Außerdem können mit Hilfe der Rekombinationsrate nähere Erkenntnisse zu den unterschiedlichen Rekombinationsarten gewonnen werden, die in dieser Arbeit verglichen werden.\\
 Für die Evaluation stehen nach dem Testdurchlauf die Ergebnisse mehrerer CGP-Kon\-fi\-gu\-ra\-tio\-nen zur Verfügung, die allerdings nicht unbedingt die Ergebnisse der CGPs mit den jeweils besten Parametersätzen darstellen, da keine Hyperparameteroptimierung ausgeführt wurde.
@@ -247,21 +247,24 @@ Für die Auswertung der Ergebnisse werden für jedes CGP-Training verschiedene M
 Diese werden für jede Trainingsiteration gespeichert, um den Verlauf beobachten und bewerten zu können.
 In dieser Arbeit handelt es sich dabei um die Fitness nach der Rekombination und die Fitness nach der Mutation.
 Die Evaluation umfasst zwei unterschiedliche Techniken zur Bewertung der ausgezeichneten Daten.
-Diese werden im Folgenden eingeführt und erläutert.
+Diese werden im Folgenden erläutert.
 
 \textbf{Analyse der Rohdaten:} Der erste Evaluationsschritt umfasst eine händische Analyse der Rohdaten.
 Dabei werden die Ergebnisse der Hyperparameteranalyse näher betrachtet und bewertet.
-Es werden erste Erkenntnisse über die Effizienz der verschiedenen Rekombinationstypen gesammelt, indem beispielsweise die Anzahl der Rechenknoten verglichen wird.
+Es werden erste Erkenntnisse über die Effizienz der verschiedenen Rekombinationstypen gesammelt, indem beispielsweise die Anzahl der Rechenknoten miteinander verglichen werden.
 Außerdem wird beobachtet wie die unterschiedlichen Rekombinationsparameter gesetzt werden.\\
 Des weiteren werden die Ergebnisse des CGP-Trainings näher analysiert.
-Der Trainingserfolg zwischen Rekombination und Mutation können anhand der jeweiligen Fitness-Werte miteinander verglichen werden.
+Der Trainingserfolg von Rekombination und Mutation kann anhand der jeweiligen Fitness-Werte gegenübergestellt werden.
 
 \textbf{Bayes'sche Analyse:} Die Bayes'sche Analyse wird einerseits für die Sortierung der Effizienz der CGP-Konfigurationen verwendet. 
 Dafür wird wie in Abschnitt \ref{sec:bayesian} beschrieben das Plackett-Luce-Modell verwendet.
-Für die einfacheren Testszenarien Parity und Keijzer können so die Ergebnisse, der aus der Hyperparameteranalyse erhaltenen besten CGP-Konfigurationen miteinander verglichen werden.\\
-Für weitere Bewertungen wird das Gammaverteilung-basierte genutzt.
-Durch die Berechnung des Mittelwerts und HPDI der Iterationen für jede CPG-Konfiguration können sowohl die einfacheren als auch die komplexeren Testszenarien ausgewertet werden.
-Für Parity und Keijzer kann so eingeschätzt werden, welche CGP-Konfiguration die Ausgangsprobleme schneller lösen kann als andere.
+Für die einfacheren Testszenarien Parity und Keijzer können so die Ergebnisse, der aus der Hyperparameteranalyse erhaltenen besten CGP-Konfigurationen miteinander verglichen werden.
+Für die komplexeren Testszenarien können vor allem unterschiedliche Rekombinationarten und Rekombinationsraten-Arten miteinander verglichen werden.\\
+Für weitere Bewertungen wird das Gammaverteilung-basierte Modell genutzt. Dabei muss für die komplexeren Testszenarien entschieden werden, ob die Iterationen bis zur Konvergenz oder die Fitness zu einer bestimmten Iteration bewertet werden muss, da zum Testzeitpunkt nicht klar ist, ob genug Durchläufe der CGP-Modelle konvergieren.
+Wenn genug Konvergenzen erreicht werden, können die Iterationen bis zu dieser sinnvoll bewertet werden.
+Ist dies nicht der Fall, macht es mehr Sinn die Fitness zur letzten aufgezeichneten Iteration zu bewerten.
+Durch die Berechnung des Mittelwerts und HPDI der Iterationen/Fitness für jede CPG-Konfiguration können sowohl die einfacheren als auch die komplexeren Testszenarien sinnvoll ausgewertet werden.
+Für Parity und Keijzer kann so eingeschätzt werden, durch welche Konfiguration ein CGP-Modell die Ausgangsprobleme schneller lösen kann als andere.
 Außerdem kann bewertet werden wie hoch die Streuung dieser Ergebnisse ist.
 Für die komplexeren Ausgangsprobleme kann beobachtet werden, welche Auswirkungen die Änderung der Rekombinationsparameter auf die Effizienz der CGP-Modelle hat.\\
 Die \emph{Prior-Sensitivitätsanalyse}, die Cui et al. in ihrem Paper untersuchen, wird aus Gründen des Umfangs in dieser Arbeit nicht näher betrachtet \cite{cui_equidistant_2023}.

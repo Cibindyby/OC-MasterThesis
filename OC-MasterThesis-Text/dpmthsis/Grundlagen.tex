@@ -7,11 +7,11 @@ CGP ist eine Art von GP, welches verwendet wird, um unterschiedliche Probleme zu
 Dabei wird der Maschine allerdings nicht beigebracht, wie diese Probleme zu lösen sind.
 Stattdessen lernt sie eigenständig über mehrere Iterationen hinweg das Ausgangsproblem zu lösen.
 Dies geschieht angelehnt an die Darwin’sche Theorie der biologischen Evolution. \cite{milad_taleby_ahvanooey_survey_2019} \newline
-Um den grundlegenden Aufbau von CGP zu erläutern, wird folgende Abbildung \ref{fig:aufbauCGP} eingeführt:
+Um den grundlegenden Aufbau von CGP zu erläutern, wird die folgende Abbildung \ref{fig:aufbauCGP} verwendet:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.52]{Bilder/AufbauCGPVorgehenNachbildung.png}
+    \includegraphics[scale = 0.43]{Bilder/AufbauCGPVorgehenNachbildung.png}
     \caption{Aufbau CGP, angelehnt an \cite{torabi_using_2022}}
     \label{fig:aufbauCGP}
 \end{figure}
@@ -29,7 +29,7 @@ Die \emph{Population} von CGP ist eine Menge von \emph{Chromosomen}, auch Indivi
 Chromosome sind individuelle Möglichkeiten ein komplexes Ausgangsproblem zu lösen.
 Jedes Chromosom ist in CGP ein gerichteter, azyklischer Graph, bestehend aus \emph{Eingangsknoten}, \emph{Rechenknoten} und \emph{Ausgangsknoten}.
 Dabei gibt es zwei Darstellungsmöglichkeiten für ein Chromosom. 
-Anhand der folgenden Abbildung \ref{fig:genoPhänoGesamt} kann beispielhaft näher erläutert werden, wie die Chromosome in CGP aufgebaut sind und funktionieren.
+Anhand der folgenden Abbildung \ref{fig:genoPhänoGesamt} kann beispielhaft dargestellt werden, wie die Chromosome in CGP aufgebaut sind und funktionieren.
 
 \begin{figure}[H]
 	\centering
@@ -85,7 +85,7 @@ In diesem Beispiel hat jeder Rechenknoten zwei Eingänge und jeder Ausgangsknote
 Die Knoteneingänge sind in Abbildung \ref{fig:phänotyp} blau markiert.
 Hier werden die Indices derjenigen Knoten angegeben, deren Ausgangswerte verwendet werden.
 Diese spiegeln sich ebenfalls in Abbildung \ref{fig:genotypNeu} wider: hier werden die Knoteneingänge innerhalb der Array-Blöcke als nicht-unterstrichene Indices angegeben.
-Damit ergibt sich eine vollständige Beschreibung eines Knotens: einem Index werden Eingänge und gegebenenfalls eine Rechenoperation zugeschrieben.\newline
+Damit ergibt sich eine vollständige Beschreibung eines Knotens, indem einem Index Eingänge und gegebenenfalls eine Rechenoperation zugeschrieben werden.\newline
 Durch dieses Beispiel wird ebenfalls ersichtlich, was die Eingangsknoten eines Chromosoms ausmacht:
 Sie geben die Systemeingänge wieder, ohne diese auf irgendeine Weise zu verarbeiten.
 Aus diesem Grund müssen die Eingangsknoten nicht im Genotyp aufgezeigt werden, um sie vollständig zu beschreiben, denn sie weisen weder Eingänge noch Rechenoperationen auf, die beschrieben werden müssten.
@@ -98,7 +98,7 @@ Der Genotyp- und Phänotyp-Raum können sich dabei stark voneinander unterscheid
 Dies lässt sich dadurch erklären, dass nicht alle Teile des Genotyps für die Berechnung des Endergebnisses verwendet werden.
 Diejenigen Anteile, die für die Berechnung der Lösung nicht gebraucht werden, werden \emph{inaktive Knoten} genannt.
 So ein inaktiver Knoten wird in Abbildung \ref{fig:genotypNeu} durch gestrichelte Linien dargestellt.
-Da der Phänotyp die Lösung des CGPs ist, müssen inaktive Knoten auch nicht im Phänotyp dargestellt werden, da diese für die Berechnung keine Verwendung finden.
+Da der Phänotyp die Lösung des CGPs ist, müssen inaktive Knoten auch nicht im Phänotyp dargestellt werden, denn diese finden für die Berechnung keine Verwendung.
 Der Vollständigkeit halber wird der inaktive Knoten aus Abbildung \ref{fig:genotypNeu} auch in Abbildung \ref{fig:phänotyp} aufgenommen.
 So können also verschiedene Genotypen zum gleichen Phänotyp führen, indem sich verschiedene Genotypen nur anhand ihrer inaktiven Knoten unterscheiden.
 Da der Phänotyp auch den auszuführenden Programmcode darstellt, können auch verschiedene Genotypen zum gleichen Ergebnis führen.
@@ -112,7 +112,7 @@ Anschließend werden iterativ die Eingangskanten der Rechenknoten zurückverfolg
 Schließlich soll anhand der eingeführten Abbildungen \ref{fig:genotypNeu} und \ref{fig:phänotyp} ein Beispiel berechnet werden:\newline
 Angenommen werden die Systemeingänge $x_0$ = 10 und $x_1$ = 20.
 Demnach sind die Ausgänge der beiden Eingangsknoten mit den Indices 0 und 1 gleich den Werten 10 und 20.
-Der erste Rechenknoten (Index = 2) verwendet als Eingänge die beiden Eingangsknoten (Indices = 0 und 1) und besitzt die Rechenfunktion +.
+Der erste Rechenknoten (Index = 2) verwendet die beiden Eingangsknoten (Indices = 0 und 1) als Eingänge und besitzt die Rechenfunktion +.
 Demnach ist das Ergebnis des Rechenknotens 10 + 20 = 30.
 Führt man dieses Vorgehen für die restlichen Rechenknoten aus, ergeben sich folgende Ergebnisse:
 
@@ -131,7 +131,7 @@ Führt man dieses Vorgehen für die restlichen Rechenknoten aus, ergeben sich fo
 \end{table}
 
 Die Ausgangsknoten geben die jeweiligen Ergebnisse der Eingangs- oder Rechenknoten zurück.
-In diesem Beispiel werden durch das Chromosom die folgenden Ausgänge aus den beiden Eingängen (10; 20) berechnet:
+In diesem Beispiel werden durch das Chromosom folgende Ausgänge aus den beiden Eingängen (10; 20) berechnet:
 
 \begin{table}[H]
     \centering
@@ -146,7 +146,7 @@ In diesem Beispiel werden durch das Chromosom die folgenden Ausgänge aus den be
     \label{table:ergebnisseAusgangsknoten}
 \end{table}
 
-Zusammengefasst hat das Beispielchromosom aus dem Eingangstupel (10; 20) ein Ausgangstupel (30; 200; 2,5; 100) berechnet.\\
+Zusammengefasst hat das Beispielchromosom aus dem Eingangstupel (10; 20) das Ausgangstupel (30; 200; 2,5; 100) berechnet.\\
 
 Wie bereits erläutert, ist die Population in CGP eine Menge an Chromosomen, also eine Menge an gerichteten, azyklischen Graphen, die aus definierten Systemeingaben Ausgaben berechnen können.
 Diese Population wird zu Beginn zufällig initialisiert.
@@ -184,7 +184,7 @@ Anschließend wird eine definierte Anzahl an Eltern selektiert, wobei die Wahrsc
 Selektion heißt dabei, dass das Chromosom unverändert in die nächste Generation kopiert wird. \cite{koza_survey_1995}\newline
 Dies ist ein Weg dafür zu sorgen, dass das Prinzip nach Darwin eingehalten wird und somit die fitteren Chromosomen \glqq überleben\grqq. 
 Eine andere Möglichkeit, dies zu erreichen, ist die Verwendung von sogenannten \emph{Elitisten}.
-Die fittesten Individuen einer Generation werden dabei als Elitisten erwählt und werden für die folgende Generation selektiert. \cite{krawiec_genetic_2013}
+Die fittesten Individuen einer Generation werden dabei als Elitisten erwählt und werden für die darauf folgende Generation selektiert. \cite{krawiec_genetic_2013}
 Für die Auswahl der Elitisten wird in dieser Arbeit der \emph{neutral search Algorithmus} verwendet.
 Dieser wird relevant, falls innerhalb einer Generation ein Elter-Chromosom und ein Kind-Chromosom die gleiche Fitness aufweisen.
 In diesem Fall wird stets das Kind-Chromosom als Elitist ausgewählt.
@@ -193,23 +193,24 @@ Mit dem in dieser Arbeit verwendeten Selektionsverfahren namens \emph{($\mu$ + $
 Dabei werden jeweils $\mu$-viele Eltern für die folgende Generation selektiert.
 Im Standard-CGP wird $\mu$ mit 1 belegt.
 Die restlichen Individuen der Population ($\lambda$-viele) werden anschließend durch \emph{Mutation} aus dem Elter-Chromosom gebildet. \cite{da_silva_cartesian_2018}
-Da für den \emph{Rekombinationsschritt} jeweils zwei Eltern-Chromosomen gekreuzt werden, muss, falls Rekombination ausgeführt wird, für $\mu$ ein Wert größer als 1 gewählt werden.
+Da für den \emph{Rekombinationsschritt} jeweils zwei Eltern-Chromosomen gekreuzt werden, muss für $\mu$ ein Wert größer als 1 gewählt werden, falls Rekombination ausgeführt wird.
 Um eine bessere Vergleichbarkeit zu gewährleisten, werden im praktischen Teil auch unterschiedliche $\mu$-Werte gewählt, selbst wenn keine Rekombination ausgeführt wird.\newline
-Wie Mutation und Rekombination ausgeführt werden, wird in folgenden Abschnitten \ref{sec:evolutionäreOperatoren} und \ref{subsec:Mutation} erläutert.
+Die folgenden Abschnitte \ref{sec:evolutionäreOperatoren} und \ref{subsec:Mutation} erläutern die Funktionsweise von Rekombination und Mutation.
 
 
 \section{Evolutionärer Operator: Rekombination}
 \label{sec:evolutionäreOperatoren}
 Nachdem die Selektion der Eltern-Chromosome erfolgt ist, wie in Abschnitt \ref{sec:evalUndSelektion} beschrieben, können im nächsten Schritt die evolutionären Operationen ausgeführt werden, die die Nachkommen aus den Eltern erzeugen. \\
 Der erste evolutionäre Operator, der verwendet wird, ist die Rekombination.
-Dabei werden jeweils zwei zufällig ausgewählte Eltern-Chromosomen kombiniert und somit zwei neue (Nachkommen-)Chromosomen erzeugt \cite{kalkreuth_comprehensive_2020}. Dieser Rekombinationsschritt wird so oft ausgeführt, bis die Population dieser Generation gefüllt ist.\\
-Innerhalb dieser Arbeit werden unterschiedliche Standard-Rekombinationsalgorithmen für die Nachwuchserzeugung miteinander verglichen.
-Die folgenden Absätze erläutern diese näher.
+Dabei werden jeweils zwei zufällig ausgewählte Eltern-Chromosomen kombiniert und somit zwei neue (Nachkommen-)Chromosomen erzeugt \cite{kalkreuth_comprehensive_2020}. 
+Der Rekombinationsschritt wird so oft ausgeführt, bis die Population dieser Generation gefüllt ist.\\
+Innerhalb dieser Arbeit werden unterschiedliche Rekombinationsalgorithmen für die Nachwuchserzeugung miteinander verglichen.
+Diese werden in den folgenden Absätzen \ref{subsubsec:onePointCrossover} bis \ref{subsec:rekombinationsraten} näher erläutert.
 
 \subsection{One-Point Rekombination}
 \label{subsubsec:onePointCrossover}
-Das erste Standard-Rekombinationsverfahren, das in dieser Arbeit verwendet wird, ist die \emph{One-Point Rekombination}, auf die im Folgenden näher eingegangen wird.
-Für die Grundlagen, die in diesem Abschnitt erläutert werden, wurde folgende Quelle verwendet: \cite{pavai_survey_2017}\\
+Das erste Standard-Rekombinationsverfahren, das in dieser Arbeit verwendet wird, ist die \emph{One-Point Rekombination}.
+Für die Grundlagen aus diesem Abschnitt wurde \cite{pavai_survey_2017} als Quelle verwendet.\\
 Der One-Point Rekombinationsalgorithmus soll anhand folgender Beispielabbildung \ref{fig:onePointGesamt} erläutert werden:
 
 \begin{figure}[H]
@@ -247,8 +248,9 @@ Für dieses Beispiel ergeben sich die beiden Nachwuchs-Chromosomen aus Abbildung
 \label{subsubsec:twoPointCrossover}
 
 Für die Grundlagen dieses Abschnitts wurde \cite{pavai_survey_2017} als Quelle verwendet.\\
-Das Verfahren der \emph{Two-Point Rekombination} funktioniert identisch zur in Abschnitt \ref{subsubsec:onePointCrossover} erläuterten One-Point Rekombination, mit dem Unterschied, dass zwei zufällige Stellen ausgewählt werden, an denen die Chromosomen geteilt werden.\\
-Anhand des nachfolgenden Beispiels kann dies nachvollzogen werden:
+Das Verfahren der \emph{Two-Point Rekombination} funktioniert beinahe identisch zu der in Abschnitt \ref{subsubsec:onePointCrossover} erläuterten One-Point Rekombination.
+Der Unterschied besteht darin, dass zwei zufällige Stellen ausgewählt werden, an denen die Chromosomen geteilt werden, anstatt einer.\\
+Die folgende Abbildung \ref{fig:twoPointGesamt} zeigt dieses Vorgehen anhand eines Beispiels.
 
 \begin{figure}[H]
     \centering
@@ -273,14 +275,14 @@ Anhand des nachfolgenden Beispiels kann dies nachvollzogen werden:
 
 Zu beobachten ist, dass die Eltern-Chromosomen an jeweils zwei Stellen aufgeteilt werden (grün).
 Die Nachwuchs-Chromosomen bilden sich anschließend abwechselnd aus den Teilstücken der beiden Eltern-Chromosomen.
-In der Abbildung \ref{fig:twoPointGesamt} wird dieser Prozess deutlich, indem die Chromosomenteile des ersten Elternteils rot markiert sind und des zweiten blau.
+In der Abbildung \ref{fig:twoPointGesamt} wird dieser Prozess deutlich, indem die Chromosomenteile des ersten Elternteils rot und des zweiten blau markiert sind.
 
 
 \subsection{Uniform Rekombination}
 \label{subsubsec:unformCrossover}
 Die Erläuterung der \emph{Uniform Rekombination} basiert auf \cite{syswerda_uniform_1989}.\\
-Was die Uniform Rekombination von der One-Point oder Two-Point Rekombination abhebt, ist die Verwendung einer Maske. 
-Die Maske ist genauso lang wie die Eltern-Chromosomen und beinhaltet für jede Stelle binäre Werte.
+Der größte Unterschied zwischen Uniform Rekombination und One-Point / Two-Point Rekombination ist die Verwendung einer Maske. 
+Die Maske ist genauso lang wie die Eltern-Chromosomen selbst und beinhaltet für jede Stelle binäre Werte.
 Diese Werte geben jeweils an, von welchem Elternteil die jeweilige Stelle im Chromosom des Nachwuchses stammen soll.
 Der zweite gebildete Nachwuchs bekommt in diesem Prozess das Gen des jeweils anderen Elternteils.\\
 Anhand der Abbildung \ref{fig:uniformGesamt} lässt sich die Uniform Rekombination beispielhaft erklären:
@@ -309,19 +311,20 @@ Anhand der Abbildung \ref{fig:uniformGesamt} lässt sich die Uniform Rekombinati
 Abbildung \ref{fig:uniformCrossoverEltern} zeigt die Ausgangssituation mit den beiden Eltern-Chromosomen (E1 und E2) in rot und blau.
 Zwischen den beiden Eltern-Chromosomen wird schwarz die Maske angezeigt.
 Diese wird zufällig binär gefüllt, bis sie die Länge der beiden Eltern-Chromosomen erreicht.\\
-Im folgenden Schritt werden die Nachwuchs-Chromosomen anhand der Maske erzeugt.
+Im folgenden Schritt werden die Nachwuchs-Chromosomen unter Anbetracht der Maske erzeugt.
 Der entsprechende Index des Knotens kann jeweils unterhalb der Eltern-Chromosomen abgelesen werden.
 Für den ersten Wert der Maske ergibt das den Knotenindex 2.
 In diesem Beispiel enthält der erste Wert der Maske eine 0.
 Dementsprechend wird für den Knoten mit dem Index 2 des ersten Nachwuchs-Chromosoms (N1) der jeweilige Knoten des ersten Eltern-Chromosoms (E1, rot) verwendet.
 Das zweite Nachwuchs-Chromosom (N2) bekommt demnach den entsprechenden Knoten aus dem zweiten Eltern-Chromosom (E2, blau).\\
 Für den darauffolgenden Index hat die Maske den Wert 1.
-Dies bedeutet, dass die Vererbungen genau andersherum ablaufen: N1 bekommt den Knoten von E2 und N2 bekommt den Knoten von E1.
+Dies bedeutet, dass die Vererbungen andersherum ablaufen: N1 bekommt den Knoten von E2 und N2 bekommt den Knoten von E1.
 Dieser Prozess wird für alle Indices ausgeführt.
 Die Abbildung \ref{fig:uniformCrossoverNachwuchs} zeigt die resultierenden Ergebnisse für dieses Beispiel der Uniform Rekombination.
 
 
 \subsection{Rekombinationsraten}
+\label{subsec:rekombinationsraten}
 
 In den letzten Abschnitten wurden unterschiedliche Rekombinationsalgorithmen erläutert.
 Der Rekombinationsschritt wird allerdings nicht für jedes Nachwuchs-Chromosom verwendet.
@@ -336,7 +339,7 @@ In unterschiedlichen Papern werden verschiedene Herangehensweisen vorgeschlagen,
 Teilweise widersprechen sich diese Aussagen.
 Ziel dieser Arbeit ist es, unter anderem einen Einblick zu bekommen, wie man die Rekombinationsrate richtig wählen kann und welche Auswirkungen sie auf die Güte von CGP-Lösungen hat.
 
-Die folgenden Abschnitte geben einen Einblick über die unterschiedlichen Möglichkeiten, die Rekombinationsrate zu belegen.
+Die folgenden Abschnitte geben einen Einblick über die unterschiedlichen Möglichkeiten, die Rekombinationsrate zu setzen.
 
 \subsubsection{Konstante Rekombinationsrate}
 \label{subsubsec:konstanteCrossover}
@@ -347,7 +350,7 @@ Dies bedeutet, dass zur Initialisierung des CGP ein fester Wert für die Rekombi
 Dieser gilt für alle Generationen gleichermaßen und wird nicht verändert.\\
 Diese \glqq klassische\grqq\space Form der Rekombination kann in der Evaluation der praktischen Tests dazu verwendet werden, um die erste Forschungsfrage zu beantworten.
 Durch diese einfachste Form der Rekombinationsrate kann überprüft werden, ob CGPs ohne oder mit (klassischer) Rekombination effizienter sind.\\
-Mit Hilfe der in den nächsten Abschnitten folgenden Anpassungen der Rekombinationsrate kann anschließend überprüft werden, ob die Effizienz von CGP mit Rekombination weiter verbessert werden kann.
+Mit Hilfe der in den nächsten Abschnitten beschriebenen Anpassungen der Rekombinationsrate kann anschließend überprüft werden, ob die Effizienz von CGP mit Rekombination weiter verbessert werden kann.
 
 \subsubsection{Linear fallende Rekombinationsrate}
 \label{subsubsec:CleggCrossover}
@@ -355,10 +358,10 @@ Mit Hilfe der in den nächsten Abschnitten folgenden Anpassungen der Rekombinati
 Clegg et al. präsentieren in ihrem Paper aus 2007 eine neue Form der Rekombination.
 Dabei treffen sie auch einige Aussagen über die Rekombinationsrate, die in diesem Abschnitt näher betrachtet werden sollen. \cite{clegg_new_2007}\\
 Sie beobachten, dass sich für höhere Rekombinationsraten eine schnellere Konvergenz der Fitness innerhalb der ersten Generationen einstellt.
-Gleichzeitig stellen sie fest, dass in ihrem Beispiel ab der 200. Generation Rekombination keinen signifikanten Vorteil mehr in der Performance liefert.\\
+Gleichzeitig stellen sie fest, dass in ihrem Beispiel ab der 200. Generation Rekombination keinen signifikanten Vorteil in der Performance liefert.\\
 Aus diesen beiden Beobachtungen konstruieren sie eine neue, dynamische Rekombinationsrate.
 Diese beginnt bei einem hohen Startwert von 0,9 und sinkt linear, bis eine Rekombinationsrate von 0,0 erreicht wird. 
-In ihrem Beispiel legen sie über händische Analysen eine Generation fest, bis zu welcher die Rekombinationsrate auf 0,0 fallen soll.\\
+In ihrem Beispiel legen die Autoren über händische Analysen eine Generation fest, bis zu welcher die Rekombinationsrate auf 0,0 fallen soll.\\
 Innerhalb des praktischen Teils dieser Arbeit wird 0,9 für den Startwert der Rekombinationsrate übernommen, um die Anzahl der Parameter in der Hyperparameteranalyse zu reduzieren.
 Ebenfalls ist es ein Vorteil, nur einen variablen Parameter pro Rekombinationsraten-Typ zu verwenden, da gegebenenfalls die Änderungen innerhalb der Ergebnisse für die verschiedenen Parameter besser miteinander verglichen werden können.\\
 Der einzige variable Parameter für die linear fallende Rekombinationsrate ist in dieser Arbeit die Rate, die nach jeder Generation von der alten Rekombinationsrate abgezogen werden soll, um die neue Rekombinationsrate zu erhalten.
@@ -366,11 +369,11 @@ Der einzige variable Parameter für die linear fallende Rekombinationsrate ist i
 \subsubsection{One-Fifth-Regel angewandt auf die Rekombinationsrate}
 \label{subsubsec:oneFifthCrossover}
 
-Die \emph{One-Fifth-Regel} gibt es bereits andere Parameter von GP, wie beispielsweise für die \emph{Mutationsrate}, die in Abschnitt \ref{subsec:Mutation} näher erläutert wird.
+Die \emph{One-Fifth-Regel} gibt es bereits für andere Parameter von GP, wie beispielsweise für die \emph{Mutationsrate}, die in Abschnitt \ref{subsec:Mutation} näher erläutert wird.
 Diese Regel wird ebenfalls im Paper von Milano und Nolfi verwendet.
 Dabei handelt es sich um einen Weg, die Mutationsrate automatisch und dynamisch an die Problemcharakteristiken und die evolutionäre Phase anzupassen. \cite{milano_scaling_2018}\\
 Betrachtet wird bei dieser Regel das Fitness-Verhältnis der Elitisten und der neuen Chromosomen.
-In anderen Worten werden die Kinder also mit ihren Eltern verglichen.
+In anderen Worten werden die Kinder mit ihren Eltern verglichen.
 Erzielt werden soll ein Verhältnis von 20\%.
 Das heißt, dass 20\% der Nachwuchs-Chromosomen eine bessere Fitness aufweisen sollen als ihre Eltern.
 Wird dieses Verhältnis unter- oder übertroffen, wird der jeweilige Parameter verkleinert oder vergrößert. \cite{doerr_self-adjusting_2019}
@@ -391,8 +394,8 @@ Das heißt, dass die Rekombination in ihrer Strategie in den ersten Generationen
 Wie dieser Hyperparameter bestimmt wurde und welche Größenordnung dieser einhalten sollte, wird in dem Paper allerdings nicht erwähnt.
 
 Torabi et al. behaupten außerdem, dass ihre Strategie \glqq den richtigen Kompromiss aus Exploration und Exploitation\grqq\space erreiche. \cite{torabi_using_2022}
-Vergleicht man diese Aussage mit der Aussage von Clegg et al., stellt man fest, dass sich diese Aussagen widersprechen \cite{clegg_new_2007}:
-Während Clegg et al. vor allem in den ersten Generationen auf Rekombination setzen, da der Rekombinationsschritt hier zu einer höheren Fitness-Konvergenz führen soll, meiden Torabi et al. in ihrer Strategie Rekombinationen in den ersten Generationen völlig.\\
+Vergleicht man diese Behauptung mit der Aussage von Clegg et al., stellt man fest, dass sich diese Thesen widersprechen.
+Während Clegg et al. vor allem in den ersten Generationen auf Rekombination setzen, da der Rekombinationsschritt hier zu einer höheren Fitness-Konvergenz führen soll, meiden Torabi et al. in ihrer Strategie Rekombinationen in den ersten Generationen völlig. \cite{clegg_new_2007}\\
 Ein Ziel dieser Arbeit ist es herauszufinden, ob sich ein Offset in der Rekombination als sinnvoll erweist oder ob sich dieser nur für die Rekombinationsstrategie eignet, die Torabi et al. in ihrem Paper eingeführt haben.
 
 
@@ -403,21 +406,22 @@ Der zweite evolutionäre Operator ist die Mutation.
 Sie wird nach der Rekombination ausgeführt.
 Anders als bei der Rekombination werden bei der Mutation nicht zwei, sondern nur ein Chromosom einbezogen und daraus ein neues Chromosom erstellt.
 In diesem Prozess werden Teile des Genotyps des Chromosoms zufällig verändert, um daraus einen neuen Genotyp zu erzeugen. \cite{milad_taleby_ahvanooey_survey_2019}\\
-Für \emph{probabilistische Mutation} wird, vergleichbar zur Rekombinationsrate, eine Mutationsrate verwendet, um die Wahrscheinlichkeit anzugeben, mit der ein Gen mutiert wird.
+Für \emph{probabilistische Mutation} wird eine Mutationsrate verwendet, um die Wahrscheinlichkeit anzugeben, mit der ein Gen mutiert wird.
 Dadurch kann es allerdings dazu kommen, dass das Chromosom vor und nach der Mutation zwar unterschiedliche Genotypen aufweist, sich die aktiven Knoten allerdings nicht voneinander unterscheiden.
 Dies hat zur Folge, dass sich der Lösungsansatz des CGPs bezüglich des Ausgangsproblems nicht ändert, obwohl bereits eine Mutation ausgeführt wurde.
-Die Fitness des CGPs kann sich in so einem Fall demnach nicht verbessern.
+Die Fitness des CGPs kann sich in so einem Fall nicht verbessern.
 Um dieses Problem in den Griff zu bekommen, wird in dieser Arbeit die \emph{Single (Active) Mutation} herangezogen.
 In diesem Algorithmus werden zufällige Gene eines Chromosoms verändert, bis ein aktiver Knoten mutiert wurde.
 Anschließend bricht der Mutationsalgorithmus ab. \cite{miller_cartesian_2020}
 Dies hat zusätzlich den Vorteil, dass keine Mutationsrate angepasst werden muss, was die Hyperparameteranalyse weniger rechenintensiv macht.
 
-Die Veränderung eines Gens innerhalb der Mutation wird vorgenommen, indem das ausgewählte Zeichen des Genotyps zufällig geändert wird \cite{koza_survey_1995}. Dies hat verschiedene Effekte für unterschiedliche Knotenarten des entsprechenden Phänotyps.\\
+Die Veränderung eines Gens innerhalb der Mutation wird vorgenommen, indem das ausgewählte Zeichen des Genotyps zufällig geändert wird \cite{koza_survey_1995}. 
+Dies hat für unterschiedliche Knotenarten des entsprechenden Phänotyps verschiedene Effekte.\\
 Ein Ausgangsknoten hat als relevanten Parameter nur seinen Vorgängerknoten.
 Wird also ein Ausgangsknoten mutiert, wird die eingehende Kante zufällig neu belegt.
 Dabei muss wie bei der Initialisierung beachtet werden, dass die Struktur von CGP erhalten bleibt.
 In dieser Arbeit werden dementsprechend nur Vorgängerknoten gewählt, deren Index kleiner ist als der mutierte Knoten.\\
-Anders als bei Ausgangsknoten wird ein Rechenknoten durch mindestens zwei Parameter bestimmt: ein Rechenoperator und mindestens eine Eingangskante.
+Anders als die Ausgangsknoten wird ein Rechenknoten durch mindestens zwei Parameter bestimmt: ein Rechenoperator und mindestens eine Eingangskante.
 Welcher dieser Parameter mutiert werden soll, ist ebenfalls Zufall.
 Wird eine Kante verändert, gelten die gleichen Regeln wie beim Mutieren eines Ausgangsknotens.
 Wird der Rechenoperator mutiert, wird dieser zufällig neu aus den kodierten Rechenfunktionen gewählt.\\
@@ -425,7 +429,7 @@ Da ein Eingangsknoten nur aus den Dateneingängen besteht und keine Parameter en
 
 Um die Single Active Mutation anhand eines Beispiels näher zu erläutern wird folgender Gentyp eines Chromosoms aus Abbildung \ref{fig:genotypNeu} erneut eingeführt.
 Es wird angenommen, dass dieses Chromosom durch vorherige Rekombination entstanden ist und somit im nächsten Schritt mutiert werden soll.
-Die folgende Abbildung \ref{fig:mutationGesamt} beschreibt dieses Mutationsbeispiel:
+Die folgende Abbildung \ref{fig:mutationGesamt} zeigt dieses Mutationsbeispiel:
 
 \begin{figure}[H]
 	\centering
@@ -448,10 +452,10 @@ Die folgende Abbildung \ref{fig:mutationGesamt} beschreibt dieses Mutationsbeisp
 	\label{fig:mutationGesamt}
 \end{figure}
 
-Der Algorithmus beginnt und ein zufälliger Index wird für die Mutation ausgewählt.
+Zu Beginn des Algorithmus wird ein zufälliger Index für die Mutation ausgewählt.
 Angenommen dieser Index hat den Wert 6.
 Dabei handelt es sich um einen Rechenknoten.
-Da in diesem Beispiel die Rechenknoten jeweils 3 Parameter aufweisen, wird zufällig einer aus drei Parametern für die Mutation bestimmt.
+Da in diesem Beispiel die Rechenknoten jeweils 3 Parameter aufweisen, wird zufällig einer der drei Parameter für die Mutation bestimmt.
 In diesem Beispiel wird der erste Parameter verändert, also der Rechenoperator.
 Wie bereits in Tabelle \ref{table:kodierung} aufgezeigt, werden die Rechenoperationen durch 0 bis 3 kodiert.
 Sei beispielsweise die zufällig gewählte Zahl für den Rechenoperator gleich 1.
@@ -469,7 +473,7 @@ Die mutierten Teile des Chromosoms, sowie der neu entstandene inaktive Knoten we
 
 Nachdem der Mutationsschritt für alle Chromosome der Population ausgeführt wurde, findet erneut ein Evaluationsschritt statt.
 Dabei wird für jedes Chromosom ein Fitness-Wert bestimmt, der bewertet wie exakt die Trainingsdaten durch das Chromosom beschrieben werden. \cite{milad_taleby_ahvanooey_survey_2019}
-Die Berechnung der Fitness hängt wie in Abschnitt \ref{sec:evalUndSelektion} geschrieben vom zu lösenden Ausgangsproblem ab.\\
+Die Berechnung der Fitness hängt wie in Abschnitt \ref{sec:evalUndSelektion} erläutert von dem zu lösenden Ausgangsproblem ab.\\
 Sobald für alle Chromosome einer Population ein Fitness-Wert bestimmt wurde, werden diese auf das \emph{Stopp-Kriterium} geprüft.
 Dieses gibt an, ab welcher Bedingung ein Algorithmus als konvergiert gilt.
 Im Beispiel von Cui et al. ist diese Bedingung bei symbolischen Regressionsbenchmarks für $Fitness < 0,01$ erfüllt. \cite{affenzeller_positional_2024}\\
@@ -519,5 +523,5 @@ Dadurch können die Streuungen der Iterationszahlen für jede CGP-Konfiguration 
 Pätzel verwendet in seinem Code das \emph{Markov Chain Monte-Carlo (MCMC) Sampling} zur Berechnung der Verteilungen \cite{patzel_dpaetzelcmpbayes_2024, cui_equidistant_2023}.
 Bei MCMC werden mehrere Tausend Kombinationen von Parameterwerten ($\mu_1$, $\sigma_1$, $\mu_2$, $\sigma_2$, v) generiert, die jeweils zwei verschiedene Gamma-Wahrscheinlichkeitsverteilungen darstellen.
 Jede Wertekombination ist repräsentativ für glaubwürdige Parameterwerte, die gleichzeitig die eingehenden Daten und die vorherigen Verteilungen berücksichtigen.
-Diese Parameterwerte werden anschließend in zusammengefasst. \cite{kruschke_bayesian_estimation}
+Diese Parameterwerte werden anschließend zusammengefasst. \cite{kruschke_bayesian_estimation}
 

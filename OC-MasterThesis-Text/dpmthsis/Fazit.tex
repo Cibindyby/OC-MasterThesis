@@ -8,19 +8,51 @@ Die Aussagen, dass Rekombinationsschritte bisher nicht sinnvoll in das Standard-
 Diese Aussage wird in dieser Arbeit erneut überprüft.
 Da der Erfolg der Rekombination stark von der Wahl der Rekombinationsrate abhängt, werden in dieser Arbeit ebenfalls unterschiedliche Arten für Rekombinationsraten betrachtet und bewertet.
 Für diese Arbeit ergeben sich demnach die folgenden zwei Forschungsfragen:\\
-1. Kann mit heutigem Forschungsstand nachgewiesen werden, dass Rekombination in Standard-CGP sinnvoll eingesetzt werden kann im Vergleich zu CGP ohne Rekombinationsschritt?\\
+1. Kann nach heutigem Forschungsstand Rekombination die Effizienz von Standard-CGP steigern?\\
 2. Hat die Art und Weise der Rekombinationsratenberechnung eine Auswirkung auf die Effektivität des CGPs?
 
 Für die Beantwortung der Forschungsfragen wurden vier verschiedene Testprobleme aufgebaut, die durch CGP-Modelle mit verschiedenen Konfigurationen gelöst werden sollten.
-Die verschiedenen CGP-Konfigurationen beinhalteten unterschiedliche Rekombinationsarten Var,ianten der Rekombinationsratenberechnung, sowie die völlige Abwesenheit des Rekombinationsschritts.
+Die verschiedenen CGP-Konfigurationen beinhalteten unterschiedliche Rekombinationsarten und Varianten der Rekombinationsratenberechnung, sowie die völlige Abwesenheit der Rekombination.
+Für die unterschiedlichen Rekombinationsraten wurde eine zusätzliche Berechnungsvariante eingeführt, die auf der One-Fifth Regel für die Berechnung der Mutationsrate beruht.
 Bei zwei der vier Testszenarien wurde eine Hyperparameteranalyse durchlaufen, um die Effizienz der besten Ergebnisse für jede CGP-Konfiguration miteinander zu vergleichen.
 Für die anderen zwei Testfälle wurden die Rekombiantionsraten-Arten facettenreich parametriert, um bewerten zu können, wie sich die Parametrierung der Rekombinationsraten auf die Effizienz des CGPs auswirken.\\
 Für die Analyse der Ergebnisse wurden zwei unterschiedliche Verfahren angewendet.
-Einerseits wurden die aufgezeichneten Rohdaten der Testdurchläufe näher analysiert, andererseits wurde eine Bewertung mit Hilfe der bayes'schen Analyse ausgeführt.\\
-TODO: Ergebnisse Arbeit hier einfügen + dazugehörige offene Fragen (danach dann bewertet, ob offene Fragen weiter runter kommen sollen oder hier oben Sinn machen)
+Einerseits wurden die Hyperparameteroptimierung und aufgezeichneten Rohdaten der Testdurchläufe näher analysiert, andererseits wurde eine Bewertung mit Hilfe der bayes'schen Analyse ausgeführt.\\
+Die Ergebnisse der Evaluierung der Hyperparameteranalyse zeigen vor allem, dass kein ersichtlicher Zusammenhang zwischen den CGP-Konfigurationen und der Parametrierung derer besteht.
+So treten beispielsweise keine einheitlichen Muster auf, wie sich die CGP-Konfigurationen auf die Anzahl der Rechenknoten oder Populationsgröße auswirkt.
+Durch eine umfangreichere Hyperparameteranalyse mit gegebenenfalls mehr Testszenarien könnten dieses Ergebnis näher untersucht und erneut bewertet werden.\\
+Die Rohdatenanalyse der Trainingsdaten zeigen auf, dass Mutation häufiger die Fitness eines CGP-Modells verbessert als die Rekombination.
+Dabei handelt es sich allerdings um eine quantitative Bewertung, die in weiteren Analysen näher betrachtet werden sollte.
+Die Rekombination führt vor allem in den frühen Trainingsphasen zum Erfolg.
+Für einen Test für symbolische Regression können vereinzelt für konstante Rekombinationsraten spätere Rekombinationserfolge beobachtet werden.
+Diese Beobachtung könnte in weiteren Tests evaluiert werden, um einen Zusammenhang zwischen späteren Rekombinationserfolgen und Rekombinationsratenberechnung zu überprüfen.
+Mit diesem Wissen könnte Rekombination gezielter angewendet werden.
+Die Ergebnisse zeigen außerdem, dass positive Effekte der Rekombination auf die Fitness durch folgende Mutation vermindert oder vollkommen zerstört werden können.
+Ein zusätzlicher Evaluationsschritt zwischen Rekombination und Mutation könnte somit das Standard-CGP sinnvoll erweitern, sodass Rekombinationserfolge erhalten bleiben können.
+Allerdings scheint es durchaus wahrscheinlich, dass die Rekombination umgekehrt auch die Mutation negativ beeinflusst.
+Demnach wäre es sinnvoll das Standard-CGP-Verfahren zu überdenken und anzupassen, sodass Rekombination und Mutation ihr volles Potential nutzen können, wenn beide genetische Operatoren Verwendung finden sollen.
+Ein Beispiel dafür wäre eine Teilung der Population, sodass ein Anteil der Nachwuchschromosome durch Rekombination und ein anderer Teil durch Mutation erzeugt werden können.
+Anschließend könnten die Elitistenauswahl über die gesamte Population hinweg stattfinden, sodass eine Verbesserung der Fitness aus beiden genetischen Operatoren einbezogen werden kann.
+Des weiteren weist die Uniform Rekombination einen höheren Einfluss auf die Fitnessverbesserung innerhalb des Trainings auf als die One-Point und Two-Point Rekombination.
+Die konstante und linear fallende Rekombinationsrate besitzen außerdem das größere Potential zu einer Verbesserung der Fitness zu führen als die One-Fifth Regel für Rekombination.
+Zusammenfassend lässt sich für die Rohdatenanalyse sagen, dass das Standard-CGP-Verfahren die Kombination aus Rekombination und Mutation nicht optimal nutzt aber die Uniform Rekombination mit konstanter oder linear fallender Rekombinationsrate das wahrscheinlich größte Potential besitzt deutlich bessere Ergebnisse zu erzielen, wenn das CGP-Verfahren angepasst wird.\\
+Die bayes'sche Analyse zeigt, dass eine Rekombination in den ersten Iterationen meistens die Effizienz des CGPs verbessert.
+Für ein paar CGP-Konfigurationen überwiegen die negativen Effekte der Rekombination auf die Mutation die positiven, wodurch es weniger sinnvoll ist Rekombination in den ersten Iterationen auszuführen.
+Die Verbesserung des CGP-Verfahrens, sodass Rekombination und Mutation sinnvoll gleichzeitig genutzt werden können, wird demnach als wichtiger Meilenstein eingestuft.
+Außerdem zeigt die Evaluation, dass im Standard-CGP die Rekombination in den meisten Fällen für das gesamte Training durchaus Sinn macht.
+Dieses Ergebnis wurde für die zwei Benchmark Probleme Parity und Keijzer beobachtet.
+Es wäre durchaus sinnvoll dies durch weitere Tests zu belegen.
+Besonders gute Ergebnisse für diese einfachen Benchmarks im Standard-CGP liefert die One-Point Rekombination.
+Die Evaluationen ergeben, dass es sich dabei um eine Rekombinationsart handelt, die weniger Einfluss auf das Training nimmt und dementsprechend weniger Trainingserfolge liefert aber auch seltener mit der Mutation kollidiert.
+Für die komplexeren Benchmark Probleme Encode und Koza resultieren vor allem aus der Uniform Rekombination mit fallender Rekombinationsrate bessere Erfolge.
+Die Vermutung wird getroffen, dass für die einfachen Benchmark Probleme die Rekombination früher abgesetzt werden sollte und daraufhin die Rekombination mit dem Uniform-Verfahren bessere Ergebnisse liefern könnte.
+Diese Aussage sollte in weiteren Tests evaluiert werden.
+Als letzten Punkt wird festgestellt, dass frühere Konvergenzen der CGP-Durchläufe zu weniger Streuung der Ergebnisse führen und umgekehrt.
+Demnach ist es besonders in den ersten Iterationen wichtig einen hohen Trainingserfolg zu erzielen, um ein verlässliches CGP-Modell zu erstellen.
+Dadurch wird es umso wichtiger Rekombination effektiv in das CGP-Verfahren einzubinden, da dieser genetische Operator besonders das Training in den ersten Iterationen verbessern kann.
 
 Zusammenfassend lassen sich die zwei Forschungsfragen wie folgt beantworten:\\
-In Standard-CGPs kann Rekombination durchaus sinnvoll eingesetzt werden.
+In Standard-CGPs kann Rekombination durchaus sinnvoll eingesetzt werden, sodass dessen Effizienz verbessert wird.
 Dafür ist es allerdings relevant die richtige Parametrierung mit Hilfe einer Hyperparameteranalyse zu ermitteln.
 Teil dieser Analyse sollten ebenfalls die Wahl der richtigen Rekombinationsart und Rekombinationsraten-Art sein.
 Weiter wurde herausgefunden, dass die Rekombination ein größeres Potential für die Verbesserung der Effizienz des CGPs aufweist, das im Standard-CGP-Verfahren nicht vollständig ausgeschöpft wird.
