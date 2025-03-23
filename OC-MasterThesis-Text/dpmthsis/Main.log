@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  23 MAR 2025 17:54
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  23 MAR 2025 23:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2049,9 +2049,9 @@ LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/b/n' will be
 LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/b/n' will be
 (Font)              scaled to size 14.4pt on input line 1.
 )
-Overfull \hbox (0.79985pt too wide) in paragraph at lines 3--34
+Overfull \hbox (5.07034pt too wide) in paragraph at lines 3--34
 \TU/LinLibertine(0)/m/n/10.95 Cartesian Genetic Programming (CGP) kann verwende
-t werden, um verschiedene Eingang-
+t werden, um verschiedene Eingangs-
  []
 
 
@@ -2317,8 +2317,21 @@ us Testszenario und CGP-Konfiguration
 ]
 chapter 4.
 
+Overfull \hbox (0.46494pt too wide) in paragraph at lines 16--17
+[]$\OML/cmm/m/it/10.95 ^^U$ \TU/LinLibertine(0)/b/n/10.95 (Nachwuchs): \TU/LinL
+ibertine(0)/m/n/10.95 Anzahl der Nachwuchs-Chromosomen in jeder Generation; $\O
+ML/cmm/m/it/10.95 ^^U$\TU/LinLibertine(0)/m/n/10.95 -Wert
+ []
+
+
 
 [31]
+Overfull \hbox (12.79282pt too wide) in paragraph at lines 30--31
+[]\TU/LinLibertine(0)/b/n/10.95 Median Iterationen bis Konvergenz: \TU/LinLiber
+tine(0)/m/n/10.95 Median der Iterationen bis das Stopp-Kriterium
+ []
+
+
 
 [32]
 
@@ -2346,12 +2359,20 @@ File: Bilder/EncodePlotPositiveRekombinationOneFifth.png Graphic file (type bmp
 )
 <Bilder/EncodePlotPositiveRekombinationOneFifth.png>
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [41]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [42]
 
 [43]
+
+[44]
 File: Bilder/KozaPlotPositiveRekombinationKonstant.png Graphic file (type bmp)
 <Bilder/KozaPlotPositiveRekombinationKonstant.png>
 File: Bilder/KozaPlotPositiveRekombinationClegg.png Graphic file (type bmp)
@@ -2360,15 +2381,13 @@ File: Bilder/KozaPlotPositiveRekombinationOneFifth.png Graphic file (type bmp)
 <Bilder/KozaPlotPositiveRekombinationOneFifth.png>
 
 
-[44]
-Overfull \hbox (3.27357pt too wide) in paragraph at lines 353--389
+[45]
+Overfull \hbox (3.27357pt too wide) in paragraph at lines 357--393
 \TU/LinLibertine(0)/b/n/10.95 Rekombinationsraten: \TU/LinLibertine(0)/m/n/10.9
 5 Bei den Ergebnissen der Hyperparameteroptimierung vom Parity-
  []
 
 
-
-[45]
 
 [46]
 
@@ -2385,19 +2404,13 @@ Overfull \hbox (3.27357pt too wide) in paragraph at lines 353--389
 [52]
 
 [53]
-Underfull \vbox (badness 1303) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [54]
-Underfull \vbox (badness 1515) has occurred while \output is active []
-
-
 
 [55]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [56]
 
@@ -2406,18 +2419,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [58]
 
 [59]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
+[60]
 
+[61]) (./Fazit.tex
 
-[60]) (./Fazit.tex
-
-[61]
-
-[62
-
-
-]
+[62]
 chapter 5.
 
 Overfull \hbox (2.21965pt too wide) in paragraph at lines 14--53
@@ -2427,7 +2434,10 @@ ebenenfalls mehr Testszenarien könn-
 
 
 
-[63]
+[63
+
+
+]
 
 [64])
 
@@ -2598,7 +2608,7 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 Here is how much of TeX's memory you used:
  49477 strings out of 473889
  1044151 string characters out of 5734826
- 1985301 words of memory out of 5000000
+ 1984371 words of memory out of 5000000
  71836 multiletter control sequences out of 15000+600000
  562698 words of font info for 99 fonts, out of 8000000 for 9000
  1350 hyphenation exceptions out of 8191

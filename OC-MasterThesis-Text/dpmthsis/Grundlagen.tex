@@ -107,14 +107,14 @@ Das kann sich wiederum negativ auf die Trainingsdauer auswirken.
 Eine nähere Erklärung wird in Abschnitt \ref{subsec:Mutation} gegeben.\\
 Ob ein Knoten für die Berechnung der Lösung verwendet wird oder nicht, hängt davon ab, ob ein nachfolgender Knoten über eine Kante auf diesen zugreift.
 Um aktive Knoten von inaktiven Knoten zu unterscheiden, werden demnach zuerst die Ausgangsknoten betrachtet, die offensichtlich für die Auswertung der Ausgabe verwendet werden.
-Anschließend werden iterativ die Eingangskanten der Rechenknoten zurückverfolgt, bis man schließlich bei den Eingangsknoten des Graphen ankommt.
+Anschließend werden iterativ die Eingangskanten der Rechenknoten zurückverfolgt, bis schließlich bei den Eingangsknoten des Graphen erreicht werden.
 
 Folgend soll anhand der eingeführten Abbildungen \ref{fig:genotypNeu} und \ref{fig:phänotyp} ein Beispiel berechnet werden.
 Angenommen werden die Systemeingänge $x_0$ = 10 und $x_1$ = 20.
 Demnach sind die Ausgänge der beiden Eingangsknoten mit den Indices 0 und 1 gleich den Werten 10 und 20.
 Der erste Rechenknoten (Index = 2) verwendet die beiden Eingangsknoten (Indices = 0 und 1) als Eingänge und besitzt die Rechenfunktion +.
 Demnach ist das Ergebnis des Rechenknotens 10 + 20 = 30.
-Führt man dieses Vorgehen für die restlichen Rechenknoten aus, ergeben sich folgende Ergebnisse:
+Wird dieses Vorgehen für die restlichen Rechenknoten ausgeführt, ergeben sich folgende Ergebnisse:
 
 \begin{table}[H]
     \centering
@@ -394,7 +394,7 @@ Das heißt, dass die Rekombination in ihrer Strategie für die ersten Generation
 Wie dieser Hyperparameter bestimmt wurde und welche Größenordnung dieser einhalten sollte, wird in dem Paper allerdings nicht erwähnt.
 
 Torabi et al. behaupten außerdem, dass ihre Strategie \glqq den richtigen Kompromiss aus Exploration und Exploitation\grqq\space erreiche. \cite{torabi_using_2022}
-Vergleicht man diese Behauptung mit der Aussage von Clegg et al., stellt man fest, dass sich diese Thesen widersprechen.
+Ein Vergleich dieser Behauptung mit der Aussage von Clegg et al. offenbart einen Widerspruch zwischen diesen Thesen.
 Während Clegg et al. vor allem in den ersten Generationen auf Rekombination setzen, da der Rekombinationsschritt hier zu einer höheren Fitness-Konvergenz führen soll, meiden Torabi et al. in ihrer Strategie Rekombinationen in den ersten Generationen völlig. \cite{clegg_new_2007}\\
 Ein Ziel dieser Arbeit ist es herauszufinden, ob sich ein Offset für die Rekombination als sinnvoll erweist oder ob sich dieser nur für die Rekombinationsstrategie eignet, die Torabi et al. in ihrem Paper eingeführt haben.
 

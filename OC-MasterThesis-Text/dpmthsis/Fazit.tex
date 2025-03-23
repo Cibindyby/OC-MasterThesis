@@ -12,13 +12,13 @@ Für diese Arbeit ergeben sich demnach die folgenden zwei Forschungsfragen:\\
 2. Hat die Art und Weise der Rekombinationsratenberechnung eine Auswirkung auf die Effektivität des CGPs?
 
 Für die Beantwortung der Forschungsfragen wurden vier verschiedene Testprobleme aufgebaut, die durch CGP-Modelle mit verschiedenen Konfigurationen gelöst werden sollten.
-Die verschiedenen CGP-Konfigurationen beinhalteten unterschiedliche Rekombinationsarten und Varianten der Rekombinationsratenberechnung, sowie die völlige Abwesenheit der Rekombination.
+Die verschiedenen CGP-Konfigurationen beinhalteten unterschiedliche Rekombinationsarten und Varianten der Rekombinationsratenberechnung, sowie den völligen Ausschluss der Rekombination.
 Für die unterschiedlichen Rekombinationsraten wurde eine zusätzliche Berechnungsvariante eingeführt, die auf der One-Fifth Regel für die Berechnung der Mutationsrate beruht.
 Bei zwei der vier Testszenarien wurde eine Hyperparameteranalyse durchlaufen, um die Effizienz der besten Ergebnisse für jede CGP-Konfiguration miteinander zu vergleichen.
 Für die anderen zwei Testfälle wurden die Rekombiantionsraten-Arten facettenreich parametriert, um bewerten zu können, wie sich die Parametrierung der Rekombinationsraten auf die Effizienz des CGPs auswirken.\\
 Für die Analyse der Ergebnisse wurden zwei unterschiedliche Verfahren angewendet.
 Einerseits wurden die Hyperparameteroptimierung und aufgezeichneten Rohdaten der Testdurchläufe näher analysiert, andererseits wurde eine Bewertung mit Hilfe der bayes'schen Analyse ausgeführt.\\
-Die Ergebnisse der Evaluierung der Hyperparameteranalyse zeigen vor allem, dass kein ersichtlicher Zusammenhang zwischen den CGP-Konfigurationen und der Parametrierung derer besteht.
+Die Ergebnisse der Evaluierung der Hyperparameteranalyse zeigen vor allem, dass kein ersichtlicher Zusammenhang zwischen den CGP-Konfigurationen und deren Parametrierung besteht.
 So treten beispielsweise keine einheitlichen Muster auf, wie sich die CGP-Konfigurationen auf die Anzahl der Rechenknoten oder Populationsgröße auswirkt.
 Durch eine umfangreichere Hyperparameteranalyse mit gegebenenfalls mehr Testszenarien könnten dieses Ergebnis näher untersucht und erneut bewertet werden.\\
 Die Rohdatenanalyse der Trainingsdaten zeigen auf, dass Mutation häufiger die Fitness eines CGP-Modells verbessert als die Rekombination.
@@ -28,7 +28,7 @@ Für einen Test für symbolische Regression können vereinzelt für konstante Re
 Diese Beobachtung könnte in weiteren Tests evaluiert werden, um einen Zusammenhang zwischen späteren Rekombinationserfolgen und Rekombinationsratenberechnung zu überprüfen.
 Mit diesem Wissen könnte Rekombination gezielter angewendet werden.
 Die Ergebnisse zeigen außerdem, dass positive Effekte der Rekombination auf die Fitness durch folgende Mutation vermindert oder vollkommen zerstört werden können.
-Ein zusätzlicher Evaluationsschritt zwischen Rekombination und Mutation könnte somit das Standard-CGP sinnvoll erweitern, sodass Rekombinationserfolge erhalten bleiben können.
+Ein zusätzlicher Evaluationsschritt zwischen Rekombination und Mutation könnte somit das Standard-CGP sinnvoll erweitern, sodass Rekombinationserfolge erhalten bleiben.
 Allerdings scheint es durchaus wahrscheinlich, dass die Rekombination umgekehrt auch die Mutation negativ beeinflusst.
 Demnach wäre es sinnvoll das Standard-CGP-Verfahren zu überdenken und anzupassen, sodass Rekombination und Mutation ihr volles Potential nutzen können, wenn beide genetische Operatoren Verwendung finden sollen.
 Ein Beispiel dafür wäre eine Teilung der Population, sodass ein Anteil der Nachwuchschromosome durch Rekombination und ein anderer Teil durch Mutation erzeugt werden können.
@@ -43,7 +43,7 @@ Außerdem zeigt die Evaluation, dass im Standard-CGP die Rekombination in den me
 Dieses Ergebnis wurde für die zwei Benchmark Probleme Parity und Keijzer beobachtet.
 Es wäre durchaus sinnvoll dies durch weitere Tests zu belegen.
 Besonders gute Ergebnisse für diese einfachen Benchmarks im Standard-CGP liefert die One-Point Rekombination.
-Die Evaluationen ergeben, dass es sich dabei um eine Rekombinationsart handelt, die weniger Einfluss auf das Training nimmt und dementsprechend weniger Trainingserfolge liefert aber auch seltener mit der Mutation kollidiert.
+Die Evaluationen ergeben, dass es sich dabei um eine Rekombinationsart handelt, die weniger Einfluss auf das Training nimmt und dementsprechend weniger Trainingserfolge liefert, aber auch seltener mit der Mutation kollidiert.
 Für die komplexeren Benchmark Probleme Encode und Koza resultieren vor allem aus der Uniform Rekombination mit fallender Rekombinationsrate bessere Erfolge.
 Die Vermutung wird getroffen, dass für die einfachen Benchmark Probleme die Rekombination früher abgesetzt werden sollte und daraufhin die Rekombination mit dem Uniform-Verfahren bessere Ergebnisse liefern könnte.
 Diese Aussage sollte in weiteren Tests evaluiert werden.

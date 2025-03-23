@@ -32,14 +32,14 @@
 \contentsline {subsection}{\numberline {4.1.1}Rohdatenanalyse: Parity}{32}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Rohdatenanalyse: Keijzer}{36}{subsection.4.1.2}%
 \contentsline {subsection}{\numberline {4.1.3}Rohdatenanalyse: Encode}{39}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Rohdatenanalyse: Koza}{42}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.1.5}Rohdatenanalyse: Zusammenfassung}{45}{subsection.4.1.5}%
-\contentsline {section}{\numberline {4.2}Ergebnisse Bayes'sche Analyse}{49}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Bayes'sche Analyse: Parity}{50}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Bayes'sche Analyse: Keijzer}{52}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Bayes'sche Analyse: Encode}{54}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.1.4}Rohdatenanalyse: Koza}{43}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Rohdatenanalyse: Zusammenfassung}{46}{subsection.4.1.5}%
+\contentsline {section}{\numberline {4.2}Ergebnisse Bayes'sche Analyse}{50}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Bayes'sche Analyse: Parity}{51}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Bayes'sche Analyse: Keijzer}{53}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Bayes'sche Analyse: Encode}{55}{subsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.2.4}Bayes'sche Analyse: Koza}{56}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Bayes'sche Analyse: Zusammenfassung}{58}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.5}Bayes'sche Analyse: Zusammenfassung}{59}{subsection.4.2.5}%
 \contentsline {chapter}{\numberline {5}Fazit aus Ausblick}{63}{chapter.5}%
 \contentsline {chapter}{\numberline {A}Anhang}{I}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Tabellen Rohdatenanalyse}{II}{section.A.1}%
