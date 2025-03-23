@@ -2,7 +2,7 @@
 \label{Grundlagen}
 
 Für den praktischen Teil dieser Arbeit in Abschnitt \ref{praktischer Teil} werden mit Hilfe von CGP unterschiedliche Testprobleme gelöst. 
-Für das Verständnis dieses Teil werden einige Grundkenntnisse vorausgesetzt, welche in diesem Abschnitt näher betrachtet werden.\newline
+Für das Verständnis dieses Teils werden einige Grundkenntnisse vorausgesetzt, welche in diesem Abschnitt näher betrachtet werden.\newline
 CGP ist eine Art von GP, das Lösungen von Rechenproblemen als Graphen darstellt. \cite{miller_cartesian_2020}
 Dabei wird der Maschine allerdings nicht beigebracht, wie diese Probleme zu lösen sind.
 Stattdessen lernt sie eigenständig über mehrere Iterationen hinweg das Ausgangsproblem zu lösen.
@@ -17,8 +17,8 @@ Um den grundlegenden Aufbau von CGP zu erläutern, wird die folgende Abbildung \
 \end{figure}
 
 Die Abbildung \ref{fig:aufbauCGP} zeigt den grundlegenden Ablauf innerhalb von CGP.
-Dabei lernt das System über mehrere Iterationen hinweg die beste Lösung eines Problems.
-Die folgenden Unterkapitel beziehen sich jeweils auf einen Knoten des Graphen und erläutern diesen genauer.
+Dabei lernt das System über mehrere Iterationen hinweg die beste Lösung eines Problems zu finden.
+Die folgenden Unterkapitel dieses Abschnitts erläutern diesen Ablauf näher und beziehen sich dabei weitestgehend auf die Knoten des Graphen aus Abbildung \ref{fig:aufbauCGP}.
 
 
 \section{Aufbau CGP und initiale Population}
@@ -26,10 +26,10 @@ Die folgenden Unterkapitel beziehen sich jeweils auf einen Knoten des Graphen un
 Dieser Abschnitt bezieht sich auf die Paper \cite{miller_cartesian_2020}, \cite{torabi_using_2022} und \cite{milad_taleby_ahvanooey_survey_2019}.
 Außerdem werden Erkenntnisse aus dem Quellcode von Cui verwendet \cite{cuihen_cuihencgp_with_crossover_strategies_2024}.\\
 Die \emph{Population} von CGP ist eine Menge von \emph{Chromosomen}, auch Individuen genannt.
-Chromosome sind individuelle Möglichkeiten ein komplexes Ausgangsproblem zu lösen.
+Chromosomen sind individuelle Möglichkeiten ein komplexes Ausgangsproblem zu lösen.
 Jedes Chromosom ist in CGP ein gerichteter, azyklischer Graph, bestehend aus \emph{Eingangsknoten}, \emph{Rechenknoten} und \emph{Ausgangsknoten}.
 Dabei gibt es zwei Darstellungsmöglichkeiten für ein Chromosom. 
-Anhand der folgenden Abbildung \ref{fig:genoPhänoGesamt} kann beispielhaft dargestellt werden, wie die Chromosome in CGP aufgebaut sind und funktionieren.
+Anhand der folgenden Abbildung \ref{fig:genoPhänoGesamt} kann beispielhaft dargestellt werden, wie die Chromosomen in CGP aufgebaut sind und funktionieren.
 
 \begin{figure}[H]
 	\centering
@@ -76,7 +76,7 @@ In diesem Beispiel ergibt sich folgende Kodierung:
     \label{table:kodierung}
 \end{table}
 
-Diese Kodierungen werden in Abbildung \ref{fig:phänotyp} innerhalb der Knoten angegeben und stellen die erste (unterstrichene) Zahl innerhalb des Arrays in Abbildung \ref{fig:genotypNeu} dar.
+Diese Kodierungen werden in Abbildung \ref{fig:phänotyp} innerhalb der Knoten angegeben und stellen jeweils die erste (unterstrichene) Zahl innerhalb des Arrays in Abbildung \ref{fig:genotypNeu} dar.
 Die umrandeten Teile des gesamten Arrays stellen jeweils einen Knoten des Graphen dar und werden folgend Array-Blöcke genannt.
 Unterhalb dieser Array-Blöcke wird jeweils der Index des zugehörigen Knotens angegeben.
 Im CGP-Graph wird dieser Index am Ausgang des jeweiligen Knotens (rot) angezeigt.\newline
@@ -200,7 +200,7 @@ Die folgenden Abschnitte \ref{sec:evolutionäreOperatoren} und \ref{subsec:Mutat
 
 \section{Evolutionärer Operator: Rekombination}
 \label{sec:evolutionäreOperatoren}
-Nachdem die Selektion der Eltern-Chromosome erfolgt ist, wie in Abschnitt \ref{sec:evalUndSelektion} beschrieben, können im nächsten Schritt die evolutionären Operationen ausgeführt werden, die die Nachkommen aus den Eltern erzeugen. \\
+Nachdem die Selektion der Eltern-Chromosomen erfolgt ist, wie in Abschnitt \ref{sec:evalUndSelektion} beschrieben, können im nächsten Schritt die evolutionären Operationen ausgeführt werden, die die Nachkommen aus den Eltern erzeugen. \\
 Der erste evolutionäre Operator, der verwendet wird, ist die Rekombination.
 Dabei werden jeweils zwei zufällig ausgewählte Eltern-Chromosomen kombiniert und somit zwei neue (Nachkommen-)Chromosomen erzeugt \cite{kalkreuth_comprehensive_2020}. 
 Der Rekombinationsschritt wird so oft ausgeführt, bis die Population dieser Generation gefüllt ist.\\
@@ -237,7 +237,7 @@ Der One-Point Rekombinationsalgorithmus soll anhand folgender Beispielabbildung 
 Das erste Eltern-Chromosom (E1, rot) in diesem Beispiel wurde aus Abbildung \ref{fig:genotypNeu} entnommen.
 Das zweite Eltern-Chromosom (E2, blau) ist ein zufällig gewähltes Beispielchromosom.\\
 Bei beiden Chromosomen wird vorerst nicht weiter betrachtet, ob die Knoten aktiv oder inaktiv sind, da sich dieses Merkmal mit der Rekombination und Mutation ändern kann.
-Angenommen wird, dass C1 und C2 aus der letzten Generation übernommen wurden, da sie die beste Fitness aufgewiesen haben.\\
+Angenommen wird, dass E1 und E2 aus der letzten Generation übernommen wurden, da sie die beste Fitness aufgewiesen haben.\\
 Für die One-Point Rekombination wird zuerst eine zufällige Stelle innerhalb der Eltern-Chromosomen bestimmt.
 Diese ist in Abbildung \ref{fig:onePointCrossoverEltern} grün markiert.
 Die Eltern-Chromosomen werden anschließend an dieser Stelle geteilt und überkreuzt zusammengesetzt.
@@ -363,13 +363,13 @@ Diese beginnt bei einem relativ hohen Startwert von 0,9 und sinkt linear, bis ei
 Anschließend wird keine Rekombination mehr ausgeführt.
 In ihrem Beispiel legen die Autoren über händische Analysen eine Generation fest, bis zu welcher die Rekombinationsrate auf 0,0 fallen soll.\\
 Innerhalb des praktischen Teils dieser Arbeit wird 0,9 für den Startwert der Rekombinationsrate übernommen, um die Anzahl der Parameter in der Hyperparameteranalyse zu reduzieren.
-Ebenfalls ist es ein Vorteil, nur einen variablen Parameter pro Rekombinationsraten-Typ zu verwenden, da gegebenenfalls die Änderungen innerhalb der Ergebnisse für die verschiedenen Parameter besser miteinander verglichen werden können.\\
+Ein weiterer Vorteil ist es, nur einen variablen Parameter pro Rekombinationsraten-Typ zu verwenden, da gegebenenfalls die Änderungen innerhalb der Ergebnisse für die verschiedenen Parameter besser miteinander verglichen werden können.\\
 Der einzige variable Parameter für die linear fallende Rekombinationsrate ist in dieser Arbeit die Rate, die nach jeder Generation von der alten Rekombinationsrate abgezogen werden soll, um die neue Rekombinationsrate zu erhalten.
 
 \subsubsection{One-Fifth-Regel angewandt auf die Rekombinationsrate}
 \label{subsubsec:oneFifthCrossover}
 
-Die \emph{One-Fifth-Regel} gibt es bereits für andere Parameter von GP, wie beispielsweise für die \emph{Mutationsrate}, die in Abschnitt \ref{subsec:Mutation} näher erläutert wird.
+Die \emph{One-Fifth-Regel} gibt es bereits für andere Parameter in GP, wie beispielsweise für die \emph{Mutationsrate}, die in Abschnitt \ref{subsec:Mutation} näher erläutert wird.
 Diese Regel wird ebenfalls im Paper von Milano und Nolfi verwendet.
 Dabei handelt es sich um einen Weg, die Mutationsrate automatisch und dynamisch an die Problemcharakteristiken und die evolutionäre Phase anzupassen. \cite{milano_scaling_2018}\\
 Betrachtet wird bei dieser Regel das Fitness-Verhältnis der Elitisten und der neuen Chromosomen.
@@ -471,10 +471,10 @@ Die mutierten Teile des Chromosoms, sowie der neu entstandene inaktive Knoten we
 \section{Evaluation Fitness, Stopp-Kriterium und Ergebnis}
 \label{sec:fitness,StopKrit,Ergebnis}
 
-Nachdem der Mutationsschritt für alle Chromosome der Population ausgeführt wurde, findet erneut ein Evaluationsschritt statt.
+Nachdem der Mutationsschritt für alle Chromosomen der Population ausgeführt wurde, findet erneut ein Evaluationsschritt statt.
 Dabei wird für jedes Chromosom ein Fitness-Wert bestimmt, der bewertet wie exakt die Trainingsdaten durch das Chromosom beschrieben werden. \cite{milad_taleby_ahvanooey_survey_2019}
 Die Berechnung der Fitness hängt wie in Abschnitt \ref{sec:evalUndSelektion} erläutert von dem zu lösenden Ausgangsproblem ab.\\
-Sobald für alle Chromosome einer Population ein Fitness-Wert bestimmt wurde, werden diese auf das \emph{Stopp-Kriterium} geprüft.
+Sobald für alle Chromosomen einer Population ein Fitness-Wert bestimmt wurde, werden diese auf das \emph{Stopp-Kriterium} geprüft.
 Dieses gibt an, ab welcher Bedingung ein Algorithmus als konvergiert gilt.
 Im Beispiel von Cui et al. ist diese Bedingung bei symbolischen Regressionsbenchmarks für $Fitness < 0,01$ erfüllt. \cite{affenzeller_positional_2024}\\
 Wird das Stopp-Kriterium erfüllt, wird der CGP-Algorithmus abgebrochen.
@@ -504,7 +504,7 @@ Vereinfacht dargestellt funktioniert die Anwendung des Satzes von Bayes in der B
 Zu Beginn wird die Realität als Modell mit bestimmten Annahmen ($\theta$) vereinfacht.
 Diese ursprünglichen Annahmen werden als Wahrscheinlichkeitsverteilung (\emph{apriori-Wahr\-schein\-lich\-keit}) dargestellt. 
 Aus den neuen Daten y kann die sogenannte
-\emph{Likelihood-Funktion} errechnet werden, die eine Dichtefunktion für die Beobachtung y darstellt unter der Bedingung, dass $\theta$ zutrifft.
+\emph{Likelihood-Funktion} berechnet werden, die eine Dichtefunktion für die Beobachtung y darstellt unter der Bedingung, dass $\theta$ zutrifft.
 Mit Hilfe des Bayes'schen Theorems können die apriori-Dichtefunktion und die Stichprobeninformationen miteinander verknüpft werden.
 Das Ergebnis ist eine neue Wahrscheinlichkeitsverteilung für $\theta$ (\emph{aposteriori-Wahrscheinlichkeit}). \cite{nenning_bayessche_1980}
 Mit diesem Vorgehen kann also mit Hilfe von empirischen Daten eine Wahrscheinlichkeitsverteilung für ein Modell gefittet werden.

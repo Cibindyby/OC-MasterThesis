@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  22 MAR 2025 23:48
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  23 MAR 2025 17:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2222,9 +2222,9 @@ rzeugung jedes Nachwuchs-Chromosoms
 
 
 [13]
-Overfull \hbox (10.851pt too wide) in paragraph at lines 356--368
-\TU/LinLibertine(0)/m/n/10.95 duzieren. Ebenfalls ist es ein Vorteil, nur einen
- variablen Parameter pro Rekombinationsraten-
+Overfull \hbox (8.43105pt too wide) in paragraph at lines 356--368
+\TU/LinLibertine(0)/m/n/10.95 duzieren. Ein weiterer Vorteil ist es, nur einen 
+variablen Parameter pro Rekombinationsraten-
  []
 
 
@@ -2335,12 +2335,6 @@ chapter 4.
 [38]
 
 [39]
-Overfull \hbox (0.4713pt too wide) in paragraph at lines 204--230
-\TU/LinLibertine(0)/m/n/10.95 Um Zusammenhängen zwischen den CGP-Konfiguratione
-n und der Güte der CGP-Modelle
- []
-
-
 
 [40]
 File: Bilder/EncodePlotPositiveRekombinationKonstant.png Graphic file (type bmp
@@ -2351,12 +2345,6 @@ File: Bilder/EncodePlotPositiveRekombinationClegg.png Graphic file (type bmp)
 File: Bilder/EncodePlotPositiveRekombinationOneFifth.png Graphic file (type bmp
 )
 <Bilder/EncodePlotPositiveRekombinationOneFifth.png>
-
-Overfull \hbox (0.1702pt too wide) in paragraph at lines 254--263
-\TU/LinLibertine(0)/m/n/10.95 Rekombinationen, obwohl die Rekombination nicht w
-ahrscheinlich ausgeführt wird, könn-
- []
-
 
 
 [41]
@@ -2373,7 +2361,7 @@ File: Bilder/KozaPlotPositiveRekombinationOneFifth.png Graphic file (type bmp)
 
 
 [44]
-Overfull \hbox (3.27357pt too wide) in paragraph at lines 352--388
+Overfull \hbox (3.27357pt too wide) in paragraph at lines 353--389
 \TU/LinLibertine(0)/b/n/10.95 Rekombinationsraten: \TU/LinLibertine(0)/m/n/10.9
 5 Bei den Ergebnissen der Hyperparameteroptimierung vom Parity-
  []
@@ -2397,8 +2385,14 @@ Overfull \hbox (3.27357pt too wide) in paragraph at lines 352--388
 [52]
 
 [53]
+Underfull \vbox (badness 1303) has occurred while \output is active []
+
+
 
 [54]
+Underfull \vbox (badness 1515) has occurred while \output is active []
+
+
 
 [55]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2412,6 +2406,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [58]
 
 [59]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [60]) (./Fazit.tex
 
@@ -2599,10 +2596,10 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49480 strings out of 473889
- 1044186 string characters out of 5734826
+ 49477 strings out of 473889
+ 1044151 string characters out of 5734826
  1985301 words of memory out of 5000000
- 71839 multiletter control sequences out of 15000+600000
+ 71836 multiletter control sequences out of 15000+600000
  562698 words of font info for 99 fonts, out of 8000000 for 9000
  1350 hyphenation exceptions out of 8191
  122i,17n,136p,10900b,6836s stack positions out of 10000i,1000n,20000p,200000b,200000s

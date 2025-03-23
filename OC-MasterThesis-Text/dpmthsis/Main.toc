@@ -38,7 +38,7 @@
 \contentsline {subsection}{\numberline {4.2.1}Bayes'sche Analyse: Parity}{50}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Bayes'sche Analyse: Keijzer}{52}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}Bayes'sche Analyse: Encode}{54}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Bayes'sche Analyse: Koza}{55}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.4}Bayes'sche Analyse: Koza}{56}{subsection.4.2.4}%
 \contentsline {subsection}{\numberline {4.2.5}Bayes'sche Analyse: Zusammenfassung}{58}{subsection.4.2.5}%
 \contentsline {chapter}{\numberline {5}Fazit aus Ausblick}{63}{chapter.5}%
 \contentsline {chapter}{\numberline {A}Anhang}{I}{appendix.A}%

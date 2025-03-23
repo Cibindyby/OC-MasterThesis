@@ -20,7 +20,7 @@ Nach der Aussage von Kalkreuth et al. spielen \emph{Boolesche Probleme} eine wic
 Grundsätzlich ist bei Booleschen Problemen das Ziel einen sinnvollen Zusammenhang zwischen Ein- und Ausgaben zu generieren, welcher von Booleschen Funktionen bestimmt wird.
 Diese können wiederum durch Boolesche Ausdrücke mathematisch beschrieben werden.
 Die verschiedenen Booleschen Funktionen können durch Wahrheitstabellen dargestellt werden, in denen die jeweiligen Ein- und Ausgaben miteinander verknüpft werden. \cite{kalkreuth_towards_2023}
-Das Ziel von CGP-Algorithmen ist es aus Eingängen die richtigen Ausgänge zu generieren, welche dem Mapping der Boolean Funktionen entsprechen.
+Das Ziel von CGP-Algorithmen ist es, aus Eingängen die richtigen Ausgänge zu generieren, welche dem Mapping der Booleschen Funktionen entsprechen.
 
 Insgesamt werden in dieser Arbeit zwei Boolesche Benchmarkprobleme für die Evaluation der CGP-Algorithmen betrachtet: 3-bit Parity und 16-4-bit Encode (vereinfacht bezeichnet als Parity und Encode).\\
 Obwohl Parity als zu leichtes Ausgangsproblem für GP bezeichnet wird \cite{white_better_2013}, wird es häufig als Benchmarkproblem genutzt \cite{yu_neutrality_2001, kaufmann_kalkreuth_2017, kaufmann_kalkreuth_2020}.
@@ -81,7 +81,7 @@ Die folgende Tabelle \ref{table:SRProblems} beschreibt die verwendeten SR Proble
 \end{table}
 
 Zu beobachten ist, dass in unterschiedlichen Papern verschiedene Keijzer-6 Funktionen beschrieben werden \cite{oliveira_analysing_2018, li_generative_2024, kommenda_local_2018}. 
-In dieser Arbeit wurden alle SR Benchmarkprobleme auf das Paper von Cui et al. bezogen \cite{affenzeller_positional_2024}.
+Wie bereits erwähnt wurden in dieser Arbeit alle SR Benchmarkprobleme auf das Paper von Cui et al. bezogen \cite{affenzeller_positional_2024}, weswegen die Keijzer-Funktion aus Tabelle \ref{table:SRProblems} verwendet wurde.
 
 \subsection{CGP-Konfigurationen}
 \label{subsec:CGPkonfigurationen}
@@ -182,7 +182,7 @@ Für Boolesche Probleme wird die Effizienz die Parametersätze anhand der Iterat
 Bei symbolischer Regression bezieht sich der Vergleich auf die berechnete Fitness.
 Es wurde eine Iterationsgrenze eingeführt, ab der der CGP-Algorithmus in der Hyperparameteroptimierung abbricht, um Rechenzeit zu sparen.
 Diese Grenze wurde durch vorhergehende Tests so gesetzt, dass nur wenige Ausreißer diese überschreiten.
-Trifft dies zu wird bei Booleschen Problemen die Anzahl an benötigten Iterationen verdoppelt, um so das gescheiterte Training härter zu bestrafen.\\
+Trifft dies zu, wird bei Booleschen Problemen die Anzahl der benötigten Iterationen verdoppelt, um so das gescheiterte Training stärker zu bestrafen.\\
 Nach 150 getesteten Parametersätzen bricht die Hyperparameteroptimierung ab und gibt den besten Parametersatz aus.
 
 Das verwendete Julia-Paket bietet verschiedene Sampler an.
@@ -254,7 +254,7 @@ Diese werden im Folgenden erläutert.
 Dabei werden die Ergebnisse der Hyperparameteranalyse näher betrachtet und bewertet.
 Es werden erste Erkenntnisse über die Effizienz der verschiedenen Rekombinationstypen gesammelt, indem beispielsweise die Anzahl der Rechenknoten miteinander verglichen werden.
 Außerdem wird beobachtet wie die unterschiedlichen Rekombinationsparameter gesetzt werden.\\
-Des weiteren werden die Ergebnisse des CGP-Trainings näher analysiert.
+Des Weiteren werden die Ergebnisse des CGP-Trainings näher analysiert.
 Der Trainingserfolg von Rekombination und Mutation kann anhand der jeweiligen Fitness-Werte gegenübergestellt werden.
 
 \textbf{Bayes'sche Analyse:} Die Bayes'sche Analyse wird einerseits für die Sortierung der Effizienz der CGP-Konfigurationen verwendet. 
