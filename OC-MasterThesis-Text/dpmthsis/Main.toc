@@ -65,18 +65,18 @@
 \contentsline {paragraph}{\nonumberline Bewertung MW und PL-Plätze}{52}{paragraph*.88}%
 \contentsline {paragraph}{\nonumberline Bewertung HPDI}{53}{paragraph*.90}%
 \contentsline {subsection}{\numberline {4.2.2}Bayes'sche Analyse: Keijzer}{54}{subsection.4.2.2}%
-\contentsline {paragraph}{\nonumberline Bewertung MW und PL-Plätze}{54}{paragraph*.92}%
-\contentsline {paragraph}{\nonumberline Bewertung HPDI}{55}{paragraph*.94}%
+\contentsline {paragraph}{\nonumberline Bewertung MW und PL-Plätze:}{54}{paragraph*.92}%
+\contentsline {paragraph}{\nonumberline Bewertung HPDI:}{55}{paragraph*.94}%
 \contentsline {subsection}{\numberline {4.2.3}Bayes'sche Analyse: Encode}{56}{subsection.4.2.3}%
-\contentsline {paragraph}{\nonumberline Bewertung MW und PL-Plätze}{56}{paragraph*.96}%
-\contentsline {paragraph}{\nonumberline Bewertung HPDI}{57}{paragraph*.99}%
+\contentsline {paragraph}{\nonumberline Bewertung MW und PL-Plätze:}{56}{paragraph*.96}%
+\contentsline {paragraph}{\nonumberline Bewertung HPDI:}{57}{paragraph*.99}%
 \contentsline {subsection}{\numberline {4.2.4}Bayes'sche Analyse: Koza}{57}{subsection.4.2.4}%
-\contentsline {paragraph}{\nonumberline Bewertung MW und PL-Plätze}{58}{paragraph*.101}%
-\contentsline {paragraph}{\nonumberline Bewertung HPDI}{59}{paragraph*.104}%
+\contentsline {paragraph}{\nonumberline Bewertung MW und PL-Plätze:}{58}{paragraph*.101}%
+\contentsline {paragraph}{\nonumberline Bewertung HPDI:}{59}{paragraph*.104}%
 \contentsline {subsection}{\numberline {4.2.5}Bayes'sche Analyse: Zusammenfassung}{60}{subsection.4.2.5}%
-\contentsline {paragraph}{\nonumberline Erkenntnisse zum Offset}{60}{paragraph*.106}%
-\contentsline {paragraph}{\nonumberline Erkenntnisse aus MW und PL-Plätzen}{61}{paragraph*.108}%
-\contentsline {paragraph}{\nonumberline Erkenntnisse aus HPDI}{63}{paragraph*.110}%
+\contentsline {paragraph}{\nonumberline Erkenntnisse zum Offset:}{60}{paragraph*.106}%
+\contentsline {paragraph}{\nonumberline Erkenntnisse aus MW und PL-Plätzen:}{60}{paragraph*.108}%
+\contentsline {paragraph}{\nonumberline Erkenntnisse aus HPDI:}{62}{paragraph*.110}%
 \contentsline {chapter}{\numberline {5}Fazit aus Ausblick}{65}{chapter.5}%
 \contentsline {chapter}{\numberline {A}Anhang}{I}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Tabellen Rohdatenanalyse}{II}{section.A.1}%
