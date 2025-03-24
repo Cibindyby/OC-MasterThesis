@@ -36,10 +36,21 @@
 \contentsline {subsection}{\numberline {4.1.5}Rohdatenanalyse: Zusammenfassung}{46}{subsection.4.1.5}%
 \contentsline {section}{\numberline {4.2}Ergebnisse Bayes'sche Analyse}{50}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Bayes'sche Analyse: Parity}{51}{subsection.4.2.1}%
+\contentsline {paragraph}{\nonumberline Bewertung MW und PL-Plätze}{51}{paragraph*.36}%
+\contentsline {paragraph}{\nonumberline Bewertung HPDI}{52}{paragraph*.38}%
 \contentsline {subsection}{\numberline {4.2.2}Bayes'sche Analyse: Keijzer}{53}{subsection.4.2.2}%
+\contentsline {paragraph}{\nonumberline Bewertung MW und PL-Plätze}{53}{paragraph*.40}%
+\contentsline {paragraph}{\nonumberline Bewertung HPDI}{54}{paragraph*.42}%
 \contentsline {subsection}{\numberline {4.2.3}Bayes'sche Analyse: Encode}{55}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Bayes'sche Analyse: Koza}{56}{subsection.4.2.4}%
+\contentsline {paragraph}{\nonumberline Bewertung MW und PL-Plätze}{55}{paragraph*.44}%
+\contentsline {paragraph}{\nonumberline Bewertung HPDI}{56}{paragraph*.47}%
+\contentsline {subsection}{\numberline {4.2.4}Bayes'sche Analyse: Koza}{57}{subsection.4.2.4}%
+\contentsline {paragraph}{\nonumberline Bewertung MW und PL-Plätze}{57}{paragraph*.49}%
+\contentsline {paragraph}{\nonumberline Bewertung HPDI}{58}{paragraph*.52}%
 \contentsline {subsection}{\numberline {4.2.5}Bayes'sche Analyse: Zusammenfassung}{59}{subsection.4.2.5}%
+\contentsline {paragraph}{\nonumberline Erkenntnisse zum Offset}{59}{paragraph*.54}%
+\contentsline {paragraph}{\nonumberline Erkenntnisse aus MW und PL-Plätzen}{60}{paragraph*.56}%
+\contentsline {paragraph}{\nonumberline Erkenntnisse aus HPDI}{62}{paragraph*.58}%
 \contentsline {chapter}{\numberline {5}Fazit aus Ausblick}{63}{chapter.5}%
 \contentsline {chapter}{\numberline {A}Anhang}{I}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Tabellen Rohdatenanalyse}{II}{section.A.1}%

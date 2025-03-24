@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  24 MAR 2025 12:02
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  24 MAR 2025 15:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2080,22 +2080,22 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 
 
 ]
-Overfull \hbox (0.90883pt too wide) detected at line 50
+Overfull \hbox (0.90883pt too wide) detected at line 61
  []\TU/LinLibertine(0)/m/n/10.95 XIV
  []
 
 
-Overfull \hbox (0.90883pt too wide) detected at line 51
+Overfull \hbox (0.90883pt too wide) detected at line 62
  []\TU/LinLibertine(0)/m/n/10.95 XIV
  []
 
 
-Overfull \hbox (0.90883pt too wide) detected at line 53
+Overfull \hbox (0.90883pt too wide) detected at line 64
  []\TU/LinLibertine(0)/m/n/10.95 XVI
  []
 
 
-Overfull \hbox (0.73363pt too wide) detected at line 54
+Overfull \hbox (0.73363pt too wide) detected at line 65
  []\TU/LinLibertine(0)/m/n/10.95 XIX
  []
 
@@ -2402,25 +2402,19 @@ Overfull \hbox (3.27357pt too wide) in paragraph at lines 357--393
 [51]
 
 [52]
+Overfull \hbox (15.17175pt too wide) in paragraph at lines 524--550
+[] []\TU/LinBiolinum(0)/b/n/10.95 Bewertung MW und PL-Plätze[][] \TU/LinLiberti
+ne(0)/m/n/10.95 Im ersten Schritt wird der MW aller CGP-Konfigurationen
+ []
+
+
 
 [53]
 
 [54]
-Overfull \hbox (34.9145pt too wide) in paragraph at lines 587--604
-\TU/LinLibertine(0)/m/n/10.95 schlechtere Ergebnisse liefert als die anderen Re
-kombinationsarten. Für jede Rekombinationsraten-
- []
-
-
-Overfull \hbox (18.12454pt too wide) in paragraph at lines 587--604
-\TU/LinLibertine(0)/m/n/10.95 Art bietet die Uniform Rekombination die besten E
-rgebnisse. Werden die Rekombinationsraten-
- []
-
-
-Overfull \hbox (6.04848pt too wide) in paragraph at lines 587--604
-\TU/LinLibertine(0)/m/n/10.95 für das Standard-CGP-Verfahren empfehlenswert ver
-schiedene Rekombinationsraten-Arten
+Overfull \hbox (14.27203pt too wide) in paragraph at lines 574--577
+\TU/LinLibertine(0)/m/n/10.95 der 22 Verfahren mit Rekombination eine bessere F
+itness aufweisen als die CGP-Konfiguration
  []
 
 
@@ -2430,9 +2424,6 @@ schiedene Rekombinationsraten-Arten
 [56]
 
 [57]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [58]
 
@@ -2624,10 +2615,10 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49477 strings out of 473889
- 1044151 string characters out of 5734826
+ 49487 strings out of 473889
+ 1044543 string characters out of 5734826
  1984371 words of memory out of 5000000
- 71836 multiletter control sequences out of 15000+600000
+ 71846 multiletter control sequences out of 15000+600000
  562698 words of font info for 99 fonts, out of 8000000 for 9000
  1350 hyphenation exceptions out of 8191
  122i,17n,136p,10900b,6836s stack positions out of 10000i,1000n,20000p,200000b,200000s
