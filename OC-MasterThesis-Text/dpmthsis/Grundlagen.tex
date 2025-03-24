@@ -3,7 +3,7 @@
 
 Für den praktischen Teil dieser Arbeit in Abschnitt \ref{praktischer Teil} werden mit Hilfe von CGP unterschiedliche Testprobleme gelöst. 
 Für das Verständnis dieses Teils werden einige Grundkenntnisse vorausgesetzt, welche in diesem Abschnitt näher betrachtet werden.\newline
-CGP ist eine Art von GP, das Lösungen von Rechenproblemen als Graphen darstellt. \cite{miller_cartesian_2020}
+CGP ist eine Art von GP, die Lösungen von Rechenproblemen als Graphen darstellt. \cite{miller_cartesian_2020}
 Dabei wird der Maschine allerdings nicht beigebracht, wie diese Probleme zu lösen sind.
 Stattdessen lernt sie eigenständig über mehrere Iterationen hinweg das Ausgangsproblem zu lösen.
 Dies geschieht angelehnt an die Darwin’sche Theorie der biologischen Evolution. \cite{milad_taleby_ahvanooey_survey_2019} \newline
@@ -12,16 +12,15 @@ Um den grundlegenden Aufbau von CGP zu erläutern, wird die folgende Abbildung \
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.43]{Bilder/AufbauCGPVorgehenNachbildung.png}
-    \caption{Aufbau CGP, angelehnt an \cite{torabi_using_2022}}
+    \caption{Aufbau Standard-CGP, angelehnt an \cite{torabi_using_2022}}
     \label{fig:aufbauCGP}
 \end{figure}
 
-Die Abbildung \ref{fig:aufbauCGP} zeigt den grundlegenden Ablauf innerhalb von CGP.
-Dabei lernt das System über mehrere Iterationen hinweg die beste Lösung eines Problems zu finden.
-Die folgenden Unterkapitel dieses Abschnitts erläutern diesen Ablauf näher und beziehen sich dabei weitestgehend auf die Knoten des Graphen aus Abbildung \ref{fig:aufbauCGP}.
+Die Abbildung \ref{fig:aufbauCGP} beschreibt den zyklischen Aufbau von Standard-CGP, durch den das System die beste Lösung eines Problems findet.
+Die folgenden Unterkapitel dieses Abschnitts erläutern diesen Ablauf näher und beziehen sich dabei weitestgehend auf die Knoten des Graphen aus der Abbildung.
 
 
-\section{Aufbau CGP und initiale Population}
+\section{Aufbau Standard-CGP und initiale Population}
 \label{sec:initialePopulation}
 Dieser Abschnitt bezieht sich auf die Paper \cite{miller_cartesian_2020}, \cite{torabi_using_2022} und \cite{milad_taleby_ahvanooey_survey_2019}.
 Außerdem werden Erkenntnisse aus dem Quellcode von Cui verwendet \cite{cuihen_cuihencgp_with_crossover_strategies_2024}.\\
@@ -94,7 +93,7 @@ Die beiden Darstellungsmöglichkeiten eines Chromosoms werden wie in Abbildung \
 Der Phänotyp resultiert dabei aus dem Genotyp.
 Der Genotyp ist das volle Individuum, während der Phänotyp die Dekodierung dessen ist.
 Die Lösung des CGPs ist dementsprechend ein Phänotyp, welcher die Dekodierung des besten Individuums des CGPs darstellt.
-Der Genotyp- und Phänotyp-Raum können sich dabei stark voneinander unterscheiden. \cite{eiben_introduction_2015}
+Die Genotyp- und Phänotyp-Räume können sich dabei stark voneinander unterscheiden. \cite{eiben_introduction_2015}
 Dies lässt sich dadurch erklären, dass nicht alle Teile des Genotyps für die Berechnung des Endergebnisses verwendet werden.
 Diejenigen Anteile, die für die Berechnung der Lösung nicht gebraucht werden, werden \emph{inaktive Knoten} genannt.
 So ein inaktiver Knoten wird in Abbildung \ref{fig:genotypNeu} durch gestrichelte Linien dargestellt.
@@ -107,7 +106,7 @@ Das kann sich wiederum negativ auf die Trainingsdauer auswirken.
 Eine nähere Erklärung wird in Abschnitt \ref{subsec:Mutation} gegeben.\\
 Ob ein Knoten für die Berechnung der Lösung verwendet wird oder nicht, hängt davon ab, ob ein nachfolgender Knoten über eine Kante auf diesen zugreift.
 Um aktive Knoten von inaktiven Knoten zu unterscheiden, werden demnach zuerst die Ausgangsknoten betrachtet, die offensichtlich für die Auswertung der Ausgabe verwendet werden.
-Anschließend werden iterativ die Eingangskanten der Rechenknoten zurückverfolgt, bis schließlich bei den Eingangsknoten des Graphen erreicht werden.
+Anschließend werden iterativ die Eingangskanten der Rechenknoten zurückverfolgt, bis schließlich die Eingangsknoten des Graphen erreicht werden.
 
 Folgend soll anhand der eingeführten Abbildungen \ref{fig:genotypNeu} und \ref{fig:phänotyp} ein Beispiel berechnet werden.
 Angenommen werden die Systemeingänge $x_0$ = 10 und $x_1$ = 20.
@@ -176,7 +175,7 @@ Demnach werden die performantesten Chromosomen verwendet, um die nächste Genera
 Um zu bestimmen, welche Individuen die Problemlösung am besten beschreiben, muss eine numerische Bewertung erfolgen.
 Diese wird durch die \emph{Fitness} der einzelnen Chromosomen bestimmt. \cite{koza_survey_1995}
 Wie der Fitnesswert berechnet wird, hängt von den zu lösenden Problemen ab.
-Beispielsweise verwenden Cui et al. für symbolische Regressionsprobleme den mittleren absoluten Fehler zwischen korrekter Lösung und tatsächlicher Lösung für einen Evaluationsdatensatz. \cite{affenzeller_positional_2024}
+Beispielsweise verwenden Cui et al. für symbolische Regressionsprobleme den mittleren absoluten Fehler zwischen korrekter und tatsächlicher Lösung für einen Evaluationsdatensatz. \cite{affenzeller_positional_2024}
 
 Koza beschreibt in seinem Paper, dass für die Selektion der Eltern der nächsten Generation, jedem Chromosom ein Wahrscheinlichkeitswert zugewiesen wird.
 Dieser hängt von dessen Fitness ab.
@@ -240,7 +239,7 @@ Bei beiden Chromosomen wird vorerst nicht weiter betrachtet, ob die Knoten aktiv
 Angenommen wird, dass E1 und E2 aus der letzten Generation übernommen wurden, da sie die beste Fitness aufgewiesen haben.\\
 Für die One-Point Rekombination wird zuerst eine zufällige Stelle innerhalb der Eltern-Chromosomen bestimmt.
 Diese ist in Abbildung \ref{fig:onePointCrossoverEltern} grün markiert.
-Die Eltern-Chromosomen werden anschließend an dieser Stelle geteilt und überkreuzt zusammengesetzt.
+Die Eltern-Chro\-mo\-so\-men werden anschließend an dieser Stelle geteilt und überkreuzt zusammengesetzt.
 Für dieses Beispiel ergeben sich die beiden Nachwuchs-Chromosomen aus Abbildung \ref{fig:onePointCrossoverNachwuchs}.
 
 
@@ -332,9 +331,9 @@ Sie wird nur zu einer bestimmten Wahrscheinlichkeit ausgeführt, welche mit der 
 Die Effektivität des (C)GP-Systems hängt unter anderem von der richtigen Wahl der Rekombinationsrate ab. \cite{hassanat_choosing_2019}\\
 Um das bestmögliche (C)GP-System zu erhalten, sollte das richtige Verhältnis aus \emph{Exploration} (dt. Erforschung) und \emph{Exploitation} (dt. Ausbeutung) des Lösungsraums erzielt werden. 
 Exploration ist dabei der Prozess, neue Bereiche des Lösungsraums zu erkunden, während bei der Exploitation bereits erkundete Regionen des Lösungsraums näher betrachtet werden.
-Eine Stellschraube, um den eigenen Prozess dahingehend zu steuern, ist die Rekombinationsrate. \cite{crepinsek_exploration_2013}
+Eine Stellschraube, um den Prozess dahingehend zu steuern, ist die Rekombinationsrate. \cite{crepinsek_exploration_2013}
 Wird die Rekombinationsrate sehr hoch eingestellt, wird zu einem hohen Maß Exploration betrieben. 
-Dies führt allerdings dazu, dass im Gegenzug dazu die Exploitation gering ausfällt und somit die optimalen Lösungen verfehlt werden. \cite{pavai_survey_2017}\\
+Dies führt allerdings dazu, dass die Exploitation gering ausfällt und somit die optimalen Lösungen verfehlt werden können. \cite{pavai_survey_2017}\\
 In unterschiedlichen Papern werden verschiedene Herangehensweisen vorgeschlagen, diesen Parameter zu wählen.
 Teilweise widersprechen sich diese Aussagen, wie in den folgenden Abschnitten näher dargestellt wird.
 Außerdem wird ein Einblick über die unterschiedlichen Möglichkeiten gegeben, die Rekombinationsrate zu setzen.
@@ -356,21 +355,22 @@ Mit Hilfe der in den nächsten Abschnitten beschriebenen Anpassungen der Rekombi
 Clegg et al. präsentieren in ihrem Paper aus 2007 eine neue Form der Rekombination.
 Dabei treffen sie auch einige Aussagen über die Rekombinationsrate, die in diesem Abschnitt näher betrachtet werden sollen. \cite{clegg_new_2007}\\
 Sie beobachten, dass sich für höhere Rekombinationsraten eine schnellere Konvergenz der Fitness innerhalb der ersten Generationen einstellt.
-Gleichzeitig stellen sie fest, dass in ihrem Beispiel ab der 200. Generation Rekombination keinen signifikanten Vorteil in der Performance liefert.
+Gleichzeitig stellen sie fest, dass in ihrem Beispiel Rekombination ab der 200. Generation keinen signifikanten Vorteil in der Performance liefert.
 Insgesamt betrachten sie 500 Iterationen.\\
 Aus diesen beiden Beobachtungen konstruieren sie eine neue, dynamische Rekombinationsrate.
 Diese beginnt bei einem relativ hohen Startwert von 0,9 und sinkt linear, bis eine Rekombinationsrate von 0,0 erreicht wird.
 Anschließend wird keine Rekombination mehr ausgeführt.
 In ihrem Beispiel legen die Autoren über händische Analysen eine Generation fest, bis zu welcher die Rekombinationsrate auf 0,0 fallen soll.\\
+Der Variable Parameter, der in der Hyperparameteranalyse optimiert werden soll, wird in dieser Arbeit \glqq Delta-Rekombinationsrate\grqq\space genannt.
+Er gibt an mit welcher Schrittgröße die Rekombinationsrate pro Iteration reduziert wird.
 Innerhalb des praktischen Teils dieser Arbeit wird 0,9 für den Startwert der Rekombinationsrate übernommen, um die Anzahl der Parameter in der Hyperparameteranalyse zu reduzieren.
-Ein weiterer Vorteil ist es, nur einen variablen Parameter pro Rekombinationsraten-Typ zu verwenden, da gegebenenfalls die Änderungen innerhalb der Ergebnisse für die verschiedenen Parameter besser miteinander verglichen werden können.\\
-Der einzige variable Parameter für die linear fallende Rekombinationsrate ist in dieser Arbeit die Rate, die nach jeder Generation von der alten Rekombinationsrate abgezogen werden soll, um die neue Rekombinationsrate zu erhalten.
+Ein weiterer Vorteil davon nur einen variablen Parameter pro Re\-kom\-bi\-na\-tions\-ra\-ten-Art zu verwenden, ist es, dass die Änderungen innerhalb der Ergebnisse für die verschiedenen Parameter besser miteinander verglichen werden können.
 
 \subsubsection{One-Fifth-Regel angewandt auf die Rekombinationsrate}
 \label{subsubsec:oneFifthCrossover}
 
 Die \emph{One-Fifth-Regel} gibt es bereits für andere Parameter in GP, wie beispielsweise für die \emph{Mutationsrate}, die in Abschnitt \ref{subsec:Mutation} näher erläutert wird.
-Diese Regel wird ebenfalls im Paper von Milano und Nolfi verwendet.
+Diese Regel wird im Paper von Milano und Nolfi verwendet.
 Dabei handelt es sich um einen Weg, die Mutationsrate automatisch und dynamisch an die Problemcharakteristiken und die evolutionäre Phase anzupassen. \cite{milano_scaling_2018}\\
 Betrachtet wird bei dieser Regel das Fitness-Verhältnis der Elitisten und der neuen Chromosomen.
 In anderen Worten werden die Kinder mit ihren Eltern verglichen.
@@ -395,7 +395,7 @@ Wie dieser Hyperparameter bestimmt wurde und welche Größenordnung dieser einha
 
 Torabi et al. behaupten außerdem, dass ihre Strategie \glqq den richtigen Kompromiss aus Exploration und Exploitation\grqq\space erreiche. \cite{torabi_using_2022}
 Ein Vergleich dieser Behauptung mit der Aussage von Clegg et al. offenbart einen Widerspruch zwischen diesen Thesen.
-Während Clegg et al. vor allem in den ersten Generationen auf Rekombination setzen, da der Rekombinationsschritt hier zu einer höheren Fitness-Konvergenz führen soll, meiden Torabi et al. in ihrer Strategie Rekombinationen in den ersten Generationen völlig. \cite{clegg_new_2007}\\
+Während Clegg et al. vor allem in den ersten Generationen auf Rekombination setzen, da der Rekombinationsschritt hier zu einer schnelleren Konvergenz führen soll, meiden Torabi et al. in ihrer Strategie Rekombinationen in den ersten Generationen völlig. \cite{clegg_new_2007, torabi_using_2022}\\
 Ein Ziel dieser Arbeit ist es herauszufinden, ob sich ein Offset für die Rekombination als sinnvoll erweist oder ob sich dieser nur für die Rekombinationsstrategie eignet, die Torabi et al. in ihrem Paper eingeführt haben.
 
 
@@ -419,15 +419,15 @@ Die Veränderung eines Gens innerhalb der Mutation wird vorgenommen, indem das a
 Dies hat für unterschiedliche Knotenarten des entsprechenden Phänotyps verschiedene Effekte.\\
 Ein Ausgangsknoten hat als relevanten Parameter nur seinen Vorgängerknoten.
 Wird also ein Ausgangsknoten mutiert, wird die eingehende Kante zufällig neu belegt.
-Dabei muss wie bei der Initialisierung beachtet werden, dass die Struktur von CGP erhalten bleibt.
+Dabei muss wie bei der Initialisierung beachtet werden, dass die azyklische Struktur von CGP erhalten bleibt.
 In dieser Arbeit werden dementsprechend nur Vorgängerknoten gewählt, deren Index kleiner ist als der mutierte Knoten.\\
-Anders als die Ausgangsknoten wird ein Rechenknoten durch mindestens zwei Parameter bestimmt: ein Rechenoperator und mindestens eine Eingangskante.
+Anders als die Ausgangsknoten wird ein Rechenknoten durch mindestens zwei Parameter definiert: ein Rechenoperator und mindestens eine Eingangskante.
 Welcher dieser Parameter mutiert werden soll, wird ebenfalls zufällig bestimmt.
 Wird eine Kante verändert, gelten die gleichen Regeln wie beim Mutieren eines Ausgangsknotens.
 Wird der Rechenoperator mutiert, wird dieser zufällig neu aus den kodierten Rechenfunktionen gewählt.\\
 Da ein Eingangsknoten nur aus den Dateneingängen besteht und keine Parameter enthält, können diese nicht mutiert werden und werden im Mutationsschritt nicht betrachtet.
 
-Um die Single Active Mutation anhand eines Beispiels näher zu erläutern wird folgender Gentyp eines Chromosoms aus Abbildung \ref{fig:genotypNeu} erneut eingeführt.
+Um die Single Active Mutation anhand eines Beispiels näher zu erläutern wird folgender Genotyp eines Chromosoms aus Abbildung \ref{fig:genotypNeu} erneut eingeführt.
 Es wird angenommen, dass dieses Chromosom durch vorherige Rekombination entstanden ist und somit im nächsten Schritt mutiert werden soll.
 Die folgende Abbildung \ref{fig:mutationGesamt} zeigt dieses Mutationsbeispiel:
 
@@ -459,13 +459,15 @@ Da in diesem Beispiel die Rechenknoten jeweils 3 Parameter aufweisen, wird zufä
 In diesem Beispiel wird der erste Parameter verändert, also der Rechenoperator.
 Wie bereits in Tabelle \ref{table:kodierung} aufgezeigt, werden die Rechenoperationen durch 0 bis 3 kodiert.
 Sei beispielsweise die zufällig gewählte Zahl für den Rechenoperator gleich 1.
-Da der in diesem Schritt mutierte Knoten inaktiv ist, muss nach der Single Active Mutation erneut mutiert werden.\\
+Dieser neue Wert wird in Abbildung \ref{fig:genotypNachMutation} rot markiert.
+Da der in diesem Schritt mutierte Knoten inaktiv ist, muss der Single Active Mutation zufolge erneut mutiert werden.\\
 Angenommen der zufällig gewählte Index ist 8, was dem Index von $O_A$ entspricht.
 Da es sich, um einen Ausgangsknoten handelt, muss ein neuer Vorgängerknoten zufällig gewählt werden.
 Beispielsweise wird nun dieser Parameter mit dem Index 3 belegt.
+Er wird in Abbildung \ref{fig:genotypNachMutation} ebenfalls rot dargestellt.
 Da dieser Knoten Teil der aktiven Knoten ist, terminiert hier der Mutationsalgorithmus.
 Die Abbildung \ref{fig:genotypNachMutation} zeigt das Ergebnis des Mutationsbeispiels (mit Kennzeichnung der neuen aktiven / inaktiven Knoten).
-Die mutierten Teile des Chromosoms, sowie der neu entstandene inaktive Knoten werden rot hervorgehoben.
+Der neu entstandene inaktive Knoten wird in dieser Abbildung rot hervorgehoben.
 
 
 \section{Evaluation Fitness, Stopp-Kriterium und Ergebnis}
@@ -505,23 +507,23 @@ Zu Beginn wird die Realität als Modell mit bestimmten Annahmen ($\theta$) verei
 Diese ursprünglichen Annahmen werden als Wahrscheinlichkeitsverteilung (\emph{apriori-Wahr\-schein\-lich\-keit}) dargestellt. 
 Aus den neuen Daten y kann die sogenannte
 \emph{Likelihood-Funktion} berechnet werden, die eine Dichtefunktion für die Beobachtung y darstellt unter der Bedingung, dass $\theta$ zutrifft.
-Mit Hilfe des Bayes'schen Theorems können die apriori-Dichtefunktion und die Stichprobeninformationen miteinander verknüpft werden.
+Mit Hilfe des Bayes'schen Theorems können die apriori-Dich\-te\-funk\-tion und die Stichprobeninformationen miteinander verknüpft werden.
 Das Ergebnis ist eine neue Wahrscheinlichkeitsverteilung für $\theta$ (\emph{aposteriori-Wahrscheinlichkeit}). \cite{nenning_bayessche_1980}
-Mit diesem Vorgehen kann also mit Hilfe von empirischen Daten eine Wahrscheinlichkeitsverteilung für ein Modell gefittet werden.
+Mit diesem Vorgehen kann demnach mit Hilfe von empirischen Daten eine Wahrscheinlichkeitsverteilung für ein Modell gefittet werden.
 
 In dieser Arbeit werden basierend auf \cite{cui_equidistant_2023} zwei Modelle verwendet: das \emph{Plackett-Luce-Modell} und das \emph{Gammaverteilung-basierte Modell}.\\
 Mit Hilfe des Plackett-Luce-Modells können die Wahrscheinlichkeiten berechnet werden, mit denen die jeweiligen CGP-Konfigurationen besser als alle anderen Konfigurationen sind.
 Demnach kann eine Reihenfolge bestimmt werden, die die Effizienz der Konfigurationen sortiert angibt.
 Das verwendete Modell basiert auf dem Plackett-Luce-Modell, das von Calvo et al. eingeführt wird. \cite{cui_equidistant_2023, calvo_plackett_luce}\\
-Für die Auswertung mit Hilfe des Gammaverteilung-basierten Modells wird der Code von Pätzel verwendet (\cite{patzel_dpaetzelcmpbayes_2024}). 
+Für die Auswertung mit Hilfe des Gammaverteilung-basierten Modells wird der Code von Pätzel verwendet \cite{patzel_dpaetzelcmpbayes_2024}. 
 Dieser ermöglicht es nicht-negative Daten zu vergleichen und daraus die Wahrscheinlichkeitsverteilung von $\mu_{config}$ zu schätzen.
-$\mu_{config}$ ist dabei eine zufällige Variable, die dem jeweiligen Mittelwert der Iterationenzahl entspricht, die gebraucht werden, um eine CGP-Lösung konvergieren zu lassen.
+$\mu_{config}$ ist dabei eine zufällige Variable, die beispielsweise dem jeweiligen Mittelwert der Iterationenzahl entspricht, die gebraucht werden, um eine CGP-Lösung konvergieren zu lassen.
 Für jede CPG-Konfiguration kann so ein 95\% HPDI (\emph{highest posterior density interval}) von $\mu_{config}$ bestimmt werden.
 Dies bedeutet, dass innerhalb dieses Intervalls 95\% der Ergebnisse liegen. \cite{cui_equidistant_2023}
-Dadurch können die Streuungen der Iterationszahlen für jede CGP-Konfiguration miteinander verglichen werden, ohne von einer gleichverteilten Dichtefunktion ausgehen zu müssen.
+Dadurch können die Streuungen der Iterationszahlen für jede CGP-Kon\-fi\-gu\-ra\-tion miteinander verglichen werden, ohne von einer gleichverteilten Dichtefunktion ausgehen zu müssen.
 
 Pätzel verwendet in seinem Code das \emph{Markov Chain Monte-Carlo (MCMC) Sampling} zur Berechnung der Verteilungen \cite{patzel_dpaetzelcmpbayes_2024, cui_equidistant_2023}.
-Bei MCMC werden mehrere Tausend Kombinationen von Parameterwerten ($\mu_1$, $\sigma_1$, $\mu_2$, $\sigma_2$, v) generiert, die jeweils zwei verschiedene Gamma-Wahrscheinlichkeitsverteilungen darstellen.
+Bei MCMC werden mehrere tausend Kombinationen von Parameterwerten ($\mu_1$, $\sigma_1$, $\mu_2$, $\sigma_2$, v) generiert, die jeweils zwei verschiedene Gamma-Wahrscheinlichkeitsverteilungen darstellen.
 Jede Wertekombination ist repräsentativ für glaubwürdige Parameterwerte, die gleichzeitig die eingehenden Daten und die vorherigen Verteilungen berücksichtigen.
 Diese Parameterwerte werden anschließend zusammengefasst. \cite{kruschke_bayesian_estimation}
 

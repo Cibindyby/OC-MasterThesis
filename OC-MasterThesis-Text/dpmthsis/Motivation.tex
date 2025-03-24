@@ -6,10 +6,10 @@ Beispiele hierfür sind die Erstellung einer mathematischen Gleichung für einen
 
 Cartesian Genetic Programming (CGP) ist eine Methode des GPs, in der Lösungen für Probleme als Graphen dargestellt werden \cite{miller_cartesian_2020}. 
 Im Standard-CGP werde laut Miller der Rekombinationsschritt normalerweise nicht ausgeführt und in den meisten Arbeiten werde dieser Schritt gänzlich ignoriert. 
-Er bezieht dieses Verhalten auf Forschungsergebnisse aus dem Jahr 1999, die nach Miller aufzeigen, dass der Rekombinationsschritt kaum einen Effekt auf die Effizienz von CGP hat. \cite{miller_cartesian_2020} 
+Er bezieht dieses Verhalten auf Forschungsergebnisse aus dem Jahr 1999, die nach Miller aufzeigen, dass der Rekombinationsschritt kaum einen Effekt auf die Effizienz von CGP habe. \cite{miller_cartesian_2020} 
 In mehreren weiteren Papern werden andere Rekombinationsalgorithmen mit dem Ziel vorgestellt, dass der Rekombinationsschritt neben der Mutation sinnvoll in CGP eingebaut werden kann. 
 Dieser weitere Operator könnte die Effizienz von CGP-Modellen im Training steigern und somit komplexere Ausgangsprobleme lösbar machen.
-Innerhalb dieser Paper wird als Prämisse angenommen, dass wie von Miller geschildert in Standard-CGP keine Rekombination verwendet wird. \cite{clegg_new_2007,kalkreuth_comprehensive_2020, torabi_using_2022}\\
+Innerhalb dieser Paper wird als Prämisse angenommen, dass wie von Miller geschildert, in Standard-CGP keine Rekombination verwendet wird. \cite{clegg_new_2007,kalkreuth_comprehensive_2020, torabi_using_2022}\\
 Da die Aussage, dass in Sandard-CGP der Rekombinationsschritt nicht zielführend sei, auf den Papern von Miller aus dem Jahr 1999 und 2011 basiert, kommt die Frage auf, ob dies immer noch zutrifft.
 Die erste Forschungsfrage, die in dieser Arbeit beantwortet werden soll, ist demnach: \glqq Kann nach heutigem Forschungsstand Rekombination die Effizienz von Standard-CGP steigern?\grqq
 
@@ -17,14 +17,14 @@ Da der Erfolg der Rekombination ebenfalls von der Rekombinationsrate abhängt, i
 Clegg et al. und Torabi et al. beschreiben in ihren Papern unterschiedliche Herangehensweisen an die Rekombinationsrate \cite{clegg_new_2007, torabi_using_2022}:\\
 Clegg et al. führen eine variable Rekombinationsrate in ihrem Paper ein.
 Dabei wird eine hohe Rekombinationsrate linear verringert, sodass in den letzten Lernschritten keine Rekombination mehr ausgeführt wird. \cite{clegg_new_2007}\\
-Torabi et al. fügen für ihre Rekombination ein Offset zu Beginn des CGP ein. 
-Dieser Offset wird durch einen Hyperparameter bestimmt und gibt an, wie viele Iterationen die Rekombination ausbleibt. \cite{torabi_using_2022}\\
+Torabi et al. fügen für ihre Rekombination einen Offset zu Beginn des CGP ein. 
+Dieser Offset wird durch einen Hyperparameter bestimmt und gibt an, bis zur wievielten Iteration keine Rekombination ausgeführt wird. \cite{torabi_using_2022}\\
 Diese beiden Ansätze sollen mit einem selbst entwickelten Ansatz verglichen werden.
-Die neu vorgestellte Rekombinationsrate bezieht sich auf die One-Fifth-Rule zur Berechnung der Mutationsrate.
+Die neu vorgestellte Rekombinationsrate bezieht sich auf die One-Fifth Regel zur Berechnung der Mutationsrate.
 Auf Basis dessen ergibt sich die zweite Forschungsfrage: \glqq Hat die Art und Weise der Rekombinationsratenberechnung eine Auswirkung auf die Effektivität des CGPs?\grqq
 
 Die beiden Forschungsfragen sollen anhand unterschiedlicher Experimente beantwortet werden.
 In Abschnitt \ref{Grundlagen} werden die theoretischen Grundlagen erläutert, die für das Verständnis des Experimentaufbaus und der Ergebnisse benötigt werden.
-Im Anschluss werden in Abschnitt \ref{praktischer Teil} die jeweiligen Experimente, sowie die Evaluationsstrategien der Ergebnisse beschrieben.
+Im Anschluss werden in Abschnitt \ref{praktischer Teil} die jeweiligen Experimente, sowie die Evaluationsstrategien beschrieben.
 Darauf folgend werden in Abschnitt \ref{Ergebnisse} die Ergebnisse der Experimente vorgestellt und ausgewertet.
 Abschließend wird in Abschnitt \ref{Fazit} ein Fazit aus den Ergebnissen zusammengefasst, sowie ein Ausblick auf weitere mögliche Forschungsfragen gegeben.
