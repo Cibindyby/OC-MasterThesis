@@ -164,7 +164,7 @@ Für die One-Point und Uniform Rekombination wurden für die konstanten Start-Re
 Für die Two-Point Rekombination trifft dies nicht zu.
 Ebenso werden bei der linear fallenden Rekombinationsrate solche extremen Werte beobachtet.
 Zusammenfassend lässt sich feststellen, dass für das Keijzer-Testszenario überwiegend die Grenzen des Definitionsbereichs als Rekombinationsraten gewählt wurden.
-\paragraph{Offsets:}
+\paragraph{Offset:}
 Die Offsets wurden durchschnittlich bei 153 Iterationen gewählt, wobei zu beachten ist, dass zwei Parametersätze ursprünglich bessere Ergebnisse erbracht hätten, ohne die Rekombination zu Beginn auszusetzen.
 Die in der Tabelle \ref{table:keijzerHPO} rot markierten Offsets wären dementsprechend ursprünglich gleich 0 gewesen.
 Mit den originalen Parametersätzen wäre der Mittelwerts des Offsets bei 100 gelegen.
@@ -389,7 +389,7 @@ Für die linear fallende Rate und die Rekombinationsrate mit der One-Fifth Regel
 Wieder im Gegensatz dazu stehen die Ergebnisse des Keijzer-Testszenarios.
 Hier werden für nahezu alle CGP-Konfigurationen sehr hohe oder niedrige Werte für die Rekombinationsrate verwendet.
 Somit kann durch die Ergebnisse der Hyperparameteranalyse nicht bewertet werden, welche Bereiche der Rekombinationsrate besonders effektiv sind.\\
-\paragraph{Offsets:} Bei Parity wird der geringste Offset bei der Two-Point Rekombination und der höchste Offset bei der Uniform Rekombination verwendet.
+\paragraph{Offset:} Bei Parity wird der geringste Offset bei der Two-Point Rekombination und der höchste Offset bei der Uniform Rekombination verwendet.
 Werden bei Keijzer die originalen Ergebnisse verwendet, bei denen ein Offset von 0 zugelassen wird, kann dieses Verhalten ebenfalls beobachtet werden.
 Dies könnte bedeuten, dass die Two-Point Rekombination für Standard-CGP effizienter ist als die Uniform Rekombination, da bei ersterem weniger Rekombinationsschritte ausgesetzt werden.
 Die für den Offset neu eingefügten Werte, falls ein Offset gleich 0 bestimmt wird, sind bei Parity ähnlich zum allgemeinen Mittelwert des Offsets.
@@ -492,7 +492,7 @@ Folgend werden die Spalten der Tabellen näher erläutert:
 
 Dieser Abschnitt bezieht sich auf die Tabelle \ref{table:parityBayesian} und bewertet lediglich die Ergebnisse der Bayes'schen Analyse von Parity.
 Jegliche Aussagen können vorerst nicht auf die Allgemeinheit geschlossen werden und werden in Abschnitt \ref{subsec:bayesZusammenfassung} näher bewertet.
-\paragraph{Bewertung MW und PL-Plätze}
+\paragraph{Bewertung MW und PL-Plätze:}
 Werden die MW der verschiedenen CGP-Modelle betrachtet, wird deutlich, dass nur 2 der 18 CGP-Konfigurationen mit Rekombination schlechter abschneiden als diejenige ohne Rekombination.
 Das ist ein Zeichen dafür, dass Rekombination durchaus die Effizienz von CGP steigern kann, wenn die Rekombination sinnvoll konfiguriert wird.\\
 Die jeweils drei niedrigsten MW und drei höchsten PL-Plätze sind in der Tabelle \ref{table:parityBayesian} grün markiert, während die drei höchsten MW und drei niedrigsten PL-Plätze rot sind.
@@ -514,7 +514,7 @@ Des Weiteren werden die Ergebnisse jeweils bezüglich MW und PL-Plätzen von Ver
 Dabei weisen jeweils 6 aus 9 CGP-Konfigurationen ohne Offset bessere Ergebnisse auf als diejenigen mit Offset.
 Dies spricht dafür, dass ein Rekombinationsoffset der Effizienz eines CGP-Modells schadet.
 Ein Grund dafür könnte sein, dass damit die positiven Einflüsse der Rekombination gestrichen werden, während die nachteiligen Effekte des Zusammenspiels von Rekombination und Mutation weiterhin bestehen bleiben.
-\paragraph{Bewertung HPDI}
+\paragraph{Bewertung HPDI:}
 Analysiert werden nun die HPDI-Werte aus Tabelle \ref{table:parityBayesian}.
 Dabei werden die HPDI-Werte mit dem kleinsten Umfang grün markiert und die mit dem größten rot.
 Diese werden verwendet, um die Ergebnisse stichprobenartig zu bewerten.

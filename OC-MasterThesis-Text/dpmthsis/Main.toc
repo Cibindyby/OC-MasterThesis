@@ -48,7 +48,7 @@
 \contentsline {paragraph}{\nonumberline Anzahl der Rechenknoten:}{37}{paragraph*.62}%
 \contentsline {paragraph}{\nonumberline Populationsgröße:}{38}{paragraph*.64}%
 \contentsline {paragraph}{\nonumberline Rekombinationsraten:}{38}{paragraph*.66}%
-\contentsline {paragraph}{\nonumberline Offsets:}{38}{paragraph*.68}%
+\contentsline {paragraph}{\nonumberline Offset:}{38}{paragraph*.68}%
 \contentsline {subsubsection}{\nonumberline Analyse der Rohdatentabelle}{39}{subsubsection*.70}%
 \contentsline {paragraph}{\nonumberline Analyse des Offsets:}{40}{paragraph*.72}%
 \contentsline {subsection}{\numberline {4.1.3}Rohdatenanalyse: Encode}{40}{subsection.4.1.3}%
@@ -58,12 +58,12 @@
 \contentsline {paragraph}{\nonumberline Rechenknoten:}{46}{paragraph*.78}%
 \contentsline {paragraph}{\nonumberline Populationsgröße:}{47}{paragraph*.80}%
 \contentsline {paragraph}{\nonumberline Rekombinationsraten:}{47}{paragraph*.82}%
-\contentsline {paragraph}{\nonumberline Offsets:}{48}{paragraph*.84}%
+\contentsline {paragraph}{\nonumberline Offset:}{48}{paragraph*.84}%
 \contentsline {subsubsection}{\nonumberline Zusammenfassung: Analyse der Rohdatentabellen}{48}{subsubsection*.86}%
 \contentsline {section}{\numberline {4.2}Ergebnisse Bayes'sche Analyse}{51}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Bayes'sche Analyse: Parity}{52}{subsection.4.2.1}%
-\contentsline {paragraph}{\nonumberline Bewertung MW und PL-Plätze}{52}{paragraph*.88}%
-\contentsline {paragraph}{\nonumberline Bewertung HPDI}{53}{paragraph*.90}%
+\contentsline {paragraph}{\nonumberline Bewertung MW und PL-Plätze:}{52}{paragraph*.88}%
+\contentsline {paragraph}{\nonumberline Bewertung HPDI:}{53}{paragraph*.90}%
 \contentsline {subsection}{\numberline {4.2.2}Bayes'sche Analyse: Keijzer}{54}{subsection.4.2.2}%
 \contentsline {paragraph}{\nonumberline Bewertung MW und PL-Plätze:}{54}{paragraph*.92}%
 \contentsline {paragraph}{\nonumberline Bewertung HPDI:}{55}{paragraph*.94}%
