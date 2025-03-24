@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  23 MAR 2025 23:54
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  24 MAR 2025 12:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2404,17 +2404,35 @@ Overfull \hbox (3.27357pt too wide) in paragraph at lines 357--393
 [52]
 
 [53]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [54]
+Overfull \hbox (34.9145pt too wide) in paragraph at lines 587--604
+\TU/LinLibertine(0)/m/n/10.95 schlechtere Ergebnisse liefert als die anderen Re
+kombinationsarten. Für jede Rekombinationsraten-
+ []
+
+
+Overfull \hbox (18.12454pt too wide) in paragraph at lines 587--604
+\TU/LinLibertine(0)/m/n/10.95 Art bietet die Uniform Rekombination die besten E
+rgebnisse. Werden die Rekombinationsraten-
+ []
+
+
+Overfull \hbox (6.04848pt too wide) in paragraph at lines 587--604
+\TU/LinLibertine(0)/m/n/10.95 für das Standard-CGP-Verfahren empfehlenswert ver
+schiedene Rekombinationsraten-Arten
+ []
+
+
 
 [55]
 
 [56]
 
 [57]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [58]
 
@@ -2427,7 +2445,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [62]
 chapter 5.
 
-Overfull \hbox (2.21965pt too wide) in paragraph at lines 14--53
+Overfull \hbox (2.21965pt too wide) in paragraph at lines 14--54
 \TU/LinLibertine(0)/m/n/10.95 eine umfangreichere Hyperparameteranalyse mit geg
 ebenenfalls mehr Testszenarien könn-
  []
