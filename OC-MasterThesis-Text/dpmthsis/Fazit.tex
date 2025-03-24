@@ -17,7 +17,7 @@ Für die unterschiedlichen Rekombinationsraten wurde eine zusätzliche Berechnun
 Bei zwei der vier Testszenarien wurde eine Hyperparameteranalyse ausgeführt, um die Effizienz der besten Ergebnisse für jede CGP-Konfiguration miteinander zu vergleichen.
 Für die anderen zwei Testfälle wurden die Rekombiantionsraten-Arten facettenreich parametriert, um bewerten zu können, wie sich die Parametrierung der Rekombinationsraten auf die Effizienz des CGPs auswirken.\\
 Für die Analyse der Ergebnisse wurden zwei unterschiedliche Verfahren angewendet.
-Einerseits wurden die Ergebnisse der Hyperparameteroptimierung und die aufgezeichneten Rohdaten der Testdurchläufe näher analysiert, andererseits wurde eine Bewertung mit Hilfe der bayes'schen Analyse ausgeführt.\\
+Einerseits wurden die Ergebnisse der Hyperparameteroptimierung und die aufgezeichneten Rohdaten der Testdurchläufe näher analysiert, andererseits wurde eine Bewertung mit Hilfe der Bayes'schen Analyse ausgeführt.\\
 Die Ergebnisse der Evaluierung der Hyperparameteranalyse zeigen vor allem, dass kein ersichtlicher Zusammenhang zwischen den CGP-Konfigurationen und deren Parametrierung besteht.
 So treten beispielsweise keine einheitlichen Muster auf, wie sich die CGP-Konfigurationen auf die Anzahl der Rechenknoten oder Populationsgröße auswirkt.
 Durch eine umfangreichere Hyperparameteranalyse mit gegebenenfalls mehr Testszenarien könnten dieses Ergebnis näher untersucht und erneut bewertet werden.\\
@@ -37,7 +37,7 @@ Des Weiteren weist die Uniform Rekombination einen höheren Einfluss auf die Fit
 Die konstante und linear fallende Rekombinationsrate besitzen außerdem das größere Potential zu einer Verbesserung der Fitness zu führen als die One-Fifth Regel für Rekombination.
 Zusammenfassend lässt sich für die Rohdatenanalyse sagen, dass das Standard-CGP-Verfahren die Kombination aus Rekombination und Mutation nicht optimal nutzt.
 Wenn das CGP-Verfahren angepasst wird, weist die Uniform Rekombination mit konstanter oder linear fallender Rekombinationsrate das wahrscheinlich größte Potential auf, deutlich bessere Ergebnisse zu erzielen.\\
-Die bayes'sche Analyse zeigt, dass eine Rekombination in den ersten Iterationen meistens die Effizienz des CGPs verbessert.
+Die Bayes'sche Analyse zeigt, dass eine Rekombination in den ersten Iterationen meistens die Effizienz des CGPs verbessert.
 Für ein paar CGP-Konfigurationen überwiegen die negativen Effekte der Rekombination auf die Mutation die positiven, wodurch es weniger sinnvoll ist Rekombination in den ersten Iterationen auszuführen.
 Die Verbesserung des CGP-Verfahrens, sodass Rekombination und Mutation sinnvoll gleichzeitig genutzt werden können, wird demnach als wichtiger Meilenstein eingestuft.
 Außerdem zeigt die Evaluation, dass im Standard-CGP die Rekombination in den meisten Fällen für das gesamte Training durchaus Sinn macht.

@@ -20,42 +20,64 @@
 \contentsline {section}{\numberline {3.1}Aufbau der Experimente}{21}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Testszenarien}{21}{subsection.3.1.1}%
 \contentsline {subsubsection}{\nonumberline Boolesche Probleme}{21}{subsubsection*.23}%
-\contentsline {subsubsection}{\nonumberline Symbolische Regression}{22}{subsubsection*.25}%
+\contentsline {paragraph}{\nonumberline Parity:}{22}{paragraph*.25}%
+\contentsline {paragraph}{\nonumberline Encode:}{22}{paragraph*.27}%
+\contentsline {subsubsection}{\nonumberline Symbolische Regression}{22}{subsubsection*.29}%
 \contentsline {subsection}{\numberline {3.1.2}CGP-Konfigurationen}{23}{subsection.3.1.2}%
-\contentsline {paragraph}{\nonumberline Selektion:}{24}{paragraph*.28}%
-\contentsline {paragraph}{\nonumberline Mutation:}{24}{paragraph*.30}%
+\contentsline {paragraph}{\nonumberline Selektion:}{24}{paragraph*.32}%
+\contentsline {paragraph}{\nonumberline Mutation:}{24}{paragraph*.34}%
 \contentsline {subsection}{\numberline {3.1.3}Hyperparameteroptimierung}{25}{subsection.3.1.3}%
 \contentsline {subsection}{\numberline {3.1.4}Teststruktur}{26}{subsection.3.1.4}%
-\contentsline {subsubsection}{\nonumberline 1. Testblock: einfache Testszenarien}{27}{subsubsection*.34}%
-\contentsline {subsubsection}{\nonumberline 2. Testblock: komplexe Testszenarien}{27}{subsubsection*.36}%
-\contentsline {section}{\numberline {3.2}Evaluation}{28}{section.3.2}%
-\contentsline {paragraph}{\nonumberline Analyse der Rohdaten:}{29}{paragraph*.38}%
-\contentsline {paragraph}{\nonumberline Bayes'sche Analyse:}{29}{paragraph*.40}%
+\contentsline {subsubsection}{\nonumberline 1. Testblock: einfache Testszenarien}{27}{subsubsection*.38}%
+\contentsline {subsubsection}{\nonumberline 2. Testblock: komplexe Testszenarien}{28}{subsubsection*.40}%
+\contentsline {section}{\numberline {3.2}Evaluation}{29}{section.3.2}%
+\contentsline {paragraph}{\nonumberline Analyse der Rohdaten:}{29}{paragraph*.42}%
+\contentsline {paragraph}{\nonumberline Bayes'sche Analyse:}{29}{paragraph*.44}%
 \contentsline {chapter}{\numberline {4}Ergebnisse}{31}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Ergebnisse Rohdatenanalyse}{31}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Rohdatenanalyse: Parity}{32}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Rohdatenanalyse: Keijzer}{36}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Rohdatenanalyse: Encode}{39}{subsection.4.1.3}%
+\contentsline {subsubsection}{\nonumberline Analyse der Hyperparameteroptimierung}{32}{subsubsection*.46}%
+\contentsline {paragraph}{\nonumberline Anzahl der Rechenknoten:}{33}{paragraph*.48}%
+\contentsline {paragraph}{\nonumberline Populationsgröße:}{33}{paragraph*.50}%
+\contentsline {paragraph}{\nonumberline Rekombinationsraten:}{34}{paragraph*.52}%
+\contentsline {paragraph}{\nonumberline Offset:}{34}{paragraph*.54}%
+\contentsline {subsubsection}{\nonumberline Analyse der Rohdatentabelle}{34}{subsubsection*.56}%
+\contentsline {paragraph}{\nonumberline Analyse des Offsets}{36}{paragraph*.58}%
+\contentsline {subsection}{\numberline {4.1.2}Rohdatenanalyse: Keijzer}{37}{subsection.4.1.2}%
+\contentsline {subsubsection}{\nonumberline Analyse der Hyperparameteroptimierung}{37}{subsubsection*.60}%
+\contentsline {paragraph}{\nonumberline Anzahl der Rechenknoten:}{37}{paragraph*.62}%
+\contentsline {paragraph}{\nonumberline Populationsgröße:}{38}{paragraph*.64}%
+\contentsline {paragraph}{\nonumberline Rekombinationsraten:}{38}{paragraph*.66}%
+\contentsline {paragraph}{\nonumberline Offsets:}{38}{paragraph*.68}%
+\contentsline {subsubsection}{\nonumberline Analyse der Rohdatentabelle}{39}{subsubsection*.70}%
+\contentsline {paragraph}{\nonumberline Analyse des Offsets:}{40}{paragraph*.72}%
+\contentsline {subsection}{\numberline {4.1.3}Rohdatenanalyse: Encode}{40}{subsection.4.1.3}%
 \contentsline {subsection}{\numberline {4.1.4}Rohdatenanalyse: Koza}{43}{subsection.4.1.4}%
 \contentsline {subsection}{\numberline {4.1.5}Rohdatenanalyse: Zusammenfassung}{46}{subsection.4.1.5}%
-\contentsline {section}{\numberline {4.2}Ergebnisse Bayes'sche Analyse}{50}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Bayes'sche Analyse: Parity}{51}{subsection.4.2.1}%
-\contentsline {paragraph}{\nonumberline Bewertung MW und PL-Plätze}{51}{paragraph*.44}%
-\contentsline {paragraph}{\nonumberline Bewertung HPDI}{52}{paragraph*.46}%
-\contentsline {subsection}{\numberline {4.2.2}Bayes'sche Analyse: Keijzer}{53}{subsection.4.2.2}%
-\contentsline {paragraph}{\nonumberline Bewertung MW und PL-Plätze}{53}{paragraph*.48}%
-\contentsline {paragraph}{\nonumberline Bewertung HPDI}{54}{paragraph*.50}%
-\contentsline {subsection}{\numberline {4.2.3}Bayes'sche Analyse: Encode}{55}{subsection.4.2.3}%
-\contentsline {paragraph}{\nonumberline Bewertung MW und PL-Plätze}{55}{paragraph*.52}%
-\contentsline {paragraph}{\nonumberline Bewertung HPDI}{56}{paragraph*.55}%
+\contentsline {subsubsection}{\nonumberline Zusammenfassung: Analyse der Hyperparameteroptimierung}{46}{subsubsection*.76}%
+\contentsline {paragraph}{\nonumberline Rechenknoten:}{46}{paragraph*.78}%
+\contentsline {paragraph}{\nonumberline Populationsgröße:}{47}{paragraph*.80}%
+\contentsline {paragraph}{\nonumberline Rekombinationsraten:}{47}{paragraph*.82}%
+\contentsline {paragraph}{\nonumberline Offsets:}{48}{paragraph*.84}%
+\contentsline {subsubsection}{\nonumberline Zusammenfassung: Analyse der Rohdatentabellen}{48}{subsubsection*.86}%
+\contentsline {section}{\numberline {4.2}Ergebnisse Bayes'sche Analyse}{51}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Bayes'sche Analyse: Parity}{52}{subsection.4.2.1}%
+\contentsline {paragraph}{\nonumberline Bewertung MW und PL-Plätze}{52}{paragraph*.88}%
+\contentsline {paragraph}{\nonumberline Bewertung HPDI}{53}{paragraph*.90}%
+\contentsline {subsection}{\numberline {4.2.2}Bayes'sche Analyse: Keijzer}{54}{subsection.4.2.2}%
+\contentsline {paragraph}{\nonumberline Bewertung MW und PL-Plätze}{54}{paragraph*.92}%
+\contentsline {paragraph}{\nonumberline Bewertung HPDI}{55}{paragraph*.94}%
+\contentsline {subsection}{\numberline {4.2.3}Bayes'sche Analyse: Encode}{56}{subsection.4.2.3}%
+\contentsline {paragraph}{\nonumberline Bewertung MW und PL-Plätze}{56}{paragraph*.96}%
+\contentsline {paragraph}{\nonumberline Bewertung HPDI}{57}{paragraph*.99}%
 \contentsline {subsection}{\numberline {4.2.4}Bayes'sche Analyse: Koza}{57}{subsection.4.2.4}%
-\contentsline {paragraph}{\nonumberline Bewertung MW und PL-Plätze}{57}{paragraph*.57}%
-\contentsline {paragraph}{\nonumberline Bewertung HPDI}{58}{paragraph*.60}%
-\contentsline {subsection}{\numberline {4.2.5}Bayes'sche Analyse: Zusammenfassung}{59}{subsection.4.2.5}%
-\contentsline {paragraph}{\nonumberline Erkenntnisse zum Offset}{59}{paragraph*.62}%
-\contentsline {paragraph}{\nonumberline Erkenntnisse aus MW und PL-Plätzen}{60}{paragraph*.64}%
-\contentsline {paragraph}{\nonumberline Erkenntnisse aus HPDI}{62}{paragraph*.66}%
-\contentsline {chapter}{\numberline {5}Fazit aus Ausblick}{63}{chapter.5}%
+\contentsline {paragraph}{\nonumberline Bewertung MW und PL-Plätze}{58}{paragraph*.101}%
+\contentsline {paragraph}{\nonumberline Bewertung HPDI}{59}{paragraph*.104}%
+\contentsline {subsection}{\numberline {4.2.5}Bayes'sche Analyse: Zusammenfassung}{60}{subsection.4.2.5}%
+\contentsline {paragraph}{\nonumberline Erkenntnisse zum Offset}{60}{paragraph*.106}%
+\contentsline {paragraph}{\nonumberline Erkenntnisse aus MW und PL-Plätzen}{61}{paragraph*.108}%
+\contentsline {paragraph}{\nonumberline Erkenntnisse aus HPDI}{63}{paragraph*.110}%
+\contentsline {chapter}{\numberline {5}Fazit aus Ausblick}{65}{chapter.5}%
 \contentsline {chapter}{\numberline {A}Anhang}{I}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Tabellen Rohdatenanalyse}{II}{section.A.1}%
 \contentsline {subsection}{\numberline {A.1.1}Parity: Tabellen Rohdatenanalyse}{II}{subsection.A.1.1}%

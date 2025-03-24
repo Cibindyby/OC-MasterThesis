@@ -2,7 +2,7 @@
 \label{Ergebnisse}
 
 In den folgenden Abschnitten werden die Ergebnisse dieser Arbeit aufgezeigt und analysiert.
-Sie sind unterteilt in die beiden Evaluations-Strategien, die in Abschnitt \ref{sec:Evaluation} erläutert wurden: Analyse der Rohdaten und bayes'sche Analyse.
+Sie sind unterteilt in die beiden Evaluations-Strategien, die in Abschnitt \ref{sec:Evaluation} erläutert wurden: Analyse der Rohdaten und Bayes'sche Analyse.
 Zur Vereinfachung wird in den Ergebnistabellen die konstante Rekombinationsrate kurz \glqq Konstant\grqq\space genannt, die linear fallende Rekombinationsrate \glqq Clegg \grqq\space und die Rekombinationsrate mit der One-Fifth Regel \glqq One-Fifth\grqq.
 
 \section{Ergebnisse Rohdatenanalyse}
@@ -27,22 +27,23 @@ Dabei werden folgende Metriken für jede CGP-Konfiguration aufgezeigt:
 	\item \textbf{Anzahl positive Rekombination:} Anzahl der Rekombinationsschritte, die die Fitness verbessert haben (summiert über alle 50 Durchläufe)
 	\item \textbf{Anzahl negative Mutationen:} Anzahl der Mutationsschritte, bei denen der vorherige Rekombinationsschritt eine Verbesserung der Fitness erzielt hat, die durch Mutation reduziert oder vollständig aufgehoben wurde (summiert über alle 50 Durchläufe)
 	\item \textbf{Median Iterationen positive Rekombination:} Median der Iterationen, bei denen der Rekombinationsschritt zur Verbesserung der Fitness beigetragen hat (über 50 Durchgänge hinweg)
-	\item \textbf{Median Iterationen bis Konvergenz:} Median der Iterationen bis das Stopp-Kriterium erfüllt wurde (über 50 Durchläufe hinweg)
-	\item \textbf{Stopp-Kriterium erfüllt:} Gibt an wie häufig das Stopp-Kriterium bei 50 Durchläufen erfüllt wurde. Dieser Wert wird verwendet, um Entscheidungen darüber zu treffen, welche Metrik in der bayes'schen Analyse betrachtet werden soll (für die komplexeren Testszenarien).
+	\item \textbf{Median Iterationen bis Konvergenz:} Median der Iterationen bis das Stopp-Kri\-te\-ri\-um erfüllt wurde (über 50 Durchläufe hinweg)
+	\item \textbf{Stopp-Kriterium erfüllt:} Gibt an wie häufig das Stopp-Kriterium bei 50 Durchläufen erfüllt wurde. Dieser Wert wird verwendet, um Entscheidungen darüber zu treffen, welche Metrik in der Bayes'schen Analyse betrachtet werden soll (für die komplexeren Testszenarien).
 \end{itemize}
 
 \subsection{Rohdatenanalyse: Parity}
 \label{subsec:rohdatenParity}
+\subsubsection{Analyse der Hyperparameteroptimierung}
 
 Die Tabelle \ref{table:parityHPO} zeigt die Hyperparameter, die für die Ausführung des CGP-Trainings für Parity verwendet werden.
 Dabei werden die Ergebnisse der Hyperparameteranalyse verwendet, um die effizientesten CGP-Konfigurationen miteinander zu vergleichen.
 Zu beachten ist, dass bei der Optimierung des Rekombinations-Offsets dem Optimierer ebenfalls die Möglichkeit gegeben wurde den Offset auf 0 zu stellen und somit auszuschalten.
-Diese Möglichkeit wurde bei zwei aus neun CGP-Konfigurationen genutzt.
-Für diese Fälle aus der Hyperparameteroptimierung wurden die nächstbesten Hyperparameter gewählt, die einen Offset enthalten.
+Diese Möglichkeit wurde bei 2 aus 9 CGP-Konfigurationen genutzt.
+Für diese Fälle wurden die nächstbesten Hyperparameter aus der Hyperparameteroptimierung gewählt, die einen Offset enthalten.
 Die jeweiligen Offset-Werte sind in der Tabelle rot markiert.
 Alle Beobachtungen in diesem Abschnitt beziehen sich ausschließlich auf das Parity-Testszenario.
 Basierend auf diesen Daten lassen sich demnach keine allgemeingültigen Schlüsse ziehen und alle Aussagen müssen kritisch begutachtet werden.
-
+\paragraph{Anzahl der Rechenknoten:}
 Betrachtet wird zuerst die Anzahl der Rechenknoten aus Tabelle \ref{table:parityHPO}. 
 Zu beobachten ist hier, dass die CGP-Konfiguration ohne Rekombination weniger Rechenknoten benötigt als der Mittelwert aller Verfahren von ca. 1305 Rechenknoten pro Chromosom.
 Die Modelle, die die One-Point Rekombination verwenden, weisen mit ca 1442 den höchsten Mittelwert an Rechenknoten auf.
@@ -56,35 +57,39 @@ Des Weiteren fällt auf, dass die Streuung der Anzahl der Rechenknoten immer gr�
 Während bei One-Point Rekombination alle Werte relativ nah am Mittelwert liegen, entsteht bei der Uniform Rekombination ein großer Unterschied zwischen extrem großen und sehr kleinen Werten. 
 So könnte es sich im Hinblick auf die verwendeten Ressourcen lohnen Rekombination einzusetzen, wenn durch eine gute Hyperparameteranalyse festgestellt werden kann, mit welcher CPG-Konfiguration das Einsparpotential am besten ausgeschöpft werden könnte.
 Zu beachten ist hierbei allerdings auch, dass komplexere Rekombinationsalgorithmen (und Rekombination im allgemeinen) grundsätzlich mehr Rechenzeit benötigen, als wenn dieser Rekombinationsschritt ausgelassen wird.
-Diese Metriken müssten sinnvoll miteinander abgeglichen werden.\\
-Wird die Populationsgröße ($\mu$ + $\lambda$) näher betrachtet, fällt auf, dass auch hier das Verfahren ohne Rekombination eine deutlich kleinere Population benötigt als die meisten anderen Verfahren.
+Diese Metriken müssten sinnvoll miteinander abgeglichen werden.
+\paragraph{Populationsgröße:}
+Wird die Populationsgröße ($\mu$ + $\lambda$) näher betrachtet, fällt auf, dass das Verfahren ohne Rekombination eine deutlich kleinere Population benötigt als die meisten anderen Verfahren.
 Auch dieser Faktor spart Ressourcen ein und kann für die Entscheidung für oder gegen ein Verfahren eine Rolle spielen.
 Die CGP-Konfiguration \glqq Two-Point Clegg mit Offset\grqq\space hat ebenfalls eine sehr niedrige Populationsgröße erreicht, allerdings handelt es sich bei den Werten dieses Verfahrens nicht um die beste Parametrierung der Konfiguration.
 Hier wäre der Offset wie vorher beschrieben auf 0 gesetzt worden, weshalb nur der zweitbeste Parametersatz gewählt wurde.
-Der beste Parametersatz hat die Werte $\lambda=44$ und $\mu=12$, was wiederum eine größere Populationsgröße ergibt.\\
+Der beste Parametersatz hat die Werte $\lambda=44$ und $\mu=12$, was wiederum eine größere Populationsgröße ergibt.
+\paragraph{Rekombinationsraten:}
 Bei der Begutachtung der verschiedenen Rekombinationsraten (Start-Rekombinationsrate und Delta Rekombinationsrate) können keine genauen Zusammenhänge zwischen den CGP-Konfigurationen und der Höhe der Rekombinationsraten erkannt werden.
-Für die Start-Rekombinationsrate kann allerdings bei allen Verfahren mit konstanter Rekombinationsrate beobachtet werden, dass extrem hohe oder sehr niedrige Raten vermieden werden.
-Bei der One-Fifth Regel wird der gesamte freigegebene Wertebereich für die initiale Rekombinationsrate ausgenutzt.
+Für die Start-Rekombinationsrate kann allerdings bei allen Verfahren mit konstanter Rekombinationsrate beobachtet werden, dass extrem hohe oder sehr niedrige Raten vermieden wurden.
+Bei der One-Fifth Regel wurde der gesamte freigegebene Wertebereich für die initiale Rekombinationsrate ausgenutzt.
 In weiteren Tests könnte überprüft werden, ob die vorgegebenen Wertebereiche für die One-Fifth Regel sinnvoll gewählt wurden oder ob die Hyperparameteranalyse für diese Fälle Werte außerhalb des vorgegebenen Intervalls bevorzugen würde.
-Auch bei der linear fallenden Rekombinationsrate wurde nahezu der gesamte Definitionsbereich der Hyperparameteranalyse ausgenutzt.\\
+Auch bei der linear fallenden Rekombinationsrate wurde nahezu der gesamte Definitionsbereich der Hyperparameteranalyse ausgenutzt.
+\paragraph{Offset:}
 Zuletzt wird die Offset-Spalte betrachtet.
 Der Mittelwert der gewählten Offsets liegt bei ca. 27 Iterationen.
 Am geringsten fällt der Mittelwert für die Two-Point Rekombination aus mit einem Durchschnittswert von ca. 17 Iterationen.
 Werden nicht die nachbearbeiteten Zeilen der Hyperparameteranalyse betrachtet, sondern die originalen Ergebnisse, ist der Mittelwert sogar noch kleiner, mit 10 Iterationen ohne Rekombination.
 Im Vergleich dazu liegt die Uniform Rekombination mit durchschnittlich ca. 37 Iterationen ohne Rekombination weit darüber.
-Auf Basis dessen Stellt sich die Frage, ob die Uniform Rekombination weniger effizient ist als beispielsweise die Two-Point Rekombination, da mehr Rekombinationsschritte ausgesetzt werden.
+Auf Basis dessen stellt sich die Frage, ob die Uniform Rekombination für Standard-CGP weniger effizient ist als beispielsweise die Two-Point Rekombination, da mehr Rekombinationsschritte ausgesetzt wurden.
 Die zwei neu eingepflegten Offset-Werte (rot) entsprechen ungefähr dem allgemeinen Mittelwert.
 
+\subsubsection{Analyse der Rohdatentabelle}
 Die folgend bewertete Tabelle \ref{table:parityRohdaten} gibt einen Einblick in die Rohdaten der CGP-Trainings.
 Alle CGP-Konfigurationen wurden dabei 50 mal am Parity-Datensatz getestet.
 Die Tabelle zeigt einige wichtige Merkmale des CGP-Trainings auf.\\
-Bei der Betrachtung der Tabelle wird deutlich, dass die Mutationsschritte deutlich häufiger zu einer Verbesserung der Fitness führen als die Rekombinationsschritte.
+Bei der Betrachtung der Tabelle wird deutlich, dass die Mutationsschritte deutlich häufiger zu einer Verbesserung der Fitness geführt haben als die Rekombinationsschritte.
 Für die CGP-Konfigurationen mit Offset kann beobachtet werden, dass keine einzige Rekombination die Fitness verbessern konnte. 
 Dies deutet darauf hin, dass Rekombination in den ersten Iterationen des Trainings effizienter ist, da sie eigenständig zu einer besseren Fitness führt und nicht nur die Kombination aus Rekombination und anschließender Mutation die Fitness verbessert.
 Um diesen Zusammenhang zu validieren, wird der Median der Iterationen betrachtet, bei denen die positiven Rekombinationen auftreten.
 Wird dieser Wert mit dem Median der Iterationen bis zur Konvergenz verglichen, kann festgestellt werden, dass die Rekombination besonders in frühen Trainingsphasen einen höheren Mehrwert bringt.
-Für CGP-Konfigurationen mit linear fallender Rekombinationsrate werden relativ hohe Werte an positiver Rekombination erreicht.
-Dies könnte damit zusammenhängen, dass bei der Initialisierung eine hohe Rekombinationsrate (0,9) gewählt wird und somit die Rekombination in den anfänglichen Iterationen wahrscheinlicher ausgeführt wird.
+Für CGP-Konfigurationen mit linear fallender Rekombinationsrate wurden relativ hohe Werte an positiver Rekombination erreicht.
+Dies könnte damit zusammenhängen, dass bei der Initialisierung eine hohe Rekombinationsrate (0,9) gewählt und somit die Rekombination in den anfänglichen Iterationen wahrscheinlicher ausgeführt wurde.
 Für die konstante Rekombinationsrate ist dies nicht der Fall, da die Rekombinationsrate laut Tabelle \ref{table:parityHPO} recht niedrig gewählt wurde (0,3).
 Werden die Mediane der Iterationen bis zur Konvergenz betrachtet, sollte dementsprechend festgestellt werden können, dass die CGP-Modelle mit linear fallender Rekombinationsrate deutlich geringere Werte aufweisen als die restlichen Modelle.
 Dies ist allerdings nicht Fall.
@@ -93,20 +98,21 @@ Dies kann an mehreren Gründen liegen.
 Einer davon kann sein, dass der Median der Iterationen bis zur Konvergenz nur diejenigen Trainingsdurchläufe einbezieht, die das Stopp-Kriterium erfüllen. 
 Es kann also sein, dass linear fallende Rekombinationsraten dazu führen, dass mehr Testdurchläufe konvergieren, ohne dass dies in der Tabelle deutlich wird.
 Ein anderer Grund könnte sein, dass nicht alle positiven Rekombinationen aus Tabelle \ref{table:parityRohdaten} auch in das Training des CGP-Modells einfließen. 
-Die Spalte \glqq Anzahl negative Mutationen\grqq\space gibt an in wie vielen Fällen eine positive Rekombination durch Mutation zerstört wurde.
+Die Spalte \glqq Anzahl negative Mutationen\grqq\space gibt an, in wie vielen Fällen eine positive Rekombination durch Mutation zerstört wurde.
 Das heißt in solchen Trainingsschritten wurde durch Rekombination eine Verbesserung der Fitness bewirkt.
 Anschließend wurde in der gleichen Iteration ein Mutationsschritt ausgeführt, der die Fitness wieder verschlechtert.
 Da die Selektion der neuen Elitisten nur nach dem Mutationsschritt stattfindet, können Fortschritte aus dem Rekombinationsschritt verloren gehen.
 Zu beobachten ist, dass die Anzahlen der verlorenen positiven Rekombinationen höhere Werte aufweisen, wenn bereits mehr Rekombinationsschritte zu einer Verbesserung der Fitness beigetragen haben.
 Dies könnte ein Grund dafür sein, dass sich die Anzahl der positiven Rekombinationen nicht auf die Iterationen bis zur Konvergenz auswirkt.\\
-Bei Verwendung der One-Fifth Regel erreichen die CGP-Modelle einen geringeren Wert an positiven Rekombinationen, was ein Zeichen dafür sein kann, dass diese Rekombinationsrate die Effizienz der Rekombination nicht sinnvoll steigert.
-Außerdem kann auch festgestellt werden, dass komplexere Rekombinationsalgorithmen mehr positive Rekombinationen aufweisen leichtere.
+Bei Verwendung der One-Fifth Regel haben die CGP-Modelle einen geringeren Wert an positiven Rekombinationen erreicht, was ein Zeichen dafür sein kann, dass diese Rekombinationsrate die Effizienz der Rekombination nicht sinnvoll steigert.
+Außerdem kann festgestellt werden, dass komplexere Rekombinationsalgorithmen mehr positive Rekombinationen aufweisen leichtere.
 Dies kann darauf hindeuten, dass komplexere Rekombinationsarten, wie die Uniform Rekombination, die Fitness mit einer höheren Wahrscheinlichkeit verbessern.
 Allerdings wurden für Uniform Rekombinationen ohne Offset laut Tabelle \ref{table:parityHPO} relativ hohe Rekombinationsraten gewählt, die auch einen Grund für die hohe Anzahl an positiven Rekombinationen darstellen könnten.\\
 Wird der \glqq Median Iterationen bis Konvergenz\grqq\space von CGPs ohne Rekombination mit den Durchschnittswerten pro Rekombinationsart (One-Point, Two-Point und Uniform) verglichen, dann fällt auf, dass die CGPs ohne Rekombination mehr Iterationen brauchen bis sie konvergieren.
 Das deutet darauf hin, dass es sich lohnen könnte Rekombination anzuwenden, da diese im Durchschnitt weniger Iterationen bis zur Konvergenz benötigen.
 Allerdings werden hier wieder nur die Durchläufe gewertet, die das Stopp-Kriterium erreicht haben.
-Diese Aussage muss also mit der bayes'schen Analyse und der graphischen Analyse erneut bewertet werden.\\
+Diese Aussage muss also mit der Bayes'schen Analyse erneut bewertet werden.
+\paragraph{Analyse des Offsets}
 Wenn die Auswirkungen des Offsets mit den Ergebnissen der Hyperparameteroptimierung verglichen werden, wirken die Ergebnisse vorerst widersprüchlich.
 Da die Offsets den Mehrwert der Rekombination blockieren besteht die Frage, wieso 7 aus 9 CGP-Kon\-fi\-gu\-ra\-tionen trotzdem einen Offset verwenden sollen.
 Dies kann einerseits daran liegen, dass die Hyperparameteranalyse mehr Parametersätze hätte testen müssen, um auf effizientere Ergebnisse zu stoßen.
@@ -121,12 +127,13 @@ Der Zusammenhang zwischen negativen Mutationen und Offset lässt sich allerdings
 
 \subsection{Rohdatenanalyse: Keijzer}
 \label{subsec:rohdatenKeijzer}
-
-Die Umstände der Hyperparameteroptimierung für den Keijzer-Testfall sind identisch zu der des Parity-Testszenarios und können in Abschnitt \ref{subsec:rohdatenParity} nachgelesen werden.
-Wie bei den Ergebnissen bei Parity gibt es auch bei der Offset-Optimierung im Keijzer-Testszenario zwei aus neun Fällen, bei denen der Offset ursprünglich auf 0 gesetzt wurde.
+\subsubsection{Analyse der Hyperparameteroptimierung}
+Die Umstände der Hyperparameteroptimierung für den Keijzer-Testfall sind identisch zu denen des Parity-Testszenarios und können in Abschnitt \ref{subsec:rohdatenParity} nachgelesen werden.
+Wie bei den Ergebnissen bei Parity gibt es auch bei der Offset-Optimierung im Keijzer-Test\-sze\-na\-rio 2 aus 9 Fälle, bei denen der Offset ursprünglich auf 0 gesetzt wurde.
 Diese Parametersätze wurden durch den jeweils zweitbesten Parametersatz ersetzt und sind in der Tabelle rot markiert.
-Die Beobachtungen in diesem Abschnitt beziehen sich nur auf den Keijzer-Benchmark.
-In Abschnitt \ref{subsec:rohdatenZusammenfassung} werden abschließende Erkenntnisse aus den Hyperparameteranalysen von Parity und Keijzer zusammengetragen.\\
+Die Beobachtungen in diesem Abschnitt beziehen sich nur auf den Keijzer-Benchmarktest.
+In Abschnitt \ref{subsec:rohdatenZusammenfassung} werden abschließende Erkenntnisse aus den Hyperparameteranalysen von Parity und Keijzer zusammengetragen.
+\paragraph{Anzahl der Rechenknoten:}
 Die Tabelle \ref{table:keijzerHPO} zeigt die Ergebnisse der Hyperparameteranalyse des Keijzer-Test\-sze\-narios.
 Wie bereits in Abschnitt \ref{subsec:rohdatenParity} erklärt, kann eine Reduktion der Rechenknoten in einem CGP-Modell dazu führen, dass Systemressourcen und Rechenzeit eingespart werden können.
 Dies gilt natürlich nur unter Anbetracht, dass die Lösungsentwicklung des CGPs nicht darunter leidet.
@@ -142,19 +149,22 @@ Bei der Two-Point Rekombination kann dieser Effekt nicht beobachtet werden.
 Außer eines Ausreißers (1700) sind alle Werte relativ ähnlich.
 Allerdings kann auf Basis der Werte keine Aussage darüber getroffen werden, welche Parameter mit diesen Beobachtungen zusammenhängen.
 Weder die Rekombinationsrate noch andere Parameter weisen offensichtliche Korrelationen auf.
-Dieser Aspekt könnte in weiteren Untersuchungen näher betrachtet werden.\\
+Dieser Aspekt könnte in weiteren Untersuchungen näher betrachtet werden.
+\paragraph{Populationsgröße:}
 Ein Faktor, der ebenfalls Rechenzeit einsparen kann ist die Populationsgröße ($\mu$+$\lambda$).
 Diese weisen im Keijzer-Testszenario keine deutlich ersichtlichen Zusammenhänge zu den CGP-Konfigurationen auf.
 Die $\mu$- und $\lambda$-Werte weichen nicht stark voneinander ab, mit einigen unregelmäßigen Schwankungen, bei denen die Werte deutlich kleiner werden.
 Allerdings können diese Schwankungen nicht gleichzeitig bei $\mu$ und $\lambda$ festgestellt werden.
 Für Two-Point und Uniform Rekombination verringert sich der $\lambda$-Wert bei der linear fallenden Rekombinationsrate ohne Offset.
-Allerdings kann durch diese Ergebnisse nicht näher ergründet werden, ob darin ein näherer Zusammenhang liegt.\\
-Bei den Rekombinationsraten fällt auf, dass für die Start-Rekombinationsrate der One-Fifth Regel nur sehr hohe oder sehr niedrige Raten gewählt wurden.
+Allerdings kann durch diese Ergebnisse nicht näher ergründet werden, ob darin ein näherer Zusammenhang liegt.
+\paragraph{Rekombinationsraten:}
+Bei den Rekombinationsraten fällt auf, dass für die Start-Re\-kom\-bi\-na\-tions\-ra\-te der One-Fifth Regel nur sehr hohe oder sehr niedrige Raten gewählt wurden.
 Dies könnte darauf hindeuten, dass noch extremere Werte gewählt worden wären, wenn die Grenzen der Start-Rekombinationsrate einen größeren Spielraum zugelassen hätten.
 Für die One-Point und Uniform Rekombination wurden für die konstanten Start-Rekombinationsraten ebenfalls Werte nahe des Definitionsbereichs gewählt.
 Für die Two-Point Rekombination trifft dies nicht zu.
 Ebenso werden bei der linear fallenden Rekombinationsrate solche extremen Werte beobachtet.
-Zusammenfassend lässt sich feststellen, dass für das Keijzer-Testszenario überwiegend die Grenzen des Definitionsbereichs als Rekombinationsraten gewählt wurden.\\
+Zusammenfassend lässt sich feststellen, dass für das Keijzer-Testszenario überwiegend die Grenzen des Definitionsbereichs als Rekombinationsraten gewählt wurden.
+\paragraph{Offsets:}
 Die Offsets wurden durchschnittlich bei 153 Iterationen gewählt, wobei zu beachten ist, dass zwei Parametersätze ursprünglich bessere Ergebnisse erbracht hätten, ohne die Rekombination zu Beginn auszusetzen.
 Die in der Tabelle \ref{table:keijzerHPO} rot markierten Offsets wären dementsprechend ursprünglich gleich 0 gewesen.
 Mit den originalen Parametersätzen wäre der Mittelwerts des Offsets bei 100 gelegen.
@@ -163,8 +173,9 @@ Werden diese verbesserten Parametersätze wieder auf ihren Originalwert (0) zur�
 In diesem Fall ist der Durchschnitts-Offset der Two-Point Rekombination der geringste.
 Es fällt außerdem auf, dass die zweitbesten Parametersätze Offset-Werte besitzen, die deutlich höher sind als der Mittelwert aller Offsets.
 Der Offset der One-Point Rekombination mit linear fallender Rekombinationsrate ist dabei sogar der maximal mögliche Offset-Wert (300).
-Diese extreme Schwankung der Offsets zwischen erstbestem und zweitbestem Parametersatz spricht dafür, dass die Güte eines CGPs nicht kausal mit der Höhe des Offsets zusammenhängt.
+Diese extreme Schwankung der Offsets zwischen erstbestem und zweitbestem Parametersatz spricht dafür, dass die Güte eines Standard-CGP-Modells nicht kausal mit der Höhe des Offsets zusammenhängt.
 
+\subsubsection{Analyse der Rohdatentabelle}
 Folgend werden die Rohdaten der Keijzer-Testdurchläufe anhand von Tabelle \ref{table:keijzerRohdaten} bewertet.
 Wie für Parity wurden dabei 50 Durchläufe für jede CGP-Konfiguration ausgeführt, um statistische Abweichungen einzufangen.
 Im allgemeinen lässt sich durch die Betrachtung der Tabelle feststellen, dass die Mutation deutlich öfter eine bessere Fitness hervorbringt als die Rekombination.
@@ -178,10 +189,11 @@ Dies lässt sich dadurch erklären, dass die linear fallende Rekombinationsrate 
 Zu beobachten ist, dass die konstante Rekombinationsrate für die Uniform Rekombination eine höhere Start-Rekombinationsrate verwendet (0,8) und deutlich mehr positive Rekombinationen erzielt als die linear fallende Rekombinationsrate.
 Die Rekombination mit der One-Fifth Regel erzielt auch mit hohen Start-Rekombinationsraten relativ wenige Rekombinationserfolge.
 Es könnte demnach ratsam sein eine konstant hohe Rekombinationsrate zu Beginn des Trainings einzusetzen und diese anschließend vollkommen auszusetzen.\\
-Wird Median der Iterationen bis zur Konvergenz betrachtet, weißt das CGP-Modell ohne Rekombination einen deutlich höheren Wert auf, als der Durchschnitt der Mediane pro Rekombinationsart. 
+Wird der Median der Iterationen bis zur Konvergenz betrachtet, weist das CGP-Modell ohne Rekombination einen deutlich höheren Wert auf, als der Durchschnitt der Mediane pro Rekombinationsart. 
 So benötigt die Uniform Rekombination durchschnittlich ca. 389 Iterationen im Median bis zur Konvergenz, die One-Point Rekombination ca. 461 und die Two-Point Rekombination 533.
 Dies kann darauf hindeuten, dass es sich im Durchschnitt lohnt Rekombination auszuführen, allerdings muss beachtet werden, dass hierbei nur die konvergierten Trainings betrachtet werden.
-Diese Aussage muss also in weiteren Analysen validiert werden.\\
+Diese Aussage muss also in weiteren Analysen validiert werden.
+\paragraph{Analyse des Offsets:}
 Wird der Einfluss bewertet, der der Offset auf die Mediane der Iterationen bis zur Konvergenz hat, kann zusammengefasst werden, dass die meisten CGP-Konfigurationen mit Offset weniger Iterationen bis zur Konvergenz brauchen als die jeweils gleichen CGP-Konfigurationen ohne Offset.
 Es könnte sein, dass positive Rekombinationen die Mutation negativ beeinflussen, sodass eine Rekombination zwar die Fitness verbessert aber sich negativ auf die nachfolgende Mutation auswirkt.
 Demnach könnte es sein, dass die alleinige Mutation eine größere Verbesserung der Fitness hervorrufen könnten als es eine positive Rekombination und anschließende Mutation schafft.
@@ -205,10 +217,10 @@ Außerdem schließt der Offset die Rekombination für einige Iterationen aus, wa
 Aus diesen Gründen wird der Offset für diesen Abschnitt ausgeschlossen.
 
 Werden die drei Tabellen \ref{table:encodeOnePointRohdaten}, \ref{table:encodeTwoPointRohdaten} und \ref{table:encodeUniformRohdaten} betrachtet, lässt sich feststellen, dass innerhalb der 10000 Iterationen nur die wenigsten CGP-Modelle konvergiert sind.
-Aus diesem Grund wird für den Encode Benchmark bei der bayes'schen Analyse die Wahrscheinlichkeitsfunktion der Fitness nach der 10000. Iteration gefittet und analysiert.\\
-Um Zusammenhänge zwischen den CGP-Konfigurationen und der Güte der CGP-Modelle zu erforschen wurden Muster in verschiedenen Spalten der Tabellen miteinander abgeglichen.
-Dabei wurden die Spalten \glqq Anzahl positive Rekombinationen\grqq, \glqq Anzahl negativer Mutationen\grqq\space und \glqq Median Iterationen positive Rekombination\grqq\space mit den zwei Spalten \glqq Median Iterationen bis Konvergenz\grqq\space und \glqq Stopp-Kriterium erfüllt\grqq\space verglichen.
-Bei diesem Musterabgleich wurde kein Hinweis darauf gefunden, dass die Spalten sich gegenseitig beeinflussen.\\
+Aus diesem Grund wird für den Encode Benchmark bei der Bayes'schen Analyse die Wahrscheinlichkeitsfunktion der Fitness nach der 10000. Iteration gefittet und analysiert.\\
+Um Zusammenhänge zwischen den CGP-Konfigurationen und der Güte der CGP-Modelle zu erforschen werden Muster in verschiedenen Spalten der Tabellen miteinander abgeglichen.
+Dabei werden die Spalten \glqq Anzahl positive Rekombinationen\grqq, \glqq Anzahl negativer Mutationen\grqq\space und \glqq Median Iterationen positive Rekombination\grqq\space mit den zwei Spalten \glqq Median Iterationen bis Konvergenz\grqq\space und \glqq Stopp-Kriterium erfüllt\grqq\space verglichen.
+Bei diesem Musterabgleich wird kein Hinweis darauf gefunden, dass die Spalten sich gegenseitig beeinflussen.\\
 Bei der One-Point Rekombination haben durchschnittlich ca. 8 Durchläufe das Stopp-Kri\-te\-rium erfüllt, bei der Two-Point Rekombination 3,7 und bei der Uniform Rekombination 8,5. 
 Die CGP-Modelle mit Two-Point Rekombination erfüllen damit deutlich weniger Stopp-Kriterien als die CGP-Modelle ohne Rekombination.
 Dies gilt nicht nur für den Durchschnitt, sondern auch jeweils für alle CGP-Konfigurationen mit Two-Point Rekombination.
@@ -221,14 +233,14 @@ Außerdem scheint die Anzahl der positiven Rekombinationen keinen Einfluss auf d
 Es wird nicht aufgezeigt wie schnell die CGP-Modelle danach konvergieren.
 Ein Vergleich der Rekombinationsraten-Arten für das Encode-Testszenario muss demnach später bei weiteren Analysen stattfinden.
 Für weitere Testfälle könnten mehr Erkenntnisse gewonnen werden, wenn mehr Durchgänge das Stopp-Kriterium erfüllen.\\
-Wird versucht die Anzahl der konvergierten CGP-Modelle mit der Höhe der jeweiligen Rekombinationsrate in Verbindung zu bringen, ergeben sich folgende Erkenntnisse: Für konstante Rekombinationsraten werden die meisten Stopp-Kriterien bei besonders hohen Rekombinationsraten erfüllt. 
+Wird versucht die Anzahl der konvergierten CGP-Modelle mit der Höhe der jeweiligen Rekombinationsrate in Verbindung zu bringen, ergeben sich folgende Erkenntnisse: Für konstante Rekombinationsraten wurden die meisten Stopp-Kriterien bei besonders hohen Rekombinationsraten erfüllt. 
 Außerdem werden hierfür in der ersten Hälfte des Definitionsbereichs (Rekombinationsrate gleich 0,125-0,5) sporadisch auch Erfolge in der Konvergenz festgestellt.
 Für die linear fallende Rekombinationsrate werden bei besonders kleinen und großen Schrittweiten, mit denen die Rekombinationsrate verkleinert wird, eine größere Anzahl an erfüllten Stopp-Kriterien beobachtet.
-Für die One-Fifth Regel konnten keine Muster gefunden werden.
+Für die One-Fifth Regel können keine Muster gefunden werden.
 Allerdings unterscheiden sich die Anzahlen der konvergenten Durchgänge nicht stark voneinander, was auch bedeuten kann, dass diese Schwankungen rein zufälliger Natur sind.\\
 Die unterschiedlichen Mediane der Iterationen, bei denen die Re\-kom\-bi\-na\-tions\-er\-folge entstehen, unterscheiden sich nicht stark voneinander.
 Diese Beobachtung kann für alle CGP-Konfigurationen getroffen werden, unabhängig davon welche Rekombinationsart oder Re\-kom\-bi\-na\-tions\-ra\-ten-Art verwendet wird.
-Dies weist darauf hin, dass das Fenster an Iterationen, in denen die Rekombination die Fitness verbessern kann, nicht mit Hilfe der Rekombinationsrate beeinflusst werden kann.\\
+Dies weist darauf hin, dass das Fenster an Iterationen, in denen die Rekombination die Fitness verbessern kann, nicht mit Hilfe der Rekombinationsrate beeinflusst wurde.\\
 Die folgende Abbildung \ref{fig:encodePosRekombination} beschreibt die Zusammenhänge aus Rekombinationsraten-Arten und der Anzahl positiver Rekombinationen.
 
 \begin{figure}[H]
@@ -258,7 +270,7 @@ In Abbildung \ref{fig:encodePosRekombination} kann beobachtet werden, dass für 
 Für die konstante und linear fallende Rekombinationsrate ist die Two-Point Rekombination in dieser Hinsicht besser als die One-Point Rekombination.
 Außerdem wird ersichtlich, dass die Rekombinationsrate mit der One-Fifth Regel zu niedrigeren Rekombinationserfolgen führt als die anderen Rekombinationsraten-Arten.\\
 Eine höhere Rekombinationsrate bedeutet zudem eine höhere Chance, dass die Rekombination ausgeführt wird und somit die Fitness verbessert.
-Die positive Steigung in den Abbildungen \ref{fig:encodePosRekombinationKonstant} und \ref{fig:encodePosRekombinationOneFifth} kann dadurch erklärt werden.
+Die positiven Steigungen in den Abbildungen \ref{fig:encodePosRekombinationKonstant} und \ref{fig:encodePosRekombinationOneFifth} können dadurch erklärt werden.
 Allerdings bleibt unklar, warum die konstanten Rekombinationsraten von 1,0 weniger Rekombinationserfolge hervorbringen als die konstanten Rekombinationsraten von 0,875.
 Dies gilt für alle Rekombinationsarten mit der konstanten Rekombinationsrate.\\
 Ebenfalls überraschend sind die kurzfristigen lokalen Maxima, die die Abbildungen \ref{fig:encodePosRekombinationKonstant} und \ref{fig:encodePosRekombinationOneFifth} bei geringen Rekombinationsraten aufzeigen.
@@ -276,15 +288,15 @@ Jede der Tabellen stellt eine Rekombinationsart mit verschiedenen Parametrierung
 Wie in Abschnitt \ref{subsec:rohdatenEncode} wurde für das Koza-Testszenario der Offset als Parameter nicht weiter betrachtet.
 Dies geht aus den Ergebnissen von Parity und Keijzer hervor, bei denen keine erfolgreichen Rekombinationsschritte ausgeführt wurden, wenn ein Offset aktiv war.
 Da mit dieser Arbeit die Effizienz der Rekombination ausgewertet werden soll, ist es sinnvoll den Offset nicht näher zu betrachten, um den vollen Umfang der Fitnessverbesserungen durch Rekombination zu bewerten.
-Ziel des Abschnittes ist es die Zusammenhänge zwischen verschiedenen Rekombinationsraten-Arten und dem Erfolg des CGP-Trainings zu finden.
-Außerdem soll bestimmt werden, welche Metrik für die Auswertung der bayes'schen Analyse verwendet werden soll.
+Ziel des Abschnittes ist es, die Zusammenhänge zwischen verschiedenen Rekombinationsraten-Arten und dem Erfolg des CGP-Trainings zu finden.
+Außerdem soll bestimmt werden, welche Metrik für die Auswertung der Bayes'schen Analyse verwendet werden soll.
 In diesem Abschnitt werden nur die Ergebnisse von Koza ausgewertet und erlauben noch keine allgemeinen Aussagen.
 Diese werden in Abschnitt \ref{subsec:rohdatenZusammenfassung} ausgewertet, indem die Ergebnisse aus allen Testszenarien zusammengetragen und verglichen werden.
 
 Aus den Spalten \glqq Stopp-Kriterium erfüllt\grqq\space der drei Tabellen \ref{table:kozaOnePointRohdaten}, \ref{table:kozaTwoPointRohdaten} und \ref{table:kozaUniformRohdaten} geht hervor, dass relativ viele Durchgänge des CGP-Trainings konvergiert sind.
-Deswegen wird für die bayes'sche Analyse in Abschnitt \ref{subsec:bayesKoza} die Anzahl an Iterationen bis zur Konvergenz als Metrik verwendet.
+Deswegen wird für die Bayes'sche Analyse in Abschnitt \ref{subsec:bayesKoza} die Anzahl an Iterationen bis zur Konvergenz als Metrik verwendet.
 Außerdem lässt sich erkennen, dass mehr Mutationen zu einer Verbesserung der Fitness geführt haben als Rekombinationsschritte.
-Gleichzeitig gehen einige Erfolge der Rekombinationsschritte verloren, indem anschließend noch eine Mutation ausgeführt wurde, wie in den Spalten \glqq Anzahl negative Mutationen\grqq\space zu sehen ist.
+Gleichzeitig gehen einige Erfolge der Rekombinationsschritte verloren, indem anschließend noch eine Mutation ausgeführt wurde, wie in der Spalte \glqq Anzahl negative Mutationen\grqq\space zu sehen ist.
 Dies kann dadurch passieren, dass die Auswahl der Elitisten erst nach der Mutation getroffen wird und so keine Evaluation der Fitness zwischen Rekombination und Mutation stattfindet.
 Eine Möglichkeit dies zu beheben wäre es, die Elitisten nach der Rekombination mit den Elitisten nach der Mutation zu vergleichen und die besten Chromosomen zu verwenden, die aus beiden genetischen Operationen resultieren.\\
 Die Rekombination ist dabei vor allem in den frühen Iterationen erfolgreich.
@@ -305,14 +317,14 @@ Demnach liefern die CGP-Modelle ohne Rekombination optimierte Ergebnisse währen
 Trotzdem können für einige vereinzelte CGP-Konfigurationen bereits frühere Konvergenzen bei gleicher Anzahl an erfüllten Stopp-Kriterien beobachtet werden.
 Ein Beispiel bietet die Konfiguration \glqq Uniform Clegg: 0,0015\grqq\space aus Tabelle \ref{table:kozaUniformRohdaten}.
 Dies ist ein Anzeichen dafür, dass CGP-Modelle durch Rekombination effizienter werden können, wenn die Rekombination sinnvoll eingesetzt wird.\\
-Des weiteren wurde beim Vergleich der Spalten \glqq Anzahl positive Rekombinationen\grqq, \glqq Anzahl negative Mutationen\grqq\space und \glqq Median Iterationen positive Rekombinationen\grqq mit den Spalten \glqq Median Iterationen bis Konvergenz\grqq\space und \glqq Stopp-Kriterium erfüllt\grqq\space keine zusammenhängenden Muster erkannt.
+Des weiteren werden beim Vergleich der Spalten \glqq Anzahl positive Rekombinationen\grqq, \glqq Anzahl negative Mutationen\grqq\space und \glqq Median Iterationen positive Rekombinationen\grqq\space mit den Spalten \glqq Median Iterationen bis Konvergenz\grqq\space und \glqq Stopp-Kriterium erfüllt\grqq\space keine zusammenhängenden Muster erkannt.
 Eine Möglichkeit dafür, dass die Anzahl der positiven Rekombinationen keine deutliche Veränderungen in der Effizienz des CGPs hervorruft, könnten die negativen Mutationen sein.
 In weiteren Tests könnte dieser Zusammenhang untersucht werden, indem keine Mutation ausgeführt wird, wenn bereits eine Rekombination die Fitness des Modells verbessert hat.
 So könnte überprüft werden, ob die CGP-Modelle mit mehr Rekombinationserfolgen auch bessere Ergebnisse liefern oder ob Mutationserfolge relevanter für ein erfolgreiches CGP-Training sind.\\
 Ein weiterer Punkt der auffällt sind die relativ hohen Zahlen der negativen Mutationen im Koza-Testszenario.
-Dies könnte daran liegen, dass die Fitness-Werte in SR Benchmarks kontinuierlich sind, während sie in booleschen Problemen durch diskrete Werte abgebildet werden.
+Dies könnte daran liegen, dass die Fitness-Werte in SR Benchmarks kontinuierlich sind, während sie in Booleschen Problemen durch diskrete Werte abgebildet werden.
 Dadurch können auch kleinere Trainingserfolge durch Rekombination in den Tabellen abgebildet werden.
-Dies könnte bedeuten, dass vor allem bei SR die Evaluierung nach der Rekombination als Zwischenschritt sinnvoll sein könnte.\\
+Dies könnte bedeuten, dass vor allem bei SR die Evaluierung nach der Rekombination als Zwischenschritt für Standard-CGP sinnvoll sein könnte.\\
 Um die positiven Rekombinationen zu bewerten wird folgende Abbildung \ref{fig:kozaPosRekombination} eingeführt:
 
 \begin{figure}[H]
@@ -344,7 +356,7 @@ Zu erkennen ist, dass die Uniform Rekombination für jede Rekombinationsraten-Ar
 Die Rekombination mit der One-Fifth Regel schneidet in dieser Betrachtung schlechter ab als die konstante und linear fallende Rekombinationsrate.
 Zu beachten ist, dass es sich dabei um eine quantitative Bewertung handelt.
 Es wird also nicht ersichtlich wie hoch die jeweiligen Trainingserfolge der Rekombinationen ausfallen.
-Es macht Sinn dies besonders für SR Benchmarks in weiteren Tests näher zu betrachten, da hier die Fitness einen kontinuierlichen Wert einnimmt und sich die Trainingserfolge stark voneinander unterscheiden können.\\
+Es macht Sinn dies besonders für SR Benchmarks in weiteren Tests näher zu betrachten, da hier die Fitness einen kontinuierlichen Wert einnimmt und sich die Qualität Trainingserfolge stark voneinander unterscheiden kann.\\
 Für die konstante Rekombinationsrate und diejenige mit der One-Fifth Regel, werden mit höheren Rekombinationsraten auch höhere Chancen gegeben, dass eine Rekombination die Fitness verbessert.
 Demnach macht es Sinn, dass für höhere Rekombinationsraten die Anzahl an positiven Rekombinationen steigt, wie es in den Abbildungen \ref{fig:kozaPosRekombinationKonstant} und \ref{fig:kozaPosRekombinationOneFifth} der Fall ist.
 Interessant werden diejenigen lokalen Maxima, die bereits entstehen, bevor jeweils die maximale Rekombinationsrate erreicht wurde.
@@ -353,33 +365,33 @@ In diesen Punkten könnte die Rekombinationsrate für diese Konfigurationen der 
 
 \subsection{Rohdatenanalyse: Zusammenfassung}
 \label{subsec:rohdatenZusammenfassung}
-
+\subsubsection{Zusammenfassung: Analyse der Hyperparameteroptimierung}
 Zuerst sollen die Ergebnisse der Hyperparameteranalyse von Parity und Keijzer miteinander verglichen werden, um Zusammenhänge zu erschließen und einzelne Beobachtungen validieren zu können.
-Die folgenden Abschnitte beziehen sich dabei auf die jeweiligen Spalten der Tabellen \ref{table:parityHPO} und \ref{table:keijzerHPO}.\\
-\textbf{Rechenknoten:} Bei Parity kann beobachtet werden, dass die CGP-Konfiguration ohne Rekombination am wenigsten Rechenknoten aufweist. 
+Die folgenden Abschnitte beziehen sich dabei auf die jeweiligen Spalten der Tabellen \ref{table:parityHPO} und \ref{table:keijzerHPO}.
+\paragraph{Rechenknoten:} Bei Parity kann beobachtet werden, dass die CGP-Konfiguration ohne Rekombination am wenigsten Rechenknoten aufweist. 
 Außerdem kann der Trend beobachtet werden, dass komplexere Rekombinationsalgorithmen durchschnittlich weniger Rechenknoten zugeschrieben bekommen als einfachere Algorithmen.
 Dabei ist die Streuung um den Mittelwert höher, umso komplexer die Rekombinationsalgorithmen sind.
 Dies könnte darauf hindeuten, dass eine größere Anzahl an Rechenknoten zu einer geringeren Streuung der Rechenknotenanzahl pro Rekombinationsart führt.
-Im Vergleich dazu ergeben die Ergebnisse von Keijzer ein völlig anderes Bild: gegensätzlich zu Parity hat die CGP-Konfiguration ohne Rekombination die höchste Anzahl an Rechenknoten im Vergleich zu den Mittelwerten über die unterschiedlichen Rekombinationsalgorithmen.
+Im Vergleich dazu ergeben die Ergebnisse von Keijzer ein völlig anderes Bild: gegensätzlich zu Parity hat die CGP-Konfiguration ohne Rekombination die höchste Anzahl an Rechenknoten im Vergleich zu den Mittelwerten über die unterschiedlichen Rekombinationsarten.
 Den bei Parity beobachteten Trend, dass komplexere Rekombinationen eine niedrigere Anzahl an Rechenknoten erfordern könnten, kann bei Keijzer nicht bestätigt werden.
 Hier erfordert die Uniform-Rekombination die höchste durchschnittliche Anzahl an Rechenknoten.
 Ebenso ergibt sich für Keijzer ein anderes Bild als bei Parity, wenn die Streuung der Rechenknotenanzahl betrachtet wird: Die Two-Point Rekombination weist zwar die geringste Anzahl an Rechenknoten auf, zeichnet sich aber gleichzeitig durch die niedrigste Streuung aus.
 Zusammenfassend lässt sich für die Anzahl der Rechenknoten sagen, dass Parity und Keijzer vollkommen unterschiedliche Ergebnisse liefern.
 Demnach können keine Aussagen getroffen werden, wie die Anzahl der Rechenknoten mit den unterschiedlichen CGP-Konfigurationen zusammenhängen.
 Die Möglichkeit besteht ebenfalls, dass überhaupt kein Zusammenhang zwischen diesen beiden Komponenten besteht.
-Durch weitere Tests könnte dies näher betrachtet werden.\\
-\textbf{Populationsgröße:} Bei Betrachtung der Populationsgröße kann für Parity zusammengefasst werden, dass die CGP-Konfiguration ohne Rekombination die deutlich kleinste Populationsgröße benötigt hat.
-Für Keijzer konnte diese Beobachtung nicht gemacht werden.
-Umgekehrt konnte bei Parity nicht bestätigt werden, dass Two-Point und Uniform Rekombination mit linear fallender Rekombinationsrate ohne Offset einen geringeren $\lambda$-Wert aufweisen.
+Durch weitere Tests könnte dies näher betrachtet werden.
+\paragraph{Populationsgröße:} Bei Betrachtung der Populationsgröße kann für Parity zusammengefasst werden, dass die CGP-Konfiguration ohne Rekombination die deutlich kleinste Populationsgröße benötigt hat.
+Für Keijzer kann diese Beobachtung nicht gemacht werden.
+Umgekehrt kann bei Parity nicht bestätigt werden, dass Two-Point und Uniform Rekombination mit linear fallender Rekombinationsrate ohne Offset einen geringeren $\lambda$-Wert aufweisen.
 Zusammenfassend lässt sich also auch für die Populationsgröße kein Zusammenhang zu den unterschiedlichen Rekombinationsarten herstellen.\\
-\textbf{Rekombinationsraten:} Bei den Ergebnissen der Hyperparameteroptimierung vom Parity-Testszenario werden von konstanten Rekombinationsalgorithmen besonders hohe und besonders niedrige Rekombinationsraten vermieden.
+\paragraph{Rekombinationsraten:} Bei den Ergebnissen der Hyperparameteroptimierung vom Pa\-ri\-ty-Test\-sze\-na\-rio werden von konstanten Rekombinationsalgorithmen besonders hohe und besonders niedrige Rekombinationsraten vermieden.
 Für die linear fallende Rate und die Rekombinationsrate mit der One-Fifth Regel wird nahezu der gesamte Definitionsbereich genutzt.
 Wieder im Gegensatz dazu stehen die Ergebnisse des Keijzer-Testszenarios.
 Hier werden für nahezu alle CGP-Konfigurationen sehr hohe oder niedrige Werte für die Rekombinationsrate verwendet.
 Somit kann durch die Ergebnisse der Hyperparameteranalyse nicht bewertet werden, welche Bereiche der Rekombinationsrate besonders effektiv sind.\\
-\textbf{Offset:} Bei Parity wird der geringste Offset bei der Two-Point Rekombination und der höchste Offset bei der Uniform Rekombination verwendet.
+\paragraph{Offsets:} Bei Parity wird der geringste Offset bei der Two-Point Rekombination und der höchste Offset bei der Uniform Rekombination verwendet.
 Werden bei Keijzer die originalen Ergebnisse verwendet, bei denen ein Offset von 0 zugelassen wird, kann dieses Verhalten ebenfalls beobachtet werden.
-Dies könnte bedeuten, dass die Two-Point Rekombination effizienter ist als die Uniform Rekombination, da bei ersterem weniger Rekombinationsschritte ausgesetzt werden.
+Dies könnte bedeuten, dass die Two-Point Rekombination für Standard-CGP effizienter ist als die Uniform Rekombination, da bei ersterem weniger Rekombinationsschritte ausgesetzt werden.
 Die für den Offset neu eingefügten Werte, falls ein Offset gleich 0 bestimmt wird, sind bei Parity ähnlich zum allgemeinen Mittelwert des Offsets.
 Ein anderes Verhalten kann für das Keijzer-Testszenario beobachtet werden, bei dem die zweitbesten Parametersätze sehr hohe Offset-Werte verwenden.
 Dies ergibt also einen extrem hohen Sprung im Offset zwischen erstbestem und zweitbestem Parametersatz.
@@ -391,12 +403,13 @@ Außerdem kann die Anzahl an ausgeführten CGP-Trainings pro Bewertungsschritt i
 Durch diese Schritte könnten sich die Ergebnisse von Parity und Keijzer aneinander angleichen, wodurch bessere Bewertungen stattfinden könnten.
 Andernfalls könnte die Aussage gestärkt werden, dass die CGP-Konfigurationen keinen Zusammenhang zur Auswahl einzelner Hyperparameter aufweisen.
 
+\subsubsection{Zusammenfassung: Analyse der Rohdatentabellen}
 Folgend sollen die Rohdatenanalysen der vier Testszenarien Parity, Keijzer, Encode und Koza zusammengefasst und miteinander verglichen werden.\\
-Für alle Testszenarien wurde festgestellt, dass deutlich mehr Mutationen zu einer Verbesserung der Fitness geführt haben als es für Rekombinationen der Fall war.
+Für alle Testszenarien wird festgestellt, dass deutlich mehr Mutationen zu einer Verbesserung der Fitness geführt haben als es für Rekombinationen der Fall war.
 Dies kann damit zusammenhängen, dass die Rekombinationserfolge bei allen Testszenarien in den frühen Testphasen stattgefunden haben.
 Diese Beobachtung wird bei Parity und Keijzer dadurch gestützt, dass die Rekombination kein einziges mal die Fitness verbessern konnte, wenn ein Offset eingesetzt wurde.
-Für die Testszenarien Keijzer und Koza wurden mehr Rekombinationserfolge aufgezeichnet als für die booleschen Probleme.
-Das kann damit zusammenhängen, dass die Fitness in booleschen Problemen einen diskreten Wertebereich aufweist.
+Für die Testszenarien Keijzer und Koza wurden mehr Rekombinationserfolge aufgezeichnet als für die Booleschen Probleme.
+Das kann damit zusammenhängen, dass die Fitness in Booleschen Problemen einen diskreten Wertebereich aufweist.
 Für Tests aus der symbolischen Regression ergeben sich damit mehr Möglichkeiten die Fitness zu verbessern, indem die Verbesserungen kleinschrittiger ablaufen können.
 Zu beachten ist, dass die Bewertungen in diesem Abschnitt \ref{sec:ergebnisseRohdaten} quantitativ sind und nicht qualitativ.
 Demnach wird nur betrachtet wie viele Rekombinationen und Mutationen die Fitness verbessert haben.
@@ -412,7 +425,7 @@ So könnte die Rekombination früher ausgesetzt werden, ohne Erfolge der Rekombi
 Allerdings tritt beim Encode-Testszenario so ein Fall mit späteren Rekombinationserfolgen nicht auf.
 Dies kann aber daran liegen, dass im Encode-Testszenario insgesamt weniger Rekombinationserfolge vermerkt wurden als beim Koza-Testfall.
 Es ist also empfohlen dieses Verhalten bei weiteren Testfällen mit SR zu prüfen.\\
-Ein weiterer Punkt, der für alle Testszenarien beobachtet wurde ist, dass es Iterationen gibt, in denen die verbesserte Fitness durch die Mutation verloren gegangen ist.
+Ein weiterer Punkt, der für alle Testszenarien beobachtet wird ist, dass es Iterationen gibt, in denen die verbesserte Fitness durch die Mutation verloren gegangen ist.
 Dies kann auftreten, da die Auswahl der Elitisten erst nach der Rekombination ausgeführt wird und somit im Normalfall keine Evaluation nach der Rekombination und vor der Mutation stattfindet.
 Dieser Missstand könnte dadurch gelöst werden, indem die Fitness bereits nach der Rekombination evaluiert wird und hier bereits Elitisten zwischengespeichert werden.
 Anschließend könnten die Elitisten nach der Mutation mit ersteren verglichen werden, um so die besten Elitisten zu wählen.\\
@@ -421,36 +434,36 @@ In den Testfällen Encode und Koza konnte außerdem festgestellt werden, dass di
 In den Hyperparameteranalysen von Parity und Keijzer werden außerdem jeweils 7 aus 9 CGP-Konfigurationen mit einem Offset versehen und so der gesamte Rekombinationserfolg übergangen.
 Für den Keijzer-Testfall konnte auch beobachtet werden, dass diejenigen CGP-Konfigurationen mit Offset weniger Iterationen bei konvergierenden Durchgängen brauchten als die jeweiligen gleichen CGP-Konfigurationen ohne Offset.
 Dies könnte ein Indiz dafür sein, dass nicht nur die Mutation die Rekombination negativ beeinflusst, sondern auch umgekehrt die Rekombination den Erfolg der Mutation verringert.
-Eine Lösungsmöglichkeit wäre womöglich eine Spaltung von Rekombination und Mutation, wie die bereits für GP verwendet wird \cite{eiben_introduction_2015}.
+Eine Lösungsmöglichkeit wäre womöglich eine Spaltung von Rekombination und Mutation, wie sie bereits für GP verwendet wird \cite{eiben_introduction_2015}.
 Dabei würden die beiden genetischen Operatoren nicht nacheinander ablaufen, sondern gleichzeitig.
 Dafür wird die Population gespalten und ein Teil des Nachwuchs wird durch Rekombination und der andere Teil durch Mutation erzeugt.
 So würden gleichzeitig die großen Veränderungen der Chromosomen eingebracht werden, die die Rekombination erzeugt, aber auch die kleineren Anpassungen, die aus der Mutation herrühren.
 So könnte der Lösungsraum gleichzeitig groß- und kleinschrittig abgesucht werden.\\
 Als letzte wichtige Erkenntnis aus diesem Abschnitt kann zusammengefasst werden, dass die Uniform Rekombination deutlich mehr positive Rekombinationen hervorgebracht hat als die anderen Rekombinationsarten.
 Während die konstante und linear fallende Rekombination ähnlich viele Rekombinationserfolge erzielt haben, hat die Rekombination mit der One-Fifth Regel in deutlich weniger Iterationen die Fitness verbessert.
-Demnach hat die Uniform Rekombination mit konstanter oder linear fallender Rekombinationsrate das größte Potential die Rekombination an sich effizienter zu gestalten.
+Demnach hat die Uniform Rekombination mit konstanter oder linear fallender Rekombinationsrate das größte Potential die Rekombination effizienter zu gestalten.
 Interessant ist die Beobachtung, dass nicht nur höhere Rekombinationsraten zu mehr positiven Rekombinationen geführt haben, obwohl eine höhere Rekombinationsrate die Wahrscheinlichkeit für eine effiziente Rekombination steigert.
 Im Keijzer-Testszenario konnte die konstante Rekombinationsrate von 0,8 mehr positiver Rekombinationen erzielen als die linear fallende Rekombinationsrate, die mit 0,9 initialisiert wird.
 Auch bei den Testfällen Encode und Koza konnten in den Plots zu positiven Rekombinationen über Rekombinationsraten lokale Maxima gefunden werden.
-Bei diesen wurden Hochpunkte für positive Rekombinationen gefunden, die bei relativ geringen Rekombinationsraten entstanden sind.
+Dabei handelt es sich Hochpunkte für positive Rekombinationen, die für relativ geringe Rekombinationsraten entstanden sind.
 Diese Rekombinationsraten könnten weiter in anderen Testszenarien untersucht werden, um Muster zu erkennen und gegebenenfalls eine ideale Rekombinationsrate zu finden oder mehr Verständnis aufzubauen.\\
-Die Ergebnisse in diesem Abschnitt zeigen, dass im Gebrauch der Rekombinationsalgorithmen mehr Potential steckt als mit dem CGP-Aufbau aus Abbildung \ref{fig:aufbauCGP} genutzt wird.
+Die Ergebnisse in diesem Abschnitt zeigen, dass im Gebrauch der Rekombinationsalgorithmen mehr Potential steckt als mit dem Standard-CGP-Vorgehen aus Abbildung \ref{fig:aufbauCGP} genutzt wird.
 Der in diesem Abschnitt erläuterte Ausblick kann verwendet werden, um weitere Erkenntnisse zu sammeln und die Rekombination im allgemeinen weiter zu fördern.
-Trotzdem, dass das Potential nicht voll genutzt wird, konnten die bisherigen Ergebnisse Grund zu der Vermutung geben, dass bereits mit diesem Stand die Effizienz eines CGPs gesteigert werden kann, wenn die Rekombination richtig gewählt und parametriert wird.
+Trotzdem, dass das Potential nicht voll genutzt wird, konnten die bisherigen Ergebnisse Grund zu der Vermutung geben, dass auch für das Standard-CGP-Vorgehen die Effizienz eines CGPs gesteigert werden kann, wenn die Rekombination richtig gewählt und parametriert wird.
 Diese Ergebnisse wurden für Encode und Koza auch erzielt, obwohl nur die Hyperparameter der CGP-Konfigurationen ohne Rekombination optimiert wurden.
-Der folgende Abschnitt \ref{sec:ergebnisseBayes} wertet den Ist-Stand der Standard-Rekombination in CGPs weiter aus.
+Der folgende Abschnitt \ref{sec:ergebnisseBayes} wertet den Ist-Stand der Rekombination in Standard-CGP weiter aus.
 
 
 \section{Ergebnisse Bayes'sche Analyse}
 \label{sec:ergebnisseBayes}
 
-In diesem Abschnitt werden die Ergebnisse der bayes'schen Analyse aufgezeigt und bewertet.
+In diesem Abschnitt werden die Ergebnisse der Bayes'schen Analyse aufgezeigt und bewertet.
 Dafür werden die Tabellen aus dem Anhang \ref{sec:appendixTabellenBayes} verwendet.
 Aus den Ergebnissen der Rohdatenanalyse von Encode (Abschnitt \ref{subsec:rohdatenEncode}) und Koza (Abschnitt \ref{subsec:rohdatenKoza}) geht hervor, dass für Encode die Fitness bei der 10000. Iteration bewertet wird und für Koza die Anzahl der Iterationen bis zur Konvergenz.
 Für die restlichen Testszenarien Parity und Keijzer wird ebenfalls die Anzahl der Iterationen bis zur Konvergenz analysiert.
-Ziel der bayes'schen Analyse ist es herauszufinden, ob Rekombination die Effizienz von CGPs verbessern.
+Ziel der Bayes'schen Analyse ist es herauszufinden, ob Rekombination die Effizienz von CGPs verbessern.
 Aus Abschnitt \ref{subsec:rohdatenZusammenfassung} geht hervor, dass Rekombination ein vermutlich größeres Potential besitzt als mit Standard-Vorgehensweisen genutzt wird.
-Die bayes'sche Analyse wird verwendet, um die Effizienz der Standard-Vorgehensweisen mit und ohne Rekombination abzugleichen.\\
+Die Bayes'sche Analyse wird verwendet, um die Effizienz der Standard-Vorgehensweisen mit und ohne Rekombination abzugleichen.\\
 Folgend werden die Spalten der Tabellen näher erläutert:
 \begin{itemize}
 	\item \textbf{CGP-Konfiguration:} Es handelt sich um die jeweils für das Training verwendete CGP-Konfiguration.
@@ -477,7 +490,7 @@ Folgend werden die Spalten der Tabellen näher erläutert:
 \subsection{Bayes'sche Analyse: Parity}
 \label{subsec:bayesParity}
 
-Dieser Abschnitt bezieht sich auf die Tabelle \ref{table:parityBayesian} und bewertet lediglich die Ergebnisse der bayes'schen Analyse von Parity.
+Dieser Abschnitt bezieht sich auf die Tabelle \ref{table:parityBayesian} und bewertet lediglich die Ergebnisse der Bayes'schen Analyse von Parity.
 Jegliche Aussagen können vorerst nicht auf die Allgemeinheit geschlossen werden und werden in Abschnitt \ref{subsec:bayesZusammenfassung} näher bewertet.
 \paragraph{Bewertung MW und PL-Plätze}
 Werden die MW der verschiedenen CGP-Modelle betrachtet, wird deutlich, dass nur 2 der 18 CGP-Konfigurationen mit Rekombination schlechter abschneiden als diejenige ohne Rekombination.
@@ -517,7 +530,7 @@ Da Rekombination laut Abschnitt \ref{subsec:rohdatenZusammenfassung} besonders i
 \subsection{Bayes'sche Analyse: Keijzer}
 \label{subsec:bayesKeijzer}
 
-Dieser Abschnitt beurteilt die bayes'sche Analyse des Keijzer-Testszenarios und bezieht sich dabei auf die Tabelle \ref{table:keijzerBayesian}.
+Dieser Abschnitt beurteilt die Bayes'sche Analyse des Keijzer-Testszenarios und bezieht sich dabei auf die Tabelle \ref{table:keijzerBayesian}.
 Alle Aussagen und Bewertungen der Ergebnisse beziehen sich demnach nur auf den Keijzer-Testfall und können nicht direkt auf die Allgemeinheit bezogen werden.
 In Abschnitt \ref{subsec:bayesZusammenfassung} werden die Ergebnisse aller Testszenarien zusammengefasst und bewertet.
 \paragraph{Bewertung MW und PL-Plätze}
@@ -563,10 +576,10 @@ Da Abschnitt \ref{subsec:rohdatenZusammenfassung} zufolge die Rekombination beso
 \subsection{Bayes'sche Analyse: Encode}
 \label{subsec:bayesEncode}
 
-Dieser Abschnitt befasst sich mit der Evaluierung der bayes'schen Analyse von Encode und bezieht sich auf die Tabellen \ref{table:encodeOnePointBayesian}, \ref{table:encodeTwoPointBayesian} und \ref{table:encodeUniformBayesian}.
-In der bayes'schen Analyse von Encode wird bewertet wie hoch die Fitness-Werte der CGP-Modelle bei der 10000. Iteration sind.
+Dieser Abschnitt befasst sich mit der Evaluierung der Bayes'schen Analyse von Encode und bezieht sich auf die Tabellen \ref{table:encodeOnePointBayesian}, \ref{table:encodeTwoPointBayesian} und \ref{table:encodeUniformBayesian}.
+In der Bayes'schen Analyse von Encode wird bewertet wie hoch die Fitness-Werte der CGP-Modelle bei der 10000. Iteration sind.
 Zu beachten ist, dass sich die Aussagen innerhalb dieses Abschnittes nur auf den Encode-Testfall beziehen und vorerst keine allgemeinen Schlussfolgerungen zulassen.
-In Abschnitt \ref{subsec:bayesZusammenfassung} werden alle Ergebnisse der bayes'schen Analysen zusammengetragen und verglichen.\\
+In Abschnitt \ref{subsec:bayesZusammenfassung} werden alle Ergebnisse der Bayes'schen Analysen zusammengetragen und verglichen.\\
 Innerhalb der Tabellen \ref{table:encodeOnePointBayesian}, \ref{table:encodeTwoPointBayesian} und \ref{table:encodeUniformBayesian} wurden die besten drei Ergebnisse pro Spalte grün markiert und die schlechtesten rot.
 Zu beachten ist, dass die CGP-Konfiguration ohne Rekombination durch eine Hyperparameteranalyse optimiert wurde.
 Die restlichen CGP-Konfigurationen haben die Hyperparameter übernommen und die Rekombinationsrate belegt.
@@ -601,8 +614,8 @@ Es lässt sich also keine einheitliche Reihenfolge bilden, die die Effizienz der
 Ebenfalls lassen sich durch die Auswertung der Tabellen \ref{table:encodeOnePointBayesian}, \ref{table:encodeTwoPointBayesian} und \ref{table:encodeUniformBayesian} keine Muster finden wie die verschiedenen Re\-kom\-bi\-na\-tions\-ra\-ten-Ar\-ten am besten zu parametrieren sind.
 Dementsprechend wäre es für das Standard-CGP-Verfahren empfehlenswert verschiedene Rekombinationsraten-Arten innerhalb der Hyperparameteranalyse zu testen.
 \paragraph{Bewertung HPDI}
-Für die Testszenarien Parity und Keijzer wurde in den Evaluationen der bayes'schen Analyse in den Abschnitten \ref{subsec:bayesParity} und \ref{subsec:bayesKeijzer} herausgefunden, dass kleine untere Grenzen in den HPDI-Werten sehr wahrscheinlich eine kleine Intervallgröße hervorbringen.
-Bei diesen bayes'schen Analysen wurde allerdings die Anzahl der Iteration bis zur Konvergenz betrachtet, im Gegensatz zu Encode, bei dem die Fitness zu einer bestimmten Iteration betrachtet wird.
+Für die Testszenarien Parity und Keijzer wurde in den Evaluationen der Bayes'schen Analyse in den Abschnitten \ref{subsec:bayesParity} und \ref{subsec:bayesKeijzer} herausgefunden, dass kleine untere Grenzen in den HPDI-Werten sehr wahrscheinlich eine kleine Intervallgröße hervorbringen.
+Bei diesen Bayes'schen Analysen wurde allerdings die Anzahl der Iteration bis zur Konvergenz betrachtet, im Gegensatz zu Encode, bei dem die Fitness zu einer bestimmten Iteration betrachtet wird.
 Demnach soll diese Beobachtung für den Fall der Fitness-Bewertung auch betrachtet werden.
 Allerdings fällt bei der Betrachtung der Tabelle \ref{table:encodeTwoPointBayesian} auf, dass diese Beobachtung für die Fitness-Bewertung nicht zutrifft:
 Ein Gegenbeispiel ergeben die drei fett gedruckten HPDI-Werte dieser Tabelle, die alle drei die kleinsten untersten Grenzen abbilden.
@@ -613,10 +626,10 @@ Dementsprechend kann keine Aussage darüber getroffen werden, wie gut die Fitnes
 \subsection{Bayes'sche Analyse: Koza}
 \label{subsec:bayesKoza}
 
-Dieser Abschnitt evaluiert die Ergebnisse der bayes'schen Analyse des Koza-Testszenarios und bezieht sich dabei auf die Tabellen \ref{table:kozaOnePointBayesian}, \ref{table:kozaTwoPointBayesian} und \ref{table:kozaUniformBayesian}.
-Die bayes'sche Analyse des Koza-Testfalls bewertet wie in Abschnitt \ref{subsec:rohdatenKoza} beschrieben die Anzahl der Iterationen bis zur Konvergenz.
+Dieser Abschnitt evaluiert die Ergebnisse der Bayes'schen Analyse des Koza-Testszenarios und bezieht sich dabei auf die Tabellen \ref{table:kozaOnePointBayesian}, \ref{table:kozaTwoPointBayesian} und \ref{table:kozaUniformBayesian}.
+Die Bayes'sche Analyse des Koza-Testfalls bewertet wie in Abschnitt \ref{subsec:rohdatenKoza} beschrieben die Anzahl der Iterationen bis zur Konvergenz.
 Alle Aussagen und Ergebnisse in diesem Abschnitt beziehen sich ausschließlich auf die Auswertung des Koza-Testfalls und können nicht als allgemeine Aussagen gewertet werden.
-In Abschnitt \ref{subsec:bayesZusammenfassung} werden die Evaluationsergebnisse aller Testszenarien für die bayes'sche Analyse zusammengefasst und bewertet.
+In Abschnitt \ref{subsec:bayesZusammenfassung} werden die Evaluationsergebnisse aller Testszenarien für die Bayes'sche Analyse zusammengefasst und bewertet.
 \paragraph{Bewertung MW und PL-Plätze}
 Wird die Spalte MW aus den jeweils genannten Tabellen betrachtet und einzeln miteinander verglichen, werden folgende Ergebnisse sichtbar: für die One-Point Rekombination sind keine Verfahren mit Rekombination besser als das ohne Rekombination, für die Two-Point Rekombination sind fünf aus 22 CGP-Modelle mit Rekombination besser, für die Uniform Rekombination sind es lediglich drei Verfahren.
 Dies zeigt, dass für den Koza-Testfall Verfahren mit eingefügtem Rekombinationsschritt deutlich schlechter abschneiden als ohne Rekombination.
@@ -676,7 +689,7 @@ Umgekehrt wird es für die folgenden Durchläufe der langsameren CGP-Modelle wah
 \subsection{Bayes'sche Analyse: Zusammenfassung}
 \label{subsec:bayesZusammenfassung}
 
-Dieser Abschnitt vergleicht die Ergebnisse und Aussagen der bayes'schen Analyse aller Testszenarien und fasst die Erkenntnisse zusammen.
+Dieser Abschnitt vergleicht die Ergebnisse und Aussagen der Bayes'schen Analyse aller Testszenarien und fasst die Erkenntnisse zusammen.
 \paragraph{Erkenntnisse zum Offset}
 Zuerst werden die Ergebnisse der Analysen aus den Abschnitten \ref{subsec:bayesParity} und \ref{subsec:bayesKeijzer} betrachtet, um die Verwendung eines Offsets für die Rekombination zu bewerten.
 Für Parity und Keijzer wurde anhand des MW und PL-Platzes bestimmt, welche jeweils gleichen CGP-Konfigurationen mit oder ohne Offset bessere Ergebnisse geliefert haben.
@@ -731,7 +744,7 @@ Umgekehrt wird die Streuung größer, wenn die ersten Durchläufe relativ spät 
 Wichtig dabei ist, dass es sich nicht um Ausreißer handeln darf, da diese bei der 95\%-igen HPDI nicht betrachtet werden.
 Des Weiteren kann daraus abgeleitet werden, dass Trainingserfolge besonders in den frühen Iterationen wichtig sind, da späte Konvergenzen und somit späte Trainingserfolge eine größere Streuung aufweisen und damit unsicherer sind.
 Da die Rekombination vor allem in den ersten Iterationen einen größeren Trainingsfortschritt erzielen kann, ist es wichtig die Rekombination weiter auszubauen, um die Streuung der Iterationen bis zur Konvergenz zu reduzieren.\\
-Für den Encode-Testfall wurde in der bayes'schen Analyse die Fitness zur 10000. Iteration bewertet.
+Für den Encode-Testfall wurde in der Bayes'schen Analyse die Fitness zur 10000. Iteration bewertet.
 Die gleiche Analyse ergibt hier, dass es keinen Zusammenhang zwischen den unteren Grenzen der HPDI-Werte zu deren Ranges gibt.
 Demnach kann keine Aussage zu der Streuung der Fitness-Werte in einer Iteration getroffen werden, wenn bekannt ist, dass die kleinsten Fitness-Werte der CGP-Modelle besonders groß oder klein sind.
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  24 MAR 2025 18:32
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.2)  24 MAR 2025 20:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2074,22 +2074,22 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 
 
 ]
-Overfull \hbox (0.90883pt too wide) detected at line 65
+Overfull \hbox (0.90883pt too wide) detected at line 87
  []\TU/LinLibertine(0)/m/n/10.95 XIV
  []
 
 
-Overfull \hbox (0.90883pt too wide) detected at line 66
+Overfull \hbox (0.90883pt too wide) detected at line 88
  []\TU/LinLibertine(0)/m/n/10.95 XIV
  []
 
 
-Overfull \hbox (0.90883pt too wide) detected at line 68
+Overfull \hbox (0.90883pt too wide) detected at line 90
  []\TU/LinLibertine(0)/m/n/10.95 XVI
  []
 
 
-Overfull \hbox (0.73363pt too wide) detected at line 69
+Overfull \hbox (0.73363pt too wide) detected at line 91
  []\TU/LinLibertine(0)/m/n/10.95 XIX
  []
 
@@ -2252,7 +2252,7 @@ chapter 3.
 ]
 
 [22]
-Overfull \hbox (0.27785pt too wide) in paragraph at lines 89--96
+Overfull \hbox (0.27785pt too wide) in paragraph at lines 87--94
 \TU/LinLibertine(0)/m/n/10.95 In dieser Arbeit werden unterschiedliche \TU/LinL
 ibertine(0)/m/it/10.95 CGP-Konfigurationen \TU/LinLibertine(0)/m/n/10.95 mitein
 ander verglichen und
@@ -2265,7 +2265,7 @@ ander verglichen und
 [24]
 
 [25]
-Overfull \hbox (2.01526pt too wide) in paragraph at lines 197--208
+Overfull \hbox (2.01526pt too wide) in paragraph at lines 195--206
 \TU/LinLibertine(0)/m/n/10.95 den Parametersätzen hätten für jede Kombination a
 us Testszenario und CGP-Konfiguration
  []
@@ -2275,15 +2275,15 @@ us Testszenario und CGP-Konfiguration
 [26]
 
 [27]
-
-[28]) (./Ergebnisse.tex
-
-[29]
-
-[30
+Underfull \vbox (badness 3189) has occurred while \output is active []
 
 
-]
+
+[28]
+
+[29]) (./Ergebnisse.tex
+
+[30]
 chapter 4.
 
 Overfull \hbox (0.46494pt too wide) in paragraph at lines 16--17
@@ -2294,13 +2294,10 @@ ML/cmm/m/it/10.95 ^^U$\TU/LinLibertine(0)/m/n/10.95 -Wert
 
 
 
-[31]
-Overfull \hbox (12.79282pt too wide) in paragraph at lines 30--31
-[]\TU/LinLibertine(0)/b/n/10.95 Median Iterationen bis Konvergenz: \TU/LinLiber
-tine(0)/m/n/10.95 Median der Iterationen bis das Stopp-Kriterium
- []
+[31
 
 
+]
 
 [32]
 
@@ -2309,6 +2306,9 @@ tine(0)/m/n/10.95 Median der Iterationen bis das Stopp-Kriterium
 [34]
 
 [35]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [36]
 
@@ -2319,6 +2319,8 @@ tine(0)/m/n/10.95 Median der Iterationen bis das Stopp-Kriterium
 [39]
 
 [40]
+
+[41]
 File: Bilder/EncodePlotPositiveRekombinationKonstant.png Graphic file (type bmp
 )
 <Bilder/EncodePlotPositiveRekombinationKonstant.png>
@@ -2327,14 +2329,6 @@ File: Bilder/EncodePlotPositiveRekombinationClegg.png Graphic file (type bmp)
 File: Bilder/EncodePlotPositiveRekombinationOneFifth.png Graphic file (type bmp
 )
 <Bilder/EncodePlotPositiveRekombinationOneFifth.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[41]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 
 [42]
@@ -2349,16 +2343,29 @@ File: Bilder/KozaPlotPositiveRekombinationClegg.png Graphic file (type bmp)
 File: Bilder/KozaPlotPositiveRekombinationOneFifth.png Graphic file (type bmp)
 <Bilder/KozaPlotPositiveRekombinationOneFifth.png>
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [45]
-Overfull \hbox (3.27357pt too wide) in paragraph at lines 357--393
-\TU/LinLibertine(0)/b/n/10.95 Rekombinationsraten: \TU/LinLibertine(0)/m/n/10.9
-5 Bei den Ergebnissen der Hyperparameteroptimierung vom Parity-
+
+[46]
+Underfull \hbox (badness 10000) in paragraph at lines 383--387
+
  []
 
 
+Overfull \hbox (1.39842pt too wide) in paragraph at lines 387--392
+\TU/LinLibertine(0)/m/n/10.95 rity-Testszenario werden von konstanten Rekombina
+tionsalgorithmen besonders hohe und
+ []
 
-[46]
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--392
+
+ []
+
+
 
 [47]
 
@@ -2371,28 +2378,31 @@ Overfull \hbox (3.27357pt too wide) in paragraph at lines 357--393
 [51]
 
 [52]
-Overfull \hbox (15.17175pt too wide) in paragraph at lines 524--550
+
+[53]
+Overfull \hbox (15.17175pt too wide) in paragraph at lines 537--563
 [] []\TU/LinBiolinum(0)/b/n/10.95 Bewertung MW und PL-Plätze[][] \TU/LinLiberti
 ne(0)/m/n/10.95 Im ersten Schritt wird der MW aller CGP-Konfigurationen
  []
 
 
 
-[53]
-
 [54]
-Overfull \hbox (14.27203pt too wide) in paragraph at lines 574--577
+
+[55]
+Overfull \hbox (14.27203pt too wide) in paragraph at lines 587--590
 \TU/LinLibertine(0)/m/n/10.95 der 22 Verfahren mit Rekombination eine bessere F
 itness aufweisen als die CGP-Konfiguration
  []
 
 
 
-[55]
-
 [56]
 
 [57]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [58]
 
@@ -2400,9 +2410,16 @@ itness aufweisen als die CGP-Konfiguration
 
 [60]
 
-[61]) (./Fazit.tex
+[61]
 
-[62]
+[62]) (./Fazit.tex
+
+[63]
+
+[64
+
+
+]
 chapter 5.
 
 Overfull \hbox (2.21965pt too wide) in paragraph at lines 14--54
@@ -2412,16 +2429,13 @@ ebenenfalls mehr Testszenarien könn-
 
 
 
-[63
-
-
-]
-
-[64])
-
 [65]
 
-[66]
+[66])
+
+[67]
+
+[68]
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/sc' will be
 (Font)              scaled to size 10.95pt on input line 55.
 Package microtype Info: Loading generic protrusion settings for font family
@@ -2437,7 +2451,7 @@ Underfull \hbox (badness 5667) in paragraph at lines 56--56
 
 
 
-[67
+[69
 
 
 ]
@@ -2449,15 +2463,15 @@ GP_with_Crossover_Strategies\TU/LinLibertine(0)/m/n/10.95 . original-date: 2024
 
 
 
-[68]
-
-[69]
-
 [70]
 
 [71]
 
-[72
+[72]
+
+[73]
+
+[74
 
 
 ]
@@ -2586,10 +2600,10 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 Here is how much of TeX's memory you used:
  49487 strings out of 473889
  1044543 string characters out of 5734826
- 1985389 words of memory out of 5000000
+ 1985408 words of memory out of 5000000
  71846 multiletter control sequences out of 15000+600000
  562698 words of font info for 99 fonts, out of 8000000 for 9000
  1350 hyphenation exceptions out of 8191
  122i,17n,136p,10900b,6836s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Main.pdf (101 pages).
+Output written on Main.pdf (103 pages).

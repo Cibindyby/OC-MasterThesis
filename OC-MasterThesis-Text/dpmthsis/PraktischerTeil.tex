@@ -31,13 +31,11 @@ Außerdem wird die Standardfitnessfunktion für Boolesche Benchmarkprobleme verw
 Diese wird durch den Anteil an korrekt zugeordneten Bits definiert. \cite{cui_equidistant_2023}
 Das Stopp-Kriterium ist erfüllt, wenn die Fitness den Wert 0 erreicht.
 Folgend werden die beiden verwendeten Booleschen Benchmarkprobleme näher erläutert:
-
-\textbf{Parity:} N-bit Parity ist eine Mapping-Funktion, die angibt, ob die Summe der Komponenten eines Binär-Vektors gerade oder ungerade ist.
+\paragraph{Parity:} N-bit Parity ist eine Mapping-Funktion, die angibt, ob die Summe der Komponenten eines Binär-Vektors gerade oder ungerade ist.
 Bei 3-bit Parity handelt es sich dabei um Binär-Vektoren der Länge 3.
 Das Evaluationsset besteht aus $2^N=2^3$ Testvektoren. \cite{hohil_1999}
 Demnach gibt es für das CGP drei Eingaben (die Komponenten eines Binär-Vektors) und eine Ausgabe (Binärwert für \glqq gerade\grqq\space / \glqq ungerade\grqq).
-
-\textbf{Encode:} Beim 16-4-bit Encoding wird aus einer 16-stelligen One-Hot-Kodierung ein 4-bit Integer erstellt.
+\paragraph{Encode:} Beim 16-4-bit Encoding wird aus einer 16-stelligen One-Hot-Kodierung ein 4-bit Integer erstellt.
 Die One-Hot-Kodierung besteht dabei aus einem 16-stelligen Binär-Vektor, wobei nur eine Stelle mit einer 1 belegt ist, die restlichen Stellen sind 0.
 Ziel ist es diejenige Stelle zu finden, die die 1 hält und diese als üblichen 4-bit Integer zu kodieren. \cite{cui_weighted_mutation, goldman_2015}
 Daraus ergibt sich eine Eingabegröße von 16 und eine Ausgabegröße von 4.
@@ -225,20 +223,21 @@ Das Evaluierungsverfahren wird in Abschnitt \ref{sec:Evaluation} näher erläute
 
 \subsubsection{2. Testblock: komplexe Testszenarien}
 \label{subsub:zweiterTestblock}
-
 Da sich durch die erhöhte Rechenzeit der komplexeren Testszenarien keine sinnvolle Hyperparameteroptimierung ausführen lässt, wird für diese Fälle eine andere Teststrategie entwickelt.\\
 Diejenigen Hyperparameter eines CGP-Modells, die nicht mit Rekombination in Verbindung stehen, werden aus den Ergebnissen von Cui et al. herangezogen \cite{cui_results}.
 Die Rekombinationsrate wird variiert und mit diesen Parametern in CGP-Modelle eingepflegt.
 Für jede CGP-Konfiguration werden 50 Testdurchläufe ausgeführt, um eine statistische Auswertung ausführen zu können.
 Dabei werden die CGP-Modelle gegebenenfalls nicht bis zur vollständigen Konvergenz trainiert, um die Rechenzeit zu reduzieren. 
 Für Boolesche Probleme werden den CGP-Modellen dabei weniger Iterationen Trainingszeit zur Verfügung gestellt als für SR Probleme.
-Dies ergibt sich daraus, dass Boolesche Probleme in der Hyperparameteranalyse von Cui et al. mehr Rechenknoten brauchen und somit mehr Rechenzeit für jeweils eine Iteration benötigen als es bei SR der Fall ist. \cite{cui_results}\\
+Dies ergibt sich daraus, dass Boolesche Probleme in der Hyperparameteranalyse von Cui et al. mehr Rechenknoten brauchen und somit mehr Rechenzeit für jeweils eine Iteration benötigen als es bei SR der Fall ist. \cite{cui_results}
+
 Da sich die Wirkungen der Rekombinationsrate und des Offsets gegenseitig beeinflussen können, ist es sinnvoller die Bewertung der beiden Parameter einzeln zu betrachten.
 Aufgrund der hohen Anzahl der zu bewertenden Testergebnisse, die sich bereits für einen variierenden Parameter ergeben, soll nur einer dieser Parameter in dieser Arbeit näher betrachtet werden.
 Dieser Parameter ist wie bereits beschrieben die Rekombinationsrate.
 Dies ergibt sich daraus, dass die Ergebnisse der Hyperparameter- und Rohdatenanalyse der einfachen Tests bereits vermuten lassen, dass der Offset keinen deutlichen Mehrwert für das CGP-Training bietet.
 Details zu den jeweiligen Ergebnissen können im Abschnitt \ref{sec:ergebnisseRohdaten} nachgelesen werden.
-Außerdem können mit Hilfe der Rekombinationsrate nähere Erkenntnisse zu den unterschiedlichen Rekombinationsarten gewonnen werden, die in dieser Arbeit verglichen werden.\\
+Außerdem können mit Hilfe der Rekombinationsrate nähere Erkenntnisse zu den unterschiedlichen Rekombinationsarten gewonnen werden, die in dieser Arbeit verglichen werden.
+
 Für die Evaluation stehen nach dem Testdurchlauf die Ergebnisse mehrerer CGP-Kon\-fi\-gu\-ra\-tio\-nen zur Verfügung, die allerdings nicht unbedingt die Ergebnisse der CGP-Modelle mit den jeweils besten Parametersätzen darstellen, da keine Hyperparameteroptimierung ausgeführt wurde.
 Trotzdem können die Ergebnisse verwendet werden, um einen näheren Einblick zum Verhalten des CGP-Modells zu erhalten, wenn die Rekombinationsrate variiert wird.
 
